@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Rank Calculator - Find Your Class Rank & Percentile Free</title>
+    <meta name="description" content="Calculate your class rank and percentile instantly for free. Find out where you stand among your classmates.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:Arial,sans-serif;background:#f4f7fb;color:#333;}
+        header{background:#2563eb;color:white;padding:20px;text-align:center;}
+        header h1{font-size:24px;}
+        .container{max-width:600px;margin:40px auto;background:white;padding:30px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+        .back-link{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none;font-size:14px;}
+        h2{font-size:18px;margin-bottom:20px;color:#2563eb;}
+        .input-group{margin-bottom:15px;}
+        label{display:block;font-size:14px;color:#555;margin-bottom:5px;}
+        input{padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px;width:100%;}
+        .btn-calc{background:#2563eb;color:white;width:100%;padding:12px;font-size:16px;border:none;border-radius:6px;cursor:pointer;margin-top:10px;}
+        .result{margin-top:25px;background:#f0f7ff;padding:25px;border-radius:8px;text-align:center;display:none;}
+        .rank{font-size:52px;font-weight:bold;color:#2563eb;}
+        .percentile{font-size:20px;color:#555;margin-top:8px;}
+        .badge{display:inline-block;margin-top:12px;padding:6px 16px;border-radius:20px;font-size:14px;}
+        footer{text-align:center;padding:20px;font-size:13px;color:#888;margin-top:20px;}
+    </style>
+</head>
+<body>
+    <header><h1>Class Rank Calculator</h1></header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to All Tools</a>
+        <h2>Find Your Class Rank</h2>
+        <div class="input-group">
+            <label>Your Rank in Class</label>
+            <input type="number" id="rank" placeholder="e.g. 15" min="1">
+        </div>
+        <div class="input-group">
+            <label>Total Students in Class</label>
+            <input type="number" id="total" placeholder="e.g. 200" min="1">
+        </div>
+        <button class="btn-calc" onclick="calculate()">Calculate</button>
+        <div class="result" id="result">
+            <div class="rank" id="rank-display"></div>
+            <div class="percentile" id="percentile"></div>
+            <div class="badge" id="badge"></div>
+        </div>
+    </div>
+    <footer>© 2025 StudentCalcTools — Free tools for students</footer>
+    <script>
+        function calculate(){
+            const rank=parseFloat(document.getElementById('rank').value)||0;
+            const total=parseFloat(document.getElementById('total').value)||0;
+            if(!rank||!total){alert('Please fill all fields');return;}
+            if(rank>total){alert('Rank cannot be greater than total students');return;}
+            const percentile=((total-rank)/total*100).toFixed(1);
+            document.getElementById('rank-display').textContent='#'+rank+' of '+total;
+            document.getElementById('percentile').textContent='Top '+percentile+'%';
+            const badge=document.getElementById('badge');
+            if(percentile>=90){badge.style.background='#f0fdf4';badge.style.color='#16a34a';badge.textContent='🏆 Excellent — Top of your class!';}
+            else if(percentile>=75){badge.style.background='#f0f7ff';badge.style.color='#2563eb';badge.textContent='⭐ Great — Above average!';}
+            else if(percentile>=50){badge.style.background='#fffbeb';badge.style.color='#d97706';badge.textContent='👍 Good — Keep pushing!';}
+            else{badge.style.background='#fef2f2';badge.style.color='#dc2626';badge.textContent='💪 Keep working hard!';}
+            document.getElementById('result').style.display='block';
+        }
+    </script>
+</body>
+</html>
