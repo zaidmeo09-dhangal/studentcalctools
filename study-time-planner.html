@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Time Planner - Plan Your Study Schedule Free</title>
+    <meta name="description" content="Plan your study time effectively. Enter your subjects and available hours to get a perfect study schedule.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:Arial,sans-serif;background:#f4f7fb;color:#333;}
+        header{background:#2563eb;color:white;padding:20px;text-align:center;}
+        header h1{font-size:24px;}
+        .container{max-width:700px;margin:40px auto;background:white;padding:30px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+        .back-link{display:inline-block;margin-bottom:20px;color:#2563eb;text-decoration:none;font-size:14px;}
+        h2{font-size:18px;margin-bottom:20px;color:#2563eb;}
+        .input-group{margin-bottom:15px;}
+        label{display:block;font-size:14px;color:#555;margin-bottom:5px;}
+        input{padding:10px;border:1px solid #ddd;border-radius:6px;font-size:15px;width:100%;}
+        .labels{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;margin-bottom:5px;font-size:13px;color:#888;}
+        .row{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;margin-bottom:10px;}
+        .btn{padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-size:14px;}
+        .btn-add{background:#e0e7ff;color:#2563eb;margin-bottom:20px;}
+        .btn-calc{background:#2563eb;color:white;width:100%;padding:12px;font-size:16px;}
+        .btn-remove{background:#fee2e2;color:#dc2626;padding:8px 12px;}
+        .result{margin-top:25px;display:none;}
+        .schedule-item{background:#f0f7ff;padding:15px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;}
+        .subject-name{font-weight:bold;color:#2563eb;}
+        .study-hours{background:#2563eb;color:white;padding:5px 12px;border-radius:20px;font-size:14px;}
+        footer{text-align:center;padding:20px;font-size:13px;color:#888;margin-top:20px;}
+    </style>
+</head>
+<body>
+    <header><h1>Study Time Planner</h1></header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to All Tools</a>
+        <h2>Plan Your Study Schedule</h2>
+        <div class="input-group">
+            <label>Total Study Hours Available Per Day</label>
+            <input type="number" id="total-hours" placeholder="e.g. 6" min="1" max="24">
+        </div>
+        <div class="labels">
+            <span>Subject</span><span>Difficulty (1-5)</span><span></span>
+        </div>
+        <div id="rows">
+            <div class="row">
+                <input type="text" placeholder="e.g. Math">
+                <input type="number" placeholder="3" min="1" max="5">
+                <button class="btn btn-remove" onclick="removeRow(this)">✕</button>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="e.g. English">
+                <input type="number" placeholder="2" min="1" max="5">
+                <button class="btn btn-remove" onclick="removeRow(this)">✕</button>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-add" onclick="addRow()">+ Add Subject</button>
+        <button class="btn btn-calc" onclick="calculate()">Generate Study Plan</button>
+        <div class="result" id="result"></div>
+    </div>
+    <footer>© 2025 StudentCalcTools — Free tools for students</footer>
+    <script>
+        function addRow(){const row=document.createElement('div');row.className='row';row.innerHTML=`<input type="text" placeholder="Subject"><input type="number" placeholder="Difficulty 1-5" min="1" max="5"><button class="btn btn-remove" onclick="removeRow(this)">✕</button>`;document.getElementById('rows').appendChild(row);}
+        function removeRow(btn){const rows=document.querySelectorAll('.row');if(rows.length>1)btn.parentElement.remove();}
+        function calculate(){
+            const totalHours=parseFloat(document.getElementById('total-hours').value)||0;
+            if(!totalHours){alert('Please enter total study hours');return;}
+            const rows=document.querySelectorAll('.row');
+            let subjects=[];let totalDifficulty=0;
+            rows.forEach(row=>{const inputs=row.querySelectorAll('input');const name=inputs[0].value||'Subject';const diff=parseFloat(inputs[1].value)||1;subjects.push({name,diff});totalDifficulty+=diff;});
+            const resultDiv=document.getElementById('result');
+            resultDiv.innerHTML='<h3 style="margin-bottom:15px;color:#2563eb;">Your Daily Study Plan</h3>';
+            subjects.forEach(s=>{const hours=((s.diff/totalDifficulty)*totalHours).toFixed(1);resultDiv.innerHTML+=`<div class="schedule-item"><span class="subject-name">${s.name}</span><span class="study-hours">${hours} hours</span></div>`;});
+            resultDiv.style.display='block';
+        }
+    </script>
+</body>
+</html>
