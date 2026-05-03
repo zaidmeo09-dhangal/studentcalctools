@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator - Check Your Attendance Percentage Free</title>
+    <meta name="description" content="Calculate your attendance percentage instantly. Find out if you have enough attendance to pass your class.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f4f7fb; color: #333; }
+        header { background: #2563eb; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 24px; }
+        .container { max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-size: 14px; }
+        h2 { font-size: 18px; margin-bottom: 20px; color: #2563eb; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; font-size: 14px; color: #555; margin-bottom: 5px; }
+        input { padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; width: 100%; }
+        .btn-calc { background: #2563eb; color: white; width: 100%; padding: 12px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer; margin-top: 10px; }
+        .result { margin-top: 25px; padding: 20px; border-radius: 8px; text-align: center; display: none; }
+        .result.good { background: #f0fdf4; }
+        .result.bad { background: #fef2f2; }
+        .percentage { font-size: 52px; font-weight: bold; }
+        .good .percentage { color: #16a34a; }
+        .bad .percentage { color: #dc2626; }
+        .status { font-size: 16px; margin-top: 8px; }
+        .good .status { color: #16a34a; }
+        .bad .status { color: #dc2626; }
+        .info { font-size: 13px; color: #888; margin-top: 8px; }
+        footer { text-align: center; padding: 20px; font-size: 13px; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attendance Calculator</h1>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to All Tools</a>
+        <h2>Calculate Your Attendance</h2>
+        <div class="input-group">
+            <label>Total Classes Held</label>
+            <input type="number" id="total" placeholder="e.g. 60" min="1">
+        </div>
+        <div class="input-group">
+            <label>Classes Attended</label>
+            <input type="number" id="attended" placeholder="e.g. 48" min="0">
+        </div>
+        <div class="input-group">
+            <label>Required Attendance % (usually 75%)</label>
+            <input type="number" id="required" placeholder="e.g. 75" min="1" max="100" value="75">
+        </div>
+        <button class="btn-calc" onclick="calculate()">Calculate Attendance</button>
+        <div class="result" id="result">
+            <div class="percentage" id="percentage">0%</div>
+            <div class="status" id="status"></div>
+            <div class="info" id="info"></div>
+        </div>
+    </div>
+    <footer>© 2025 StudentCalcTools — Free tools for students</footer>
+
+    <script>
+        function calculate() {
+            const total = parseFloat(document.getElementById('total').value) || 0;
+            const attended = parseFloat(document.getElementById('attended').value) || 0;
+            const required = parseFloat(document.getElementById('required').value) || 75;
+            if (total === 0) { alert('Please enter total classes'); return; }
+            const percentage = ((attended / total) * 100).toFixed(2);
+            const resultDiv = document.getElementById('result');
+            document.getElementById('percentage').textContent = percentage + '%';
+            if (percentage >= required) {
+                resultDiv.className = 'result good';
+                document.getElementById('status').textContent = '✅ You are Safe!';
+                const canMiss = Math.floor(total - (required / 100) * total) - (total - attended);
+                document.getElementById('info').textContent = `You can still miss ${canMiss} more classes.`;
+            } else {
+                resultDiv.className = 'result bad';
+                document.getElementById('status').textContent = '❌ Attendance is Low!';
+                const needToAttend = Math.ceil((required / 100 * total - attended) / (1 - required / 100));
+                document.getElementById('info').textContent = `You need to attend ${needToAttend} more consecutive classes to reach ${required}%.`;
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
