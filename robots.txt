@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zaidmeo09-dhangal.github.io/studentcalctools/sitemap.xml
