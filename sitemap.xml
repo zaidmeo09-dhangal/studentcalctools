@@ -55,4 +55,24 @@
         <priority>0.9</priority>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/about-us.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/contact-us.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/privacy-policy.html</loc>
+        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/disclaimer.html</loc>
+        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
