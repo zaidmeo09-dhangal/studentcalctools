@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - StudentCalcTools</title>
+    <meta name="description" content="Contact StudentCalcTools. We'd love to hear from you — suggestions, feedback or questions.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:#f8faff;color:#0f172a;}
+        nav{background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(37,99,235,0.1);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+        .nav-logo{font-size:20px;font-weight:800;color:#2563eb;text-decoration:none;}
+        .nav-logo span{color:#06b6d4;}
+        .container{max-width:650px;margin:60px auto;padding:0 20px;}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:#2563eb;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:32px;}
+        .card{background:white;padding:40px;border-radius:16px;box-shadow:0 2px 16px rgba(37,99,235,0.05);}
+        h1{font-size:32px;font-weight:800;margin-bottom:8px;}
+        .subtitle{font-size:15px;color:#64748b;margin-bottom:32px;line-height:1.6;}
+        .info-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;}
+        .info-card{background:#f8faff;padding:20px;border-radius:12px;text-align:center;}
+        .info-icon{font-size:24px;margin-bottom:8px;}
+        .info-title{font-size:13px;font-weight:700;color:#0f172a;margin-bottom:4px;}
+        .info-text{font-size:13px;color:#64748b;}
+        .form-group{margin-bottom:20px;}
+        label{display:block;font-size:14px;font-weight:600;color:#0f172a;margin-bottom:8px;}
+        input,textarea,select{width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px;font-size:15px;font-family:'Plus Jakarta Sans',sans-serif;color:#0f172a;background:#f8faff;transition:border-color 0.2s;}
+        input:focus,textarea:focus,select:focus{outline:none;border-color:#2563eb;background:white;}
+        textarea{height:140px;resize:vertical;}
+        .btn-submit{background:#2563eb;color:white;width:100%;padding:14px;font-size:15px;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background 0.2s;}
+        .btn-submit:hover{background:#1d4ed8;}
+        .success{display:none;background:#f0fdf4;border:1px solid #bbf7d0;padding:16px;border-radius:10px;color:#16a34a;font-weight:600;text-align:center;margin-top:16px;}
+        footer{text-align:center;padding:30px;font-size:13px;color:#94a3b8;margin-top:40px;}
+        footer span{color:#06b6d4;}
+        @media(max-width:600px){.info-cards{grid-template-columns:1fr;}nav{padding:12px 16px;}.card{padding:24px;}}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Student<span>Calc</span></a>
+    </nav>
+    <div class="container">
+        <br>
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <div class="card">
+            <h1>Contact Us</h1>
+            <p class="subtitle">Have a question, suggestion, or found a bug? We'd love to hear from you. We typically respond within 24-48 hours.</p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <div class="info-title">Email Us</div>
+                    <div class="info-text">contact@studentcalctools.com</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-title">Response Time</div>
+                    <div class="info-text">Within 24-48 hours</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="e.g. John Smith">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="e.g. john@email.com">
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <select id="subject">
+                    <option value="">Select a subject</option>
+                    <option>Bug Report</option>
+                    <option>Feature Request</option>
+                    <option>General Question</option>
+                    <option>Tool Suggestion</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" placeholder="Write your message here..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitForm()">Send Message →</button>
+            <div class="success" id="success">✅ Message sent successfully! We'll get back to you within 24-48 hours.</div>
+        </div>
+    </div>
+    <footer><p>© 2025 <span>StudentCalcTools</span> — Free tools for every student 🎓</p></footer>
+    <script>
+        function submitForm(){
+            const name=document.getElementById('name').value;
+            const email=document.getElementById('email').value;
+            const message=document.getElementById('message').value;
+            if(!name||!email||!message){alert('Please fill in all required fields');return;}
+            document.getElementById('success').style.display='block';
+            document.getElementById('name').value='';
+            document.getElementById('email').value='';
+            document.getElementById('message').value='';
+        }
+    </script>
+</body>
+</html>
