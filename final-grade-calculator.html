@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Grade Calculator - What Grade Do I Need on My Final?</title>
+    <meta name="description" content="Find out what grade you need on your final exam to pass your class. Free final grade calculator for college and high school students.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QFNEKR7QE0');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f4f7fb; color: #333; }
+        header { background: #2563eb; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 24px; }
+        header p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+        .container { max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-size: 14px; }
+        h2 { font-size: 18px; margin-bottom: 20px; color: #2563eb; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; font-size: 14px; color: #555; margin-bottom: 5px; }
+        input { padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; width: 100%; }
+        .hint { font-size: 12px; color: #999; margin-top: 4px; }
+        .btn-calc { background: #2563eb; color: white; width: 100%; padding: 12px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer; margin-top: 10px; }
+        .result { margin-top: 25px; padding: 20px; border-radius: 8px; text-align: center; display: none; }
+        .result.possible { background: #f0fdf4; }
+        .result.hard { background: #fffbeb; }
+        .result.impossible { background: #fef2f2; }
+        .grade-needed { font-size: 52px; font-weight: bold; }
+        .possible .grade-needed { color: #16a34a; }
+        .hard .grade-needed { color: #d97706; }
+        .impossible .grade-needed { color: #dc2626; }
+        .status { font-size: 16px; margin-top: 8px; }
+        .possible .status { color: #16a34a; }
+        .hard .status { color: #d97706; }
+        .impossible .status { color: #dc2626; }
+        footer { text-align: center; padding: 20px; font-size: 13px; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Final Grade Calculator</h1>
+        <p>What grade do I need on my final exam?</p>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to All Tools</a>
+        <h2>Enter Your Details</h2>
+        <div class="input-group">
+            <label>Current Grade (%)</label>
+            <input type="number" id="current" placeholder="e.g. 82" min="0" max="100">
+            <div class="hint">Your grade before the final exam</div>
+        </div>
+        <div class="input-group">
+            <label>Final Exam Weight (%)</label>
+            <input type="number" id="weight" placeholder="e.g. 30" min="1" max="100">
+            <div class="hint">How much the final counts toward your grade</div>
+        </div>
+        <div class="input-group">
+            <label>Grade You Want (%)</label>
+            <input type="number" id="goal" placeholder="e.g. 80" min="0" max="100">
+            <div class="hint">The final grade you are aiming for</div>
+        </div>
+        <button class="btn-calc" onclick="calculate()">Calculate</button>
+        <div class="result" id="result">
+            <div class="grade-needed" id="grade-needed">0%</div>
+            <div class="status" id="status"></div>
+        </div>
+    </div>
+    <footer>© 2025 StudentCalcTools — Free tools for students</footer>
+
+    <script>
+        function calculate() {
+            const current = parseFloat(document.getElementById('current').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const goal = parseFloat(document.getElementById('goal').value);
+            if (isNaN(current) || isNaN(weight) || isNaN(goal)) {
+                alert('Please fill in all fields');
+                return;
+            }
+            const currentWeight = 100 - weight;
+            const needed = (goal - (current * currentWeight / 100)) / (weight / 100);
+            const resultDiv = document.getElementById('result');
+            document.getElementById('grade-needed').textContent = needed.toFixed(1) + '%';
+            if (needed <= 100) {
+                if (needed <= 70) {
+                    resultDiv.className = 'result possible';
+                    document.getElementById('status').textContent = '✅ Very Achievable! You got this!';
+                } else {
+                    resultDiv.className = 'result hard';
+                    document.getElementById('status').textContent = '⚠️ Challenging but Possible. Study hard!';
+                }
+            } else {
+                resultDiv.className = 'result impossible';
+                document.getElementById('status').textContent = '❌ Not possible with current grade. Consider extra credit options.';
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
