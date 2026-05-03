@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator - Calculate Cumulative GPA Free</title>
+    <meta name="description" content="Calculate your CGPA instantly and free. Convert CGPA to percentage and track your academic performance semester by semester.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QFNEKR7QE0');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f4f7fb; color: #333; }
+        header { background: #2563eb; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 24px; }
+        header p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+        .container { max-width: 700px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-size: 14px; }
+        h2 { font-size: 18px; margin-bottom: 20px; color: #2563eb; }
+        .labels { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; margin-bottom: 5px; font-size: 13px; color: #888; }
+        .row { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; margin-bottom: 10px; }
+        input { padding: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; width: 100%; }
+        .btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .btn-add { background: #e0e7ff; color: #2563eb; margin-bottom: 20px; }
+        .btn-calc { background: #2563eb; color: white; width: 100%; padding: 12px; font-size: 16px; }
+        .btn-remove { background: #fee2e2; color: #dc2626; padding: 8px 12px; }
+        .result { margin-top: 25px; background: #f0f7ff; padding: 20px; border-radius: 8px; text-align: center; display: none; }
+        .cgpa-score { font-size: 52px; font-weight: bold; color: #2563eb; }
+        .percentage { font-size: 20px; color: #555; margin-top: 8px; }
+        footer { text-align: center; padding: 20px; font-size: 13px; color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CGPA Calculator</h1>
+        <p>Calculate your Cumulative GPA across all semesters</p>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to All Tools</a>
+        <h2>Enter Semester Details</h2>
+        <div class="labels">
+            <span>Semester</span>
+            <span>GPA</span>
+            <span>Credits</span>
+            <span></span>
+        </div>
+        <div id="rows">
+            <div class="row">
+                <input type="text" placeholder="e.g. Semester 1">
+                <input type="number" placeholder="3.5" min="0" max="4" step="0.1">
+                <input type="number" placeholder="15" min="1">
+                <button class="btn btn-remove" onclick="removeRow(this)">✕</button>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="e.g. Semester 2">
+                <input type="number" placeholder="3.2" min="0" max="4" step="0.1">
+                <input type="number" placeholder="15" min="1">
+                <button class="btn btn-remove" onclick="removeRow(this)">✕</button>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-add" onclick="addRow()">+ Add Semester</button>
+        <button class="btn btn-calc" onclick="calculate()">Calculate CGPA</button>
+        <div class="result" id="result">
+            <div class="cgpa-score" id="cgpa">0.00</div>
+            <div class="percentage" id="percentage">Percentage: 0%</div>
+        </div>
+    </div>
+    <footer>© 2025 StudentCalcTools — Free tools for students</footer>
+
+    <script>
+        function addRow() {
+            const row = document.createElement('div');
+            row.className = 'row';
+            row.innerHTML = `
+                <input type="text" placeholder="e.g. Semester">
+                <input type="number" placeholder="GPA" min="0" max="4" step="0.1">
+                <input type="number" placeholder="Credits" min="1">
+                <button class="btn btn-remove" onclick="removeRow(this)">✕</button>
+            `;
+            document.getElementById('rows').appendChild(row);
+        }
+
+        function removeRow(btn) {
+            const rows = document.querySelectorAll('.row');
+            if (rows.length > 1) btn.parentElement.remove();
+        }
+
+        function calculate() {
+            const rows = document.querySelectorAll('.row');
+            let totalPoints = 0;
+            let totalCredits = 0;
+            rows.forEach(row => {
+                const inputs = row.querySelectorAll('input[type="number"]');
+                const gpa = parseFloat(inputs[0].value) || 0;
+                const credits = parseFloat(inputs[1].value) || 0;
+                totalPoints += gpa * credits;
+                totalCredits += credits;
+            });
+            const cgpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00';
+            const percentage = (cgpa * 9.5).toFixed(2);
+            document.getElementById('cgpa').textContent = cgpa;
+            document.getElementById('percentage').textContent = 'Percentage: ' + percentage + '%';
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
