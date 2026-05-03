@@ -20,4 +20,39 @@
         <priority>0.9</priority>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/final-grade-calculator.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/cgpa-calculator.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/study-time-planner.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/essay-word-counter.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/student-loan-calculator.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/scholarship-calculator.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://zaidmeo09-dhangal.github.io/studentcalctools/class-rank-calculator.html</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
