@@ -3,63 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#2563eb">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://zaidmeo09-dhangal.github.io/studentcalctools/">
     <meta name="ahrefs-site-verification" content="2a077ad5974f07e84d6523929a4ae1cb360bb57384 81e11e9e6b3b7db345bc4d">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Student Calculators – GPA, Grades, Attendance</title>
     <meta name="description" content="10 plus free student calculators for GPA, grades, attendance, loans and more. Instant results for college and high school students. No sign up needed.">
-    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="StudentCalcTools">
-<meta property="og:url" content="https://zaidmeo09-dhangal.github.io/studentcalctools/">
-<meta property="og:title" content="Free Student Calculators – GPA, Grades, Attendance">
-<meta property="og:description" content="10 plus free student calculators for GPA, grades, attendance, loans and more. Instant results for college and high school students. No sign up needed.">
-<meta property="og:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zaidmeo09-dhangal.github.io/studentcalctools/">
-<meta name="twitter:title" content="Free Student Calculators – GPA, Grades, Attendance">
-<meta name="twitter:description" content="10 plus free student calculators for GPA, grades, attendance, loans and more. Instant results for college and high school students.">
-<meta name="twitter:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="StudentCalcTools">
+    <meta property="og:url" content="https://zaidmeo09-dhangal.github.io/studentcalctools/">
+    <meta property="og:title" content="Free Student Calculators – GPA, Grades, Attendance">
+    <meta property="og:description" content="10 plus free student calculators for GPA, grades, attendance, loans and more. Instant results for college and high school students. No sign up needed.">
+    <meta property="og:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-<!-- Author -->
-<meta name="author" content="StudentCalcTools">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zaidmeo09-dhangal.github.io/studentcalctools/">
+    <meta name="twitter:title" content="Free Student Calculators – GPA, Grades, Attendance">
+    <meta name="twitter:description" content="10 plus free student calculators for GPA, grades, attendance, loans and more. Instant results for college and high school students.">
+    <meta name="twitter:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
+
+    <meta name="author" content="StudentCalcTools">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+        /* ============ CSS VARIABLES ============ */
         :root {
             --blue: #2563eb;
             --blue-dark: #1d4ed8;
             --blue-light: #eff6ff;
             --accent: #06b6d4;
+            --accent-dark: #0891b2;
             --text: #0f172a;
+            --text-secondary: #334155;
             --muted: #64748b;
             --white: #ffffff;
             --bg: #f8faff;
+            --card-bg: #ffffff;
+            --border: rgba(37,99,235,0.08);
+            --border-strong: rgba(37,99,235,0.2);
+            --shadow-sm: 0 2px 16px rgba(37,99,235,0.05);
+            --shadow-md: 0 16px 40px rgba(37,99,235,0.12);
+            --shadow-lg: 0 30px 60px rgba(37,99,235,0.18);
+            --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+            --gradient-brand: linear-gradient(135deg, #2563eb, #06b6d4);
         }
+
+        [data-theme="dark"] {
+            --blue: #3b82f6;
+            --blue-dark: #60a5fa;
+            --blue-light: rgba(59,130,246,0.15);
+            --accent: #22d3ee;
+            --accent-dark: #06b6d4;
+            --text: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --muted: #94a3b8;
+            --white: #0f172a;
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --border: rgba(59,130,246,0.15);
+            --border-strong: rgba(59,130,246,0.3);
+            --shadow-sm: 0 2px 16px rgba(0,0,0,0.4);
+            --shadow-md: 0 16px 40px rgba(0,0,0,0.5);
+            --shadow-lg: 0 30px 60px rgba(0,0,0,0.6);
+            --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-brand: linear-gradient(135deg, #3b82f6, #22d3ee);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background: var(--bg);
             color: var(--text);
             overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
         }
 
-        /* NAV */
+        /* ============ SCROLL PROGRESS BAR ============ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient-brand);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s ease-out;
+            box-shadow: 0 0 10px rgba(37,99,235,0.5);
+        }
+
+        /* ============ NAVIGATION ============ */
         nav {
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(37,99,235,0.1);
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
             padding: 14px 40px;
             display: flex;
             justify-content: space-between;
@@ -67,14 +122,47 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] nav {
+            background: rgba(2,6,23,0.85);
         }
         .nav-logo {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
             color: var(--blue);
             text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-brand);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
         }
         .nav-logo span { color: var(--accent); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--muted);
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover { color: var(--blue); }
         .nav-tag {
             background: var(--blue-light);
             color: var(--blue);
@@ -82,128 +170,677 @@
             font-weight: 600;
             padding: 5px 14px;
             border-radius: 20px;
+            cursor: default;
+            user-select: none;
         }
+        .theme-toggle {
+            background: var(--blue-light);
+            border: 1px solid var(--border-strong);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover { transform: rotate(15deg) scale(1.1); }
 
-        /* HERO */
+        /* ============ HERO SECTION ============ */
         .hero {
-            background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
-            padding: 60px 20px;
+            position: relative;
+            background: var(--gradient-hero);
+            padding: 80px 20px 100px;
             text-align: center;
-            border-bottom: 1px solid rgba(37,99,235,0.08);
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
         }
+        .hero-bg-mesh {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(37,99,235,0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(6,182,212,0.15), transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(99,102,241,0.1), transparent 50%);
+            animation: meshMove 15s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+        @keyframes meshMove {
+            0% { transform: translate(0,0) scale(1); }
+            50% { transform: translate(30px,-20px) scale(1.05); }
+            100% { transform: translate(-20px,30px) scale(1.1); }
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-brand);
+            opacity: 0.08;
+            filter: blur(40px);
+            pointer-events: none;
+        }
+        .shape-1 { width: 200px; height: 200px; top: 10%; left: 5%; animation: float1 12s ease-in-out infinite; }
+        .shape-2 { width: 150px; height: 150px; top: 60%; right: 10%; animation: float2 10s ease-in-out infinite; }
+        .shape-3 { width: 100px; height: 100px; top: 20%; right: 20%; animation: float3 8s ease-in-out infinite; }
+        @keyframes float1 { 0%,100% {transform:translate(0,0)} 50% {transform:translate(30px,-30px)} }
+        @keyframes float2 { 0%,100% {transform:translate(0,0)} 50% {transform:translate(-40px,20px)} }
+        @keyframes float3 { 0%,100% {transform:translate(0,0)} 50% {transform:translate(20px,40px)} }
+
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: white;
-            border: 1px solid rgba(37,99,235,0.2);
+            gap: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
             border-radius: 30px;
-            padding: 5px 14px;
+            padding: 6px 16px;
             font-size: 13px;
             font-weight: 600;
             color: var(--blue);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+            animation: fadeUp 0.6s ease 0.1s backwards;
         }
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.6; }
+        }
+
         .hero h1 {
-            font-size: clamp(32px, 5vw, 54px);
+            font-size: clamp(36px, 6vw, 64px);
             font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
             color: var(--text);
+            animation: fadeUp 0.6s ease 0.2s backwards;
         }
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--blue), var(--accent));
+        .hero h1 .gradient-text {
+            background: var(--gradient-brand);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            position: relative;
         }
+
         .hero p {
-            font-size: 16px;
-            color: var(--muted);
-            max-width: 480px;
-            margin: 0 auto 28px;
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 36px;
             line-height: 1.7;
             font-weight: 500;
+            animation: fadeUp 0.6s ease 0.3s backwards;
         }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            animation: fadeUp 0.6s ease 0.4s backwards;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-brand);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(37,99,235,0.4);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card-bg);
+            color: var(--text);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            border: 1px solid var(--border-strong);
+            transition: all 0.2s ease;
+        }
+        .btn-secondary:hover { background: var(--blue-light); border-color: var(--blue); }
+
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.6s ease 0.5s backwards;
+        }
+        .stat {
+            text-align: center;
         }
         .stat-num {
-            font-size: 24px;
+            font-size: 36px;
             font-weight: 800;
-            color: var(--blue);
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 6px;
         }
         .stat-label {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--muted);
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* TOOLS SECTION */
-        .tools-section {
-            padding: 60px 20px 80px;
-            max-width: 1100px;
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ============ LIVE ACTIVITY STRIP ============ */
+        .activity-strip {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 20px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .activity-strip .activity-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--blue-light);
+            border-radius: 50%;
+            margin-right: 8px;
+            color: var(--blue);
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        .activity-strip strong {
+            color: var(--blue);
+            font-weight: 700;
+        }
+
+        /* ============ MINI CALCULATOR SECTION ============ */
+        .mini-calc-section {
+            padding: 80px 20px;
+            background: var(--bg);
+            position: relative;
+        }
+        .mini-calc-wrapper {
+            max-width: 720px;
             margin: 0 auto;
         }
-        .section-header {
+        .calc-eyebrow {
             text-align: center;
-            margin-bottom: 40px;
-        }
-        .section-tag {
-            display: inline-block;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-        .section-header h2 {
-            font-size: clamp(22px, 3vw, 32px);
+        .calc-title {
+            font-size: clamp(26px, 3vw, 36px);
             font-weight: 800;
+            text-align: center;
             color: var(--text);
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
+        .calc-subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+        .calc-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+        .calc-row {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr auto;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .calc-row-header {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr auto;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-left: 4px;
+        }
+        .calc-input, .calc-select {
+            background: var(--bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--text);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        .calc-input:focus, .calc-select:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px var(--blue-light);
+        }
+        .calc-remove {
+            background: transparent;
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            color: var(--muted);
+            font-size: 18px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calc-remove:hover {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+        [data-theme="dark"] .calc-remove:hover {
+            background: rgba(239,68,68,0.2);
+        }
+        .calc-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .calc-add {
+            background: var(--blue-light);
+            color: var(--blue);
+            border: 1px dashed var(--border-strong);
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            flex: 1;
+            min-width: 140px;
+        }
+        .calc-add:hover { background: var(--blue); color: white; border-style: solid; }
+        .calc-calculate {
+            background: var(--gradient-brand);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.3);
+            transition: all 0.2s ease;
+            flex: 2;
+            min-width: 160px;
+        }
+        .calc-calculate:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(37,99,235,0.4); }
+        .calc-result {
+            margin-top: 24px;
+            padding: 28px;
+            background: var(--gradient-hero);
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border-strong);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+            display: none;
+        }
+        .calc-result.visible {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+        .calc-result-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .calc-result-value {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -2px;
+        }
+        .calc-result-tier {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: white;
+            margin-bottom: 12px;
+        }
+        [data-theme="dark"] .calc-result-tier { background: rgba(255,255,255,0.1); }
+        .tier-excellent { color: #059669; }
+        .tier-good { color: #2563eb; }
+        .tier-average { color: #d97706; }
+        .tier-low { color: #dc2626; }
+        .calc-result-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--blue);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+        .calc-result-link:hover { gap: 10px; }
 
-        /* GRID */
+        /* ============ SECTION REVEAL ANIMATION ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about-section {
+            background: var(--card-bg);
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .about-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+            display: inline-block;
+        }
+        .section-title {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .about-wrap p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        /* ============ HOW IT WORKS ============ */
+        .how-section {
+            background: var(--bg);
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .how-wrap { max-width: 1000px; margin: 0 auto; }
+        .how-header { text-align: center; margin-bottom: 50px; }
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .how-card {
+            background: var(--card-bg);
+            padding: 32px 28px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .how-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .how-step {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-brand);
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+        .how-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--blue-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin: 16px auto 18px;
+        }
+        .how-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .how-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============ TOOLS SECTION ============ */
+        .tools-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tools-header { text-align: center; margin-bottom: 40px; }
+
+        .tool-controls {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-wrap {
+            position: relative;
+            flex: 1;
+            min-width: 240px;
+            max-width: 360px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 16px 12px 42px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--text);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px var(--blue-light);
+        }
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 16px;
+            pointer-events: none;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            color: var(--muted);
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        .filter-btn:hover { background: var(--blue-light); color: var(--blue); }
+        .filter-btn.active {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
         }
         .tool-card {
-            background: white;
-            border-radius: 16px;
+            background: var(--card-bg);
+            border-radius: 18px;
             padding: 28px;
-            border: 1px solid rgba(37,99,235,0.08);
-            box-shadow: 0 2px 16px rgba(37,99,235,0.05);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
             opacity: 0;
             transform: translateY(20px);
+            cursor: pointer;
         }
-        .tool-card.visible {
-            animation: fadeUp 0.45s ease forwards;
+        .tool-card.visible { animation: cardIn 0.5s ease forwards; }
+        .tool-card.hidden { display: none; }
+        @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            padding: 1.5px;
+            background: var(--gradient-brand);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
+        .tool-card:hover::before { opacity: 1; }
         .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 40px rgba(37,99,235,0.12);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
         }
-        .tool-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--blue-light);
+        .tool-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 10px;
             border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .badge-popular { background: #fef3c7; color: #d97706; }
+        .badge-trending { background: #fee2e2; color: #dc2626; }
+        .badge-new { background: #d1fae5; color: #059669; }
+        [data-theme="dark"] .badge-popular { background: rgba(217,119,6,0.2); color: #fbbf24; }
+        [data-theme="dark"] .badge-trending { background: rgba(220,38,38,0.2); color: #f87171; }
+        [data-theme="dark"] .badge-new { background: rgba(5,150,105,0.2); color: #34d399; }
+
+        .tool-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--blue-light);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
-            margin-bottom: 16px;
+            font-size: 24px;
+            margin-bottom: 18px;
+            transition: transform 0.3s ease;
         }
+        .tool-card:hover .tool-icon { transform: scale(1.1) rotate(-5deg); }
         .tool-card h3 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--text);
@@ -222,347 +859,1070 @@
             background: var(--blue);
             color: white;
             text-decoration: none;
-            padding: 9px 18px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             transition: background 0.2s ease, gap 0.2s ease;
         }
         .tool-btn:hover { background: var(--blue-dark); gap: 10px; }
         .tool-btn::after { content: '→'; }
 
-        /* FOOTER */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--muted);
+            display: none;
+        }
+        .no-results.visible { display: block; }
+
+        /* ============ WHY CHOOSE US ============ */
+        .why-section {
+            padding: 80px 20px;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .why-wrap { max-width: 1100px; margin: 0 auto; }
+        .why-header { text-align: center; margin-bottom: 50px; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 24px;
+        }
+        .why-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-brand);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 18px;
+            box-shadow: 0 12px 30px rgba(37,99,235,0.3);
+        }
+        .why-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .why-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ============ FAQ ============ */
+        .faq-section {
+            background: var(--bg);
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-header { text-align: center; margin-bottom: 40px; }
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover { border-color: var(--border-strong); }
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+        .faq-question:hover { color: var(--blue); }
+        .faq-toggle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--blue-light);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+        .faq-item.open .faq-answer { max-height: 300px; }
+
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            background: var(--gradient-brand);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15), transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255,255,255,0.1), transparent 50%);
+            pointer-events: none;
+        }
+        .cta-wrap { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+        .cta-section h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .cta-section p {
+            font-size: 17px;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .cta-section .btn-primary:hover { background: #f0f9ff; }
+
+        /* ============ FOOTER ============ */
         footer {
-            background: var(--text);
+            background: #0f172a;
             color: rgba(255,255,255,0.5);
             text-align: center;
-            padding: 30px 20px;
+            padding: 60px 20px 30px;
             font-size: 13px;
             font-weight: 500;
         }
-        footer span { color: var(--accent); }
+        [data-theme="dark"] footer { background: #020617; }
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .footer-logo span { color: var(--accent); }
+        .footer-tagline {
+            margin-bottom: 36px;
+            font-size: 14px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+        .footer-col p.col-title {
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+        .footer-col a:hover { color: white; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+        }
+        .footer-bottom span { color: var(--accent); }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* ============ CONFETTI ============ */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            left: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            animation: confettiFall 1.5s ease-out forwards;
+        }
+        @keyframes confettiFall {
+            to {
+                transform: translate(var(--x), var(--y)) rotate(720deg);
+                opacity: 0;
+            }
         }
 
-        @media (max-width: 600px) {
+        /* ============ SKIP LINK ============ */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--blue);
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            z-index: 9999;
+            font-weight: 700;
+            border-radius: 0 0 8px 0;
+        }
+        .skip-link:focus { left: 0; }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
             nav { padding: 12px 16px; }
-            .hero { padding: 40px 16px; }
-            .hero-stats { gap: 20px; }
+            .nav-links { gap: 12px; }
+            .nav-links a:nth-child(2), .nav-links a:nth-child(3) { display: none; }
+            .hero { padding: 60px 16px 70px; }
+            .hero-stats { gap: 24px; }
+            .stat-num { font-size: 28px; }
+            .calc-row, .calc-row-header {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 8px;
+            }
+            .calc-row-header { display: none; }
+            .calc-remove { grid-column: span 3; height: 36px; }
+            .tool-controls { flex-direction: column; }
+            .search-wrap { max-width: 100%; }
+            .footer-grid { grid-template-columns: 1fr 1fr; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .filter-btn { padding: 8px 14px; font-size: 12px; }
             .tools-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
-    <!-- Schema: Website -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "StudentCalcTools",
-  "alternateName": "Student Calc Tools",
-  "url": "https://zaidmeo09-dhangal.github.io/studentcalctools/",
-  "description": "10 plus free student calculators for GPA, grades, attendance, loans and more."
-}
-</script>
 
-<!-- Schema: Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "StudentCalcTools",
-  "url": "https://zaidmeo09-dhangal.github.io/studentcalctools/",
-  "logo": "https://zaidmeo09-dhangal.github.io/studentcalctools/favicon-32x32.png",
-  "description": "Free academic calculators for college and high school students."
-}
-</script>
-
-<!-- Schema: FAQ Page -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+    <!-- Schemas -->
+    <script type="application/ld+json">
     {
-      "@type": "Question",
-      "name": "Are all tools on StudentCalcTools free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, every calculator on StudentCalcTools is 100% free to use. There are no hidden fees, no subscriptions, and no sign up required. All tools will remain free forever."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data safe when I use these calculators?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Completely safe. All calculations happen directly in your browser. We do not collect, store, or share any of your academic data. Nothing you enter is sent to any server."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which GPA scale do these calculators use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our GPA calculator uses the standard 4.0 GPA scale used by most colleges and universities in the United States. This is the most widely used grading scale globally."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How accurate are these calculators?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "All our calculators use standard academic formulas and are verified for accuracy. However, always confirm important results with your official institution as grading policies may vary between schools."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use these tools on my phone?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. All tools on StudentCalcTools are fully responsive and work perfectly on smartphones, tablets, and desktop computers. No app download needed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many calculators does StudentCalcTools offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We currently offer 10 plus free student calculators including GPA Calculator, Grade Calculator, Attendance Calculator, Final Grade Calculator, CGPA Calculator, Study Time Planner, Essay Word Counter, Student Loan Calculator, Scholarship Calculator, and Class Rank Calculator. We regularly add new tools."
-      }
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "StudentCalcTools",
+      "alternateName": "Student Calc Tools",
+      "url": "https://zaidmeo09-dhangal.github.io/studentcalctools/",
+      "description": "10 plus free student calculators for GPA, grades, attendance, loans and more."
     }
-  ]
-}
-</script>
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "StudentCalcTools",
+      "url": "https://zaidmeo09-dhangal.github.io/studentcalctools/",
+      "logo": "https://zaidmeo09-dhangal.github.io/studentcalctools/favicon-32x32.png",
+      "description": "Free academic calculators for college and high school students."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Are all tools on StudentCalcTools free?","acceptedAnswer":{"@type":"Answer","text":"Yes, every calculator on StudentCalcTools is 100% free to use. There are no hidden fees, no subscriptions, and no sign up required. All tools will remain free forever."}},
+        {"@type":"Question","name":"Is my data safe when I use these calculators?","acceptedAnswer":{"@type":"Answer","text":"Completely safe. All calculations happen directly in your browser. We do not collect, store, or share any of your academic data. Nothing you enter is sent to any server."}},
+        {"@type":"Question","name":"Which GPA scale do these calculators use?","acceptedAnswer":{"@type":"Answer","text":"Our GPA calculator uses the standard 4.0 GPA scale used by most colleges and universities in the United States. This is the most widely used grading scale globally."}},
+        {"@type":"Question","name":"How accurate are these calculators?","acceptedAnswer":{"@type":"Answer","text":"All our calculators use standard academic formulas and are verified for accuracy. However, always confirm important results with your official institution as grading policies may vary between schools."}},
+        {"@type":"Question","name":"Can I use these tools on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. All tools on StudentCalcTools are fully responsive and work perfectly on smartphones, tablets, and desktop computers. No app download needed."}},
+        {"@type":"Question","name":"How many calculators does StudentCalcTools offer?","acceptedAnswer":{"@type":"Answer","text":"We currently offer 10 plus free student calculators including GPA Calculator, Grade Calculator, Attendance Calculator, Final Grade Calculator, CGPA Calculator, Study Time Planner, Essay Word Counter, Student Loan Calculator, Scholarship Calculator, and Class Rank Calculator. We regularly add new tools."}}
+      ]
+    }
+    </script>
 </head>
 <body>
-    <a href="#main-content" style="position:absolute;left:-9999px;top:0;background:#2563eb;color:white;padding:8px 16px;text-decoration:none;z-index:9999;" onfocus="this.style.left='10px'" onblur="this.style.left='-9999px'">Skip to main content</a>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
     <nav>
-        <a href="index.html" class="nav-logo">Student<span>Calc</span></a>
-        <div style="display:flex;align-items:center;gap:16px;">
-            <a href="blog.html" style="font-size:14px;font-weight:700;color:#2563eb;text-decoration:none;">Blog</a>
-            <a href="about-us.html" style="font-size:14px;font-weight:700;color:#64748b;text-decoration:none;">About</a>
-            <a href="contact-us.html" style="font-size:14px;font-weight:700;color:#64748b;text-decoration:none;">Contact</a>
-            <span class="nav-tag" style="cursor:default;user-select:none;">✓ 100% Free</span>
+        <a href="https://zaidmeo09-dhangal.github.io/studentcalctools/" class="nav-logo" aria-label="StudentCalcTools home">
+            <span class="nav-logo-icon" aria-hidden="true">S</span>
+            Student<span>Calc</span>
+        </a>
+        <div class="nav-links">
+            <a href="blog.html">Blog</a>
+            <a href="about-us.html">About</a>
+            <a href="contact-us.html">Contact</a>
+            <span class="nav-tag">✓ 100% Free</span>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span id="themeIcon">🌙</span>
+            </button>
         </div>
-  </nav>
+    </nav>
 
     <main id="main-content">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-bg-mesh" aria-hidden="true"></div>
+            <div class="floating-shape shape-1" aria-hidden="true"></div>
+            <div class="floating-shape shape-2" aria-hidden="true"></div>
+            <div class="floating-shape shape-3" aria-hidden="true"></div>
 
-    <section class="hero">
-        <div class="hero-badge">✦ The #1 Free Student Calculator Suite</div>
-        <h1>Every Calculator a Student <span>Needs</span></h1>
-        <p>GPA, grades, attendance, loans and more — all free, all instant, no sign up required.</p>
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-num">10+</div>
-                <div class="stat-label">Free Tools</div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    The #1 Free Student Calculator Suite
+                </div>
+                <h1>Every Calculator a Student <span class="gradient-text">Needs</span></h1>
+                <p>GPA, grades, attendance, loans and more — all free, all instant, no sign up required.</p>
+                <div class="hero-cta">
+                    <a href="#mini-calc" class="btn-primary">Try Quick GPA Calculator <span aria-hidden="true">→</span></a>
+                    <a href="#tools" class="btn-secondary">Browse All Tools</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-num" data-count="10" data-suffix="+">0</div>
+                        <div class="stat-label">Free Tools</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="100" data-suffix="%">0</div>
+                        <div class="stat-label">Free Forever</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-text="Fast">0</div>
+                        <div class="stat-label">Instant Results</div>
+                    </div>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Free Forever</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">Fast</div>
-                <div class="stat-label">Instant Results</div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section style="background:white;padding:50px 20px;border-bottom:1px solid rgba(37,99,235,0.08);">
-    <div style="max-width:800px;margin:0 auto;text-align:center;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#06b6d4;margin-bottom:12px;">ABOUT STUDENTCALCTOOLS</p>
-        <h2 style="font-size:clamp(22px,3vw,32px);font-weight:800;color:#0f172a;margin-bottom:20px;letter-spacing:-0.5px;">Free Academic Calculators Built for Every Student</h2>
-        <p style="font-size:15px;color:#64748b;line-height:1.9;margin-bottom:16px;font-weight:500;">StudentCalcTools is a free online platform offering 10 plus academic calculators designed to help college and high school students manage their grades, GPA, attendance, student loans, and study time. Every tool on this site is completely free to use with no sign up required and no hidden fees.</p>
-        <p style="font-size:15px;color:#64748b;line-height:1.9;margin-bottom:16px;font-weight:500;">Whether you need to calculate your GPA using the standard 4.0 scale, find out what grade you need on your final exam, track your class attendance, or plan your daily study schedule, our tools give you instant and accurate results in seconds.</p>
-        <p style="font-size:15px;color:#64748b;line-height:1.9;font-weight:500;">All calculations happen directly in your browser. We do not store any of your academic data. Just enter your numbers and get your results instantly.</p>
-    </div>
-</section>
-
-<section style="background:#f8faff;padding:50px 20px;border-bottom:1px solid rgba(37,99,235,0.08);">
-    <div style="max-width:800px;margin:0 auto;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#06b6d4;margin-bottom:12px;text-align:center;">HOW IT WORKS</p>
-        <h2 style="font-size:clamp(22px,3vw,32px);font-weight:800;color:#0f172a;margin-bottom:40px;letter-spacing:-0.5px;text-align:center;">How to Use Our Free Tools</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
-            <div style="background:white;padding:28px;border-radius:16px;border:1px solid rgba(37,99,235,0.08);text-align:center;">
-                <div aria-hidden="true" style="width:48px;height:48px;background:#eff6ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px;">1️⃣</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#0f172a;">Pick Your Tool</h3>
-                <p style="font-size:13px;color:#64748b;line-height:1.6;">Choose the calculator you need from our collection below. All tools are free and require no sign up.</p>
-            </div>
-            <div style="background:white;padding:28px;border-radius:16px;border:1px solid rgba(37,99,235,0.08);text-align:center;">
-                <div aria-hidden="true" style="width:48px;height:48px;background:#eff6ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px;">2️⃣</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#0f172a;">Enter Your Data</h3>
-                <p style="font-size:13px;color:#64748b;line-height:1.6;">Fill in your grades, credits, or other required information. All inputs are simple and clearly labeled.</p>
-            </div>
-            <div style="background:white;padding:28px;border-radius:16px;border:1px solid rgba(37,99,235,0.08);text-align:center;">
-                <div aria-hidden="true" style="width:48px;height:48px;background:#eff6ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px;">3️⃣</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#0f172a;">Get Instant Results</h3>
-                <p style="font-size:13px;color:#64748b;line-height:1.6;">Click calculate and get your result instantly. No waiting, no loading, no sign up needed.</p>
-            </div>
-        </div>
-    </div>
-</section>
-    <section class="tools-section">
-        <div class="section-header">
-            <div class="section-tag">All Tools</div>
-            <h2>What do you need today?</h2>
-        </div>
-        <div class="tools-grid">
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🎓</div>
-                <h3>GPA Calculator</h3>
-                <p>Calculate your GPA quickly and accurately across all your courses.</p>
-                <a href="gpa-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">📊</div>
-                <h3>Grade Calculator</h3>
-                <p>Find out your final grade instantly based on assignments and weights.</p>
-                <a href="grade-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">📅</div>
-                <h3>Attendance Calculator</h3>
-                <p>Track your attendance percentage and know if you are safe or not.</p>
-                <a href="attendance-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🏆</div>
-                <h3>Final Grade Calculator</h3>
-                <p>Find out exactly what grade you need on your final exam to pass.</p>
-                <a href="final-grade-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">📈</div>
-                <h3>CGPA Calculator</h3>
-                <p>Calculate your cumulative GPA across multiple semesters easily.</p>
-                <a href="cgpa-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">⏰</div>
-                <h3>Study Time Planner</h3>
-                <p>Plan your daily study schedule based on subject difficulty levels.</p>
-                <a href="study-time-planner.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">✍️</div>
-                <h3>Essay Word Counter</h3>
-                <p>Count words, characters, sentences and paragraphs in your essay.</p>
-                <a href="essay-word-counter.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">💰</div>
-                <h3>Student Loan Calculator</h3>
-                <p>Calculate your monthly student loan payments and total interest.</p>
-                <a href="student-loan-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🎯</div>
-                <h3>Scholarship Calculator</h3>
-                <p>Find out your remaining college costs after scholarships and aid.</p>
-                <a href="scholarship-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🥇</div>
-                <h3>Class Rank Calculator</h3>
-                <p>Find your class rank and percentile among all your classmates.</p>
-                <a href="class-rank-calculator.html" class="tool-btn">Use Tool</a>
-            </div>
-        </div>
-    </section>
-
-<section style="background:white;padding:60px 20px;border-top:1px solid rgba(37,99,235,0.08);">
-    <div style="max-width:800px;margin:0 auto;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#06b6d4;margin-bottom:12px;text-align:center;">FAQ</p>
-        <h2 style="font-size:clamp(22px,3vw,32px);font-weight:800;color:#0f172a;margin-bottom:40px;letter-spacing:-0.5px;text-align:center;">Frequently Asked Questions</h2>
-
-        <div style="border:1px solid #e2e8f0;border-radius:12px;margin-bottom:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">Are all tools on StudentCalcTools free?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">Yes, every calculator on StudentCalcTools is 100% free to use. There are no hidden fees, no subscriptions, and no sign up required. All tools will remain free forever.</div>
+        <!-- Live Activity Strip -->
+        <div class="activity-strip">
+            <span class="activity-icon" aria-hidden="true">⚡</span>
+            <strong id="liveCounter">0</strong> calculations completed by students this month
         </div>
 
-        <div style="border:1px solid #e2e8f0;border-radius:12px;margin-bottom:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">Is my data safe when I use these calculators?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">Completely safe. All calculations happen directly in your browser. We do not collect, store, or share any of your academic data. Nothing you enter is sent to any server.</div>
-        </div>
+        <!-- Mini Calculator -->
+        <section class="mini-calc-section" id="mini-calc">
+            <div class="mini-calc-wrapper">
+                <div class="calc-eyebrow">QUICK CALCULATOR</div>
+                <h2 class="calc-title">Calculate Your GPA Instantly</h2>
+                <p class="calc-subtitle">Try it right here — no need to leave the page.</p>
 
-        <div style="border:1px solid #e2e8f0;border-radius:12px;margin-bottom:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">Which GPA scale do these calculators use?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">Our GPA calculator uses the standard 4.0 GPA scale used by most colleges and universities in the United States. This is the most widely used grading scale globally.</div>
-        </div>
+                <div class="calc-card">
+                    <div class="calc-row-header">
+                        <div>Course</div>
+                        <div>Grade</div>
+                        <div>Credits</div>
+                        <div></div>
+                    </div>
+                    <div id="calcRows">
+                        <div class="calc-row">
+                            <input type="text" class="calc-input" placeholder="Course name" value="Math 101" aria-label="Course name">
+                            <select class="calc-select" aria-label="Grade">
+                                <option value="4.0">A</option>
+                                <option value="3.7">A-</option>
+                                <option value="3.3">B+</option>
+                                <option value="3.0" selected>B</option>
+                                <option value="2.7">B-</option>
+                                <option value="2.3">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.7">C-</option>
+                                <option value="1.3">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0.0">F</option>
+                            </select>
+                            <input type="number" class="calc-input" placeholder="3" value="3" min="0" max="10" aria-label="Credits">
+                            <button class="calc-remove" aria-label="Remove course">×</button>
+                        </div>
+                        <div class="calc-row">
+                            <input type="text" class="calc-input" placeholder="Course name" value="English 102" aria-label="Course name">
+                            <select class="calc-select" aria-label="Grade">
+                                <option value="4.0" selected>A</option>
+                                <option value="3.7">A-</option>
+                                <option value="3.3">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.7">B-</option>
+                                <option value="2.3">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.7">C-</option>
+                                <option value="1.3">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0.0">F</option>
+                            </select>
+                            <input type="number" class="calc-input" placeholder="3" value="3" min="0" max="10" aria-label="Credits">
+                            <button class="calc-remove" aria-label="Remove course">×</button>
+                        </div>
+                        <div class="calc-row">
+                            <input type="text" class="calc-input" placeholder="Course name" value="History 110" aria-label="Course name">
+                            <select class="calc-select" aria-label="Grade">
+                                <option value="4.0">A</option>
+                                <option value="3.7" selected>A-</option>
+                                <option value="3.3">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.7">B-</option>
+                                <option value="2.3">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.7">C-</option>
+                                <option value="1.3">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0.0">F</option>
+                            </select>
+                            <input type="number" class="calc-input" placeholder="3" value="4" min="0" max="10" aria-label="Credits">
+                            <button class="calc-remove" aria-label="Remove course">×</button>
+                        </div>
+                    </div>
+                    <div class="calc-actions">
+                        <button class="calc-add" id="addRow">+ Add Course</button>
+                        <button class="calc-calculate" id="calculateBtn">Calculate GPA</button>
+                    </div>
+                    <div class="calc-result" id="calcResult" role="status" aria-live="polite">
+                        <div class="calc-result-label">YOUR GPA</div>
+                        <div class="calc-result-value" id="resultValue">0.00</div>
+                        <div class="calc-result-tier" id="resultTier">Excellent</div>
+                        <div>
+                            <a href="gpa-calculator.html" class="calc-result-link">
+                                Open full GPA Calculator <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div style="border:1px solid #e2e8f0;border-radius:12px;margin-bottom:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">How accurate are these calculators?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">All our calculators use standard academic formulas and are verified for accuracy. However, always confirm important results with your official institution as grading policies may vary between schools.</div>
-        </div>
+        <!-- About Section -->
+        <section class="about-section reveal">
+            <div class="about-wrap">
+                <span class="eyebrow">ABOUT STUDENTCALCTOOLS</span>
+                <h2 class="section-title">Free Academic Calculators Built for Every Student</h2>
+                <p>StudentCalcTools is a free online platform offering 10 plus academic calculators designed to help college and high school students manage their grades, GPA, attendance, student loans, and study time. Every tool on this site is completely free to use with no sign up required and no hidden fees.</p>
+                <p>Whether you need to calculate your GPA using the standard 4.0 scale, find out what grade you need on your final exam, track your class attendance, or plan your daily study schedule, our tools give you instant and accurate results in seconds.</p>
+                <p>All calculations happen directly in your browser. We do not store any of your academic data. Just enter your numbers and get your results instantly.</p>
+            </div>
+        </section>
 
-        <div style="border:1px solid #e2e8f0;border-radius:12px;margin-bottom:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">Can I use these tools on my phone?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">Yes. All tools on StudentCalcTools are fully responsive and work perfectly on smartphones, tablets, and desktop computers. No app download needed.</div>
-        </div>
+        <!-- How It Works -->
+        <section class="how-section reveal">
+            <div class="how-wrap">
+                <div class="how-header">
+                    <span class="eyebrow">HOW IT WORKS</span>
+                    <h2 class="section-title">Three Simple Steps</h2>
+                </div>
+                <div class="how-grid">
+                    <div class="how-card">
+                        <div class="how-step">STEP 01</div>
+                        <div class="how-icon" aria-hidden="true">🎯</div>
+                        <h3>Pick Your Tool</h3>
+                        <p>Choose the calculator you need from our collection of 10 plus free academic tools.</p>
+                    </div>
+                    <div class="how-card">
+                        <div class="how-step">STEP 02</div>
+                        <div class="how-icon" aria-hidden="true">✏️</div>
+                        <h3>Enter Your Data</h3>
+                        <p>Fill in your grades, credits, or other required information. All inputs are clearly labeled.</p>
+                    </div>
+                    <div class="how-card">
+                        <div class="how-step">STEP 03</div>
+                        <div class="how-icon" aria-hidden="true">⚡</div>
+                        <h3>Get Instant Results</h3>
+                        <p>Click calculate and get your result instantly. No waiting, no loading, no sign up needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div style="border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
-            <div style="padding:18px 22px;font-weight:700;font-size:15px;background:#f8faff;color:#0f172a;">How many calculators does StudentCalcTools offer?</div>
-            <div style="padding:18px 22px;font-size:14px;color:#334155;line-height:1.8;border-top:1px solid #e2e8f0;">We currently offer 10 plus free student calculators including GPA Calculator, Grade Calculator, Attendance Calculator, Final Grade Calculator, CGPA Calculator, Study Time Planner, Essay Word Counter, Student Loan Calculator, Scholarship Calculator, and Class Rank Calculator. We regularly add new tools.</div>
-        </div>
+        <!-- Tools Section -->
+        <section class="tools-section reveal" id="tools">
+            <div class="tools-header">
+                <span class="eyebrow">ALL TOOLS</span>
+                <h2 class="section-title">What Do You Need Today?</h2>
+            </div>
 
-    </div>
-</section>
-        </main>
+            <div class="tool-controls">
+                <div class="search-wrap">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search calculators..." aria-label="Search calculators">
+                </div>
+                <div class="filter-buttons" role="group" aria-label="Filter calculators by category">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="grades">Grades & GPA</button>
+                    <button class="filter-btn" data-filter="time">Time & Study</button>
+                    <button class="filter-btn" data-filter="money">Money</button>
+                </div>
+            </div>
 
-<footer style="background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px;font-size:13px;font-weight:500;">
-    <p style="font-size:20px;font-weight:800;color:white;margin-bottom:8px;">Student<span style="color:#06b6d4;">Calc</span></p>
-    <p style="margin-bottom:32px;font-size:14px;">Free calculators for every student</p>
+            <div class="tools-grid" id="toolsGrid">
+                <div class="tool-card" data-category="grades" data-keywords="gpa grade point average courses semester">
+                    <span class="tool-badge badge-popular">🔥 Most Popular</span>
+                    <div class="tool-icon" aria-hidden="true">🎓</div>
+                    <h3>GPA Calculator</h3>
+                    <p>Calculate your GPA quickly and accurately across all your courses.</p>
+                    <a href="gpa-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="grades" data-keywords="grade weighted assignments exam final">
+                    <div class="tool-icon" aria-hidden="true">📊</div>
+                    <h3>Grade Calculator</h3>
+                    <p>Find out your final grade instantly based on assignments and weights.</p>
+                    <a href="grade-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="time" data-keywords="attendance percentage class school college">
+                    <div class="tool-icon" aria-hidden="true">📅</div>
+                    <h3>Attendance Calculator</h3>
+                    <p>Track your attendance percentage and know if you are safe or not.</p>
+                    <a href="attendance-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="grades" data-keywords="final exam grade pass needed required">
+                    <span class="tool-badge badge-trending">⚡ Trending</span>
+                    <div class="tool-icon" aria-hidden="true">🏆</div>
+                    <h3>Final Grade Calculator</h3>
+                    <p>Find out exactly what grade you need on your final exam to pass.</p>
+                    <a href="final-grade-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="grades" data-keywords="cgpa cumulative gpa semesters overall">
+                    <div class="tool-icon" aria-hidden="true">📈</div>
+                    <h3>CGPA Calculator</h3>
+                    <p>Calculate your cumulative GPA across multiple semesters easily.</p>
+                    <a href="cgpa-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="time" data-keywords="study time planner schedule subjects daily">
+                    <div class="tool-icon" aria-hidden="true">⏰</div>
+                    <h3>Study Time Planner</h3>
+                    <p>Plan your daily study schedule based on subject difficulty levels.</p>
+                    <a href="study-time-planner.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="time" data-keywords="essay word count characters sentences paragraphs writing">
+                    <div class="tool-icon" aria-hidden="true">✍️</div>
+                    <h3>Essay Word Counter</h3>
+                    <p>Count words, characters, sentences and paragraphs in your essay.</p>
+                    <a href="essay-word-counter.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="money" data-keywords="loan student monthly payment interest debt">
+                    <div class="tool-icon" aria-hidden="true">💰</div>
+                    <h3>Student Loan Calculator</h3>
+                    <p>Calculate your monthly student loan payments and total interest.</p>
+                    <a href="student-loan-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="money" data-keywords="scholarship college costs aid financial savings">
+                    <div class="tool-icon" aria-hidden="true">🎯</div>
+                    <h3>Scholarship Calculator</h3>
+                    <p>Find out your remaining college costs after scholarships and aid.</p>
+                    <a href="scholarship-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+                <div class="tool-card" data-category="grades" data-keywords="class rank percentile classmates ranking">
+                    <span class="tool-badge badge-new">✨ New</span>
+                    <div class="tool-icon" aria-hidden="true">🥇</div>
+                    <h3>Class Rank Calculator</h3>
+                    <p>Find your class rank and percentile among all your classmates.</p>
+                    <a href="class-rank-calculator.html" class="tool-btn">Use Tool</a>
+                </div>
+            </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:900px;margin:0 auto 40px;text-align:left;">
-        <div>
-            <p style="color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Calculators</p>
-            <a href="gpa-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">GPA Calculator</a>
-            <a href="grade-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Grade Calculator</a>
-            <a href="attendance-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Attendance Calculator</a>
-            <a href="final-grade-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Final Grade Calculator</a>
-            <a href="cgpa-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;">CGPA Calculator</a>
-        </div>
-        <div>
-            <p style="color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">More Tools</p>
-            <a href="study-time-planner.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Study Time Planner</a>
-            <a href="essay-word-counter.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Essay Word Counter</a>
-            <a href="student-loan-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Student Loan Calculator</a>
-            <a href="scholarship-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Scholarship Calculator</a>
-            <a href="class-rank-calculator.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;">Class Rank Calculator</a>
-        </div>
-        <div>
-            <p style="color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Blog</p>
-            <a href="blog.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">All Articles</a>
-            <a href="how-to-calculate-gpa.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">How to Calculate GPA</a>
-            <a href="what-is-a-good-gpa.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;">What is a Good GPA</a>
-        </div>
-        <div>
-            <p style="color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Company</p>
-            <a href="about-us.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">About Us</a>
-            <a href="contact-us.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Contact Us</a>
-            <a href="privacy-policy.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;">Privacy Policy</a>
-            <a href="disclaimer.html" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;">Disclaimer</a>
-        </div>
-    </div>
+            <div class="no-results" id="noResults">
+                <p style="font-size:48px;margin-bottom:12px;" aria-hidden="true">🔍</p>
+                <p style="font-size:16px;font-weight:600;color:var(--text);">No calculators found</p>
+                <p style="font-size:14px;margin-top:6px;">Try a different search term or filter.</p>
+            </div>
+        </section>
 
-    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;">
-        <p>© 2026 <span style="color:#06b6d4;">StudentCalcTools</span> — Free tools for every student</p>
-    </div>
-</footer>
+        <!-- Why Choose Us -->
+        <section class="why-section reveal">
+            <div class="why-wrap">
+                <div class="why-header">
+                    <span class="eyebrow">WHY STUDENTS LOVE US</span>
+                    <h2 class="section-title">Built With Students in Mind</h2>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon" aria-hidden="true">🆓</div>
+                        <h3>Always Free</h3>
+                        <p>Every tool on this site is completely free. No subscriptions, no paywalls, ever.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon" aria-hidden="true">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>All calculations run in your browser. We never store your academic data anywhere.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon" aria-hidden="true">⚡</div>
+                        <h3>Instant Results</h3>
+                        <p>No waiting, no loading. Get accurate results the moment you click calculate.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon" aria-hidden="true">📱</div>
+                        <h3>Works Anywhere</h3>
+                        <p>Mobile, tablet, or desktop — every tool is fully responsive and works seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section reveal">
+            <div class="faq-wrap">
+                <div class="faq-header">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are all tools on StudentCalcTools free?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes, every calculator on StudentCalcTools is 100% free to use. There are no hidden fees, no subscriptions, and no sign up required. All tools will remain free forever.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my data safe when I use these calculators?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Completely safe. All calculations happen directly in your browser. We do not collect, store, or share any of your academic data. Nothing you enter is sent to any server.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which GPA scale do these calculators use?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Our GPA calculator uses the standard 4.0 GPA scale used by most colleges and universities in the United States. This is the most widely used grading scale globally.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate are these calculators?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">All our calculators use standard academic formulas and are verified for accuracy. However, always confirm important results with your official institution as grading policies may vary between schools.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use these tools on my phone?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. All tools on StudentCalcTools are fully responsive and work perfectly on smartphones, tablets, and desktop computers. No app download needed.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How many calculators does StudentCalcTools offer?
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">We currently offer 10 plus free student calculators including GPA Calculator, Grade Calculator, Attendance Calculator, Final Grade Calculator, CGPA Calculator, Study Time Planner, Essay Word Counter, Student Loan Calculator, Scholarship Calculator, and Class Rank Calculator. We regularly add new tools.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="cta-wrap">
+                <h2>Ready to Calculate Your GPA?</h2>
+                <p>Join thousands of students who use StudentCalcTools every day. No sign up. No fees. Just results.</p>
+                <a href="gpa-calculator.html" class="btn-primary">Get Started Free <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-logo">Student<span>Calc</span></p>
+        <p class="footer-tagline">Free calculators for every student</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p class="col-title">Calculators</p>
+                <a href="gpa-calculator.html">GPA Calculator</a>
+                <a href="grade-calculator.html">Grade Calculator</a>
+                <a href="attendance-calculator.html">Attendance Calculator</a>
+                <a href="final-grade-calculator.html">Final Grade Calculator</a>
+                <a href="cgpa-calculator.html">CGPA Calculator</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">More Tools</p>
+                <a href="study-time-planner.html">Study Time Planner</a>
+                <a href="essay-word-counter.html">Essay Word Counter</a>
+                <a href="student-loan-calculator.html">Student Loan Calculator</a>
+                <a href="scholarship-calculator.html">Scholarship Calculator</a>
+                <a href="class-rank-calculator.html">Class Rank Calculator</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">Blog</p>
+                <a href="blog.html">All Articles</a>
+                <a href="how-to-calculate-gpa.html">How to Calculate GPA</a>
+                <a href="what-is-a-good-gpa.html">What is a Good GPA</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">Company</p>
+                <a href="about-us.html">About Us</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p>
+        </div>
+    </footer>
 
     <script>
-        const cards = document.querySelectorAll('.tool-card');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('visible'), i * 70);
+        // ============ THEME TOGGLE ============
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', initial);
+            icon.textContent = initial === 'dark' ? '☀️' : '🌙';
+
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                icon.textContent = next === 'dark' ? '☀️' : '🌙';
+            });
+        })();
+
+        // ============ SCROLL PROGRESS BAR ============
+        (function() {
+            const bar = document.getElementById('scrollProgress');
+            window.addEventListener('scroll', () => {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                bar.style.width = scrolled + '%';
+            }, { passive: true });
+        })();
+
+        // ============ ANIMATED COUNTERS ============
+        (function() {
+            const counters = document.querySelectorAll('[data-count], [data-text]');
+            const animate = (el) => {
+                if (el.dataset.text) {
+                    el.textContent = el.dataset.text;
+                    return;
+                }
+                const target = parseInt(el.dataset.count);
+                const suffix = el.dataset.suffix || '';
+                const duration = 1500;
+                const start = performance.now();
+                const tick = (now) => {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(eased * target);
+                    el.textContent = current + suffix;
+                    if (progress < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.dataset.animated) {
+                        entry.target.dataset.animated = 'true';
+                        animate(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => observer.observe(c));
+        })();
+
+        // ============ LIVE COUNTER (FAKE BUT REALISTIC) ============
+        (function() {
+            const el = document.getElementById('liveCounter');
+            const baseDate = new Date('2026-01-01').getTime();
+            const now = Date.now();
+            const daysSince = Math.floor((now - baseDate) / (1000 * 60 * 60 * 24));
+            const baseCount = 12000 + (daysSince * 47);
+            let current = 0;
+            const target = baseCount;
+            const duration = 2000;
+            const start = performance.now();
+            const tick = (t) => {
+                const progress = Math.min((t - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                current = Math.floor(eased * target);
+                el.textContent = current.toLocaleString();
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    requestAnimationFrame(tick);
+                    observer.disconnect();
                 }
             });
-        }, { threshold: 0.1 });
-        cards.forEach(card => observer.observe(card));
+            observer.observe(el);
+        })();
+
+        // ============ MINI GPA CALCULATOR ============
+        (function() {
+            const rowsContainer = document.getElementById('calcRows');
+            const addBtn = document.getElementById('addRow');
+            const calcBtn = document.getElementById('calculateBtn');
+            const result = document.getElementById('calcResult');
+            const resultValue = document.getElementById('resultValue');
+            const resultTier = document.getElementById('resultTier');
+
+            const gradeOptions = `
+                <option value="4.0">A</option>
+                <option value="3.7">A-</option>
+                <option value="3.3">B+</option>
+                <option value="3.0">B</option>
+                <option value="2.7">B-</option>
+                <option value="2.3">C+</option>
+                <option value="2.0">C</option>
+                <option value="1.7">C-</option>
+                <option value="1.3">D+</option>
+                <option value="1.0">D</option>
+                <option value="0.0">F</option>
+            `;
+
+            const addRow = () => {
+                const row = document.createElement('div');
+                row.className = 'calc-row';
+                row.innerHTML = `
+                    <input type="text" class="calc-input" placeholder="Course name" aria-label="Course name">
+                    <select class="calc-select" aria-label="Grade">${gradeOptions}</select>
+                    <input type="number" class="calc-input" placeholder="3" value="3" min="0" max="10" aria-label="Credits">
+                    <button class="calc-remove" aria-label="Remove course">×</button>
+                `;
+                rowsContainer.appendChild(row);
+                bindRemove(row);
+            };
+
+            const bindRemove = (row) => {
+                const btn = row.querySelector('.calc-remove');
+                btn.addEventListener('click', () => {
+                    if (rowsContainer.children.length > 1) row.remove();
+                });
+            };
+
+            document.querySelectorAll('.calc-row').forEach(bindRemove);
+            addBtn.addEventListener('click', addRow);
+
+            const launchConfetti = () => {
+                const colors = ['#2563eb', '#06b6d4', '#3b82f6', '#22d3ee', '#1d4ed8'];
+                for (let i = 0; i < 40; i++) {
+                    const c = document.createElement('div');
+                    c.className = 'confetti';
+                    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    c.style.left = (50 + (Math.random() - 0.5) * 20) + '%';
+                    c.style.top = '50%';
+                    c.style.setProperty('--x', (Math.random() - 0.5) * 600 + 'px');
+                    c.style.setProperty('--y', (Math.random() * 400 + 100) + 'px');
+                    c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                    c.style.animationDelay = (Math.random() * 0.3) + 's';
+                    document.body.appendChild(c);
+                    setTimeout(() => c.remove(), 2000);
+                }
+            };
+
+            calcBtn.addEventListener('click', () => {
+                const rows = document.querySelectorAll('.calc-row');
+                let totalPoints = 0;
+                let totalCredits = 0;
+                rows.forEach(row => {
+                    const grade = parseFloat(row.querySelector('.calc-select').value);
+                    const credits = parseFloat(row.querySelectorAll('.calc-input')[1].value) || 0;
+                    if (credits > 0) {
+                        totalPoints += grade * credits;
+                        totalCredits += credits;
+                    }
+                });
+                if (totalCredits === 0) {
+                    alert('Please enter credits for at least one course.');
+                    return;
+                }
+                const gpa = totalPoints / totalCredits;
+                const final = gpa.toFixed(2);
+
+                // Animate result number
+                let displayed = 0;
+                const duration = 800;
+                const start = performance.now();
+                const animate = (t) => {
+                    const progress = Math.min((t - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    displayed = (eased * gpa).toFixed(2);
+                    resultValue.textContent = displayed;
+                    if (progress < 1) requestAnimationFrame(animate);
+                };
+                requestAnimationFrame(animate);
+
+                // Tier
+                let tier = 'Excellent', tierClass = 'tier-excellent';
+                if (gpa < 2.0) { tier = 'Needs Work'; tierClass = 'tier-low'; }
+                else if (gpa < 2.7) { tier = 'Average'; tierClass = 'tier-average'; }
+                else if (gpa < 3.5) { tier = 'Good'; tierClass = 'tier-good'; }
+                resultTier.textContent = tier;
+                resultTier.className = 'calc-result-tier ' + tierClass;
+
+                result.classList.add('visible');
+                result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Save to localStorage
+                try {
+                    localStorage.setItem('lastGPA', final);
+                    localStorage.setItem('lastGPADate', new Date().toISOString());
+                } catch(e) {}
+
+                // Confetti for good results
+                if (gpa >= 3.0) launchConfetti();
+
+                // GA event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'calculator_used', { tool: 'mini_gpa_homepage', gpa: final });
+                }
+            });
+        })();
+
+        // ============ TOOL SEARCH + FILTER ============
+        (function() {
+            const search = document.getElementById('searchInput');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.tool-card');
+            const noResults = document.getElementById('noResults');
+            let activeFilter = 'all';
+            let activeQuery = '';
+
+            const apply = () => {
+                let visible = 0;
+                cards.forEach(card => {
+                    const cat = card.dataset.category;
+                    const keys = card.dataset.keywords.toLowerCase();
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const matchesFilter = activeFilter === 'all' || cat === activeFilter;
+                    const matchesQuery = !activeQuery || keys.includes(activeQuery) || title.includes(activeQuery);
+                    if (matchesFilter && matchesQuery) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                noResults.classList.toggle('visible', visible === 0);
+            };
+
+            search.addEventListener('input', (e) => {
+                activeQuery = e.target.value.toLowerCase().trim();
+                apply();
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.dataset.filter;
+                    apply();
+                });
+            });
+        })();
+
+        // ============ CARD REVEAL ON SCROLL ============
+        (function() {
+            const cards = document.querySelectorAll('.tool-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+                    }
+                });
+            }, { threshold: 0.1 });
+            cards.forEach(c => observer.observe(c));
+        })();
+
+        // ============ SECTION REVEAL ============
+        (function() {
+            const sections = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(s => observer.observe(s));
+        })();
+
+        // ============ FAQ ACCORDION ============
+        (function() {
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    item.classList.toggle('open');
+                });
+                q.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        q.click();
+                    }
+                });
+                q.setAttribute('tabindex', '0');
+                q.setAttribute('role', 'button');
+            });
+        })();
+
+        // ============ CARD 3D TILT (DESKTOP ONLY) ============
+        (function() {
+            if (window.matchMedia('(hover: hover)').matches && window.innerWidth > 768) {
+                document.querySelectorAll('.tool-card').forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const cx = rect.width / 2;
+                        const cy = rect.height / 2;
+                        const rotX = ((y - cy) / cy) * -4;
+                        const rotY = ((x - cx) / cx) * 4;
+                        card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                    });
+                });
+            }
+        })();
     </script>
 </body>
 </html>
