@@ -18,7 +18,7 @@ secondary_keywords:
 meta_title: "How to Calculate GPA: Simple Student Guide"
 meta_description: "Learn how to calculate GPA with a simple formula, clear examples, and easy steps for students using the 4.0 scale."
 excerpt: "Learn how GPA works, how to use the GPA formula, and how to calculate your grade point average with a simple example."
-featured_image: "/assets/images/gpa-calculator-guide.jpg"
+featured_image: "/studentcalctools/og-image.png"
 image_alt: "Student using an online GPA calculator"
 read_time: "5 min read"
 faqs:
