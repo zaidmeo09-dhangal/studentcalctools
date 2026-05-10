@@ -17,7 +17,7 @@ tags:
   - "Student Guide"
 author: "StudentCalcTools"
 read_time: "6 min read"
-featured_image: "/og-image.png"
+featured_image: "/studentcalctools/og-image.png"
 image_alt: "Student checking GPA results online"
 faqs:
   - question: "What is considered a good GPA?"
