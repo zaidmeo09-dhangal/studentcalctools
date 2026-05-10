@@ -1,0 +1,7 @@
+title: StudentCalcTools
+description: Free student calculators and study tools for GPA, grades, attendance, loans, scholarships and study planning.
+url: "https://zaidmeo09-dhangal.github.io"
+baseurl: "/studentcalctools"
+permalink: /:title.html
+markdown: kramdown
+plugins: []

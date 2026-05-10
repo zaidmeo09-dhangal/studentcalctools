@@ -1,0 +1,118 @@
+media:
+  - name: images
+    label: Images
+    input: assets/images
+    output: /assets/images
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+content:
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{slug}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+      fields: [title, category, date, status]
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: post
+        hidden: true
+      - name: title
+        label: Blog Title
+        type: string
+        required: true
+      - name: slug
+        label: URL Slug
+        type: string
+        required: true
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [Draft, Published]
+      - name: author
+        label: Author
+        type: string
+        default: StudentCalcTools
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - GPA Guide
+            - Grade Guide
+            - Attendance Guide
+            - Study Planning
+            - Student Finance
+            - Scholarship Guide
+            - College Planning
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: primary_keyword
+        label: Primary Keyword
+        type: string
+      - name: secondary_keywords
+        label: Secondary Keywords
+        type: string
+        list: true
+      - name: meta_title
+        label: Meta Title
+        type: string
+        required: true
+      - name: meta_description
+        label: Meta Description
+        type: text
+        required: true
+      - name: excerpt
+        label: Blog Card Excerpt
+        type: text
+        required: true
+      - name: featured_image
+        label: Featured Image
+        type: image
+        options:
+          media: images
+          path: assets/images
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: image_alt
+        label: Featured Image Alt Text
+        type: string
+      - name: read_time
+        label: Read Time
+        type: string
+        default: 5 min read
+      - name: faqs
+        label: FAQs
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Question
+            type: string
+            required: true
+          - name: answer
+            label: Answer
+            type: text
+            required: true
+      - name: body
+        label: Blog Content
+        type: rich-text
+        required: true

@@ -1,8 +1,3 @@
----
-layout: null
-title: Blog - StudentCalcTools
-meta_description: Read articles, tips, and guides for students on grades, GPA, study habits, and college planning.
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +7,22 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
     <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
     <meta name="theme-color" content="#2563eb">
-    <link rel="canonical" href="{{ '/blog.html' | absolute_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.meta_description }}">
-    <meta property="og:type" content="website">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <title>{{ page.meta_title | default: page.title }}</title>
+    <meta name="description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
+    <meta name="author" content="{{ page.author | default: 'StudentCalcTools' }}">
+    <meta property="og:type" content="article">
     <meta property="og:site_name" content="StudentCalcTools">
-    <meta property="og:url" content="{{ '/blog.html' | absolute_url }}">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.meta_description }}">
-    <meta property="og:image" content="{{ '/og-image.png' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.meta_title | default: page.title }}">
+    <meta property="og:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
+    {% if page.featured_image %}<meta property="og:image" content="{{ page.featured_image | absolute_url }}">{% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.meta_description }}">
-    <meta name="twitter:image" content="{{ '/og-image.png' | absolute_url }}">
-    <meta name="author" content="StudentCalcTools">
+    <meta name="twitter:title" content="{{ page.meta_title | default: page.title }}">
+    <meta name="twitter:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
+    {% if page.featured_image %}<meta name="twitter:image" content="{{ page.featured_image | absolute_url }}">{% endif %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,25 +127,44 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
     </style>
     <script type="application/ld+json">
     {
-      "@context":"https://schema.org",
-      "@type":"Blog",
-      "name":"StudentCalcTools Blog",
-      "url":{{ '/blog.html' | absolute_url | jsonify }},
-      "description":{{ page.meta_description | jsonify }},
-      "publisher":{"@type":"Organization","name":"StudentCalcTools","url":{{ '/' | absolute_url | jsonify }}},
-      "blogPost":[
-        {% for post in site.posts %}
-        {"@type":"BlogPosting","headline":{{ post.title | jsonify }},"url":{{ post.url | absolute_url | jsonify }},"datePublished":{{ post.date | date_to_xmlschema | jsonify }}}{% unless forloop.last %},{% endunless %}
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.meta_description | default: page.excerpt | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": { "@type": "Organization", "name": {{ page.author | default: 'StudentCalcTools' | jsonify }} },
+      "publisher": { "@type": "Organization", "name": "StudentCalcTools", "url": {{ site.url | append: site.baseurl | jsonify }} }{% if page.featured_image %},
+      "image": {{ page.featured_image | absolute_url | jsonify }}{% endif %}
+    }
+    </script>
+    {% if page.faqs and page.faqs.size > 0 %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in page.faqs %}
+        {
+          "@type": "Question",
+          "name": {{ faq.question | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ faq.answer | strip_html | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ]
     }
     </script>
+    {% endif %}
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress"></div>
     <nav>
-        <a href="{{ '/' | relative_url }}" class="nav-logo">
+        <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="StudentCalcTools home">
             <span class="nav-logo-icon" aria-hidden="true">S</span>Student<span>Calc</span>
         </a>
         <div class="nav-links">
@@ -164,53 +178,37 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
     <main id="main-content">
         <section class="page-hero">
             <div class="page-hero-content">
-                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span class="breadcrumb-sep">/</span><span>Blog</span></nav>
-                <h1>Student <span class="gradient-text">Blog</span></h1>
-                <p>Guides, tips, and articles to help you understand grades, GPA, and plan your academic future.</p>
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span class="breadcrumb-sep">/</span><a href="{{ '/blog.html' | relative_url }}">Blog</a><span class="breadcrumb-sep">/</span><span>{{ page.title }}</span></nav>
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.excerpt | default: page.meta_description }}</p>
             </div>
         </section>
-        <section class="blog-section reveal">
-            <span class="eyebrow">ALL ARTICLES</span>
-            <h2 class="section-title">Latest from the Blog</h2>
-            <p class="section-sub">Practical guides written for students.</p>
-            <div class="blog-grid">
-                {% for post in site.posts %}
-                {% if post.status != 'Draft' %}
-                <a href="{{ post.url | relative_url }}" class="blog-card">
-                    {% if post.featured_image %}
-                    <img class="blog-card-thumb" src="{{ post.featured_image | relative_url }}" alt="{{ post.image_alt | default: post.title }}">
-                    {% else %}
-                    <div class="blog-card-img-fallback" aria-hidden="true">{{ post.category | slice: 0 }}</div>
-                    {% endif %}
-                    <div class="blog-card-body">
-                        <span class="blog-card-tag">{{ post.category }}</span>
-                        <h2 class="blog-card-title">{{ post.title }}</h2>
-                        <p class="blog-card-excerpt">{{ post.excerpt | default: post.meta_description | strip_html | truncate: 160 }}</p>
-                        <div class="blog-card-footer">
-                            <span class="blog-card-meta">{{ post.date | date: "%b %Y" }} · {{ post.read_time | default: "5 min read" }}</span>
-                            <span class="blog-read-more">Read More</span>
-                        </div>
-                    </div>
-                </a>
+        <section class="post-wrapper reveal">
+            <article class="post-card">
+                <p class="blog-card-meta">{{ page.date | date: "%b %d, %Y" }} · {{ page.read_time | default: "5 min read" }} · {{ page.category }}</p>
+                {% if page.featured_image %}
+                <img class="post-featured-image" src="{{ page.featured_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
                 {% endif %}
-                {% endfor %}
-            </div>
-        </section>
-        <section class="newsletter-section reveal">
-            <div class="newsletter-card">
-                <h2>Stay in the Loop</h2>
-                <p>New guides, calculator tips, and study strategies delivered to your inbox.</p>
-                <div class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address">
-                    <button class="newsletter-btn" onclick="this.textContent='Subscribed';this.style.background='#059669'">Subscribe</button>
+                <div class="post-content">
+                    {{ content }}
                 </div>
-                <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
-            </div>
+                {% if page.faqs and page.faqs.size > 0 %}
+                <section class="post-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    {% for faq in page.faqs %}
+                    <div class="post-faq-item">
+                        <h3>{{ faq.question }}</h3>
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                    {% endfor %}
+                </section>
+                {% endif %}
+            </article>
         </section>
         <section class="cta-section">
             <div class="cta-wrap">
-                <h2>Put Your Knowledge to Work</h2>
-                <p>Use our free GPA and grade calculators to track your academic progress instantly.</p>
+                <h2>Use the free student calculators</h2>
+                <p>Track GPA, grades, attendance and study planning with simple tools built for students.</p>
                 <a href="{{ '/' | relative_url }}" class="btn-cta">Try the Calculators</a>
             </div>
         </section>
