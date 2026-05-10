@@ -3,120 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#2563eb">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://zaidmeo09-dhangal.github.io/studentcalctools/blog.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Student Tips, GPA Guides and Study Resources</title>
-    <meta name="description" content="Free student guides, GPA tips, study strategies and academic resources to help you succeed in college and high school.">
+    <meta name="robots" content="index, follow">
+    <title>Blog - StudentCalcTools</title>
+    <meta name="description" content="Read articles, tips, and guides for students on grades, GPA, study habits, and college planning.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="StudentCalcTools">
+    <meta property="og:url" content="https://zaidmeo09-dhangal.github.io/studentcalctools/blog.html">
+    <meta property="og:title" content="Blog - StudentCalcTools">
+    <meta property="og:description" content="Read articles, tips, and guides for students on grades, GPA, study habits, and college planning.">
+    <meta property="og:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - StudentCalcTools">
+    <meta name="twitter:description" content="Read articles, tips, and guides for students on grades, GPA, study habits, and college planning.">
+    <meta name="twitter:image" content="https://zaidmeo09-dhangal.github.io/studentcalctools/og-image.png">
+    <meta name="author" content="StudentCalcTools">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:'Plus Jakarta Sans',sans-serif;background:#f8faff;color:#0f172a;}
-        nav{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(37,99,235,0.1);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
-        .nav-logo{font-size:20px;font-weight:800;color:#2563eb;text-decoration:none;}
-        .nav-logo span{color:#06b6d4;}
-        .nav-links{display:flex;gap:24px;}
-        .nav-links a{font-size:14px;font-weight:600;color:#64748b;text-decoration:none;}
-        .nav-links a:hover{color:#2563eb;}
-        .hero{background:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);padding:60px 20px;text-align:center;border-bottom:1px solid rgba(37,99,235,0.08);}
-        .hero-tag{display:inline-block;background:white;border:1px solid rgba(37,99,235,0.2);border-radius:30px;padding:5px 16px;font-size:12px;font-weight:700;color:#2563eb;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase;}
-        .hero h1{font-size:clamp(28px,4vw,42px);font-weight:800;color:#0f172a;margin-bottom:16px;}
-        .hero h1 span{color:#2563eb;}
-        .hero p{font-size:16px;color:#64748b;max-width:500px;margin:0 auto;line-height:1.7;font-weight:500;}
-        .container{max-width:900px;margin:60px auto;padding:0 20px;}
-        .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#06b6d4;margin-bottom:12px;}
-        .blog-grid{display:grid;gap:24px;}
-        .blog-card{background:white;border-radius:16px;padding:32px;border:1px solid rgba(37,99,235,0.08);box-shadow:0 2px 16px rgba(37,99,235,0.05);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;transition:transform 0.25s,box-shadow 0.25s;}
-        .blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(37,99,235,0.12);}
-        .blog-tag{display:inline-block;background:#eff6ff;color:#2563eb;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
-        .blog-card h2{font-size:20px;font-weight:800;color:#0f172a;margin-bottom:10px;line-height:1.3;}
-        .blog-card p{font-size:14px;color:#64748b;line-height:1.7;margin-bottom:16px;}
-        .blog-meta{display:flex;gap:16px;font-size:12px;color:#94a3b8;font-weight:600;margin-bottom:16px;}
-        .read-btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:white;text-decoration:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;transition:background 0.2s,gap 0.2s;white-space:nowrap;}
-        .read-btn:hover{background:#1d4ed8;gap:10px;}
-        .read-btn::after{content:'→';}
-        .coming-soon{background:white;border-radius:16px;padding:40px;text-align:center;border:2px dashed rgba(37,99,235,0.2);margin-top:24px;}
-        .coming-soon h3{font-size:18px;font-weight:700;color:#0f172a;margin-bottom:8px;}
-        .coming-soon p{font-size:14px;color:#64748b;}
-        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:40px 20px;font-size:13px;margin-top:80px;}
-        footer span{color:#06b6d4;}
-        footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 10px;}
-        footer a:hover{color:#06b6d4;}
-        @media(max-width:600px){nav{padding:12px 16px;}.nav-links{display:none;}.blog-card{grid-template-columns:1fr;}.hero{padding:40px 16px;}}
+        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
+        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
+        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
+        .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
+        .skip-link:focus{left:0}
+        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
+        [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
+        .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+        .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
+        .nav-logo span{color:var(--accent)}
+        .nav-links{display:flex;align-items:center;gap:16px}
+        .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
+        .nav-links a:hover{color:var(--blue)}
+        .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
+        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
+        .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
+        .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
+        .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
+        .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+        .breadcrumb-sep{margin:0 8px;color:var(--muted)}
+        .page-hero-content{position:relative;z-index:1;max-width:720px;margin:0 auto}
+        .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
+        .page-hero h1 .gradient-text{background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .page-hero p{font-size:17px;color:var(--text-secondary);max-width:560px;margin:0 auto;line-height:1.7;font-weight:500}
+        .blog-section{padding:60px 20px;max-width:900px;margin:0 auto}
+        .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:inline-block}
+        .section-title{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-0.5px;line-height:1.2}
+        .section-sub{font-size:15px;color:var(--muted);margin-bottom:36px;font-weight:500}
+        .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:28px}
+        .blog-card{background:var(--card-bg);border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden;transition:all 0.3s ease;text-decoration:none;display:block}
+        .blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--border-strong)}
+        .blog-card-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
+        .blog-card-img-1{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
+        .blog-card-img-2{background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)}
+        .blog-card-body{padding:28px}
+        .blog-card-tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);background:var(--blue-light);padding:4px 12px;border-radius:20px;margin-bottom:14px}
+        .blog-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.3;letter-spacing:-0.3px}
+        .blog-card-excerpt{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+        .blog-card-footer{display:flex;align-items:center;justify-content:space-between}
+        .blog-card-meta{font-size:12px;color:var(--muted);font-weight:600}
+        .blog-read-more{font-size:14px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s ease}
+        .blog-card:hover .blog-read-more{gap:10px}
+        .newsletter-section{padding:0 20px 60px;max-width:900px;margin:0 auto}
+        .newsletter-card{background:var(--gradient-hero);border:1px solid var(--border-strong);border-radius:24px;padding:48px 40px;text-align:center}
+        .newsletter-card h2{font-size:28px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-0.5px}
+        .newsletter-card p{font-size:15px;color:var(--muted);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .newsletter-form{display:flex;gap:12px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+        .newsletter-input{flex:1;min-width:200px;padding:13px 18px;border:1px solid var(--border-strong);border-radius:10px;font-size:14px;font-family:inherit;background:var(--card-bg);color:var(--text);outline:none;transition:border-color 0.2s ease}
+        .newsletter-input:focus{border-color:var(--blue)}
+        .newsletter-btn{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease;white-space:nowrap}
+        .newsletter-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.35)}
+        .newsletter-note{font-size:12px;color:var(--muted);margin-top:12px;font-weight:500}
+        .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
+        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
+        .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
+        .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
+        .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
+        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
+        .btn-cta:hover{transform:translateY(-2px)}
+        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
+        [data-theme="dark"] footer{background:#020617}
+        .footer-logo{font-size:22px;font-weight:800;color:white;margin-bottom:8px}.footer-logo span{color:var(--accent)}
+        .footer-tagline{margin-bottom:30px;font-size:14px}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:900px;margin:0 auto 36px;text-align:left}
+        .footer-col p.col-title{color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+        .footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;transition:color 0.2s ease}
+        .footer-col a:hover{color:white}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}.footer-bottom span{color:var(--accent)}
+        .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
+        .reveal.visible{opacity:1;transform:translateY(0)}
+        @media(max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.blog-grid{grid-template-columns:1fr}.newsletter-card{padding:32px 20px}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Blog","name":"StudentCalcTools Blog","url":"https://zaidmeo09-dhangal.github.io/studentcalctools/blog.html","description":"Articles, tips, and guides for students on grades, GPA, study habits, and college planning.","publisher":{"@type":"Organization","name":"StudentCalcTools","url":"https://zaidmeo09-dhangal.github.io/studentcalctools/"},"blogPost":[{"@type":"BlogPosting","headline":"How to Calculate GPA","url":"https://zaidmeo09-dhangal.github.io/studentcalctools/how-to-calculate-gpa.html","datePublished":"2026-01-01"},{"@type":"BlogPosting","headline":"What is a Good GPA?","url":"https://zaidmeo09-dhangal.github.io/studentcalctools/what-is-a-good-gpa.html","datePublished":"2026-01-01"}]}
+    </script>
 </head>
 <body>
-
-<nav>
-    <a href="index.html" class="nav-logo">Student<span>Calc</span></a>
-    <div class="nav-links">
-        <a href="index.html">Tools</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact-us.html">Contact</a>
-    </div>
-</nav>
-
-<div class="hero">
-    <div class="hero-tag">Student Blog</div>
-    <h1>Guides to Help You <span>Study Smarter</span></h1>
-    <p>Free guides, GPA tips, study strategies and academic resources for college and high school students.</p>
-</div>
-
-<div class="container">
-    <div class="section-label">Latest Articles</div>
-    <div class="blog-grid">
-
-        <div class="blog-card">
-            <div>
-                <div class="blog-tag">GPA Guide</div>
-                <h2>How to Calculate GPA: Complete Step by Step Guide 2026</h2>
-                <p>Learn exactly how to calculate your GPA using the 4.0 scale. Includes weighted vs unweighted GPA, real examples, a full grade conversion chart, and tips to raise your GPA this semester.</p>
-                <div class="blog-meta">
-                    <span>May 2026</span>
-                    <span>10 min read</span>
-                    <span>College and High School</span>
-                </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <nav>
+        <a href="https://zaidmeo09-dhangal.github.io/studentcalctools/" class="nav-logo">
+            <span class="nav-logo-icon" aria-hidden="true">S</span>Student<span>Calc</span>
+        </a>
+        <div class="nav-links">
+            <a href="blog.html">Blog</a>
+            <a href="about-us.html">About</a>
+            <a href="contact-us.html">Contact</a>
+            <span class="nav-tag">✓ 100% Free</span>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span id="themeIcon">🌙</span></button>
+        </div>
+    </nav>
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://zaidmeo09-dhangal.github.io/studentcalctools/">Home</a><span class="breadcrumb-sep">›</span><span>Blog</span></nav>
+                <h1>Student <span class="gradient-text">Blog</span></h1>
+                <p>Guides, tips, and articles to help you understand grades, GPA, and plan your academic future.</p>
             </div>
-            <a href="how-to-calculate-gpa.html" class="read-btn">Read Article</a>
+        </section>
+        <section class="blog-section reveal">
+            <span class="eyebrow">ALL ARTICLES</span>
+            <h2 class="section-title">Latest from the Blog</h2>
+            <p class="section-sub">Practical, no-fluff guides written for students by students.</p>
+            <div class="blog-grid">
+                <a href="how-to-calculate-gpa.html" class="blog-card">
+                    <div class="blog-card-img blog-card-img-1" aria-hidden="true">🎓</div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">GPA Guide</span>
+                        <h2 class="blog-card-title">How to Calculate GPA — Step by Step</h2>
+                        <p class="blog-card-excerpt">Learn how the 4.0 GPA scale works, walk through a real calculation example, and avoid the most common mistakes students make when computing their GPA.</p>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-meta">📅 Jan 2026 &nbsp;·&nbsp; 5 min read</span>
+                            <span class="blog-read-more">Read More →</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="what-is-a-good-gpa.html" class="blog-card">
+                    <div class="blog-card-img blog-card-img-2" aria-hidden="true">🏆</div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">GPA Guide</span>
+                        <h2 class="blog-card-title">What is a Good GPA? Complete Student Guide</h2>
+                        <p class="blog-card-excerpt">Understand GPA ranges from excellent to failing, what colleges and employers look for, and get 5 actionable tips to raise a low GPA before it's too late.</p>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-meta">📅 Jan 2026 &nbsp;·&nbsp; 6 min read</span>
+                            <span class="blog-read-more">Read More →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="newsletter-section reveal">
+            <div class="newsletter-card">
+                <div style="font-size:40px;margin-bottom:16px">📬</div>
+                <h2>Stay in the Loop</h2>
+                <p>New guides, calculator tips, and study strategies — delivered straight to your inbox. No spam, ever.</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address">
+                    <button class="newsletter-btn" onclick="this.textContent='✓ Subscribed!';this.style.background='#059669'">Subscribe</button>
+                </div>
+                <p class="newsletter-note">🔒 We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="cta-wrap">
+                <h2>Put Your Knowledge to Work</h2>
+                <p>Use our free GPA and grade calculators to track your academic progress instantly.</p>
+                <a href="https://zaidmeo09-dhangal.github.io/studentcalctools/" class="btn-cta">Try the Calculators <span>→</span></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-logo">Student<span>Calc</span></p>
+        <p class="footer-tagline">Free calculators for every student</p>
+        <div class="footer-grid">
+            <div class="footer-col"><p class="col-title">Calculators</p><a href="gpa-calculator.html">GPA Calculator</a><a href="grade-calculator.html">Grade Calculator</a><a href="attendance-calculator.html">Attendance Calculator</a><a href="final-grade-calculator.html">Final Grade Calculator</a><a href="cgpa-calculator.html">CGPA Calculator</a></div>
+            <div class="footer-col"><p class="col-title">More Tools</p><a href="study-time-planner.html">Study Time Planner</a><a href="essay-word-counter.html">Essay Word Counter</a><a href="student-loan-calculator.html">Student Loan Calculator</a><a href="scholarship-calculator.html">Scholarship Calculator</a><a href="class-rank-calculator.html">Class Rank Calculator</a></div>
+            <div class="footer-col"><p class="col-title">Blog</p><a href="blog.html">All Articles</a><a href="how-to-calculate-gpa.html">How to Calculate GPA</a><a href="what-is-a-good-gpa.html">What is a Good GPA</a></div>
+            <div class="footer-col"><p class="col-title">Company</p><a href="about-us.html">About Us</a><a href="contact-us.html">Contact Us</a><a href="privacy-policy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
         </div>
-
-        <div class="blog-card">
-    <div>
-        <div class="blog-tag">GPA Guide</div>
-        <h2>What is a Good GPA in College? Complete Guide 2026</h2>
-        <p>Find out what GPA is considered good, great, and excellent. Includes GPA benchmarks for grad school, scholarships, jobs, and Latin honors like Cum Laude.</p>
-        <div class="blog-meta">
-            <span>May 2026</span>
-            <span>9 min read</span>
-            <span>College Students</span>
-        </div>
-    </div>
-    <a href="what-is-a-good-gpa.html" class="read-btn">Read Article</a>
-</div>
-        
-        <div class="coming-soon">
-            <h3>More Articles Coming Soon</h3>
-            <p>We are working on more guides to help you succeed academically. Check back soon.</p>
-        </div>
-
-    </div>
-</div>
-
-<footer>
-    <p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p>
-    <p style="margin-top:12px;">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="about-us.html">About</a>
-        <a href="contact-us.html">Contact</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="disclaimer.html">Disclaimer</a>
-    </p>
-</footer>
-
+        <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p></div>
+    </footer>
+    <script>
+        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙'});})();
+        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'},{passive:true});})();
+        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(s=>o.observe(s));})();
+    </script>
 </body>
 </html>
