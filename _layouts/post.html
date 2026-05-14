@@ -115,6 +115,80 @@
         .post-content p{margin-bottom:16px}
         .post-content ul,.post-content ol{margin:0 0 20px 22px}
         .post-content li{margin-bottom:8px}
+        .post-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 26px 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.post-content th {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.post-content td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+.post-content tr:last-child td {
+  border-bottom: none;
+}
+
+.post-content tr:nth-child(even) td {
+  background: rgba(37, 99, 235, 0.04);
+}
+
+[data-theme="dark"] .post-content tr:nth-child(even) td {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.post-content table strong {
+  color: var(--text);
+}
+
+.post-content h1 {
+  font-size: 30px;
+  color: var(--text);
+  margin: 38px 0 14px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+.post-content hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 34px 0;
+}
+
+@media(max-width: 768px) {
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .post-content th,
+  .post-content td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
         .post-faq{margin-top:40px;border-top:1px solid var(--border);padding-top:28px}
         .post-faq h2{font-size:28px;color:var(--text);margin-bottom:18px}
         .post-faq-item{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:12px}
