@@ -19,7 +19,7 @@ meta_description: Learn what a good GPA is, how GPA ranges work, and what
   students should know for college, scholarships, and academic planning.
 excerpt: Understand GPA ranges, what colleges look for, and how students can
   improve their academic performance.
-featured_image: /assets/images/how-to-calculate-gpa.webp
+featured_image: /assets/images/what-is-a-good-gpa.webp
 image_alt: Student checking GPA results online
 read_time: 6 min read
 faqs:
