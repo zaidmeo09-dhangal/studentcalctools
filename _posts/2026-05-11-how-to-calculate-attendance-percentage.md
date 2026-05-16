@@ -20,7 +20,7 @@ meta_description: Learn how to calculate attendance percentage with a simple
   formula, examples, and tips to track your classes more easily.
 excerpt: Learn the attendance percentage formula, see simple examples, and
   understand how many classes you can miss safely.
-featured_image: /assets/images/attendance-percentage-guide.webp
+featured_image: /assets/images/attendance-percentage-guide-1.webp
 image_alt: Student checking attendance percentage on a laptop
 read_time: 5 min read
 faqs:
