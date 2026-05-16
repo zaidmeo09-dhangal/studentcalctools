@@ -20,6 +20,7 @@ meta_description: Learn how to calculate attendance percentage with a simple
   formula, examples, and tips to track your classes more easily.
 excerpt: Learn the attendance percentage formula, see simple examples, and
   understand how many classes you can miss safely.
+featured_image: /assets/images/attendance-percentage-guide.webp
 image_alt: Student checking attendance percentage on a laptop
 read_time: 5 min read
 faqs:
@@ -50,7 +51,6 @@ Attendance Percentage = (Attended Classes / Total Classes) × 100
 You only need two numbers:
 
 - Total classes held
-
 - Classes you attended
 
 Once you have both numbers, divide attended classes by total classes and multiply the result by 100.
@@ -94,9 +94,7 @@ A low attendance percentage can create problems near exam time. Students may not
 To know how many classes you can still miss, you need three things:
 
 - Total classes held so far
-
 - Classes attended so far
-
 - Required attendance percentage
 
 For example, if your school requires 75% attendance, you should avoid dropping below that number. The closer your attendance is to the minimum line, the more carefully you need to track each class.
