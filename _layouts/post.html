@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% assign image_path = page.featured_image | default: "/assets/images/og-image.webp" %}
     <title>{{ page.meta_title | default: page.title }}</title>
     <meta name="description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
     <meta name="author" content="{{ page.author | default: 'StudentCalcTools' }}">
@@ -18,11 +19,11 @@
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ page.meta_title | default: page.title }}">
     <meta property="og:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
-    {% if page.featured_image %}<meta property="og:image" content="{{ page.featured_image | absolute_url }}">{% endif %}
+    <meta property="og:image" content="{{ image_path | absolute_url }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.meta_title | default: page.title }}">
     <meta name="twitter:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
-    {% if page.featured_image %}<meta name="twitter:image" content="{{ page.featured_image | absolute_url }}">{% endif %}
+    <meta name="twitter:image" content="{{ image_path | absolute_url }}">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,8 +210,8 @@
       "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
       "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
       "author": { "@type": "Organization", "name": {{ page.author | default: 'StudentCalcTools' | jsonify }} },
-      "publisher": { "@type": "Organization", "name": "StudentCalcTools", "url": {{ site.url | append: site.baseurl | jsonify }} }{% if page.featured_image %},
-      "image": {{ page.featured_image | absolute_url | jsonify }}{% endif %}
+      "publisher": { "@type": "Organization", "name": "StudentCalcTools", "url": {{ site.url | append: site.baseurl | jsonify }} },
+      "image": {{ image_path | absolute_url | jsonify }}
     }
     </script>
     {% if page.faqs and page.faqs.size > 0 %}
@@ -260,9 +261,7 @@
         <section class="post-wrapper">
             <article class="post-card">
                 <p class="blog-card-meta">{{ page.date | date: "%b %d, %Y" }} · {{ page.read_time | default: "5 min read" }} · {{ page.category }}</p>
-                {% if page.featured_image %}
-                <img class="post-featured-image" src="{{ page.featured_image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
-                {% endif %}
+                <img class="post-featured-image" src="{{ image_path | relative_url }}" alt="{{ page.image_alt | default: page.title }}" loading="lazy">
                 <div class="post-content">
                     {{ content }}
                 </div>
