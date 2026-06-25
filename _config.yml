@@ -2,6 +2,6 @@ title: StudentCalcTools
 description: Free student calculators and study tools for GPA, grades, attendance, loans, scholarships and study planning.
 url: "https://studentcalctools.com"
 baseurl: ""
-permalink: /:title/
+permalink: /blog/:title/
 markdown: kramdown
 plugins: []
