@@ -9,18 +9,18 @@
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://studentcalctools.com/final-grade-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Grade Calculator - What You Need on the Final Exam</title>
-    <meta name="description" content="Calculate exactly what score you need on your final exam to achieve your target grade. Free online final grade calculator with instant results.">
+    <title>Final Grade Calculator | Final Exam Grade Tool</title>
+    <meta name="description" content="Use this final grade calculator to find the score you need on your final exam based on your current grade, target grade, and exam weight.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/final-grade-calculator/">
-    <meta property="og:title" content="Final Grade Calculator - What You Need on the Final Exam">
-    <meta property="og:description" content="Calculate exactly what score you need on your final exam to achieve your target grade.">
+    <meta property="og:title" content="Final Grade Calculator | Final Exam Grade Tool">
+    <meta property="og:description" content="Use this final grade calculator to find the score you need on your final exam based on your current grade, target grade, and exam weight.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Final Grade Calculator - Free">
-    <meta name="twitter:description" content="Find what you need on your final exam to pass or get an A.">
+    <meta name="twitter:title" content="Final Grade Calculator | Final Exam Grade Tool">
+    <meta name="twitter:description" content="Find the score you need on your final exam using your current grade, target grade, and exam weight.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
@@ -129,17 +129,40 @@
         @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
         @media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
         @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+
+        .formula-box{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:16px;padding:22px;margin:24px 0;color:var(--text)}
+        .formula-box strong{display:block;font-size:14px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+        .formula-box code{display:block;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:14px;font-size:14px;color:var(--text);white-space:normal;line-height:1.7}
+        .example-box{background:var(--card-bg);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:14px;padding:22px;margin:24px 0;box-shadow:var(--shadow-sm)}
+        .example-box h3,.content-section h3{font-size:18px;font-weight:800;color:var(--text);margin:18px 0 10px}
+        .content-list{margin:18px 0 24px;padding-left:20px;color:var(--text-secondary)}
+        .content-list li{margin-bottom:10px;line-height:1.7;font-size:15px}
+        .note-card{background:var(--gradient-hero);border:1px solid var(--border-strong);border-radius:18px;padding:24px;margin:26px 0}
+        .note-card h3{margin-top:0;color:var(--text)}
+        .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--border);border-radius:16px;background:var(--card-bg);box-shadow:var(--shadow-sm)}
+        .info-table{width:100%;border-collapse:collapse;min-width:520px}
+        .info-table th{background:var(--blue-light);color:var(--blue);font-size:13px;text-align:left;padding:14px 16px;font-weight:800}
+        .info-table td{padding:14px 16px;border-top:1px solid var(--border);font-size:14px;color:var(--text-secondary)}
+        .info-table td:first-child{font-weight:700;color:var(--text)}
+
     </style>
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Final Grade Calculator","url":"https://studentcalctools.com/final-grade-calculator/","description":"Calculate exactly what score you need on your final exam to achieve your target grade.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Final Grade Calculator","url":"https://studentcalctools.com/final-grade-calculator/","description":"Use this final grade calculator to find the score you need on your final exam based on your current grade, target grade, and exam weight.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"How does a final grade calculator work?","acceptedAnswer":{"@type":"Answer","text":"It calculates the score you need on your final exam by working backwards from your target grade, your current grade, and the weight of the final exam."}},
-        {"@type":"Question","name":"What is the formula?","acceptedAnswer":{"@type":"Answer","text":"Required final score = (target grade − current grade × (1 − final weight)) / final weight, where final weight is expressed as a decimal."}},
-        {"@type":"Question","name":"What if I need more than 100% on the final?","acceptedAnswer":{"@type":"Answer","text":"If the calculator returns a value over 100, it means your target grade is no longer mathematically possible based on your current grade and the final weight."}},
-        {"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. All tools on StudentCalcTools are 100 percent free with no sign up required."}}
+        {"@type":"Question","name":"What is a final grade calculator?","acceptedAnswer":{"@type":"Answer","text":"A final grade calculator is a tool that shows what score you need on your final exam to reach a target overall grade in a class."}},
+        {"@type":"Question","name":"How does a final grade calculator work?","acceptedAnswer":{"@type":"Answer","text":"It uses your current grade, target grade, and final exam weight to calculate the final exam score needed to reach your goal."}},
+        {"@type":"Question","name":"What is the final grade formula?","acceptedAnswer":{"@type":"Answer","text":"Required Final Exam Score = (Target Grade - Current Grade × (1 - Final Exam Weight)) ÷ Final Exam Weight. The final exam weight must be used as a decimal."}},
+        {"@type":"Question","name":"Can I use this as a final exam grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. This tool works as a final exam grade calculator because it calculates the score you need on your final exam based on your current course grade and target grade."}},
+        {"@type":"Question","name":"Can I use this as a final grade calculator weighted by exam percentage?","acceptedAnswer":{"@type":"Answer","text":"Yes. This final grade calculator is weighted by the final exam percentage you enter. A higher final exam weight gives the final exam more impact on your overall grade."}},
+        {"@type":"Question","name":"Can I use this as a final grade calculator with percentages?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter your current grade, target grade, and final exam weight as percentages. The calculator will return the final exam score you need as a percentage."}},
+        {"@type":"Question","name":"Can I use this for high school classes?","acceptedAnswer":{"@type":"Answer","text":"Yes. High school students can use this calculator for semester exams, finals, and end-of-term grades when they know their current grade and final exam weight."}},
+        {"@type":"Question","name":"Can I use this for college classes?","acceptedAnswer":{"@type":"Answer","text":"Yes. College students can use this calculator for courses where the syllabus lists the final exam weight as part of the total grade."}},
+        {"@type":"Question","name":"What if I need more than 100% on the final?","acceptedAnswer":{"@type":"Answer","text":"If you need more than 100%, your target grade may not be possible through the final exam alone. Extra credit, dropped assignments, or teacher-specific grading rules may change the result."}},
+        {"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. This final grade calculator is free to use with no sign up required."}},
+        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. Your calculations happen in your browser. Your grades and inputs are not stored or shared."}}
     ]}
     </script>
 </head>
@@ -165,14 +188,14 @@
             <div class="page-hero-content">
                 <nav class="breadcrumb"><a href="https://studentcalctools.com/">Home</a><span class="breadcrumb-sep">›</span><span>Final Grade Calculator</span></nav>
                 <h1>Final Grade <span class="gradient-text">Calculator</span></h1>
-                <p>Find out exactly what score you need on your final exam to reach your target grade. Quick, accurate, and free.</p>
+                <p>Use this final grade calculator to find out what score you need on your final exam to reach your target course grade. Enter your current grade, target grade, and final exam weight to calculate the required score instantly.</p>
             </div>
         </section>
 
         <section class="calc-section">
             <div class="calc-card">
-                <h2 class="calc-card-title">Calculate What You Need</h2>
-                <p class="calc-card-subtitle">Enter your current grade, target grade, and how much your final exam is worth.</p>
+                <h2 class="calc-card-title">Calculate What You Need on the Final Exam</h2>
+                <p class="calc-card-subtitle">Enter your current grade before the final, the grade you want in the class, and how much your final exam is worth. The calculator will show the final exam grade you need to reach your goal.</p>
 
                 <div class="field-group">
                     <label class="field-label" for="currentGrade">Current Grade (%)</label>
@@ -182,11 +205,11 @@
                 <div class="field-group">
                     <label class="field-label" for="targetGrade">Target Grade (%)</label>
                     <input type="number" class="calc-input" id="targetGrade" placeholder="90" value="90" min="0" max="100" step="0.01">
-                    <span class="field-help">The grade you want to achieve overall</span>
+                    <span class="field-help">The overall grade you want in the class</span>
                 </div>
                 <div class="field-group">
                     <label class="field-label" for="finalWeight">Final Exam Weight (%)</label>
-                    <input type="number" class="calc-input" id="finalWeight" placeholder="30" value="30" min="0" max="100" step="0.01">
+                    <input type="number" class="calc-input" id="finalWeight" placeholder="25" value="25" min="0" max="100" step="0.01">
                     <span class="field-help">How much the final exam counts toward your grade</span>
                 </div>
                 <button class="calc-calculate" id="calculateBtn">Calculate Required Score</button>
@@ -195,23 +218,120 @@
                     <div class="calc-result-label">YOU NEED</div>
                     <div class="calc-result-value" id="resultValue">0%</div>
                     <div class="calc-result-tier" id="resultTier">Achievable</div>
-                    <div class="calc-result-extra" id="resultExtra">Score this on your final exam to reach your target.</div>
+                    <div class="calc-result-extra" id="resultExtra">Your result shows the score you need on the final exam to reach your target grade.</div>
                     <div class="calc-result-actions">
-                        <button class="result-btn" id="copyBtn">📋 Copy Result</button>
-                        <button class="result-btn" id="resetBtn">🔄 Reset</button>
+                        <button class="result-btn" id="copyBtn">Copy Result</button>
+                        <button class="result-btn" id="resetBtn">Reset</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="content-section reveal">
-            <span class="eyebrow">HOW IT WORKS</span>
-            <h2 class="section-title">How to Use This Calculator</h2>
-            <p>This tool works backwards from your target grade. Enter your current standing, where you want to end up, and the final exam weight, then we calculate the exact score you need.</p>
-            <div class="steps-grid">
-                <div class="step-card"><div class="step-num">1</div><h3>Enter Current Grade</h3><p>Your grade before taking the final exam.</p></div>
-                <div class="step-card"><div class="step-num">2</div><h3>Set Target & Weight</h3><p>Your goal and how much the final counts.</p></div>
-                <div class="step-card"><div class="step-num">3</div><h3>Get Required Score</h3><p>The exact score you need on the final.</p></div>
+            <span class="eyebrow">FORMULA</span>
+            <h2 class="section-title">How This Final Grade Calculator Works</h2>
+            <p>This final grade calculator works backward from your target grade. It uses your current grade, your target grade, and the final exam weight to calculate the score you need on the final.</p>
+            <div class="formula-box">
+                <strong>Formula</strong>
+                <code>Required Final Exam Score = (Target Grade - Current Grade × (1 - Final Exam Weight)) ÷ Final Exam Weight</code>
+            </div>
+            <p>Enter the final exam weight as a percentage in the calculator. In the formula, the weight is treated as a decimal.</p>
+            <div class="example-box">
+                <h3>Example</h3>
+                <p>Current grade: 82%</p>
+                <p>Target grade: 90%</p>
+                <p>Final exam weight: 25%</p>
+                <p>Required score = (90 - 82 × 0.75) ÷ 0.25</p>
+                <p>Required score = 114%</p>
+                <p>That means a 90% overall grade may not be possible unless your class allows extra credit or your teacher uses a different grading rule.</p>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+                <span class="eyebrow">HOW TO USE IT</span>
+                <h2 class="section-title">How to Use This Calculator</h2>
+                <div class="steps-grid">
+                    <div class="step-card"><div class="step-num">1</div><h3>Enter Your Current Grade</h3><p>Add your current grade before taking the final exam. This is usually the grade shown in your class portal or gradebook before the final is added.</p></div>
+                    <div class="step-card"><div class="step-num">2</div><h3>Enter Your Target Grade</h3><p>Add the overall grade you want to finish with in the class, such as 80%, 85%, or 90%.</p></div>
+                    <div class="step-card"><div class="step-num">3</div><h3>Enter Final Exam Weight</h3><p>Add how much the final exam counts toward your overall course grade. If the final is worth 30%, enter 30.</p></div>
+                    <div class="step-card"><div class="step-num">4</div><h3>Calculate Required Score</h3><p>Click calculate to see the score you need on your final exam.</p></div>
+                </div>
+                <p>This makes the tool useful as a final exam grade calculator, grade calculator final exam tool, and final grade calculator with percentages.</p>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <span class="eyebrow">PERCENTAGES</span>
+            <h2 class="section-title">Final Grade Calculator With Percentages</h2>
+            <p>Most classes use percentages to calculate grades. This final grade calculator with percentages is designed for courses where your current grade, target grade, and final exam weight are all shown as percentages.</p>
+            <div class="example-box">
+                <h3>Percentage Example</h3>
+                <p>Current grade: 86%</p>
+                <p>Target grade: 90%</p>
+                <p>Final exam weight: 20%</p>
+                <p>The calculator uses those values to find the final exam score needed to reach the target grade.</p>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+                <span class="eyebrow">WEIGHTED FINAL</span>
+                <h2 class="section-title">Weighted Final Grade Calculator</h2>
+                <p>This is a weighted final grade calculator because the final exam weight changes the result. A final exam worth 10% has a smaller effect on your overall grade than a final exam worth 40%.</p>
+                <div class="table-wrap">
+                    <table class="info-table">
+                        <thead><tr><th>Final Exam Weight</th><th>Impact</th></tr></thead>
+                        <tbody>
+                            <tr><td>15%</td><td>Smaller impact on your overall grade</td></tr>
+                            <tr><td>30%</td><td>Medium impact on your overall grade</td></tr>
+                            <tr><td>50%</td><td>Major impact on your overall grade</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Use the final exam weight from your syllabus, course portal, or teacher instructions for the most accurate estimate.</p>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <span class="eyebrow">RESULTS</span>
+            <h2 class="section-title">What If Your Required Score Is Too High or Too Low?</h2>
+            <div class="note-card">
+                <h3>What if you need more than 100%?</h3>
+                <p>If the calculator shows a required score above 100%, your target grade may not be mathematically possible with regular grading. This can happen when your current grade is much lower than your target grade, the final exam weight is too small, or your target grade is very high.</p>
+            </div>
+            <div class="note-card">
+                <h3>What if you need less than 0%?</h3>
+                <p>If the calculator shows a required score below 0%, you have already reached your target grade mathematically. You should still complete your final exam unless your teacher, school, or syllabus says otherwise.</p>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+                <span class="eyebrow">STUDENT USE CASES</span>
+                <h2 class="section-title">Final Grade Calculator for High School and College</h2>
+                <h3>Final Grade Calculator for High School</h3>
+                <p>High school students can use this final grade calculator to plan for semester exams, end-of-term tests, and final exams.</p>
+                <ul class="content-list">
+                    <li>What do I need on my final to get an A?</li>
+                    <li>Can I still pass the class?</li>
+                    <li>What score do I need to keep my current grade?</li>
+                    <li>How much does my final exam affect my grade?</li>
+                </ul>
+                <h3>Final Grade Calculator for College</h3>
+                <p>College students can use this calculator to estimate the score needed on a final exam before the course ends. It can help with GPA protection, scholarship requirements, academic standing, major requirements, and pass or fail planning.</p>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <span class="eyebrow">GRADE PLANNING</span>
+            <h2 class="section-title">Current Grade vs Final Grade Calculator</h2>
+            <p>This final grade calculator helps you find the score you need on your final exam. If you want to calculate your current weighted grade from assignments, quizzes, tests, projects, and homework, use the Grade Calculator instead.</p>
+            <p>Use the Grade Calculator first if you do not know your current grade yet. Then come back here and enter that current grade to calculate what you need on the final.</p>
+            <div class="note-card">
+                <h3>Accuracy Note</h3>
+                <p>This calculator gives an estimate based on the numbers you enter. Your official grade may depend on your school grading scale, rounding rules, final exam policy, extra credit, dropped assignments, grade replacement, test categories, teacher settings, and syllabus rules.</p>
+                <p>For the most accurate result, always check your official gradebook, syllabus, or teacher instructions.</p>
             </div>
         </section>
 
@@ -219,10 +339,11 @@
             <span class="eyebrow">RELATED TOOLS</span>
             <h2 class="section-title">Other Useful Calculators</h2>
             <div class="related-grid">
-                <a href="/grade-calculator/" class="related-card"><div class="related-icon">📊</div><h3>Grade Calculator</h3><p>Calculate weighted final grade.</p></a>
+                <a href="/grade-calculator/" class="related-card"><div class="related-icon">📊</div><h3>Grade Calculator</h3><p>Calculate your current weighted course grade.</p></a>
                 <a href="/gpa-calculator/" class="related-card"><div class="related-icon">🎓</div><h3>GPA Calculator</h3><p>Calculate your GPA on the 4.0 scale.</p></a>
-                <a href="/cgpa-calculator/" class="related-card"><div class="related-icon">📈</div><h3>CGPA Calculator</h3><p>Cumulative GPA across semesters.</p></a>
-                <a href="/study-time-planner/" class="related-card"><div class="related-icon">⏰</div><h3>Study Time Planner</h3><p>Plan your daily study schedule.</p></a>
+                <a href="/cgpa-calculator/" class="related-card"><div class="related-icon">📈</div><h3>CGPA Calculator</h3><p>Calculate your cumulative GPA across semesters.</p></a>
+                <a href="/attendance-calculator/" class="related-card"><div class="related-icon">📅</div><h3>Attendance Calculator</h3><p>Track your attendance percentage.</p></a>
+                <a href="/study-time-planner/" class="related-card"><div class="related-icon">⏰</div><h3>Study Time Planner</h3><p>Plan your study schedule before finals.</p></a>
             </div>
         </section>
 
@@ -230,15 +351,23 @@
             <div class="content-wrap">
                 <span class="eyebrow">FAQ</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-item"><div class="faq-question">How does a final grade calculator work?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">It calculates the score you need on your final exam by working backwards from your target grade, your current grade, and the weight of the final exam.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What is the formula?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Required final score = (target grade − current grade × (1 − final weight)) ÷ final weight, where final weight is expressed as a decimal (for example, 30% becomes 0.30).</div></div></div>
-                <div class="faq-item"><div class="faq-question">What if I need more than 100% on the final?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">If the calculator returns a value over 100, it means your target grade is no longer mathematically possible based on your current grade and the final exam weight. You may need to lower your target.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is this calculator free?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. All tools on StudentCalcTools are 100 percent free with no sign up required.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a final grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A final grade calculator is a tool that shows what score you need on your final exam to reach a target overall grade in a class.</div></div></div>
+                <div class="faq-item"><div class="faq-question">How does a final grade calculator work?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">It uses your current grade, target grade, and final exam weight to calculate the final exam score needed to reach your goal.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is the final grade formula?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Required Final Exam Score = (Target Grade - Current Grade × (1 - Final Exam Weight)) ÷ Final Exam Weight. The final exam weight must be used as a decimal in the formula. For example, 30% becomes 0.30.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a final exam grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This tool works as a final exam grade calculator because it calculates the score you need on your final exam based on your current course grade and target grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a final grade calculator weighted by exam percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This final grade calculator is weighted by the final exam percentage you enter. A higher final exam weight gives the final exam more impact on your overall grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a final grade calculator with percentages?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. Enter your current grade, target grade, and final exam weight as percentages. The calculator will return the final exam score you need as a percentage.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this for high school classes?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. High school students can use this calculator for semester exams, finals, and end-of-term grades when they know their current grade and final exam weight.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this for college classes?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. College students can use this calculator for courses where the syllabus lists the final exam weight as part of the total grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What if I need more than 100% on the final?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">If you need more than 100%, your target grade may not be possible through the final exam alone. Extra credit, dropped assignments, or teacher-specific grading rules may change the result.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What if I already took my final exam?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">If you already know your final exam score and want to calculate your overall course grade, use the Grade Calculator or enter your final exam as a weighted item.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is this calculator free?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This final grade calculator is free to use with no sign up required.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. Your calculations happen in your browser. Your grades and inputs are not stored or shared.</div></div></div>
             </div>
         </section>
 
         <section class="cta-section">
-            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>10 plus free calculators for students. No sign up, no fees.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
+            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc’s free academic calculators to plan your grades, GPA, attendance, study time, class rank, and college costs. No sign up required.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
         </section>
     </main>
 
