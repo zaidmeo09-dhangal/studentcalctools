@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found – StudentCalcTools</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:#f8faff;color:#0f172a;min-height:100vh;display:flex;flex-direction:column}
+        nav{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(37,99,235,0.1);padding:14px 40px;display:flex;justify-content:space-between;align-items:center}
+        .nav-logo{font-size:20px;font-weight:800;color:#2563eb;text-decoration:none}
+        .nav-logo span{color:#06b6d4}
+        .nav-links{display:flex;gap:20px}
+        .nav-links a{font-size:14px;font-weight:600;color:#64748b;text-decoration:none}
+        .nav-links a:hover{color:#2563eb}
+        .hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;background:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%)}
+        .error-code{font-size:120px;font-weight:800;background:linear-gradient(135deg,#2563eb,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px}
+        h1{font-size:28px;font-weight:800;color:#0f172a;margin-bottom:12px}
+        p{font-size:16px;color:#64748b;max-width:480px;line-height:1.7;margin-bottom:32px}
+        .btn-home{display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:white;text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;transition:background 0.2s}
+        .btn-home:hover{background:#1d4ed8}
+        .tools-section{padding:40px 20px;max-width:900px;margin:0 auto;width:100%}
+        .tools-title{text-align:center;font-size:18px;font-weight:700;color:#0f172a;margin-bottom:24px}
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+        .tool-card{background:white;border-radius:12px;padding:16px;border:1px solid rgba(37,99,235,0.08);text-decoration:none;display:flex;align-items:center;gap:12px;transition:all 0.2s}
+        .tool-card:hover{border-color:#2563eb;transform:translateY(-2px)}
+        .tool-icon{font-size:20px}
+        .tool-name{font-size:13px;font-weight:700;color:#0f172a}
+        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:20px;font-size:13px}
+        footer span{color:#06b6d4}
+        @media(max-width:600px){.error-code{font-size:80px}nav{padding:12px 16px}.nav-links{display:none}}
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-logo">Student<span>Calc</span></a>
+    <div class="nav-links">
+        <a href="/">Tools</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact-us/">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="error-code">404</div>
+    <h1>Oops! Page Not Found</h1>
+    <p>The page you are looking for does not exist or has been moved. Let us help you find what you need.</p>
+    <a href="/" class="btn-home">Go Back to Homepage →</a>
+</div>
+
+<div class="tools-section">
+    <div class="tools-title">Or try one of our free calculators:</div>
+    <div class="tools-grid">
+        <a href="/gpa-calculator/" class="tool-card">
+            <span class="tool-icon">🎓</span>
+            <span class="tool-name">GPA Calculator</span>
+        </a>
+        <a href="/grade-calculator/" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <span class="tool-name">Grade Calculator</span>
+        </a>
+        <a href="/attendance-calculator/" class="tool-card">
+            <span class="tool-icon">📅</span>
+            <span class="tool-name">Attendance Calculator</span>
+        </a>
+        <a href="/final-grade-calculator/" class="tool-card">
+            <span class="tool-icon">🏆</span>
+            <span class="tool-name">Final Grade Calculator</span>
+        </a>
+        <a href="/cgpa-calculator/" class="tool-card">
+            <span class="tool-icon">📈</span>
+            <span class="tool-name">CGPA Calculator</span>
+        </a>
+        <a href="/study-time-planner/" class="tool-card">
+            <span class="tool-icon">⏰</span>
+            <span class="tool-name">Study Time Planner</span>
+        </a>
+        <a href="/essay-word-counter/" class="tool-card">
+            <span class="tool-icon">✍️</span>
+            <span class="tool-name">Essay Word Counter</span>
+        </a>
+        <a href="/student-loan-calculator/" class="tool-card">
+            <span class="tool-icon">💰</span>
+            <span class="tool-name">Student Loan Calculator</span>
+        </a>
+        <a href="/scholarship-calculator/" class="tool-card">
+            <span class="tool-icon">🎯</span>
+            <span class="tool-name">Scholarship Calculator</span>
+        </a>
+        <a href="/class-rank-calculator/" class="tool-card">
+            <span class="tool-icon">🥇</span>
+            <span class="tool-name">Class Rank Calculator</span>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p>
+</footer>
+
+</body>
+</html>
