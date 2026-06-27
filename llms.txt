@@ -1,0 +1,18 @@
+# StudentCalcTools
+
+> Free online student calculators for GPA, grades, attendance, loans and more.
+
+## Tools
+- GPA Calculator: https://studentcalctools.com/gpa-calculator/
+- Grade Calculator: https://studentcalctools.com/grade-calculator/
+- Attendance Calculator: https://studentcalctools.com/attendance-calculator/
+- Final Grade Calculator: https://studentcalctools.com/final-grade-calculator/
+- CGPA Calculator: https://studentcalctools.com/cgpa-calculator/
+- Study Time Planner: https://studentcalctools.com/study-time-planner/
+- Essay Word Counter: https://studentcalctools.com/essay-word-counter/
+- Student Loan Calculator: https://studentcalctools.com/student-loan-calculator/
+- Scholarship Calculator: https://studentcalctools.com/scholarship-calculator/
+- Class Rank Calculator: https://studentcalctools.com/class-rank-calculator/
+
+## About
+StudentCalcTools provides free, instant academic calculators for college and high school students worldwide. No sign up required.
