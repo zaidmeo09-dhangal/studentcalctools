@@ -19,14 +19,14 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
     <meta name="description" content="{{ page.meta_description }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
-    <meta property="og:url" content="{{ '/blog.html' | absolute_url }}">
+    <meta property="og:url" content="https://studentcalctools.com/blog/">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.meta_description }}">
-    <meta property="og:image" content="{{ '/og-image.png' | absolute_url }}">
+    <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.meta_description }}">
-    <meta name="twitter:image" content="{{ '/og-image.png' | absolute_url }}">
+    <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
@@ -135,7 +135,7 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
       "@context":"https://schema.org",
       "@type":"Blog",
       "name":"StudentCalcTools Blog",
-      "url":{{ '/blog.html' | absolute_url | jsonify }},
+      "url":"https://studentcalctools.com/blog/",
       "description":{{ page.meta_description | jsonify }},
       "publisher":{"@type":"Organization","name":"StudentCalcTools","url":{{ '/' | absolute_url | jsonify }}},
       "blogPost":[
@@ -212,7 +212,7 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
             <div class="cta-wrap">
                 <h2>Put Your Knowledge to Work</h2>
                 <p>Use our free GPA and grade calculators to track your academic progress instantly.</p>
-                <a href="/https://studentcalctools.com/#tools/" class="btn-cta">Try the Calculators</a>
+                <a href="/#tools" class="btn-cta">Try the Calculators</a>
             </div>
         </section>
     </main>
@@ -222,13 +222,13 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
         <div class="footer-grid">
             <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
             <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
-            <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a><a href="/blog/">How to Calculate GPA</a><a href="/blog/">What is a Good GPA</a></div>
+            <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
             <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
         </div>
         <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p></div>
     </footer>
     <script>
-        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'Light':'Dark';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'Light':'Dark';});})();
+        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙';});})();
         (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%';},{passive:true});})();
         (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target);}});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(s=>o.observe(s));})();
     </script>
