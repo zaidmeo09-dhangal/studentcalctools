@@ -39,8 +39,8 @@ This guide explains the exact formula, gives examples, covers edge cases, and sh
 - A final worth 10% changes your grade much less than a final worth 40%.
 - If the required score is above 100%, your target may not be possible without extra credit, rounding, or a special grading rule.
 - If you do not know your current grade, calculate it first using a grade calculator.
-- If your final grade affects your semester GPA, use a GPA calculator after estimating your course result.
-- Once you know the score you need, use a study time planner to turn the number into a realistic study plan.
+- If your final grade affects your semester GPA, use a++++ GPA calculator after estimating your course result.
+- Once you know the score you need, use a++++ study time planner to turn the number into a realistic study plan.
 
 
 
@@ -53,7 +53,7 @@ Usually, the situation looks like this:
 
 |  |  |
 | -------------------------------------------- | ----------------------------------------------- |
-| **Student Situation** | **What They Need to Know** |
+| Student Situation | **What They Need to Know** |
 | Current grade is lower than expected | Can I still pass or reach my target grade? |
 | Final exam is heavily weighted | How much can this exam change my overall grade? |
 | Course grade affects GPA | What final score protects my GPA? |
@@ -200,7 +200,7 @@ Same current grade. Same target grade. Very different final exam scores.
 
 That is why you should not calculate this from memory or vibes. Use the exact final exam weight from your syllabus, teacher instructions, or course portal.
 
-Some schools also explain that final grades may be based on multiple assessment types, such as tests, essays, assignments, projects, participation, labs, and final exams. The key point is that the percentage contribution of each item matters, so the final exam weight should come from the official course grading breakdown, not guesswork. You can see this kind of grading structure discussed in university assessment policy guidance from HKUST.
+Some schools also explain that final grades may be based on multiple assessment types, such as tests, essays, assignments, projects, participation, labs, and final exams. The key point is that the percentage contribution of each item matters, so the final exam weight should come from the official course grading breakdown, not guesswork. You can see this kind of grading structure discussed in university assessment policy guidance from ++[HKUST](https://registry.hkust.edu.hk/resource-library/assessment-policies-and-procedures)++.
 
 
 
@@ -269,11 +269,9 @@ Your current grade may appear in:
 - Your syllabus grade breakdown
 - Your own assignment tracker
 
-If your course portal does not calculate your current grade clearly, use the [grade calculator](https://studentcalctools.com/grade-calculator/) first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
+If your course portal does not calculate your current grade clearly, use the ++[grade calculator](https://studentcalctools.com/grade-calculator/)++ first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
 
 Once you know your current grade, you can calculate the final exam score needed to reach your target.
-
-
 
 ## **What If Your Final Grade Affects Your GPA?**
 
@@ -287,7 +285,7 @@ It is also:
 - Do I need a B instead of a C?
 - Can I protect my major requirement?
 
-In that case, calculate the final exam score first. Then estimate the course grade you are likely to finish with. After that, use the [GPA calculator](https://studentcalctools.com/gpa-calculator/) to see how the course may affect your term or overall GPA.
+In that case, calculate the final exam score first. Then estimate the course grade you are likely to finish with. After that, use the ++[GPA calculator](https://studentcalctools.com/gpa-calculator/)++ to see how the course may affect your term or overall GPA.
 
 This is especially useful for college students because one course grade can matter more when the course has more credit hours.
 
@@ -336,6 +334,8 @@ For most students, the best process is:
 4. Check your syllabus for extra credit, rounding, or final exam rules.
 5. Build a study plan based on the score you need.
 
+
+
 ## **How to Use the Result Once You Have It**
 
 Once you know the score you need, do not just stare at it like it is a villain in a movie. Use it to make a plan.
@@ -359,7 +359,7 @@ If you need 94%, your plan needs to be more serious. That means reviewing the hi
 
 The UNC Learning Center recommends creating a finals study plan and deciding roughly how many hours to study for each exam. That is a practical next step after you calculate your required final score. You can use their finals preparation advice here: ++[Preparing for Finals](https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)++.
 
-You can also use the [study time planner](https://studentcalctools.com/study-time-planner/) to organize your remaining study time around the classes that need the most attention.
+You can also use the ++[study time planner](https://studentcalctools.com/study-time-planner/)++ to organize your remaining study time around the classes that need the most attention.
 
 
 
@@ -415,7 +415,7 @@ Required Final Exam Score = (Target Grade - Current Grade × (1 - Final Exam Wei
 
 Use the formula when you want to understand the math. Use the calculator when you want the answer faster.
 
-If you are asking, “What grade do I need on my final?” enter your current grade, target grade, and final exam weight into the [final grade calculator](https://studentcalctools.com/final-grade-calculator/) and get the score you need before exam day.
+If you are asking, “What grade do I need on my final?” enter your current grade, target grade, and final exam weight into the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++ and get the score you need before exam day.
 
 
 
