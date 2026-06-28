@@ -22,11 +22,11 @@ featured_image: /assets/images/grade-needed-on-final-calculator-find-your-exam-s
 image_alt: Grade Needed on Final Calculator Find Your Exam Score
 read_time: 5 min read
 ---
-A [++grade needed on final calculator++](https://studentcalctools.com/final-grade-calculator/) helps you answer one stressful question fast: “What score do I need on my final exam to get the grade I want?”
+A [grade needed on final calculator](/final-grade-calculator/) helps you answer one stressful question fast: “What score do I need on my final exam to get the grade I want?”
 
 That question usually hits when finals are close, your course portal shows a number that may or may not be safe, and you need a straight answer. Can you still get an A? Can you still pass? Is your target grade realistic, or are you trying to climb a wall with a spoon?
 
-At ++[StudentCalcTools](https://studentcalctools.com/)++, the goal is to make that answer simple. You enter your current grade, your target grade, and the final exam weight. Then you calculate the score you need instead of guessing.
+At [StudentCalcTools]([https://studentcalctools.com](https://studentcalctools.com)), the goal is to make that answer simple. You enter your current grade, your target grade, and the final exam weight. Then you calculate the score you need instead of guessing.
 
 This guide explains the exact formula, gives examples, covers edge cases, and shows when to use the calculator instead of doing the math manually.
 
