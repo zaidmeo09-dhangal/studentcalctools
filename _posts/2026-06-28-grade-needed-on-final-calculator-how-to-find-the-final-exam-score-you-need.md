@@ -263,7 +263,7 @@ Your current grade may appear in:
 - Your syllabus grade breakdown
 - Your own assignment tracker
 
-If your course portal does not calculate your current grade clearly, use the [[grade calculator]([https://studentcalctools.com/grade-calculator/)]([https://studentcalctools.com/grade-calculator/)++](https://studentcalctools.com/grade-calculator/)++)) first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
+If your course portal does not calculate your current grade clearly, use the [grade calculator]([https://studentcalctools.com/grade-calculator/) first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
 
 Once you know your current grade, you can calculate the final exam score needed to reach your target.
 
