@@ -336,8 +336,6 @@ For most students, the best process is:
 4. Check your syllabus for extra credit, rounding, or final exam rules.
 5. Build a study plan based on the score you need.
 
-
-
 ## **How to Use the Result Once You Have It**
 
 Once you know the score you need, do not just stare at it like it is a villain in a movie. Use it to make a plan.
