@@ -263,7 +263,7 @@ Your current grade may appear in:
 - Your syllabus grade breakdown
 - Your own assignment tracker
 
-If your course portal does not calculate your current grade clearly, use the [grade calculator]([https://studentcalctools.com/grade-calculator/)](https://studentcalctools.com/grade-calculator/)++) first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
+If your course portal does not calculate your current grade clearly, use the [[grade calculator]([https://studentcalctools.com/grade-calculator/)]([https://studentcalctools.com/grade-calculator/)++](https://studentcalctools.com/grade-calculator/)++)) first. It can help you estimate your current grade from assignments, quizzes, homework, tests, projects, and category weights.
 
 Once you know your current grade, you can calculate the final exam score needed to reach your target.
 
@@ -279,7 +279,7 @@ It is also:
 - Do I need a B instead of a C?
 - Can I protect my major requirement?
 
-In that case, calculate the final exam score first. Then estimate the course grade you are likely to finish with. After that, use the [GPA calculator]([https://studentcalctools.com/gpa-calculator/)](https://studentcalctools.com/gpa-calculator/)++) to see how the course may affect your term or overall GPA.
+In that case, calculate the final exam score first. Then estimate the course grade you are likely to finish with. After that, use the [[GPA calculator]([https://studentcalctools.com/gpa-calculator/)]([https://studentcalctools.com/gpa-calculator/)++](https://studentcalctools.com/gpa-calculator/)++)) to see how the course may affect your term or overall GPA.
 
 This is especially useful for college students because one course grade can matter more when the course has more credit hours.
 
@@ -346,9 +346,9 @@ If you need 68%, your plan may involve basic review, practice questions, and che
 
 If you need 94%, your plan needs to be more serious. That means reviewing the highest-value topics, practicing under exam conditions, asking questions early, and avoiding low-value study habits like rereading notes without testing yourself.
 
-The UNC Learning Center recommends creating a finals study plan and deciding roughly how many hours to study for each exam. That is a practical next step after you calculate your required final score. You can use their finals preparation advice here: [Preparing for Finals]([https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)](https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)++).
+The UNC Learning Center recommends creating a finals study plan and deciding roughly how many hours to study for each exam. That is a practical next step after you calculate your required final score. You can use their finals preparation advice here: [[Preparing for Finals]([https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)]([https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)++](https://learningcenter.unc.edu/tips-and-tools/preparing-for-finals/)++)).
 
-You can also use the [study time planner]([https://studentcalctools.com/study-time-planner/)](https://studentcalctools.com/study-time-planner/)++) to organize your remaining study time around the classes that need the most attention.
+You can also use the [[study time planner]([https://studentcalctools.com/study-time-planner/)]([https://studentcalctools.com/study-time-planner/)++](https://studentcalctools.com/study-time-planner/)++)) to organize your remaining study time around the classes that need the most attention.
 
 
 
@@ -403,7 +403,7 @@ Required Final Exam Score = (Target Grade - Current Grade × (1 - Final Exam Wei
 
 Use the formula when you want to understand the math. Use the calculator when you want the answer faster.
 
-If you are asking, “What grade do I need on my final?” enter your current grade, target grade, and final exam weight into the [final grade calculator]([https://studentcalctools.com/final-grade-calculator/)](https://studentcalctools.com/final-grade-calculator/)++) and get the score you need before exam day.
+If you are asking, “What grade do I need on my final?” enter your current grade, target grade, and final exam weight into the [[final grade calculator]([https://studentcalctools.com/final-grade-calculator/)]([https://studentcalctools.com/final-grade-calculator/)++](https://studentcalctools.com/final-grade-calculator/)++)) and get the score you need before exam day.
 
 
 
