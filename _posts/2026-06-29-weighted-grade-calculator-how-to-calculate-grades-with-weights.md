@@ -20,13 +20,13 @@ featured_image: /assets/images/weighted-grade-calculator-how-to-calculate-grades
 image_alt: Weighted Grade Calculator How to Calculate Grades With Weights
 read_time: 5 min read
 ---
-A ++[weighted grade calculator](https://studentcalctools.com/grade-calculator/)++ helps you calculate your course grade when assignments, quizzes, exams, projects, and finals do not all count the same.
+A [weighted grade calculator](https://studentcalctools.com/grade-calculator/) helps you calculate your course grade when assignments, quizzes, exams, projects, and finals do not all count the same.
 
 That is the part that trips students up. You may have a 90% on homework, an 80% on quizzes, and a 75% on exams, but your final grade is not always the simple average of those scores. If exams are worth 50% of the course and homework is only worth 10%, the exam score carries far more weight.
 
 That is how weighted grades work. Every category has a value, and your final course grade depends on both your score and the weight of each category.
 
-At [++StudentCalcTools++](https://studentcalctools.com/), the goal is to make student math less painful. This guide explains how weighted grades work, the formula to calculate them, examples, edge cases, and common mistakes to avoid.
+At ++[StudentCalcTools](https://studentcalctools.com/)++, the goal is to make student math less painful. This guide explains how weighted grades work, the formula to calculate them, examples, edge cases, and common mistakes to avoid.
 
 
 
@@ -49,9 +49,8 @@ A weighted grade is a course grade where different parts of the class count for 
 For example, your class may be graded like this:
 
 
-|  |  |
-| ------------ | ---------- |
-| **Category** | **Weight** |
+| Category | Weight |
+| ---------- | ------ |
 | Homework | 10% |
 | Quizzes | 20% |
 | Projects | 30% |
@@ -70,9 +69,8 @@ That is why a grade calculator with weights is different from a basic average ca
 Before using a grade weight calculator, you need to understand the difference between weighted and unweighted grades.
 
 
-|  |  |  |
+| Type | How It Works | Example |
 | ---------------- | -------------------------------------------- | ------------------------------------------- |
-| **Type** | **How It Works** | **Example** |
 | Unweighted grade | Every score counts equally | Average of 80, 90, and 100 is 90 |
 | Weighted grade | Each score or category has a different value | Exams may count 50%, homework may count 10% |
 
@@ -94,9 +92,8 @@ If the weights are percentages, convert them into decimals first.
 So:
 
 
-|  |  |
-| ---------- | ----------- |
-| **Weight** | **Decimal** |
+| Weight | Decimal |
+| ------ | ------- |
 | 10% | 0.10 |
 | 20% | 0.20 |
 | 25% | 0.25 |
@@ -122,9 +119,8 @@ That means homework contributes 9 percentage points toward your final course gra
 Let’s calculate a weighted grade using four categories.
 
 
-|  |  |  |  |
-| ------------ | -------------- | ---------- | ------------------- |
-| **Category** | **Your Score** | **Weight** | **Weighted Points** |
+| Category | Your Score | Weight | Weighted Points |
+| ---------- | ---------- | ------ | --------------- |
 | Homework | 95% | 10% | 9.5 |
 | Quizzes | 85% | 20% | 17 |
 | Projects | 90% | 30% | 27 |
@@ -174,9 +170,8 @@ Next, find your score for each category.
 For example:
 
 
-|  |  |
-| ------------- | -------------------- |
-| **Category** | **Category Average** |
+| Category | Category Average |
+| ------------- | ---------------- |
 | Homework | 92% |
 | Quizzes | 84% |
 | Exams | 78% |
@@ -190,9 +185,8 @@ If your gradebook does not show category averages clearly, you may need to calcu
 Turn each percentage weight into a decimal.
 
 
-|  |  |  |
-| ------------- | ---------- | ----------- |
-| **Category** | **Weight** | **Decimal** |
+| Category | Weight | Decimal |
+| ------------- | ------ | ------- |
 | Homework | 15% | 0.15 |
 | Quizzes | 20% | 0.20 |
 | Exams | 45% | 0.45 |
@@ -204,9 +198,8 @@ Turn each percentage weight into a decimal.
 Now multiply each category average by its decimal weight.
 
 
-|  |  |  |  |  |
-| ------------- | --------- | ---------- | --------------- | ------------------- |
-| **Category** | **Score** | **Weight** | **Calculation** | **Weighted Points** |
+| Category | Score | Weight | Calculation | Weighted Points |
+| ------------- | ----- | ------ | ----------- | --------------- |
 | Homework | 92% | 15% | 92 × 0.15 | 13.8 |
 | Quizzes | 84% | 20% | 84 × 0.20 | 16.8 |
 | Exams | 78% | 45% | 78 × 0.45 | 35.1 |
@@ -232,9 +225,8 @@ Some students have both points and weights in their course. This can be confusin
 Let’s say your course has this setup:
 
 
-|  |  |  |  |  |
-| ------------- | ----------------- | ------------------- | -------------------- | ---------- |
-| **Category** | **Points Earned** | **Points Possible** | **Category Average** | **Weight** |
+| Category | Points Earned | Points Possible | Category Average | Weight |
+| ------------- | ------------- | --------------- | ---------------- | ------ |
 | Homework | 180 | 200 | 90% | 20% |
 | Quizzes | 70 | 100 | 70% | 20% |
 | Exams | 240 | 300 | 80% | 40% |
@@ -248,9 +240,8 @@ Points Earned ÷ Points Possible × 100
 Then multiply each category average by its weight:
 
 
-|  |  |  |  |
-| ------------- | -------------------- | ---------- | ------------------- |
-| **Category** | **Category Average** | **Weight** | **Weighted Points** |
+| Category | Category Average | Weight | Weighted Points |
+| ------------- | ---------------- | ------ | --------------- |
 | Homework | 90% | 20% | 18 |
 | Quizzes | 70% | 20% | 14 |
 | Exams | 80% | 40% | 32 |
@@ -271,9 +262,8 @@ In most classes, category weights should add up to 100%.
 For example:
 
 
-|  |  |
-| ------------ | ---------- |
-| **Category** | **Weight** |
+| Category | Weight |
+| ---------- | ------ |
 | Homework | 20% |
 | Quizzes | 20% |
 | Exams | 40% |
@@ -290,9 +280,8 @@ In that case, the visible weights may not add up to 100% yet.
 Example:
 
 
-|  |  |
-| ---------------------- | ---------- |
-| **Completed Category** | **Weight** |
+| Completed Category | Weight |
+| ------------------ | ------ |
 | Homework | 20% |
 | Quizzes | 20% |
 | Exams | 40% |
@@ -318,9 +307,8 @@ A missing category can change the calculation depending on how your teacher hand
 There are usually three possibilities:
 
 
-|  |  |
+| Situation | What It Means |
 | ----------------------------------------- | ------------------------------------------------ |
-| **Situation** | **What It Means** |
 | Assignment is not graded yet | It may not count until entered |
 | Assignment is missing and counted as zero | It can sharply lower your category average |
 | Category has no grades yet | The weight may not affect your current grade yet |
@@ -354,7 +342,7 @@ Use a final weighted grade calculator when you want to know:
 - Can I still pass the class?
 - How much can the final exam change my grade?
 
-If you are trying to calculate the score needed on your final exam, use the [++final grade calculator++](https://studentcalctools.com/final-grade-calculator/) after finding your current weighted grade.
+If you are trying to calculate the score needed on your final exam, use the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++ after finding your current weighted grade.
 
 
 
@@ -363,9 +351,8 @@ If you are trying to calculate the score needed on your final exam, use the [++f
 Weighted grades are easy to calculate once the setup is clear. The problem is that many students use the wrong inputs.
 
 
-|  |  |
+| Mistake | Why It Matters |
 | ------------------------------------------- | ------------------------------------------------------------ |
-| **Mistake** | **Why It Matters** |
 | Averaging all grades equally | This ignores category weights |
 | Using points instead of percentages | Points and weights are different systems |
 | Forgetting to convert weights into decimals | 20% should be 0.20 in the formula |
@@ -385,9 +372,8 @@ The biggest mistake is treating a weighted class like a normal average. That can
 The terms can overlap, so let’s make this clear.
 
 
-|  |  |
+| Tool Type | What It Helps With |
 | ------------------------------------ | ----------------------------------------------------------------------------- |
-| **Tool Type** | **What It Helps With** |
 | Weighted grade calculator | Calculates grades when categories have different weights |
 | Grade calculator with weights | Same idea, often used for current course grade |
 | Grade weight calculator | Helps apply category weights to scores |
@@ -396,7 +382,7 @@ The terms can overlap, so let’s make this clear.
 | Final weighted grade calculator | Helps estimate final outcomes when final exams or remaining work are included |
 
 
-The [++grade calculator++](https://studentcalctools.com/grade-calculator/) can help you calculate your course grade using scores and weights, especially when your class does not use a simple average.
+The ++[grade calculator](https://studentcalctools.com/grade-calculator/)++ can help you calculate your course grade using scores and weights, especially when your class does not use a simple average.
 
 
 
@@ -406,7 +392,7 @@ Weighted course grades can also affect your GPA planning.
 
 For example, suppose you are trying to keep a B in a 4-credit class. If the final exam is heavily weighted, your final score could move the course grade enough to affect your term GPA.
 
-After you estimate your weighted course grade, you can use a [++GPA calculator++](https://studentcalctools.com/gpa-calculator/) to see how that course may affect your GPA.
+After you estimate your weighted course grade, you can use a ++[GPA calculator](https://studentcalctools.com/gpa-calculator/)++ to see how that course may affect your GPA.
 
 This is especially useful for:
 
@@ -426,9 +412,8 @@ Many university GPA tools also warn that GPA calculations are estimates and depe
 Before trusting your result, check these items:
 
 
-|  |  |
+| Question | Why It Matters |
 | -------------------------------- | --------------------------------------------------- |
-| **Question** | **Why It Matters** |
 | Do the weights add up to 100%? | If not, you may be missing a category |
 | Are all grades entered? | Missing scores can change the result |
 | Are zeroes included? | A missing assignment counted as zero can hurt badly |
@@ -447,9 +432,8 @@ If something looks off, check the syllabus before assuming the calculator is wro
 Try this one.
 
 
-|  |  |  |
-| ------------ | --------- | ---------- |
-| **Category** | **Score** | **Weight** |
+| Category | Score | Weight |
+| ---------- | ----- | ------ |
 | Homework | 100% | 10% |
 | Quizzes | 80% | 20% |
 | Tests | 75% | 40% |
@@ -506,7 +490,7 @@ If your weights add up to 100%, each category contributes its share to your fina
 
 So if homework is worth 10%, it can only do 10% worth of damage or help. If exams are worth 50%, they are the heavy hitters. No mystery there.
 
-Use the formula when you want to understand the math. Use the [++grade calculator++](https://studentcalctools.com/grade-calculator/) when you want a faster answer with fewer mistakes.
+Use the formula when you want to understand the math. Use the ++[grade calculator](https://studentcalctools.com/grade-calculator/)++ when you want a faster answer with fewer mistakes.
 
 
 
