@@ -26,7 +26,7 @@ That is the part that trips students up. You may have a 90% on homework, an 80% 
 
 That is how weighted grades work. Every category has a value, and your final course grade depends on both your score and the weight of each category.
 
-At ++[StudentCalcTools](https://studentcalctools.com/)++, the goal is to make student math less painful. This guide explains how weighted grades work, the formula to calculate them, examples, edge cases, and common mistakes to avoid.
+At [StudentCalcTools](https://studentcalctools.com/), the goal is to make student math less painful. This guide explains how weighted grades work, the formula to calculate them, examples, edge cases, and common mistakes to avoid.
 
 
 
@@ -342,7 +342,7 @@ Use a final weighted grade calculator when you want to know:
 - Can I still pass the class?
 - How much can the final exam change my grade?
 
-If you are trying to calculate the score needed on your final exam, use the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++ after finding your current weighted grade.
+If you are trying to calculate the score needed on your final exam, use the [final grade calculator](https://studentcalctools.com/final-grade-calculator/) after finding your current weighted grade.
 
 
 
@@ -382,7 +382,7 @@ The terms can overlap, so let’s make this clear.
 | Final weighted grade calculator | Helps estimate final outcomes when final exams or remaining work are included |
 
 
-The ++[grade calculator](https://studentcalctools.com/grade-calculator/)++ can help you calculate your course grade using scores and weights, especially when your class does not use a simple average.
+The [grade calculator](https://studentcalctools.com/grade-calculator/) can help you calculate your course grade using scores and weights, especially when your class does not use a simple average.
 
 
 
@@ -392,7 +392,7 @@ Weighted course grades can also affect your GPA planning.
 
 For example, suppose you are trying to keep a B in a 4-credit class. If the final exam is heavily weighted, your final score could move the course grade enough to affect your term GPA.
 
-After you estimate your weighted course grade, you can use a ++[GPA calculator](https://studentcalctools.com/gpa-calculator/)++ to see how that course may affect your GPA.
+After you estimate your weighted course grade, you can use a [GPA calculator](https://studentcalctools.com/gpa-calculator/) to see how that course may affect your GPA.
 
 This is especially useful for:
 
@@ -490,7 +490,7 @@ If your weights add up to 100%, each category contributes its share to your fina
 
 So if homework is worth 10%, it can only do 10% worth of damage or help. If exams are worth 50%, they are the heavy hitters. No mystery there.
 
-Use the formula when you want to understand the math. Use the ++[grade calculator](https://studentcalctools.com/grade-calculator/)++ when you want a faster answer with fewer mistakes.
+Use the formula when you want to understand the math. Use the grade calculator when you want a faster answer with fewer mistakes.
 
 
 
