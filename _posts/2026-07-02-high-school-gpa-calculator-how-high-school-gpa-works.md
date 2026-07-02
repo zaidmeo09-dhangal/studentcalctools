@@ -50,9 +50,8 @@ Instead of looking at every individual grade, schools convert grades into grade 
 For example:
 
 
-|  |  |
-| ---------------- | ---------------------- |
-| **Letter Grade** | **Common Grade Point** |
+| Letter Grade | Common Grade Point |
+| ------------ | ------------------ |
 | A | 4.0 |
 | B | 3.0 |
 | C | 2.0 |
@@ -73,9 +72,8 @@ Most students search for a highschool GPA calculator because their transcript is
 You may need to calculate GPA because:
 
 
-|  |  |
-| ----------------------------------------------- | ------------------------------------------ |
 | **Student Situation** | **Why GPA Matters** |
+| ----------------------------------------------- | ------------------------------------------ |
 | You want to know your current academic standing | GPA gives a quick summary of grades |
 | You are applying to college | GPA is part of many admissions reviews |
 | You want to qualify for scholarships | Some scholarships require a minimum GPA |
@@ -102,9 +100,8 @@ A regular English class and an AP English class may both use the same 4.0 scale.
 Example:
 
 
-|  |  |
-| --------- | --------------------- |
 | **Grade** | **Unweighted Points** |
+| --------- | --------------------- |
 | A | 4.0 |
 | B | 3.0 |
 | C | 2.0 |
@@ -121,9 +118,8 @@ A weighted GPA gives extra value to more difficult courses, depending on your sc
 For example:
 
 
-|  |  |
-| --------------- | -------------------------- |
 | **Course Type** | **A Grade Might Count As** |
+| --------------- | -------------------------- |
 | Regular | 4.0 |
 | Honors | 4.5 |
 | AP or IB | 5.0 |
@@ -144,9 +140,8 @@ GPA = Total Grade Points ÷ Number of Classes
 Example:
 
 
-|  |  |  |
-| ---------- | --------- | ---------------- |
 | **Course** | **Grade** | **Grade Points** |
+| ---------- | --------- | ---------------- |
 | English | A | 4.0 |
 | Algebra | B | 3.0 |
 | Biology | A | 4.0 |
@@ -185,9 +180,8 @@ Grade Points × Credits = Quality Points
 Example:
 
 
-|  |  |  |  |  |
-| ---------- | --------- | ---------------- | ----------- | ------------------ |
 | **Course** | **Grade** | **Grade Points** | **Credits** | **Quality Points** |
+| ---------- | --------- | ---------------- | ----------- | ------------------ |
 | English | A | 4.0 | 1.0 | 4.0 |
 | Algebra | B | 3.0 | 1.0 | 3.0 |
 | Biology | A | 4.0 | 1.0 | 4.0 |
@@ -217,9 +211,8 @@ GPA = Total Grade Points ÷ Number of Classes
 Example:
 
 
-|  |  |  |
-| --------- | --------- | ---------------- |
 | **Class** | **Grade** | **Grade Points** |
+| --------- | --------- | ---------------- |
 | English | A | 4.0 |
 | Math | A | 4.0 |
 | Science | B | 3.0 |
@@ -247,9 +240,8 @@ A GPA calculator high school number grades method usually converts percentages i
 A common example looks like this:
 
 
-|  |  |  |
-| ---------------- | ---------------- | ---------------- |
 | **Number Grade** | **Letter Grade** | **Grade Points** |
+| ---------------- | ---------------- | ---------------- |
 | 90 to 100 | A | 4.0 |
 | 80 to 89 | B | 3.0 |
 | 70 to 79 | C | 2.0 |
@@ -260,9 +252,8 @@ A common example looks like this:
 Example:
 
 
-|  |  |  |  |
-| ---------- | ---------------- | ---------------- | ---------------- |
 | **Course** | **Number Grade** | **Letter Grade** | **Grade Points** |
+| ---------- | ---------------- | ---------------- | ---------------- |
 | English | 94 | A | 4.0 |
 | Math | 88 | B | 3.0 |
 | Science | 91 | A | 4.0 |
@@ -288,9 +279,8 @@ Now let’s calculate a weighted GPA.
 Assume this school uses:
 
 
-|  |  |  |  |
-| --------------- | ----- | ----- | ----- |
-| **Course Type** | **A** | **B** | **C** |
+| **Course Type** | A | B | C |
+| --------------- | --- | --- | --- |
 | Regular | 4.0 | 3.0 | 2.0 |
 | Honors | 4.5 | 3.5 | 2.5 |
 | AP | 5.0 | 4.0 | 3.0 |
@@ -299,9 +289,8 @@ Assume this school uses:
 Student grades:
 
 
-|  |  |  |  |
-| ------------ | -------- | --------- | ------------------- |
 | **Course** | **Type** | **Grade** | **Weighted Points** |
+| ------------ | -------- | --------- | ------------------- |
 | English | Regular | A | 4.0 |
 | Algebra II | Honors | B | 3.5 |
 | AP Biology | AP | A | 5.0 |
@@ -322,9 +311,8 @@ Weighted GPA: **4.0**
 The same grades on an unweighted scale would be:
 
 
-|  |  |  |
-| ------------ | --------- | --------------------- |
 | **Course** | **Grade** | **Unweighted Points** |
+| ------------ | --------- | --------------------- |
 | English | A | 4.0 |
 | Algebra II | B | 3.0 |
 | AP Biology | A | 4.0 |
@@ -351,9 +339,8 @@ A semester GPA calculator high school students use only looks at one semester.
 A cumulative high school GPA calculator looks at all completed semesters or years.
 
 
-|  |  |
-| -------------- | -------------------------------------------- |
 | **GPA Type** | **What It Measures** |
+| -------------- | -------------------------------------------- |
 | Semester GPA | GPA for one semester only |
 | Yearly GPA | GPA for one school year |
 | Cumulative GPA | GPA across all completed high school courses |
@@ -363,9 +350,8 @@ A cumulative high school GPA calculator looks at all completed semesters or year
 Example:
 
 
-|  |  |
-| ---------------- | ------- |
 | **Term** | **GPA** |
+| ---------------- | ------- |
 | Freshman Fall | 3.2 |
 | Freshman Spring | 3.4 |
 | Sophomore Fall | 3.6 |
@@ -410,9 +396,8 @@ Some students mean:
 These are not exactly the same.
 
 
-|  |  |
-| --------------------- | -------------------------------------------------------------- |
 | **Search Intent** | **What It Means** |
+| --------------------- | -------------------------------------------------------------- |
 | Final semester GPA | Your GPA after current semester grades are added |
 | Final high school GPA | Your cumulative GPA after all high school courses are complete |
 | Final exam impact | How a final exam affects one course grade |
@@ -431,9 +416,8 @@ Every course grade affects GPA through grade points.
 Here is a simple example:
 
 
-|  |  |
-| --------- | ----------------------------------------------------- |
 | **Grade** | **GPA Effect** |
+| --------- | ----------------------------------------------------- |
 | A | Raises or protects GPA |
 | B | Usually keeps GPA solid |
 | C | Can lower GPA if your average is above 2.0 |
@@ -454,9 +438,8 @@ If your school shows number grades first, you can use a [grade calculator](https
 High school GPA gets messy when students mix different systems.
 
 
-|  |  |
-| ------------------------------------------- | --------------------------------------------------------------------------- |
 | **Mistake** | **Why It Causes Problems** |
+| ------------------------------------------- | --------------------------------------------------------------------------- |
 | Mixing weighted and unweighted GPA | These are different calculations |
 | Ignoring credits | A half-credit class should not always count the same as a full-credit class |
 | Using the wrong grade scale | Some schools use plus/minus grades |
@@ -484,9 +467,8 @@ Check your student handbook, transcript guide, or counselor notes.
 Some schools use a scale like this:
 
 
-|  |  |
-| --------- | ---------- |
 | **Grade** | **Points** |
+| --------- | ---------- |
 | A | 4.0 |
 | A- | 3.7 |
 | B+ | 3.3 |
@@ -537,9 +519,8 @@ Cumulative GPA = Total Quality Points Across All Terms ÷ Total Credits Across A
 Example:
 
 
-|  |  |  |
-| -------------- | ------------------ | ----------- |
 | **Year** | **Quality Points** | **Credits** |
+| -------------- | ------------------ | ----------- |
 | Freshman Year | 24.0 | 7.0 |
 | Sophomore Year | 26.6 | 7.0 |
 | Junior Year | 28.0 | 7.0 |
@@ -567,9 +548,8 @@ A freshman can move GPA faster because fewer grades are locked in. A senior can 
 Here are practical ways to improve GPA:
 
 
-|  |  |
-| ---------------------------- | --------------------------------------------------------------- |
 | **Strategy** | **Why It Helps** |
+| ---------------------------- | --------------------------------------------------------------- |
 | Focus on high-credit classes | They affect GPA more |
 | Protect core academic grades | Colleges and eligibility programs often care about core courses |
 | Turn in missing work | Zeroes damage grades fast |
@@ -586,9 +566,8 @@ If finals are coming up, use a [study time planner](https://studentcalctools.com
 These two tools are related, but they solve different problems.
 
 
-|  |  |
-| ---------------------- | -------------------------------------------------------------- |
 | **Tool** | **Best For** |
+| ---------------------- | -------------------------------------------------------------- |
 | GPA calculator | Calculating grade point average from course grades |
 | Grade calculator | Calculating a class grade from assignments, tests, and weights |
 | Final grade calculator | Finding what score you need on a final exam |
@@ -610,9 +589,8 @@ College Board notes that class rank is commonly based on a student’s GPA compa
 Before using an online GPA calculator high school students can rely on, collect the right information.
 
 
-|  |  |
-| -------------------------------------------------------- | --------------- |
 | **Question** | **Your Answer** |
+| -------------------------------------------------------- | --------------- |
 | Are you calculating weighted or unweighted GPA? | ___ |
 | Do you have letter grades or number grades? | ___ |
 | Does your school use credits? | ___ |
@@ -686,5 +664,3 @@ Yes, if your school uses a weighted GPA scale. Honors, AP, IB, or dual-enrollmen
 ### **Is an online GPA calculator high school students use always exact?**
 
 No. It is an estimate unless it uses your school’s exact grading scale, credit rules, weighting policy, and transcript rules. Your official GPA comes from your school.
-
-  
