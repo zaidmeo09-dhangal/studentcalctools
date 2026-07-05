@@ -137,6 +137,26 @@
     {"@context":"https://schema.org","@type":"WebApplication","name":"Student Loan Calculator","url":"https://studentcalctools.com/student-loan-calculator/","description":"Calculate monthly student loan payment, total interest, and total amount paid.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
     </script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://studentcalctools.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Student Loan Calculator",
+      "item": "https://studentcalctools.com/student-loan-calculator/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
         {"@type":"Question","name":"How is a monthly loan payment calculated?","acceptedAnswer":{"@type":"Answer","text":"The standard formula is M = P[r(1+r)^n] / [(1+r)^n − 1], where P is the principal, r is the monthly interest rate, and n is the total number of monthly payments."}},
         {"@type":"Question","name":"What is total interest paid?","acceptedAnswer":{"@type":"Answer","text":"Total interest is the sum of all interest charges over the life of the loan. It equals the total amount paid minus the original loan principal."}},
