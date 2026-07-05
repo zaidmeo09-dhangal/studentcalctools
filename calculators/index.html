@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,20 +10,22 @@
     <link rel="canonical" href="https://studentcalctools.com/calculators/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Free Student Calculators for GPA, Grades and Study</title>
-    <meta name="description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+    <title>Free Student Calculators | GPA, Grade, Attendance Tools</title>
+    <meta name="description" content="Use free student calculators for GPA, grades, attendance, final exams, essays, loans, scholarships, class rank and study planning. No sign up.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/calculators/">
-    <meta property="og:title" content="Free Student Calculators for GPA, Grades and Study">
-    <meta property="og:description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+    <meta property="og:title" content="Free Student Calculators | GPA, Grade, Attendance Tools">
+    <meta property="og:description" content="Use free student calculators for GPA, grades, attendance, final exams, essays, loans, scholarships, class rank and study planning. No sign up.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://studentcalctools.com/calculators/">
-    <meta name="twitter:title" content="Free Student Calculators for GPA, Grades and Study">
-    <meta name="twitter:description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+    <meta name="twitter:title" content="Free Student Calculators | GPA, Grade, Attendance Tools">
+    <meta name="twitter:description" content="Use free student calculators for GPA, grades, attendance, final exams, essays, loans, scholarships, class rank and study planning. No sign up.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
 
     <meta name="author" content="StudentCalcTools">
@@ -95,6 +97,11 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            color: inherit;
         }
 
         .skip-link {
@@ -115,7 +122,7 @@
         }
 
         nav {
-            background: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
@@ -129,7 +136,7 @@
         }
 
         [data-theme="dark"] nav {
-            background: rgba(2,6,23,0.85);
+            background: rgba(2,6,23,0.88);
         }
 
         .nav-logo {
@@ -141,6 +148,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .nav-logo-icon {
@@ -154,10 +162,17 @@
             color: white;
             font-size: 14px;
             font-weight: 800;
+            flex-shrink: 0;
         }
 
         .nav-logo span {
             color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .nav-links {
@@ -183,40 +198,67 @@
             background: var(--blue-light);
             color: var(--blue);
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             padding: 5px 14px;
             border-radius: 20px;
+            white-space: nowrap;
         }
 
-        .theme-toggle {
+        .theme-toggle,
+        .menu-toggle {
             background: var(--blue-light);
             border: 1px solid var(--border-strong);
-            border-radius: 50%;
-            width: 36px;
+            border-radius: 999px;
             height: 36px;
             cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             color: var(--blue);
-            font-size: 16px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .theme-toggle {
+            width: 36px;
+            border-radius: 50%;
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 0 13px;
         }
 
         .hero {
             background: var(--gradient-hero);
-            padding: 76px 20px 70px;
+            padding: 78px 20px 72px;
             text-align: center;
             border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(37,99,235,0.14), transparent 35%),
+                radial-gradient(circle at 80% 70%, rgba(6,182,212,0.14), transparent 35%);
+            pointer-events: none;
         }
 
         .hero-inner {
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .breadcrumb {
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--muted);
             margin-bottom: 18px;
         }
@@ -228,20 +270,31 @@
 
         .hero-badge {
             display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: var(--card-bg);
             border: 1px solid var(--border-strong);
             border-radius: 30px;
-            padding: 6px 16px;
+            padding: 7px 16px;
             font-size: 13px;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--blue);
             margin-bottom: 22px;
             box-shadow: var(--shadow-sm);
         }
 
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+        }
+
         h1 {
-            font-size: clamp(34px, 5vw, 58px);
-            line-height: 1.1;
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.08;
             letter-spacing: -1.4px;
             margin-bottom: 20px;
             font-weight: 800;
@@ -255,11 +308,12 @@
         }
 
         .hero p {
-            max-width: 720px;
+            max-width: 740px;
             margin: 0 auto 30px;
             font-size: 18px;
             color: var(--text-secondary);
             font-weight: 500;
+            line-height: 1.75;
         }
 
         .hero-actions {
@@ -279,6 +333,7 @@
             border-radius: 12px;
             font-size: 15px;
             font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
         .btn-primary {
@@ -293,8 +348,13 @@
             border: 1px solid var(--border-strong);
         }
 
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
         .section {
-            padding: 70px 20px;
+            padding: 72px 20px;
         }
 
         .wrap {
@@ -304,8 +364,8 @@
 
         .section-header {
             text-align: center;
-            max-width: 760px;
-            margin: 0 auto 42px;
+            max-width: 780px;
+            margin: 0 auto 44px;
         }
 
         .eyebrow {
@@ -323,6 +383,7 @@
             line-height: 1.2;
             font-weight: 800;
             margin-bottom: 14px;
+            letter-spacing: -0.5px;
         }
 
         .section-intro {
@@ -331,8 +392,42 @@
             font-weight: 500;
         }
 
+        .trust-strip {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 30px 20px;
+        }
+
+        .trust-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            text-align: center;
+        }
+
+        .trust-item {
+            font-weight: 800;
+            color: var(--text);
+            padding: 4px;
+        }
+
+        .trust-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
         .category {
-            margin-bottom: 46px;
+            margin-bottom: 48px;
+        }
+
+        .category:last-child {
+            margin-bottom: 0;
         }
 
         .category h2 {
@@ -355,6 +450,9 @@
             padding: 26px;
             box-shadow: var(--shadow-sm);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 220px;
         }
 
         .tool-card:hover {
@@ -365,6 +463,7 @@
 
         .tool-label {
             display: inline-block;
+            align-self: flex-start;
             font-size: 11px;
             font-weight: 800;
             letter-spacing: 1px;
@@ -387,6 +486,8 @@
             color: var(--muted);
             font-weight: 500;
             margin-bottom: 18px;
+            line-height: 1.7;
+            flex: 1;
         }
 
         .tool-card a {
@@ -398,40 +499,53 @@
             font-size: 14px;
         }
 
-        .trust-strip {
+        .tool-card a::after {
+            content: '>';
+            margin-left: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .tool-card a:hover::after {
+            transform: translateX(3px);
+        }
+
+        .guide-section {
             background: var(--card-bg);
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            padding: 28px 20px;
         }
 
-        .trust-grid {
-            max-width: 1000px;
-            margin: 0 auto;
+        .guide-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 18px;
-            text-align: center;
         }
 
-        .trust-item {
+        .guide-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+        }
+
+        .guide-card h3 {
+            font-size: 17px;
             font-weight: 800;
-            color: var(--text);
+            margin-bottom: 8px;
         }
 
-        .trust-item span {
-            display: block;
+        .guide-card p {
             color: var(--muted);
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.7;
         }
 
         .cta-section {
             background: var(--gradient-brand);
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 72px 20px;
         }
 
         .cta-section h2 {
@@ -439,18 +553,21 @@
             line-height: 1.2;
             font-weight: 800;
             margin-bottom: 14px;
+            letter-spacing: -0.5px;
         }
 
         .cta-section p {
-            max-width: 680px;
+            max-width: 700px;
             margin: 0 auto 26px;
             opacity: 0.95;
             font-size: 17px;
+            line-height: 1.7;
         }
 
         .cta-section .btn-primary {
             background: white;
             color: var(--blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         footer {
@@ -521,22 +638,124 @@
             color: var(--accent);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav {
-                padding: 12px 16px;
+                padding: 12px 18px;
             }
 
             .nav-links {
                 gap: 12px;
             }
+        }
 
-            .nav-links a:nth-child(3),
-            .nav-links a:nth-child(4) {
+        @media (max-width: 768px) {
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            nav {
+                padding: 10px 14px;
+                min-height: 64px;
+            }
+
+            .nav-logo {
+                font-size: 19px;
+                gap: 7px;
+            }
+
+            .nav-logo-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+            }
+
+            .nav-right {
+                gap: 8px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 14px;
+                right: 14px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: var(--card-bg);
+                border: 1px solid var(--border-strong);
+                border-radius: 16px;
+                padding: 10px;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 13px 14px;
+                border-radius: 10px;
+                color: var(--text);
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background: var(--blue-light);
+                color: var(--blue);
+            }
+
+            .nav-tag {
                 display: none;
             }
 
+            .theme-toggle {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
+
             .hero {
-                padding: 58px 16px 58px;
+                padding: 58px 16px 60px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+                padding: 7px 14px;
+                line-height: 1.3;
+            }
+
+            h1 {
+                font-size: clamp(34px, 9vw, 44px);
+                line-height: 1.12;
+                letter-spacing: -1.2px;
+            }
+
+            .hero p {
+                font-size: 17px;
+                line-height: 1.65;
+            }
+
+            .hero-actions {
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 340px;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .footer-grid {
@@ -546,8 +765,111 @@
         }
 
         @media (max-width: 480px) {
+            nav {
+                padding: 10px 12px;
+            }
+
+            .nav-logo {
+                font-size: 18px;
+                letter-spacing: -0.7px;
+            }
+
+            .nav-logo-icon {
+                width: 29px;
+                height: 29px;
+            }
+
+            .menu-toggle {
+                padding: 0 11px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 50px 16px 56px;
+            }
+
+            .breadcrumb {
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: clamp(31px, 10vw, 39px);
+                line-height: 1.13;
+                letter-spacing: -1.1px;
+            }
+
+            .hero p,
+            .section-intro,
+            .cta-section p {
+                font-size: 16px;
+            }
+
+            .section,
+            .guide-section {
+                padding: 58px 16px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+
+            .trust-item {
+                font-size: 14px;
+            }
+
+            .trust-item span {
+                font-size: 12px;
+            }
+
+            .category h2 {
+                font-size: 22px;
+            }
+
+            .tools-grid,
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-card {
+                padding: 24px;
+                min-height: auto;
+            }
+
+            .cta-section {
+                padding: 60px 16px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .nav-logo {
+                font-size: 16px;
+            }
+
+            .nav-logo-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15.5px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
         }
     </style>
@@ -558,7 +880,7 @@
       "@type": "CollectionPage",
       "name": "Free Student Calculators",
       "url": "https://studentcalctools.com/calculators/",
-      "description": "A collection of free calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.",
+      "description": "A collection of free academic calculators for GPA, grades, attendance, final exams, essays, loans, scholarships, study planning and class rank.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "StudentCalcTools",
@@ -616,14 +938,18 @@
             <span class="nav-logo-icon" aria-hidden="true">S</span>
             Student<span>Calc</span>
         </a>
-        <div class="nav-links">
-            <a href="/calculators/" class="active">Calculators</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
+
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="/calculators/" class="active">Calculators</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about-us/">About</a>
+                <a href="/contact-us/">Contact</a>
+            </div>
             <span class="nav-tag">100% Free</span>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                <span id="themeIcon">D</span>
+                <span id="themeIcon">🌙</span>
             </button>
         </div>
     </nav>
@@ -634,9 +960,9 @@
                 <div class="breadcrumb">
                     <a href="/">Home</a> / Calculators
                 </div>
-                <div class="hero-badge">Free academic tools for students</div>
-                <h1>Free Student Calculators for <span class="gradient-text">GPA, Grades and Study Planning</span></h1>
-                <p>Find every StudentCalcTools calculator in one place. Use free tools for GPA, weighted grades, final exams, attendance, essays, student loans, scholarships, class rank and study planning.</p>
+                <div class="hero-badge">Free browser-based academic tools</div>
+                <h1>Free Student Calculators for <span class="gradient-text">GPA, Grades, Attendance and Study Planning</span></h1>
+                <p>Use StudentCalcTools as your academic calculator hub. Find fast, private tools for GPA, weighted grades, final exam targets, attendance percentage, essay word count, student loan payments, scholarships, class rank and study schedules.</p>
                 <div class="hero-actions">
                     <a href="/gpa-calculator/" class="btn-primary">Start With GPA Calculator</a>
                     <a href="#all-calculators" class="btn-secondary">Browse All Calculators</a>
@@ -646,9 +972,9 @@
 
         <section class="trust-strip" aria-label="StudentCalcTools benefits">
             <div class="trust-grid">
-                <div class="trust-item">10+ Tools<span>Built for common student calculations</span></div>
-                <div class="trust-item">No Sign Up<span>Use calculators without an account</span></div>
-                <div class="trust-item">Private Inputs<span>Calculations run in your browser</span></div>
+                <div class="trust-item">10+ Tools<span>Common student calculations in one place</span></div>
+                <div class="trust-item">No Sign Up<span>Use every calculator without an account</span></div>
+                <div class="trust-item">Private Inputs<span>Calculations run directly in your browser</span></div>
                 <div class="trust-item">Instant Results<span>Get answers without extra steps</span></div>
             </div>
         </section>
@@ -657,8 +983,8 @@
             <div class="wrap">
                 <div class="section-header">
                     <span class="eyebrow">All Calculators</span>
-                    <h2 class="section-title">Choose the calculator you need</h2>
-                    <p class="section-intro">Browse calculators by category so you can quickly find the right tool for grades, attendance, writing, college cost, study planning or class rank.</p>
+                    <h2 class="section-title">Choose the student calculator you need</h2>
+                    <p class="section-intro">Browse calculators by academic task. Each tool is designed to answer one specific student question quickly, from calculating your GPA to estimating college costs.</p>
                 </div>
 
                 <div class="category">
@@ -667,28 +993,28 @@
                         <article class="tool-card">
                             <span class="tool-label">GPA</span>
                             <h3>GPA Calculator</h3>
-                            <p>Calculate high school or college GPA using grades and credit hours on a 4.0 scale.</p>
+                            <p>Calculate semester GPA using letter grades and credit hours on a standard 4.0 scale.</p>
                             <a href="/gpa-calculator/">Use GPA Calculator</a>
                         </article>
 
                         <article class="tool-card">
                             <span class="tool-label">Weighted Grades</span>
                             <h3>Grade Calculator</h3>
-                            <p>Calculate your weighted course grade from assignments, quizzes, exams and projects.</p>
+                            <p>Calculate your current course grade from assignments, quizzes, exams, projects and weights.</p>
                             <a href="/grade-calculator/">Use Grade Calculator</a>
                         </article>
 
                         <article class="tool-card">
                             <span class="tool-label">Final Exam</span>
                             <h3>Final Grade Calculator</h3>
-                            <p>Find the score you need on your final exam to reach your target course grade.</p>
+                            <p>Find the final exam score you need to reach your target course grade.</p>
                             <a href="/final-grade-calculator/">Use Final Grade Calculator</a>
                         </article>
 
                         <article class="tool-card">
                             <span class="tool-label">Cumulative GPA</span>
                             <h3>CGPA Calculator</h3>
-                            <p>Calculate cumulative GPA across semesters using credits and semester grades.</p>
+                            <p>Calculate cumulative GPA across multiple semesters using credits and GPA values.</p>
                             <a href="/cgpa-calculator/">Use CGPA Calculator</a>
                         </article>
                     </div>
@@ -700,14 +1026,14 @@
                         <article class="tool-card">
                             <span class="tool-label">Attendance</span>
                             <h3>Attendance Calculator</h3>
-                            <p>Calculate your attendance percentage and see where you stand against your target.</p>
+                            <p>Calculate attendance percentage and check whether you are above your required attendance target.</p>
                             <a href="/attendance-calculator/">Use Attendance Calculator</a>
                         </article>
 
                         <article class="tool-card">
                             <span class="tool-label">Study Schedule</span>
                             <h3>Study Time Planner</h3>
-                            <p>Plan study time across subjects based on difficulty, priority and available time.</p>
+                            <p>Plan study time across subjects based on difficulty, priority and available hours.</p>
                             <a href="/study-time-planner/">Use Study Time Planner</a>
                         </article>
                     </div>
@@ -719,7 +1045,7 @@
                         <article class="tool-card">
                             <span class="tool-label">Writing</span>
                             <h3>Essay Word Counter</h3>
-                            <p>Count words, characters, sentences, paragraphs and estimated reading time for essays.</p>
+                            <p>Count words, characters, sentences and paragraphs before submitting an essay or assignment.</p>
                             <a href="/essay-word-counter/">Use Essay Word Counter</a>
                         </article>
                     </div>
@@ -731,7 +1057,7 @@
                         <article class="tool-card">
                             <span class="tool-label">Loans</span>
                             <h3>Student Loan Calculator</h3>
-                            <p>Estimate monthly student loan payments, total interest and repayment cost.</p>
+                            <p>Estimate monthly student loan payments, total interest and full repayment cost.</p>
                             <a href="/student-loan-calculator/">Use Student Loan Calculator</a>
                         </article>
 
@@ -750,7 +1076,7 @@
                         <article class="tool-card">
                             <span class="tool-label">Rank</span>
                             <h3>Class Rank Calculator</h3>
-                            <p>Calculate class rank percentile and understand your top percentage in class.</p>
+                            <p>Calculate class rank percentile and understand your standing compared with classmates.</p>
                             <a href="/class-rank-calculator/">Use Class Rank Calculator</a>
                         </article>
                     </div>
@@ -758,9 +1084,37 @@
             </div>
         </section>
 
+        <section class="section guide-section">
+            <div class="wrap">
+                <div class="section-header">
+                    <span class="eyebrow">Calculator Guide</span>
+                    <h2 class="section-title">Which calculator should you use?</h2>
+                    <p class="section-intro">Start with the calculator that matches the academic question you are trying to answer right now.</p>
+                </div>
+                <div class="guide-grid">
+                    <article class="guide-card">
+                        <h3>Need your semester GPA?</h3>
+                        <p>Use the GPA Calculator when you have course grades and credit hours for one term.</p>
+                    </article>
+                    <article class="guide-card">
+                        <h3>Need your current class grade?</h3>
+                        <p>Use the Grade Calculator when assignments, quizzes and exams have different weights.</p>
+                    </article>
+                    <article class="guide-card">
+                        <h3>Worried about your final?</h3>
+                        <p>Use the Final Grade Calculator to see what score you need on the final exam.</p>
+                    </article>
+                    <article class="guide-card">
+                        <h3>Planning time or cost?</h3>
+                        <p>Use the Study Time Planner, Student Loan Calculator or Scholarship Calculator for practical planning.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="cta-section">
             <h2>Start with the calculator you need most</h2>
-            <p>Most students begin with GPA, weighted grade or final grade calculations. Pick a tool and get your result instantly.</p>
+            <p>Most students begin with GPA, weighted grade or final grade calculations. Pick a tool, enter your numbers and get your result instantly.</p>
             <a href="/gpa-calculator/" class="btn-primary">Open GPA Calculator</a>
         </section>
     </main>
@@ -807,12 +1161,14 @@
         (function() {
             const toggle = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
             const stored = localStorage.getItem('theme');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const initial = stored || (prefersDark ? 'dark' : 'light');
 
             document.documentElement.setAttribute('data-theme', initial);
-            icon.textContent = initial === 'dark' ? 'L' : 'D';
+            icon.textContent = initial === 'dark' ? '☀️' : '🌙';
 
             toggle.addEventListener('click', () => {
                 const current = document.documentElement.getAttribute('data-theme');
@@ -820,7 +1176,30 @@
 
                 document.documentElement.setAttribute('data-theme', next);
                 localStorage.setItem('theme', next);
-                icon.textContent = next === 'dark' ? 'L' : 'D';
+                icon.textContent = next === 'dark' ? '☀️' : '🌙';
+            });
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+                menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+            });
+
+            navLinks.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = 'Menu';
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                const clickedInsideNav = event.target.closest('nav');
+                if (!clickedInsideNav && navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = 'Menu';
+                }
             });
         })();
     </script>
