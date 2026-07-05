@@ -1338,22 +1338,34 @@
     }
 
     .calc-card {
-        padding: 22px 16px;
-        border-radius: 20px;
-    }
+    padding: 24px 16px;
+    border-radius: 22px;
+   }
 
     .calc-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin-bottom: 16px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid var(--border);
-    }
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+}
 
-    .calc-remove {
-        grid-column: auto;
-        width: 100%;
-    }
+.calc-row .calc-input,
+.calc-row .calc-select {
+    min-width: 0;
+    font-size: 15px;
+    padding: 13px 14px;
+}
+
+.calc-row .calc-input:first-child {
+    text-overflow: ellipsis;
+}
+
+.calc-remove {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 46px;
+}
 
     .calc-actions {
         flex-direction: column;
