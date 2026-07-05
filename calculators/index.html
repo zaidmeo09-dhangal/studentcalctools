@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://studentcalctools.com/calculators/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Student Calculators for GPA, Grades and Study</title>
+    <meta name="description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="StudentCalcTools">
+    <meta property="og:url" content="https://studentcalctools.com/calculators/">
+    <meta property="og:title" content="Free Student Calculators for GPA, Grades and Study">
+    <meta property="og:description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+    <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://studentcalctools.com/calculators/">
+    <meta name="twitter:title" content="Free Student Calculators for GPA, Grades and Study">
+    <meta name="twitter:description" content="Explore free student calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.">
+    <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+
+    <meta name="author" content="StudentCalcTools">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QFNEKR7QE0');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+            --blue-light: #eff6ff;
+            --accent: #06b6d4;
+            --text: #0f172a;
+            --text-secondary: #334155;
+            --muted: #64748b;
+            --white: #ffffff;
+            --bg: #f8faff;
+            --card-bg: #ffffff;
+            --border: rgba(37,99,235,0.1);
+            --border-strong: rgba(37,99,235,0.2);
+            --shadow-sm: 0 2px 16px rgba(37,99,235,0.06);
+            --shadow-md: 0 16px 40px rgba(37,99,235,0.12);
+            --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+            --gradient-brand: linear-gradient(135deg, #2563eb, #06b6d4);
+        }
+
+        [data-theme="dark"] {
+            --blue: #3b82f6;
+            --blue-dark: #60a5fa;
+            --blue-light: rgba(59,130,246,0.15);
+            --accent: #22d3ee;
+            --text: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --muted: #94a3b8;
+            --white: #0f172a;
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --border: rgba(59,130,246,0.15);
+            --border-strong: rgba(59,130,246,0.3);
+            --shadow-sm: 0 2px 16px rgba(0,0,0,0.4);
+            --shadow-md: 0 16px 40px rgba(0,0,0,0.5);
+            --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-brand: linear-gradient(135deg, #3b82f6, #22d3ee);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--blue);
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            z-index: 9999;
+            font-weight: 700;
+            border-radius: 0 0 8px 0;
+        }
+
+        .skip-link:focus {
+            left: 0;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(2,6,23,0.85);
+        }
+
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-brand);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--muted);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--blue);
+        }
+
+        .nav-tag {
+            background: var(--blue-light);
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 20px;
+        }
+
+        .theme-toggle {
+            background: var(--blue-light);
+            border: 1px solid var(--border-strong);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue);
+            font-size: 16px;
+        }
+
+        .hero {
+            background: var(--gradient-hero);
+            padding: 76px 20px 70px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .breadcrumb a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 30px;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        h1 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.1;
+            letter-spacing: -1.4px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .gradient-text {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .btn-primary {
+            background: var(--gradient-brand);
+            color: white;
+            box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text);
+            border: 1px solid var(--border-strong);
+        }
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 42px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-size: clamp(26px, 3.5vw, 40px);
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .section-intro {
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .category {
+            margin-bottom: 46px;
+        }
+
+        .category h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -0.4px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-strong);
+        }
+
+        .tool-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--blue);
+            background: var(--blue-light);
+            padding: 5px 10px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+
+        .tool-card h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .tool-card a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .trust-strip {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 28px 20px;
+        }
+
+        .trust-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            text-align: center;
+        }
+
+        .trust-item {
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .trust-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .cta-section {
+            background: var(--gradient-brand);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .cta-section p {
+            max-width: 680px;
+            margin: 0 auto 26px;
+            opacity: 0.95;
+            font-size: 17px;
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--blue);
+        }
+
+        footer {
+            background: #0f172a;
+            color: rgba(255,255,255,0.55);
+            text-align: center;
+            padding: 60px 20px 30px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] footer {
+            background: #020617;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer-tagline {
+            margin-bottom: 36px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+
+        .footer-col p.col-title {
+            color: white;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+        }
+
+        .footer-bottom span {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 16px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a:nth-child(3),
+            .nav-links a:nth-child(4) {
+                display: none;
+            }
+
+            .hero {
+                padding: 58px 16px 58px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Free Student Calculators",
+      "url": "https://studentcalctools.com/calculators/",
+      "description": "A collection of free calculators for GPA, grades, attendance, essays, loans, scholarships, study planning and class rank.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "StudentCalcTools",
+        "url": "https://studentcalctools.com/"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://studentcalctools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://studentcalctools.com/calculators/"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "StudentCalcTools Calculator List",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"GPA Calculator","url":"https://studentcalctools.com/gpa-calculator/"},
+        {"@type":"ListItem","position":2,"name":"Grade Calculator","url":"https://studentcalctools.com/grade-calculator/"},
+        {"@type":"ListItem","position":3,"name":"Final Grade Calculator","url":"https://studentcalctools.com/final-grade-calculator/"},
+        {"@type":"ListItem","position":4,"name":"CGPA Calculator","url":"https://studentcalctools.com/cgpa-calculator/"},
+        {"@type":"ListItem","position":5,"name":"Attendance Calculator","url":"https://studentcalctools.com/attendance-calculator/"},
+        {"@type":"ListItem","position":6,"name":"Study Time Planner","url":"https://studentcalctools.com/study-time-planner/"},
+        {"@type":"ListItem","position":7,"name":"Essay Word Counter","url":"https://studentcalctools.com/essay-word-counter/"},
+        {"@type":"ListItem","position":8,"name":"Student Loan Calculator","url":"https://studentcalctools.com/student-loan-calculator/"},
+        {"@type":"ListItem","position":9,"name":"Scholarship Calculator","url":"https://studentcalctools.com/scholarship-calculator/"},
+        {"@type":"ListItem","position":10,"name":"Class Rank Calculator","url":"https://studentcalctools.com/class-rank-calculator/"}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav>
+        <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
+            <span class="nav-logo-icon" aria-hidden="true">S</span>
+            Student<span>Calc</span>
+        </a>
+        <div class="nav-links">
+            <a href="/calculators/" class="active">Calculators</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about-us/">About</a>
+            <a href="/contact-us/">Contact</a>
+            <span class="nav-tag">100% Free</span>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <span id="themeIcon">D</span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="breadcrumb">
+                    <a href="/">Home</a> / Calculators
+                </div>
+                <div class="hero-badge">Free academic tools for students</div>
+                <h1>Free Student Calculators for <span class="gradient-text">GPA, Grades and Study Planning</span></h1>
+                <p>Find every StudentCalcTools calculator in one place. Use free tools for GPA, weighted grades, final exams, attendance, essays, student loans, scholarships, class rank and study planning.</p>
+                <div class="hero-actions">
+                    <a href="/gpa-calculator/" class="btn-primary">Start With GPA Calculator</a>
+                    <a href="#all-calculators" class="btn-secondary">Browse All Calculators</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="StudentCalcTools benefits">
+            <div class="trust-grid">
+                <div class="trust-item">10+ Tools<span>Built for common student calculations</span></div>
+                <div class="trust-item">No Sign Up<span>Use calculators without an account</span></div>
+                <div class="trust-item">Private Inputs<span>Calculations run in your browser</span></div>
+                <div class="trust-item">Instant Results<span>Get answers without extra steps</span></div>
+            </div>
+        </section>
+
+        <section class="section" id="all-calculators">
+            <div class="wrap">
+                <div class="section-header">
+                    <span class="eyebrow">All Calculators</span>
+                    <h2 class="section-title">Choose the calculator you need</h2>
+                    <p class="section-intro">Browse calculators by category so you can quickly find the right tool for grades, attendance, writing, college cost, study planning or class rank.</p>
+                </div>
+
+                <div class="category">
+                    <h2>GPA and Grade Calculators</h2>
+                    <div class="tools-grid">
+                        <article class="tool-card">
+                            <span class="tool-label">GPA</span>
+                            <h3>GPA Calculator</h3>
+                            <p>Calculate high school or college GPA using grades and credit hours on a 4.0 scale.</p>
+                            <a href="/gpa-calculator/">Use GPA Calculator</a>
+                        </article>
+
+                        <article class="tool-card">
+                            <span class="tool-label">Weighted Grades</span>
+                            <h3>Grade Calculator</h3>
+                            <p>Calculate your weighted course grade from assignments, quizzes, exams and projects.</p>
+                            <a href="/grade-calculator/">Use Grade Calculator</a>
+                        </article>
+
+                        <article class="tool-card">
+                            <span class="tool-label">Final Exam</span>
+                            <h3>Final Grade Calculator</h3>
+                            <p>Find the score you need on your final exam to reach your target course grade.</p>
+                            <a href="/final-grade-calculator/">Use Final Grade Calculator</a>
+                        </article>
+
+                        <article class="tool-card">
+                            <span class="tool-label">Cumulative GPA</span>
+                            <h3>CGPA Calculator</h3>
+                            <p>Calculate cumulative GPA across semesters using credits and semester grades.</p>
+                            <a href="/cgpa-calculator/">Use CGPA Calculator</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Attendance and Study Tools</h2>
+                    <div class="tools-grid">
+                        <article class="tool-card">
+                            <span class="tool-label">Attendance</span>
+                            <h3>Attendance Calculator</h3>
+                            <p>Calculate your attendance percentage and see where you stand against your target.</p>
+                            <a href="/attendance-calculator/">Use Attendance Calculator</a>
+                        </article>
+
+                        <article class="tool-card">
+                            <span class="tool-label">Study Schedule</span>
+                            <h3>Study Time Planner</h3>
+                            <p>Plan study time across subjects based on difficulty, priority and available time.</p>
+                            <a href="/study-time-planner/">Use Study Time Planner</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Writing and Essay Tools</h2>
+                    <div class="tools-grid">
+                        <article class="tool-card">
+                            <span class="tool-label">Writing</span>
+                            <h3>Essay Word Counter</h3>
+                            <p>Count words, characters, sentences, paragraphs and estimated reading time for essays.</p>
+                            <a href="/essay-word-counter/">Use Essay Word Counter</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>College Cost Calculators</h2>
+                    <div class="tools-grid">
+                        <article class="tool-card">
+                            <span class="tool-label">Loans</span>
+                            <h3>Student Loan Calculator</h3>
+                            <p>Estimate monthly student loan payments, total interest and repayment cost.</p>
+                            <a href="/student-loan-calculator/">Use Student Loan Calculator</a>
+                        </article>
+
+                        <article class="tool-card">
+                            <span class="tool-label">Scholarships</span>
+                            <h3>Scholarship Calculator</h3>
+                            <p>Estimate remaining college cost after scholarships, grants and financial aid.</p>
+                            <a href="/scholarship-calculator/">Use Scholarship Calculator</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Class Rank Tool</h2>
+                    <div class="tools-grid">
+                        <article class="tool-card">
+                            <span class="tool-label">Rank</span>
+                            <h3>Class Rank Calculator</h3>
+                            <p>Calculate class rank percentile and understand your top percentage in class.</p>
+                            <a href="/class-rank-calculator/">Use Class Rank Calculator</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Start with the calculator you need most</h2>
+            <p>Most students begin with GPA, weighted grade or final grade calculations. Pick a tool and get your result instantly.</p>
+            <a href="/gpa-calculator/" class="btn-primary">Open GPA Calculator</a>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-logo">Student<span>Calc</span></p>
+        <p class="footer-tagline">Free calculators for every student</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p class="col-title">Calculators</p>
+                <a href="/calculators/">All Calculators</a>
+                <a href="/gpa-calculator/">GPA Calculator</a>
+                <a href="/grade-calculator/">Grade Calculator</a>
+                <a href="/attendance-calculator/">Attendance Calculator</a>
+                <a href="/final-grade-calculator/">Final Grade Calculator</a>
+                <a href="/cgpa-calculator/">CGPA Calculator</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">More Tools</p>
+                <a href="/study-time-planner/">Study Time Planner</a>
+                <a href="/essay-word-counter/">Essay Word Counter</a>
+                <a href="/student-loan-calculator/">Student Loan Calculator</a>
+                <a href="/scholarship-calculator/">Scholarship Calculator</a>
+                <a href="/class-rank-calculator/">Class Rank Calculator</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">Blog</p>
+                <a href="/blog/">All Articles</a>
+            </div>
+            <div class="footer-col">
+                <p class="col-title">Company</p>
+                <a href="/about-us/">About Us</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="/disclaimer/">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 <span>StudentCalcTools</span> - Free tools for every student</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', initial);
+            icon.textContent = initial === 'dark' ? 'L' : 'D';
+
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                icon.textContent = next === 'dark' ? 'L' : 'D';
+            });
+        })();
+    </script>
+</body>
+</html>
