@@ -1209,34 +1209,34 @@
                     <span class="pulse-dot" aria-hidden="true"></span>
                     The #1 Free Student Calculator Suite
                 </div>
-                <h1>Every Calculator a Student <span class="gradient-text">Needs</span></h1>
-                <p>GPA, grades, attendance, loans and more — all free, all instant, no sign up required.</p>
+                <h1>Free Student Calculators for <span class="gradient-text">GPA, Grades and Study Planning</span></h1>
+<p>Calculate GPA, weighted grades, final exam scores, attendance percentage, essay word count, student loan payments, scholarships and class rank. Free, private and built for students.</p>
                 <div class="hero-cta">
-                    <a href="#mini-calc" class="btn-primary">Try Quick GPA Calculator <span aria-hidden="true">→</span></a>
-                    <a href="#tools" class="btn-secondary">Browse All Tools</a>
+                   <a href="#mini-calc" class="btn-primary">Calculate GPA Now <span aria-hidden="true">→</span></a>
+                   <a href="#tools" class="btn-secondary">Explore Free Calculators</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-num" data-count="10" data-suffix="+">0</div>
-                        <div class="stat-label">Free Tools</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num" data-count="100" data-suffix="%">0</div>
-                        <div class="stat-label">Free Forever</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num" data-text="Fast">0</div>
-                        <div class="stat-label">Instant Results</div>
-                    </div>
-                </div>
+    <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Free Tools</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Free Forever</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">Fast</div>
+        <div class="stat-label">Instant Results</div>
+    </div>
+</div>
             </div>
         </section>
 
         <!-- Live Activity Strip -->
         <div class="activity-strip">
-            <span class="activity-icon" aria-hidden="true">⚡</span>
-            <strong id="liveCounter">0</strong> calculations completed by students this month
-        </div>
+    <span class="activity-icon" aria-hidden="true">⚡</span>
+    <strong>Private browser-based calculators</strong> for GPA, grades, attendance, essays, loans and study planning
+</div>
 
         <!-- Mini Calculator -->
         <section class="mini-calc-section" id="mini-calc">
@@ -1633,64 +1633,6 @@
             }, { passive: true });
         })();
 
-        // ============ ANIMATED COUNTERS ============
-        (function() {
-            const counters = document.querySelectorAll('[data-count], [data-text]');
-            const animate = (el) => {
-                if (el.dataset.text) {
-                    el.textContent = el.dataset.text;
-                    return;
-                }
-                const target = parseInt(el.dataset.count);
-                const suffix = el.dataset.suffix || '';
-                const duration = 1500;
-                const start = performance.now();
-                const tick = (now) => {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = Math.floor(eased * target);
-                    el.textContent = current + suffix;
-                    if (progress < 1) requestAnimationFrame(tick);
-                };
-                requestAnimationFrame(tick);
-            };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.dataset.animated) {
-                        entry.target.dataset.animated = 'true';
-                        animate(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            counters.forEach(c => observer.observe(c));
-        })();
-
-        // ============ LIVE COUNTER (FAKE BUT REALISTIC) ============
-        (function() {
-            const el = document.getElementById('liveCounter');
-            const baseDate = new Date('2026-01-01').getTime();
-            const now = Date.now();
-            const daysSince = Math.floor((now - baseDate) / (1000 * 60 * 60 * 24));
-            const baseCount = 12000 + (daysSince * 47);
-            let current = 0;
-            const target = baseCount;
-            const duration = 2000;
-            const start = performance.now();
-            const tick = (t) => {
-                const progress = Math.min((t - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                current = Math.floor(eased * target);
-                el.textContent = current.toLocaleString();
-                if (progress < 1) requestAnimationFrame(tick);
-            };
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    requestAnimationFrame(tick);
-                    observer.disconnect();
-                }
-            });
-            observer.observe(el);
-        })();
 
         // ============ MINI GPA CALCULATOR ============
         (function() {
