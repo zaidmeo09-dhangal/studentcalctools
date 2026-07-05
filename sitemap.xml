@@ -8,6 +8,12 @@
   </url>
 
   <url>
+    <loc>https://studentcalctools.com/calculators/</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
     <loc>https://studentcalctools.com/gpa-calculator/</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
@@ -92,21 +98,21 @@
   </url>
 
   <url>
-  <loc>https://studentcalctools.com/blog/grade-needed-on-final-calculator/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
+    <loc>https://studentcalctools.com/blog/grade-needed-on-final-calculator/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-  <loc>https://studentcalctools.com/blog/weighted-grade-calculator/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
+    <loc>https://studentcalctools.com/blog/weighted-grade-calculator/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-  <loc>https://studentcalctools.com/blog/high-school-gpa-calculator/</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
+    <loc>https://studentcalctools.com/blog/high-school-gpa-calculator/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
 </urlset>
