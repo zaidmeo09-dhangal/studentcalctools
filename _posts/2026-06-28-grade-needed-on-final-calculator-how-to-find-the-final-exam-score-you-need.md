@@ -39,8 +39,8 @@ This guide explains the exact formula, gives examples, covers edge cases, and sh
 - A final worth 10% changes your grade much less than a final worth 40%.
 - If the required score is above 100%, your target may not be possible without extra credit, rounding, or a special grading rule.
 - If you do not know your current grade, calculate it first using a grade calculator.
-- If your final grade affects your semester GPA, use a++++ GPA calculator after estimating your course result.
-- Once you know the score you need, use a++++ study time planner to turn the number into a realistic study plan.
+- If your final grade affects your semester GPA, use a GPA calculator after estimating your course result.
+- Once you know the score you need, use a study time planner to turn the number into a realistic study plan.
 
 
 
