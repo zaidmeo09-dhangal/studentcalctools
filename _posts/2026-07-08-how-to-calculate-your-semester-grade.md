@@ -49,7 +49,7 @@ The goal is simple: understand where your grade stands now, what still counts, a
 
 ## **What Is a Semester Grade?**
 
-A semester grade is the overall grade you earn in one class during a semester. A semester is one academic term, commonly used by schools and colleges to divide the academic year. Some college semesters run about 15 to 17 weeks, with final exams often placed near the end of the term.
+A semester grade is the overall grade you earn in one class during a semester. A semester is one academic term, commonly used by schools and colleges to divide the academic year. Some college semesters run about [15 to 17 weeks](https://www.furman.edu/blogs/how-long-is-a-semester/), with final exams often placed near the end of the term.
 
 Your semester grade may appear as:
 
