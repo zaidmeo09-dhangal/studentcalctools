@@ -16,6 +16,8 @@ meta_description: Learn how a grade curve calculator works with flat curves,
   bell curves, average-based curves, square-root curves, formulas, and examples.
 excerpt: Learn how a grade curve calculator works with flat curves, bell curves,
   average-based curves, square-root curves, formulas, and examples.
+featured_image: /assets/images/grade-curve-calculator-how-curved-grading-works.webp
+image_alt: Grade Curve Calculator How Curved Grading Works
 read_time: 5 min read
 ---
 A [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
