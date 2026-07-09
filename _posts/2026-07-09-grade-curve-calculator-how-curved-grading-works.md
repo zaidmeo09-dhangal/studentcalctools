@@ -3,7 +3,7 @@ layout: post
 title: "Grade Curve Calculator: How Curved Grading Works"
 slug: grade curve calculator
 date: 2026-07-09
-status: Draft
+status: Published
 author: StudentCalcTools
 category: GPA Guide
 tags:
