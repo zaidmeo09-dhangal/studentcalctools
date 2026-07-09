@@ -138,9 +138,8 @@ Curved Grade = 84%
 Your adjusted grade becomes 84%.
 
 
-|  |  |  |
-| ------------- | ---------------- | --------------------------------- |
-| **Raw Score** | **Added Points** | **Curved Score** |
+| Raw Score | Added Points | Curved Score |
+| --------- | ------------ | --------------------------------- |
 | 62% | 8 | 70% |
 | 76% | 8 | 84% |
 | 88% | 8 | 96% |
@@ -190,9 +189,8 @@ Curve Points = 7
 Now add 7 points to each student’s raw score.
 
 
-|  |  |  |
-| ------------- | ---------------- | ---------------- |
-| **Raw Score** | **Curve Points** | **Curved Score** |
+| Raw Score | Curve Points | Curved Score |
+| --------- | ------------ | ------------ |
 | 55% | 7 | 62% |
 | 68% | 7 | 75% |
 | 81% | 7 | 88% |
@@ -214,9 +212,8 @@ An average-based curve depends heavily on the class average. If the class averag
 For example:
 
 
-|  |  |  |
-| ------------------------- | ------------------ | ---------------- |
-| **Current Class Average** | **Target Average** | **Curve Points** |
+| Current Class Average | Target Average | Curve Points |
+| --------------------- | -------------- | ------------- |
 | 68% | 75% | +7 |
 | 73% | 75% | +2 |
 | 78% | 75% | 0 or no curve |
@@ -245,9 +242,8 @@ Then the z-score can be mapped to a curved grade or letter grade scale.
 Let’s say:
 
 
-|  |  |
-| ------------------ | --------- |
-| **Input** | **Value** |
+| Input | Value |
+| ------------------ | ----- |
 | Your raw score | 84% |
 | Class mean | 72% |
 | Standard deviation | 8 |
@@ -268,9 +264,8 @@ That usually means your performance was well above average, even if 84% does not
 Different teachers use different mappings, but here is a simple example:
 
 
-|  |  |  |
-| ----------------- | ------------------------ | ------------------------- |
-| **Z-Score Range** | **Relative Performance** | **Possible Letter Grade** |
+| Z-Score Range | Relative Performance | Possible Letter Grade |
+| -------------- | -------------------- | --------------------- |
 | +1.5 or higher | Far above average | A |
 | +0.5 to +1.49 | Above average | B |
 | -0.5 to +0.49 | Near average | C |
@@ -319,9 +314,8 @@ So, a 64% becomes an 80%.
 Here are more examples:
 
 
-|  |  |  |
-| ------------- | --------------- | ---------------- |
-| **Raw Score** | **Square Root** | **Curved Score** |
+| Raw Score | Square Root | Curved Score |
+| --------- | ----------- | ------------ |
 | 36% | 6 | 60% |
 | 49% | 7 | 70% |
 | 64% | 8 | 80% |
@@ -348,9 +342,8 @@ A student with 36% can move to 60%, while a student with 81% moves to 90%. That 
 ## **Quick Comparison of Grade Curve Methods**
 
 
-|  |  |  |  |
+| Method | Formula | Best Use Case | Biggest Risk |
 | ------------------- | -------------------------------------- | -------------------------- | -------------------------------- |
-| **Method** | **Formula** | **Best Use Case** | **Biggest Risk** |
 | Flat curve | Raw Grade + Points | Simple correction | May over-boost high scores |
 | Average-based curve | Raw Grade + (Target Avg - Current Avg) | Raising class average | Depends on class average |
 | Bell curve | (Score - Mean) ÷ SD | Relative class ranking | Can feel unfair in small classes |
@@ -392,9 +385,8 @@ Raw Score = 78%
 Look for clues from your teacher:
 
 
-|  |  |
+| Teacher Says | Likely Method |
 | -------------------------------------- | ------------------- |
-| **Teacher Says** | **Likely Method** |
 | “Everyone gets 5 points back” | Flat curve |
 | “I raised the class average to 75” | Average-based curve |
 | “Grades are based on the distribution” | Bell curve |
@@ -423,9 +415,8 @@ Finally, check how your curved percentage maps to a letter grade.
 A common scale is:
 
 
-|  |  |
-| -------------- | ---------------- |
-| **Percentage** | **Letter Grade** |
+| Percentage | Letter Grade |
+| ----------- | ------------ |
 | 90% to 100% | A |
 | 80% to 89% | B |
 | 70% to 79% | C |
@@ -460,9 +451,8 @@ Your curved test grade is 83%.
 ### **Step 3: Compare Before and After**
 
 
-|  |  |
-| ----------------- | --------- |
-| **Score Type** | **Grade** |
+| Score Type | Grade |
+| ----------------- | -------- |
 | Raw test score | 74% |
 | Curve added | 9 points |
 | Curved test score | 83% |
@@ -497,9 +487,8 @@ If the class average is already above the target average, an average-based curve
 Example:
 
 
-|  |  |  |
-| ------------------- | ------------------ | --------------- |
-| **Current Average** | **Target Average** | **Curve** |
+| Current Average | Target Average | Curve |
+| --------------- | -------------- | --------------- |
 | 82% | 75% | No upward curve |
 
 
@@ -536,9 +525,8 @@ Use a grade curve calculator when you want to estimate an adjusted score after a
 Use a regular grade calculator when you want to calculate your current class grade from homework, quizzes, exams, projects, and weights.
 
 
-|  |  |  |
+| Tool | Use It For | Example Question |
 | ---------------------- | -------------------------- | ----------------------------------- |
-| **Tool** | **Use It For** | **Example Question** |
 | Grade curve calculator | Curved test or exam scores | “What is my score after the curve?” |
 | Grade calculator | Weighted course grade | “What is my current class grade?” |
 | Final grade calculator | Final exam target | “What do I need on my final?” |
