@@ -107,7 +107,7 @@
         .faq-item.open .faq-toggle{transform:rotate(45deg)}
         .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
         .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
-        .faq-item.open .faq-answer{max-height:300px}
+        .faq-item.open .faq-answer{max-height:500px}
         .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
         .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
         .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
@@ -159,7 +159,9 @@
         {"@type":"Question","name":"How is attendance percentage calculated?","acceptedAnswer":{"@type":"Answer","text":"Attendance percentage is calculated by dividing the number of classes attended by the total number of classes held, then multiplying by 100."}},
         {"@type":"Question","name":"What is a safe attendance percentage?","acceptedAnswer":{"@type":"Answer","text":"Most colleges and schools require a minimum of 75 percent attendance. Maintaining 80 percent or higher is considered safe."}},
         {"@type":"Question","name":"How many classes can I miss?","acceptedAnswer":{"@type":"Answer","text":"This calculator tells you exactly how many more classes you can miss while staying above your target attendance percentage."}},
-        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations happen in your browser. Nothing is stored or shared."}}
+        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations happen in your browser. Nothing is stored or shared."}},
+{"@type":"Question","name":"What happens if my attendance falls below 75%?","acceptedAnswer":{"@type":"Answer","text":"Policies vary by institution. Common consequences include being barred from final exams, losing internal assessment marks, or needing special permission to sit exams. Some universities accept medical certificates for shortfall due to illness."}},
+{"@type":"Question","name":"Is attendance calculated per subject or overall?","acceptedAnswer":{"@type":"Answer","text":"Most colleges track attendance separately for each subject, so you must meet the minimum in every course individually. A strong overall average does not compensate for one subject below the requirement."}}
     ]}
     </script>
 </head>
@@ -230,13 +232,42 @@
         <section class="content-section reveal">
             <span class="eyebrow">HOW IT WORKS</span>
             <h2 class="section-title">How Attendance is Calculated</h2>
-            <p>Attendance percentage is the ratio of classes you attended to total classes held, multiplied by 100. Most schools require a minimum of 75 percent attendance to be eligible for exams.</p>
+            <p>Attendance percentage is the number of classes you attended divided by the total number of classes held, multiplied by 100. The formula is:</p>
+<p><strong>Attendance % = (Classes Attended ÷ Total Classes Held) × 100</strong></p>
+<p>For example, if your college has held 45 lectures and you attended 38 of them, your attendance is (38 ÷ 45) × 100 = <strong>84.4%</strong>. Most colleges and universities require a minimum of 75% attendance to sit for exams, though some departments set the bar at 80% or 85%.</p>
+<p>This calculator also works in reverse: enter your target percentage and remaining classes, and it tells you exactly how many lectures you can still skip — or how many you must attend — to stay above the requirement. If you are below target, it shows whether reaching it is still mathematically possible this semester.</p>
             <div class="steps-grid">
                 <div class="step-card"><div class="step-num">1</div><h3>Enter Classes</h3><p>Total classes held and classes you attended.</p></div>
                 <div class="step-card"><div class="step-num">2</div><h3>Set Target</h3><p>Enter your target attendance percent and remaining classes.</p></div>
                 <div class="step-card"><div class="step-num">3</div><h3>Get Status</h3><p>See your current percent and how many you can miss.</p></div>
             </div>
         </section>
+
+        <section class="content-section reveal">
+    <span class="eyebrow">THE 75% RULE</span>
+    <h2 class="section-title">How Many Classes Can You Miss?</h2>
+    <p>The table below shows the maximum lectures you can miss in a typical semester while staying at or above 75% attendance. Find your total class count, or enter your exact numbers in the <a href="#totalClasses" style="color:var(--blue);font-weight:600">calculator above</a> for a personalized answer.</p>
+    <div style="overflow-x:auto;margin-top:24px">
+        <table style="width:100%;border-collapse:collapse;background:var(--card-bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;font-size:14px">
+            <thead>
+                <tr style="background:var(--blue-light)">
+                    <th style="padding:14px 16px;text-align:left;color:var(--text);font-weight:700">Total Classes in Semester</th>
+                    <th style="padding:14px 16px;text-align:left;color:var(--text);font-weight:700">Must Attend (75%)</th>
+                    <th style="padding:14px 16px;text-align:left;color:var(--text);font-weight:700">Can Miss</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">40</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">30</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">10</td></tr>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">50</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">38</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">12</td></tr>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">60</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">45</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">15</td></tr>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">80</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">60</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">20</td></tr>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">100</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">75</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">25</td></tr>
+                <tr><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">120</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">90</td><td style="padding:12px 16px;border-top:1px solid var(--border);color:var(--text-secondary)">30</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="margin-top:20px">Keep in mind that attendance is usually calculated per subject, not overall — you can be at 85% overall and still fall short in one course. If you are planning your semester workload, our <a href="/study-time-planner/" style="color:var(--blue);font-weight:600">study time planner</a> helps you balance the classes you must attend with your revision hours. And if missed classes have hurt your grades, check the <a href="/final-grade-calculator/" style="color:var(--blue);font-weight:600">final grade calculator</a> to see what score you need on your final exam to recover.</p>
+</section>
 
         <section class="content-section reveal">
             <span class="eyebrow">RELATED TOOLS</span>
@@ -257,11 +288,13 @@
                 <div class="faq-item"><div class="faq-question">What is a safe attendance percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Most colleges and schools require a minimum of 75 percent attendance. Maintaining 80 percent or higher is considered safe.</div></div></div>
                 <div class="faq-item"><div class="faq-question">How many classes can I miss?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">This calculator tells you exactly how many more classes you can miss while staying above your target attendance percentage.</div></div></div>
                 <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. All calculations happen in your browser. Nothing is stored or shared.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What happens if my attendance falls below 75%?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Policies vary by institution. Common consequences include being barred from final exams, losing internal assessment marks, or needing special permission (condonation) to sit exams. Some universities accept medical certificates for shortfall due to illness. Check your institution's academic regulations for the exact policy.</div></div></div>
+<div class="faq-item"><div class="faq-question">Is attendance calculated per subject or overall?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Most colleges track attendance separately for each subject, so you must meet the minimum in every course individually. A strong overall average does not compensate for one subject below the requirement. Use this calculator once per subject for an accurate picture.</div></div></div>
             </div>
         </section>
 
         <section class="cta-section">
-            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>10 plus free calculators for students. No sign up, no fees.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
+            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>10 free calculators for students. No sign up, no fees.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
         </section>
     </main>
 
