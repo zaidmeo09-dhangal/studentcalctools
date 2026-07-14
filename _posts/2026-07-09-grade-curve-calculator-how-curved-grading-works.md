@@ -20,7 +20,7 @@ featured_image: /assets/images/grade-curve-calculator-how-curved-grading-works.w
 image_alt: Grade Curve Calculator How Curved Grading Works
 read_time: 5 min read
 ---
-A [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
+A grade curve calculator helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
 
 That matters because your original score is not always the final score recorded in the gradebook. If a test was harder than expected, the class average was unusually low, or the instructor wants grades to match a target distribution, curved grading may raise scores. In some systems, it may also change how letter grades are assigned compared with a normal percentage scale.
 
@@ -350,8 +350,6 @@ A student with 36% can move to 60%, while a student with 81% moves to 90%. That 
 | Average-based curve | Raw Grade + (Target Avg - Current Avg) | Raising class average | Depends on class average |
 | Bell curve | (Score - Mean) ÷ SD | Relative class ranking | Can feel unfair in small classes |
 | Square-root curve | √Raw Grade × 10 | Helping low scores recover | Can create big score jumps |
-
-
 
 
 ## **Which Grade Curve Method Should You Use?**
