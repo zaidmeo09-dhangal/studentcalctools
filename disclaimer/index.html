@@ -29,14 +29,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,23[...]
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0[...]
+        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
+        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
         *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
         body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
         .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
         .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
         .skip-link:focus{left:0}
-        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:spa[...]
+        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
         [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
         .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
         .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
@@ -45,10 +45,10 @@
         .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
         .nav-links a:hover{color:var(--blue)}
         .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:cen[...]
+        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
         .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
         .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,[...]
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
         .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
         .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
         .breadcrumb-sep{margin:0 8px;color:var(--muted)}
@@ -56,7 +56,7 @@
         .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
         .page-hero h1 .gradient-text{background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
         .page-hero p{font-size:17px;color:var(--text-secondary);max-width:560px;margin:0 auto;line-height:1.7;font-weight:500}
-        .hero-meta{display:inline-block;margin-top:18px;font-size:13px;color:var(--muted);font-weight:600;background:var(--card-bg);padding:6px 16px;border-radius:20px;border:1px solid var(--borde[...]
+        .hero-meta{display:inline-block;margin-top:18px;font-size:13px;color:var(--muted);font-weight:600;background:var(--card-bg);padding:6px 16px;border-radius:20px;border:1px solid var(--border-strong)}
         .content-section{padding:60px 20px;max-width:800px;margin:0 auto}
         .policy-card{background:var(--card-bg);border-radius:24px;padding:40px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
         .policy-section{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border)}
@@ -70,17 +70,17 @@
         .policy-section ul li::before{content:'→';position:absolute;left:0;color:var(--blue);font-weight:700;font-size:13px;top:8px}
         .policy-section a{color:var(--blue);text-decoration:none;font-weight:600}
         .policy-section a:hover{text-decoration:underline}
-        .highlight-box{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:12px;padding:16px 20px;margin-top:14px;font-size:14px;color:var(--blue);font-weight:600;disp[...]
+        .highlight-box{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:12px;padding:16px 20px;margin-top:14px;font-size:14px;color:var(--blue);font-weight:600;display:flex;align-items:flex-start;gap:10px}
         .highlight-box span{font-size:18px;flex-shrink:0;margin-top:1px}
-        .warn-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:16px 20px;margin-top:14px;font-size:14px;color:#c2410c;font-weight:600;display:flex;align-items:flex-start;[...]
+        .warn-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:16px 20px;margin-top:14px;font-size:14px;color:#c2410c;font-weight:600;display:flex;align-items:flex-start;gap:10px}
         [data-theme="dark"] .warn-box{background:rgba(194,65,12,0.15);border-color:rgba(194,65,12,0.3)}
         .warn-box span{font-size:18px;flex-shrink:0;margin-top:1px}
         .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,25[...]
+        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
         .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
         .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
         .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shad[...]
+        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
         .btn-cta:hover{transform:translateY(-2px)}
         footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
         [data-theme="dark"] footer{background:#020617}
@@ -93,12 +93,12 @@
         .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}.footer-bottom span{color:var(--accent)}
         .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
         .reveal.visible{opacity:1;transform:translateY(0)}
-        @media(max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.policy-card{padding:24[...]
+        @media(max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.policy-card{padding:24px}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
         @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
     </style>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebPage","name":"Disclaimer","url":"https://studentcalctools.com/disclaimer/","description":"Disclaimer for StudentCalcTools - learn about the limita[...]
+    {"@context":"https://schema.org","@type":"WebPage","name":"Disclaimer","url":"https://studentcalctools.com/disclaimer/","description":"Disclaimer for StudentCalcTools - learn about the limitations and intended use of our calculators.","publisher":{"@type":"Organization","name":"StudentCalcTools","url":"https://studentcalctools.com/"}}
     </script>
 </head>
 <body>
@@ -130,14 +130,14 @@
                 <div class="policy-section">
                     <div class="policy-section-icon">🎓</div>
                     <h2>1. Educational Use Only</h2>
-                    <p>All tools provided on StudentCalcTools — including the GPA Calculator, Grade Calculator, Attendance Calculator, Student Loan Calculator, and all others — are designed s[...]
-                    <p>These calculators are meant to help students understand and estimate their academic standing. They are not official academic records and should not be submitted to any inst[...]
+                    <p>All tools provided on StudentCalcTools — including the GPA Calculator, Grade Calculator, Attendance Calculator, Student Loan Calculator, and all others — are designed strictly for <strong>educational and informational purposes</strong>.</p>
+                    <p>These calculators are meant to help students understand and estimate their academic standing. They are not official academic records and should not be submitted to any institution as such.</p>
                     <div class="highlight-box"><span>📘</span> Our tools help you learn and plan — always verify results with your school or institution.</div>
                 </div>
                 <div class="policy-section">
                     <div class="policy-section-icon">🧮</div>
                     <h2>2. Accuracy of Calculations</h2>
-                    <p>While we strive to provide accurate and up-to-date calculation logic, the results produced by our calculators are <strong>estimates only</strong>. Actual grades, GPA, atten[...]
+                    <p>While we strive to provide accurate and up-to-date calculation logic, the results produced by our calculators are <strong>estimates only</strong>. Actual grades, GPA, attendance records, and loan figures may vary depending on:</p>
                     <ul>
                         <li>Your institution's specific grading scale or rounding rules</li>
                         <li>Policies that differ from the standard 4.0 GPA scale</li>
@@ -150,20 +150,20 @@
                 <div class="policy-section">
                     <div class="policy-section-icon">💰</div>
                     <h2>3. No Financial or Legal Advice</h2>
-                    <p>The Student Loan Calculator and Scholarship Calculator on this website provide estimated figures for general planning purposes only. These tools do <strong>not</strong> con[...]
-                    <p>Loan repayment amounts, interest rates, and scholarship eligibility depend on numerous factors including your lender's terms, government policies, and individual financial [...]
-                    <p>Before taking out any student loan or making significant financial decisions, please consult with a qualified financial advisor or your institution's financial aid office.<[...]
+                    <p>The Student Loan Calculator and Scholarship Calculator on this website provide estimated figures for general planning purposes only. These tools do <strong>not</strong> constitute financial, legal, or professional advice of any kind.</p>
+                    <p>Loan repayment amounts, interest rates, and scholarship eligibility depend on numerous factors including your lender's terms, government policies, and individual financial circumstances — all of which our calculators cannot account for in full.</p>
+                    <p>Before taking out any student loan or making significant financial decisions, please consult with a qualified financial advisor or your institution's financial aid office.</p>
                 </div>
                 <div class="policy-section">
                     <div class="policy-section-icon">🔗</div>
                     <h2>4. External Links Disclaimer</h2>
-                    <p>StudentCalcTools may contain links to external websites for reference or additional information. We have no control over the content, accuracy, or privacy practices of thos[...]
-                    <p>The inclusion of any external link does not imply endorsement, recommendation, or approval of the linked website or its content by StudentCalcTools. You access external lin[...]
+                    <p>StudentCalcTools may contain links to external websites for reference or additional information. We have no control over the content, accuracy, or privacy practices of those third-party sites.</p>
+                    <p>The inclusion of any external link does not imply endorsement, recommendation, or approval of the linked website or its content by StudentCalcTools. You access external links at your own risk.</p>
                 </div>
                 <div class="policy-section">
                     <div class="policy-section-icon">⚖️</div>
                     <h2>5. Limitation of Liability</h2>
-                    <p>To the fullest extent permitted by law, StudentCalcTools and its creators shall not be held liable for any direct, indirect, incidental, or consequential damages arising fr[...]
+                    <p>To the fullest extent permitted by law, StudentCalcTools and its creators shall not be held liable for any direct, indirect, incidental, or consequential damages arising from:</p>
                     <ul>
                         <li>Reliance on calculator results for academic or financial decisions</li>
                         <li>Errors or inaccuracies in user-entered data</li>
@@ -175,7 +175,7 @@
                 <div class="policy-section">
                     <div class="policy-section-icon">🔄</div>
                     <h2>6. Information Subject to Change</h2>
-                    <p>Grading systems, GPA scales, attendance policies, and loan regulations can change over time and vary by country, institution, and program. We make every effort to keep our [...]
+                    <p>Grading systems, GPA scales, attendance policies, and loan regulations can change over time and vary by country, institution, and program. We make every effort to keep our calculators current, but we cannot guarantee that all content reflects the very latest policies in every jurisdiction.</p>
                     <p>We reserve the right to update or modify our calculators and this disclaimer at any time without prior notice. We recommend checking this page periodically for updates.</p>
                     <p>If you notice any inaccuracy in our tools, please <a href="/contact-us/">contact us</a> — we take feedback seriously and will investigate promptly.</p>
                 </div>
@@ -193,17 +193,17 @@
         <p class="footer-logo">Student<span>Calc</span></p>
         <p class="footer-tagline">Free calculators for every student</p>
         <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculat[...]
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-[...]
+            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
+            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
             <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
-            <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/di[...]
+            <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
         </div>
         <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p></div>
     </footer>
     <script>
-        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').match[...]
-        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100[...]
-        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelect[...]
+        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙'});})();
+        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'},{passive:true});})();
+        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(s=>o.observe(s));})();
     </script>
 </body>
 </html>
