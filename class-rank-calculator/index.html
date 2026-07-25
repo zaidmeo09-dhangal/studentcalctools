@@ -9,18 +9,18 @@
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://studentcalctools.com/class-rank-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Rank Calculator | Percentile and Top Percent</title>
-    <meta name="description" content="Use this class rank calculator to find your high school class rank percentile, top percentage, and academic standing from rank and class size.">
+    <title>Class Rank Calculator: Percentile, Percentage and Top %</title>
+    <meta name="description" content="Free class rank calculator for high school and college students. Enter your rank and class size to instantly find your percentile, top percentage, and academic standing.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/class-rank-calculator/">
-    <meta property="og:title" content="Class Rank Calculator | Percentile and Top Percent">
-    <meta property="og:description" content="Use this class rank calculator to find your high school class rank percentile, top percentage, and academic standing from rank and class size.">
+    <meta property="og:title" content="Class Rank Calculator: Percentile, Percentage and Top %">
+    <meta property="og:description" content="Free class rank calculator for high school and college students. Enter your rank and class size to instantly find your percentile, top percentage, and academic standing.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Class Rank Calculator | Percentile and Top Percent">
-    <meta name="twitter:description" content="Use this class rank calculator to find your high school class rank percentile, top percentage, and academic standing.">
+    <meta name="twitter:title" content="Class Rank Calculator: Percentile, Percentage and Top %">
+    <meta name="twitter:description" content="Free class rank calculator for high school and college students. Find your percentile, top percentage, and academic standing instantly.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
@@ -87,6 +87,8 @@
         .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:inline-block}
         .section-title{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--text);margin-bottom:20px;letter-spacing:-0.5px;line-height:1.2}
         .content-section p{font-size:15px;color:var(--text-secondary);line-height:1.8;margin-bottom:14px}
+        .content-section p a{color:var(--blue);text-decoration:underline;font-weight:600}
+        .content-section p a:hover{color:var(--blue-dark)}
         .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
         .step-card{background:var(--card-bg);padding:28px 24px;border-radius:18px;border:1px solid var(--border);text-align:center;transition:all 0.3s ease}
         .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
@@ -107,7 +109,7 @@
         .faq-item.open .faq-toggle{transform:rotate(45deg)}
         .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
         .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
-        .faq-item.open .faq-answer{max-height:300px}
+        .faq-item.open .faq-answer{max-height:400px}
         .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
         .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
         .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
@@ -174,11 +176,16 @@
 </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"What is a class rank calculator?","acceptedAnswer":{"@type":"Answer","text":"A class rank calculator helps you convert your class rank and class size into a percentile or top percentage. It shows where you stand compared with other students in your class."}},
-        {"@type":"Question","name":"How do you calculate class rank?","acceptedAnswer":{"@type":"Answer","text":"To calculate class rank percentile, subtract your rank from the total number of students, add 1, divide by the total number of students, then multiply by 100."}},
-        {"@type":"Question","name":"What is a good class rank percentile?","acceptedAnswer":{"@type":"Answer","text":"A percentile of 90% or higher usually means you are in the top 10% of your class. A percentile of 75% or higher usually means you are in the top 25%."}},
-        {"@type":"Question","name":"What does top 10% mean in class rank?","acceptedAnswer":{"@type":"Answer","text":"Top 10% means your rank is within the highest 10% of students in your class. For example, if there are 400 students, the top 10% includes about the top 40 students."}},
-        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. Your calculation happens in your browser. Your class size and rank are not stored or shared."}}
+        {"@type":"Question","name":"What is a class rank calculator?","acceptedAnswer":{"@type":"Answer","text":"A class rank calculator converts your rank and class size into a percentile and a top percentage. It shows what share of your class ranks below you and whether you fall in the top 10 percent, top 25 percent, or another range."}},
+        {"@type":"Question","name":"How do you calculate class rank percentile?","acceptedAnswer":{"@type":"Answer","text":"Subtract your rank from the total number of students, add 1, divide by the total number of students, then multiply by 100. The formula is: Class Rank Percentile = ((Total Students minus Rank plus 1) divided by Total Students) times 100. A rank of 50 in a class of 500 gives about the 90th percentile."}},
+        {"@type":"Question","name":"What is a good class rank percentile?","acceptedAnswer":{"@type":"Answer","text":"A percentile of 90 or higher usually places you in the top 10 percent of your class, and 75 or higher usually places you in the top 25 percent. What counts as good depends on your goals, since selective colleges and scholarships often look for top 10 to 25 percent standing."}},
+        {"@type":"Question","name":"What does top 10 percent mean in class rank?","acceptedAnswer":{"@type":"Answer","text":"Top 10 percent means your rank falls within the highest 10 percent of students in your class. In a class of 400 students, the top 10 percent is roughly the top 40 ranked students."}},
+        {"@type":"Question","name":"What is the difference between class rank percentage and percentile?","acceptedAnswer":{"@type":"Answer","text":"Top percentage is the share of the class at or above your rank, so lower is better, such as top 5 percent. Percentile is the share of students you rank above, so higher is better, such as the 95th percentile. This calculator shows both from the same inputs."}},
+        {"@type":"Question","name":"Is this a high school class rank calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. It works for high school and college students who already know their rank and class size, and it reports your percentile, top percentage, and standing for uses like applications, scholarships, and honor society requirements."}},
+        {"@type":"Question","name":"Does weighted or unweighted GPA affect class rank?","acceptedAnswer":{"@type":"Answer","text":"It can. Some schools rank students using weighted GPA, which gives extra points for honors, AP, and IB courses, while others use unweighted GPA. Check your school policy, because the same grades can produce a different rank under each method."}},
+        {"@type":"Question","name":"Does class rank still matter for college admissions?","acceptedAnswer":{"@type":"Answer","text":"It matters less than it once did. According to NACAC, grades and strength of curriculum are the most important admission factors, while most four-year colleges give class rank limited or no importance. Rank still counts in specific cases, such as Texas automatic admission, honor societies, and some merit scholarships."}},
+        {"@type":"Question","name":"What if my school does not report class rank?","acceptedAnswer":{"@type":"Answer","text":"If your school does not report rank, admissions officers rely on your GPA, course rigor, the school profile, essays, and recommendations instead. A growing number of high schools no longer report exact rank, so students without one are generally not at a disadvantage."}},
+        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. The calculation runs in your browser. Your class size and rank are not stored or shared."}}
     ]}
     </script>
 </head>
@@ -204,14 +211,14 @@
             <div class="page-hero-content">
                 <nav class="breadcrumb"><a href="https://studentcalctools.com/">Home</a><span class="breadcrumb-sep">›</span><span>Class Rank Calculator</span></nav>
                 <h1>Class Rank <span class="gradient-text">Calculator</span></h1>
-                <p>Find your class rank percentile and see where you stand in your graduating class. Enter your class size and rank to calculate your percentile, top percentage, and academic standing.</p>
+                <p>Find your class rank percentile and see exactly where you stand in your graduating class. Enter your class size and your rank to calculate your percentile, your top percentage, and your academic standing in seconds.</p>
             </div>
         </section>
 
         <section class="calc-section">
             <div class="calc-card">
                 <h2 class="calc-card-title">Calculate Your Class Rank Percentile</h2>
-                <p class="calc-card-subtitle">Use this class rank calculator to understand your position in class based on your total number of students and your rank. See what percentage of classmates rank below you and whether you are in the top 10%, top 25%, or another rank range.</p>
+                <p class="calc-card-subtitle">Enter your total class size and your rank to see your class rank percentile, the percentage of classmates who rank below you, and whether you fall in the top 10 percent, top 25 percent, or another range.</p>
 
                 <div class="field-row">
                     <div class="field-group">
@@ -239,114 +246,134 @@
         </section>
 
         <section class="content-section reveal">
-            <span class="eyebrow">FORMULA</span>
-            <h2 class="section-title">How to Calculate Class Rank Percentile</h2>
-            <p>Class rank percentile shows what percentage of students you rank above in your class. A higher percentile means you rank above more students. A lower top percentage means you are closer to the top of your class.</p>
-            <div class="formula-box">
-                <strong>Formula:</strong>
-                <div class="formula-text">Class Rank Percentile = ((Total Students − Your Rank + 1) ÷ Total Students) × 100</div>
-            </div>
-            <div class="example-box">
-                <p><strong>Example:</strong> If your class has 500 students and your rank is 50:</p>
-                <p><strong>((500 − 50 + 1) ÷ 500) × 100 = 90.2%</strong></p>
-                <p>That means you are around the 90th percentile and rank above most students in your class.</p>
-            </div>
+            <span class="eyebrow">THE BASICS</span>
+            <h2 class="section-title">What Is Class Rank?</h2>
+            <p>Class rank is your academic position within your graduating class, based on your grade point average. If your school ranks students, everyone is ordered from the highest GPA to the lowest, and your rank is where you land in that list. A rank of 12 out of 240, for example, means 11 students have a higher GPA than you and everyone else ranks below you.</p>
+            <p>Schools set class rank in one of two ways. Unweighted rank scores every course on the same scale, while weighted rank gives extra points to honors, Advanced Placement, and International Baccalaureate courses, so a student carrying harder classes can rank higher. Your official rank is calculated and updated by your school, usually the counselor or registrar, and it can shift each grading period as new grades come in.</p>
+            <p>This calculator is built for the moment you already know two numbers: your rank and your class size. From those, it works out your percentile and your top percentage so you can see your standing at a glance.</p>
         </section>
 
         <section class="content-section alt-bg reveal">
             <div class="content-wrap">
-                <span class="eyebrow">RANK BASICS</span>
-                <h2 class="section-title">Class Rank Percentage vs Percentile</h2>
-                <p>Class rank percentage and class rank percentile are related, but they do not mean the same thing.</p>
+                <span class="eyebrow">FORMULA</span>
+                <h2 class="section-title">How to Calculate Class Rank Percentile</h2>
+                <p>Class rank percentile shows what percentage of students you rank above. A higher percentile means you sit above more of your class. It is the mirror image of your top percentage, which counts the share of the class at or above your rank, where a lower number is better.</p>
+                <div class="formula-box">
+                    <strong>Formula:</strong>
+                    <div class="formula-text">Class Rank Percentile = ((Total Students − Your Rank + 1) ÷ Total Students) × 100</div>
+                </div>
+                <div class="example-box">
+                    <p><strong>Example 1:</strong> A class of 500 students, and your rank is 50.</p>
+                    <p><strong>((500 − 50 + 1) ÷ 500) × 100 = 90.2%</strong></p>
+                    <p>You are around the 90th percentile, which puts you in the top 10 percent of your class.</p>
+                </div>
+                <div class="example-box">
+                    <p><strong>Example 2:</strong> A class of 300 students, and your rank is 25.</p>
+                    <p><strong>((300 − 25 + 1) ÷ 300) × 100 = 92%</strong></p>
+                    <p>That is about the 92nd percentile, or the top 8.3 percent of the class. Enter these same numbers in the calculator above to see it in action.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <span class="eyebrow">RANK BASICS</span>
+            <h2 class="section-title">Class Rank Percentage vs Percentile</h2>
+            <p>People often use these terms as if they mean the same thing, but they measure standing from opposite directions. Getting them straight makes your result much easier to read.</p>
+            <div class="responsive-table">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Term</th><th>What It Means</th><th>Better Result</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Class rank</td><td>Your position in class, such as 25 out of 300</td><td>Lower is better</td></tr>
+                        <tr><td>Class rank percentile</td><td>The percentage of students you rank above</td><td>Higher is better</td></tr>
+                        <tr><td>Top percentage</td><td>The percentage of the class at or above your rank</td><td>Lower is better</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>For example, if you rank 30th in a class of 300, your top percentage is 10 percent, which means you are in the top 10 percent of your class and near the 90th percentile.</p>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+                <span class="eyebrow">RESULT GUIDE</span>
+                <h2 class="section-title">Class Rank Percentile Guide</h2>
+                <p>Use this guide to read your result at a glance. These ranges are general. Every school, college, scholarship program, and admissions office can interpret class rank differently.</p>
                 <div class="responsive-table">
                     <table class="info-table">
                         <thead>
-                            <tr><th>Term</th><th>What It Means</th><th>Better Result</th></tr>
+                            <tr><th>Result</th><th>What It Usually Means</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Class rank</td><td>Your position in class, such as 25 out of 300</td><td>Lower is better</td></tr>
-                            <tr><td>Class rank percentile</td><td>The percentage of students you rank above</td><td>Higher is better</td></tr>
-                            <tr><td>Top percentage</td><td>The percentage of the class above or at your rank</td><td>Lower is better</td></tr>
+                            <tr><td>Top 10%</td><td>Excellent academic standing</td></tr>
+                            <tr><td>Top 25%</td><td>Strong academic standing</td></tr>
+                            <tr><td>Top 50%</td><td>Around the upper half of the class</td></tr>
+                            <tr><td>Below top 50%</td><td>Most useful when read alongside GPA, course rigor, essays, and test scores</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p>For example, if you rank 30th in a class of 300, your top percentage is 10%. That means you are in the top 10% of your class.</p>
             </div>
         </section>
 
         <section class="content-section reveal">
-            <span class="eyebrow">RESULT GUIDE</span>
-            <h2 class="section-title">Class Rank Percentile Guide</h2>
-            <p>Use this simple guide to understand your result. These ranges are general. Every school, college, scholarship program, and admissions office may interpret class rank differently.</p>
-            <div class="responsive-table">
-                <table class="info-table">
-                    <thead>
-                        <tr><th>Result</th><th>What It Usually Means</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Top 10%</td><td>Excellent academic standing</td></tr>
-                        <tr><td>Top 25%</td><td>Strong academic standing</td></tr>
-                        <tr><td>Top 50%</td><td>Around the upper half of the class</td></tr>
-                        <tr><td>Below top 50%</td><td>More useful when combined with GPA, course rigor, essays, and test scores</td></tr>
-                    </tbody>
-                </table>
-            </div>
+            <span class="eyebrow">HIGH SCHOOL RANK</span>
+            <h2 class="section-title">High School Class Rank Calculator</h2>
+            <p>If you are a high school student who already knows your rank and class size, this tool turns those two numbers into the figures schools and applications actually ask for. It is handy when you are checking:</p>
+            <ul class="content-list">
+                <li>College application forms that ask for rank or decile</li>
+                <li>Scholarship and grant eligibility</li>
+                <li>Honor society requirements, such as top 10 or top 15 percent</li>
+                <li>Valedictorian, salutatorian, or honor roll standing</li>
+                <li>Automatic admission thresholds at public universities</li>
+                <li>General academic planning through the year</li>
+            </ul>
+            <p>Some schools report an exact rank, such as 15 out of 250. Others report standing by groups, such as decile, quintile, or quartile, which the next section breaks down.</p>
         </section>
 
         <section class="content-section alt-bg reveal">
             <div class="content-wrap">
-                <span class="eyebrow">HIGH SCHOOL RANK</span>
-                <h2 class="section-title">High School Class Rank Calculator</h2>
-                <p>This high school class rank calculator is useful for students who already know their rank and class size.</p>
-                <p>You can use it when checking:</p>
-                <ul class="content-list">
-                    <li>College application forms</li>
-                    <li>Scholarship eligibility</li>
-                    <li>Honor society requirements</li>
-                    <li>Top 10% or top 25% standing</li>
-                    <li>Academic planning</li>
-                    <li>Class rank reporting</li>
-                </ul>
-                <p>Some schools report exact rank, such as 15 out of 250. Others report rank by groups, such as top 10%, top 25%, quartile, quintile, or decile.</p>
+                <span class="eyebrow">REPORTING TYPES</span>
+                <h2 class="section-title">How Schools Report Class Rank</h2>
+                <p>High schools do not all report rank the same way. If you cannot find yours, check your transcript, student portal, counselor report, or the school profile that counselors send to colleges.</p>
+                <div class="responsive-table">
+                    <table class="info-table">
+                        <thead>
+                            <tr><th>Reporting Type</th><th>Meaning</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Exact rank</td><td>Your precise position, such as 12 out of 240</td></tr>
+                            <tr><td>Top percentage</td><td>Your standing as a percentage, such as top 5 percent</td></tr>
+                            <tr><td>Decile</td><td>Class split into tenths, such as the top 10 or top 20 percent</td></tr>
+                            <tr><td>Quintile</td><td>Class split into fifths, or groups of 20 percent</td></tr>
+                            <tr><td>Quartile</td><td>Class split into quarters, or groups of 25 percent</td></tr>
+                            <tr><td>None</td><td>The school does not rank students at all</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>If your school reports by group rather than exact rank, you can still use this calculator to estimate where you land inside that group and understand what a decile or quartile label means for you.</p>
             </div>
         </section>
 
         <section class="content-section reveal">
-            <span class="eyebrow">REPORTING TYPES</span>
-            <h2 class="section-title">Class Rank Reporting Types</h2>
-            <p>High schools may report class rank in different ways. If your school does not provide exact class rank, check your transcript, student portal, counselor report, or school profile.</p>
-            <div class="responsive-table">
-                <table class="info-table">
-                    <thead>
-                        <tr><th>Reporting Type</th><th>Meaning</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Exact rank</td><td>Your exact position, such as 12 out of 240</td></tr>
-                        <tr><td>Top percentage</td><td>Your position as a percentage, such as top 5%</td></tr>
-                        <tr><td>Decile</td><td>Class groups of 10%, such as top 10% or top 20%</td></tr>
-                        <tr><td>Quintile</td><td>Class groups of 20%</td></tr>
-                        <tr><td>Quartile</td><td>Class groups of 25%</td></tr>
-                    </tbody>
-                </table>
-            </div>
+            <span class="eyebrow">WEIGHTED VS UNWEIGHTED</span>
+            <h2 class="section-title">Weighted and Unweighted Class Rank</h2>
+            <p>The method your school uses to rank students can change your position even when your grades stay the same, so it is worth knowing which one applies to you.</p>
+            <ul class="content-list">
+                <li><strong>Unweighted rank</strong> is built from an unweighted GPA, usually on a 4.0 scale, where an A is worth the same in every class. It rewards consistently high grades across all courses.</li>
+                <li><strong>Weighted rank</strong> is built from a weighted GPA that adds points for honors, AP, and IB courses, often on a 5.0 scale. It rewards students who take a heavier, more advanced course load.</li>
+            </ul>
+            <p>Two students with identical report cards can end up with different ranks at different schools purely because one school weights advanced courses and the other does not. Before you read too much into a single number, confirm your school's ranking policy with your counselor so you are comparing like with like.</p>
         </section>
 
         <section class="content-section alt-bg reveal">
             <div class="content-wrap">
                 <span class="eyebrow">WHY IT MATTERS</span>
-                <h2 class="section-title">When Class Rank Matters</h2>
-                <p>Class rank can help show how your academic performance compares with students in the same graduating class.</p>
-                <p>It may be useful for:</p>
-                <ul class="content-list">
-                    <li>College admissions</li>
-                    <li>Merit scholarships</li>
-                    <li>Honor roll recognition</li>
-                    <li>National Honor Society applications</li>
-                    <li>Academic awards</li>
-                    <li>Class placement</li>
-                </ul>
-                <p>Rank is not the only thing colleges review. GPA, course difficulty, test scores, essays, recommendations, activities, and school grading policies can also matter.</p>
-                <div class="note-box"><strong>Accuracy note:</strong> This calculator gives an estimate based on the total students and rank you enter. Your official class rank may depend on weighted or unweighted GPA rules, transfer credits, repeated courses, honors classes, AP classes, IB classes, and how often your school updates rankings. For official reporting, always confirm your rank with your school counselor, transcript, or student portal.</div>
+                <h2 class="section-title">Does Class Rank Still Matter for College?</h2>
+                <p>Class rank once sat near the center of college admissions, but its role has narrowed. In its most recent review of admission factors, the National Association for College Admission Counseling reported that grades in high school courses and the strength of your curriculum are what colleges weigh most heavily, while most four-year colleges now give class rank only limited or no importance (<a href="https://www.nacacnet.org/factors-in-the-admission-decision/" target="_blank" rel="nofollow noopener">NACAC, Factors in the Admission Decision</a>).</p>
+                <p>The National Association of Secondary School Principals points to the same shift, noting that a GPA-based rank only compares you with students at your own school, which limits how useful it is when colleges look across very different high schools (<a href="https://www.nassp.org/advocacy-new/policy-issue-briefs/class-rank/" target="_blank" rel="nofollow noopener">NASSP, Class Rank</a>). Partly for that reason, a growing number of high schools no longer report an exact rank, and students without one are generally not at a disadvantage.</p>
+                <p>Rank has not gone away, though. It still carries real weight in specific situations, especially automatic admission programs. Under the Texas top ten percent law, public universities guarantee admission to top-ranked students, and the University of Texas at Austin, which sets its cutoff each year, has recently admitted students in roughly the top five to six percent of their class (<a href="https://news.utexas.edu/2021/09/21/automatic-admissions-threshold-remains-at-6-for-ut-austin/" target="_blank" rel="nofollow noopener">UT Austin News</a>). Honor societies, valedictorian and salutatorian recognition, and some merit scholarships also use rank directly.</p>
+                <p>The practical takeaway for most students is simple. Know your rank, read it as one piece of context alongside your GPA and course rigor, and do not treat a single number as the whole story.</p>
+                <div class="note-box"><strong>Accuracy note:</strong> This calculator gives an estimate based on the total students and rank you enter. Your official class rank can depend on weighted or unweighted GPA rules, transfer credits, repeated courses, honors, AP, and IB classes, and how often your school updates rankings. For anything official, confirm your rank with your school counselor, transcript, or student portal.</div>
             </div>
         </section>
 
@@ -366,17 +393,16 @@
             <div class="content-wrap">
                 <span class="eyebrow">FAQ</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-item"><div class="faq-question">What is a class rank calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A class rank calculator helps you convert your class rank and class size into a percentile or top percentage. It shows where you stand compared with other students in your class.</div></div></div>
-                <div class="faq-item"><div class="faq-question">How do you calculate class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">To calculate class rank percentile, subtract your rank from the total number of students, add 1, divide by the total number of students, then multiply by 100. Formula: Class Rank Percentile = ((Total Students − Rank + 1) ÷ Total Students) × 100.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What is a good class rank percentile?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A percentile of 90% or higher usually means you are in the top 10% of your class. A percentile of 75% or higher usually means you are in the top 25%.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What does top 10% mean in class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Top 10% means your rank is within the highest 10% of students in your class. For example, if there are 400 students, the top 10% includes about the top 40 students.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a class rank percentage calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. You can use this as a class rank percentage calculator by entering your rank and total class size. The result helps you understand your top percentage and percentile standing.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a class rank percentile calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This tool works as a class rank percentile calculator. It shows what percentage of students you rank above based on your class size and rank.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is this a high school class rank calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This tool is designed as a high school class rank calculator for students who want to understand their rank percentile, top percentage, and academic standing.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is class rank important for college admissions?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Class rank can matter for some colleges, scholarships, and honors programs, especially when they review top 10% or top 25% standing. Many schools also review GPA, course rigor, essays, activities, and recommendations.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What if my school does not report class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">If your school does not report class rank, colleges may review your GPA, course difficulty, school profile, test scores, essays, and counselor recommendation instead.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Does weighted GPA affect class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">It can. Some schools calculate rank using weighted GPA, while others use unweighted GPA. Check your school’s ranking policy to understand how your official class rank is calculated.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. Your calculation happens in your browser. Your class size and rank are not stored or shared.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a class rank calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A class rank calculator converts your rank and class size into a percentile and a top percentage. It shows what share of your class ranks below you and whether you fall in the top 10 percent, top 25 percent, or another range.</div></div></div>
+                <div class="faq-item"><div class="faq-question">How do you calculate class rank percentile?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Subtract your rank from the total number of students, add 1, divide by the total number of students, then multiply by 100. The formula is: Class Rank Percentile = ((Total Students − Rank + 1) ÷ Total Students) × 100. A rank of 50 in a class of 500 gives about the 90th percentile.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a good class rank percentile?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A percentile of 90 or higher usually places you in the top 10 percent of your class, and 75 or higher usually places you in the top 25 percent. What counts as good depends on your goals, since selective colleges and scholarships often look for top 10 to 25 percent standing.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What does top 10 percent mean in class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Top 10 percent means your rank falls within the highest 10 percent of students in your class. In a class of 400 students, the top 10 percent is roughly the top 40 ranked students.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is the difference between class rank percentage and percentile?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Top percentage is the share of the class at or above your rank, so lower is better, such as top 5 percent. Percentile is the share of students you rank above, so higher is better, such as the 95th percentile. This calculator shows both from the same inputs.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is this a high school class rank calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. It works for high school and college students who already know their rank and class size, and it reports your percentile, top percentage, and standing for uses like applications, scholarships, and honor society requirements.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Does weighted or unweighted GPA affect class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">It can. Some schools rank students using weighted GPA, which gives extra points for honors, AP, and IB courses, while others use unweighted GPA. Check your school policy, because the same grades can produce a different rank under each method.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Does class rank still matter for college admissions?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">It matters less than it once did. According to NACAC, grades and strength of curriculum are the most important admission factors, while most four-year colleges give class rank limited or no importance. Rank still counts in specific cases, such as Texas automatic admission, honor societies, and some merit scholarships.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What if my school does not report class rank?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">If your school does not report rank, admissions officers rely on your GPA, course rigor, the school profile, essays, and recommendations instead. A growing number of high schools no longer report exact rank, so students without one are generally not at a disadvantage.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. The calculation runs in your browser. Your class size and rank are not stored or shared.</div></div></div>
             </div>
         </section>
 
