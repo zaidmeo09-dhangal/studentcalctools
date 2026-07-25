@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-   <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://studentcalctools.com/grade-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculator With Weights | Free Grade Tool</title>
-    <meta name="description" content="Use this free grade calculator to find your weighted grade from assignments, tests, exams, midterms, and semester scores.">
+    <title>Grade Calculator: Weighted Class Grade & Percentage</title>
+    <meta name="description" content="Free grade calculator for weighted assignments, tests, and exams. Enter your scores and weights to find your current class grade and percentage.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/grade-calculator/">
-    <meta property="og:title" content="Grade Calculator With Weights | Free Grade Tool">
-    <meta property="og:description" content="Use this free grade calculator to find your weighted grade from assignments, tests, exams, midterms, and semester scores.">
+    <meta property="og:title" content="Grade Calculator: Weighted Class Grade & Percentage">
+    <meta property="og:description" content="Free grade calculator for weighted assignments, tests, and exams. Enter your scores and weights to find your current class grade and percentage.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Grade Calculator With Weights | Free Grade Tool">
-    <meta name="twitter:description" content="Use this free grade calculator to find your weighted grade from assignments, tests, exams, midterms, and semester scores.">
+    <meta name="twitter:title" content="Grade Calculator: Weighted Class Grade & Percentage">
+    <meta name="twitter:description" content="Free grade calculator for weighted assignments, tests, and exams. Enter your scores and weights to find your current class grade and percentage.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
@@ -32,14 +32,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
+        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.1);--border-strong:rgba(37,99,235,0.2);--gradient-brand:linear-gradient(135deg, #2563eb, #0891b2);--gradient-hero:linear-gradient(135deg, rgba(37,99,235,0.05), rgba(6,182,212,0.05));--shadow-sm:0 1px 2px 0 rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 20px 25px -5px rgba(0,0,0,0.1)}
+        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.1);--border-strong:rgba(59,130,246,0.2)}
         *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
         body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
         .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
         .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
         .skip-link:focus{left:0}
-        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
+        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
         [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
         .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
         .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
@@ -48,10 +48,10 @@
         .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
         .nav-links a:hover{color:var(--blue)}
         .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
+        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s ease}
         .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
         .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%)}
         .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
         .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
         .breadcrumb-sep{margin:0 8px;color:var(--muted)}
@@ -63,28 +63,28 @@
         .calc-card{background:var(--card-bg);border-radius:24px;padding:36px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
         .calc-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:6px}
         .calc-card-subtitle{font-size:14px;color:var(--muted);margin-bottom:24px}
-        .calc-row-header{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding-left:4px}
+        .calc-row-header{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:0 4px}
         .calc-row{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:10px;align-items:center}
-        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:all 0.2s ease;width:100%}
+        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:border-color 0.2s ease, box-shadow 0.2s ease}
         .calc-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
-        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center}
+        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease}
         .calc-remove:hover{background:#fee2e2;border-color:#ef4444;color:#ef4444}
         [data-theme="dark"] .calc-remove:hover{background:rgba(239,68,68,0.2)}
         .calc-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease;flex:1;min-width:140px}
+        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
         .calc-add:hover{background:var(--blue);color:white;border-style:solid}
-        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 6px 20px rgba(37,99,235,0.3);transition:all 0.2s ease;flex:2;min-width:160px}
+        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(37,99,235,0.3);transition:all 0.2s ease}
         .calc-calculate:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(37,99,235,0.4)}
-        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:all 0.4s ease;display:none}
+        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:opacity 0.4s ease, transform 0.4s ease;display:none}
         .calc-result.visible{opacity:1;transform:translateY(0);display:block}
         .calc-result-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-        .calc-result-value{font-size:72px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;letter-spacing:-2px}
+        .calc-result-value{font-size:72px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
         .calc-result-tier{display:inline-block;font-size:14px;font-weight:700;padding:6px 16px;border-radius:20px;background:white;margin-bottom:16px}
         [data-theme="dark"] .calc-result-tier{background:rgba(255,255,255,0.1)}
         .tier-excellent{color:#059669}.tier-good{color:#2563eb}.tier-average{color:#d97706}.tier-low{color:#dc2626}
         .calc-result-extra{font-size:13px;color:var(--muted);margin-bottom:16px;font-weight:500}
         .calc-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease;display:inline-flex;align-items:center;gap:6px}
+        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
         .result-btn:hover{background:var(--blue-light)}
         .content-section{padding:60px 20px;max-width:800px;margin:0 auto}
         .content-section.alt-bg{background:var(--card-bg);max-width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -95,11 +95,11 @@
         .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
         .step-card{background:var(--card-bg);padding:28px 24px;border-radius:18px;border:1px solid var(--border);text-align:center;position:relative;transition:all 0.3s ease}
         .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 16px;box-shadow:0 6px 16px rgba(37,99,235,0.3)}
+        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px}
         .step-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
         .step-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
         .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
-        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block}
+        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block;color:inherit}
         .related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
         .related-icon{width:44px;height:44px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
         .related-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
@@ -108,17 +108,17 @@
         .faq-item:hover{border-color:var(--border-strong)}
         .faq-question{padding:18px 22px;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color 0.2s ease}
         .faq-question:hover{color:var(--blue)}
-        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease;flex-shrink:0}
+        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease}
         .faq-item.open .faq-toggle{transform:rotate(45deg)}
         .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
         .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
         .faq-item.open .faq-answer{max-height:300px}
         .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
+        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.08),transparent 50%)}
         .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
         .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
         .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
+        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:all 0.2s ease}
         .btn-cta:hover{transform:translateY(-2px)}
         footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
         [data-theme="dark"] footer{background:#020617}
@@ -133,7 +133,7 @@
         @keyframes confettiFall{to{transform:translate(var(--x),var(--y)) rotate(720deg);opacity:0}}
         .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
         .reveal.visible{opacity:1;transform:translateY(0)}
-        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.calc-row,.calc-row-header{grid-template-columns:1fr 1fr 1fr;gap:8px}.calc-row-header{display:none}.calc-remove{grid-column:span 3;height:36px;width:100%}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
+        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.calc-section{padding:40px 16px}.content-section{padding:50px 16px}.steps-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}.cta-section{padding:50px 16px}.footer-grid{grid-template-columns:1fr 1fr}}
         @media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
         @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
 
@@ -152,7 +152,7 @@
     </style>
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Grade Calculator","url":"https://studentcalctools.com/grade-calculator/","description":"Use this free grade calculator to find your weighted grade from assignments, tests, exams, midterms, and semester scores.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Grade Calculator","url":"https://studentcalctools.com/grade-calculator/","description":"Calculate your weighted class grade and percentage from assignments, tests, and exams.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
     </script>
 
     <script type="application/ld+json">
@@ -176,7 +176,7 @@
 }
 </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a grade calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator is a tool that helps you calculate your course grade from assignment scores, test scores, exam scores, and grade weights. It can show your weighted grade percentage and estimated letter grade."}},{"@type":"Question","name":"How does a weighted grade calculator work?","acceptedAnswer":{"@type":"Answer","text":"A weighted grade calculator multiplies each score by its weight, adds the weighted scores together, then divides by the total weight. This gives a more accurate result when some assignments count more than others."}},{"@type":"Question","name":"Can I use this as a test grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can use it as a test grade calculator by entering your test score as a percentage and adding the weight of the test. If your teacher gives points, convert your points into a percentage first."}},{"@type":"Question","name":"Can I use this as an exam grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can use it as an exam grade calculator by entering your exam percentage and the exam weight. This is useful when an exam, midterm, or final counts as a large part of your course grade."}},{"@type":"Question","name":"How do I convert points into a percentage?","acceptedAnswer":{"@type":"Answer","text":"Divide the points you earned by the total points possible, then multiply by 100. Example: 45 ÷ 50 × 100 = 90%. So, 45 out of 50 equals 90%."}},{"@type":"Question","name":"Can I use this as a semester grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can use it as a semester grade calculator by adding the major grades from your semester, including assignments, quizzes, tests, projects, midterms, and exams."}},{"@type":"Question","name":"Do my grade weights need to add up to 100%?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator can still work if your weights do not add up to 100%. It uses the total weight you entered as the denominator."}},{"@type":"Question","name":"What is the difference between a grade calculator and a final grade calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator estimates your current weighted grade from the scores and weights you enter. A final grade calculator helps you find the score you need on your final exam to reach a target course grade."}},{"@type":"Question","name":"What is the difference between a grade calculator and a GPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator estimates your percentage grade for one class. A GPA calculator converts course grades into grade points and calculates your GPA across multiple classes."}},{"@type":"Question","name":"Is this grade calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. This grade calculator is free to use. You do not need to create an account or sign up."}},{"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. Your calculations happen in your browser. Your scores are not stored or shared."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a grade calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator is a tool that helps you find your course grade by combining different assignment, quiz, test, exam, or project scores with their assigned weights."}},{"@type":"Question","name":"How does a weighted grade calculator work?","acceptedAnswer":{"@type":"Answer","text":"A weighted grade calculator multiplies each score by its weight percentage, adds all weighted scores together, then divides by the total weight to get your overall grade."}},{"@type":"Question","name":"Can I use this as a test grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can add your test score and enter its weight percentage to see how it contributes to your overall course grade."}},{"@type":"Question","name":"Can I use this as an exam grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter your exam score, enter its weight, and see how your exam score affects your current course grade."}},{"@type":"Question","name":"How do I convert points into a percentage?","acceptedAnswer":{"@type":"Answer","text":"Divide the points earned by total points, then multiply by 100. For example: 45 ÷ 50 × 100 = 90%."}},{"@type":"Question","name":"Can I use this as a semester grade calculator?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add all your completed assignments and enter their weights, and the calculator shows your current semester grade based on work completed so far."}},{"@type":"Question","name":"Do my grade weights need to add up to 100%?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator divides by the total weight you enter, so your weights can add up to any number."}},{"@type":"Question","name":"What is the difference between a grade calculator and a final grade calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator shows your current grade based on work completed. A final grade calculator tells you what score you need on remaining work to reach a target grade."}},{"@type":"Question","name":"What is the difference between a grade calculator and a GPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A grade calculator finds your weighted grade in one course. A GPA calculator averages your grades across multiple courses."}},{"@type":"Question","name":"Is this grade calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. This grade calculator is completely free to use. No sign up, no ads, no limitations."}},{"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. Your calculations happen only in your browser. We do not store, save, or share your data."}}]}
     </script>
     
 </head>
@@ -209,7 +209,7 @@
         <section class="calc-section">
             <div class="calc-card">
                 <h2 class="calc-card-title">Enter Your Assignments</h2>
-                <p class="calc-card-subtitle">Use this grade calculator to calculate your current course grade based on the scores and weights you enter. Add assignments, quizzes, tests, exams, projects, homework, or midterms, then enter the score percentage and weight percentage for each item.</p>
+                <p class="calc-card-subtitle">Use this grade calculator to calculate your current course grade based on the scores and weights you enter. Add assignments, quizzes, tests, exams, projects, or any graded work and see your weighted grade and letter grade instantly.</p>
                 <div class="calc-row-header"><div>Assignment</div><div>Score (%)</div><div>Weight (%)</div><div></div></div>
                 <div id="calcRows">
                     <div class="calc-row">
@@ -275,7 +275,7 @@
                 <h2 class="section-title">How This Grade Calculator Works</h2>
                 <p>A grade calculator with weights helps you understand how each part of your course affects your overall grade.</p>
                 <p>Instead of treating every assignment the same, it gives more value to the work that counts more toward your final course result.</p>
-                <p>For example, a final exam worth 40% of your grade has a bigger impact than a homework assignment worth 10%. This calculator uses your score and grade weight for each item to calculate your weighted grade average.</p>
+                <p>For example, a final exam worth 40% of your grade has a bigger impact than a homework assignment worth 10%. This calculator uses your score and grade weight for each item to calculate a single, accurate weighted grade.</p>
 
                 <div class="steps-grid">
                     <div class="step-card"><div class="step-num">1</div><h3>Add Your Coursework</h3><p>Enter assignments, quizzes, tests, projects, midterms, exams, or homework scores.</p></div>
@@ -285,7 +285,7 @@
 
                 <h3 class="mini-heading">Add Your Coursework</h3>
                 <p>Enter each assignment, quiz, test, project, midterm, exam, or homework score you want to include.</p>
-                <p>You can use this tool as a test grade calculator, exam grade calculator, midterm grade calculator, college grade calculator, or grade calculator high school students can use for regular coursework.</p>
+                <p>You can use this tool as a test grade calculator, exam grade calculator, midterm grade calculator, college grade calculator, or grade calculator high school students can use for class grades.</p>
 
                 <h3 class="mini-heading">Enter Score and Weight</h3>
                 <p>Enter your score as a percentage. Then enter the weight for that item.</p>
@@ -354,7 +354,7 @@
 
             <h2 class="section-title">Semester Grade Calculator for Planning</h2>
             <p>Use this semester grade calculator when you want to understand how your current scores affect your overall course result.</p>
-            <p>You can add completed assignments first, then update the calculator as new scores are released. This makes it easier to track your progress during the semester and plan what scores you may need on upcoming work.</p>
+            <p>You can add completed assignments first, then update the calculator as new scores are released. This makes it easier to track your progress during the semester and plan what scores you need on remaining work.</p>
         </section>
 
         <section class="content-section alt-bg reveal">
@@ -365,7 +365,7 @@
                 <p>If you want to know what score you need on your final exam to reach a target course grade, use the Final Grade Calculator.</p>
                 <p>The Final Grade Calculator lets you enter your current grade, target grade, and final exam weight to calculate the score you need on the final exam.</p>
                 <div class="note-box">
-                    <p><strong>Accuracy Note:</strong> This calculator gives an estimate based on the scores and weights you enter. Your official grade may depend on your school grading scale, rounding rules, extra credit, dropped assignments, teacher settings, gradebook setup, or syllabus policy.</p>
+                    <p><strong>Accuracy Note:</strong> This calculator gives an estimate based on the scores and weights you enter. Your official grade may depend on your school grading scale, rounding rules, and other factors.</p>
                     <p>For the most accurate result, compare your calculation with your course syllabus or official gradebook.</p>
                 </div>
             </div>
@@ -386,22 +386,22 @@
             <div class="content-wrap">
                 <span class="eyebrow">FAQ</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-item"><div class="faq-question">What is a grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator is a tool that helps you calculate your course grade from assignment scores, test scores, exam scores, and grade weights. It can show your weighted grade percentage and estimated letter grade.</div></div></div>
-                <div class="faq-item"><div class="faq-question">How does a weighted grade calculator work?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A weighted grade calculator multiplies each score by its weight, adds the weighted scores together, then divides by the total weight. This gives a more accurate result when some assignments count more than others.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a test grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. You can use it as a test grade calculator by entering your test score as a percentage and adding the weight of the test. If your teacher gives points, convert your points into a percentage first.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as an exam grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. You can use it as an exam grade calculator by entering your exam percentage and the exam weight. This is useful when an exam, midterm, or final counts as a large part of your course grade.</div></div></div>
-                <div class="faq-item"><div class="faq-question">How do I convert points into a percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Divide the points you earned by the total points possible, then multiply by 100. Example: 45 ÷ 50 × 100 = 90%. So, 45 out of 50 equals 90%.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a semester grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. You can use it as a semester grade calculator by adding the major grades from your semester, including assignments, quizzes, tests, projects, midterms, and exams.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Do my grade weights need to add up to 100%?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. The calculator can still work if your weights do not add up to 100%. It uses the total weight you entered as the denominator.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What is the difference between a grade calculator and a final grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator estimates your current weighted grade from the scores and weights you enter. A final grade calculator helps you find the score you need on your final exam to reach a target course grade.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What is the difference between a grade calculator and a GPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator estimates your percentage grade for one class. A GPA calculator converts course grades into grade points and calculates your GPA across multiple classes.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is this grade calculator free?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This grade calculator is free to use. You do not need to create an account or sign up.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. Your calculations happen in your browser. Your scores are not stored or shared.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator is a tool that helps you find your course grade by combining different assignment, quiz, test, exam, or project scores with their assigned weights.</div></div></div>
+                <div class="faq-item"><div class="faq-question">How does a weighted grade calculator work?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A weighted grade calculator multiplies each score by its weight percentage, adds all weighted scores together, then divides by the total weight to get your overall grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a test grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. You can add your test score and enter its weight percentage to see how it contributes to your overall course grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as an exam grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. Enter your exam score, enter its weight, and see how your exam score affects your current course grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">How do I convert points into a percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Divide the points earned by total points, then multiply by 100. For example: 45 ÷ 50 × 100 = 90%.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a semester grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. Add all your completed assignments and enter their weights, and the calculator shows your current semester grade based on work completed so far.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Do my grade weights need to add up to 100%?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. The calculator divides by the total weight you enter, so your weights can add up to any number.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is the difference between a grade calculator and a final grade calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator shows your current grade based on work completed. A final grade calculator tells you what score you need on remaining work to reach a target grade.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is the difference between a grade calculator and a GPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A grade calculator finds your weighted grade in one course. A GPA calculator averages your grades across multiple courses.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is this grade calculator free?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This grade calculator is completely free to use. No sign up, no ads, no limitations.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. Your calculations happen only in your browser. We do not store, save, or share your data.</div></div></div>
             </div>
         </section>
 
         <section class="cta-section">
-            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc’s free academic calculators to plan your grades, GPA, attendance, study time, and college costs. No sign up required.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
+            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc's free academic calculators to plan your grades, GPA, attendance, study time, and college costs. No sign up, no ads.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools →</a></div>
         </section>
     </main>
 
@@ -409,8 +409,8 @@
         <p class="footer-logo">Student<span>Calc</span></p>
         <p class="footer-tagline">Free calculators for every student</p>
         <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
+            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a></div>
+            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a></div>
             <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
             <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
         </div>
@@ -418,10 +418,10 @@
     </footer>
 
     <script>
-        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙'});})();
-        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'},{passive:true});})();
-        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(s=>o.observe(s));})();
-        (function(){document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));q.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();q.click()}});q.setAttribute('tabindex','0');q.setAttribute('role','button')});})();
+        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;(s==='dark'||(!s&&p))&&(document.documentElement.setAttribute('data-theme','dark'),i.textContent='☀️');t.addEventListener('click',()=>{const e=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',e?'light':'dark'),i.textContent=e?'🌙':'☀️',localStorage.setItem('theme',e?'light':'dark')})})();
+        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'})})();
+        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(e=>o.observe(e))})();
+        (function(){document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));q.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' ')e.preventDefault(),q.click()})})})();
 
         (function(){
             const rowsContainer=document.getElementById('calcRows');
@@ -437,7 +437,7 @@
             const addRow=()=>{
                 const row=document.createElement('div');
                 row.className='calc-row';
-                row.innerHTML=`<input type="text" class="calc-input" placeholder="Assignment name" aria-label="Assignment name"><input type="number" class="calc-input" placeholder="85" min="0" max="100" step="0.01" aria-label="Score"><input type="number" class="calc-input" placeholder="20" min="0" max="100" step="0.01" aria-label="Weight"><button class="calc-remove" aria-label="Remove">×</button>`;
+                row.innerHTML=`<input type="text" class="calc-input" placeholder="Assignment name" aria-label="Assignment name"><input type="number" class="calc-input" placeholder="85" min="0" max="100" step="0.01" aria-label="Score"><input type="number" class="calc-input" placeholder="25" min="0" max="100" step="0.01" aria-label="Weight"><button class="calc-remove" aria-label="Remove">×</button>`;
                 rowsContainer.appendChild(row);
                 bindRemove(row);
             };
