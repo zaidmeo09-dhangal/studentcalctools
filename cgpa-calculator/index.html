@@ -9,18 +9,18 @@
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://studentcalctools.com/cgpa-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cumulative GPA Calculator | Free CGPA Calculator</title>
-    <meta name="description" content="Use this cumulative GPA calculator to calculate your CGPA across semesters using semester GPA and credit hours.">
+    <title>CGPA Calculator: Cumulative GPA Across Semesters</title>
+    <meta name="description" content="Free CGPA calculator to find your cumulative GPA across multiple semesters. Enter each semester's GPA and credits for your overall CGPA instantly.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/cgpa-calculator/">
-    <meta property="og:title" content="Cumulative GPA Calculator | Free CGPA Calculator">
-    <meta property="og:description" content="Use this cumulative GPA calculator to calculate your CGPA across semesters using semester GPA and credit hours.">
+    <meta property="og:title" content="CGPA Calculator: Cumulative GPA Across Semesters">
+    <meta property="og:description" content="Free CGPA calculator to find your cumulative GPA across multiple semesters. Enter each semester's GPA and credits for your overall CGPA instantly.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cumulative GPA Calculator | Free CGPA Calculator">
-    <meta name="twitter:description" content="Calculate your CGPA across semesters using semester GPA and credit hours.">
+    <meta name="twitter:title" content="CGPA Calculator: Cumulative GPA Across Semesters">
+    <meta name="twitter:description" content="Free CGPA calculator to find your cumulative GPA across multiple semesters. Enter each semester's GPA and credits for your overall CGPA instantly.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
@@ -32,14 +32,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
+        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.1);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 1px 2px rgba(0,0,0,0.05);--shadow-md:0 4px 12px rgba(37,99,235,0.15);--gradient-brand:linear-gradient(135deg,#2563eb,#0ea5e9);--gradient-hero:linear-gradient(135deg,rgba(37,99,235,0.05),rgba(6,182,212,0.05))}
+        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.1);--border-strong:rgba(59,130,246,0.2);--shadow-sm:0 1px 2px rgba(0,0,0,0.3);--shadow-md:0 4px 12px rgba(59,130,246,0.15);--gradient-brand:linear-gradient(135deg,#3b82f6,#0ea5e9);--gradient-hero:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(6,182,212,0.05))}
         *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
         body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
         .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
         .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
         .skip-link:focus{left:0}
-        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
+        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1000}
         [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
         .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
         .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
@@ -48,10 +48,10 @@
         .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
         .nav-links a:hover{color:var(--blue)}
         .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
+        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s ease;font-size:18px}
         .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
         .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.08),transparent 40%);pointer-events:none}
         .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
         .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
         .breadcrumb-sep{margin:0 8px;color:var(--muted)}
@@ -63,28 +63,28 @@
         .calc-card{background:var(--card-bg);border-radius:24px;padding:36px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
         .calc-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:6px}
         .calc-card-subtitle{font-size:14px;color:var(--muted);margin-bottom:24px}
-        .calc-row-header{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding-left:4px}
+        .calc-row-header{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:0 2px}
         .calc-row{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:10px;align-items:center}
-        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:all 0.2s ease;width:100%}
+        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:all 0.2s ease}
         .calc-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
-        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center}
+        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease;font-weight:bold}
         .calc-remove:hover{background:#fee2e2;border-color:#ef4444;color:#ef4444}
         [data-theme="dark"] .calc-remove:hover{background:rgba(239,68,68,0.2)}
         .calc-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease;flex:1;min-width:140px}
+        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
         .calc-add:hover{background:var(--blue);color:white;border-style:solid}
-        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 6px 20px rgba(37,99,235,0.3);transition:all 0.2s ease;flex:2;min-width:160px}
+        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(37,99,235,0.3);transition:all 0.2s ease}
         .calc-calculate:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(37,99,235,0.4)}
-        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:all 0.4s ease;display:none}
+        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:all 0.4s cubic-bezier(0.16,1,0.3,1);pointer-events:none;display:none}
         .calc-result.visible{opacity:1;transform:translateY(0);display:block}
         .calc-result-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-        .calc-result-value{font-size:72px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;letter-spacing:-2px}
+        .calc-result-value{font-size:72px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
         .calc-result-tier{display:inline-block;font-size:14px;font-weight:700;padding:6px 16px;border-radius:20px;background:white;margin-bottom:16px}
         [data-theme="dark"] .calc-result-tier{background:rgba(255,255,255,0.1)}
         .tier-excellent{color:#059669}.tier-good{color:#2563eb}.tier-average{color:#d97706}.tier-low{color:#dc2626}
         .calc-result-extra{font-size:13px;color:var(--muted);margin-bottom:16px;font-weight:500}
         .calc-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease;display:inline-flex;align-items:center;gap:6px}
+        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
         .result-btn:hover{background:var(--blue-light)}
         .content-section{padding:60px 20px;max-width:800px;margin:0 auto}
         .content-section.alt-bg{background:var(--card-bg);max-width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -95,7 +95,7 @@
         .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
         .step-card{background:var(--card-bg);padding:28px 24px;border-radius:18px;border:1px solid var(--border);text-align:center;position:relative;transition:all 0.3s ease}
         .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 16px;box-shadow:0 6px 16px rgba(37,99,235,0.3)}
+        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px}
         .step-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
         .step-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
 
@@ -113,7 +113,7 @@
         .info-table td:first-child{font-weight:700;color:var(--text)}
 
         .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
-        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block}
+        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block;color:inherit}
         .related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
         .related-icon{width:44px;height:44px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
         .related-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
@@ -122,7 +122,7 @@
         .faq-item:hover{border-color:var(--border-strong)}
         .faq-question{padding:18px 22px;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color 0.2s ease}
         .faq-question:hover{color:var(--blue)}
-        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease;flex-shrink:0}
+        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease}
         .faq-item.open .faq-toggle{transform:rotate(45deg)}
         .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
         .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
@@ -132,7 +132,7 @@
         .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
         .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
         .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
+        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:all 0.2s ease}
         .btn-cta:hover{transform:translateY(-2px)}
         footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
         [data-theme="dark"] footer{background:#020617}
@@ -147,13 +147,13 @@
         @keyframes confettiFall{to{transform:translate(var(--x),var(--y)) rotate(720deg);opacity:0}}
         .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
         .reveal.visible{opacity:1;transform:translateY(0)}
-        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.calc-row,.calc-row-header{grid-template-columns:1fr 1fr 1fr;gap:8px}.calc-row-header{display:none}.calc-remove{grid-column:span 3;height:36px;width:100%}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
+        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.content-section{padding:40px 20px}.example-box{padding:16px}.info-table-wrap{margin:20px -20px}.info-table{min-width:100%}}
         @media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
         @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
     </style>
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Cumulative GPA Calculator","url":"https://studentcalctools.com/cgpa-calculator/","description":"Calculate cumulative GPA across multiple semesters using semester GPA and credit hours.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Cumulative GPA Calculator","url":"https://studentcalctools.com/cgpa-calculator/","description":"Calculate cumulative GPA across multiple semesters from each term's GPA and credits.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
     </script>
     <script type="application/ld+json">
 {
@@ -177,11 +177,11 @@
 </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"What is a cumulative GPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A cumulative GPA calculator calculates your overall GPA across multiple semesters using each semester GPA and the credit hours completed during that semester."}},
-        {"@type":"Question","name":"What is a CGPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A CGPA calculator helps you calculate your Cumulative Grade Point Average, usually as a credit-weighted average across completed semesters."}},
+        {"@type":"Question","name":"What is a cumulative GPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A cumulative GPA calculator calculates your overall GPA across multiple semesters."}},
+        {"@type":"Question","name":"What is a CGPA calculator?","acceptedAnswer":{"@type":"Answer","text":"A CGPA calculator helps you calculate your Cumulative Grade Point Average, usually across multiple semesters or terms."}},
         {"@type":"Question","name":"Is CGPA the same as cumulative GPA?","acceptedAnswer":{"@type":"Answer","text":"Yes. CGPA and cumulative GPA usually mean the same thing. CGPA is short for Cumulative Grade Point Average."}},
-        {"@type":"Question","name":"How do I calculate CGPA?","acceptedAnswer":{"@type":"Answer","text":"Multiply each semester GPA by the credits for that semester, add the results together, then divide by the total credits from all semesters."}},
-        {"@type":"Question","name":"Can I use this as a CGPA calculator out of 4?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your school uses a 4.0 GPA scale, enter each semester GPA out of 4.0 with the related credit hours."}},
+        {"@type":"Question","name":"How do I calculate CGPA?","acceptedAnswer":{"@type":"Answer","text":"Multiply each semester GPA by the credits for that semester, add the results together, then divide by total credits."}},
+        {"@type":"Question","name":"Can I use this as a CGPA calculator out of 4?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your school uses a 4.0 GPA scale, enter each semester GPA out of 4.0 and the calculator will give your CGPA on a 4.0 scale."}},
         {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. Your calculations happen in your browser. Your GPA, credits, and semester details are not stored or shared."}}
     ]}
     </script>
@@ -215,7 +215,7 @@
         <section class="calc-section">
             <div class="calc-card">
                 <h2 class="calc-card-title">Enter Your Semesters</h2>
-                <p class="calc-card-subtitle">Use this cumulative GPA calculator to track your academic progress across semesters. Add each semester with the GPA you earned and the total credit hours completed during that term.</p>
+                <p class="calc-card-subtitle">Use this cumulative GPA calculator to track your academic progress across semesters. Add each semester with the GPA you earned and the total credit hours completed.</p>
                 <div class="calc-row-header"><div>Semester</div><div>GPA</div><div>Credits</div><div></div></div>
                 <div id="calcRows">
                     <div class="calc-row">
@@ -257,7 +257,7 @@
         <section class="content-section reveal">
             <span class="eyebrow">FORMULA</span>
             <h2 class="section-title">How to Calculate Cumulative GPA</h2>
-            <p>Cumulative GPA is calculated as a credit-weighted average across all semesters. Semesters with more credit hours have more impact on your final CGPA than semesters with fewer credits.</p>
+            <p>Cumulative GPA is calculated as a credit-weighted average across all semesters. Semesters with more credit hours have more impact on your final CGPA than semesters with fewer credit hours.</p>
             <div class="formula-box">
                 <strong>Formula:</strong>
                 <div class="formula-line">Cumulative GPA = Total of Semester GPA × Semester Credits ÷ Total Credits</div>
@@ -307,7 +307,7 @@
             <span class="eyebrow">4.0 SCALE</span>
             <h2 class="section-title">CGPA Calculator Out of 4</h2>
             <p>You can use this as a CGPA calculator out of 4 if your school, college, or university uses a 4.0 GPA scale.</p>
-            <p>Enter each semester GPA on the 4.0 scale and add the credits for that semester. If your institution uses a 5.0, 10.0, or percentage-based system, check your official conversion rules before using the result for applications, transcripts, or scholarship forms.</p>
+            <p>Enter each semester GPA on the 4.0 scale and add the credits for that semester. If your institution uses a 5.0, 10.0, or percentage-based system, check your official conversion rules.</p>
         </section>
 
         <section class="content-section alt-bg reveal">
@@ -359,7 +359,7 @@
                 <h2 class="section-title">Is Cumulative GPA Weighted or Unweighted?</h2>
                 <p>Cumulative GPA can be weighted in two different ways, so it is important to understand what your school means.</p>
                 <p>This calculator is credit-weighted. That means semesters with more credit hours count more than semesters with fewer credit hours.</p>
-                <p>This is not the same as weighted GPA for honors, AP, IB, or advanced classes. If your school gives weighted GPA points for course difficulty, enter the official semester GPA shown on your transcript or grade report.</p>
+                <p>This is not the same as weighted GPA for honors, AP, IB, or advanced classes. If your school gives weighted GPA points for course difficulty, enter the official semester GPA shown on your transcript.</p>
             </div>
         </section>
 
@@ -396,7 +396,7 @@
                 <span class="eyebrow">ACCURACY NOTE</span>
                 <h2 class="section-title">Accuracy Note</h2>
                 <p>This calculator gives an estimate based on the GPA and credit values you enter.</p>
-                <p>Your official cumulative GPA may depend on your school’s GPA scale, grade replacement rules, transfer credits, repeated courses, pass or fail courses, weighted GPA policy, rounding rules, and transcript settings.</p>
+                <p>Your official cumulative GPA may depend on your school's GPA scale, grade replacement rules, transfer credits, repeated courses, pass or fail courses, weighted GPA policy, rounding rules, and other factors.</p>
                 <p>For official results, always check your school transcript, student portal, academic advisor, or registrar.</p>
             </div>
         </section>
@@ -417,20 +417,20 @@
             <div class="content-wrap">
                 <span class="eyebrow">FAQ</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-item"><div class="faq-question">What is a cumulative GPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A cumulative GPA calculator is a tool that calculates your overall GPA across multiple semesters. It uses each semester GPA and the credit hours completed during that semester.</div></div></div>
-                <div class="faq-item"><div class="faq-question">What is a CGPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A CGPA calculator helps you calculate your Cumulative Grade Point Average. CGPA is the average of your academic performance across all completed semesters, usually weighted by credit hours.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Is CGPA the same as cumulative GPA?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. CGPA and cumulative GPA usually mean the same thing. CGPA is short for Cumulative Grade Point Average, while cumulative GPA is the phrase commonly used in many U.S. schools and colleges.</div></div></div>
-                <div class="faq-item"><div class="faq-question">How do I calculate CGPA?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Multiply each semester GPA by the credits for that semester. Add those results together, then divide by the total credits from all semesters.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a cumulative GPA calculator for college?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. College students can use this calculator to estimate cumulative GPA across completed semesters, as long as they know their semester GPA and credit hours.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can I use this as a CGPA calculator out of 4?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. If your school uses a 4.0 GPA scale, enter each semester GPA out of 4.0 and the related credit hours.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Can this calculator convert CGPA to percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">This calculator does not apply an official CGPA to percentage formula because conversion rules vary by school and country. If needed, use your institution’s official conversion scale.</div></div></div>
-                <div class="faq-item"><div class="faq-question">Why do credit hours matter?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Credit hours matter because semesters with more credits have more impact on your cumulative GPA. A larger credit load affects your GPA more than a smaller credit load.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a cumulative GPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A cumulative GPA calculator calculates your overall GPA across multiple semesters.</div></div></div>
+                <div class="faq-item"><div class="faq-question">What is a CGPA calculator?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">A CGPA calculator helps you calculate your Cumulative Grade Point Average, usually across multiple semesters or terms.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Is CGPA the same as cumulative GPA?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. CGPA and cumulative GPA usually mean the same thing. CGPA is short for Cumulative Grade Point Average.</div></div></div>
+                <div class="faq-item"><div class="faq-question">How do I calculate CGPA?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Multiply each semester GPA by the credits for that semester, add the results together, then divide by total credits.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a cumulative GPA calculator for college?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. This cumulative GPA calculator works for college students. You can use it to track your cumulative GPA across multiple semesters at your college.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use this as a CGPA calculator out of 4?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Yes. If your school uses a 4.0 GPA scale, enter each semester GPA out of 4.0 and the calculator will give your CGPA on a 4.0 scale.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Can this calculator convert CGPA to percentage?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">This calculator focuses on calculating CGPA from semester GPA and credits. The Percentage section has a formula you can use to estimate percentage from CGPA.</div></div></div>
+                <div class="faq-item"><div class="faq-question">Why do credit hours matter?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Credit hours weight your cumulative GPA. Semesters with more credits count more in your CGPA than semesters with fewer credits.</div></div></div>
                 <div class="faq-item"><div class="faq-question">Is my data saved?<span class="faq-toggle">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No. Your calculations happen in your browser. Your GPA, credits, and semester details are not stored or shared.</div></div></div>
             </div>
         </section>
 
         <section class="cta-section">
-            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc’s free academic calculators to plan your GPA, grades, attendance, class rank, study time, and college costs. No sign up required.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
+            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc's free academic calculators to plan your GPA, grades, attendance, class rank, study time, and college costs.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Calculators</a></div>
         </section>
     </main>
 
@@ -438,8 +438,8 @@
         <p class="footer-logo">Student<span>Calc</span></p>
         <p class="footer-tagline">Free calculators for every student</p>
         <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
+            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
+            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Loan Calculator</a></div>
             <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
             <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
         </div>
@@ -447,10 +447,10 @@
     </footer>
 
     <script>
-        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙'});})();
-        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'},{passive:true});})();
-        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(s=>o.observe(s));})();
-        (function(){document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));q.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();q.click()}});q.setAttribute('tabindex','0');q.setAttribute('role','button')});})();
+        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&p)){document.documentElement.setAttribute('data-theme','dark');i.textContent='☀️'}t.addEventListener('click',()=>{const d=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',d);localStorage.setItem('theme',d);i.textContent=d==='dark'?'☀️':'🌙'})})();
+        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'})})();
+        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>o.observe(el))})();
+        (function(){document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));q.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();q.parentElement.classList.toggle('open')}})})})();
 
         (function(){
             const rowsContainer=document.getElementById('calcRows');
@@ -466,7 +466,7 @@
             const addRow=()=>{
                 const row=document.createElement('div');
                 row.className='calc-row';
-                row.innerHTML=`<input type="text" class="calc-input" placeholder="Semester name" aria-label="Semester"><input type="number" class="calc-input" placeholder="3.5" min="0" max="4" step="0.01" aria-label="GPA"><input type="number" class="calc-input" placeholder="15" min="0" max="30" step="1" aria-label="Credits"><button class="calc-remove" aria-label="Remove">×</button>`;
+                row.innerHTML=`<input type="text" class="calc-input" placeholder="Semester name" aria-label="Semester"><input type="number" class="calc-input" placeholder="3.5" min="0" max="4" step="0.01" aria-label="Semester GPA"><input type="number" class="calc-input" placeholder="15" min="0" max="30" step="1" aria-label="Credits"><button class="calc-remove" aria-label="Remove">×</button>`;
                 rowsContainer.appendChild(row);
                 bindRemove(row);
             };
@@ -498,47 +498,39 @@
                 let semesters=0;
                 rows.forEach(row=>{
                     const inputs=row.querySelectorAll('.calc-input');
-                    const gpa=parseFloat(inputs[1].value);
-                    const credits=parseFloat(inputs[2].value);
-                    if(!isNaN(gpa)&&!isNaN(credits)&&credits>0&&gpa>=0&&gpa<=4){
+                    const gpa=parseFloat(inputs[1].value)||0;
+                    const credits=parseFloat(inputs[2].value)||0;
+                    if(gpa>0&&credits>0){
                         totalPoints+=gpa*credits;
                         totalCredits+=credits;
                         semesters++;
                     }
                 });
-                if(totalCredits===0){alert('Please enter at least one valid semester with GPA and credits.');return;}
-                const cgpa=totalPoints/totalCredits;
-                const final=cgpa.toFixed(2);
 
-                let displayed=0;
-                const duration=800;
-                const start=performance.now();
-                const animate=(t)=>{
-                    const progress=Math.min((t-start)/duration,1);
-                    const eased=1-Math.pow(1-progress,3);
-                    displayed=(eased*cgpa).toFixed(2);
-                    resultValue.textContent=displayed;
-                    if(progress<1)requestAnimationFrame(animate);
-                };
-                requestAnimationFrame(animate);
+                if(semesters===0){alert('Please enter at least one semester with GPA and credits.');return;}
 
-                let tier='Excellent',tierClass='tier-excellent';
-                if(cgpa<2.0){tier='Needs Work';tierClass='tier-low';}
-                else if(cgpa<2.7){tier='Average';tierClass='tier-average';}
-                else if(cgpa<3.5){tier='Good';tierClass='tier-good';}
+                const cgpa=totalCredits>0?(totalPoints/totalCredits).toFixed(2):0;
+                let tier='Good',tierClass='tier-good';
+                if(cgpa>=3.9){tier='Outstanding';tierClass='tier-excellent';}
+                else if(cgpa>=3.7){tier='Excellent';tierClass='tier-excellent';}
+                else if(cgpa>=3.5){tier='Very Good';tierClass='tier-excellent';}
+                else if(cgpa>=3.0){tier='Good';tierClass='tier-good';}
+                else if(cgpa>=2.5){tier='Satisfactory';tierClass='tier-average';}
+                else{tier='Needs Improvement';tierClass='tier-low';}
+
+                resultValue.textContent=cgpa;
                 resultTier.textContent=tier;
                 resultTier.className='calc-result-tier '+tierClass;
-                resultExtra.textContent=`Total Credits: ${totalCredits} across ${semesters} semesters`;
+                resultExtra.textContent=`${semesters} semester${semesters!==1?'s':''} · ${totalCredits} total credits · CGPA: ${cgpa}`;
 
                 result.classList.add('visible');
                 result.scrollIntoView({behavior:'smooth',block:'center'});
-
-                if(cgpa>=3.0)launchConfetti();
-                if(typeof gtag==='function'){gtag('event','calculator_used',{tool:'cgpa_calculator',cgpa:final});}
+                launchConfetti();
+                if(typeof gtag==='function'){gtag('event','calculator_used',{tool:'cgpa_calculator',cgpa:cgpa});}
             });
 
             copyBtn.addEventListener('click',()=>{
-                const text=`My CGPA: ${resultValue.textContent} (${resultTier.textContent}) — ${resultExtra.textContent}`;
+                const text=`CGPA: ${resultValue.textContent} | ${resultExtra.textContent}`;
                 navigator.clipboard.writeText(text).then(()=>{const o=copyBtn.textContent;copyBtn.textContent='✓ Copied!';setTimeout(()=>copyBtn.textContent=o,1500);});
             });
 
