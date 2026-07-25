@@ -373,8 +373,6 @@ Use the right calculator for the right job:
 | What is my current percentage in one class? | Grade calculator |
 
 
-
-
 ## **Why Your Calculator GPA May Differ From Your Official Transcript**
 
 A college GPA calculator gives an estimate based on the information you enter. Your official transcript GPA may be different because colleges apply detailed academic policies.
