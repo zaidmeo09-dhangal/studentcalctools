@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "College GPA Calculator: A Complete Guide to GPA Calculation"
-slug: Guide to College GPA Calculator
+slug: guide to college GPA calculator
 date: 2026-07-25
 status: Published
 author: StudentCalcTools
