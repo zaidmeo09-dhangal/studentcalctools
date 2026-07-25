@@ -127,5 +127,10 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://studentcalctools.com/blog/guide-to-college-GPA-calculator/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   
 </urlset>
