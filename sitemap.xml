@@ -132,5 +132,11 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+    <url>
+    <loc>https://studentcalctools.com/blog/how-to-use-test-grade-calculator/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   
 </urlset>
