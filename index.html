@@ -110,8 +110,8 @@
         }
 
         /* ============ NAVIGATION ============ */
-        nav {
-            background: rgba(255,255,255,0.85);
+       nav {
+            background: rgba(255,255,255,0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
@@ -122,11 +122,12 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            transition: all 0.3s ease;
         }
+
         [data-theme="dark"] nav {
-            background: rgba(2,6,23,0.85);
+            background: rgba(2,6,23,0.88);
         }
+
         .nav-logo {
             font-size: 22px;
             font-weight: 800;
@@ -136,7 +137,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
+
         .nav-logo-icon {
             width: 32px;
             height: 32px;
@@ -148,13 +151,25 @@
             color: white;
             font-size: 14px;
             font-weight: 800;
+            flex-shrink: 0;
         }
-        .nav-logo span { color: var(--accent); }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 16px;
         }
+
         .nav-links a {
             font-size: 14px;
             font-weight: 700;
@@ -162,30 +177,46 @@
             color: var(--muted);
             transition: color 0.2s ease;
         }
-        .nav-links a:hover { color: var(--blue); }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--blue);
+        }
+
         .nav-tag {
             background: var(--blue-light);
             color: var(--blue);
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             padding: 5px 14px;
             border-radius: 20px;
-            cursor: default;
-            user-select: none;
+            white-space: nowrap;
         }
-        .theme-toggle {
+
+        .theme-toggle,
+        .menu-toggle {
             background: var(--blue-light);
             border: 1px solid var(--border-strong);
-            border-radius: 50%;
-            width: 36px;
+            border-radius: 999px;
             height: 36px;
             cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             color: var(--blue);
-            font-size: 16px;
-            transition: all 0.3s ease;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .theme-toggle {
+            width: 36px;
+            border-radius: 50%;
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 0 13px;
         }
         .theme-toggle:hover { transform: rotate(15deg) scale(1.1); }
 
@@ -1112,41 +1143,71 @@
     }
 
     nav {
-        padding: 10px 14px;
-        gap: 10px;
-        min-height: 64px;
-    }
+                padding: 10px 14px;
+                min-height: 64px;
+            }
 
-    .nav-logo {
-        font-size: 19px;
-        gap: 7px;
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
+            .nav-logo {
+                font-size: 19px;
+                gap: 7px;
+            }
 
-    .nav-logo-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 13px;
-        border-radius: 8px;
-        flex-shrink: 0;
-    }
+            .nav-logo-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+            }
 
-    .nav-links {
-        gap: 8px;
-        flex-shrink: 0;
-    }
+            .nav-right {
+                gap: 8px;
+            }
 
-    .nav-links a {
-        display: none;
-    }
+            .menu-toggle {
+                display: inline-flex;
+            }
 
-    .nav-tag {
-        font-size: 11px;
-        padding: 6px 10px;
-        line-height: 1.1;
-        white-space: nowrap;
-    }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 14px;
+                right: 14px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: var(--card-bg);
+                border: 1px solid var(--border-strong);
+                border-radius: 16px;
+                padding: 10px;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 13px 14px;
+                border-radius: 10px;
+                color: var(--text);
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                background: var(--blue-light);
+                color: var(--blue);
+            }
+
+            .nav-tag {
+                display: none;
+            }
+
+            .theme-toggle {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
 
     .theme-toggle {
         width: 34px;
@@ -1254,27 +1315,23 @@
 
 @media (max-width: 480px) {
     nav {
-        padding: 10px 12px;
-    }
+                padding: 10px 12px;
+            }
 
-    .nav-logo {
-        font-size: 18px;
-        letter-spacing: -0.7px;
-    }
+            .nav-logo {
+                font-size: 18px;
+                letter-spacing: -0.7px;
+            }
 
-    .nav-logo-icon {
-        width: 29px;
-        height: 29px;
-    }
+            .nav-logo-icon {
+                width: 29px;
+                height: 29px;
+            }
 
-    .nav-tag {
-        display: none;
-    }
-
-    .theme-toggle {
-        width: 34px;
-        height: 34px;
-    }
+            .menu-toggle {
+                padding: 0 11px;
+                font-size: 12px;
+            }
 
     .hero {
         padding: 50px 16px 58px;
@@ -1397,13 +1454,13 @@
 
 @media (max-width: 380px) {
     .nav-logo {
-        font-size: 16px;
-    }
+    font-size: 16px;
+}
 
-    .nav-logo-icon {
-        width: 28px;
-        height: 28px;
-    }
+.nav-logo-icon {
+    width: 28px;
+    height: 28px;
+}
 
     .hero h1 {
         font-size: 30px;
@@ -2155,6 +2212,52 @@
                     });
                 });
             }
+        })();
+    </script>
+    <script>
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', initial);
+            icon.textContent = initial === 'dark' ? '☀️' : '🌙';
+
+            toggle.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                icon.textContent = next === 'dark' ? '☀️' : '🌙';
+            });
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+                menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+            });
+
+            navLinks.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = 'Menu';
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                const clickedInsideNav = event.target.closest('nav');
+                if (!clickedInsideNav && navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = 'Menu';
+                }
+            });
         })();
     </script>
 </body>
