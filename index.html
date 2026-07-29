@@ -1955,24 +1955,6 @@
     </footer>
 
     <script>
-        // ============ THEME TOGGLE ============
-        (function() {
-            const toggle = document.getElementById('themeToggle');
-            const icon = document.getElementById('themeIcon');
-            const stored = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const initial = stored || (prefersDark ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', initial);
-            icon.textContent = initial === 'dark' ? '☀️' : '🌙';
-
-            toggle.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme');
-                const next = current === 'dark' ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', next);
-                localStorage.setItem('theme', next);
-                icon.textContent = next === 'dark' ? '☀️' : '🌙';
-            });
-        })();
 
         // ============ SCROLL PROGRESS BAR ============
         (function() {
