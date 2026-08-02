@@ -150,17 +150,45 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress"></div>
     <nav>
-        <a href="https://studentcalctools.com/" class="nav-logo">
-            <span class="nav-logo-icon" aria-hidden="true">S</span>Student<span>Calc</span>
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+        <span class="nav-logo-icon" aria-hidden="true">S</span>
+        Student<span>CalcTools</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="{{ '/' | relative_url }}">Home</a>
+
+        <a href="{{ '/calculators/' | relative_url }}">
+            Calculators
         </a>
-        <div class="nav-links">
-            <a href="/blog/">Blog</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
-            <span class="nav-tag">✓ 100% Free</span>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span id="themeIcon">🌙</span></button>
-        </div>
-    </nav>
+
+        <a
+            href="{{ '/blog/' | relative_url }}"
+            aria-current="page"
+        >
+            Blog
+        </a>
+
+        <a href="{{ '/about-us/' | relative_url }}">
+            About
+        </a>
+
+        <a href="{{ '/contact-us/' | relative_url }}">
+            Contact
+        </a>
+
+        <span class="nav-tag">✓ 100% Free</span>
+
+        <button
+            type="button"
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+        >
+            <span id="themeIcon">🌙</span>
+        </button>
+    </div>
+</nav>
 
     <main id="main-content">
         <section class="page-hero">
@@ -217,16 +245,115 @@ meta_description: Read articles, tips, and guides for students on grades, GPA, s
         </section>
     </main>
     <footer>
-        <p class="footer-logo">Student<span>Calc</span></p>
-        <p class="footer-tagline">Free calculators for every student</p>
-        <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
-            <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
-            <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
+    <p class="footer-logo">
+        Student<span>CalcTools</span>
+    </p>
+
+    <p class="footer-tagline">
+        Academic calculators for grades, attendance, planning and college costs
+    </p>
+
+    <div class="footer-grid">
+        <div class="footer-col">
+            <p class="col-title">Grade Tools</p>
+
+            <a href="{{ '/gpa-calculator/' | relative_url }}">
+                GPA Calculator
+            </a>
+
+            <a href="{{ '/grade-calculator/' | relative_url }}">
+                Grade Calculator
+            </a>
+
+            <a href="{{ '/final-grade-calculator/' | relative_url }}">
+                Final Grade Calculator
+            </a>
+
+            <a href="{{ '/cgpa-calculator/' | relative_url }}">
+                CGPA Calculator
+            </a>
+
+            <a href="{{ '/class-rank-calculator/' | relative_url }}">
+                Class Rank Calculator
+            </a>
         </div>
-        <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p></div>
-    </footer>
+
+        <div class="footer-col">
+            <p class="col-title">More Tools</p>
+
+            <a href="{{ '/attendance-calculator/' | relative_url }}">
+                Attendance Calculator
+            </a>
+
+            <a href="{{ '/study-time-planner/' | relative_url }}">
+                Study Time Planner
+            </a>
+
+            <a href="{{ '/essay-word-counter/' | relative_url }}">
+                Essay Word Counter
+            </a>
+
+            <a href="{{ '/student-loan-calculator/' | relative_url }}">
+                Student Loan Calculator
+            </a>
+
+            <a href="{{ '/scholarship-calculator/' | relative_url }}">
+                Scholarship Calculator
+            </a>
+        </div>
+
+        <div class="footer-col">
+            <p class="col-title">Explore</p>
+
+            <a href="{{ '/' | relative_url }}">
+                Home
+            </a>
+
+            <a href="{{ '/calculators/' | relative_url }}">
+                All Calculators
+            </a>
+
+            <a
+                href="{{ '/blog/' | relative_url }}"
+                aria-current="page"
+            >
+                All Articles
+            </a>
+
+            <a href="{{ '/calculator-methodology/' | relative_url }}">
+                Calculator Methodology
+            </a>
+        </div>
+
+        <div class="footer-col">
+            <p class="col-title">Company</p>
+
+            <a href="{{ '/about-us/' | relative_url }}">
+                About Us
+            </a>
+
+            <a href="{{ '/contact-us/' | relative_url }}">
+                Contact Us
+            </a>
+
+            <a href="{{ '/privacy-policy/' | relative_url }}">
+                Privacy Policy
+            </a>
+
+            <a href="{{ '/disclaimer/' | relative_url }}">
+                Disclaimer
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026
+            <span>StudentCalcTools</span>
+            — Free tools for every student
+        </p>
+    </div>
+</footer>
     <script>
         (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches,init=s||(p?'dark':'light');document.documentElement.setAttribute('data-theme',init);i.textContent=init==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);i.textContent=n==='dark'?'☀️':'🌙';});})();
         (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%';},{passive:true});})();
