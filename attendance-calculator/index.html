@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#2563eb">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://studentcalctools.com/attendance-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Calculator: Class Attendance Percentage</title>
@@ -23,6 +26,17 @@
     <meta name="twitter:description" content="Free attendance calculator for students. Enter your attended and total classes to find your attendance percentage and see if you meet the 75% rule.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
+
+    <script>
+        document.documentElement.classList.add('js');
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
+        } catch (error) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
@@ -132,45 +146,476 @@
     </style>
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Attendance Calculator","url":"https://studentcalctools.com/attendance-calculator/","description":"Calculate your class attendance percentage and check if you meet the required minimum.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://studentcalctools.com/#organization",
+      "name": "StudentCalcTools",
+      "url": "https://studentcalctools.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://studentcalctools.com/assets/images/og-image.webp",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://studentcalctools.com/#website",
+      "url": "https://studentcalctools.com/",
+      "name": "StudentCalcTools",
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://studentcalctools.com/attendance-calculator/#webpage",
+      "url": "https://studentcalctools.com/attendance-calculator/",
+      "name": "Attendance Calculator: Class Attendance Percentage",
+      "description": "Free attendance calculator for students. Enter your attended and total classes to find your attendance percentage and see if you meet the 75% rule.",
+      "isPartOf": {
+        "@id": "https://studentcalctools.com/#website"
+      },
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://studentcalctools.com/attendance-calculator/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://studentcalctools.com/attendance-calculator/#application"
+      },
+      "dateModified": "2026-08-02",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://studentcalctools.com/attendance-calculator/#application",
+      "name": "Attendance Calculator",
+      "url": "https://studentcalctools.com/attendance-calculator/",
+      "description": "Calculate your class attendance percentage and check if you meet the required minimum.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://studentcalctools.com/attendance-calculator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://studentcalctools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://studentcalctools.com/calculators/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Attendance Calculator",
+          "item": "https://studentcalctools.com/attendance-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://studentcalctools.com/attendance-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is attendance percentage calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Attendance percentage is calculated by dividing the number of classes attended by the total number of classes held, multiplied by 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a safe attendance percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most colleges and schools require a minimum of 75 percent attendance. Maintaining 80-85% provides a safety buffer in case you miss classes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many classes can I miss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator tells you exactly how many more classes you can miss while staying above your target attendance percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All calculations happen in your browser. Nothing is stored or shared."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my attendance falls below 75%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Policies vary by institution. Common consequences include being barred from exams, academic probation, or immediate failure of the course."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is attendance calculated per subject or overall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most colleges track attendance separately for each subject, so you must maintain the required percentage in each individual course, not just overall."
+          }
+        }
+      ]
+    }
+  ]
+}
     </script>
-    <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"Home","item":"https://studentcalctools.com/"},
-{"@type":"ListItem","position":2,"name":"Attendance Calculator","item":"https://studentcalctools.com/attendance-calculator/"}]}
-</script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"How is attendance percentage calculated?","acceptedAnswer":{"@type":"Answer","text":"Attendance percentage is calculated by dividing the number of classes attended by the total number of classes held, multiplied by 100."}},
-        {"@type":"Question","name":"What is a safe attendance percentage?","acceptedAnswer":{"@type":"Answer","text":"Most colleges and schools require a minimum of 75 percent attendance. Maintaining 80-85% provides a safety buffer in case you miss classes."}},
-        {"@type":"Question","name":"How many classes can I miss?","acceptedAnswer":{"@type":"Answer","text":"This calculator tells you exactly how many more classes you can miss while staying above your target attendance percentage."}},
-        {"@type":"Question","name":"Is my data saved?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations happen in your browser. Nothing is stored or shared."}},
-        {"@type":"Question","name":"What happens if my attendance falls below 75%?","acceptedAnswer":{"@type":"Answer","text":"Policies vary by institution. Common consequences include being barred from exams, academic probation, or immediate failure of the course."}},
-        {"@type":"Question","name":"Is attendance calculated per subject or overall?","acceptedAnswer":{"@type":"Answer","text":"Most colleges track attendance separately for each subject, so you must maintain the required percentage in each individual course, not just overall."}}
-    ]}
-    </script>
+
+<style>
+    html { scroll-padding-top: 92px; }
+
+    :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+    }
+
+    .skip-link {
+        position: fixed;
+        left: 12px;
+        top: -80px;
+        z-index: 10000;
+        border-radius: 0 0 10px 10px;
+        transition: top .2s ease;
+    }
+
+    .skip-link:focus { top: 0; left: 12px; }
+
+    .site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        min-height: 72px;
+        padding: 12px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        background: rgba(255,255,255,.88);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    [data-theme="dark"] .site-nav { background: rgba(2,6,23,.88); }
+
+    .nav-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--blue);
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -.5px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .brand-name { color: var(--blue); }
+    .brand-accent { color: var(--accent); }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-links a[aria-current="page"] { color: var(--blue); }
+
+    .theme-toggle,
+    .menu-toggle {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border-strong);
+        background: var(--blue-light);
+        color: var(--blue);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .theme-toggle {
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .theme-icon,
+    .theme-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .theme-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-icon svg {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .theme-icon-sun { display: none; color: #fbbf24; }
+    [data-theme="dark"] .theme-icon-sun { display: inline-flex; }
+    [data-theme="dark"] .theme-icon-moon { display: none; }
+
+    .menu-toggle {
+        display: none;
+        padding: 0 14px;
+        border-radius: 999px;
+    }
+
+    .page-hero {
+        padding: 72px 20px 94px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(38px,6vw,60px);
+        letter-spacing: -1.6px;
+    }
+
+    .page-hero p {
+        max-width: 760px;
+        font-size: 18px;
+    }
+
+    .calc-section {
+        max-width: 820px;
+        padding: 72px 20px;
+    }
+
+    .calc-card {
+        padding: 34px;
+        box-shadow: 0 18px 45px rgba(37,99,235,.13);
+    }
+
+    [data-theme="dark"] .calc-card {
+        box-shadow: 0 18px 45px rgba(0,0,0,.48);
+    }
+
+    .calc-input {
+        width: 100%;
+        min-height: 50px;
+        background: var(--card-bg);
+    }
+
+    .calc-input[aria-invalid="true"] {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 4px rgba(220,38,38,.1);
+    }
+
+    .field-error-message {
+        display: block;
+        margin-top: 6px;
+        color: #dc2626;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    [data-theme="dark"] .field-error-message { color: #fca5a5; }
+
+    .result-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .result-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .content-section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+    }
+
+    .step-card,
+    .related-card,
+    .faq-item {
+        box-shadow: 0 2px 16px rgba(37,99,235,.06);
+    }
+
+    .methodology-link-row {
+        margin-top: 20px !important;
+    }
+
+    .methodology-link-row a {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        background: var(--card-bg);
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    .related-icon {
+        color: var(--blue);
+        font-size: 0;
+    }
+
+    .related-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+
+    .footer-col a[aria-current="page"] { color: white; }
+
+    @media (max-width: 860px) {
+        .site-nav { padding: 10px 16px; }
+
+        .nav-links {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 14px;
+            right: 14px;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            padding: 10px;
+            border: 1px solid var(--border-strong);
+            border-radius: 16px;
+            background: var(--card-bg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-links.open { display: flex; }
+
+        .nav-links a {
+            padding: 13px 14px;
+            border-radius: 10px;
+            color: var(--text);
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            background: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .nav-tag { display: none; }
+        .menu-toggle { display: inline-flex; }
+    }
+
+    @media (max-width: 768px) {
+        .field-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .site-nav { min-height: 64px; padding: 10px 12px; }
+        .nav-logo { font-size: 18px; }
+        .page-hero { padding: 50px 16px 72px; }
+        .page-hero p { font-size: 16px; }
+        .calc-section { padding: 54px 16px; }
+        .calc-card { padding: 22px 18px; }
+        .calc-calculate { width: 100%; }
+        .footer-grid { grid-template-columns: 1fr; }
+    }
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav>
-        <a href="https://studentcalctools.com/" class="nav-logo">
-            <span class="nav-logo-icon">S</span>Student<span>Calc</span>
-        </a>
-        <div class="nav-links">
+    <nav class="site-nav" aria-label="Primary navigation">
+    <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
+        <span class="nav-logo-icon" aria-hidden="true">S</span>
+        <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
+    </a>
+
+    <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/calculators/" aria-current="page">Calculators</a>
             <a href="/blog/">Blog</a>
             <a href="/about-us/">About</a>
             <a href="/contact-us/">Contact</a>
-            <span class="nav-tag">✓ 100% Free</span>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span id="themeIcon">🌙</span></button>
         </div>
-    </nav>
+        <span class="nav-tag">Free to use</span>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
+            </span>
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
+            </span>
+        </button>
+    </div>
+</nav>
 
     <main id="main-content">
         <section class="page-hero">
             <div class="page-hero-content">
-                <nav class="breadcrumb"><a href="https://studentcalctools.com/">Home</a><span class="breadcrumb-sep">›</span><span>Attendance Calculator</span></nav>
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">›</span><a href="/calculators/">Calculators</a><span class="breadcrumb-sep">›</span><span>Attendance Calculator</span></nav>
                 <h1>Attendance <span class="gradient-text">Calculator</span></h1>
                 <p>Track your attendance percentage and find out how many classes you can miss while staying above the required minimum.</p>
             </div>
@@ -221,6 +666,7 @@
 <p><strong>Attendance % = (Classes Attended ÷ Total Classes Held) × 100</strong></p>
 <p>For example, if your college has held 45 lectures and you attended 38 of them, your attendance is (38 ÷ 45) × 100 = <strong>84.4%</strong>. Most colleges and universities require a minimum of 75% attendance. Some courses are stricter and require 85% or higher.</p>
 <p>This calculator also works in reverse: enter your target percentage and remaining classes, and it tells you exactly how many lectures you can still skip — or how many you must attend — to hit your goal.</p>
+<p class="methodology-link-row"><a href="/calculator-methodology/">Calculator Methodology</a></p>
             <div class="steps-grid">
                 <div class="step-card"><div class="step-num">1</div><h3>Enter Classes</h3><p>Total classes held and classes you attended.</p></div>
                 <div class="step-card"><div class="step-num">2</div><h3>Set Target</h3><p>Enter your target attendance percent and remaining classes.</p></div>
@@ -258,10 +704,10 @@
             <span class="eyebrow">RELATED TOOLS</span>
             <h2 class="section-title">Other Useful Calculators</h2>
             <div class="related-grid">
-                <a href="/gpa-calculator/" class="related-card"><div class="related-icon">🎓</div><h3>GPA Calculator</h3><p>Calculate your GPA on the 4.0 scale.</p></a>
-                <a href="/grade-calculator/" class="related-card"><div class="related-icon">📊</div><h3>Grade Calculator</h3><p>Calculate your weighted final grade.</p></a>
-                <a href="/study-time-planner/" class="related-card"><div class="related-icon">⏰</div><h3>Study Time Planner</h3><p>Plan your daily study schedule.</p></a>
-                <a href="/final-grade-calculator/" class="related-card"><div class="related-icon">🏆</div><h3>Final Grade Calculator</h3><p>What you need on your final exam.</p></a>
+                <a href="/gpa-calculator/" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path></svg></div><h3>GPA Calculator</h3><p>Calculate your GPA on the 4.0 scale.</p></a>
+                <a href="/grade-calculator/" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path></svg></div><h3>Grade Calculator</h3><p>Calculate your weighted final grade.</p></a>
+                <a href="/study-time-planner/" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l3 2M5 3 2 6M19 3l3 3"></path></svg></div><h3>Study Time Planner</h3><p>Plan your daily study schedule.</p></a>
+                <a href="/final-grade-calculator/" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path><path d="M8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 12v5M8 21h8M9 17h6"></path></svg></div><h3>Final Grade Calculator</h3><p>What you need on your final exam.</p></a>
             </div>
         </section>
 
@@ -284,100 +730,340 @@
     </main>
 
     <footer>
-        <p class="footer-logo">Student<span>Calc</span></p>
-        <p class="footer-tagline">Free calculators for every student</p>
-        <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a></div>
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a></div>
-            <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
-            <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
+    <p class="footer-logo">StudentCalc<span>Tools</span></p>
+    <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
+
+    <div class="footer-grid">
+        <div class="footer-col">
+            <p class="col-title">Grade Tools</p>
+            <a href="/gpa-calculator/">GPA Calculator</a>
+            <a href="/grade-calculator/">Grade Calculator</a>
+            <a href="/final-grade-calculator/">Final Grade Calculator</a>
+            <a href="/cgpa-calculator/">CGPA Calculator</a>
+            <a href="/class-rank-calculator/">Class Rank Calculator</a>
         </div>
-        <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span> — Free tools for every student</p></div>
-    </footer>
+        <div class="footer-col">
+            <p class="col-title">More Tools</p>
+            <a href="/attendance-calculator/" aria-current="page">Attendance Calculator</a>
+            <a href="/study-time-planner/">Study Time Planner</a>
+            <a href="/essay-word-counter/">Essay Word Counter</a>
+            <a href="/student-loan-calculator/">Student Loan Calculator</a>
+            <a href="/scholarship-calculator/">Scholarship Calculator</a>
+        </div>
+        <div class="footer-col">
+            <p class="col-title">Explore</p>
+            <a href="/">Home</a>
+            <a href="/calculators/">All Calculators</a>
+            <a href="/blog/">Student Guides</a>
+            <a href="/calculator-methodology/">Calculator Methodology</a>
+        </div>
+        <div class="footer-col">
+            <p class="col-title">Company</p>
+            <a href="/about-us/">About Us</a>
+            <a href="/contact-us/">Contact Us</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/disclaimer/">Disclaimer</a>
+        </div>
+    </div>
 
-    <script>
-        (function(){const t=document.getElementById('themeToggle'),i=document.getElementById('themeIcon'),s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;(s==='dark'||(!s&&p))&&(document.documentElement.setAttribute('data-theme','dark'),i.textContent='☀️');t.addEventListener('click',()=>{const e=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',e?'light':'dark'),i.textContent=e?'🌙':'☀️',localStorage.setItem('theme',e?'light':'dark')})})();
-        (function(){const b=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{const s=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;b.style.width=s+'%'})})();
-        (function(){const o=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});document.querySelectorAll('.reveal').forEach(e=>o.observe(e))})();
-        (function(){document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));q.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' ')e.preventDefault(),q.click()})})})();
+    <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
+    </div>
+</footer>
+<script>
+    (function () {
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const scrollProgress = document.getElementById('scrollProgress');
 
-        (function(){
-            const calcBtn=document.getElementById('calculateBtn');
-            const result=document.getElementById('calcResult');
-            const resultValue=document.getElementById('resultValue');
-            const resultTier=document.getElementById('resultTier');
-            const resultExtra=document.getElementById('resultExtra');
-            const copyBtn=document.getElementById('copyBtn');
-            const resetBtn=document.getElementById('resetBtn');
+        function updateThemeButton() {
+            const current = root.getAttribute('data-theme') || 'light';
+            const target = current === 'dark' ? 'light' : 'dark';
+            const label = 'Switch to ' + target + ' mode';
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.setAttribute('title', label);
 
-            calcBtn.addEventListener('click',()=>{
-                const total=parseFloat(document.getElementById('totalClasses').value)||0;
-                const attended=parseFloat(document.getElementById('attendedClasses').value)||0;
-                const target=parseFloat(document.getElementById('targetPercent').value)||75;
-                const remaining=parseFloat(document.getElementById('remainingClasses').value)||0;
+            if (themeColorMeta) {
+                themeColorMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
+            }
+        }
 
-                if(total<=0){alert('Total classes must be greater than 0.');return;}
-                if(attended>total){alert('Classes attended cannot exceed total classes.');return;}
+        updateThemeButton();
 
-                const percent=(attended/total)*100;
-                const finalPercent=percent.toFixed(2);
+        themeToggle.addEventListener('click', function () {
+            const current = root.getAttribute('data-theme') || 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
 
-                let displayed=0;
-                const duration=800;
-                const start=performance.now();
-                const animate=(t)=>{
-                    const progress=Math.min((t-start)/duration,1);
-                    const eased=1-Math.pow(1-progress,3);
-                    displayed=(eased*percent).toFixed(2);
-                    resultValue.textContent=displayed+'%';
-                    if(progress<1)requestAnimationFrame(animate);
-                };
-                requestAnimationFrame(animate);
+            try {
+                localStorage.setItem('theme', next);
+            } catch (error) {}
 
-                let tier='Excellent',tierClass='tier-excellent';
-                if(percent<60){tier='Critical';tierClass='tier-low';}
-                else if(percent<target){tier='Below Target';tierClass='tier-average';}
-                else if(percent<85){tier='Safe';tierClass='tier-good';}
-                resultTier.textContent=tier;
-                resultTier.className='calc-result-tier '+tierClass;
+            updateThemeButton();
+        });
 
-                // Calculate how many can miss / need to attend
-                const totalFinal=total+remaining;
-                const minAttendForTarget=Math.ceil((target/100)*totalFinal);
-                let extraText='';
-                if(percent>=target){
-                    const canMiss=Math.floor(attended-(target/100)*totalFinal+remaining);
-                    const safeMisses=Math.max(0,Math.min(remaining,canMiss));
-                    extraText=`You can miss up to <strong>${safeMisses}</strong> of the ${remaining} remaining classes and still maintain ${target}%.`;
-                } else {
-                    const needed=Math.max(0,minAttendForTarget-attended);
-                    if(needed<=remaining){
-                        extraText=`You need to attend at least <strong>${needed}</strong> of the ${remaining} remaining classes to reach ${target}%.`;
-                    } else {
-                        extraText=`Even if you attend all ${remaining} remaining classes, you cannot reach ${target}%. Your max possible: <strong>${(((attended+remaining)/totalFinal)*100).toFixed(2)}%</strong>.`;
-                    }
+        function closeMenu(returnFocus) {
+            navLinks.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+            menuToggle.textContent = 'Menu';
+
+            if (returnFocus) {
+                menuToggle.focus();
+            }
+        }
+
+        menuToggle.addEventListener('click', function () {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
+
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                closeMenu(false);
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) {
+                closeMenu(false);
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+                closeMenu(true);
+            }
+        });
+
+        function updateScrollProgress() {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+            scrollProgress.style.width = Math.min(100, Math.max(0, progress)) + '%';
+        }
+
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+        window.addEventListener('resize', updateScrollProgress);
+        updateScrollProgress();
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
-                resultExtra.innerHTML=extraText;
-
-                result.classList.add('visible');
-                result.scrollIntoView({behavior:'smooth',block:'center'});
-
-                if(typeof gtag==='function'){gtag('event','calculator_used',{tool:'attendance_calculator',percent:finalPercent});}
             });
+        }, { threshold: 0.1 });
 
-            copyBtn.addEventListener('click',()=>{
-                const text=`My Attendance: ${resultValue.textContent} (${resultTier.textContent}) — ${resultExtra.textContent.replace(/<[^>]*>/g,'')}`;
-                navigator.clipboard.writeText(text).then(()=>{const o=copyBtn.textContent;copyBtn.textContent='✓ Copied!';setTimeout(()=>copyBtn.textContent=o,1500);});
+        document.querySelectorAll('.reveal').forEach(function (element) {
+            observer.observe(element);
+        });
+
+        document.querySelectorAll('.faq-question').forEach(function (question) {
+            question.setAttribute('role', 'button');
+            question.setAttribute('tabindex', '0');
+            question.setAttribute('aria-expanded', 'false');
+
+            function toggleFaq() {
+                const item = question.parentElement;
+                const isOpen = item.classList.toggle('open');
+                question.setAttribute('aria-expanded', String(isOpen));
+            }
+
+            question.addEventListener('click', toggleFaq);
+            question.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleFaq();
+                }
             });
+        });
 
-            resetBtn.addEventListener('click',()=>{
+        const calcBtn = document.getElementById('calculateBtn');
+        const result = document.getElementById('calcResult');
+        const resultValue = document.getElementById('resultValue');
+        const resultTier = document.getElementById('resultTier');
+        const resultExtra = document.getElementById('resultExtra');
+        const copyBtn = document.getElementById('copyBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const totalInput = document.getElementById('totalClasses');
+        const attendedInput = document.getElementById('attendedClasses');
+        const targetInput = document.getElementById('targetPercent');
+        const remainingInput = document.getElementById('remainingClasses');
+
+        calcBtn.setAttribute('type', 'button');
+        copyBtn.setAttribute('type', 'button');
+        resetBtn.setAttribute('type', 'button');
+
+        function clearFieldError(input) {
+            input.removeAttribute('aria-invalid');
+            const existing = input.parentElement.querySelector('.field-error-message');
+            if (existing) {
+                existing.remove();
+            }
+        }
+
+        function showFieldError(input, message) {
+            input.setAttribute('aria-invalid', 'true');
+            let error = input.parentElement.querySelector('.field-error-message');
+
+            if (!error) {
+                error = document.createElement('span');
+                error.className = 'field-error-message';
+                input.parentElement.appendChild(error);
+            }
+
+            error.textContent = message;
+        }
+
+        [totalInput, attendedInput, targetInput, remainingInput].forEach(function (input) {
+            input.addEventListener('input', function () {
+                clearFieldError(input);
                 result.classList.remove('visible');
-                document.getElementById('totalClasses').value='';
-                document.getElementById('attendedClasses').value='';
-                document.getElementById('targetPercent').value='75';
-                document.getElementById('remainingClasses').value='';
             });
-        })();
-    </script>
+        });
+
+        calcBtn.addEventListener('click', function () {
+            [totalInput, attendedInput, targetInput, remainingInput].forEach(clearFieldError);
+
+            const total = Number.parseFloat(totalInput.value);
+            const attended = Number.parseFloat(attendedInput.value);
+            const target = Number.parseFloat(targetInput.value);
+            const remaining = Number.parseFloat(remainingInput.value);
+
+            let valid = true;
+            let firstInvalid = null;
+
+            if (!Number.isFinite(total) || total <= 0) {
+                showFieldError(totalInput, 'Enter total classes greater than 0.');
+                valid = false;
+                firstInvalid = firstInvalid || totalInput;
+            }
+
+            if (!Number.isFinite(attended) || attended < 0) {
+                showFieldError(attendedInput, 'Enter attended classes as 0 or more.');
+                valid = false;
+                firstInvalid = firstInvalid || attendedInput;
+            } else if (Number.isFinite(total) && attended > total) {
+                showFieldError(attendedInput, 'Classes attended cannot exceed total classes.');
+                valid = false;
+                firstInvalid = firstInvalid || attendedInput;
+            }
+
+            if (!Number.isFinite(target) || target < 0 || target > 100) {
+                showFieldError(targetInput, 'Enter a target percentage from 0 to 100.');
+                valid = false;
+                firstInvalid = firstInvalid || targetInput;
+            }
+
+            if (!Number.isFinite(remaining) || remaining < 0) {
+                showFieldError(remainingInput, 'Enter remaining classes as 0 or more.');
+                valid = false;
+                firstInvalid = firstInvalid || remainingInput;
+            }
+
+            if (!valid) {
+                firstInvalid.focus();
+                return;
+            }
+
+            const percent = (attended / total) * 100;
+            const finalPercent = percent.toFixed(2);
+            resultValue.textContent = finalPercent + '%';
+
+            let tier = 'Excellent';
+            let tierClass = 'tier-excellent';
+
+            if (percent < 60) {
+                tier = 'Critical';
+                tierClass = 'tier-low';
+            } else if (percent < target) {
+                tier = 'Below Target';
+                tierClass = 'tier-average';
+            } else if (percent < 85) {
+                tier = 'Safe';
+                tierClass = 'tier-good';
+            }
+
+            resultTier.textContent = tier;
+            resultTier.className = 'calc-result-tier ' + tierClass;
+
+            const totalFinal = total + remaining;
+            const minAttendForTarget = Math.ceil((target / 100) * totalFinal);
+            let extraText = '';
+
+            if (percent >= target) {
+                const canMiss = Math.floor(attended + remaining - (target / 100) * totalFinal);
+                const safeMisses = Math.max(0, Math.min(remaining, canMiss));
+                extraText = 'You can miss up to <strong>' + safeMisses + '</strong> of the ' + remaining + ' remaining classes and still maintain ' + target + '%.';
+            } else {
+                const needed = Math.max(0, minAttendForTarget - attended);
+
+                if (needed <= remaining) {
+                    extraText = 'You need to attend at least <strong>' + needed + '</strong> of the ' + remaining + ' remaining classes to reach ' + target + '%.';
+                } else {
+                    const maxPossible = totalFinal > 0 ? ((attended + remaining) / totalFinal) * 100 : 0;
+                    extraText = 'Even if you attend all ' + remaining + ' remaining classes, you cannot reach ' + target + '%. Your max possible: <strong>' + maxPossible.toFixed(2) + '%</strong>.';
+                }
+            }
+
+            resultExtra.innerHTML = extraText;
+            result.classList.add('visible');
+            result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'calculator_used', {
+                    tool: 'attendance_calculator'
+                });
+            }
+        });
+
+        copyBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"></path></svg><span>Copy Result</span>';
+        resetBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v6h6"></path><path d="M5.5 16a8 8 0 1 0 .4-8.5L4 10"></path></svg><span>Reset</span>';
+
+        copyBtn.addEventListener('click', async function () {
+            const cleanDetails = resultExtra.textContent.trim();
+            const text = 'My Attendance: ' + resultValue.textContent + ' (' + resultTier.textContent + ') - ' + cleanDetails;
+
+            try {
+                await navigator.clipboard.writeText(text);
+            } catch (error) {
+                const temporary = document.createElement('textarea');
+                temporary.value = text;
+                temporary.style.position = 'fixed';
+                temporary.style.opacity = '0';
+                document.body.appendChild(temporary);
+                temporary.select();
+                document.execCommand('copy');
+                temporary.remove();
+            }
+
+            const label = copyBtn.querySelector('span');
+            const original = label.textContent;
+            label.textContent = 'Copied';
+            window.setTimeout(function () {
+                label.textContent = original;
+            }, 1500);
+        });
+
+        resetBtn.addEventListener('click', function () {
+            result.classList.remove('visible');
+            totalInput.value = '';
+            attendedInput.value = '';
+            targetInput.value = '75';
+            remainingInput.value = '';
+
+            [totalInput, attendedInput, targetInput, remainingInput].forEach(clearFieldError);
+            totalInput.focus();
+        });
+
+        document.getElementById('currentYear').textContent = String(new Date().getFullYear());
+    }());
+</script>
 </body>
 </html>
