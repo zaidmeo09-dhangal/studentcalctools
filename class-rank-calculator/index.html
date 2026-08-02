@@ -24,6 +24,25 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
+
+    <script>
+        document.documentElement.classList.add('js');
+
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+
+            document.documentElement.setAttribute(
+                'data-theme',
+                savedTheme || preferredTheme
+            );
+        } catch (error) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
 
@@ -1968,7 +1987,7 @@
             const navLinks = document.getElementById('navLinks');
 
             function updateThemeButton() {
-                const current = root.getAttribute('data-theme') || 'light';
+                const current = root.getAttribute('data-theme') || 'dark';
                 const target = current === 'dark' ? 'light' : 'dark';
                 const label = 'Switch to ' + target + ' mode';
                 themeToggle.setAttribute('aria-label', label);
@@ -1979,7 +1998,7 @@
             updateThemeButton();
 
             themeToggle.addEventListener('click', function () {
-                const current = root.getAttribute('data-theme') || 'light';
+                const current = root.getAttribute('data-theme') || 'dark';
                 const next = current === 'dark' ? 'light' : 'dark';
                 root.setAttribute('data-theme', next);
                 try { localStorage.setItem('theme', next); } catch (error) {}
