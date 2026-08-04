@@ -1,148 +1,34 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- STATIC PAGES — only edit this list when you add a NEW calculator/page -->
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/calculators/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/gpa-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/cgpa-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/grade-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/final-grade-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/attendance-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/class-rank-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/student-loan-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/scholarship-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/study-time-planner/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/essay-word-counter/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/calculator-methodology/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/blog/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/about-us/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/contact-us/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/privacy-policy/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/disclaimer/' | absolute_url }}</loc></url>
+
+  <!-- BLOG POSTS — AUTOMATIC. Every new post in _posts/ appears here with no edits. -->
+  {% for post in site.posts %}
   <url>
-    <loc>https://studentcalctools.com/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
+  {% endfor %}
 
-  <url>
-    <loc>https://studentcalctools.com/calculators/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/gpa-calculator/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/grade-calculator/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/attendance-calculator/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/final-grade-calculator/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/cgpa-calculator/</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/class-rank-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/study-time-planner/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/essay-word-counter/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/student-loan-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/scholarship-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/calculator-methodology/</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/about-us/</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/contact-us/</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/privacy-policy/</loc>
-    <priority>0.3</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/grade-needed-on-final-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/weighted-grade-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/high-school-gpa-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/semester-grade-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
- <url>
-    <loc>https://studentcalctools.com/blog/grade-curve-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://studentcalctools.com/blog/guide-to-college-gpa-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-    <url>
-    <loc>https://studentcalctools.com/blog/how-to-use-test-grade-calculator/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  
 </urlset>
