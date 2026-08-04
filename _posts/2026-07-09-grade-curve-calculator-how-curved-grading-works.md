@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Grade Curve Calculator: How Curved Grading Works"
-slug: grade curve calculator
+slug: grade-curve-calculator
 date: 2026-07-09
 status: Published
 author: StudentCalcTools
