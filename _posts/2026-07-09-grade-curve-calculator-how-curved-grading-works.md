@@ -20,7 +20,7 @@ featured_image: /assets/images/grade-curve-calculator-how-curved-grading-works.w
 image_alt: Grade Curve Calculator How Curved Grading Works
 read_time: 5 min read
 ---
-A grade curve calculator helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
+A [grade curve calculator](https://studentcalctools.com/grade-calculator/) helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
 
 That matters because your original score is not always the final score recorded in the gradebook. If a test was harder than expected, the class average was unusually low, or the instructor wants grades to match a target distribution, curved grading may raise scores. In some systems, it may also change how letter grades are assigned compared with a normal percentage scale.
 
@@ -364,7 +364,7 @@ If the teacher gives a mean and standard deviation, use the bell curve method.
 
 If the teacher says scores were square-root curved, use the square-root formula.
 
-If you are not sure, use the [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) to test different methods and compare possible results.
+If you are not sure, use the grade curve calculator to test different methods and compare possible results.
 
 
 
@@ -526,11 +526,11 @@ Use a regular grade calculator when you want to calculate your current class gra
 
 
 | Tool | Use It For | Example Question |
-| ---------------------- | -------------------------- | ----------------------------------- |
+| ------------------------------------------------------------------------------ | -------------------------- | ----------------------------------- |
 | Grade curve calculator | Curved test or exam scores | “What is my score after the curve?” |
 | Grade calculator | Weighted course grade | “What is my current class grade?” |
-| Final grade calculator | Final exam target | “What do I need on my final?” |
-| GPA calculator | Grade point average | “What is my GPA this semester?” |
+| [Final grade calculator](https://studentcalctools.com/final-grade-calculator/) | Final exam target | “What do I need on my final?” |
+| [GPA calculator](https://studentcalctools.com/gpa-calculator/) | Grade point average | “What is my GPA this semester?” |
 
 
 If your teacher has already posted the curved score and you want to calculate your overall class grade, use the standard [Grade Calculator](https://studentcalctools.com/grade-calculator/). If you are trying to estimate the curve itself, use the grade curve calculator instead.
