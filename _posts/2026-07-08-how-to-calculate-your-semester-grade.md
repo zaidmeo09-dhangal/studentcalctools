@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Calculate Your Semester Grade
-slug: semester grade calculator
+slug: semester-grade-calculator
 date: 2026-07-08
 status: Published
 author: StudentCalcTools
