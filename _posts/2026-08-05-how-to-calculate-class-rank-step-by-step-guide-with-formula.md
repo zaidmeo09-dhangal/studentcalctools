@@ -3,7 +3,7 @@ layout: post
 title: "How to Calculate Class Rank: Step-by-Step Guide With Formula"
 slug: how-to-calculate-class-rank
 date: 2026-08-05
-status: Draft
+status: Published
 author: StudentCalcTools
 category: Class Rank Calculator
 tags:
@@ -68,9 +68,8 @@ A school generally follows these steps:
 Suppose a school has five graduating students with these GPAs:
 
 
-|  |  |
-| ----------- | ------- |
-| **Student** | **GPA** |
+| Student | GPA |
+| --------- | ---- |
 | Student A | 4.35 |
 | Student B | 4.21 |
 | Student C | 4.10 |
@@ -357,9 +356,8 @@ Because terminology can differ, “top decile” is usually clearer than “firs
 The following results use the inclusive percentile-rank formula explained above.
 
 
-|  |  |  |  |
-| -------------- | ------------------ | ------------------ | ------------------ |
-| **Class Rank** | **Class Size 200** | **Class Size 400** | **Class Size 600** |
+| Class Rank | Class Size 200 | Class Size 400 | Class Size 600 |
+| ---------- | ----------------- | ----------------- | ----------------- |
 | Rank 5 | 98.0th percentile | 99.0th percentile | 99.3rd percentile |
 | Rank 25 | 88.0th percentile | 94.0th percentile | 96.0th percentile |
 | Rank 50 | 75.5th percentile | 87.8th percentile | 91.8th percentile |
