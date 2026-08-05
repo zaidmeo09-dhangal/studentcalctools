@@ -58,6 +58,8 @@ content:
             - Student Finance
             - Scholarship Guide
             - College Planning
+            - Class Rank Calculator
+
       - name: tags
         label: Tags
         type: string
