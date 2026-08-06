@@ -3,7 +3,7 @@ layout: post
 title: "Class Rank Percentile vs Percentage vs Top %: Complete Guide"
 slug: class-rank-percentile-vs-percentage
 date: 2026-08-07
-status: Draft
+status: Published
 author: StudentCalcTools
 category: Class Rank Calculator
 tags:
@@ -21,6 +21,8 @@ meta_description: Percentile, percentage, and top percent describe class rank
 excerpt: Percentile, percentage, and top percent describe class rank
   differently. See the exact formulas, worked examples, and where the two
   figures diverge.
+featured_image: /assets/images/comparison-of-class-rank-percentile-percentage-and-top-percent-definitions.webp
+image_alt: Comparison of class rank percentile, percentage, and top percent definitions
 read_time: 5 min read
 ---
 **Percentile tells you what percentage of your class you scored higher than, so a higher number is better. Percentage and top percent both describe which group you fall within, counted from the top, so a lower number is better.** Ranked 30th in a class of 300 puts a student in the top 10 percent, which is roughly the 90th percentile. These describe the same standing from two directions, and while they're close, they aren't always mathematically identical, for reasons this guide explains in full.
