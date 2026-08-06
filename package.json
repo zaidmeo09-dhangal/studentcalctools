@@ -1,0 +1,16 @@
+{
+  "name": "studentcalctools-validation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Validation tooling for the StudentCalcTools Jekyll site.",
+  "scripts": {
+    "validate:links": "node tools/check-internal-links.mjs _site",
+    "validate:assets": "node tools/check-local-assets.mjs _site",
+    "validate:js": "node tools/check-js-syntax.mjs _site",
+    "validate:html": "node tools/check-html-basic.mjs _site",
+    "validate": "npm run validate:links && npm run validate:assets && npm run validate:js && npm run validate:html"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
