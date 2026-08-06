@@ -89,6 +89,8 @@ Enter any of these same numbers into the class rank calculator to confirm the re
 | Top 100 | 50.5th percentile / top 50% | 75.25th percentile / top 25% | 83.5th percentile / top 16.7% |
 
 
+
+
 ## **Percentage vs. Percentile, Side by Side**
 
 
