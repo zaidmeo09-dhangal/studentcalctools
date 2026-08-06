@@ -6,7 +6,14 @@ date: 2026-08-07
 status: Draft
 author: StudentCalcTools
 category: Class Rank Calculator
+tags:
+  - percentile vs percentage
+  - class rank calculator
 primary_keyword: class rank percentile
+secondary_keywords:
+  - class rank percentage
+  - top percent class rank
+  - percentile vs percentage
 meta_title: "Class Rank Percentile vs Percentage vs Top %: Complete Guide"
 meta_description: Percentile, percentage, and top percent describe class rank
   differently. See the exact formulas, worked examples, and where the two
