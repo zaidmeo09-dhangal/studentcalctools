@@ -2,7 +2,7 @@
 layout: post
 title: "Class Rank Percentile vs Percentage vs Top %: Complete Guide"
 slug: class-rank-percentile-vs-percentage
-date: 2026-08-07
+date: 2026-08-06
 status: Published
 author: StudentCalcTools
 category: Class Rank Calculator
