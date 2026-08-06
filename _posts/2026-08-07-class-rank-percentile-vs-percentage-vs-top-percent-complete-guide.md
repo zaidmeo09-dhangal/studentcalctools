@@ -89,8 +89,6 @@ Enter any of these same numbers into the class rank calculator to confirm the re
 | Top 100 | 50.5th percentile / top 50% | 75.25th percentile / top 25% | 83.5th percentile / top 16.7% |
 
 
-
-
 ## **Percentage vs. Percentile, Side by Side**
 
 
@@ -99,8 +97,6 @@ Enter any of these same numbers into the class rank calculator to confirm the re
 | Class rank | Your position in class, such as 25 out of 300 | Lower is better |
 | Class rank percentile | The percentage of students you rank above | Higher is better |
 | Top percentage | The percentage of the class at or above your rank | Lower is better |
-
-
 
 
 ## **A Common Source of Confusion: "Percentage" Doesn't Always Mean the Same Thing**
