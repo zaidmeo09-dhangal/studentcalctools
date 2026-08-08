@@ -132,6 +132,38 @@
         });
     }
 
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(function (question) {
+    if (question.tagName.toLowerCase() === 'summary') {
+        return;
+    }
+
+    question.setAttribute('role', 'button');
+    question.setAttribute('tabindex', '0');
+    question.setAttribute('aria-expanded', 'false');
+
+    function toggleFaq() {
+        const item = question.closest('.faq-item');
+
+        if (!item) {
+            return;
+        }
+
+        const isOpen = item.classList.toggle('open');
+        question.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    question.addEventListener('click', toggleFaq);
+
+    question.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleFaq();
+        }
+    });
+});
+
     const currentYear = document.getElementById('currentYear');
 
     if (currentYear) {
