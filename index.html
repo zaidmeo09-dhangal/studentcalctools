@@ -39,16 +39,7 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:image:alt" content="StudentCalcTools academic calculator collection">
 
-    <script>
-        document.documentElement.classList.add('js');
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-        } catch (error) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    </script>
+    <script src="/assets/js/theme-init.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script>
