@@ -3,7 +3,7 @@ layout: post
 title: What Is a Good Class Rank? Percentile Benchmarks by Class Size
 slug: what-is-a-good-class-rank
 date: 2026-08-11
-status: Draft
+status: Published
 author: StudentCalcTools
 category: Class Rank Calculator
 primary_keyword: what is a good class rank
@@ -18,6 +18,7 @@ meta_description: A good class rank depends on your goal and your class size.
 excerpt: A good class rank depends on your goal and your class size. See
   size-adjusted benchmarks for selective colleges, scholarships, and honor
   programs.
+featured_image: /assets/images/good-class-rank-benchmarks-by-class-size-top-10-25-and-50-percent.webp
 image_alt: Good class rank benchmarks by class size, top 10, 25, and 50 percent.
 read_time: 5 min read
 ---
@@ -134,6 +135,6 @@ Often, yes. Many merit scholarship programs set their cutoff around top 25 perce
 
 In a small class, each rank position is worth a larger percentage swing (2 percentage points per rank in a class of 50), so a specific numeric rank moves the percentile faster than it would in a large class. Convert to percentile before comparing against a benchmark meant for a larger school.
 
-### **Does a lower class rank hurt my chances at every college?** 
+### **Does a lower class rank hurt my chances at every college?**
 
 No. Many colleges no longer report or weigh exact class rank heavily, and use holistic review that considers course rigor, GPA trend, and other factors alongside or instead of rank. For the full picture of how much rank still matters today, [StudentCalcTools](https://studentcalctools.com/) covers this in more detail in a dedicated pillar guide on the topic.
