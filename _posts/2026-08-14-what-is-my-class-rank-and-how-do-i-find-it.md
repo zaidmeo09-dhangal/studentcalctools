@@ -2,7 +2,7 @@
 layout: post
 title: What Is My Class Rank & How Do I Find It?
 slug: what-is-my-class-rank
-date: 2026-08-14
+date: 2026-08-13
 status: Published
 author: StudentCalcTools
 category: Class Rank Calculator
