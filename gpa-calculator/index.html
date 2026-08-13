@@ -692,35 +692,8 @@
 </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-    <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-        <span class="nav-logo-icon" aria-hidden="true">S</span>
-        <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
-    </a>
-
-    <div class="nav-right">
-        <div class="nav-links" id="navLinks">
-            <a href="/">Home</a>
-            <a href="/calculators/" aria-current="page">Calculators</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
-        </div>
-        <span class="nav-tag">Free to use</span>
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
-            </span>
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
-            </span>
-        </button>
-    </div>
-</nav>
+    {% include header.html %}
 
     <main id="main-content">
         <section class="page-hero">
@@ -935,47 +908,8 @@
         </section>
     </main>
 
-    <footer>
-    <p class="footer-logo">StudentCalc<span>Tools</span></p>
-    <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
-
-    <div class="footer-grid">
-        <div class="footer-col">
-            <p class="col-title">Grade Tools</p>
-            <a href="/gpa-calculator/" aria-current="page">GPA Calculator</a>
-            <a href="/grade-calculator/">Grade Calculator</a>
-            <a href="/final-grade-calculator/">Final Grade Calculator</a>
-            <a href="/cgpa-calculator/">CGPA Calculator</a>
-            <a href="/class-rank-calculator/">Class Rank Calculator</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">More Tools</p>
-            <a href="/attendance-calculator/">Attendance Calculator</a>
-            <a href="/study-time-planner/">Study Time Planner</a>
-            <a href="/essay-word-counter/">Essay Word Counter</a>
-            <a href="/student-loan-calculator/">Student Loan Calculator</a>
-            <a href="/scholarship-calculator/">Scholarship Calculator</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">Explore</p>
-            <a href="/">Home</a>
-            <a href="/calculators/">All Calculators</a>
-            <a href="/blog/">Student Guides</a>
-            <a href="/calculator-methodology/">Calculator Methodology</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">Company</p>
-            <a href="/about-us/">About Us</a>
-            <a href="/contact-us/">Contact Us</a>
-            <a href="/privacy-policy/">Privacy Policy</a>
-            <a href="/disclaimer/">Disclaimer</a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
-    </div>
-</footer>
+    {% include footer.html %}
+    
 <script src="/assets/js/site.js"></script>
 <script src="/assets/js/gpa-calculator.js"></script>
 </body>
