@@ -6,19 +6,28 @@ date: 2026-08-14
 status: Draft
 author: StudentCalcTools
 category: Class Rank Calculator
+tags:
+  - where to find class rank
+  - find class rank
 primary_keyword: what is my class rank
+secondary_keywords:
+  - how to find my class rank
+  - find class rank
+  - where to find class rank
 meta_title: What Is My Class Rank & How Do I Find It?
 meta_description: Find your class rank on your transcript, student portal, or
   through your counselor, plus what to do if your school does not report one.
 excerpt: Find your class rank on your transcript, student portal, or through
   your counselor, plus what to do if your school does not report one.
+featured_image: /assets/images/what-is-my-class-rank-and-how-do-i-find-it.webp
+image_alt: What Is My Class Rank & How Do I Find It
 read_time: 5 min read
 ---
 **Your class rank is usually listed on your high school transcript, student portal, or academic record. If you cannot find it there, ask your school counselor or registrar. Some schools report only a percentile or ranking group, while others do not calculate class rank at all.**
 
 If you are trying to find your class rank, start with your latest transcript. Look for terms such as **Class Rank**, **Rank in Class**, or a number like **24 of 350**. If it is not there, check your school's student portal and then ask your counselor whether your school calculates and reports rank.
 
-If you already know your rank and total class size, use the [++class rank calculator++](https://studentcalctools.com/class-rank-calculator/) to see your class rank percentile and the approximate percentage of your class you are ahead of.
+If you already know your rank and total class size, use the [class rank calculator](https://studentcalctools.com/class-rank-calculator/) to see your class rank percentile and the approximate percentage of your class you are ahead of.
 
 The important thing is not to guess. Your school determines your official class rank, and schools do not all calculate or report it in the same way.
 
@@ -38,9 +47,8 @@ Check these places in order:
 Here is the quickest way to know what to look for.
 
 
-|  |  |  |
-| ------------------ | ----------------------------------------------- | ----------------------------------- |
-| **Where to Check** | **What You Might See** | **What to Do If It Is Missing** |
+| Where to Check | What You Might See | What to Do If It Is Missing |
+| -------------- | ----------------------------------------------- | ----------------------------------- |
 | Transcript | Class Rank, Rank in Class, 24/350, Top 10% | Check your student portal |
 | Student portal | Rank near GPA, transcript, or academic summary | Ask your counselor |
 | Report card | Rank beside cumulative GPA or academic standing | Check your transcript |
@@ -295,9 +303,8 @@ Class rank does not always appear as a single number.
 Schools can report your standing in several formats.
 
 
-|  |  |  |
+| Type | Example | Meaning |
 | -------------- | -------------------- | --------------------------------------- |
-| **Type** | **Example** | **Meaning** |
 | Exact rank | 18 of 300 | You rank 18th among 300 students |
 | Top percentage | Top 10% | You are within the highest 10% |
 | Decile | First decile | You are within the highest 10% |
@@ -380,7 +387,7 @@ You cannot know without additional information about the other students and the 
 
 This is why an official class rank should come from your school.
 
-If you want to understand the actual ranking methods, including weighted GPA, unweighted GPA, class size, ties, and percentage calculations, see [++how to calculate class rank++](https://studentcalctools.com/blog/how-to-calculate-class-rank/).
+If you want to understand the actual ranking methods, including weighted GPA, unweighted GPA, class size, ties, and percentage calculations, see [how to calculate class rank](https://studentcalctools.com/blog/how-to-calculate-class-rank/).
 
 
 
@@ -619,7 +626,7 @@ Rather than judging your position from the rank number alone, look at:
 - Your school's ranking system
 - Your overall academic record
 
-If you already found your rank and now want to interpret it, see [++what counts as a good class rank++](https://studentcalctools.com/blog/what-is-a-good-class-rank/).
+If you already found your rank and now want to interpret it, see [what counts as a good class rank](https://studentcalctools.com/blog/what-is-a-good-class-rank/).
 
 
 
@@ -752,6 +759,6 @@ Do not guess an official rank from GPA alone.
 
 Once you find your school-reported position, you can interpret what that number means and compare it with your class size.
 
-And if you need help with GPA, grades, class rank, attendance, or other common school calculations, [++StudentCalcTools++](https://studentcalctools.com/) brings those student tools together in one place.
+And if you need help with GPA, grades, class rank, attendance, or other common school calculations, [StudentCalcTools](https://studentcalctools.com/) brings those student tools together in one place.
 
 The key is simple: **find the number from the school first, then interpret it.**
