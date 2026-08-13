@@ -19,7 +19,7 @@ meta_description: Find your class rank on your transcript, student portal, or
   through your counselor, plus what to do if your school does not report one.
 excerpt: Find your class rank on your transcript, student portal, or through
   your counselor, plus what to do if your school does not report one.
-featured_image: /assets/images/what-is-my-class-rank-and-how-do-i-find-it.webp
+featured_image: /assets/images/what-is-my-class-rank-and-how-do-i-find-it-1.webp
 image_alt: What Is My Class Rank & How Do I Find It
 read_time: 5 min read
 ---
