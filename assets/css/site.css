@@ -1,0 +1,359 @@
+/* Shared StudentCalcTools site styles */
+
+/* Accessibility */
+html {
+    scroll-padding-top: 92px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: fixed;
+    left: 12px;
+    top: -80px;
+    z-index: 10000;
+    padding: 10px 18px;
+    border-radius: 0 0 10px 10px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 12px;
+}
+
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    z-index: 9999;
+    background: var(--gradient-brand);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+    transition: width 0.1s ease-out;
+}
+
+
+/* Header */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 72px;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+[data-theme="dark"] .site-nav {
+    background: rgba(2, 6, 23, 0.88);
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-logo-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--gradient-brand);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.brand-name {
+    color: var(--blue);
+}
+
+.brand-accent {
+    color: var(--accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--blue);
+}
+
+.nav-tag {
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+}
+
+
+/* Theme and Mobile Menu Buttons */
+.theme-toggle,
+.menu-toggle {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-strong);
+    background: var(--blue-light);
+    color: var(--blue);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.theme-toggle {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.theme-icon,
+.theme-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.theme-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-icon-sun {
+    display: none;
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    display: inline-flex;
+}
+
+[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    padding: 0 14px;
+    border-radius: 999px;
+}
+
+
+/* Footer */
+footer {
+    padding: 50px 20px 26px;
+    background: #0f172a;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+[data-theme="dark"] footer {
+    background: #020617;
+}
+
+.footer-logo {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.footer-logo span {
+    color: var(--accent);
+}
+
+.footer-tagline {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    max-width: 900px;
+    margin: 0 auto 36px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.footer-col p.col-title {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover,
+.footer-col a[aria-current="page"] {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom span {
+    color: var(--accent);
+}
+
+
+/* Tablet and Mobile Navigation */
+@media (max-width: 860px) {
+    .site-nav {
+        padding: 10px 16px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 14px;
+        right: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px;
+        border: 1px solid var(--border-strong);
+        border-radius: 16px;
+        background: var(--card-bg);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 13px 14px;
+        border-radius: 10px;
+        color: var(--text);
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+        background: var(--blue-light);
+        color: var(--blue);
+    }
+
+    .nav-tag {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .site-nav {
+        min-height: 64px;
+        padding: 10px 12px;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle,
+    .skip-link,
+    .scroll-progress,
+    .nav-links a,
+    .footer-col a {
+        transition: none;
+    }
+}
