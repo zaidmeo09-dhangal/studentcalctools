@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -38,1115 +40,14 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:image:alt" content="StudentCalcTools privacy policy">
 
-    <script>
-        document.documentElement.classList.add('js');
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-        } catch (error) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    </script>
+    <script src="/assets/js/theme-init.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --blue: #2563eb;
-            --blue-dark: #1d4ed8;
-            --blue-light: #eff6ff;
-            --accent: #06b6d4;
-            --accent-dark: #0891b2;
-            --text: #0f172a;
-            --text-secondary: #334155;
-            --muted: #64748b;
-            --white: #ffffff;
-            --bg: #f8faff;
-            --card-bg: #ffffff;
-            --soft-bg: #f1f5ff;
-            --border: rgba(37,99,235,0.09);
-            --border-strong: rgba(37,99,235,0.22);
-            --shadow-sm: 0 2px 16px rgba(37,99,235,0.06);
-            --shadow-md: 0 18px 45px rgba(37,99,235,0.13);
-            --shadow-lg: 0 30px 70px rgba(37,99,235,0.18);
-            --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
-            --gradient-brand: linear-gradient(135deg, #2563eb, #06b6d4);
-            --success: #059669;
-            --warning: #b45309;
-        }
-
-        [data-theme="dark"] {
-            --blue: #3b82f6;
-            --blue-dark: #60a5fa;
-            --blue-light: rgba(59,130,246,0.15);
-            --accent: #22d3ee;
-            --accent-dark: #22d3ee;
-            --text: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --muted: #94a3b8;
-            --white: #0f172a;
-            --bg: #020617;
-            --card-bg: #0f172a;
-            --soft-bg: #111c30;
-            --border: rgba(59,130,246,0.16);
-            --border-strong: rgba(59,130,246,0.32);
-            --shadow-sm: 0 2px 16px rgba(0,0,0,0.35);
-            --shadow-md: 0 18px 45px rgba(0,0,0,0.48);
-            --shadow-lg: 0 30px 70px rgba(0,0,0,0.58);
-            --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --gradient-brand: linear-gradient(135deg, #3b82f6, #22d3ee);
-            --success: #34d399;
-            --warning: #fbbf24;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 92px;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-            transition: background 0.25s ease, color 0.25s ease;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        button {
-            font: inherit;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        :focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 3px;
-        }
-
-        .sr-only {
-            position: absolute !important;
-            width: 1px !important;
-            height: 1px !important;
-            padding: 0 !important;
-            margin: -1px !important;
-            overflow: hidden !important;
-            clip: rect(0, 0, 0, 0) !important;
-            white-space: nowrap !important;
-            border: 0 !important;
-        }
-
-        .skip-link {
-            position: fixed;
-            left: 12px;
-            top: -80px;
-            z-index: 10000;
-            background: var(--blue);
-            color: white;
-            padding: 11px 18px;
-            border-radius: 0 0 10px 10px;
-            text-decoration: none;
-            font-weight: 800;
-            transition: top 0.2s ease;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            z-index: 10000;
-            background: var(--gradient-brand);
-            box-shadow: 0 0 10px rgba(37,99,235,0.45);
-        }
-
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            min-height: 72px;
-            padding: 12px 40px;
-            background: rgba(255,255,255,0.88);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        [data-theme="dark"] .site-nav {
-            background: rgba(2,6,23,0.88);
-        }
-
-        .nav-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--blue);
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .nav-logo-icon {
-            width: 32px;
-            height: 32px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            border-radius: 8px;
-            background: var(--gradient-brand);
-            color: white;
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .brand-name {
-            color: var(--blue);
-        }
-
-        .brand-accent {
-            color: var(--accent);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a[aria-current="page"] {
-            color: var(--blue);
-        }
-
-        .nav-tag {
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: var(--blue-light);
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        .theme-toggle,
-        .menu-toggle {
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-strong);
-            background: var(--blue-light);
-            color: var(--blue);
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .theme-toggle {
-            width: 44px;
-            min-width: 44px;
-            height: 44px;
-            padding: 0;
-            border-radius: 50%;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: translateY(-1px) rotate(8deg);
-            border-color: var(--blue);
-        }
-
-        .theme-icon {
-            width: 20px;
-            height: 20px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .theme-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .theme-icon-sun {
-            display: none;
-            color: #fbbf24;
-        }
-
-        .theme-icon-moon {
-            color: var(--blue);
-        }
-
-        [data-theme="dark"] .theme-icon-sun {
-            display: inline-flex;
-        }
-
-        [data-theme="dark"] .theme-icon-moon {
-            display: none;
-        }
-
-        .menu-toggle {
-            display: none;
-            padding: 0 14px;
-            border-radius: 999px;
-        }
-
-        .page-hero {
-            position: relative;
-            overflow: hidden;
-            padding: 72px 20px 108px;
-            border-bottom: 1px solid var(--border);
-            background: var(--gradient-hero);
-            text-align: center;
-        }
-
-        .hero-mesh {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background:
-                radial-gradient(circle at 20% 25%, rgba(37,99,235,0.16), transparent 38%),
-                radial-gradient(circle at 82% 72%, rgba(6,182,212,0.16), transparent 38%),
-                radial-gradient(circle at 52% 52%, rgba(99,102,241,0.08), transparent 52%);
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-            color: var(--muted);
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .breadcrumb a {
-            color: var(--blue);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 22px;
-            padding: 7px 16px;
-            border: 1px solid var(--border-strong);
-            border-radius: 999px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-sm);
-            color: var(--blue);
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-
-        h1 {
-            max-width: 820px;
-            margin: 0 auto 20px;
-            color: var(--text);
-            font-size: clamp(38px, 6vw, 62px);
-            font-weight: 800;
-            line-height: 1.08;
-            letter-spacing: -1.7px;
-        }
-
-        .gradient-text {
-            background: var(--gradient-brand);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-copy {
-            max-width: 720px;
-            margin: 0 auto 26px;
-            color: var(--text-secondary);
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.75;
-        }
-
-        .hero-meta {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .meta-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 40px;
-            padding: 8px 13px;
-            border: 1px solid var(--border-strong);
-            border-radius: 999px;
-            background: rgba(255,255,255,0.64);
-            color: var(--text-secondary);
-            font-size: 13px;
-            font-weight: 750;
-            backdrop-filter: blur(8px);
-        }
-
-        [data-theme="dark"] .meta-pill {
-            background: rgba(15,23,42,0.72);
-        }
-
-        .meta-pill svg {
-            width: 18px;
-            height: 18px;
-            fill: none;
-            stroke: var(--blue);
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .summary-section {
-            position: relative;
-            z-index: 5;
-            max-width: 1120px;
-            margin: -58px auto 0;
-            padding: 0 20px;
-        }
-
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .summary-card {
-            padding: 24px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .summary-icon {
-            width: 48px;
-            height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            border-radius: 14px;
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .summary-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .summary-card h2 {
-            margin-bottom: 7px;
-            font-size: 17px;
-            font-weight: 800;
-            letter-spacing: -0.25px;
-        }
-
-        .summary-card p {
-            color: var(--text-secondary);
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        .policy-shell {
-            max-width: 1180px;
-            display: grid;
-            grid-template-columns: 280px minmax(0, 1fr);
-            gap: 26px;
-            margin: 0 auto;
-            padding: 76px 20px 84px;
-            align-items: start;
-        }
-
-        .policy-nav {
-            position: sticky;
-            top: 96px;
-            padding: 22px;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .policy-nav-title {
-            margin-bottom: 12px;
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .policy-nav ol {
-            display: grid;
-            gap: 4px;
-            list-style: none;
-        }
-
-        .policy-nav a {
-            display: block;
-            padding: 8px 10px;
-            border-radius: 9px;
-            color: var(--muted);
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 1.45;
-            text-decoration: none;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-
-        .policy-nav a:hover,
-        .policy-nav a.active {
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .policy-nav-note {
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 11px;
-            line-height: 1.6;
-        }
-
-        .policy-content {
-            min-width: 0;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-md);
-        }
-
-        .policy-intro {
-            padding: 32px 34px;
-            border-bottom: 1px solid var(--border);
-            background:
-                linear-gradient(135deg, rgba(37,99,235,0.07), rgba(6,182,212,0.07)),
-                var(--card-bg);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 9px;
-            color: var(--accent-dark);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-        }
-
-        .policy-intro h2 {
-            margin-bottom: 10px;
-            font-size: clamp(25px, 3vw, 34px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.6px;
-        }
-
-        .policy-intro p {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .policy-section {
-            padding: 32px 34px;
-            border-bottom: 1px solid var(--border);
-            scroll-margin-top: 94px;
-        }
-
-        .policy-section:last-child {
-            border-bottom: 0;
-        }
-
-        .section-heading {
-            display: grid;
-            grid-template-columns: 48px minmax(0, 1fr);
-            gap: 14px;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-        .section-number {
-            width: 48px;
-            height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 14px;
-            background: var(--blue-light);
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 800;
-        }
-
-        .section-heading h2 {
-            color: var(--text);
-            font-size: 21px;
-            font-weight: 800;
-            line-height: 1.3;
-            letter-spacing: -0.35px;
-        }
-
-        .policy-section p {
-            margin-bottom: 13px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.85;
-        }
-
-        .policy-section p:last-child {
-            margin-bottom: 0;
-        }
-
-        .policy-section strong {
-            color: var(--text);
-        }
-
-        .policy-section a {
-            color: var(--blue);
-            font-weight: 750;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-        }
-
-        .policy-list {
-            display: grid;
-            gap: 9px;
-            margin: 14px 0 16px;
-            list-style: none;
-        }
-
-        .policy-list li {
-            position: relative;
-            padding-left: 26px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.75;
-        }
-
-        .policy-list li::before {
-            content: '';
-            position: absolute;
-            left: 3px;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gradient-brand);
-        }
-
-        .notice {
-            display: grid;
-            grid-template-columns: 38px minmax(0, 1fr);
-            gap: 12px;
-            align-items: start;
-            margin-top: 16px;
-            padding: 16px;
-            border: 1px solid var(--border-strong);
-            border-radius: 14px;
-            background: var(--soft-bg);
-        }
-
-        .notice-icon {
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 11px;
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .notice-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .notice strong {
-            display: block;
-            margin-bottom: 3px;
-            font-size: 13px;
-        }
-
-        .notice p {
-            margin: 0;
-            color: var(--text-secondary);
-            font-size: 12px;
-            line-height: 1.7;
-        }
-
-        .service-table-wrap {
-            margin-top: 16px;
-            overflow-x: auto;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-        }
-
-        .service-table {
-            width: 100%;
-            min-width: 680px;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        .service-table th,
-        .service-table td {
-            padding: 13px 14px;
-            border-bottom: 1px solid var(--border);
-            vertical-align: top;
-            font-size: 12px;
-            line-height: 1.65;
-        }
-
-        .service-table tr:last-child td {
-            border-bottom: 0;
-        }
-
-        .service-table th {
-            background: var(--soft-bg);
-            color: var(--text);
-            font-weight: 800;
-        }
-
-        .service-table td {
-            color: var(--text-secondary);
-        }
-
-        .service-table td:first-child {
-            color: var(--text);
-            font-weight: 750;
-        }
-
-        .contact-panel {
-            padding: 28px;
-            border: 1px solid var(--border-strong);
-            border-radius: 18px;
-            background: var(--soft-bg);
-        }
-
-        .contact-panel h3 {
-            margin-bottom: 8px;
-            font-size: 18px;
-            font-weight: 800;
-        }
-
-        .contact-email {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-top: 12px;
-            padding: 11px 14px;
-            border: 1px solid var(--border-strong);
-            border-radius: 11px;
-            background: var(--card-bg);
-            color: var(--blue);
-            font-size: 14px;
-            font-weight: 800;
-            text-decoration: none;
-        }
-
-        .contact-email svg {
-            width: 19px;
-            height: 19px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .cta-section {
-            position: relative;
-            overflow: hidden;
-            padding: 74px 20px;
-            background: var(--gradient-brand);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 18% 48%, rgba(255,255,255,0.16), transparent 42%),
-                radial-gradient(circle at 84% 54%, rgba(255,255,255,0.12), transparent 42%);
-            pointer-events: none;
-        }
-
-        .cta-wrap {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .cta-section h2 {
-            margin-bottom: 14px;
-            font-size: clamp(29px, 4.5vw, 44px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.7px;
-        }
-
-        .cta-section p {
-            margin-bottom: 26px;
-            font-size: 16px;
-            line-height: 1.75;
-            opacity: 0.96;
-        }
-
-        .cta-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn-white,
-        .btn-ghost {
-            min-height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 22px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 800;
-            text-decoration: none;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .btn-white {
-            border: 1px solid rgba(255,255,255,0.8);
-            background: white;
-            color: #1d4ed8;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-        }
-
-        .btn-ghost {
-            border: 1px solid rgba(255,255,255,0.55);
-            background: rgba(255,255,255,0.1);
-            color: white;
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-white:hover,
-        .btn-ghost:hover {
-            transform: translateY(-2px);
-        }
-
-        footer {
-            padding: 60px 20px 30px;
-            background: #0f172a;
-            color: rgba(255,255,255,0.56);
-            text-align: center;
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        [data-theme="dark"] footer {
-            background: #020617;
-        }
-
-        .footer-logo {
-            margin-bottom: 8px;
-            color: white;
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .footer-logo span {
-            color: var(--accent);
-        }
-
-        .footer-tagline {
-            margin-bottom: 36px;
-            font-size: 14px;
-        }
-
-        .footer-grid {
-            max-width: 920px;
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 24px;
-            margin: 0 auto 40px;
-            text-align: left;
-        }
-
-        .footer-title {
-            margin-bottom: 14px;
-            color: white;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .footer-col a {
-            display: block;
-            margin-bottom: 9px;
-            color: rgba(255,255,255,0.56);
-            font-size: 13px;
-            text-decoration: none;
-        }
-
-        .footer-col a:hover,
-        .footer-col a[aria-current="page"] {
-            color: white;
-        }
-
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-bottom span {
-            color: var(--accent);
-        }
-
-        @media (max-width: 1000px) {
-            .policy-shell {
-                grid-template-columns: 1fr;
-            }
-
-            .policy-nav {
-                position: static;
-            }
-
-            .policy-nav ol {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 860px) {
-            .site-nav {
-                padding: 10px 16px;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: calc(100% + 8px);
-                left: 14px;
-                right: 14px;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                padding: 10px;
-                border: 1px solid var(--border-strong);
-                border-radius: 16px;
-                background: var(--card-bg);
-                box-shadow: var(--shadow-md);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 13px 14px;
-                border-radius: 10px;
-                color: var(--text);
-            }
-
-            .nav-links a:hover,
-            .nav-links a[aria-current="page"] {
-                background: var(--blue-light);
-                color: var(--blue);
-            }
-
-            .nav-tag {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: inline-flex;
-            }
-
-            .summary-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .site-nav {
-                min-height: 64px;
-                padding: 10px 12px;
-            }
-
-            .nav-logo {
-                font-size: 18px;
-            }
-
-            .nav-logo-icon {
-                width: 30px;
-                height: 30px;
-            }
-
-            .page-hero {
-                padding: 50px 16px 98px;
-            }
-
-            h1 {
-                font-size: clamp(34px, 10vw, 46px);
-                letter-spacing: -1.2px;
-            }
-
-            .hero-copy {
-                font-size: 16px;
-            }
-
-            .summary-section {
-                padding: 0 16px;
-            }
-
-            .policy-shell {
-                padding: 62px 16px 70px;
-            }
-
-            .policy-nav {
-                padding: 18px;
-            }
-
-            .policy-nav ol {
-                grid-template-columns: 1fr;
-            }
-
-            .policy-intro,
-            .policy-section {
-                padding: 25px 20px;
-            }
-
-            .section-heading {
-                grid-template-columns: 42px minmax(0, 1fr);
-                gap: 12px;
-            }
-
-            .section-number {
-                width: 42px;
-                height: 42px;
-            }
-
-            .section-heading h2 {
-                font-size: 19px;
-            }
-
-            .cta-section {
-                padding: 62px 16px;
-            }
-
-            .cta-actions {
-                display: grid;
-                grid-template-columns: 1fr;
-                max-width: 360px;
-                margin: 0 auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/privacy-policy.css">
 
     <script type="application/ld+json">
     {
@@ -1190,7 +91,7 @@
           "breadcrumb": {
             "@id": "https://studentcalctools.com/privacy-policy/#breadcrumb"
           },
-          "dateModified": "2026-08-02",
+          "dateModified": "2026-08-14",
           "inLanguage": "en-US"
         },
         {
@@ -1215,40 +116,14 @@
     }
     </script>
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-            <span class="nav-logo-icon" aria-hidden="true">S</span>
-            <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
-        </a>
-
-        <div class="nav-right">
-            <div class="nav-links" id="navLinks">
-                <a href="/">Home</a>
-                <a href="/calculators/">Calculators</a>
-                <a href="/blog/">Blog</a>
-                <a href="/about-us/">About</a>
-                <a href="/contact-us/">Contact</a>
-            </div>
-            <span class="nav-tag">Free to use</span>
-            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
-            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
-                </span>
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
-                </span>
-            </button>
-        </div>
-    </nav>
+    {% include header.html %}
 
     <main id="main-content">
         <section class="page-hero" aria-labelledby="page-heading">
             <div class="hero-mesh" aria-hidden="true"></div>
+
             <div class="hero-inner">
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="/">Home</a>
@@ -1261,7 +136,9 @@
                     Clear privacy information
                 </div>
 
-                <h1 id="page-heading">Privacy <span class="gradient-text">Policy</span></h1>
+                <h1 id="page-heading">
+                    Privacy <span class="gradient-text">Policy</span>
+                </h1>
 
                 <p class="hero-copy">
                     This policy explains what information StudentCalcTools processes, why it is used, which service providers are involved and what choices are available to visitors.
@@ -1269,11 +146,18 @@
 
                 <div class="hero-meta">
                     <span class="meta-pill">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>
-                        Last updated August 2, 2026
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                            <path d="M16 3v4M8 3v4M3 10h18"></path>
+                        </svg>
+                        Last updated August 14, 2026
                     </span>
+
                     <span class="meta-pill">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
                         Applies to studentcalctools.com
                     </span>
                 </div>
@@ -1284,26 +168,46 @@
             <div class="summary-grid">
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h8M8 11h3M8 15h3M15 11v4M13 13h4"></path></svg>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                            <path d="M8 7h8M8 11h3M8 15h3M15 11v4M13 13h4"></path>
+                        </svg>
                     </span>
+
                     <h2>Calculator inputs</h2>
-                    <p>Current calculators are designed to process the values you enter in your browser. We do not intentionally store your grades or calculation entries.</p>
+
+                    <p>
+                        Current calculators are designed to process the values you enter in your browser. We do not intentionally store your grades or calculation entries.
+                    </p>
                 </article>
 
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16v16H4z"></path>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
                     </span>
+
                     <h2>Contact information</h2>
-                    <p>When you contact us, we receive the name, email address, subject and message that you choose to provide.</p>
+
+                    <p>
+                        When you use the contact form, the information you provide is processed through Formspree so your message can be received and reviewed.
+                    </p>
                 </article>
 
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path>
+                        </svg>
                     </span>
+
                     <h2>Analytics and advertising</h2>
-                    <p>Analytics may measure site use. Advertising technologies may be introduced, with consent controls provided where required.</p>
+
+                    <p>
+                        Analytics may measure site use. Advertising technologies may be introduced, subject to the settings, choices and legal requirements that apply.
+                    </p>
                 </article>
             </div>
         </section>
@@ -1311,6 +215,7 @@
         <div class="policy-shell">
             <aside class="policy-nav" aria-label="Privacy Policy contents">
                 <p class="policy-nav-title">Policy contents</p>
+
                 <ol>
                     <li><a href="#scope">1. Scope and operator</a></li>
                     <li><a href="#calculator-inputs">2. Calculator inputs</a></li>
@@ -1330,14 +235,21 @@
                     <li><a href="#changes">16. Changes to this policy</a></li>
                     <li><a href="#contact">17. Contact us</a></li>
                 </ol>
-                <p class="policy-nav-note">This page explains how StudentCalcTools handles information, cookies and privacy choices.</p>
+
+                <p class="policy-nav-note">
+                    This page explains how StudentCalcTools handles information, cookies and privacy choices.
+                </p>
             </aside>
 
             <article class="policy-content">
                 <header class="policy-intro">
                     <span class="eyebrow">Privacy at StudentCalcTools</span>
+
                     <h2>Information in plain language</h2>
-                    <p>StudentCalcTools is an independently operated educational tools website. We aim to collect only the information needed to operate, improve and protect the website, respond to messages and support lawful advertising.</p>
+
+                    <p>
+                        StudentCalcTools is an independently operated educational tools website. We aim to collect only the information needed to operate, improve and protect the website, respond to messages and support lawful advertising.
+                    </p>
                 </header>
 
                 <section class="policy-section" id="scope">
@@ -1345,9 +257,18 @@
                         <span class="section-number">01</span>
                         <h2>Scope and website operator</h2>
                     </div>
-                    <p>This Privacy Policy applies to <strong>studentcalctools.com</strong> and the calculators, guides, contact features and related pages available through the website.</p>
-                    <p>StudentCalcTools is independently operated under the StudentCalcTools brand.</p>
-                    <p>For privacy questions or requests, contact <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a>.</p>
+
+                    <p>
+                        This Privacy Policy applies to <strong>studentcalctools.com</strong> and the calculators, guides, contact features and related pages available through the website.
+                    </p>
+
+                    <p>
+                        StudentCalcTools is independently operated under the StudentCalcTools brand.
+                    </p>
+
+                    <p>
+                        For privacy questions or requests, contact <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a>.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="calculator-inputs">
@@ -1355,15 +276,29 @@
                         <span class="section-number">02</span>
                         <h2>Calculator inputs and results</h2>
                     </div>
-                    <p>Our current calculators are designed to perform calculations within your browser. We do not intentionally transmit or store the grades, scores, credit hours, attendance figures, essay text, loan amounts or other values you enter into a calculator.</p>
-                    <p>Calculator inputs may remain temporarily in your browser while the page is open. They may be removed when you refresh the page, close the tab or clear browser data, depending on the specific calculator and your browser.</p>
+
+                    <p>
+                        Our current calculators are designed to perform calculations within your browser. We do not intentionally transmit or store the grades, scores, credit hours, attendance figures, essay text, loan amounts or other values you enter into a calculator.
+                    </p>
+
+                    <p>
+                        Calculator inputs may remain temporarily in your browser while the page is open. They may be removed when you refresh the page, close the tab or clear browser data, depending on the specific calculator and your browser.
+                    </p>
+
                     <div class="notice">
                         <span class="notice-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
                         </span>
+
                         <div>
                             <strong>Important distinction</strong>
-                            <p>Calculator entries are different from contact information. Information sent through the contact page or by email is transmitted so that we can receive and respond to it.</p>
+
+                            <p>
+                                Calculator entries are different from contact information. Information submitted through the contact form is transmitted to Formspree and may be stored in the Formspree account used for the form so that StudentCalcTools can receive, review and respond to the message. Information sent directly by email is handled through the relevant email provider.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -1373,7 +308,11 @@
                         <span class="section-number">03</span>
                         <h2>Information you provide</h2>
                     </div>
-                    <p>When you contact StudentCalcTools through the contact form or by email, we may receive:</p>
+
+                    <p>
+                        When you contact StudentCalcTools through the contact form or by email, we may receive:
+                    </p>
+
                     <ul class="policy-list">
                         <li>Your name</li>
                         <li>Your email address</li>
@@ -1381,8 +320,18 @@
                         <li>The message and technical details you choose to provide</li>
                         <li>Information included in follow-up correspondence</li>
                     </ul>
-                    <p>We use this information to answer questions, investigate calculator errors, review suggestions, prevent abuse and keep a reasonable record of support communications.</p>
-                    <p><strong>Do not send passwords, student identification numbers, financial account details, official transcripts, medical information or other sensitive personal information.</strong></p>
+
+                    <p>
+                        Contact-form submissions are processed by <strong>Formspree</strong>. Formspree stores form submissions in the account associated with the form and may also deliver submission notifications to the configured support email. The exact retention available within Formspree can depend on the account plan and settings.
+                    </p>
+
+                    <p>
+                        We use contact information to answer questions, investigate calculator errors, review suggestions, prevent abuse and keep a reasonable record of support communications.
+                    </p>
+
+                    <p>
+                        <strong>Do not send passwords, student identification numbers, financial account details, official transcripts, medical information or other sensitive personal information.</strong>
+                    </p>
                 </section>
 
                 <section class="policy-section" id="automatic-information">
@@ -1390,7 +339,11 @@
                         <span class="section-number">04</span>
                         <h2>Information collected automatically</h2>
                     </div>
-                    <p>When you visit the website, technical information may be collected automatically by analytics, hosting, network and security providers. Depending on the service and configuration, this may include:</p>
+
+                    <p>
+                        When you visit the website, technical information may be collected automatically by analytics, hosting, network and security providers. Depending on the service and configuration, this may include:
+                    </p>
+
                     <ul class="policy-list">
                         <li>Pages viewed, approximate visit time and interactions with website features</li>
                         <li>Referring website or search source</li>
@@ -1399,7 +352,10 @@
                         <li>Internet Protocol address, request information and security logs</li>
                         <li>Cookie identifiers or similar pseudonymous identifiers</li>
                     </ul>
-                    <p>We do not intentionally send names, email addresses or calculator entries to Google Analytics.</p>
+
+                    <p>
+                        We do not intentionally send names, email addresses or calculator entries to Google Analytics.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="cookies-storage">
@@ -1407,13 +363,28 @@
                         <span class="section-number">05</span>
                         <h2>Cookies and browser local storage</h2>
                     </div>
-                    <p>StudentCalcTools and its service providers may use cookies or similar technologies for measurement, security, preferences and advertising.</p>
+
+                    <p>
+                        StudentCalcTools and its service providers may use cookies or similar technologies for measurement, security, preferences and advertising.
+                    </p>
+
                     <ul class="policy-list">
-                        <li><strong>Analytics cookies:</strong> Google Analytics may use cookies such as <code>_ga</code> and related property-specific identifiers to distinguish visits and measure website activity.</li>
-                        <li><strong>Theme preference:</strong> Browser local storage is used to remember whether you selected light or dark mode. Local storage is not the same technology as a cookie.</li>
-                        <li><strong>Advertising technologies:</strong> When advertising is enabled, Google or other vendors may use cookies, web beacons, IP addresses and similar technologies for ad delivery, frequency control, measurement and, where permitted, personalization.</li>
+                        <li>
+                            <strong>Analytics cookies:</strong> Google Analytics may use cookies such as <code>_ga</code> and related property-specific identifiers to distinguish visits and measure website activity.
+                        </li>
+
+                        <li>
+                            <strong>Theme preference:</strong> Browser local storage is used to remember whether you selected light or dark mode. Local storage is not the same technology as a cookie.
+                        </li>
+
+                        <li>
+                            <strong>Advertising technologies:</strong> When advertising is enabled, Google or other vendors may use cookies, web beacons, IP addresses and similar technologies for ad delivery, frequency control, measurement and, where permitted, personalization.
+                        </li>
                     </ul>
-                    <p>You can delete or block cookies through your browser settings. Clearing browser storage may reset the selected theme and other local preferences.</p>
+
+                    <p>
+                        You can delete or block cookies through your browser settings. Clearing browser storage may reset the selected theme and other local preferences.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="how-we-use-information">
@@ -1421,7 +392,11 @@
                         <span class="section-number">06</span>
                         <h2>How information is used</h2>
                     </div>
-                    <p>We may use information for the following purposes:</p>
+
+                    <p>
+                        We may use information for the following purposes:
+                    </p>
+
                     <ul class="policy-list">
                         <li>Operate, maintain and improve StudentCalcTools</li>
                         <li>Understand which calculators and pages are useful</li>
@@ -1439,10 +414,22 @@
                         <span class="section-number">07</span>
                         <h2>Advertising and Google AdSense</h2>
                     </div>
-                    <p>StudentCalcTools may use Google AdSense or another advertising provider to display advertisements. When advertising is active, third-party vendors, including Google, may place and read cookies on your browser or use web beacons, IP addresses and similar technologies in connection with ad serving and measurement.</p>
-                    <p>Google may use advertising cookies to serve ads based on visits to StudentCalcTools or other websites. Depending on your location, consent choices and Google settings, ads may be personalized or non-personalized.</p>
-                    <p>Where required by applicable law, StudentCalcTools will provide consent controls before non-essential analytics or advertising technologies are activated.</p>
-                    <p>You can review advertising controls through <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a>. Additional choices may be provided through a consent banner when advertising is enabled.</p>
+
+                    <p>
+                        StudentCalcTools may use Google AdSense or another advertising provider to display advertisements. When advertising is active, third-party vendors, including Google, may place and read cookies on your browser or use web beacons, IP addresses and similar technologies in connection with ad serving and measurement.
+                    </p>
+
+                    <p>
+                        Google may use advertising cookies to serve ads based on visits to StudentCalcTools or other websites. Depending on your location, consent choices and Google settings, ads may be personalized or non-personalized.
+                    </p>
+
+                    <p>
+                        Consent requirements vary by location. Where a consent control is presented, your choices may affect whether analytics or advertising storage, measurement or personalization features are enabled. A privacy policy does not replace any consent mechanism that may be required by applicable law.
+                    </p>
+
+                    <p>
+                        You can review advertising controls through <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a>. Additional choices may be available through browser settings or any consent controls displayed on the website.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="service-providers">
@@ -1450,7 +437,10 @@
                         <span class="section-number">08</span>
                         <h2>Third-party service providers</h2>
                     </div>
-                    <p>We rely on service providers to host, secure, measure and support the website. These providers process information under their own terms and privacy policies.</p>
+
+                    <p>
+                        We rely on service providers to host, secure, measure and support the website. These providers process information under their own terms and privacy policies.
+                    </p>
 
                     <div class="service-table-wrap">
                         <table class="service-table">
@@ -1461,27 +451,38 @@
                                     <th>Information that may be processed</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
                                     <td>Google Analytics</td>
                                     <td>Website measurement and usage analysis</td>
                                     <td>Page activity, device information, identifiers, approximate location and technical data</td>
                                 </tr>
+
                                 <tr>
                                     <td>Google Fonts</td>
                                     <td>Delivery of the Plus Jakarta Sans typeface</td>
                                     <td>Font request and related technical connection data</td>
                                 </tr>
+
+                                <tr>
+                                    <td>Formspree</td>
+                                    <td>Contact-form processing, spam prevention, submission storage and message delivery</td>
+                                    <td>Name, email address, subject, page or calculator name, message content, form metadata and related technical or security data</td>
+                                </tr>
+
                                 <tr>
                                     <td>GitHub Pages</td>
                                     <td>Website hosting and delivery</td>
                                     <td>Visitor IP address and access or security logs</td>
                                 </tr>
+
                                 <tr>
                                     <td>Email and infrastructure providers</td>
                                     <td>Support-message delivery and website operations</td>
                                     <td>Message details and limited technical or operational data needed to provide the service</td>
                                 </tr>
+
                                 <tr>
                                     <td>Google or other ad vendors</td>
                                     <td>Ad delivery, measurement and fraud prevention when advertising is enabled</td>
@@ -1491,7 +492,9 @@
                         </table>
                     </div>
 
-                    <p>For support, contact <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a>.</p>
+                    <p>
+                        For support, contact <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a>.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="sharing">
@@ -1499,14 +502,21 @@
                         <span class="section-number">09</span>
                         <h2>Sharing and sale of information</h2>
                     </div>
-                    <p>We do not sell personal information for money. Information may be disclosed only as reasonably necessary:</p>
+
+                    <p>
+                        StudentCalcTools does not knowingly sell personal information for monetary consideration. Information may be disclosed as reasonably necessary:
+                    </p>
+
                     <ul class="policy-list">
-                        <li>To service providers that operate hosting, analytics, email, security or advertising functions</li>
+                        <li>To service providers that operate contact forms, hosting, analytics, email, security or advertising functions</li>
                         <li>To investigate abuse, fraud, security incidents or technical problems</li>
                         <li>To comply with law, legal process or valid government requests</li>
                         <li>To protect rights, safety and website operations</li>
-                     </ul>
-                    <p>Where required, visitors will be given relevant advertising and privacy choices.</p>
+                    </ul>
+
+                    <p>
+                        Some privacy laws use broader definitions of “sale” or “sharing,” including certain disclosures for cross-context behavioral advertising. If advertising technologies that fall within those definitions are enabled, applicable choices should be provided where required.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="retention">
@@ -1514,12 +524,27 @@
                         <span class="section-number">10</span>
                         <h2>Data retention</h2>
                     </div>
-                    <p>We keep information only for as long as reasonably necessary for the purpose for which it was collected, including support, security, recordkeeping and legal requirements.</p>
+
+                    <p>
+                        We keep information only for as long as reasonably necessary for the purpose for which it was collected, including support, security, recordkeeping and legal requirements.
+                    </p>
+
                     <ul class="policy-list">
-                        <li><strong>Contact messages:</strong> retained while needed to respond, investigate an issue, prevent abuse or maintain relevant records.</li>
-                        <li><strong>Analytics information:</strong> retained according to the settings configured in the analytics property and the provider's policies.</li>
-                        <li><strong>Hosting and security logs:</strong> retained according to the hosting or network provider's operational and security practices.</li>
-                        <li><strong>Local theme preference:</strong> remains in your browser until you clear local storage or the preference is overwritten.</li>
+                        <li>
+                            <strong>Contact messages:</strong> contact-form submissions may be stored in Formspree according to the account plan and settings and may also be retained in support email or related records while needed to respond, investigate an issue, prevent abuse or maintain relevant records.
+                        </li>
+
+                        <li>
+                            <strong>Analytics information:</strong> retained according to the settings configured in the analytics property and the provider's policies.
+                        </li>
+
+                        <li>
+                            <strong>Hosting and security logs:</strong> retained according to the hosting or network provider's operational and security practices.
+                        </li>
+
+                        <li>
+                            <strong>Local theme preference:</strong> remains in your browser until you clear local storage or the preference is overwritten.
+                        </li>
                     </ul>
                 </section>
 
@@ -1528,8 +553,14 @@
                         <span class="section-number">11</span>
                         <h2>Data security</h2>
                     </div>
-                    <p>StudentCalcTools uses HTTPS and relies on established hosting, DNS and email providers. We also limit the information intentionally collected through calculator pages.</p>
-                    <p>No website, email system, internet transmission or storage method can be guaranteed to be completely secure. Visitors should avoid sending sensitive information through the contact form or email.</p>
+
+                    <p>
+                        StudentCalcTools uses HTTPS and relies on established hosting, DNS and email providers. We also limit the information intentionally collected through calculator pages.
+                    </p>
+
+                    <p>
+                        No website, email system, internet transmission or storage method can be guaranteed to be completely secure. Visitors should avoid sending sensitive information through the contact form or email.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="choices-rights">
@@ -1537,17 +568,37 @@
                         <span class="section-number">12</span>
                         <h2>Your choices and privacy rights</h2>
                     </div>
-                    <p>Depending on your location and applicable law, you may have rights relating to personal information, including access, correction, deletion, restriction, objection or withdrawal of consent.</p>
-                    <p>You can also take the following practical steps:</p>
+
+                    <p>
+                        Depending on your location and applicable law, you may have rights relating to personal information, including access, correction, deletion, restriction, objection or withdrawal of consent.
+                    </p>
+
+                    <p>
+                        You can also take the following practical steps:
+                    </p>
+
                     <ul class="policy-list">
                         <li>Block or delete cookies through browser settings</li>
                         <li>Clear local storage to remove the saved theme preference</li>
-                        <li>Use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics opt-out browser add-on</a>, where supported</li>
-                        <li>Adjust Google advertising choices through <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a></li>
+
+                        <li>
+                            Use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics opt-out browser add-on</a>, where supported
+                        </li>
+
+                        <li>
+                            Adjust Google advertising choices through <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a>
+                        </li>
+
                         <li>Use the consent controls displayed on the website when available</li>
-                        <li>Email <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a> with a privacy request</li>
+
+                        <li>
+                            Email <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a> with a privacy request
+                        </li>
                     </ul>
-                    <p>We may need enough information to understand and verify a request. We will respond in accordance with applicable law.</p>
+
+                    <p>
+                        We may need enough information to understand and verify a request. We will respond in accordance with applicable law.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="children">
@@ -1555,9 +606,18 @@
                         <span class="section-number">13</span>
                         <h2>Children's privacy</h2>
                     </div>
-                    <p>StudentCalcTools provides educational calculators that may be useful to students. We do not knowingly request personal information from children under 13 through calculator inputs.</p>
-                    <p>Children under 13 should not submit names, email addresses or other personal information through the contact form or by email without the involvement of a parent or legal guardian.</p>
-                    <p>If you believe that a child has provided personal information without appropriate permission, contact us at <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a> so that we can review and, where appropriate, delete it.</p>
+
+                    <p>
+                        StudentCalcTools provides educational calculators that may be useful to students. Calculator inputs are designed to be processed in the browser rather than intentionally stored as user records.
+                    </p>
+
+                    <p>
+                        StudentCalcTools does not intend to collect personal information from children under 13 through the contact form. Children under 13 should not submit a name, email address or other personal information through the contact form or by email without the involvement of a parent or legal guardian.
+                    </p>
+
+                    <p>
+                        If you believe that personal information from a child under 13 has been submitted in circumstances that require parental permission, contact us at <a href="mailto:support@studentcalctools.com">support@studentcalctools.com</a> so that we can review the situation and take appropriate steps, including deletion where required.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="international">
@@ -1565,8 +625,14 @@
                         <span class="section-number">14</span>
                         <h2>International processing</h2>
                     </div>
-                    <p>StudentCalcTools is available internationally. Service providers may process information in countries other than the country where a visitor lives. Those countries may have different privacy and data-protection rules.</p>
-                    <p>Where applicable, providers may rely on contractual, legal or technical safeguards for international processing.</p>
+
+                    <p>
+                        StudentCalcTools is available internationally. Service providers may process information in countries other than the country where a visitor lives. Those countries may have different privacy and data-protection rules.
+                    </p>
+
+                    <p>
+                        Where applicable, providers may rely on contractual, legal or technical safeguards for international processing.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="external-links">
@@ -1574,8 +640,14 @@
                         <span class="section-number">15</span>
                         <h2>External links</h2>
                     </div>
-                    <p>The website may link to schools, government resources, service providers or other third-party websites. StudentCalcTools does not control their privacy practices, security or content.</p>
-                    <p>Review the privacy policy of any external website before providing personal information.</p>
+
+                    <p>
+                        The website may link to schools, government resources, service providers or other third-party websites. StudentCalcTools does not control their privacy practices, security or content.
+                    </p>
+
+                    <p>
+                        Review the privacy policy of any external website before providing personal information.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="changes">
@@ -1583,8 +655,14 @@
                         <span class="section-number">16</span>
                         <h2>Changes to this Privacy Policy</h2>
                     </div>
-                    <p>We may update this Privacy Policy when website features, service providers, legal requirements or data practices change.</p>
-                    <p>The revised version will be posted on this page with a new “Last updated” date. Material changes may also be highlighted through an on-site notice where appropriate.</p>
+
+                    <p>
+                        We may update this Privacy Policy when website features, service providers, legal requirements or data practices change.
+                    </p>
+
+                    <p>
+                        The revised version will be posted on this page with a new “Last updated” date. Material changes may also be highlighted through an on-site notice where appropriate.
+                    </p>
                 </section>
 
                 <section class="policy-section" id="contact">
@@ -1592,14 +670,26 @@
                         <span class="section-number">17</span>
                         <h2>Contact us</h2>
                     </div>
+
                     <div class="contact-panel">
                         <h3>Privacy questions and requests</h3>
-                        <p>Contact StudentCalcTools with questions about this policy, personal information submitted through the contact page or a privacy request.</p>
+
+                        <p>
+                            Contact StudentCalcTools with questions about this policy, personal information submitted through the contact page or a privacy request.
+                        </p>
+
                         <a class="contact-email" href="mailto:support@studentcalctools.com">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16v16H4z"></path>
+                                <path d="m4 7 8 6 8-6"></path>
+                            </svg>
+
                             support@studentcalctools.com
                         </a>
-                        <p style="margin-top:14px;">You can also use the <a href="/contact-us/">Contact Us page</a>. Please do not include sensitive personal, academic or financial information.</p>
+
+                        <p class="contact-followup">
+                            You can also use the <a href="/contact-us/">Contact Us page</a>. Please do not include sensitive personal, academic or financial information.
+                        </p>
                     </div>
                 </section>
             </article>
@@ -1607,162 +697,30 @@
 
         <section class="cta-section" aria-labelledby="cta-heading">
             <div class="cta-wrap">
-                <h2 id="cta-heading">Need clarification about your privacy?</h2>
-                <p>Send a focused question about data handling, cookies, calculator inputs or a contact message, and include only the information needed for us to respond.</p>
+                <h2 id="cta-heading">
+                    Need clarification about your privacy?
+                </h2>
+
+                <p>
+                    Send a focused question about data handling, cookies, calculator inputs or a contact message, and include only the information needed for us to respond.
+                </p>
+
                 <div class="cta-actions">
-                    <a class="btn-white" href="/contact-us/">Contact StudentCalcTools</a>
-                    <a class="btn-ghost" href="/calculators/">Browse Calculators</a>
+                    <a class="btn-white" href="/contact-us/">
+                        Contact StudentCalcTools
+                    </a>
+
+                    <a class="btn-ghost" href="/calculators/">
+                        Browse Calculators
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p class="footer-logo">StudentCalc<span>Tools</span></p>
-        <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
+    {% include footer.html %}
 
-        <div class="footer-grid">
-            <div class="footer-col">
-                <p class="footer-title">Grade Tools</p>
-                <a href="/gpa-calculator/">GPA Calculator</a>
-                <a href="/grade-calculator/">Grade Calculator</a>
-                <a href="/final-grade-calculator/">Final Grade Calculator</a>
-                <a href="/cgpa-calculator/">CGPA Calculator</a>
-                <a href="/class-rank-calculator/">Class Rank Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">More Tools</p>
-                <a href="/attendance-calculator/">Attendance Calculator</a>
-                <a href="/study-time-planner/">Study Time Planner</a>
-                <a href="/essay-word-counter/">Essay Word Counter</a>
-                <a href="/student-loan-calculator/">Student Loan Calculator</a>
-                <a href="/scholarship-calculator/">Scholarship Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">Explore</p>
-                <a href="/">Home</a>
-                <a href="/calculators/">All Calculators</a>
-                <a href="/blog/">Student Guides</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">Company</p>
-                <a href="/about-us/">About Us</a>
-                <a href="/contact-us/">Contact Us</a>
-                <a href="/privacy-policy/" aria-current="page">Privacy Policy</a>
-                <a href="/disclaimer/">Disclaimer</a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
-        </div>
-    </footer>
-
-    <script>
-        (function () {
-            const root = document.documentElement;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            const scrollProgress = document.getElementById('scrollProgress');
-            const policyLinks = Array.from(document.querySelectorAll('.policy-nav a'));
-            const policySections = Array.from(document.querySelectorAll('.policy-section[id]'));
-
-            function updateThemeButton() {
-                const current = root.getAttribute('data-theme') || 'light';
-                const target = current === 'dark' ? 'light' : 'dark';
-                const label = 'Switch to ' + target + ' mode';
-                themeToggle.setAttribute('aria-label', label);
-                themeToggle.setAttribute('title', label);
-
-                if (themeColorMeta) {
-                    themeColorMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
-                }
-            }
-
-            updateThemeButton();
-
-            themeToggle.addEventListener('click', function () {
-                const current = root.getAttribute('data-theme') || 'light';
-                const next = current === 'dark' ? 'light' : 'dark';
-                root.setAttribute('data-theme', next);
-
-                try {
-                    localStorage.setItem('theme', next);
-                } catch (error) {}
-
-                updateThemeButton();
-            });
-
-            function closeMenu(returnFocus) {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open navigation menu');
-                menuToggle.textContent = 'Menu';
-
-                if (returnFocus) {
-                    menuToggle.focus();
-                }
-            }
-
-            menuToggle.addEventListener('click', function () {
-                const isOpen = navLinks.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', String(isOpen));
-                menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-                menuToggle.textContent = isOpen ? 'Close' : 'Menu';
-            });
-
-            navLinks.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    closeMenu(false);
-                });
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) {
-                    closeMenu(false);
-                }
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && navLinks.classList.contains('open')) {
-                    closeMenu(true);
-                }
-            });
-
-            function updateScrollProgress() {
-                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-                scrollProgress.style.width = Math.min(100, Math.max(0, progress)) + '%';
-            }
-
-            function updateActiveSection() {
-                let activeId = policySections[0] ? policySections[0].id : '';
-
-                policySections.forEach(function (section) {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= 150) {
-                        activeId = section.id;
-                    }
-                });
-
-                policyLinks.forEach(function (link) {
-                    link.classList.toggle('active', link.getAttribute('href') === '#' + activeId);
-                });
-            }
-
-            window.addEventListener('scroll', function () {
-                updateScrollProgress();
-                updateActiveSection();
-            }, { passive: true });
-
-            window.addEventListener('resize', updateScrollProgress);
-
-            updateScrollProgress();
-            updateActiveSection();
-            document.getElementById('currentYear').textContent = String(new Date().getFullYear());
-        }());
-    </script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/privacy-policy.js"></script>
 </body>
 </html>

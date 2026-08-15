@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -38,1221 +40,16 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:image:alt" content="Contact StudentCalcTools">
 
-    <script>
-        document.documentElement.classList.add('js');
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-        } catch (error) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    </script>
-
+    <script src="/assets/js/theme-init.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QFNEKR7QE0');
-    </script>
+    <script src="/assets/js/analytics.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --blue: #2563eb;
-            --blue-dark: #1d4ed8;
-            --blue-light: #eff6ff;
-            --accent: #06b6d4;
-            --accent-dark: #0891b2;
-            --text: #0f172a;
-            --text-secondary: #334155;
-            --muted: #64748b;
-            --bg: #f8faff;
-            --card-bg: #ffffff;
-            --soft-bg: #f1f5ff;
-            --input-bg: #fbfdff;
-            --border: rgba(37,99,235,0.09);
-            --border-strong: rgba(37,99,235,0.22);
-            --shadow-sm: 0 2px 16px rgba(37,99,235,0.06);
-            --shadow-md: 0 18px 45px rgba(37,99,235,0.13);
-            --shadow-lg: 0 30px 70px rgba(37,99,235,0.18);
-            --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
-            --gradient-brand: linear-gradient(135deg, #2563eb, #06b6d4);
-            --success-bg: #ecfdf5;
-            --success-border: #6ee7b7;
-            --success-text: #065f46;
-            --error-bg: #fef2f2;
-            --error-border: #fecaca;
-            --error-text: #991b1b;
-        }
-
-        [data-theme="dark"] {
-            --blue: #3b82f6;
-            --blue-dark: #60a5fa;
-            --blue-light: rgba(59,130,246,0.15);
-            --accent: #22d3ee;
-            --accent-dark: #22d3ee;
-            --text: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --muted: #94a3b8;
-            --bg: #020617;
-            --card-bg: #0f172a;
-            --soft-bg: #111c30;
-            --input-bg: #0b1425;
-            --border: rgba(59,130,246,0.16);
-            --border-strong: rgba(59,130,246,0.32);
-            --shadow-sm: 0 2px 16px rgba(0,0,0,0.35);
-            --shadow-md: 0 18px 45px rgba(0,0,0,0.48);
-            --shadow-lg: 0 30px 70px rgba(0,0,0,0.58);
-            --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --gradient-brand: linear-gradient(135deg, #3b82f6, #22d3ee);
-            --success-bg: rgba(6,95,70,0.26);
-            --success-border: rgba(52,211,153,0.45);
-            --success-text: #a7f3d0;
-            --error-bg: rgba(127,29,29,0.25);
-            --error-border: rgba(248,113,113,0.45);
-            --error-text: #fecaca;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 92px;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-            transition: background 0.25s ease, color 0.25s ease;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        button,
-        input,
-        select,
-        textarea {
-            font: inherit;
-        }
-
-        button {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        :focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 3px;
-        }
-
-        .skip-link {
-            position: fixed;
-            left: 12px;
-            top: -80px;
-            z-index: 10000;
-            background: var(--blue);
-            color: white;
-            padding: 11px 18px;
-            border-radius: 0 0 10px 10px;
-            text-decoration: none;
-            font-weight: 800;
-            transition: top 0.2s ease;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            z-index: 10000;
-            background: var(--gradient-brand);
-            box-shadow: 0 0 10px rgba(37,99,235,0.45);
-        }
-
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            min-height: 72px;
-            padding: 12px 40px;
-            background: rgba(255,255,255,0.88);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        [data-theme="dark"] .site-nav {
-            background: rgba(2,6,23,0.88);
-        }
-
-        .nav-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--blue);
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .nav-logo-icon {
-            width: 32px;
-            height: 32px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            border-radius: 8px;
-            background: var(--gradient-brand);
-            color: white;
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .brand-name {
-            color: var(--blue);
-        }
-
-        .brand-accent {
-            color: var(--accent);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a[aria-current="page"] {
-            color: var(--blue);
-        }
-
-        .nav-tag {
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: var(--blue-light);
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        .theme-toggle,
-        .menu-toggle {
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-strong);
-            background: var(--blue-light);
-            color: var(--blue);
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .theme-toggle {
-            width: 44px;
-            min-width: 44px;
-            height: 44px;
-            padding: 0;
-            border-radius: 50%;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: translateY(-1px) rotate(8deg);
-            border-color: var(--blue);
-        }
-
-        .theme-icon {
-            width: 20px;
-            height: 20px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .theme-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .theme-icon-sun {
-            display: none;
-            color: #fbbf24;
-        }
-
-        .theme-icon-moon {
-            color: var(--blue);
-        }
-
-        [data-theme="dark"] .theme-icon-sun {
-            display: inline-flex;
-        }
-
-        [data-theme="dark"] .theme-icon-moon {
-            display: none;
-        }
-
-        .menu-toggle {
-            display: none;
-            padding: 0 14px;
-            border-radius: 999px;
-        }
-
-        .page-hero {
-            position: relative;
-            overflow: hidden;
-            padding: 72px 20px 108px;
-            border-bottom: 1px solid var(--border);
-            background: var(--gradient-hero);
-            text-align: center;
-        }
-
-        .hero-mesh {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background:
-                radial-gradient(circle at 20% 25%, rgba(37,99,235,0.16), transparent 38%),
-                radial-gradient(circle at 82% 72%, rgba(6,182,212,0.16), transparent 38%),
-                radial-gradient(circle at 52% 52%, rgba(99,102,241,0.08), transparent 52%);
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 920px;
-            margin: 0 auto;
-        }
-
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-            color: var(--muted);
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .breadcrumb a {
-            color: var(--blue);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 22px;
-            padding: 7px 16px;
-            border: 1px solid var(--border-strong);
-            border-radius: 999px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-sm);
-            color: var(--blue);
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-
-        h1 {
-            max-width: 860px;
-            margin: 0 auto 20px;
-            color: var(--text);
-            font-size: clamp(38px, 6vw, 62px);
-            font-weight: 800;
-            line-height: 1.08;
-            letter-spacing: -1.7px;
-        }
-
-        .gradient-text {
-            background: var(--gradient-brand);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-copy {
-            max-width: 720px;
-            margin: 0 auto;
-            color: var(--text-secondary);
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.75;
-        }
-
-        .summary-section {
-            position: relative;
-            z-index: 5;
-            max-width: 1120px;
-            margin: -58px auto 0;
-            padding: 0 20px;
-        }
-
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .summary-card {
-            padding: 24px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .summary-icon {
-            width: 48px;
-            height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            border-radius: 14px;
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .summary-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .summary-card h2 {
-            margin-bottom: 7px;
-            font-size: 17px;
-            font-weight: 800;
-            letter-spacing: -0.25px;
-        }
-
-        .summary-card p {
-            color: var(--text-secondary);
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        .contact-section {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 76px 20px 88px;
-        }
-
-        .contact-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
-            gap: 26px;
-            align-items: start;
-        }
-
-        .form-card {
-            overflow: hidden;
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-md);
-        }
-
-        .form-card-head {
-            padding: 30px 32px;
-            border-bottom: 1px solid var(--border);
-            background:
-                linear-gradient(135deg, rgba(37,99,235,0.07), rgba(6,182,212,0.07)),
-                var(--card-bg);
-        }
-
-        .eyebrow {
-            display: inline-block;
-            margin-bottom: 9px;
-            color: var(--accent-dark);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-        }
-
-        .form-card-head h2 {
-            margin-bottom: 9px;
-            font-size: clamp(25px, 3vw, 34px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.6px;
-        }
-
-        .form-card-head p {
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.75;
-        }
-
-        .contact-form {
-            padding: 30px 32px 32px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 17px;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-label {
-            display: inline-block;
-            margin-bottom: 7px;
-            color: var(--text);
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .required-mark {
-            color: #dc2626;
-        }
-
-        .optional-mark {
-            color: var(--muted);
-            font-size: 11px;
-            font-weight: 650;
-        }
-
-        .form-control {
-            width: 100%;
-            min-height: 48px;
-            padding: 12px 14px;
-            border: 1px solid var(--border-strong);
-            border-radius: 11px;
-            background: var(--input-bg);
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 500;
-            outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-
-        select.form-control {
-            padding-right: 42px;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image:
-                linear-gradient(45deg, transparent 50%, var(--muted) 50%),
-                linear-gradient(135deg, var(--muted) 50%, transparent 50%);
-            background-position:
-                calc(100% - 19px) 21px,
-                calc(100% - 14px) 21px;
-            background-size: 5px 5px, 5px 5px;
-            background-repeat: no-repeat;
-        }
-
-        textarea.form-control {
-            min-height: 160px;
-            resize: vertical;
-            line-height: 1.7;
-        }
-
-        .form-control::placeholder {
-            color: var(--muted);
-            opacity: 0.82;
-        }
-
-        .form-control:hover {
-            border-color: rgba(37,99,235,0.38);
-        }
-
-        .form-control:focus {
-            border-color: var(--blue);
-            box-shadow: 0 0 0 4px var(--blue-light);
-            background: var(--card-bg);
-        }
-
-        [data-fs-field][aria-invalid="true"] {
-            border-color: #dc2626;
-            box-shadow: 0 0 0 4px rgba(220,38,38,0.1);
-        }
-
-        .field-hint {
-            display: block;
-            margin-top: 6px;
-            color: var(--muted);
-            font-size: 11px;
-            line-height: 1.55;
-        }
-
-        .field-error {
-            display: block;
-            min-height: 18px;
-            margin-top: 5px;
-            color: #dc2626;
-            font-size: 11px;
-            font-weight: 700;
-            line-height: 1.5;
-        }
-
-        [data-theme="dark"] .field-error {
-            color: #fca5a5;
-        }
-
-        .honeypot-field {
-            position: absolute !important;
-            left: -10000px !important;
-            width: 1px !important;
-            height: 1px !important;
-            overflow: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
-
-        .privacy-note {
-            margin: 4px 0 16px;
-            color: var(--muted);
-            font-size: 11px;
-            line-height: 1.65;
-        }
-
-        .privacy-note a {
-            color: var(--blue);
-            font-weight: 800;
-            text-underline-offset: 3px;
-        }
-
-        .submit-button {
-            width: 100%;
-            min-height: 52px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border: 0;
-            border-radius: 12px;
-            background: var(--gradient-brand);
-            color: white;
-            font-size: 15px;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: 0 12px 28px rgba(37,99,235,0.22);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-        }
-
-        .submit-button:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 16px 32px rgba(37,99,235,0.3);
-        }
-
-        .submit-button:disabled {
-            cursor: wait;
-            opacity: 0.7;
-        }
-
-        .submit-button svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .form-status {
-            display: none;
-            margin-bottom: 18px;
-            padding: 14px 16px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-weight: 700;
-            line-height: 1.65;
-        }
-
-        .form-status[data-fs-active] {
-            display: block;
-        }
-
-        .form-success {
-            border: 1px solid var(--success-border);
-            background: var(--success-bg);
-            color: var(--success-text);
-        }
-
-        .form-error {
-            border: 1px solid var(--error-border);
-            background: var(--error-bg);
-            color: var(--error-text);
-        }
-
-        .direct-contact {
-            display: grid;
-            gap: 16px;
-        }
-
-        .contact-panel {
-            padding: 24px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .contact-panel.featured {
-            border-color: var(--border-strong);
-            background:
-                linear-gradient(145deg, rgba(37,99,235,0.08), rgba(6,182,212,0.08)),
-                var(--card-bg);
-            box-shadow: var(--shadow-md);
-        }
-
-        .panel-icon {
-            width: 46px;
-            height: 46px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 14px;
-            border-radius: 14px;
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .panel-icon svg {
-            width: 23px;
-            height: 23px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.9;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .contact-panel h2,
-        .contact-panel h3 {
-            margin-bottom: 8px;
-            font-size: 17px;
-            font-weight: 800;
-            letter-spacing: -0.25px;
-        }
-
-        .contact-panel p {
-            color: var(--text-secondary);
-            font-size: 13px;
-            line-height: 1.75;
-        }
-
-        .email-link {
-            display: inline-block;
-            margin-top: 12px;
-            color: var(--blue);
-            font-size: 13px;
-            font-weight: 800;
-            overflow-wrap: anywhere;
-            text-underline-offset: 3px;
-        }
-
-        .check-list {
-            display: grid;
-            gap: 9px;
-            margin-top: 13px;
-            list-style: none;
-        }
-
-        .check-list li {
-            position: relative;
-            padding-left: 24px;
-            color: var(--text-secondary);
-            font-size: 12px;
-            line-height: 1.65;
-        }
-
-        .check-list li::before {
-            content: '';
-            position: absolute;
-            left: 3px;
-            top: 8px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gradient-brand);
-        }
-
-        .faq-section {
-            padding: 82px 20px;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            background: var(--card-bg);
-        }
-
-        .faq-wrap {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-head {
-            max-width: 720px;
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            margin-bottom: 13px;
-            color: var(--text);
-            font-size: clamp(29px, 4vw, 42px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.7px;
-        }
-
-        .section-copy {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 12px;
-        }
-
-        .faq-item {
-            overflow: hidden;
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            background: var(--bg);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .faq-item:hover {
-            border-color: var(--border-strong);
-        }
-
-        .faq-item.open {
-            border-color: var(--border-strong);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .faq-question {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 19px 21px;
-            border: 0;
-            background: transparent;
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 800;
-            text-align: left;
-            cursor: pointer;
-        }
-
-        .faq-toggle {
-            width: 28px;
-            height: 28px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            border-radius: 50%;
-            background: var(--blue-light);
-            color: var(--blue);
-            transition: transform 0.25s ease;
-        }
-
-        .faq-toggle svg {
-            width: 15px;
-            height: 15px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .faq-item.open .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.32s ease;
-        }
-
-        .faq-answer-inner {
-            padding: 0 21px 19px;
-            color: var(--text-secondary);
-            font-size: 13px;
-            line-height: 1.75;
-        }
-
-        .faq-answer-inner a {
-            color: var(--blue);
-            font-weight: 800;
-            text-underline-offset: 3px;
-        }
-
-        .cta-section {
-            position: relative;
-            overflow: hidden;
-            padding: 74px 20px;
-            background: var(--gradient-brand);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 18% 48%, rgba(255,255,255,0.16), transparent 42%),
-                radial-gradient(circle at 84% 54%, rgba(255,255,255,0.12), transparent 42%);
-            pointer-events: none;
-        }
-
-        .cta-wrap {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .cta-section h2 {
-            margin-bottom: 14px;
-            font-size: clamp(29px, 4.5vw, 44px);
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.7px;
-        }
-
-        .cta-section p {
-            margin-bottom: 26px;
-            font-size: 16px;
-            line-height: 1.75;
-            opacity: 0.96;
-        }
-
-        .cta-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn-white,
-        .btn-ghost {
-            min-height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 22px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 800;
-            text-decoration: none;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .btn-white {
-            border: 1px solid rgba(255,255,255,0.8);
-            background: white;
-            color: #1d4ed8;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-        }
-
-        .btn-ghost {
-            border: 1px solid rgba(255,255,255,0.55);
-            background: rgba(255,255,255,0.1);
-            color: white;
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-white:hover,
-        .btn-ghost:hover {
-            transform: translateY(-2px);
-        }
-
-        footer {
-            padding: 60px 20px 30px;
-            background: #0f172a;
-            color: rgba(255,255,255,0.56);
-            text-align: center;
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        [data-theme="dark"] footer {
-            background: #020617;
-        }
-
-        .footer-logo {
-            margin-bottom: 8px;
-            color: white;
-            font-size: 22px;
-            font-weight: 800;
-        }
-
-        .footer-logo span {
-            color: var(--accent);
-        }
-
-        .footer-tagline {
-            margin-bottom: 36px;
-            font-size: 14px;
-        }
-
-        .footer-grid {
-            max-width: 920px;
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 24px;
-            margin: 0 auto 40px;
-            text-align: left;
-        }
-
-        .footer-title {
-            margin-bottom: 14px;
-            color: white;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .footer-col a {
-            display: block;
-            margin-bottom: 9px;
-            color: rgba(255,255,255,0.56);
-            font-size: 13px;
-            text-decoration: none;
-        }
-
-        .footer-col a:hover,
-        .footer-col a[aria-current="page"] {
-            color: white;
-        }
-
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-bottom span {
-            color: var(--accent);
-        }
-
-        @media (max-width: 960px) {
-            .contact-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .direct-contact {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 860px) {
-            .site-nav {
-                padding: 10px 16px;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: calc(100% + 8px);
-                left: 14px;
-                right: 14px;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                padding: 10px;
-                border: 1px solid var(--border-strong);
-                border-radius: 16px;
-                background: var(--card-bg);
-                box-shadow: var(--shadow-md);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 13px 14px;
-                border-radius: 10px;
-                color: var(--text);
-            }
-
-            .nav-links a:hover,
-            .nav-links a[aria-current="page"] {
-                background: var(--blue-light);
-                color: var(--blue);
-            }
-
-            .nav-tag {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: inline-flex;
-            }
-
-            .summary-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 720px) {
-            .direct-contact {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .site-nav {
-                min-height: 64px;
-                padding: 10px 12px;
-            }
-
-            .nav-logo {
-                font-size: 18px;
-            }
-
-            .nav-logo-icon {
-                width: 30px;
-                height: 30px;
-            }
-
-            .page-hero {
-                padding: 50px 16px 98px;
-            }
-
-            h1 {
-                font-size: clamp(34px, 10vw, 46px);
-                letter-spacing: -1.2px;
-            }
-
-            .hero-copy {
-                font-size: 16px;
-            }
-
-            .summary-section {
-                padding: 0 16px;
-            }
-
-            .contact-section {
-                padding: 62px 16px 70px;
-            }
-
-            .form-card-head,
-            .contact-form {
-                padding: 25px 20px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .faq-section {
-                padding: 68px 16px;
-            }
-
-            .cta-section {
-                padding: 62px 16px;
-            }
-
-            .cta-actions {
-                display: grid;
-                grid-template-columns: 1fr;
-                max-width: 360px;
-                margin: 0 auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/contact-us.css">
 
     <script type="application/ld+json">
     {
@@ -1306,7 +103,7 @@
           "breadcrumb": {
             "@id": "https://studentcalctools.com/contact-us/#breadcrumb"
           },
-          "dateModified": "2026-08-02",
+          "dateModified": "2026-08-14",
           "inLanguage": "en-US"
         },
         {
@@ -1361,40 +158,15 @@
     }
     </script>
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-            <span class="nav-logo-icon" aria-hidden="true">S</span>
-            <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
-        </a>
-
-        <div class="nav-right">
-            <div class="nav-links" id="navLinks">
-                <a href="/">Home</a>
-                <a href="/calculators/">Calculators</a>
-                <a href="/blog/">Blog</a>
-                <a href="/about-us/">About</a>
-                <a href="/contact-us/" aria-current="page">Contact</a>
-            </div>
-            <span class="nav-tag">Free to use</span>
-            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
-            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
-                </span>
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
-                </span>
-            </button>
-        </div>
-    </nav>
+    {% include header.html %}
 
     <main id="main-content">
+
         <section class="page-hero" aria-labelledby="page-heading">
             <div class="hero-mesh" aria-hidden="true"></div>
+
             <div class="hero-inner">
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="/">Home</a>
@@ -1407,7 +179,10 @@
                     Contact StudentCalcTools
                 </div>
 
-                <h1 id="page-heading">Send a question, report an issue or <span class="gradient-text">suggest a tool</span></h1>
+                <h1 id="page-heading">
+                    Send a question, report an issue or
+                    <span class="gradient-text">suggest a tool</span>
+                </h1>
 
                 <p class="hero-copy">
                     Use the form for calculator problems, improvement ideas, general questions and other feedback related to StudentCalcTools.
@@ -1417,39 +192,70 @@
 
         <section class="summary-section" aria-label="Contact options">
             <div class="summary-grid">
+
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M5 19h14V5H5z"></path><path d="m5 8 7 5 7-5"></path></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 19h14V5H5z"></path>
+                            <path d="m5 8 7 5 7-5"></path>
+                        </svg>
                     </span>
+
                     <h2>General questions</h2>
-                    <p>Ask about a calculator, page explanation or how to interpret a result.</p>
+
+                    <p>
+                        Ask about a calculator, page explanation or how to interpret a result.
+                    </p>
                 </article>
 
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M8 9h8M8 13h5"></path><path d="M4 4h16v16H4z"></path></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 9h8M8 13h5"></path>
+                            <path d="M4 4h16v16H4z"></path>
+                        </svg>
                     </span>
+
                     <h2>Issue reports</h2>
-                    <p>Share reproducible details when a calculator appears to return an unexpected result.</p>
+
+                    <p>
+                        Share reproducible details when a calculator appears to return an unexpected result.
+                    </p>
                 </article>
 
                 <article class="summary-card">
                     <span class="summary-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="9"></circle></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3v18M3 12h18"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
                     </span>
+
                     <h2>Tool suggestions</h2>
-                    <p>Describe a student calculation or planning task that would benefit from a new tool.</p>
+
+                    <p>
+                        Describe a student calculation or planning task that would benefit from a new tool.
+                    </p>
                 </article>
+
             </div>
         </section>
 
         <section class="contact-section" aria-labelledby="form-heading">
             <div class="contact-layout">
+
                 <article class="form-card">
+
                     <header class="form-card-head">
                         <span class="eyebrow">Contact Form</span>
-                        <h2 id="form-heading">Send StudentCalcTools a message</h2>
-                        <p>Required fields are marked with an asterisk. Include only the information needed to review your message.</p>
+
+                        <h2 id="form-heading">
+                            Send StudentCalcTools a message
+                        </h2>
+
+                        <p>
+                            Required fields are marked with an asterisk. Include only the information needed to review your message.
+                        </p>
                     </header>
 
                     <form
@@ -1457,29 +263,55 @@
                         class="contact-form"
                         action="https://formspree.io/f/mbdnvpqz"
                         method="POST"
-                        novalidate
                     >
-                        <div class="form-status form-success" data-fs-success role="status" aria-live="polite">
+
+                        <div
+                            class="form-status form-success"
+                            data-fs-success
+                            role="status"
+                            aria-live="polite">
                             Your message was sent successfully. Thank you for contacting StudentCalcTools.
                         </div>
 
-                        <div class="form-status form-error" data-fs-error role="alert" aria-live="assertive">
+                        <div
+                            class="form-status form-error"
+                            data-fs-error
+                            role="alert"
+                            aria-live="assertive">
                             The message could not be sent. Check the highlighted fields and try again. You can also email support@studentcalctools.com.
                         </div>
 
                         <div class="honeypot-field" aria-hidden="true">
-                            <label for="contact-company">Leave this field empty</label>
-                            <input type="text" id="contact-company" name="_gotcha" tabindex="-1" autocomplete="off">
+                            <label for="contact-company">
+                                Leave this field empty
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contact-company"
+                                name="_gotcha"
+                                tabindex="-1"
+                                autocomplete="off">
                         </div>
 
-                        <input type="hidden" name="form_name" value="StudentCalcTools Contact Us">
-                        <input type="hidden" name="source_page" value="Contact Us">
+                        <input
+                            type="hidden"
+                            name="form_name"
+                            value="StudentCalcTools Contact Us">
+
+                        <input
+                            type="hidden"
+                            name="source_page"
+                            value="Contact Us">
 
                         <div class="form-row">
+
                             <div class="form-group">
                                 <label class="form-label" for="contact-name">
-                                    Name <span class="required-mark" aria-hidden="true">*</span>
+                                    Name
+                                    <span class="required-mark" aria-hidden="true">*</span>
                                 </label>
+
                                 <input
                                     class="form-control"
                                     type="text"
@@ -1491,15 +323,20 @@
                                     maxlength="80"
                                     required
                                     data-fs-field
-                                    aria-describedby="name-error"
-                                >
-                                <span class="field-error" id="name-error" data-fs-error="name"></span>
+                                    aria-describedby="name-error">
+
+                                <span
+                                    class="field-error"
+                                    id="name-error"
+                                    data-fs-error="name"></span>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label" for="contact-email">
-                                    Email address <span class="required-mark" aria-hidden="true">*</span>
+                                    Email address
+                                    <span class="required-mark" aria-hidden="true">*</span>
                                 </label>
+
                                 <input
                                     class="form-control"
                                     type="email"
@@ -1511,40 +348,73 @@
                                     maxlength="160"
                                     required
                                     data-fs-field
-                                    aria-describedby="email-error"
-                                >
-                                <span class="field-error" id="email-error" data-fs-error="email"></span>
+                                    aria-describedby="email-error">
+
+                                <span
+                                    class="field-error"
+                                    id="email-error"
+                                    data-fs-error="email"></span>
                             </div>
+
                         </div>
 
                         <div class="form-row">
+
                             <div class="form-group">
                                 <label class="form-label" for="contact-subject">
-                                    Subject <span class="required-mark" aria-hidden="true">*</span>
+                                    Subject
+                                    <span class="required-mark" aria-hidden="true">*</span>
                                 </label>
+
                                 <select
                                     class="form-control"
                                     id="contact-subject"
                                     name="subject"
                                     required
                                     data-fs-field
-                                    aria-describedby="subject-error"
-                                >
-                                    <option value="" selected disabled>Select a subject</option>
-                                    <option value="General Question">General Question</option>
-                                    <option value="Calculator Bug Report">Calculator Bug Report</option>
-                                    <option value="Tool Suggestion">Tool Suggestion</option>
-                                    <option value="Content Correction">Content Correction</option>
-                                    <option value="Privacy Question">Privacy Question</option>
-                                    <option value="Other">Other</option>
+                                    aria-describedby="subject-error">
+
+                                    <option value="" selected disabled>
+                                        Select a subject
+                                    </option>
+
+                                    <option value="General Question">
+                                        General Question
+                                    </option>
+
+                                    <option value="Calculator Bug Report">
+                                        Calculator Bug Report
+                                    </option>
+
+                                    <option value="Tool Suggestion">
+                                        Tool Suggestion
+                                    </option>
+
+                                    <option value="Content Correction">
+                                        Content Correction
+                                    </option>
+
+                                    <option value="Privacy Question">
+                                        Privacy Question
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
                                 </select>
-                                <span class="field-error" id="subject-error" data-fs-error="subject"></span>
+
+                                <span
+                                    class="field-error"
+                                    id="subject-error"
+                                    data-fs-error="subject"></span>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label" for="contact-tool">
-                                    Calculator or page <span class="optional-mark">(optional)</span>
+                                    Calculator or page
+                                    <span class="optional-mark">(optional)</span>
                                 </label>
+
                                 <input
                                     class="form-control"
                                     type="text"
@@ -1552,16 +422,21 @@
                                     name="calculator_or_page"
                                     placeholder="Example: GPA Calculator"
                                     maxlength="120"
-                                    data-fs-field
-                                >
-                                <span class="field-hint">Add the relevant calculator or page name when applicable.</span>
+                                    data-fs-field>
+
+                                <span class="field-hint">
+                                    Add the relevant calculator or page name when applicable.
+                                </span>
                             </div>
+
                         </div>
 
                         <div class="form-group">
                             <label class="form-label" for="contact-message">
-                                Message <span class="required-mark" aria-hidden="true">*</span>
+                                Message
+                                <span class="required-mark" aria-hidden="true">*</span>
                             </label>
+
                             <textarea
                                 class="form-control"
                                 id="contact-message"
@@ -1571,39 +446,76 @@
                                 maxlength="3000"
                                 required
                                 data-fs-field
-                                aria-describedby="message-hint message-error"
-                            ></textarea>
-                            <span class="field-hint" id="message-hint">Do not include passwords, student identification numbers, official transcripts, medical information or sensitive financial details.</span>
-                            <span class="field-error" id="message-error" data-fs-error="message"></span>
+                                aria-describedby="message-hint message-error"></textarea>
+
+                            <span class="field-hint" id="message-hint">
+                                Do not include passwords, student identification numbers, official transcripts, medical information or sensitive financial details.
+                            </span>
+
+                            <span
+                                class="field-error"
+                                id="message-error"
+                                data-fs-error="message"></span>
                         </div>
 
                         <p class="privacy-note">
-                            By submitting this form, you provide the information above so StudentCalcTools can review and respond to your message. See the <a href="/privacy-policy/">Privacy Policy</a>.
+                            This form is processed by Formspree. The information you submit is sent to Formspree and stored in the Formspree account used for this contact form so StudentCalcTools can review and respond to your message. See the
+                            <a href="/privacy-policy/">Privacy Policy</a>.
                         </p>
 
-                        <button class="submit-button" type="submit" data-fs-submit-btn>
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                        <button
+                            class="submit-button"
+                            type="submit"
+                            data-fs-submit-btn>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                                <path d="M22 2 11 13"></path>
+                            </svg>
+
                             Send Message
                         </button>
+
                     </form>
                 </article>
 
                 <aside class="direct-contact" aria-label="Contact guidance">
+
                     <section class="contact-panel featured">
                         <span class="panel-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M5 19h14V5H5z"></path><path d="m5 8 7 5 7-5"></path></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5 19h14V5H5z"></path>
+                                <path d="m5 8 7 5 7-5"></path>
+                            </svg>
                         </span>
+
                         <h2>Direct email</h2>
-                        <p>Use the support address when you prefer to contact StudentCalcTools outside the form.</p>
-                        <a class="email-link" href="mailto:support@studentcalctools.com">support@studentcalctools.com</a>
+
+                        <p>
+                            Use the support address when you prefer to contact StudentCalcTools outside the form.
+                        </p>
+
+                        <a
+                            class="email-link"
+                            href="mailto:support@studentcalctools.com">
+                            support@studentcalctools.com
+                        </a>
                     </section>
 
                     <section class="contact-panel">
                         <span class="panel-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M8 9h8M8 13h5"></path></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 5h16v14H4z"></path>
+                                <path d="M8 9h8M8 13h5"></path>
+                            </svg>
                         </span>
+
                         <h3>For bug reports</h3>
-                        <p>Specific details make calculator issues easier to reproduce.</p>
+
+                        <p>
+                            Specific details make calculator issues easier to reproduce.
+                        </p>
+
                         <ul class="check-list">
                             <li>Calculator or page name</li>
                             <li>Values you entered</li>
@@ -1614,33 +526,61 @@
 
                     <section class="contact-panel">
                         <span class="panel-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="9"></circle></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3v18M3 12h18"></path>
+                                <circle cx="12" cy="12" r="9"></circle>
+                            </svg>
                         </span>
+
                         <h3>For tool suggestions</h3>
-                        <p>Explain the calculation, required inputs and result that would help students complete the task.</p>
+
+                        <p>
+                            Explain the calculation, required inputs and result that would help students complete the task.
+                        </p>
                     </section>
+
                 </aside>
+
             </div>
         </section>
 
         <section class="faq-section" aria-labelledby="faq-heading">
             <div class="faq-wrap">
+
                 <div class="section-head">
                     <span class="eyebrow">Contact FAQ</span>
-                    <h2 class="section-title" id="faq-heading">Before sending your message</h2>
-                    <p class="section-copy">These answers explain what information is useful and where official results must be confirmed.</p>
+
+                    <h2 class="section-title" id="faq-heading">
+                        Before sending your message
+                    </h2>
+
+                    <p class="section-copy">
+                        These answers explain what information is useful and where official results must be confirmed.
+                    </p>
                 </div>
 
                 <div class="faq-list">
+
                     <article class="faq-item">
                         <h3>
-                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
-                                <span>What should I include in a calculator bug report?</span>
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="faq-answer-1">
+
+                                <span>
+                                    What should I include in a calculator bug report?
+                                </span>
+
                                 <span class="faq-toggle" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg>
                                 </span>
                             </button>
                         </h3>
+
                         <div class="faq-answer" id="faq-answer-1">
                             <div class="faq-answer-inner">
                                 Include the calculator name, the values entered, the result shown, the result expected, and the browser or device used. Do not send passwords, student identification numbers, official transcripts or sensitive financial information.
@@ -1650,13 +590,24 @@
 
                     <article class="faq-item">
                         <h3>
-                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
-                                <span>Can I suggest a new calculator?</span>
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="faq-answer-2">
+
+                                <span>
+                                    Can I suggest a new calculator?
+                                </span>
+
                                 <span class="faq-toggle" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg>
                                 </span>
                             </button>
                         </h3>
+
                         <div class="faq-answer" id="faq-answer-2">
                             <div class="faq-answer-inner">
                                 Yes. Select “Tool Suggestion” in the form and explain the calculation, the inputs a student would have, and the result the tool should provide.
@@ -1666,200 +617,67 @@
 
                     <article class="faq-item">
                         <h3>
-                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
-                                <span>Can StudentCalcTools confirm an official grade, class rank or financial result?</span>
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="faq-answer-3">
+
+                                <span>
+                                    Can StudentCalcTools confirm an official grade, class rank or financial result?
+                                </span>
+
                                 <span class="faq-toggle" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 5v14M5 12h14"></path>
+                                    </svg>
                                 </span>
                             </button>
                         </h3>
+
                         <div class="faq-answer" id="faq-answer-3">
                             <div class="faq-answer-inner">
-                                No. Calculator results are estimates. Confirm official grades, rankings, loan terms and scholarship decisions with the relevant school, institution or provider. Read the <a href="/disclaimer/">Disclaimer</a> for additional details.
+                                No. Calculator results are estimates. Confirm official grades, rankings, loan terms and scholarship decisions with the relevant school, institution or provider. Read the
+                                <a href="/disclaimer/">Disclaimer</a>
+                                for additional details.
                             </div>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
 
         <section class="cta-section" aria-labelledby="cta-heading">
             <div class="cta-wrap">
-                <h2 id="cta-heading">Looking for a student calculator?</h2>
-                <p>Browse grade, attendance, study-planning, writing and college-cost tools in the complete calculator directory.</p>
+
+                <h2 id="cta-heading">
+                    Looking for a student calculator?
+                </h2>
+
+                <p>
+                    Browse grade, attendance, study-planning, writing and college-cost tools in the complete calculator directory.
+                </p>
+
                 <div class="cta-actions">
-                    <a class="btn-white" href="/calculators/">Browse All Calculators</a>
-                    <a class="btn-ghost" href="/about-us/">About StudentCalcTools</a>
+                    <a class="btn-white" href="/calculators/">
+                        Browse All Calculators
+                    </a>
+
+                    <a class="btn-ghost" href="/about-us/">
+                        About StudentCalcTools
+                    </a>
                 </div>
+
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p class="footer-logo">StudentCalc<span>Tools</span></p>
-        <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
+    {% include footer.html %}
 
-        <div class="footer-grid">
-            <div class="footer-col">
-                <p class="footer-title">Grade Tools</p>
-                <a href="/gpa-calculator/">GPA Calculator</a>
-                <a href="/grade-calculator/">Grade Calculator</a>
-                <a href="/final-grade-calculator/">Final Grade Calculator</a>
-                <a href="/cgpa-calculator/">CGPA Calculator</a>
-                <a href="/class-rank-calculator/">Class Rank Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">More Tools</p>
-                <a href="/attendance-calculator/">Attendance Calculator</a>
-                <a href="/study-time-planner/">Study Time Planner</a>
-                <a href="/essay-word-counter/">Essay Word Counter</a>
-                <a href="/student-loan-calculator/">Student Loan Calculator</a>
-                <a href="/scholarship-calculator/">Scholarship Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">Explore</p>
-                <a href="/">Home</a>
-                <a href="/calculators/">All Calculators</a>
-                <a href="/blog/">Student Guides</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-title">Company</p>
-                <a href="/about-us/">About Us</a>
-                <a href="/contact-us/" aria-current="page">Contact Us</a>
-                <a href="/privacy-policy/">Privacy Policy</a>
-                <a href="/disclaimer/">Disclaimer</a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
-        </div>
-    </footer>
-
-    <script>
-        (function () {
-            const root = document.documentElement;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            const scrollProgress = document.getElementById('scrollProgress');
-
-            function updateThemeButton() {
-                const current = root.getAttribute('data-theme') || 'light';
-                const target = current === 'dark' ? 'light' : 'dark';
-                const label = 'Switch to ' + target + ' mode';
-                themeToggle.setAttribute('aria-label', label);
-                themeToggle.setAttribute('title', label);
-
-                if (themeColorMeta) {
-                    themeColorMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
-                }
-            }
-
-            updateThemeButton();
-
-            themeToggle.addEventListener('click', function () {
-                const current = root.getAttribute('data-theme') || 'light';
-                const next = current === 'dark' ? 'light' : 'dark';
-                root.setAttribute('data-theme', next);
-
-                try {
-                    localStorage.setItem('theme', next);
-                } catch (error) {}
-
-                updateThemeButton();
-            });
-
-            function closeMenu(returnFocus) {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open navigation menu');
-                menuToggle.textContent = 'Menu';
-
-                if (returnFocus) {
-                    menuToggle.focus();
-                }
-            }
-
-            menuToggle.addEventListener('click', function () {
-                const isOpen = navLinks.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', String(isOpen));
-                menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-                menuToggle.textContent = isOpen ? 'Close' : 'Menu';
-            });
-
-            navLinks.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    closeMenu(false);
-                });
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) {
-                    closeMenu(false);
-                }
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && navLinks.classList.contains('open')) {
-                    closeMenu(true);
-                }
-            });
-
-            function updateScrollProgress() {
-                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-                scrollProgress.style.width = Math.min(100, Math.max(0, progress)) + '%';
-            }
-
-            window.addEventListener('scroll', updateScrollProgress, { passive: true });
-            window.addEventListener('resize', updateScrollProgress);
-            updateScrollProgress();
-
-            document.querySelectorAll('.faq-question').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    const item = button.closest('.faq-item');
-                    const answer = document.getElementById(button.getAttribute('aria-controls'));
-                    const isOpen = button.getAttribute('aria-expanded') === 'true';
-
-                    document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(function (openButton) {
-                        if (openButton !== button) {
-                            const openItem = openButton.closest('.faq-item');
-                            const openAnswer = document.getElementById(openButton.getAttribute('aria-controls'));
-                            openButton.setAttribute('aria-expanded', 'false');
-                            openItem.classList.remove('open');
-                            openAnswer.style.maxHeight = null;
-                        }
-                    });
-
-                    button.setAttribute('aria-expanded', String(!isOpen));
-                    item.classList.toggle('open', !isOpen);
-                    answer.style.maxHeight = !isOpen ? answer.scrollHeight + 'px' : null;
-                });
-            });
-
-            document.getElementById('currentYear').textContent = String(new Date().getFullYear());
-        }());
-
-        window.formspree =
-            window.formspree ||
-            function () {
-                (formspree.q = formspree.q || []).push(arguments);
-            };
-
-        formspree('initForm', {
-            formElement: '#contact-form',
-            formId: 'mbdnvpqz',
-            onSuccess: function () {
-                if (typeof gtag === 'function') {
-                    gtag('event', 'contact_form_submit', {
-                        form_name: 'StudentCalcTools Contact Us'
-                    });
-                }
-            }
-        });
-    </script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/contact-us.js"></script>
     <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

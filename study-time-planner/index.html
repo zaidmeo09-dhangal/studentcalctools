@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -33,24 +35,10 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="twitter:image:alt" content="StudentCalcTools study schedule planner">
 
-    <script>
-        document.documentElement.classList.add('js');
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-        } catch (error) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    </script>
+    <script src="/assets/js/theme-init.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QFNEKR7QE0');
-    </script>
+    <script src="/assets/js/analytics.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +88,7 @@
       "mainEntity": {
         "@id": "https://studentcalctools.com/study-time-planner/#application"
       },
-      "dateModified": "2026-08-02",
+      "dateModified": "2026-08-14",
       "inLanguage": "en-US"
     },
     {
@@ -258,6 +246,7 @@
             --muted:#64748b;
             --bg:#f7f9fe;
             --card:#ffffff;
+            --card-bg:#ffffff;
             --soft:#f8fafc;
             --border:rgba(37,99,235,.10);
             --border-strong:rgba(37,99,235,.24);
@@ -267,6 +256,7 @@
             --shadow-sm:0 3px 18px rgba(37,99,235,.06);
             --shadow-md:0 18px 50px rgba(37,99,235,.14);
             --gradient:linear-gradient(135deg,#2563eb,#06b6d4);
+            --gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4);
             --hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);
         }
 
@@ -281,6 +271,7 @@
             --muted:#94a3b8;
             --bg:#020617;
             --card:#0f172a;
+            --card-bg:#0f172a;
             --soft:#111c31;
             --border:rgba(96,165,250,.14);
             --border-strong:rgba(96,165,250,.30);
@@ -290,11 +281,21 @@
             --shadow-sm:0 3px 18px rgba(0,0,0,.35);
             --shadow-md:0 18px 50px rgba(0,0,0,.50);
             --gradient:linear-gradient(135deg,#3b82f6,#22d3ee);
+            --gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee);
             --hero:linear-gradient(135deg,#0f172a 0%,#162238 100%);
         }
 
-        * { box-sizing:border-box; margin:0; padding:0; }
-        html { scroll-behavior:smooth; scroll-padding-top:90px; }
+        * {
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+        html {
+            scroll-behavior:smooth;
+            scroll-padding-top:90px;
+        }
+
         body {
             min-width:320px;
             overflow-x:hidden;
@@ -305,123 +306,24 @@
             transition:background .25s ease,color .25s ease;
         }
 
-        a { color:inherit; }
-        button,input,select { font:inherit; }
-        button { touch-action:manipulation; }
-        :focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
-
-        .skip-link {
-            position:fixed;
-            left:14px;
-            top:-90px;
-            z-index:10000;
-            padding:11px 18px;
-            border-radius:0 0 10px 10px;
-            background:var(--blue);
-            color:#fff;
-            font-weight:800;
-            text-decoration:none;
-            transition:top .2s ease;
-        }
-        .skip-link:focus { top:0; }
-
-        .scroll-progress {
-            position:fixed;
-            top:0;
-            left:0;
-            z-index:10001;
-            width:0;
-            height:3px;
-            background:var(--gradient);
+        a {
+            color:inherit;
         }
 
-        .site-nav {
-            position:sticky;
-            top:0;
-            z-index:1000;
-            min-height:72px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:20px;
-            padding:12px 40px;
-            border-bottom:1px solid var(--border);
-            background:rgba(255,255,255,.88);
-            backdrop-filter:blur(20px);
-            -webkit-backdrop-filter:blur(20px);
-        }
-        [data-theme="dark"] .site-nav { background:rgba(2,6,23,.88); }
-
-        .nav-logo {
-            display:inline-flex;
-            align-items:center;
-            gap:9px;
-            color:var(--blue);
-            font-size:22px;
-            font-weight:800;
-            letter-spacing:-.5px;
-            text-decoration:none;
-            white-space:nowrap;
-        }
-        .nav-logo-icon {
-            width:34px;
-            height:34px;
-            display:grid;
-            place-items:center;
-            border-radius:9px;
-            background:var(--gradient);
-            color:#fff;
-            font-size:14px;
-        }
-        .brand-accent { color:var(--accent); }
-        .nav-right { display:flex; align-items:center; gap:12px; }
-        .nav-links { display:flex; align-items:center; gap:17px; }
-        .nav-links a {
-            color:var(--muted);
-            font-size:14px;
-            font-weight:700;
-            text-decoration:none;
-        }
-        .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--blue); }
-        .nav-tag {
-            padding:6px 13px;
-            border-radius:999px;
-            background:var(--blue-light);
-            color:var(--blue);
-            font-size:12px;
-            font-weight:800;
-            white-space:nowrap;
+        button,
+        input,
+        select {
+            font:inherit;
         }
 
-        .menu-toggle,.theme-toggle {
-            min-height:44px;
-            border:1px solid var(--border-strong);
-            background:var(--blue-light);
-            color:var(--blue);
-            cursor:pointer;
-            font-size:13px;
-            font-weight:800;
+        button {
+            touch-action:manipulation;
         }
-        .menu-toggle { display:none; padding:0 14px; border-radius:999px; }
-        .theme-toggle {
-            width:44px;
-            height:44px;
-            display:inline-grid;
-            place-items:center;
-            border-radius:50%;
+
+        :focus-visible {
+            outline:3px solid var(--accent);
+            outline-offset:3px;
         }
-        .theme-icon,.theme-icon svg { width:20px; height:20px; }
-        .theme-icon { display:inline-grid; place-items:center; }
-        .theme-icon svg {
-            fill:none;
-            stroke:currentColor;
-            stroke-width:1.9;
-            stroke-linecap:round;
-            stroke-linejoin:round;
-        }
-        .theme-icon-sun { display:none; color:#fbbf24; }
-        [data-theme="dark"] .theme-icon-sun { display:grid; }
-        [data-theme="dark"] .theme-icon-moon { display:none; }
 
         .hero {
             position:relative;
@@ -431,6 +333,7 @@
             background:var(--hero);
             text-align:center;
         }
+
         .hero::before {
             content:'';
             position:absolute;
@@ -440,7 +343,14 @@
                 radial-gradient(circle at 84% 68%,rgba(6,182,212,.13),transparent 38%);
             pointer-events:none;
         }
-        .hero-inner { position:relative; z-index:1; max-width:880px; margin:auto; }
+
+        .hero-inner {
+            position:relative;
+            z-index:1;
+            max-width:880px;
+            margin:auto;
+        }
+
         .breadcrumb {
             display:flex;
             justify-content:center;
@@ -451,7 +361,12 @@
             font-size:13px;
             font-weight:700;
         }
-        .breadcrumb a { color:var(--blue); text-decoration:none; }
+
+        .breadcrumb a {
+            color:var(--blue);
+            text-decoration:none;
+        }
+
         .hero-kicker {
             display:inline-flex;
             align-items:center;
@@ -467,6 +382,7 @@
             text-transform:uppercase;
             letter-spacing:1.2px;
         }
+
         .hero h1 {
             max-width:800px;
             margin:0 auto 18px;
@@ -474,12 +390,14 @@
             line-height:1.08;
             letter-spacing:-2px;
         }
+
         .gradient-text {
             background:var(--gradient);
             -webkit-background-clip:text;
             background-clip:text;
             -webkit-text-fill-color:transparent;
         }
+
         .hero-copy {
             max-width:750px;
             margin:0 auto;
@@ -487,6 +405,7 @@
             font-size:clamp(16px,2vw,19px);
             line-height:1.75;
         }
+
         .hero-points {
             display:flex;
             justify-content:center;
@@ -494,6 +413,7 @@
             gap:10px;
             margin-top:26px;
         }
+
         .hero-point {
             display:inline-flex;
             align-items:center;
@@ -507,6 +427,7 @@
             font-weight:750;
             box-shadow:var(--shadow-sm);
         }
+
         .hero-point svg {
             width:16px;
             height:16px;
@@ -522,6 +443,7 @@
             margin:auto;
             padding:72px 20px;
         }
+
         .planner-card {
             overflow:hidden;
             border:1px solid var(--border);
@@ -529,6 +451,7 @@
             background:var(--card);
             box-shadow:var(--shadow-md);
         }
+
         .planner-header {
             display:flex;
             justify-content:space-between;
@@ -537,16 +460,19 @@
             border-bottom:1px solid var(--border);
             background:linear-gradient(135deg,rgba(37,99,235,.07),rgba(6,182,212,.06));
         }
+
         .planner-header h2 {
             margin-bottom:7px;
             font-size:24px;
             line-height:1.25;
         }
+
         .planner-header p {
             max-width:760px;
             color:var(--muted);
             font-size:14px;
         }
+
         .local-badge {
             height:max-content;
             display:inline-flex;
@@ -562,14 +488,21 @@
             white-space:nowrap;
         }
 
-        .planner-body { padding:30px 32px 34px; }
+        .planner-body {
+            padding:30px 32px 34px;
+        }
+
         .settings-grid {
             display:grid;
             grid-template-columns:repeat(5,minmax(0,1fr));
             gap:14px;
             margin-bottom:26px;
         }
-        .field-group { min-width:0; }
+
+        .field-group {
+            min-width:0;
+        }
+
         .field-label {
             display:block;
             margin-bottom:7px;
@@ -577,6 +510,7 @@
             font-size:12px;
             font-weight:800;
         }
+
         .field-help {
             display:block;
             margin-top:6px;
@@ -584,6 +518,7 @@
             font-size:10px;
             line-height:1.45;
         }
+
         .control {
             width:100%;
             min-height:48px;
@@ -595,8 +530,18 @@
             font-size:13px;
             font-weight:650;
         }
-        .control:focus { border-color:var(--blue); outline:none; box-shadow:0 0 0 4px var(--blue-light); }
-        .control[aria-invalid="true"] { border-color:var(--danger); box-shadow:0 0 0 4px rgba(185,28,28,.10); }
+
+        .control:focus {
+            border-color:var(--blue);
+            outline:none;
+            box-shadow:0 0 0 4px var(--blue-light);
+        }
+
+        .control[aria-invalid="true"] {
+            border-color:var(--danger);
+            box-shadow:0 0 0 4px rgba(185,28,28,.10);
+        }
+
         .field-error {
             display:block;
             margin-top:5px;
@@ -611,12 +556,15 @@
             border-radius:16px;
             background:var(--soft);
         }
-        .subject-header,.subject-row {
+
+        .subject-header,
+        .subject-row {
             display:grid;
             grid-template-columns:1.6fr .8fr .9fr .9fr 1.1fr 46px;
             gap:10px;
             align-items:center;
         }
+
         .subject-header {
             padding:12px 14px 8px;
             color:var(--muted);
@@ -625,6 +573,7 @@
             text-transform:uppercase;
             letter-spacing:.9px;
         }
+
         .subject-row {
             margin:0 12px 11px;
             padding:13px;
@@ -632,8 +581,15 @@
             border-radius:13px;
             background:var(--card);
         }
-        .subject-row:first-child { margin-top:2px; }
-        .subject-row .control { background:var(--card); }
+
+        .subject-row:first-child {
+            margin-top:2px;
+        }
+
+        .subject-row .control {
+            background:var(--card);
+        }
+
         .remove-btn {
             width:46px;
             height:46px;
@@ -645,7 +601,13 @@
             color:var(--muted);
             cursor:pointer;
         }
-        .remove-btn:hover { border-color:#ef4444; background:rgba(239,68,68,.10); color:#ef4444; }
+
+        .remove-btn:hover {
+            border-color:#ef4444;
+            background:rgba(239,68,68,.10);
+            color:#ef4444;
+        }
+
         .remove-btn svg {
             width:18px;
             height:18px;
@@ -665,7 +627,10 @@
             font-size:12px;
             line-height:1.65;
         }
-        .planner-note strong { color:var(--text); }
+
+        .planner-note strong {
+            color:var(--text);
+        }
 
         .planner-actions {
             display:flex;
@@ -673,6 +638,7 @@
             margin-top:20px;
             flex-wrap:wrap;
         }
+
         .btn {
             min-height:48px;
             display:inline-flex;
@@ -685,12 +651,14 @@
             font-size:13px;
             font-weight:800;
         }
+
         .btn-secondary {
             flex:1;
             border:1px dashed var(--border-strong);
             background:var(--blue-light);
             color:var(--blue);
         }
+
         .btn-primary {
             flex:2;
             border:0;
@@ -698,7 +666,11 @@
             color:#fff;
             box-shadow:0 8px 24px rgba(37,99,235,.28);
         }
-        .btn:hover { transform:translateY(-1px); }
+
+        .btn:hover {
+            transform:translateY(-1px);
+        }
+
         .btn svg {
             width:18px;
             height:18px;
@@ -716,26 +688,41 @@
             border:1px solid var(--border-strong);
             border-radius:18px;
         }
-        .result-box.visible { display:block; }
+
+        .result-box.visible {
+            display:block;
+        }
+
         .result-summary {
             padding:24px 26px;
             background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(6,182,212,.10));
             border-bottom:1px solid var(--border);
         }
+
         .result-summary-top {
             display:flex;
             align-items:flex-start;
             justify-content:space-between;
             gap:18px;
         }
-        .result-summary h3 { margin-bottom:5px; font-size:21px; }
-        .result-summary p { color:var(--muted); font-size:13px; }
+
+        .result-summary h3 {
+            margin-bottom:5px;
+            font-size:21px;
+        }
+
+        .result-summary p {
+            color:var(--muted);
+            font-size:13px;
+        }
+
         .summary-badges {
             display:flex;
             flex-wrap:wrap;
             gap:8px;
             margin-top:16px;
         }
+
         .summary-badge {
             padding:7px 11px;
             border:1px solid var(--border-strong);
@@ -746,33 +733,55 @@
             font-weight:800;
         }
 
-        .result-content { padding:24px 26px 26px; }
+        .result-content {
+            padding:24px 26px 26px;
+        }
+
         .result-heading {
             margin-bottom:14px;
             font-size:16px;
             font-weight:800;
         }
+
         .allocation-grid {
             display:grid;
             grid-template-columns:repeat(2,minmax(0,1fr));
             gap:12px;
             margin-bottom:26px;
         }
+
         .allocation-card {
             padding:16px;
             border:1px solid var(--border);
             border-radius:13px;
             background:var(--soft);
         }
+
         .allocation-top {
             display:flex;
             justify-content:space-between;
             gap:12px;
             margin-bottom:9px;
         }
-        .allocation-name { font-size:14px; font-weight:800; }
-        .allocation-time { color:var(--blue); font-size:14px; font-weight:800; white-space:nowrap; }
-        .allocation-meta { color:var(--muted); font-size:10px; line-height:1.5; }
+
+        .allocation-name {
+            font-size:14px;
+            font-weight:800;
+        }
+
+        .allocation-time {
+            color:var(--blue);
+            font-size:14px;
+            font-weight:800;
+            white-space:nowrap;
+        }
+
+        .allocation-meta {
+            color:var(--muted);
+            font-size:10px;
+            line-height:1.5;
+        }
+
         .allocation-bar {
             height:7px;
             margin-top:11px;
@@ -780,6 +789,7 @@
             border-radius:999px;
             background:var(--border);
         }
+
         .allocation-bar span {
             display:block;
             height:100%;
@@ -792,6 +802,7 @@
             grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
             gap:12px;
         }
+
         .day-card {
             padding:16px;
             border:1px solid var(--border);
@@ -799,8 +810,19 @@
             background:var(--card);
             box-shadow:var(--shadow-sm);
         }
-        .day-card h4 { margin-bottom:4px; font-size:14px; }
-        .day-total { margin-bottom:12px; color:var(--muted); font-size:10px; font-weight:700; }
+
+        .day-card h4 {
+            margin-bottom:4px;
+            font-size:14px;
+        }
+
+        .day-total {
+            margin-bottom:12px;
+            color:var(--muted);
+            font-size:10px;
+            font-weight:700;
+        }
+
         .session-item {
             display:grid;
             grid-template-columns:auto 1fr auto;
@@ -809,7 +831,11 @@
             padding:9px 0;
             border-top:1px solid var(--border);
         }
-        .session-item:first-of-type { border-top:0; }
+
+        .session-item:first-of-type {
+            border-top:0;
+        }
+
         .session-dot {
             width:9px;
             height:9px;
@@ -817,10 +843,29 @@
             border-radius:50%;
             background:var(--blue);
         }
-        .session-name { font-size:11px; font-weight:800; }
-        .session-purpose { color:var(--muted); font-size:9px; line-height:1.4; }
-        .session-time { color:var(--blue); font-size:10px; font-weight:800; white-space:nowrap; }
-        .empty-day { color:var(--muted); font-size:11px; }
+
+        .session-name {
+            font-size:11px;
+            font-weight:800;
+        }
+
+        .session-purpose {
+            color:var(--muted);
+            font-size:9px;
+            line-height:1.4;
+        }
+
+        .session-time {
+            color:var(--blue);
+            font-size:10px;
+            font-weight:800;
+            white-space:nowrap;
+        }
+
+        .empty-day {
+            color:var(--muted);
+            font-size:11px;
+        }
 
         .result-actions {
             display:flex;
@@ -828,6 +873,7 @@
             gap:10px;
             margin-top:22px;
         }
+
         .result-btn {
             min-height:44px;
             display:inline-flex;
@@ -842,6 +888,7 @@
             font-size:12px;
             font-weight:800;
         }
+
         .result-btn svg {
             width:17px;
             height:17px;
@@ -857,14 +904,23 @@
             margin:auto;
             padding:78px 20px;
         }
-        .section-wide { max-width:1120px; }
+
+        .section-wide {
+            max-width:1120px;
+        }
+
         .section.alt {
             max-width:none;
             border-top:1px solid var(--border);
             border-bottom:1px solid var(--border);
             background:var(--card);
         }
-        .section.alt .section-inner { max-width:900px; margin:auto; }
+
+        .section.alt .section-inner {
+            max-width:900px;
+            margin:auto;
+        }
+
         .eyebrow {
             display:inline-block;
             margin-bottom:12px;
@@ -874,28 +930,36 @@
             text-transform:uppercase;
             letter-spacing:1.8px;
         }
+
         .section h2 {
             margin-bottom:19px;
             font-size:clamp(27px,4vw,38px);
             line-height:1.2;
             letter-spacing:-.8px;
         }
+
         .section h3 {
             margin:26px 0 10px;
             font-size:19px;
             line-height:1.35;
         }
+
         .section p {
             margin-bottom:14px;
             color:var(--text-secondary);
             font-size:15px;
             line-height:1.85;
         }
+
         .section-list {
             margin:18px 0 22px 20px;
             color:var(--text-secondary);
         }
-        .section-list li { margin-bottom:9px; padding-left:3px; }
+
+        .section-list li {
+            margin-bottom:9px;
+            padding-left:3px;
+        }
 
         .steps {
             display:grid;
@@ -903,6 +967,7 @@
             gap:16px;
             margin-top:30px;
         }
+
         .step-card {
             padding:24px 20px;
             border:1px solid var(--border);
@@ -910,6 +975,7 @@
             background:var(--card);
             box-shadow:var(--shadow-sm);
         }
+
         .step-number {
             width:40px;
             height:40px;
@@ -922,8 +988,18 @@
             font-size:13px;
             font-weight:800;
         }
-        .step-card h3 { margin:0 0 7px; font-size:15px; }
-        .step-card p { margin:0; color:var(--muted); font-size:12px; line-height:1.65; }
+
+        .step-card h3 {
+            margin:0 0 7px;
+            font-size:15px;
+        }
+
+        .step-card p {
+            margin:0;
+            color:var(--muted);
+            font-size:12px;
+            line-height:1.65;
+        }
 
         .formula-box {
             margin:24px 0;
@@ -932,7 +1008,16 @@
             border-radius:15px;
             background:linear-gradient(135deg,rgba(37,99,235,.07),rgba(6,182,212,.07));
         }
-        .formula-box strong { display:block; margin-bottom:8px; color:var(--blue); font-size:12px; text-transform:uppercase; letter-spacing:1px; }
+
+        .formula-box strong {
+            display:block;
+            margin-bottom:8px;
+            color:var(--blue);
+            font-size:12px;
+            text-transform:uppercase;
+            letter-spacing:1px;
+        }
+
         .formula-box code {
             display:block;
             padding:13px;
@@ -952,6 +1037,7 @@
             gap:16px;
             margin-top:28px;
         }
+
         .research-card {
             padding:22px;
             border:1px solid var(--border);
@@ -959,8 +1045,18 @@
             background:var(--card);
             box-shadow:var(--shadow-sm);
         }
-        .research-card h3 { margin:0 0 8px; font-size:16px; }
-        .research-card p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; }
+
+        .research-card h3 {
+            margin:0 0 8px;
+            font-size:16px;
+        }
+
+        .research-card p {
+            margin:0;
+            color:var(--muted);
+            font-size:12px;
+            line-height:1.7;
+        }
 
         .example-table-wrap {
             overflow-x:auto;
@@ -968,12 +1064,14 @@
             border:1px solid var(--border);
             border-radius:15px;
         }
+
         .example-table {
             width:100%;
             min-width:650px;
             border-collapse:collapse;
             background:var(--card);
         }
+
         .example-table th {
             padding:13px 15px;
             background:var(--blue-light);
@@ -983,6 +1081,7 @@
             text-transform:uppercase;
             letter-spacing:.8px;
         }
+
         .example-table td {
             padding:13px 15px;
             border-top:1px solid var(--border);
@@ -997,8 +1096,17 @@
             border-radius:15px;
             background:var(--soft);
         }
-        .methodology-box h3 { margin:0 0 8px; font-size:16px; }
-        .methodology-box p { margin-bottom:12px; font-size:12px; }
+
+        .methodology-box h3 {
+            margin:0 0 8px;
+            font-size:16px;
+        }
+
+        .methodology-box p {
+            margin-bottom:12px;
+            font-size:12px;
+        }
+
         .methodology-box a {
             display:inline-flex;
             min-height:42px;
@@ -1018,6 +1126,7 @@
             gap:10px;
             margin-top:22px;
         }
+
         .source-link {
             display:block;
             padding:14px 16px;
@@ -1029,8 +1138,14 @@
             line-height:1.6;
             text-decoration:none;
         }
-        .source-link strong { color:var(--text); }
-        .source-link:hover { border-color:var(--blue); }
+
+        .source-link strong {
+            color:var(--text);
+        }
+
+        .source-link:hover {
+            border-color:var(--blue);
+        }
 
         .related-grid {
             display:grid;
@@ -1038,6 +1153,7 @@
             gap:14px;
             margin-top:28px;
         }
+
         .related-card {
             display:block;
             padding:20px;
@@ -1048,7 +1164,12 @@
             text-decoration:none;
             transition:transform .2s ease,border-color .2s ease;
         }
-        .related-card:hover { transform:translateY(-3px); border-color:var(--blue); }
+
+        .related-card:hover {
+            transform:translateY(-3px);
+            border-color:var(--blue);
+        }
+
         .related-icon {
             width:42px;
             height:42px;
@@ -1059,6 +1180,7 @@
             background:var(--blue-light);
             color:var(--blue);
         }
+
         .related-icon svg {
             width:21px;
             height:21px;
@@ -1068,8 +1190,18 @@
             stroke-linecap:round;
             stroke-linejoin:round;
         }
-        .related-card h3 { margin:0 0 6px; font-size:14px; }
-        .related-card p { margin:0; color:var(--muted); font-size:11px; line-height:1.55; }
+
+        .related-card h3 {
+            margin:0 0 6px;
+            font-size:14px;
+        }
+
+        .related-card p {
+            margin:0;
+            color:var(--muted);
+            font-size:11px;
+            line-height:1.55;
+        }
 
         .faq-item {
             margin-bottom:11px;
@@ -1078,6 +1210,7 @@
             border-radius:13px;
             background:var(--card);
         }
+
         .faq-question {
             width:100%;
             display:flex;
@@ -1093,6 +1226,7 @@
             font-size:14px;
             font-weight:800;
         }
+
         .faq-toggle {
             width:27px;
             height:27px;
@@ -1104,17 +1238,28 @@
             color:var(--blue);
             transition:transform .25s ease;
         }
-        .faq-item.open .faq-toggle { transform:rotate(45deg); }
-        .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
-        .faq-item.open .faq-answer { max-height:420px; }
+
+        .faq-item.open .faq-toggle {
+            transform:rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height:0;
+            overflow:hidden;
+            transition:max-height .35s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height:420px;
+        }
+
         .faq-answer-inner {
-            padding:0 19px 18px;
+            padding:14px 19px 18px;
             border-top:1px solid var(--border);
             color:var(--text-secondary);
             font-size:13px;
             line-height:1.75;
         }
-        .faq-answer-inner { padding-top:14px; }
 
         .cta {
             position:relative;
@@ -1124,6 +1269,7 @@
             color:#fff;
             text-align:center;
         }
+
         .cta::before {
             content:'';
             position:absolute;
@@ -1132,9 +1278,25 @@
                 radial-gradient(circle at 20% 50%,rgba(255,255,255,.16),transparent 45%),
                 radial-gradient(circle at 80% 50%,rgba(255,255,255,.10),transparent 45%);
         }
-        .cta-inner { position:relative; z-index:1; max-width:670px; margin:auto; }
-        .cta h2 { margin-bottom:13px; font-size:clamp(28px,4vw,40px); line-height:1.2; }
-        .cta p { margin-bottom:24px; opacity:.94; }
+
+        .cta-inner {
+            position:relative;
+            z-index:1;
+            max-width:670px;
+            margin:auto;
+        }
+
+        .cta h2 {
+            margin-bottom:13px;
+            font-size:clamp(28px,4vw,40px);
+            line-height:1.2;
+        }
+
+        .cta p {
+            margin-bottom:24px;
+            opacity:.94;
+        }
+
         .cta-link {
             display:inline-flex;
             min-height:48px;
@@ -1149,99 +1311,96 @@
             box-shadow:0 10px 30px rgba(0,0,0,.18);
         }
 
-        footer {
-            padding:50px 20px 26px;
-            background:#0f172a;
-            color:rgba(255,255,255,.56);
-            text-align:center;
-            font-size:12px;
+        .reveal {
+            opacity:0;
+            transform:translateY(24px);
+            transition:opacity .7s ease,transform .7s ease;
         }
-        [data-theme="dark"] footer { background:#020617; }
-        .footer-logo { margin-bottom:7px; color:#fff; font-size:22px; font-weight:800; }
-        .footer-logo span { color:#22d3ee; }
-        .footer-tagline { margin-bottom:29px; font-size:13px; }
-        .footer-grid {
-            max-width:930px;
-            display:grid;
-            grid-template-columns:repeat(4,minmax(0,1fr));
-            gap:22px;
-            margin:0 auto 34px;
-            text-align:left;
-        }
-        .footer-col-title {
-            margin-bottom:11px;
-            color:#fff;
-            font-size:11px;
-            font-weight:800;
-            text-transform:uppercase;
-            letter-spacing:1px;
-        }
-        .footer-col a {
-            display:block;
-            margin-bottom:8px;
-            color:rgba(255,255,255,.56);
-            text-decoration:none;
-        }
-        .footer-col a:hover,.footer-col a[aria-current="page"] { color:#fff; }
-        .footer-bottom { padding-top:20px; border-top:1px solid rgba(255,255,255,.10); }
-        .footer-bottom span { color:#22d3ee; }
 
-        .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease,transform .7s ease; }
-        .reveal.visible { opacity:1; transform:none; }
+        .reveal.visible {
+            opacity:1;
+            transform:none;
+        }
 
         @media (max-width:1020px) {
-            .settings-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
-            .subject-header,.subject-row { grid-template-columns:1.4fr .8fr .9fr .9fr 1.1fr 46px; }
-            .steps,.related-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+            .settings-grid {
+                grid-template-columns:repeat(3,minmax(0,1fr));
+            }
+
+            .subject-header,
+            .subject-row {
+                grid-template-columns:1.4fr .8fr .9fr .9fr 1.1fr 46px;
+            }
+
+            .steps,
+            .related-grid {
+                grid-template-columns:repeat(2,minmax(0,1fr));
+            }
         }
 
         @media (max-width:860px) {
-            .site-nav { padding:10px 16px; }
-            .nav-links {
-                position:absolute;
-                top:calc(100% + 8px);
-                left:14px;
-                right:14px;
-                display:none;
+            .planner-header {
                 flex-direction:column;
-                align-items:stretch;
-                gap:0;
-                padding:10px;
-                border:1px solid var(--border-strong);
-                border-radius:15px;
-                background:var(--card);
-                box-shadow:var(--shadow-md);
             }
-            .nav-links.open { display:flex; }
-            .nav-links a { padding:12px 13px; border-radius:9px; color:var(--text); }
-            .nav-links a:hover,.nav-links a[aria-current="page"] { background:var(--blue-light); color:var(--blue); }
-            .menu-toggle { display:inline-flex; }
-            .nav-tag { display:none; }
 
-            .planner-header { flex-direction:column; }
-            .local-badge { width:max-content; }
-            .settings-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+            .local-badge {
+                width:max-content;
+            }
 
-            .subject-header { display:none; }
+            .settings-grid {
+                grid-template-columns:repeat(2,minmax(0,1fr));
+            }
+
+            .subject-header {
+                display:none;
+            }
+
             .subject-row {
                 grid-template-columns:1fr 1fr 46px;
                 padding:15px;
             }
-            .subject-row .subject-name { grid-column:1 / -1; }
-            .subject-row .deadline-control { grid-column:1 / 3; }
-            .subject-row .remove-btn { grid-column:3; grid-row:3; }
+
+            .subject-row .subject-name {
+                grid-column:1 / -1;
+            }
+
+            .subject-row .deadline-control {
+                grid-column:1 / 3;
+            }
+
+            .subject-row .remove-btn {
+                grid-column:3;
+                grid-row:3;
+            }
         }
 
         @media (max-width:640px) {
-            .nav-logo { font-size:18px; }
-            .nav-logo-icon { width:31px; height:31px; }
-            .hero { padding:54px 16px 72px; }
-            .hero h1 { letter-spacing:-1.2px; }
-            .planner-section { padding:52px 14px; }
-            .planner-header,.planner-body { padding-left:18px; padding-right:18px; }
-            .settings-grid { grid-template-columns:1fr; }
+            .hero {
+                padding:54px 16px 72px;
+            }
 
-            .subject-row { grid-template-columns:1fr 46px; }
+            .hero h1 {
+                letter-spacing:-1.2px;
+            }
+
+            .planner-section {
+                padding:52px 14px;
+            }
+
+            .planner-header,
+            .planner-body {
+                padding-left:18px;
+                padding-right:18px;
+            }
+
+            .settings-grid {
+                grid-template-columns:1fr;
+            }
+
+            .subject-row {
+                grid-template-columns:1fr 46px;
+            }
+
             .subject-row .subject-name,
             .subject-row .difficulty-control,
             .subject-row .confidence-control,
@@ -1249,27 +1408,50 @@
             .subject-row .deadline-control {
                 grid-column:1 / -1;
             }
-            .subject-row .remove-btn { grid-column:2; grid-row:6; }
 
-            .planner-actions { display:grid; grid-template-columns:1fr; }
-            .allocation-grid,.research-grid,.steps,.related-grid { grid-template-columns:1fr; }
-            .result-summary-top { flex-direction:column; }
-            .section { padding:58px 16px; }
-            .footer-grid { grid-template-columns:1fr 1fr; text-align:center; }
-        }
+            .subject-row .remove-btn {
+                grid-column:2;
+                grid-row:6;
+            }
 
-        @media (max-width:430px) {
-            .nav-right { gap:7px; }
-            .menu-toggle { padding:0 11px; }
-            .theme-toggle { width:42px; height:42px; }
-            .footer-grid { grid-template-columns:1fr; }
+            .planner-actions {
+                display:grid;
+                grid-template-columns:1fr;
+            }
+
+            .allocation-grid,
+            .research-grid,
+            .steps,
+            .related-grid {
+                grid-template-columns:1fr;
+            }
+
+            .result-summary-top {
+                flex-direction:column;
+            }
+
+            .section {
+                padding:58px 16px;
+            }
         }
 
         @media print {
-            .site-nav,.hero,.planner-header,.planner-body > *:not(.result-box),.section,.cta,footer,.scroll-progress,.skip-link {
+            .site-nav,
+            .hero,
+            .planner-header,
+            .planner-body > *:not(.result-box),
+            .section,
+            .cta,
+            footer,
+            .scroll-progress,
+            .skip-link {
                 display:none !important;
             }
-            body,.planner-section,.planner-card,.result-box {
+
+            body,
+            .planner-section,
+            .planner-card,
+            .result-box {
                 margin:0 !important;
                 padding:0 !important;
                 border:0 !important;
@@ -1277,101 +1459,129 @@
                 background:#fff !important;
                 color:#000 !important;
             }
-            .result-box { display:block !important; }
+
+            .result-box {
+                display:block !important;
+            }
         }
 
         @media (prefers-reduced-motion:reduce) {
-            *,*::before,*::after {
+            *,
+            *::before,
+            *::after {
                 scroll-behavior:auto !important;
                 animation-duration:.01ms !important;
                 transition-duration:.01ms !important;
             }
         }
     </style>
+
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-        <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-            <span class="nav-logo-icon" aria-hidden="true">S</span>
-            <span>StudentCalc<span class="brand-accent">Tools</span></span>
-        </a>
-
-        <div class="nav-right">
-            <div class="nav-links" id="navLinks">
-                <a href="/">Home</a>
-                <a href="/calculators/" aria-current="page">Calculators</a>
-                <a href="/blog/">Blog</a>
-                <a href="/about-us/">About</a>
-                <a href="/contact-us/">Contact</a>
-            </div>
-            <span class="nav-tag">Free to use</span>
-            <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
-                </span>
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
-                </span>
-            </button>
-        </div>
-    </nav>
+    {% include header.html %}
 
     <main id="main-content">
         <section class="hero">
             <div class="hero-inner">
+
                 <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="/">Home</a><span>/</span>
-                    <a href="/calculators/">Calculators</a><span>/</span>
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <a href="/calculators/">Calculators</a>
+                    <span>/</span>
                     <span>Study Schedule Planner</span>
                 </nav>
-                <span class="hero-kicker">Daily and weekly study planning</span>
-                <h1>Free <span class="gradient-text">Study Schedule Planner</span></h1>
-                <p class="hero-copy">Build a realistic study schedule around your available hours, subjects, confidence, priorities, and exam deadlines. The planner allocates time, creates focused sessions, and spreads them across your chosen days.</p>
+
+                <span class="hero-kicker">
+                    Daily and weekly study planning
+                </span>
+
+                <h1>
+                    Free <span class="gradient-text">Study Schedule Planner</span>
+                </h1>
+
+                <p class="hero-copy">
+                    Build a realistic study schedule around your available hours, subjects, confidence, priorities, and exam deadlines. The planner allocates time, creates focused sessions, and spreads them across your chosen days.
+                </p>
 
                 <div class="hero-points" aria-label="Planner features">
+
                     <span class="hero-point">
-                        <svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path>
+                        </svg>
                         Weighted subject allocation
                     </span>
+
                     <span class="hero-point">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                            <path d="M16 3v4M8 3v4M3 10h18"></path>
+                        </svg>
                         1 to 14 day plans
                     </span>
+
                     <span class="hero-point">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l3 2M5 3 2 6M19 3l3 3"></path></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="13" r="8"></circle>
+                            <path d="M12 9v4l3 2M5 3 2 6M19 3l3 3"></path>
+                        </svg>
                         Focused study sessions
                     </span>
+
                     <span class="hero-point">
-                        <svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V7l-8-4Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 4 7v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V7l-8-4Z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
                         Browser-based and private
                     </span>
+
                 </div>
             </div>
         </section>
 
         <section class="planner-section" aria-labelledby="planner-title">
             <div class="planner-card">
+
                 <div class="planner-header">
                     <div>
-                        <h2 id="planner-title">Create Your Personalized Study Plan</h2>
-                        <p>Choose your planning window and available time, then add each subject with its difficulty, confidence level, priority, and optional deadline.</p>
+                        <h2 id="planner-title">
+                            Create Your Personalized Study Plan
+                        </h2>
+
+                        <p>
+                            Choose your planning window and available time, then add each subject with its difficulty, confidence level, priority, and optional deadline.
+                        </p>
                     </div>
-                    <span class="local-badge">Inputs stay in your browser</span>
+
+                    <span class="local-badge">
+                        Inputs stay in your browser
+                    </span>
                 </div>
 
-                <div class="planner-body">
+                <form class="planner-body" id="studyPlannerForm" novalidate>
+
                     <div class="settings-grid">
+
                         <div class="field-group">
-                            <label class="field-label" for="startDate">Plan Start Date</label>
-                            <input class="control" type="date" id="startDate">
+                            <label class="field-label" for="startDate">
+                                Plan Start Date
+                            </label>
+
+                            <input
+                                class="control"
+                                type="date"
+                                id="startDate">
                         </div>
 
                         <div class="field-group">
-                            <label class="field-label" for="planDays">Planning Period</label>
+                            <label class="field-label" for="planDays">
+                                Planning Period
+                            </label>
+
                             <select class="control" id="planDays">
                                 <option value="1">Today</option>
                                 <option value="3">Next 3 days</option>
@@ -1381,13 +1591,29 @@
                         </div>
 
                         <div class="field-group">
-                            <label class="field-label" for="totalHours">Total Study Hours</label>
-                            <input class="control" type="number" id="totalHours" min="0.5" max="100" step="0.5" value="12">
-                            <span class="field-help">Across the entire plan</span>
+                            <label class="field-label" for="totalHours">
+                                Total Study Hours
+                            </label>
+
+                            <input
+                                class="control"
+                                type="number"
+                                id="totalHours"
+                                min="0.5"
+                                max="100"
+                                step="0.5"
+                                value="12">
+
+                            <span class="field-help">
+                                Across the entire plan
+                            </span>
                         </div>
 
                         <div class="field-group">
-                            <label class="field-label" for="sessionLength">Focus Session</label>
+                            <label class="field-label" for="sessionLength">
+                                Focus Session
+                            </label>
+
                             <select class="control" id="sessionLength">
                                 <option value="25">25 minutes</option>
                                 <option value="45" selected>45 minutes</option>
@@ -1396,17 +1622,25 @@
                         </div>
 
                         <div class="field-group">
-                            <label class="field-label" for="bufferPercent">Buffer Time</label>
+                            <label class="field-label" for="bufferPercent">
+                                Buffer Time
+                            </label>
+
                             <select class="control" id="bufferPercent">
                                 <option value="0">No buffer</option>
                                 <option value="10" selected>10% buffer</option>
                                 <option value="20">20% buffer</option>
                             </select>
-                            <span class="field-help">For breaks and overruns</span>
+
+                            <span class="field-help">
+                                For breaks and overruns
+                            </span>
                         </div>
+
                     </div>
 
                     <div class="subject-table-wrap">
+
                         <div class="subject-header" aria-hidden="true">
                             <div>Subject or Topic</div>
                             <div>Difficulty</div>
@@ -1417,239 +1651,522 @@
                         </div>
 
                         <div id="subjectRows">
+
                             <div class="subject-row">
-                                <input class="control subject-name" type="text" value="Mathematics" placeholder="Subject or topic" aria-label="Subject or topic">
-                                <select class="control difficulty-control" aria-label="Difficulty">
+
+                                <input
+                                    class="control subject-name"
+                                    type="text"
+                                    value="Mathematics"
+                                    placeholder="Subject or topic"
+                                    aria-label="Subject or topic">
+
+                                <select
+                                    class="control difficulty-control"
+                                    aria-label="Difficulty">
+
                                     <option value="1">1 - Very easy</option>
                                     <option value="2">2 - Easy</option>
                                     <option value="3">3 - Medium</option>
                                     <option value="4" selected>4 - Hard</option>
                                     <option value="5">5 - Very hard</option>
                                 </select>
-                                <select class="control confidence-control" aria-label="Confidence">
+
+                                <select
+                                    class="control confidence-control"
+                                    aria-label="Confidence">
+
                                     <option value="low" selected>Low</option>
                                     <option value="medium">Medium</option>
                                     <option value="high">High</option>
                                 </select>
-                                <select class="control priority-control" aria-label="Priority">
+
+                                <select
+                                    class="control priority-control"
+                                    aria-label="Priority">
+
                                     <option value="normal">Normal</option>
                                     <option value="high" selected>High</option>
                                     <option value="urgent">Urgent</option>
                                 </select>
-                                <input class="control deadline-control" type="date" aria-label="Exam or deadline">
-                                <button class="remove-btn" type="button" aria-label="Remove subject">
-                                    <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></svg>
+
+                                <input
+                                    class="control deadline-control"
+                                    type="date"
+                                    aria-label="Exam or deadline">
+
+                                <button
+                                    class="remove-btn"
+                                    type="button"
+                                    aria-label="Remove subject">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 5l14 14M19 5 5 19"></path>
+                                    </svg>
                                 </button>
                             </div>
 
                             <div class="subject-row">
-                                <input class="control subject-name" type="text" value="Biology" placeholder="Subject or topic" aria-label="Subject or topic">
-                                <select class="control difficulty-control" aria-label="Difficulty">
+
+                                <input
+                                    class="control subject-name"
+                                    type="text"
+                                    value="Biology"
+                                    placeholder="Subject or topic"
+                                    aria-label="Subject or topic">
+
+                                <select
+                                    class="control difficulty-control"
+                                    aria-label="Difficulty">
+
                                     <option value="1">1 - Very easy</option>
                                     <option value="2">2 - Easy</option>
                                     <option value="3" selected>3 - Medium</option>
                                     <option value="4">4 - Hard</option>
                                     <option value="5">5 - Very hard</option>
                                 </select>
-                                <select class="control confidence-control" aria-label="Confidence">
+
+                                <select
+                                    class="control confidence-control"
+                                    aria-label="Confidence">
+
                                     <option value="low">Low</option>
                                     <option value="medium" selected>Medium</option>
                                     <option value="high">High</option>
                                 </select>
-                                <select class="control priority-control" aria-label="Priority">
+
+                                <select
+                                    class="control priority-control"
+                                    aria-label="Priority">
+
                                     <option value="normal" selected>Normal</option>
                                     <option value="high">High</option>
                                     <option value="urgent">Urgent</option>
                                 </select>
-                                <input class="control deadline-control" type="date" aria-label="Exam or deadline">
-                                <button class="remove-btn" type="button" aria-label="Remove subject">
-                                    <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></svg>
+
+                                <input
+                                    class="control deadline-control"
+                                    type="date"
+                                    aria-label="Exam or deadline">
+
+                                <button
+                                    class="remove-btn"
+                                    type="button"
+                                    aria-label="Remove subject">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 5l14 14M19 5 5 19"></path>
+                                    </svg>
                                 </button>
                             </div>
 
                             <div class="subject-row">
-                                <input class="control subject-name" type="text" value="English Literature" placeholder="Subject or topic" aria-label="Subject or topic">
-                                <select class="control difficulty-control" aria-label="Difficulty">
+
+                                <input
+                                    class="control subject-name"
+                                    type="text"
+                                    value="English Literature"
+                                    placeholder="Subject or topic"
+                                    aria-label="Subject or topic">
+
+                                <select
+                                    class="control difficulty-control"
+                                    aria-label="Difficulty">
+
                                     <option value="1">1 - Very easy</option>
                                     <option value="2" selected>2 - Easy</option>
                                     <option value="3">3 - Medium</option>
                                     <option value="4">4 - Hard</option>
                                     <option value="5">5 - Very hard</option>
                                 </select>
-                                <select class="control confidence-control" aria-label="Confidence">
+
+                                <select
+                                    class="control confidence-control"
+                                    aria-label="Confidence">
+
                                     <option value="low">Low</option>
                                     <option value="medium">Medium</option>
                                     <option value="high" selected>High</option>
                                 </select>
-                                <select class="control priority-control" aria-label="Priority">
+
+                                <select
+                                    class="control priority-control"
+                                    aria-label="Priority">
+
                                     <option value="normal" selected>Normal</option>
                                     <option value="high">High</option>
                                     <option value="urgent">Urgent</option>
                                 </select>
-                                <input class="control deadline-control" type="date" aria-label="Exam or deadline">
-                                <button class="remove-btn" type="button" aria-label="Remove subject">
-                                    <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></svg>
+
+                                <input
+                                    class="control deadline-control"
+                                    type="date"
+                                    aria-label="Exam or deadline">
+
+                                <button
+                                    class="remove-btn"
+                                    type="button"
+                                    aria-label="Remove subject">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M5 5l14 14M19 5 5 19"></path>
+                                    </svg>
                                 </button>
                             </div>
+
                         </div>
                     </div>
 
                     <div class="planner-note">
-                        <strong>Planning rule:</strong> Use realistic hours, not your ideal maximum. Hard subjects receive more time, but low confidence, urgent priority, and nearby deadlines also increase the allocation.
+                        <strong>Planning rule:</strong>
+                        Use realistic hours, not your ideal maximum. Hard subjects receive more time, but low confidence, urgent priority, and nearby deadlines also increase the allocation.
                     </div>
 
                     <div class="planner-actions">
-                        <button class="btn btn-secondary" id="addSubject" type="button">
-                            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+
+                        <button
+                            class="btn btn-secondary"
+                            id="addSubject"
+                            type="button">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14"></path>
+                            </svg>
+
                             Add Subject
                         </button>
-                        <button class="btn btn-primary" id="generatePlan" type="button">
-                            <svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path></svg>
+
+                        <button
+                            class="btn btn-primary"
+                            id="generatePlan"
+                            type="submit">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path>
+                            </svg>
+
                             Generate Study Schedule
                         </button>
+
                     </div>
 
-                    <div class="result-box" id="resultBox" role="status" aria-live="polite">
+                    <div
+                        class="result-box"
+                        id="resultBox"
+                        role="status"
+                        aria-live="polite">
+
                         <div class="result-summary">
+
                             <div class="result-summary-top">
                                 <div>
-                                    <h3>Your Personalized Study Schedule</h3>
-                                    <p id="resultDescription">Your subject allocation and daily sessions will appear here.</p>
+                                    <h3>
+                                        Your Personalized Study Schedule
+                                    </h3>
+
+                                    <p id="resultDescription">
+                                        Your subject allocation and daily sessions will appear here.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="summary-badges" id="summaryBadges"></div>
+
+                            <div
+                                class="summary-badges"
+                                id="summaryBadges">
+                            </div>
+
                         </div>
 
                         <div class="result-content">
-                            <h4 class="result-heading">Subject Time Allocation</h4>
-                            <div class="allocation-grid" id="allocationGrid"></div>
 
-                            <h4 class="result-heading">Day-by-Day Study Plan</h4>
-                            <div class="day-grid" id="dayGrid"></div>
+                            <h4 class="result-heading">
+                                Subject Time Allocation
+                            </h4>
+
+                            <div
+                                class="allocation-grid"
+                                id="allocationGrid">
+                            </div>
+
+                            <h4 class="result-heading">
+                                Day-by-Day Study Plan
+                            </h4>
+
+                            <div
+                                class="day-grid"
+                                id="dayGrid">
+                            </div>
 
                             <div class="result-actions">
-                                <button class="result-btn" id="copyPlan" type="button">
-                                    <svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    <span>Copy Schedule</span>
+
+                                <button
+                                    class="result-btn"
+                                    id="copyPlan"
+                                    type="button">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+
+                                    <span>
+                                        Copy Schedule
+                                    </span>
                                 </button>
-                                <button class="result-btn" id="printPlan" type="button">
-                                    <svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="7"></rect></svg>
+
+                                <button
+                                    class="result-btn"
+                                    id="printPlan"
+                                    type="button">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                        <rect x="6" y="14" width="12" height="7"></rect>
+                                    </svg>
+
                                     Print Plan
                                 </button>
-                                <button class="result-btn" id="resetPlan" type="button">
-                                    <svg viewBox="0 0 24 24"><path d="M4 4v6h6"></path><path d="M5.5 16a8 8 0 1 0 .4-8.5L4 10"></path></svg>
+
+                                <button
+                                    class="result-btn"
+                                    id="resetPlan"
+                                    type="button">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M4 4v6h6"></path>
+                                        <path d="M5.5 16a8 8 0 1 0 .4-8.5L4 10"></path>
+                                    </svg>
+
                                     Reset
                                 </button>
+
                             </div>
                         </div>
                     </div>
-                </div>
+
+                </form>
             </div>
         </section>
 
         <section class="section reveal">
-            <span class="eyebrow">How it works</span>
-            <h2>How the Study Schedule Planner Builds Your Plan</h2>
-            <p>A useful study planner should do more than split time equally. Equal time can underfund a difficult exam and overfund a subject you already understand. This calculator creates a weighted planning score for each subject, allocates your usable minutes, breaks the allocation into focused sessions, and balances those sessions across the selected days.</p>
+
+            <span class="eyebrow">
+                How it works
+            </span>
+
+            <h2>
+                How the Study Schedule Planner Builds Your Plan
+            </h2>
+
+            <p>
+                A useful study planner should do more than split time equally. Equal time can underfund a difficult exam and overfund a subject you already understand. This calculator creates a weighted planning score for each subject, allocates your usable minutes, breaks the allocation into focused sessions, and balances those sessions across the selected days.
+            </p>
 
             <div class="formula-box">
                 <strong>Planning score</strong>
                 <code>Subject score = difficulty × confidence factor × priority factor × deadline factor</code>
             </div>
 
-            <p>Difficulty ranges from 1 to 5. Low confidence increases the score because the topic needs more repair and practice. High or urgent priority increases the score further. An approaching deadline adds an urgency factor so near-term work receives attention earlier.</p>
+            <p>
+                Difficulty ranges from 1 to 5. Low confidence increases the score because the topic needs more repair and practice. High or urgent priority increases the score further. An approaching deadline adds an urgency factor so near-term work receives attention earlier.
+            </p>
 
             <div class="formula-box">
                 <strong>Time allocation</strong>
                 <code>Subject minutes = usable study minutes × subject score ÷ total score for all subjects</code>
             </div>
 
-            <p>The buffer setting removes a small percentage from the scheduled total. That time remains unassigned for breaks, transitions, unexpected delays, and tasks that take longer than planned.</p>
+            <p>
+                The buffer setting removes a small percentage from the scheduled total. That time remains unassigned for breaks, transitions, unexpected delays, and tasks that take longer than planned.
+            </p>
 
             <div class="methodology-box">
                 <h3>Review the calculator methodology</h3>
-                <p>See how StudentCalcTools documents formulas, assumptions, input handling, rounding, and testing across its calculators.</p>
-                <a href="/calculator-methodology/">Read Calculator Methodology</a>
+
+                <p>
+                    See how StudentCalcTools documents formulas, assumptions, input handling, rounding, and testing across its calculators.
+                </p>
+
+                <a href="/calculator-methodology/">
+                    Read Calculator Methodology
+                </a>
             </div>
+
         </section>
 
         <section class="section alt reveal">
             <div class="section-inner">
-                <span class="eyebrow">Step-by-step</span>
-                <h2>How to Make a Study Schedule You Can Follow</h2>
+
+                <span class="eyebrow">
+                    Step-by-step
+                </span>
+
+                <h2>
+                    How to Make a Study Schedule You Can Follow
+                </h2>
+
                 <div class="steps">
+
                     <div class="step-card">
                         <span class="step-number">1</span>
-                        <h3>Choose a real planning window</h3>
-                        <p>Use one day for immediate work, seven days for a normal study week, or fourteen days for exam preparation.</p>
+
+                        <h3>
+                            Choose a real planning window
+                        </h3>
+
+                        <p>
+                            Use one day for immediate work, seven days for a normal study week, or fourteen days for exam preparation.
+                        </p>
                     </div>
+
                     <div class="step-card">
                         <span class="step-number">2</span>
-                        <h3>Protect realistic hours</h3>
-                        <p>Count only time that remains after classes, sleep, meals, work, commuting, and essential responsibilities.</p>
+
+                        <h3>
+                            Protect realistic hours
+                        </h3>
+
+                        <p>
+                            Count only time that remains after classes, sleep, meals, work, commuting, and essential responsibilities.
+                        </p>
                     </div>
+
                     <div class="step-card">
                         <span class="step-number">3</span>
-                        <h3>Rate current need</h3>
-                        <p>Set difficulty, confidence, priority, and deadlines based on your situation now, not the subject's reputation.</p>
+
+                        <h3>
+                            Rate current need
+                        </h3>
+
+                        <p>
+                            Set difficulty, confidence, priority, and deadlines based on your situation now, not the subject's reputation.
+                        </p>
                     </div>
+
                     <div class="step-card">
                         <span class="step-number">4</span>
-                        <h3>Use specific session goals</h3>
-                        <p>Replace vague tasks like “study biology” with outcomes such as “answer 20 genetics questions without notes.”</p>
+
+                        <h3>
+                            Use specific session goals
+                        </h3>
+
+                        <p>
+                            Replace vague tasks like “study biology” with outcomes such as “answer 20 genetics questions without notes.”
+                        </p>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <section class="section section-wide reveal">
-            <span class="eyebrow">Research-backed planning</span>
-            <h2>Build Study Sessions Around Learning, Not Just Time</h2>
-            <p>A schedule organizes your time, but the method used inside each session determines whether the time produces learning. The strongest plan combines realistic scheduling with retrieval practice, spaced practice, active problem solving, and regular progress checks.</p>
+
+            <span class="eyebrow">
+                Research-backed planning
+            </span>
+
+            <h2>
+                Build Study Sessions Around Learning, Not Just Time
+            </h2>
+
+            <p>
+                A schedule organizes your time, but the method used inside each session determines whether the time produces learning. The strongest plan combines realistic scheduling with retrieval practice, spaced practice, active problem solving, and regular progress checks.
+            </p>
 
             <div class="research-grid">
+
                 <div class="research-card">
-                    <h3>Space important subjects across days</h3>
-                    <p>Distributed practice means revisiting material in shorter sessions over time instead of relying on one long cram session. Select a multi-day plan so high-priority subjects appear repeatedly.</p>
+                    <h3>
+                        Space important subjects across days
+                    </h3>
+
+                    <p>
+                        Distributed practice means revisiting material in shorter sessions over time instead of relying on one long cram session. Select a multi-day plan so high-priority subjects appear repeatedly.
+                    </p>
                 </div>
+
                 <div class="research-card">
-                    <h3>Retrieve before re-reading</h3>
-                    <p>Start a session by answering questions, solving problems, explaining the topic aloud, or writing what you remember before opening your notes.</p>
+                    <h3>
+                        Retrieve before re-reading
+                    </h3>
+
+                    <p>
+                        Start a session by answering questions, solving problems, explaining the topic aloud, or writing what you remember before opening your notes.
+                    </p>
                 </div>
+
                 <div class="research-card">
-                    <h3>Use focused sessions with breaks</h3>
-                    <p>Choose a session length you can sustain with full attention. Use the buffer for short breaks, switching tasks, and catching up when a block runs long.</p>
+                    <h3>
+                        Use focused sessions with breaks
+                    </h3>
+
+                    <p>
+                        Choose a session length you can sustain with full attention. Use the buffer for short breaks, switching tasks, and catching up when a block runs long.
+                    </p>
                 </div>
+
                 <div class="research-card">
-                    <h3>Check and update the plan</h3>
-                    <p>After each study day, compare the plan with what you completed. Adjust confidence, priority, or deadlines instead of abandoning the schedule.</p>
+                    <h3>
+                        Check and update the plan
+                    </h3>
+
+                    <p>
+                        After each study day, compare the plan with what you completed. Adjust confidence, priority, or deadlines instead of abandoning the schedule.
+                    </p>
                 </div>
+
             </div>
         </section>
 
         <section class="section alt reveal">
             <div class="section-inner">
-                <span class="eyebrow">Daily vs weekly plans</span>
-                <h2>Choose the Right Study Plan for Your Situation</h2>
+
+                <span class="eyebrow">
+                    Daily vs weekly plans
+                </span>
+
+                <h2>
+                    Choose the Right Study Plan for Your Situation
+                </h2>
 
                 <h3>Daily study schedule</h3>
-                <p>Use a one-day plan when you already know what must be completed today. Keep the subject list short, select realistic session lengths, and use urgent priority only for work with a genuine near-term deadline.</p>
+
+                <p>
+                    Use a one-day plan when you already know what must be completed today. Keep the subject list short, select realistic session lengths, and use urgent priority only for work with a genuine near-term deadline.
+                </p>
 
                 <h3>Weekly study schedule</h3>
-                <p>A seven-day plan works well for normal coursework because it can spread review and practice across several days. Add upcoming quizzes, assignments, and exam topics, then reserve buffer time rather than filling the entire week.</p>
+
+                <p>
+                    A seven-day plan works well for normal coursework because it can spread review and practice across several days. Add upcoming quizzes, assignments, and exam topics, then reserve buffer time rather than filling the entire week.
+                </p>
 
                 <h3>Exam study planner</h3>
-                <p>Use a fourteen-day plan when several exams are approaching. Add each exam as a subject or break large courses into topics. Enter the exam dates, lower confidence for weak areas, and use high priority for assessments with greater academic importance.</p>
+
+                <p>
+                    Use a fourteen-day plan when several exams are approaching. Add each exam as a subject or break large courses into topics. Enter the exam dates, lower confidence for weak areas, and use high priority for assessments with greater academic importance.
+                </p>
+
             </div>
         </section>
 
         <section class="section reveal">
-            <span class="eyebrow">Worked example</span>
-            <h2>Example of a 12-Hour Weekly Study Schedule</h2>
-            <p>Suppose a student has 12 hours available over seven days and keeps a 10% buffer. The planner schedules 10 hours and 48 minutes, leaving 1 hour and 12 minutes unassigned. Mathematics receives the largest share because it is difficult, confidence is low, and its priority is high.</p>
+
+            <span class="eyebrow">
+                Worked example
+            </span>
+
+            <h2>
+                Example of a 12-Hour Weekly Study Schedule
+            </h2>
+
+            <p>
+                Suppose a student has 12 hours available over seven days and keeps a 10% buffer. The planner schedules 10 hours and 48 minutes, leaving 1 hour and 12 minutes unassigned. Mathematics receives the largest share because it is difficult, confidence is low, and its priority is high.
+            </p>
 
             <div class="example-table-wrap">
                 <table class="example-table">
+
                     <thead>
                         <tr>
                             <th>Subject</th>
@@ -1659,6 +2176,7 @@
                             <th>Why It Receives Time</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr>
                             <td>Mathematics</td>
@@ -1667,6 +2185,7 @@
                             <td>High</td>
                             <td>Needs concept repair and repeated problem practice</td>
                         </tr>
+
                         <tr>
                             <td>Biology</td>
                             <td>3 out of 5</td>
@@ -1674,6 +2193,7 @@
                             <td>Normal</td>
                             <td>Needs balanced review and retrieval practice</td>
                         </tr>
+
                         <tr>
                             <td>English Literature</td>
                             <td>2 out of 5</td>
@@ -1682,802 +2202,343 @@
                             <td>Needs maintenance, reading, and a shorter writing block</td>
                         </tr>
                     </tbody>
+
                 </table>
             </div>
 
-            <p>The generated numbers are planning estimates, not academic guarantees. A lab report, long essay, or difficult problem set may require more time than its initial score suggests. Update the plan after testing it.</p>
+            <p>
+                The generated numbers are planning estimates, not academic guarantees. A lab report, long essay, or difficult problem set may require more time than its initial score suggests. Update the plan after testing it.
+            </p>
+
         </section>
 
         <section class="section alt reveal">
             <div class="section-inner">
-                <span class="eyebrow">Study-time guidance</span>
-                <h2>How Many Hours Should You Study?</h2>
-                <p>There is no universal daily number that fits every course or student. A practical schedule starts with the time you can protect consistently. Course difficulty, prior knowledge, assessment type, reading load, writing requirements, and exam proximity all change the answer.</p>
-                <p>A common university budgeting guideline is to allow roughly two to three hours of study outside class for each hour spent in class. Treat that as a starting estimate, not a rule. Track how long your actual work takes and adjust future plans.</p>
+
+                <span class="eyebrow">
+                    Study-time guidance
+                </span>
+
+                <h2>
+                    How Many Hours Should You Study?
+                </h2>
+
+                <p>
+                    There is no universal daily number that fits every course or student. A practical schedule starts with the time you can protect consistently. Course difficulty, prior knowledge, assessment type, reading load, writing requirements, and exam proximity all change the answer.
+                </p>
+
+                <p>
+                    A common university budgeting guideline is to allow roughly two to three hours of study outside class for each hour spent in class. Treat that as a starting estimate, not a rule. Track how long your actual work takes and adjust future plans.
+                </p>
+
                 <ul class="section-list">
                     <li>Use fewer hours when the plan would reduce sleep or conflict with essential responsibilities.</li>
                     <li>Increase time for low-confidence topics, practice-heavy courses, and approaching exams.</li>
                     <li>Break long totals into several sessions instead of one marathon block.</li>
                     <li>Keep buffer time so the schedule remains usable when the week changes.</li>
                 </ul>
+
             </div>
         </section>
 
         <section class="section reveal">
-            <span class="eyebrow">Research sources</span>
-            <h2>Evidence Used for the Study-Planning Guidance</h2>
-            <p>The calculator's weighting formula is a transparent planning model created for this tool. The learning recommendations are based on established guidance and research concerning distributed practice, retrieval practice, active learning, realistic planning, and focused study sessions.</p>
+
+            <span class="eyebrow">
+                Research sources
+            </span>
+
+            <h2>
+                Evidence Used for the Study-Planning Guidance
+            </h2>
+
+            <p>
+                The calculator's weighting formula is a transparent planning model created for this tool. The learning recommendations are based on established guidance and research concerning distributed practice, retrieval practice, active learning, realistic planning, and focused study sessions.
+            </p>
 
             <div class="source-list">
-                <a class="source-link" href="https://learningcenter.unc.edu/tips-and-tools/the-study-cycle/" target="_blank" rel="noopener noreferrer">
+
+                <a
+                    class="source-link"
+                    href="https://learningcenter.unc.edu/tips-and-tools/the-study-cycle/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     <strong>UNC Learning Center, The Study Cycle</strong><br>
                     Focused sessions, distributed practice, active learning, breaks, and regular checking.
                 </a>
-                <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/26173288/" target="_blank" rel="noopener noreferrer">
+
+                <a
+                    class="source-link"
+                    href="https://pubmed.ncbi.nlm.nih.gov/26173288/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     <strong>Dunlosky and colleagues, Improving Students' Learning With Effective Learning Techniques</strong><br>
                     Review of learning techniques including practice testing and distributed practice.
                 </a>
-                <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/33006925/" target="_blank" rel="noopener noreferrer">
+
+                <a
+                    class="source-link"
+                    href="https://pubmed.ncbi.nlm.nih.gov/33006925/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     <strong>McDermott, Practicing Retrieval Facilitates Learning</strong><br>
                     Review of retrieval-based learning and its use across ages, materials, and classroom settings.
                 </a>
-                <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/37683816/" target="_blank" rel="noopener noreferrer">
+
+                <a
+                    class="source-link"
+                    href="https://pubmed.ncbi.nlm.nih.gov/37683816/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     <strong>Thompson and colleagues, Spaced Learning, Interleaving, and Retrieval Practice</strong><br>
                     Review describing these approaches as evidence-based strategies for long-term retention.
                 </a>
-                <a class="source-link" href="https://www.asundergrad.pitt.edu/study-lab/study-skills-tools-resources/time-management-calculator" target="_blank" rel="noopener noreferrer">
+
+                <a
+                    class="source-link"
+                    href="https://www.asundergrad.pitt.edu/study-lab/study-skills-tools-resources/time-management-calculator"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     <strong>University of Pittsburgh, Time Management Calculator</strong><br>
                     Guidance for budgeting study time and maintaining a sustainable weekly balance.
                 </a>
+
             </div>
         </section>
 
         <section class="section section-wide reveal">
-            <span class="eyebrow">Related calculators</span>
-            <h2>Continue Planning Your Academic Work</h2>
+
+            <span class="eyebrow">
+                Related calculators
+            </span>
+
+            <h2>
+                Continue Planning Your Academic Work
+            </h2>
+
             <div class="related-grid">
+
                 <a href="/gpa-calculator/" class="related-card">
-                    <span class="related-icon"><svg viewBox="0 0 24 24"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 12v5c3 2 7 2 10 0v-5"></path></svg></span>
+                    <span class="related-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m3 10 9-5 9 5-9 5-9-5Z"></path>
+                            <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+                        </svg>
+                    </span>
+
                     <h3>GPA Calculator</h3>
                     <p>Calculate semester GPA from letter grades and credit hours.</p>
                 </a>
+
                 <a href="/grade-calculator/" class="related-card">
-                    <span class="related-icon"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path></svg></span>
+                    <span class="related-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 19h16M6 16V8h3v8M11 16V5h3v11M16 16v-4h3v4"></path>
+                        </svg>
+                    </span>
+
                     <h3>Grade Calculator</h3>
                     <p>Calculate a weighted course grade from assignments and tests.</p>
                 </a>
+
                 <a href="/final-grade-calculator/" class="related-card">
-                    <span class="related-icon"><svg viewBox="0 0 24 24"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path><path d="M8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 12v5M8 21h8M9 17h6"></path></svg></span>
+                    <span class="related-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path>
+                            <path d="M8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 12v5M8 21h8M9 17h6"></path>
+                        </svg>
+                    </span>
+
                     <h3>Final Grade Calculator</h3>
                     <p>Find the exam score needed to reach a target course grade.</p>
                 </a>
+
                 <a href="/attendance-calculator/" class="related-card">
-                    <span class="related-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg></span>
+                    <span class="related-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                            <path d="M16 3v4M8 3v4M3 10h18"></path>
+                        </svg>
+                    </span>
+
                     <h3>Attendance Calculator</h3>
                     <p>Track attendance percentage and remaining class options.</p>
                 </a>
+
             </div>
         </section>
 
         <section class="section alt reveal">
             <div class="section-inner">
-                <span class="eyebrow">Frequently asked questions</span>
-                <h2>Study Schedule Planner FAQs</h2>
+
+                <span class="eyebrow">
+                    Frequently asked questions
+                </span>
+
+                <h2>
+                    Study Schedule Planner FAQs
+                </h2>
+
                 <div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>What is a study schedule planner?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">A study schedule planner divides your available study time across subjects and days. This planner uses difficulty, confidence, priority, deadlines, session length, and available hours to create a practical daily or weekly study plan.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>How does this study time planner calculate subject time?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Each subject receives a planning score based on difficulty, confidence, priority, and deadline urgency. The planner divides your usable study minutes in proportion to those scores, then splits the time into focused sessions.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Is this a daily or weekly study planner?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">It can create a plan for one day, three days, one week, or two weeks. Choose the planning period that matches your next exam, assignment, or study cycle.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>How many hours should I study each day?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">There is no single correct number for every student. Use the time you can realistically protect after classes, sleep, meals, work, and other responsibilities. Some universities suggest budgeting two to three hours of study outside class for each hour spent in class, but course demands vary.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Should harder subjects always receive more time?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Harder subjects often need more practice, but difficulty is only one factor. Low confidence, urgent deadlines, and high-priority exams can also increase a subject's allocation.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Why does the planner keep buffer time?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Buffer time prevents the schedule from using every available minute. It gives you room for breaks, transitions, unexpected delays, and sessions that take longer than planned.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>What study session length should I choose?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Choose a session length you can complete with full attention. Twenty-five minutes can suit short review blocks, while 45 or 60 minutes may work better for problem solving, writing, and practice exams.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Does the planner include spaced practice?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">The planner spreads sessions across the selected days instead of placing all work into one block. For the best effect, revisit important subjects on multiple days and use retrieval practice during each session.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Can I use this study planner for exam week?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. Add only the subjects or topics that matter for your exams, enter each deadline, lower confidence where you feel unprepared, and set urgent priority for the highest-stakes work.</div></div>
-    </div>
-<div class="faq-item">
-        <button class="faq-question" type="button" aria-expanded="false">
-            <span>Is my study-plan data saved?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">No. The planner runs in your browser. Subject names, priorities, confidence levels, deadlines, and generated schedules are not sent with the analytics event.</div></div>
-    </div>
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What is a study schedule planner?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            A study schedule planner divides your available study time across subjects and days. This planner uses difficulty, confidence, priority, deadlines, session length, and available hours to create a practical daily or weekly study plan.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>How does this study time planner calculate subject time?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Each subject receives a planning score based on difficulty, confidence, priority, and deadline urgency. The planner divides your usable study minutes in proportion to those scores, then splits the time into focused sessions.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Is this a daily or weekly study planner?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It can create a plan for one day, three days, one week, or two weeks. Choose the planning period that matches your next exam, assignment, or study cycle.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>How many hours should I study each day?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            There is no single correct number for every student. Use the time you can realistically protect after classes, sleep, meals, work, and other responsibilities. Some universities suggest budgeting two to three hours of study outside class for each hour spent in class, but course demands vary.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Should harder subjects always receive more time?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Harder subjects often need more practice, but difficulty is only one factor. Low confidence, urgent deadlines, and high-priority exams can also increase a subject's allocation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Why does the planner keep buffer time?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Buffer time prevents the schedule from using every available minute. It gives you room for breaks, transitions, unexpected delays, and sessions that take longer than planned.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What study session length should I choose?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Choose a session length you can complete with full attention. Twenty-five minutes can suit short review blocks, while 45 or 60 minutes may work better for problem solving, writing, and practice exams.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Does the planner include spaced practice?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            The planner spreads sessions across the selected days instead of placing all work into one block. For the best effect, revisit important subjects on multiple days and use retrieval practice during each session.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Can I use this study planner for exam week?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Add only the subjects or topics that matter for your exams, enter each deadline, lower confidence where you feel unprepared, and set urgent priority for the highest-stakes work.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Is my study-plan data saved?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. The planner runs in your browser. Subject names, priorities, confidence levels, deadlines, and generated schedules are not sent with the analytics event.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section class="cta">
             <div class="cta-inner">
-                <h2>Plan the Work, Then Study With Purpose</h2>
-                <p>Use the schedule as a realistic starting point. Complete focused sessions, check your progress, and update the plan when deadlines or confidence levels change.</p>
-                <a href="/calculators/" class="cta-link">Browse All Student Calculators</a>
+
+                <h2>
+                    Plan the Work, Then Study With Purpose
+                </h2>
+
+                <p>
+                    Use the schedule as a realistic starting point. Complete focused sessions, check your progress, and update the plan when deadlines or confidence levels change.
+                </p>
+
+                <a href="/calculators/" class="cta-link">
+                    Browse All Student Calculators
+                </a>
+
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p class="footer-logo">StudentCalc<span>Tools</span></p>
-        <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
+    {% include footer.html %}
 
-        <div class="footer-grid">
-            <div class="footer-col">
-                <p class="footer-col-title">Grade Tools</p>
-                <a href="/gpa-calculator/">GPA Calculator</a>
-                <a href="/grade-calculator/">Grade Calculator</a>
-                <a href="/final-grade-calculator/">Final Grade Calculator</a>
-                <a href="/cgpa-calculator/">CGPA Calculator</a>
-                <a href="/class-rank-calculator/">Class Rank Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-col-title">More Tools</p>
-                <a href="/attendance-calculator/">Attendance Calculator</a>
-                <a href="/study-time-planner/" aria-current="page">Study Schedule Planner</a>
-                <a href="/essay-word-counter/">Essay Word Counter</a>
-                <a href="/student-loan-calculator/">Student Loan Calculator</a>
-                <a href="/scholarship-calculator/">Scholarship Calculator</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-col-title">Explore</p>
-                <a href="/">Home</a>
-                <a href="/calculators/">All Calculators</a>
-                <a href="/blog/">Student Guides</a>
-                <a href="/calculator-methodology/">Calculator Methodology</a>
-            </div>
-            <div class="footer-col">
-                <p class="footer-col-title">Company</p>
-                <a href="/about-us/">About Us</a>
-                <a href="/contact-us/">Contact Us</a>
-                <a href="/privacy-policy/">Privacy Policy</a>
-                <a href="/disclaimer/">Disclaimer</a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
-        </div>
-    </footer>
-
-    <script>
-        (function () {
-            const root = document.documentElement;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeMeta = document.querySelector('meta[name="theme-color"]');
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            const scrollProgress = document.getElementById('scrollProgress');
-
-            function updateThemeButton() {
-                const current = root.getAttribute('data-theme') || 'light';
-                const target = current === 'dark' ? 'light' : 'dark';
-                const label = 'Switch to ' + target + ' mode';
-                themeToggle.setAttribute('aria-label', label);
-                themeToggle.setAttribute('title', label);
-                themeMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
-            }
-
-            updateThemeButton();
-
-            themeToggle.addEventListener('click', function () {
-                const current = root.getAttribute('data-theme') || 'light';
-                const next = current === 'dark' ? 'light' : 'dark';
-                root.setAttribute('data-theme', next);
-                try { localStorage.setItem('theme', next); } catch (error) {}
-                updateThemeButton();
-            });
-
-            function closeMenu(returnFocus) {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.textContent = 'Menu';
-                if (returnFocus) menuToggle.focus();
-            }
-
-            menuToggle.addEventListener('click', function () {
-                const open = navLinks.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', String(open));
-                menuToggle.textContent = open ? 'Close' : 'Menu';
-            });
-
-            navLinks.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () { closeMenu(false); });
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) closeMenu(false);
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && navLinks.classList.contains('open')) closeMenu(true);
-            });
-
-            function updateScrollProgress() {
-                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-                const value = scrollable > 0 ? window.scrollY / scrollable * 100 : 0;
-                scrollProgress.style.width = Math.max(0, Math.min(100, value)) + '%';
-            }
-
-            window.addEventListener('scroll', updateScrollProgress, { passive:true });
-            window.addEventListener('resize', updateScrollProgress);
-            updateScrollProgress();
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold:.08 });
-
-            document.querySelectorAll('.reveal').forEach(function (section) { observer.observe(section); });
-
-            document.querySelectorAll('.faq-question').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    const item = button.closest('.faq-item');
-                    const open = item.classList.toggle('open');
-                    button.setAttribute('aria-expanded', String(open));
-                });
-            });
-
-            document.getElementById('currentYear').textContent = String(new Date().getFullYear());
-        }());
-
-        (function () {
-            const startDateInput = document.getElementById('startDate');
-            const planDaysInput = document.getElementById('planDays');
-            const totalHoursInput = document.getElementById('totalHours');
-            const sessionLengthInput = document.getElementById('sessionLength');
-            const bufferInput = document.getElementById('bufferPercent');
-            const rowsContainer = document.getElementById('subjectRows');
-            const addButton = document.getElementById('addSubject');
-            const generateButton = document.getElementById('generatePlan');
-            const resultBox = document.getElementById('resultBox');
-            const resultDescription = document.getElementById('resultDescription');
-            const summaryBadges = document.getElementById('summaryBadges');
-            const allocationGrid = document.getElementById('allocationGrid');
-            const dayGrid = document.getElementById('dayGrid');
-            const copyButton = document.getElementById('copyPlan');
-            const printButton = document.getElementById('printPlan');
-            const resetButton = document.getElementById('resetPlan');
-
-            let copyText = '';
-
-            function localDateString(dateValue) {
-                const year = dateValue.getFullYear();
-                const month = String(dateValue.getMonth() + 1).padStart(2, '0');
-                const day = String(dateValue.getDate()).padStart(2, '0');
-                return year + '-' + month + '-' + day;
-            }
-
-            function parseLocalDate(value) {
-                if (!value) return null;
-                const parts = value.split('-').map(Number);
-                return new Date(parts[0], parts[1] - 1, parts[2], 12, 0, 0);
-            }
-
-            function addDays(dateValue, amount) {
-                const next = new Date(dateValue);
-                next.setDate(next.getDate() + amount);
-                return next;
-            }
-
-            function formatDate(dateValue) {
-                return new Intl.DateTimeFormat('en-US', {
-                    weekday:'short',
-                    month:'short',
-                    day:'numeric'
-                }).format(dateValue);
-            }
-
-            function formatMinutes(minutes) {
-                const total = Math.max(0, Math.round(minutes));
-                const hours = Math.floor(total / 60);
-                const mins = total % 60;
-                if (hours && mins) return hours + 'h ' + mins + 'm';
-                if (hours) return hours + 'h';
-                return mins + 'm';
-            }
-
-            function purposeFor(subject, sessionIndex, totalSessions) {
-                if (sessionIndex === 0 && subject.confidence === 'low') return 'Diagnose weak areas and review core concepts';
-                if (sessionIndex === totalSessions - 1 && totalSessions > 1) return 'Retrieval check and error review';
-                if (subject.difficulty >= 4) return 'Practice problems or active application';
-                if (subject.priority === 'urgent') return 'Deadline-focused work';
-                return 'Active recall, practice, or focused review';
-            }
-
-            function clearError(input) {
-                input.removeAttribute('aria-invalid');
-                const error = input.parentElement.querySelector('.field-error');
-                if (error) error.remove();
-            }
-
-            function showError(input, message) {
-                input.setAttribute('aria-invalid', 'true');
-                let error = input.parentElement.querySelector('.field-error');
-                if (!error) {
-                    error = document.createElement('span');
-                    error.className = 'field-error';
-                    input.parentElement.appendChild(error);
-                }
-                error.textContent = message;
-            }
-
-            function setInitialDates() {
-                const today = new Date();
-                startDateInput.value = localDateString(today);
-                rowsContainer.querySelectorAll('.deadline-control').forEach(function (input, index) {
-                    if (!input.value) input.value = localDateString(addDays(today, index === 0 ? 6 : index === 1 ? 10 : 13));
-                });
-            }
-
-            function rowMarkup() {
-                return `
-                    <input class="control subject-name" type="text" placeholder="Subject or topic" aria-label="Subject or topic">
-                    <select class="control difficulty-control" aria-label="Difficulty">
-                        <option value="1">1 - Very easy</option>
-                        <option value="2">2 - Easy</option>
-                        <option value="3" selected>3 - Medium</option>
-                        <option value="4">4 - Hard</option>
-                        <option value="5">5 - Very hard</option>
-                    </select>
-                    <select class="control confidence-control" aria-label="Confidence">
-                        <option value="low">Low</option>
-                        <option value="medium" selected>Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                    <select class="control priority-control" aria-label="Priority">
-                        <option value="normal" selected>Normal</option>
-                        <option value="high">High</option>
-                        <option value="urgent">Urgent</option>
-                    </select>
-                    <input class="control deadline-control" type="date" aria-label="Exam or deadline">
-                    <button class="remove-btn" type="button" aria-label="Remove subject">
-                        <svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></svg>
-                    </button>`;
-            }
-
-            function bindRow(row) {
-                const removeButton = row.querySelector('.remove-btn');
-                removeButton.addEventListener('click', function () {
-                    if (rowsContainer.children.length > 1) {
-                        row.remove();
-                        resultBox.classList.remove('visible');
-                    }
-                });
-
-                row.querySelectorAll('input,select').forEach(function (input) {
-                    input.addEventListener('input', function () {
-                        clearError(input);
-                        resultBox.classList.remove('visible');
-                    });
-                    input.addEventListener('change', function () {
-                        clearError(input);
-                        resultBox.classList.remove('visible');
-                    });
-                });
-            }
-
-            rowsContainer.querySelectorAll('.subject-row').forEach(bindRow);
-            setInitialDates();
-
-            addButton.addEventListener('click', function () {
-                const row = document.createElement('div');
-                row.className = 'subject-row';
-                row.innerHTML = rowMarkup();
-                rowsContainer.appendChild(row);
-                bindRow(row);
-                row.querySelector('.subject-name').focus();
-            });
-
-            [startDateInput, planDaysInput, totalHoursInput, sessionLengthInput, bufferInput].forEach(function (input) {
-                input.addEventListener('input', function () {
-                    clearError(input);
-                    resultBox.classList.remove('visible');
-                });
-                input.addEventListener('change', function () {
-                    clearError(input);
-                    resultBox.classList.remove('visible');
-                });
-            });
-
-            function confidenceFactor(value) {
-                return value === 'low' ? 1.4 : value === 'medium' ? 1.15 : 1;
-            }
-
-            function priorityFactor(value) {
-                return value === 'urgent' ? 1.55 : value === 'high' ? 1.25 : 1;
-            }
-
-            function deadlineFactor(deadline, startDate) {
-                if (!deadline) return 1;
-                const daysAway = Math.ceil((deadline - startDate) / 86400000);
-                if (daysAway < 0) return 1.65;
-                if (daysAway <= 3) return 1.5;
-                if (daysAway <= 7) return 1.3;
-                if (daysAway <= 14) return 1.12;
-                return 1;
-            }
-
-            function allocateRoundedMinutes(subjects, totalMinutes) {
-                const sumScore = subjects.reduce(function (sum, subject) { return sum + subject.score; }, 0);
-                const raw = subjects.map(function (subject) {
-                    const exact = totalMinutes * subject.score / sumScore;
-                    const base = Math.floor(exact / 5) * 5;
-                    return { subject:subject, exact:exact, minutes:base, remainder:exact - base };
-                });
-
-                let assigned = raw.reduce(function (sum, item) { return sum + item.minutes; }, 0);
-                let remaining = totalMinutes - assigned;
-                const ordered = raw.slice().sort(function (a,b) { return b.remainder - a.remainder; });
-
-                let index = 0;
-                while (remaining >= 5 && ordered.length) {
-                    ordered[index % ordered.length].minutes += 5;
-                    remaining -= 5;
-                    index += 1;
-                }
-
-                if (remaining > 0 && ordered.length) ordered[0].minutes += remaining;
-                return raw;
-            }
-
-            function splitSessions(subject, sessionLength) {
-                const sessions = [];
-                let remaining = subject.minutes;
-
-                while (remaining > 0) {
-                    const duration = Math.min(sessionLength, remaining);
-                    sessions.push(duration);
-                    remaining -= duration;
-                }
-
-                return sessions;
-            }
-
-            function buildSchedule(subjects, days, startDate, sessionLength) {
-                const dayPlans = Array.from({length:days}, function (_, index) {
-                    return {
-                        date:addDays(startDate, index),
-                        minutes:0,
-                        sessions:[]
-                    };
-                });
-
-                const allSessions = [];
-                subjects
-                    .slice()
-                    .sort(function (a,b) { return b.score - a.score; })
-                    .forEach(function (subject) {
-                        const chunks = splitSessions(subject, sessionLength);
-                        chunks.forEach(function (duration, index) {
-                            allSessions.push({
-                                subject:subject,
-                                duration:duration,
-                                index:index,
-                                total:chunks.length
-                            });
-                        });
-                    });
-
-                allSessions.forEach(function (session) {
-                    const eligible = dayPlans.filter(function (day) {
-                        return !session.subject.deadline || day.date <= session.subject.deadline;
-                    });
-                    const pool = eligible.length ? eligible : dayPlans;
-                    pool.sort(function (a,b) {
-                        if (a.minutes !== b.minutes) return a.minutes - b.minutes;
-                        return a.date - b.date;
-                    });
-                    const targetDay = pool[0];
-                    targetDay.sessions.push(session);
-                    targetDay.minutes += session.duration;
-                });
-
-                dayPlans.sort(function (a,b) { return a.date - b.date; });
-                return dayPlans;
-            }
-
-            generateButton.addEventListener('click', function () {
-                clearError(startDateInput);
-                clearError(totalHoursInput);
-
-                const startDate = parseLocalDate(startDateInput.value);
-                const planDays = Number.parseInt(planDaysInput.value, 10);
-                const totalHours = Number.parseFloat(totalHoursInput.value);
-                const sessionLength = Number.parseInt(sessionLengthInput.value, 10);
-                const bufferPercent = Number.parseInt(bufferInput.value, 10);
-
-                let valid = true;
-                let firstInvalid = null;
-
-                if (!startDate) {
-                    showError(startDateInput, 'Choose a valid start date.');
-                    valid = false;
-                    firstInvalid = firstInvalid || startDateInput;
-                }
-
-                if (!Number.isFinite(totalHours) || totalHours < .5 || totalHours > 100) {
-                    showError(totalHoursInput, 'Enter total hours from 0.5 to 100.');
-                    valid = false;
-                    firstInvalid = firstInvalid || totalHoursInput;
-                }
-
-                const rows = Array.from(rowsContainer.querySelectorAll('.subject-row'));
-                const subjects = [];
-
-                rows.forEach(function (row) {
-                    const nameInput = row.querySelector('.subject-name');
-                    const name = nameInput.value.trim();
-                    clearError(nameInput);
-
-                    if (!name) {
-                        showError(nameInput, 'Enter a subject or topic name.');
-                        valid = false;
-                        firstInvalid = firstInvalid || nameInput;
-                        return;
-                    }
-
-                    const difficulty = Number.parseInt(row.querySelector('.difficulty-control').value, 10);
-                    const confidence = row.querySelector('.confidence-control').value;
-                    const priority = row.querySelector('.priority-control').value;
-                    const deadline = parseLocalDate(row.querySelector('.deadline-control').value);
-                    const score = difficulty *
-                        confidenceFactor(confidence) *
-                        priorityFactor(priority) *
-                        deadlineFactor(deadline, startDate || new Date());
-
-                    subjects.push({
-                        name:name,
-                        difficulty:difficulty,
-                        confidence:confidence,
-                        priority:priority,
-                        deadline:deadline,
-                        score:score,
-                        minutes:0
-                    });
-                });
-
-                if (!valid) {
-                    firstInvalid.focus();
-                    return;
-                }
-
-                const totalMinutes = Math.round(totalHours * 60);
-                const usableMinutes = Math.max(5, Math.floor(totalMinutes * (1 - bufferPercent / 100) / 5) * 5);
-                const bufferMinutes = totalMinutes - usableMinutes;
-                const allocations = allocateRoundedMinutes(subjects, usableMinutes);
-
-                allocations.forEach(function (item) {
-                    item.subject.minutes = item.minutes;
-                });
-
-                const dayPlans = buildSchedule(subjects, planDays, startDate, sessionLength);
-                const totalSessions = dayPlans.reduce(function (sum, day) { return sum + day.sessions.length; }, 0);
-
-                resultDescription.textContent =
-                    'Plan from ' + formatDate(startDate) + ' across ' + planDays + ' day' + (planDays === 1 ? '' : 's') + '.';
-
-                summaryBadges.innerHTML = '';
-                [
-                    formatMinutes(usableMinutes) + ' scheduled',
-                    formatMinutes(bufferMinutes) + ' buffer',
-                    subjects.length + ' subject' + (subjects.length === 1 ? '' : 's'),
-                    totalSessions + ' focused session' + (totalSessions === 1 ? '' : 's')
-                ].forEach(function (text) {
-                    const badge = document.createElement('span');
-                    badge.className = 'summary-badge';
-                    badge.textContent = text;
-                    summaryBadges.appendChild(badge);
-                });
-
-                allocationGrid.innerHTML = '';
-                const maxMinutes = Math.max.apply(null, subjects.map(function (subject) { return subject.minutes; }));
-
-                subjects
-                    .slice()
-                    .sort(function (a,b) { return b.minutes - a.minutes; })
-                    .forEach(function (subject) {
-                        const card = document.createElement('article');
-                        card.className = 'allocation-card';
-                        const deadlineText = subject.deadline ? ' · deadline ' + formatDate(subject.deadline) : '';
-                        const sessionCount = splitSessions(subject, sessionLength).length;
-                        const width = maxMinutes ? Math.max(4, subject.minutes / maxMinutes * 100) : 0;
-
-                        card.innerHTML =
-                            '<div class="allocation-top">' +
-                                '<span class="allocation-name"></span>' +
-                                '<span class="allocation-time">' + formatMinutes(subject.minutes) + '</span>' +
-                            '</div>' +
-                            '<div class="allocation-meta">' +
-                                'Difficulty ' + subject.difficulty + '/5 · ' +
-                                subject.confidence + ' confidence · ' +
-                                subject.priority + ' priority' + deadlineText +
-                                ' · ' + sessionCount + ' session' + (sessionCount === 1 ? '' : 's') +
-                            '</div>' +
-                            '<div class="allocation-bar"><span style="width:' + width.toFixed(1) + '%"></span></div>';
-
-                        card.querySelector('.allocation-name').textContent = subject.name;
-                        allocationGrid.appendChild(card);
-                    });
-
-                dayGrid.innerHTML = '';
-                copyText = 'STUDY SCHEDULE\n';
-                copyText += 'Start: ' + formatDate(startDate) + '\n';
-                copyText += 'Scheduled: ' + formatMinutes(usableMinutes) + ' | Buffer: ' + formatMinutes(bufferMinutes) + '\n\n';
-
-                dayPlans.forEach(function (day) {
-                    const card = document.createElement('article');
-                    card.className = 'day-card';
-
-                    const heading = document.createElement('h4');
-                    heading.textContent = formatDate(day.date);
-                    card.appendChild(heading);
-
-                    const total = document.createElement('div');
-                    total.className = 'day-total';
-                    total.textContent = day.sessions.length ? formatMinutes(day.minutes) + ' scheduled' : 'Buffer or rest day';
-                    card.appendChild(total);
-
-                    copyText += formatDate(day.date) + ' (' + formatMinutes(day.minutes) + ')\n';
-
-                    if (!day.sessions.length) {
-                        const empty = document.createElement('p');
-                        empty.className = 'empty-day';
-                        empty.textContent = 'No fixed session. Use this day for rest, catch-up, or light review.';
-                        card.appendChild(empty);
-                        copyText += '  Buffer, rest, or catch-up\n\n';
-                    } else {
-                        day.sessions.forEach(function (session) {
-                            const item = document.createElement('div');
-                            item.className = 'session-item';
-
-                            const dot = document.createElement('span');
-                            dot.className = 'session-dot';
-
-                            const details = document.createElement('div');
-                            const name = document.createElement('div');
-                            name.className = 'session-name';
-                            name.textContent = session.subject.name;
-                            const purpose = document.createElement('div');
-                            purpose.className = 'session-purpose';
-                            purpose.textContent = purposeFor(session.subject, session.index, session.total);
-                            details.appendChild(name);
-                            details.appendChild(purpose);
-
-                            const time = document.createElement('span');
-                            time.className = 'session-time';
-                            time.textContent = formatMinutes(session.duration);
-
-                            item.appendChild(dot);
-                            item.appendChild(details);
-                            item.appendChild(time);
-                            card.appendChild(item);
-
-                            copyText += '  - ' + session.subject.name + ': ' + formatMinutes(session.duration) + ' | ' + purpose.textContent + '\n';
-                        });
-                        copyText += '\n';
-                    }
-
-                    dayGrid.appendChild(card);
-                });
-
-                resultBox.classList.add('visible');
-                resultBox.scrollIntoView({behavior:'smooth',block:'start'});
-
-                if (typeof gtag === 'function') {
-                    gtag('event', 'calculator_used', {
-                        tool:'study_schedule_planner'
-                    });
-                }
-            });
-
-            copyButton.addEventListener('click', async function () {
-                const text = copyText || 'Generate a study schedule first.';
-                try {
-                    await navigator.clipboard.writeText(text);
-                } catch (error) {
-                    const temporary = document.createElement('textarea');
-                    temporary.value = text;
-                    temporary.style.position = 'fixed';
-                    temporary.style.opacity = '0';
-                    document.body.appendChild(temporary);
-                    temporary.select();
-                    document.execCommand('copy');
-                    temporary.remove();
-                }
-
-                const label = copyButton.querySelector('span');
-                const original = label.textContent;
-                label.textContent = 'Copied';
-                setTimeout(function () { label.textContent = original; }, 1500);
-            });
-
-            printButton.addEventListener('click', function () { window.print(); });
-
-            resetButton.addEventListener('click', function () {
-                resultBox.classList.remove('visible');
-                planDaysInput.value = '7';
-                totalHoursInput.value = '12';
-                sessionLengthInput.value = '45';
-                bufferInput.value = '10';
-
-                Array.from(rowsContainer.querySelectorAll('.subject-row')).forEach(function (row, index) {
-                    if (index > 2) row.remove();
-                });
-
-                const rows = rowsContainer.querySelectorAll('.subject-row');
-                const defaults = [
-                    ['Mathematics','4','low','high',6],
-                    ['Biology','3','medium','normal',10],
-                    ['English Literature','2','high','normal',13]
-                ];
-                const today = new Date();
-                startDateInput.value = localDateString(today);
-
-                rows.forEach(function (row, index) {
-                    const values = defaults[index];
-                    row.querySelector('.subject-name').value = values[0];
-                    row.querySelector('.difficulty-control').value = values[1];
-                    row.querySelector('.confidence-control').value = values[2];
-                    row.querySelector('.priority-control').value = values[3];
-                    row.querySelector('.deadline-control').value = localDateString(addDays(today, values[4]));
-                    row.querySelectorAll('[aria-invalid="true"]').forEach(function (input) { clearError(input); });
-                });
-
-                startDateInput.focus();
-            });
-        }());
-    </script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/study-time-planner.js"></script>
 </body>
 </html>

@@ -1,219 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-    <meta name="theme-color" content="#2563eb">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin">
+
+    <meta
+        name="theme-color"
+        content="#2563eb">
+
+    <meta
+        name="color-scheme"
+        content="light dark">
+
+    <meta
+        name="application-name"
+        content="StudentCalcTools">
+
     {% assign image_path = page.featured_image | default: page.image | default: "/assets/images/og-image.webp" %}
-    <title>{{ page.meta_title | default: page.title }}</title>
-    <meta name="description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
-    <meta name="author" content="{{ page.author | default: 'StudentCalcTools' }}">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="StudentCalcTools">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:title" content="{{ page.meta_title | default: page.title }}">
-    <meta property="og:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
-    <meta property="og:image" content="{{ image_path | absolute_url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.meta_title | default: page.title }}">
-    <meta name="twitter:description" content="{{ page.meta_description | default: page.excerpt | strip_html | strip_newlines }}">
-    <meta name="twitter:image" content="{{ image_path | absolute_url }}">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-:root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-        body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
-        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
-        .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
-        .skip-link:focus{left:0}
-        .site-nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
-        [data-theme="dark"] .site-nav{background:rgba(2,6,23,0.85)}
-        .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
-        .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
-        .nav-logo span{color:var(--accent)}
-        .nav-links{display:flex;align-items:center;gap:16px}
-        .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
-        .nav-links a:hover{color:var(--blue)}
-        .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
-        .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
-        .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
-        .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
-        .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
-        .breadcrumb-sep{margin:0 8px;color:var(--muted)}
-        .page-hero-content{position:relative;z-index:1;max-width:720px;margin:0 auto}
-        .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
-        .page-hero h1 .gradient-text{background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .page-hero p{font-size:17px;color:var(--text-secondary);max-width:560px;margin:0 auto;line-height:1.7;font-weight:500}
-        .blog-section{padding:60px 20px;max-width:900px;margin:0 auto}
-        .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:inline-block}
-        .section-title{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-0.5px;line-height:1.2}
-        .section-sub{font-size:15px;color:var(--muted);margin-bottom:36px;font-weight:500}
-        .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:28px}
-        .blog-card{background:var(--card-bg);border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden;transition:all 0.3s ease;text-decoration:none;display:block}
-        .blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--border-strong)}
-        .blog-card-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
-        .blog-card-img-1{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
-        .blog-card-img-2{background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)}
-        .blog-card-body{padding:28px}
-        .blog-card-tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);background:var(--blue-light);padding:4px 12px;border-radius:20px;margin-bottom:14px}
-        .blog-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.3;letter-spacing:-0.3px}
-        .blog-card-excerpt{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px}
-        .blog-card-footer{display:flex;align-items:center;justify-content:space-between}
-        .blog-card-meta{font-size:12px;color:var(--muted);font-weight:600}
-        .blog-read-more{font-size:14px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s ease}
-        .blog-card:hover .blog-read-more{gap:10px}
-        .newsletter-section{padding:0 20px 60px;max-width:900px;margin:0 auto}
-        .newsletter-card{background:var(--gradient-hero);border:1px solid var(--border-strong);border-radius:24px;padding:48px 40px;text-align:center}
-        .newsletter-card h2{font-size:28px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-0.5px}
-        .newsletter-card p{font-size:15px;color:var(--muted);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.7}
-        .newsletter-form{display:flex;gap:12px;max-width:440px;margin:0 auto;flex-wrap:wrap}
-        .newsletter-input{flex:1;min-width:200px;padding:13px 18px;border:1px solid var(--border-strong);border-radius:10px;font-size:14px;font-family:inherit;background:var(--card-bg);color:var(--text);outline:none;transition:border-color 0.2s ease}
-        .newsletter-input:focus{border-color:var(--blue)}
-        .newsletter-btn{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease;white-space:nowrap}
-        .newsletter-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.35)}
-        .newsletter-note{font-size:12px;color:var(--muted);margin-top:12px;font-weight:500}
-        .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
-        .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
-        .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
-        .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
-        .btn-cta:hover{transform:translateY(-2px)}
-        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
-        [data-theme="dark"] footer{background:#020617}
-        .footer-logo{font-size:22px;font-weight:800;color:white;margin-bottom:8px}.footer-logo span{color:var(--accent)}
-        .footer-tagline{margin-bottom:30px;font-size:14px}
-        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:900px;margin:0 auto 36px;text-align:left}
-        .footer-col p.col-title{color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
-        .footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;transition:color 0.2s ease}
-        .footer-col a:hover{color:white}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}.footer-bottom span{color:var(--accent)}
-        .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
-        .reveal.visible{opacity:1;transform:translateY(0)}
-        @media(max-width:768px){.site-nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.blog-grid{grid-template-columns:1fr}.newsletter-card{padding:32px 20px}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
-        @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+    {% assign seo_title = page.meta_title | default: page.title %}
+    {% assign seo_description = page.meta_description | default: page.excerpt | strip_html | strip_newlines %}
+    {% assign modified_date = page.last_modified_at | default: page.last_modified | default: page.date %}
 
-        .post-wrapper{padding:60px 20px;max-width:900px;margin:0 auto}
-        .post-card{background:var(--card-bg);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow-sm);padding:40px}
-        .post-featured-image{width:100%;height:auto;max-height:450px;object-fit:cover;border-radius:18px;margin:24px 0;border:1px solid var(--border)}
-        .post-content{font-size:16px;color:var(--text-secondary);line-height:1.9}
-        .post-content h2{font-size:28px;color:var(--text);margin:34px 0 12px;letter-spacing:-0.4px}
-        .post-content h3{font-size:22px;color:var(--text);margin:28px 0 10px}
-        .post-content p{margin-bottom:16px}
-        .post-content ul,.post-content ol{margin:0 0 20px 22px}
-        .post-content li{margin-bottom:8px}
-        .post-content table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 26px 0;
-  border: 1px solid var(--border-strong);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--card-bg);
-  box-shadow: var(--shadow-sm);
-}
+    <title>{{ seo_title }}</title>
 
-.post-content th {
-  background: var(--gradient-brand);
-  color: #ffffff;
-  padding: 14px 16px;
-  text-align: left;
-  font-size: 14px;
-  font-weight: 800;
-  white-space: nowrap;
-}
+    <meta
+        name="description"
+        content="{{ seo_description | escape }}">
 
-.post-content td {
-  padding: 13px 16px;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-secondary);
-  font-size: 14px;
-  line-height: 1.6;
-  vertical-align: top;
-}
+    <meta
+        name="author"
+        content="{{ page.author | default: 'StudentCalcTools' | escape }}">
 
-.post-content tr:last-child td {
-  border-bottom: none;
-}
+    <link
+        rel="canonical"
+        href="{{ page.url | absolute_url }}">
 
-.post-content tr:nth-child(even) td {
-  background: rgba(37, 99, 235, 0.04);
-}
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png">
 
-[data-theme="dark"] .post-content tr:nth-child(even) td {
-  background: rgba(59, 130, 246, 0.08);
-}
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png">
 
-.post-content table strong {
-  color: var(--text);
-}
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png">
 
-.post-content h1 {
-  font-size: 30px;
-  color: var(--text);
-  margin: 38px 0 14px;
-  line-height: 1.25;
-  letter-spacing: -0.4px;
-}
+    <link
+        rel="manifest"
+        href="/site.webmanifest">
 
-.post-content hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin: 34px 0;
-}
+    <meta
+        property="og:type"
+        content="article">
 
-@media(max-width: 768px) {
-  .post-content table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+    <meta
+        property="og:locale"
+        content="en_US">
 
-  .post-content th,
-  .post-content td {
-    padding: 12px 14px;
-    font-size: 13px;
-  }
-}
-        .post-faq{margin-top:40px;border-top:1px solid var(--border);padding-top:28px}
-        .post-faq h2{font-size:28px;color:var(--text);margin-bottom:18px}
-        .post-faq-item{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:12px}
-        .post-faq-item h3{font-size:17px;color:var(--text);margin-bottom:8px}
-        .post-faq-item p{font-size:15px;color:var(--text-secondary);line-height:1.75}
-        .blog-card-thumb{height:200px;width:100%;object-fit:cover;display:block;background:var(--gradient-brand)}
-        .blog-card-img-fallback{height:200px;display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:800;color:white;background:var(--gradient-brand)}
-        @media(max-width:768px){.post-card{padding:26px}.post-wrapper{padding:40px 16px}}
+    <meta
+        property="og:site_name"
+        content="StudentCalcTools">
 
-    </style>
+    <meta
+        property="og:url"
+        content="{{ page.url | absolute_url }}">
+
+    <meta
+        property="og:title"
+        content="{{ seo_title | escape }}">
+
+    <meta
+        property="og:description"
+        content="{{ seo_description | escape }}">
+
+    <meta
+        property="og:image"
+        content="{{ image_path | absolute_url }}">
+
+    <meta
+        property="og:image:secure_url"
+        content="{{ image_path | absolute_url }}">
+
+    <meta
+        property="og:image:alt"
+        content="{{ page.image_alt | default: page.title | escape }}">
+
+    <meta
+        property="article:published_time"
+        content="{{ page.date | date_to_xmlschema }}">
+
+    <meta
+        property="article:modified_time"
+        content="{{ modified_date | date_to_xmlschema }}">
+
+    {% if page.category %}
+    <meta
+        property="article:section"
+        content="{{ page.category | escape }}">
+    {% endif %}
+
+    {% if page.tags %}
+        {% for tag in page.tags %}
+    <meta
+        property="article:tag"
+        content="{{ tag | escape }}">
+        {% endfor %}
+    {% endif %}
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="{{ seo_title | escape }}">
+
+    <meta
+        name="twitter:description"
+        content="{{ seo_description | escape }}">
+
+    <meta
+        name="twitter:image"
+        content="{{ image_path | absolute_url }}">
+
+    <meta
+        name="twitter:image:alt"
+        content="{{ page.image_alt | default: page.title | escape }}">
+
+    <script src="/assets/js/theme-init.js"></script>
+
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0">
+    </script>
+
+    <script src="/assets/js/analytics.js"></script>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/site.css">
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/post.css">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": {{ page.title | jsonify }},
-      "description": {{ page.meta_description | default: page.excerpt | jsonify }},
-      "url": {{ page.url | absolute_url | jsonify }},
-      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
-      "author": { "@type": "Organization", "name": {{ page.author | default: 'StudentCalcTools' | jsonify }} },
-      "publisher": { "@type": "Organization", "name": "StudentCalcTools", "url": {{ site.url | append: site.baseurl | jsonify }} },
-      "image": {{ image_path | absolute_url | jsonify }}
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://studentcalctools.com/#organization",
+          "name": "StudentCalcTools",
+          "url": "https://studentcalctools.com/",
+          "email": "support@studentcalctools.com",
+          "description": "An independently operated educational tools website providing free student calculators.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://studentcalctools.com/assets/images/og-image.webp",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://studentcalctools.com/#website",
+          "url": "https://studentcalctools.com/",
+          "name": "StudentCalcTools",
+          "publisher": {
+            "@id": "https://studentcalctools.com/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "{{ page.url | absolute_url }}#article",
+          "headline": {{ page.title | jsonify }},
+          "description": {{ seo_description | jsonify }},
+          "url": {{ page.url | absolute_url | jsonify }},
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": {{ page.url | absolute_url | jsonify }}
+          },
+          "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+          "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+          "author": {
+            "@type": "Organization",
+            "@id": "https://studentcalctools.com/#organization",
+            "name": {{ page.author | default: "StudentCalcTools" | jsonify }}
+          },
+          "publisher": {
+            "@id": "https://studentcalctools.com/#organization"
+          },
+          "image": {{ image_path | absolute_url | jsonify }},
+          {% if page.category %}
+          "articleSection": {{ page.category | jsonify }},
+          {% endif %}
+          {% if page.tags %}
+          "keywords": {{ page.tags | join: ", " | jsonify }},
+          {% endif %}
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "{{ page.url | absolute_url }}#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://studentcalctools.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://studentcalctools.com/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": {{ page.short_title | default: page.title | jsonify }},
+              "item": {{ page.url | absolute_url | jsonify }}
+            }
+          ]
+        }
+      ]
     }
     </script>
+
     {% if page.faqs and page.faqs.size > 0 %}
     <script type="application/ld+json">
     {
@@ -235,123 +280,221 @@
     </script>
     {% endif %}
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress"></div>
-    <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="StudentCalcTools home">
-            <span class="nav-logo-icon" aria-hidden="true">S</span>Student<span>Calc</span>
-        </a>
-        <div class="nav-links">
-            <a href="{{ '/blog/' | relative_url }}">Blog</a>
-            <a href="{{ '/about-us/' | relative_url }}">About</a>
-            <a href="{{ '/contact-us/' | relative_url }}">Contact</a>
-            <span class="nav-tag">✓ 100% Free</span>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span id="themeIcon">☀</span></button>
-        </div>
-    </nav>
+    {% include header.html %}
+
     <main id="main-content">
-        <section class="page-hero">
-            <div class="page-hero-content">
-                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span class="breadcrumb-sep">/</span><a href="{{ '/blog/' | relative_url }}">Blog</a><span class="breadcrumb-sep">/</span><span>{{ page.short_title | default: page.title }}</span></nav>
-                <h1>{{ page.title }}</h1>
-                <p>{{ page.excerpt | default: page.meta_description }}</p>
+
+        <section
+            class="post-hero"
+            aria-labelledby="post-heading">
+
+            <div
+                class="post-hero-mesh"
+                aria-hidden="true">
             </div>
+
+            <div class="post-hero-content">
+
+                <nav
+                    class="breadcrumb"
+                    aria-label="Breadcrumb">
+
+                    <a href="/">
+                        Home
+                    </a>
+
+                    <span
+                        class="breadcrumb-sep"
+                        aria-hidden="true">
+                        /
+                    </span>
+
+                    <a href="/blog/">
+                        Blog
+                    </a>
+
+                    <span
+                        class="breadcrumb-sep"
+                        aria-hidden="true">
+                        /
+                    </span>
+
+                    <span aria-current="page">
+                        {{ page.short_title | default: page.title }}
+                    </span>
+
+                </nav>
+
+                {% if page.category %}
+                <div class="post-category">
+                    {{ page.category }}
+                </div>
+                {% endif %}
+
+                <h1 id="post-heading">
+                    {{ page.title }}
+                </h1>
+
+                {% if page.excerpt or page.meta_description %}
+                <p class="post-hero-description">
+                    {{ page.excerpt | default: page.meta_description }}
+                </p>
+                {% endif %}
+
+                <div class="post-meta">
+
+                    <span class="post-meta-item">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect
+                                x="3"
+                                y="5"
+                                width="18"
+                                height="16"
+                                rx="2">
+                            </rect>
+                            <path d="M16 3v4M8 3v4M3 10h18"></path>
+                        </svg>
+
+                        <time
+                            datetime="{{ page.date | date_to_xmlschema }}">
+                            {{ page.date | date: "%b %d, %Y" }}
+                        </time>
+                    </span>
+
+                    <span class="post-meta-item">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9">
+                            </circle>
+                            <path d="M12 7v5l3 2"></path>
+                        </svg>
+
+                        {{ page.read_time | default: "5 min read" }}
+                    </span>
+
+                    <span class="post-meta-item">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="3">
+                            </circle>
+                            <path d="M6 20c.7-4 3-6 6-6s5.3 2 6 6"></path>
+                        </svg>
+
+                        {{ page.author | default: "StudentCalcTools" }}
+                    </span>
+
+                </div>
+
+            </div>
+
         </section>
+
         <section class="post-wrapper">
+
             <article class="post-card">
-                <p class="blog-card-meta">{{ page.date | date: "%b %d, %Y" }} · {{ page.read_time | default: "5 min read" }} · {{ page.category }}</p>
-                <img class="post-featured-image" src="{{ image_path | relative_url }}" alt="{{ page.image_alt | default: page.title }}" loading="lazy">
+
+                {% if page.featured_image or page.image %}
+
+                <figure class="post-featured-figure">
+
+                    <img
+                        class="post-featured-image"
+                        src="{{ image_path | relative_url }}"
+                        alt="{{ page.image_alt | default: page.title | escape }}"
+                        decoding="async">
+
+                </figure>
+
+                {% endif %}
+
                 <div class="post-content">
                     {{ content }}
                 </div>
+
                 {% if page.faqs and page.faqs.size > 0 %}
-                <section class="post-faq">
-                    <h2>Frequently Asked Questions</h2>
+
+                <section
+                    class="post-faq"
+                    aria-labelledby="post-faq-heading">
+
+                    <h2 id="post-faq-heading">
+                        Frequently Asked Questions
+                    </h2>
+
                     {% for faq in page.faqs %}
-                    <div class="post-faq-item">
-                        <h3>{{ faq.question }}</h3>
-                        <p>{{ faq.answer }}</p>
-                    </div>
+
+                    <article class="post-faq-item">
+
+                        <h3>
+                            {{ faq.question }}
+                        </h3>
+
+                        <p>
+                            {{ faq.answer }}
+                        </p>
+
+                    </article>
+
                     {% endfor %}
+
                 </section>
+
                 {% endif %}
+
             </article>
+
         </section>
-        <section class="cta-section">
-            <div class="cta-wrap">
-                <h2>Use the free student calculators</h2>
-                <p>Track GPA, grades, attendance and study planning with simple tools built for students.</p>
-                <a href="{{ '/' | relative_url }}" class="btn-cta">Try the Calculators</a>
+
+        <section
+            class="post-cta"
+            aria-labelledby="post-cta-heading">
+
+            <div class="post-cta-wrap">
+
+                <h2 id="post-cta-heading">
+                    Put the guide into practice
+                </h2>
+
+                <p>
+                    Use StudentCalcTools calculators for GPA, grades, attendance, class rank, study planning and college-cost estimates.
+                </p>
+
+                <div class="post-cta-actions">
+
+                    <a
+                        href="/calculators/"
+                        class="post-cta-primary">
+                        Browse All Calculators
+                    </a>
+
+                    <a
+                        href="/blog/"
+                        class="post-cta-secondary">
+                        Read More Guides
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
+
     </main>
-    <footer>
-        <p class="footer-logo">Student<span>Calc</span></p>
-        <p class="footer-tagline">Free calculators for every student</p>
-        <div class="footer-grid">
-            <div class="footer-col"><p class="col-title">Calculators</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/attendance-calculator/">Attendance Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a></div>
-            <div class="footer-col"><p class="col-title">More Tools</p><a href="/study-time-planner/">Study Time Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/">Scholarship Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
-            <div class="footer-col"><p class="col-title">Blog</p><a href="/blog/">All Articles</a></div>
-            <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
-        </div>
-        <div class="footer-bottom"><p>© 2026 <span>StudentCalcTools</span>. Free tools for every student.</p></div>
-    </footer>
-    <script>
-    (function () {
-        const toggle = document.getElementById('themeToggle');
-        const icon = document.getElementById('themeIcon');
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
-        document.documentElement.setAttribute('data-theme', initialTheme);
+    {% include footer.html %}
 
-        if (icon) {
-            icon.textContent = initialTheme === 'dark' ? '☀' : '🌙';
-        }
-
-        if (toggle) {
-            toggle.addEventListener('click', function () {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-                document.documentElement.setAttribute('data-theme', nextTheme);
-                localStorage.setItem('theme', nextTheme);
-
-                if (icon) {
-                    icon.textContent = nextTheme === 'dark' ? '☀' : '🌙';
-                }
-            });
-        }
-    })();
-
-    (function () {
-        const bar = document.getElementById('scrollProgress');
-
-        if (!bar) return;
-
-        window.addEventListener('scroll', function () {
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
-            bar.style.width = progress + '%';
-        }, { passive: true });
-    })();
-
-    (function () {
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach(function (section) {
-            observer.observe(section);
-        });
-    })();
-</script>
+    <script src="/assets/js/site.js"></script>
 </body>
 </html>

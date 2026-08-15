@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -27,138 +29,908 @@
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
     <meta name="author" content="StudentCalcTools">
 
-    <script>
-        document.documentElement.classList.add('js');
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-        } catch (error) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    </script>
+    <script src="/assets/js/theme-init.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <script src="/assets/js/analytics.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.08);--border-strong:rgba(37,99,235,0.2);--shadow-sm:0 2px 16px rgba(37,99,235,0.05);--shadow-md:0 16px 40px rgba(37,99,235,0.12);--gradient-hero:linear-gradient(135deg,#eef2ff 0%,#e0f2fe 100%);--gradient-brand:linear-gradient(135deg,#2563eb,#06b6d4)}
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.15);--border-strong:rgba(59,130,246,0.3);--shadow-sm:0 2px 16px rgba(0,0,0,0.4);--shadow-md:0 16px 40px rgba(0,0,0,0.5);--gradient-hero:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);--gradient-brand:linear-gradient(135deg,#3b82f6,#22d3ee)}
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-        body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
-        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
-        .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
-        .skip-link:focus{left:0}
-        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;transition:all 0.3s ease}
-        [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
-        .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
-        .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
-        .nav-logo span{color:var(--accent)}
-        .nav-links{display:flex;align-items:center;gap:16px}
-        .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
-        .nav-links a:hover{color:var(--blue)}
-        .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px;transition:all 0.3s ease}
-        .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
-        .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%);pointer-events:none}
-        .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
-        .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
-        .breadcrumb-sep{margin:0 8px;color:var(--muted)}
-        .page-hero-content{position:relative;z-index:1;max-width:720px;margin:0 auto}
-        .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
-        .page-hero h1 .gradient-text{background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .page-hero p{font-size:17px;color:var(--text-secondary);max-width:560px;margin:0 auto;line-height:1.7;font-weight:500}
-        .calc-section{padding:60px 20px;max-width:800px;margin:0 auto}
-        .calc-card{background:var(--card-bg);border-radius:24px;padding:36px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
-        .calc-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:6px}
-        .calc-card-subtitle{font-size:14px;color:var(--muted);margin-bottom:24px}
-        .calc-row-header{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding-left:4px}
-        .calc-row{display:grid;grid-template-columns:2fr 1fr 1fr 44px;gap:10px;margin-bottom:10px;align-items:center}
-        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:all 0.2s ease;width:100%}
-        .calc-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
-        .calc-select{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:all 0.2s ease;width:100%;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
-        .calc-select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
-        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center}
-        .calc-remove:hover{background:#fee2e2;border-color:#ef4444;color:#ef4444}
-        [data-theme="dark"] .calc-remove:hover{background:rgba(239,68,68,0.2)}
-        .calc-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease;flex:1;min-width:140px}
-        .calc-add:hover{background:var(--blue);color:white;border-style:solid}
-        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 6px 20px rgba(37,99,235,0.3);transition:all 0.2s ease;flex:2;min-width:160px}
-        .calc-calculate:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(37,99,235,0.4)}
-        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:all 0.4s ease;display:none}
-        .calc-result.visible{opacity:1;transform:translateY(0);display:block}
-        .calc-result-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-        .calc-result-value{font-size:72px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;letter-spacing:-2px}
-        .calc-result-tier{display:inline-block;font-size:14px;font-weight:700;padding:6px 16px;border-radius:20px;background:white;margin-bottom:16px}
-        [data-theme="dark"] .calc-result-tier{background:rgba(255,255,255,0.1)}
-        .tier-excellent{color:#059669}.tier-good{color:#2563eb}.tier-average{color:#d97706}.tier-low{color:#dc2626}
-        .calc-result-extra{font-size:13px;color:var(--muted);margin-bottom:16px;font-weight:500}
-        .calc-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease;display:inline-flex;align-items:center;gap:6px}
-        .result-btn:hover{background:var(--blue-light)}
-        .content-section{padding:60px 20px;max-width:800px;margin:0 auto}
-        .content-section.alt-bg{background:var(--card-bg);max-width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-        .content-section.alt-bg .content-wrap{max-width:800px;margin:0 auto}
-        .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:inline-block}
-        .section-title{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--text);margin-bottom:20px;letter-spacing:-0.5px;line-height:1.2}
-        .content-section p{font-size:15px;color:var(--text-secondary);line-height:1.8;margin-bottom:14px}
-        .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
-        .step-card{background:var(--card-bg);padding:28px 24px;border-radius:18px;border:1px solid var(--border);text-align:center;position:relative;transition:all 0.3s ease}
-        .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 16px;box-shadow:0 6px 16px rgba(37,99,235,0.3)}
-        .step-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
-        .step-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
-        .grade-table-wrap{overflow-x:auto;margin-top:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
-        .grade-table{width:100%;border-collapse:collapse;font-size:14px}
-        .grade-table th{background:var(--blue-light);color:var(--blue);font-weight:700;padding:12px 16px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:1px}
-        .grade-table td{padding:11px 16px;border-top:1px solid var(--border);color:var(--text-secondary);font-weight:500}
-        .grade-table tr:hover td{background:var(--blue-light)}
-        .grade-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700;background:var(--blue-light);color:var(--blue)}
-        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
-        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block}
-        .related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
-        .related-icon{width:44px;height:44px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
-        .related-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
-        .related-card p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
-        .faq-item{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:all 0.3s ease}
-        .faq-item:hover{border-color:var(--border-strong)}
-        .faq-question{padding:18px 22px;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color 0.2s ease}
-        .faq-question:hover{color:var(--blue)}
-        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease;flex-shrink:0}
-        .faq-item.open .faq-toggle{transform:rotate(45deg)}
-        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
-        .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
-        .faq-item.open .faq-answer{max-height:300px}
-        .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.1),transparent 50%);pointer-events:none}
-        .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
-        .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
-        .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.2);transition:transform 0.2s ease}
-        .btn-cta:hover{transform:translateY(-2px)}
-        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
-        [data-theme="dark"] footer{background:#020617}
-        .footer-logo{font-size:22px;font-weight:800;color:white;margin-bottom:8px}.footer-logo span{color:var(--accent)}
-        .footer-tagline{margin-bottom:30px;font-size:14px}
-        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:900px;margin:0 auto 36px;text-align:left}
-        .footer-col p.col-title{color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
-        .footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;transition:color 0.2s ease}
-        .footer-col a:hover{color:white}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}.footer-bottom span{color:var(--accent)}
-        .confetti{position:fixed;width:10px;height:10px;top:50%;left:50%;pointer-events:none;z-index:9999;animation:confettiFall 1.5s ease-out forwards}
-        @keyframes confettiFall{to{transform:translate(var(--x),var(--y)) rotate(720deg);opacity:0}}
-        .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
-        .reveal.visible{opacity:1;transform:translateY(0)}
-        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.calc-row,.calc-row-header{grid-template-columns:1fr 1fr 1fr;gap:8px}.calc-row-header{display:none}.calc-remove{grid-column:span 3;height:36px;width:100%}.footer-grid{grid-template-columns:1fr 1fr;text-align:center}}
-        @media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
-        @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
-    </style>
+    :root {
+        --blue: #2563eb;
+        --blue-dark: #1d4ed8;
+        --blue-light: #eff6ff;
+        --accent: #06b6d4;
+        --text: #0f172a;
+        --text-secondary: #334155;
+        --muted: #64748b;
+        --bg: #f8faff;
+        --card-bg: #ffffff;
+        --border: rgba(37, 99, 235, 0.08);
+        --border-strong: rgba(37, 99, 235, 0.2);
+        --shadow-sm: 0 2px 16px rgba(37, 99, 235, 0.05);
+        --shadow-md: 0 16px 40px rgba(37, 99, 235, 0.12);
+        --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+        --gradient-brand: linear-gradient(135deg, #2563eb, #06b6d4);
+    }
+
+    [data-theme="dark"] {
+        --blue: #3b82f6;
+        --blue-dark: #60a5fa;
+        --blue-light: rgba(59, 130, 246, 0.15);
+        --accent: #22d3ee;
+        --text: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --muted: #94a3b8;
+        --bg: #020617;
+        --card-bg: #0f172a;
+        --border: rgba(59, 130, 246, 0.15);
+        --border-strong: rgba(59, 130, 246, 0.3);
+        --shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
+        --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --gradient-brand: linear-gradient(135deg, #3b82f6, #22d3ee);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        line-height: 1.6;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .page-hero {
+        position: relative;
+        padding: 72px 20px 94px;
+        overflow: hidden;
+        background: var(--gradient-hero);
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+    }
+
+    .page-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.12), transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.12), transparent 40%);
+        pointer-events: none;
+    }
+
+    .page-hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .breadcrumb {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 18px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .breadcrumb a {
+        color: var(--blue);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+        margin: 0 8px;
+        color: var(--muted);
+    }
+
+    .page-hero h1 {
+        margin-bottom: 16px;
+        color: var(--text);
+        font-size: clamp(38px, 6vw, 60px);
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -1.6px;
+    }
+
+    .page-hero h1 .gradient-text {
+        background: var(--gradient-brand);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .page-hero p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--text-secondary);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.7;
+    }
+
+    .calc-section {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 72px 20px;
+    }
+
+    .calc-card {
+        padding: 34px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: 0 18px 45px rgba(37, 99, 235, 0.13);
+    }
+
+    [data-theme="dark"] .calc-card {
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.48);
+    }
+
+    .calc-card-title {
+        margin-bottom: 6px;
+        color: var(--text);
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .calc-card-subtitle {
+        margin-bottom: 24px;
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    .calc-row-header {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 44px;
+        gap: 10px;
+        margin-bottom: 8px;
+        padding-left: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .calc-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 44px;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .calc-input,
+    .calc-select {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 14px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        color: var(--text);
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .calc-select {
+        appearance: none;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+    }
+
+    .calc-input:focus,
+    .calc-select:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px var(--blue-light);
+    }
+
+    .calc-input[aria-invalid="true"] {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+    }
+
+    .field-error-message {
+        display: block;
+        margin-top: 5px;
+        color: #dc2626;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+
+    [data-theme="dark"] .field-error-message {
+        color: #fca5a5;
+    }
+
+    .calc-remove {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.2s ease;
+    }
+
+    .calc-remove:hover {
+        background: #fee2e2;
+        border-color: #ef4444;
+        color: #ef4444;
+    }
+
+    [data-theme="dark"] .calc-remove:hover {
+        background: rgba(239, 68, 68, 0.2);
+    }
+
+    .calc-remove svg,
+    .result-btn svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .calc-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .calc-add {
+        flex: 1;
+        min-width: 140px;
+        padding: 12px 20px;
+        background: var(--blue-light);
+        border: 1px dashed var(--border-strong);
+        border-radius: 10px;
+        color: var(--blue);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+    .calc-add:hover {
+        background: var(--blue);
+        border-style: solid;
+        color: #fff;
+    }
+
+    .calc-calculate {
+        flex: 2;
+        min-width: 160px;
+        padding: 12px 32px;
+        background: var(--gradient-brand);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+        color: #fff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        transition: all 0.2s ease;
+    }
+
+    .calc-calculate:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    .calc-result {
+        display: none;
+        margin-top: 28px;
+        padding: 32px;
+        background: var(--gradient-hero);
+        border: 1px solid var(--border-strong);
+        border-radius: 16px;
+        opacity: 0;
+        text-align: center;
+        transform: translateY(10px);
+        transition: all 0.4s ease;
+    }
+
+    .calc-result.visible {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .calc-result-label {
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .calc-result-value {
+        margin-bottom: 12px;
+        background: var(--gradient-brand);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .calc-result-tier {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 6px 16px;
+        background: #fff;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    [data-theme="dark"] .calc-result-tier {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .tier-excellent { color: #059669; }
+    .tier-good { color: #2563eb; }
+    .tier-average { color: #d97706; }
+    .tier-low { color: #dc2626; }
+
+    .calc-result-extra {
+        margin-bottom: 16px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .calc-result-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .result-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 18px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        color: var(--blue);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        transition: all 0.2s ease;
+    }
+
+    .result-btn:hover {
+        background: var(--blue-light);
+    }
+
+    .content-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 76px 20px;
+    }
+
+    .content-section.alt-bg {
+        max-width: 100%;
+        background: var(--card-bg);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .content-section.alt-bg .content-wrap {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+        color: var(--text);
+        font-size: clamp(24px, 3vw, 32px);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .content-section p {
+        margin-bottom: 14px;
+        color: var(--text-secondary);
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .step-card {
+        position: relative;
+        padding: 28px 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(37, 99, 235, 0.06);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .step-num {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        background: var(--gradient-brand);
+        border-radius: 50%;
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .step-card h3 {
+        margin-bottom: 8px;
+        color: var(--text);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .step-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .grade-table-wrap {
+        overflow-x: auto;
+        margin-top: 24px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(37, 99, 235, 0.06);
+    }
+
+    .grade-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    .grade-table th {
+        padding: 12px 16px;
+        background: var(--blue-light);
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .grade-table td {
+        padding: 11px 16px;
+        border-top: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+
+    .grade-table tr:hover td {
+        background: var(--blue-light);
+    }
+
+    .grade-badge {
+        display: inline-block;
+        padding: 3px 10px;
+        background: var(--blue-light);
+        border-radius: 20px;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .methodology-link-box {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: center;
+        margin-top: 24px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.07), rgba(6, 182, 212, 0.07));
+        border: 1px solid var(--border-strong);
+        border-radius: 16px;
+    }
+
+    .methodology-link-box strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--text);
+        font-size: 15px;
+    }
+
+    .methodology-link-box p {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .methodology-link-box a {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 800;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .related-card {
+        display: block;
+        padding: 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(37, 99, 235, 0.06);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--blue);
+        box-shadow: var(--shadow-md);
+    }
+
+    .related-icon {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+        background: var(--blue-light);
+        border-radius: 12px;
+        color: var(--blue);
+        font-size: 0;
+    }
+
+    .related-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .related-card h3 {
+        margin-bottom: 6px;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .related-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .faq-item {
+        margin-bottom: 12px;
+        overflow: hidden;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: 0 2px 16px rgba(37, 99, 235, 0.06);
+        transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+        border-color: var(--border-strong);
+    }
+
+    .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 22px;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        user-select: none;
+        transition: color 0.2s ease;
+    }
+
+    .faq-question:hover {
+        color: var(--blue);
+    }
+
+    .faq-toggle {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        background: var(--blue-light);
+        border-radius: 50%;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 700;
+        transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-toggle {
+        transform: rotate(45deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .faq-answer-inner {
+        padding: 14px 22px 18px;
+        border-top: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+        max-height: 300px;
+    }
+
+    .cta-section {
+        position: relative;
+        overflow: hidden;
+        padding: 70px 20px;
+        background: var(--gradient-brand);
+        color: #fff;
+        text-align: center;
+    }
+
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15), transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1), transparent 50%);
+        pointer-events: none;
+    }
+
+    .cta-wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .cta-section h2 {
+        margin-bottom: 14px;
+        font-size: clamp(24px, 3.5vw, 36px);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .cta-section p {
+        margin-bottom: 26px;
+        font-size: 16px;
+        line-height: 1.7;
+        opacity: 0.95;
+    }
+
+    .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        color: var(--blue);
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+    }
+
+    .btn-cta:hover {
+        transform: translateY(-2px);
+    }
+
+    .confetti {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+        animation: confettiFall 1.5s ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+        to {
+            transform: translate(var(--x), var(--y)) rotate(720deg);
+            opacity: 0;
+        }
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 50px 16px 60px;
+        }
+
+        .calc-card {
+            padding: 24px;
+        }
+
+        .calc-row-header {
+            display: none;
+        }
+
+        .calc-row {
+            grid-template-columns: 1fr 1fr 48px;
+            gap: 8px;
+            padding: 16px;
+            background: var(--blue-light);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .calc-row .calc-input:first-child {
+            grid-column: 1 / -1;
+        }
+
+        .calc-remove {
+            width: 48px;
+            height: 48px;
+            grid-column: auto;
+        }
+
+        .methodology-link-box {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .page-hero {
+            padding: 50px 16px 72px;
+        }
+
+        .page-hero p {
+            font-size: 16px;
+        }
+
+        .calc-section {
+            padding: 54px 16px;
+        }
+
+        .calc-card {
+            padding: 22px 18px;
+        }
+
+        .calc-row {
+            grid-template-columns: 1fr 48px;
+        }
+
+        .calc-row .calc-input:first-child,
+        .calc-row .calc-select,
+        .calc-row .calc-input[type="number"] {
+            grid-column: 1 / -1;
+        }
+
+        .calc-remove {
+            grid-column: 2;
+        }
+
+        .calc-actions {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+</style>
 
     <script type="application/ld+json">
 {
@@ -204,7 +976,7 @@
       "mainEntity": {
         "@id": "https://studentcalctools.com/gpa-calculator/#application"
       },
-      "dateModified": "2026-08-02",
+      "dateModified": "2026-08-14",
       "inLanguage": "en-US"
     },
     {
@@ -353,381 +1125,13 @@
 }
     </script>
 
-<style>
-    html { scroll-padding-top: 92px; }
 
-    :focus-visible {
-        outline: 3px solid var(--accent);
-        outline-offset: 3px;
-    }
+<link rel="stylesheet" href="/assets/css/site.css">
 
-    .skip-link {
-        position: fixed;
-        left: 12px;
-        top: -80px;
-        z-index: 10000;
-        border-radius: 0 0 10px 10px;
-        transition: top .2s ease;
-    }
-
-    .skip-link:focus { top: 0; left: 12px; }
-
-    .site-nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        min-height: 72px;
-        padding: 12px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        background: rgba(255,255,255,.88);
-        border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-    }
-
-    [data-theme="dark"] .site-nav { background: rgba(2,6,23,.88); }
-
-    .nav-logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--blue);
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: -.5px;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-
-    .brand-name { color: var(--blue); }
-    .brand-accent { color: var(--accent); }
-
-    .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .nav-links a[aria-current="page"] { color: var(--blue); }
-
-    .theme-toggle,
-    .menu-toggle {
-        min-height: 44px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--border-strong);
-        background: var(--blue-light);
-        color: var(--blue);
-        cursor: pointer;
-        font-size: 13px;
-        font-weight: 800;
-    }
-
-    .theme-toggle {
-        width: 44px;
-        min-width: 44px;
-        height: 44px;
-        padding: 0;
-        border-radius: 50%;
-    }
-
-    .theme-icon,
-    .theme-icon svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .theme-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .theme-icon svg {
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 1.9;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-
-    .theme-icon-sun { display: none; color: #fbbf24; }
-    [data-theme="dark"] .theme-icon-sun { display: inline-flex; }
-    [data-theme="dark"] .theme-icon-moon { display: none; }
-
-    .menu-toggle {
-        display: none;
-        padding: 0 14px;
-        border-radius: 999px;
-    }
-
-    .page-hero {
-        padding: 72px 20px 94px;
-    }
-
-    .page-hero h1 {
-        font-size: clamp(38px,6vw,60px);
-        letter-spacing: -1.6px;
-    }
-
-    .page-hero p {
-        max-width: 760px;
-        font-size: 18px;
-    }
-
-    .calc-section {
-        max-width: 980px;
-        padding: 72px 20px;
-    }
-
-    .calc-card {
-        padding: 34px;
-        box-shadow: 0 18px 45px rgba(37,99,235,.13);
-    }
-
-    [data-theme="dark"] .calc-card {
-        box-shadow: 0 18px 45px rgba(0,0,0,.48);
-    }
-
-    .calc-input,
-    .calc-select {
-        min-height: 48px;
-        background-color: var(--card-bg);
-    }
-
-    .calc-input[aria-invalid="true"] {
-        border-color: #dc2626;
-        box-shadow: 0 0 0 4px rgba(220,38,38,.1);
-    }
-
-    .field-error-message {
-        display: block;
-        margin-top: 5px;
-        color: #dc2626;
-        font-size: 10px;
-        font-weight: 700;
-        line-height: 1.45;
-    }
-
-    [data-theme="dark"] .field-error-message { color: #fca5a5; }
-
-    .calc-remove svg,
-    .result-btn svg {
-        width: 18px;
-        height: 18px;
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 1.9;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-
-    .content-section {
-        padding-top: 76px;
-        padding-bottom: 76px;
-    }
-
-    .step-card,
-    .related-card,
-    .faq-item,
-    .grade-table-wrap {
-        box-shadow: 0 2px 16px rgba(37,99,235,.06);
-    }
-
-    .methodology-link-box {
-        margin-top: 24px;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: minmax(0,1fr) auto;
-        gap: 18px;
-        align-items: center;
-        border: 1px solid var(--border-strong);
-        border-radius: 16px;
-        background: linear-gradient(135deg,rgba(37,99,235,.07),rgba(6,182,212,.07));
-    }
-
-    .methodology-link-box strong {
-        display: block;
-        margin-bottom: 4px;
-        color: var(--text);
-        font-size: 15px;
-    }
-
-    .methodology-link-box p {
-        margin: 0;
-        color: var(--text-secondary);
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .methodology-link-box a {
-        min-height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 14px;
-        border: 1px solid var(--border-strong);
-        border-radius: 10px;
-        background: var(--card-bg);
-        color: var(--blue);
-        font-size: 12px;
-        font-weight: 800;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-
-    .related-icon {
-        color: var(--blue);
-        font-size: 0;
-    }
-
-    .related-icon svg {
-        width: 22px;
-        height: 22px;
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 1.9;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(4,minmax(0,1fr));
-    }
-
-    .footer-col a[aria-current="page"] { color: white; }
-
-    @media (max-width: 860px) {
-        .site-nav { padding: 10px 16px; }
-
-        .nav-links {
-            position: absolute;
-            top: calc(100% + 8px);
-            left: 14px;
-            right: 14px;
-            display: none;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-            padding: 10px;
-            border: 1px solid var(--border-strong);
-            border-radius: 16px;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav-links.open { display: flex; }
-
-        .nav-links a {
-            padding: 13px 14px;
-            border-radius: 10px;
-            color: var(--text);
-        }
-
-        .nav-links a:hover,
-        .nav-links a[aria-current="page"] {
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        .nav-tag { display: none; }
-        .menu-toggle { display: inline-flex; }
-    }
-
-    @media (max-width: 768px) {
-        .calc-row-header { display: none; }
-
-        .calc-row {
-            grid-template-columns: 1fr 1fr 48px;
-            padding: 16px;
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            background: var(--blue-light);
-        }
-
-        .calc-row .calc-input:first-child {
-            grid-column: 1 / -1;
-        }
-
-        .calc-remove {
-            width: 48px;
-            height: 48px;
-            grid-column: auto;
-        }
-
-        .methodology-link-box {
-            grid-template-columns: 1fr;
-        }
-
-        .footer-grid {
-            grid-template-columns: 1fr 1fr;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .site-nav { min-height: 64px; padding: 10px 12px; }
-        .nav-logo { font-size: 18px; }
-        .page-hero { padding: 50px 16px 72px; }
-        .page-hero p { font-size: 16px; }
-        .calc-section { padding: 54px 16px; }
-        .calc-card { padding: 22px 18px; }
-
-        .calc-row {
-            grid-template-columns: 1fr 48px;
-        }
-
-        .calc-row .calc-input:first-child,
-        .calc-row .calc-select,
-        .calc-row .calc-input[type="number"] {
-            grid-column: 1 / -1;
-        }
-
-        .calc-remove { grid-column: 2; }
-
-        .calc-actions {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        .footer-grid { grid-template-columns: 1fr; }
-    }
-</style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-    <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-        <span class="nav-logo-icon" aria-hidden="true">S</span>
-        <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
-    </a>
-
-    <div class="nav-right">
-        <div class="nav-links" id="navLinks">
-            <a href="/">Home</a>
-            <a href="/calculators/" aria-current="page">Calculators</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
-        </div>
-        <span class="nav-tag">Free to use</span>
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Switch to dark mode">
-            <span class="theme-icon theme-icon-moon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg>
-            </span>
-            <span class="theme-icon theme-icon-sun" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
-            </span>
-        </button>
-    </div>
-</nav>
+    {% include header.html %}
 
     <main id="main-content">
         <section class="page-hero">
@@ -789,9 +1193,9 @@
                 </div>
                 <div class="calc-result" id="calcResult" role="status" aria-live="polite">
                     <div class="calc-result-label">YOUR GPA</div>
-                    <div class="calc-result-value" id="resultValue">0.00</div>
-                    <div class="calc-result-tier" id="resultTier">Excellent</div>
-                    <div class="calc-result-extra" id="resultExtra">Total Credits: 0</div>
+                    <div class="calc-result-value" id="resultValue">--</div>
+<div class="calc-result-tier" id="resultTier">Result</div>
+<div class="calc-result-extra" id="resultExtra">Total Credits: 0</div>
                     <div class="calc-result-actions">
                         <button class="result-btn" id="copyBtn">📋 Copy Result</button>
                         <button class="result-btn" id="resetBtn">🔄 Reset</button>
@@ -938,377 +1342,13 @@
         </section>
 
         <section class="cta-section">
-            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use Student Calc’s free academic calculators to plan your GPA, grades, attendance, class rank, study time, and college costs. No sign up required.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
+            <div class="cta-wrap"><h2>Explore More Free Tools</h2><p>Use StudentCalcTools' free academic calculators to plan your GPA, grades, attendance, class rank, study time, and college costs. No sign up required.</p><a href="https://studentcalctools.com/" class="btn-cta">Browse All Tools <span>→</span></a></div>
         </section>
     </main>
 
-    <footer>
-    <p class="footer-logo">StudentCalc<span>Tools</span></p>
-    <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
-
-    <div class="footer-grid">
-        <div class="footer-col">
-            <p class="col-title">Grade Tools</p>
-            <a href="/gpa-calculator/" aria-current="page">GPA Calculator</a>
-            <a href="/grade-calculator/">Grade Calculator</a>
-            <a href="/final-grade-calculator/">Final Grade Calculator</a>
-            <a href="/cgpa-calculator/">CGPA Calculator</a>
-            <a href="/class-rank-calculator/">Class Rank Calculator</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">More Tools</p>
-            <a href="/attendance-calculator/">Attendance Calculator</a>
-            <a href="/study-time-planner/">Study Time Planner</a>
-            <a href="/essay-word-counter/">Essay Word Counter</a>
-            <a href="/student-loan-calculator/">Student Loan Calculator</a>
-            <a href="/scholarship-calculator/">Scholarship Calculator</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">Explore</p>
-            <a href="/">Home</a>
-            <a href="/calculators/">All Calculators</a>
-            <a href="/blog/">Student Guides</a>
-            <a href="/calculator-methodology/">Calculator Methodology</a>
-        </div>
-        <div class="footer-col">
-            <p class="col-title">Company</p>
-            <a href="/about-us/">About Us</a>
-            <a href="/contact-us/">Contact Us</a>
-            <a href="/privacy-policy/">Privacy Policy</a>
-            <a href="/disclaimer/">Disclaimer</a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p>
-    </div>
-</footer>
-<script>
-    (function () {
-        const root = document.documentElement;
-        const themeToggle = document.getElementById('themeToggle');
-        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const scrollProgress = document.getElementById('scrollProgress');
-
-        function updateThemeButton() {
-            const current = root.getAttribute('data-theme') || 'light';
-            const target = current === 'dark' ? 'light' : 'dark';
-            const label = 'Switch to ' + target + ' mode';
-            themeToggle.setAttribute('aria-label', label);
-            themeToggle.setAttribute('title', label);
-
-            if (themeColorMeta) {
-                themeColorMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
-            }
-        }
-
-        updateThemeButton();
-
-        themeToggle.addEventListener('click', function () {
-            const current = root.getAttribute('data-theme') || 'light';
-            const next = current === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', next);
-
-            try {
-                localStorage.setItem('theme', next);
-            } catch (error) {}
-
-            updateThemeButton();
-        });
-
-        function closeMenu(returnFocus) {
-            navLinks.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.setAttribute('aria-label', 'Open navigation menu');
-            menuToggle.textContent = 'Menu';
-
-            if (returnFocus) {
-                menuToggle.focus();
-            }
-        }
-
-        menuToggle.addEventListener('click', function () {
-            const isOpen = navLinks.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-            menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-            menuToggle.textContent = isOpen ? 'Close' : 'Menu';
-        });
-
-        navLinks.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                closeMenu(false);
-            });
-        });
-
-        document.addEventListener('click', function (event) {
-            if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) {
-                closeMenu(false);
-            }
-        });
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && navLinks.classList.contains('open')) {
-                closeMenu(true);
-            }
-        });
-
-        function updateScrollProgress() {
-            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-            scrollProgress.style.width = Math.min(100, Math.max(0, progress)) + '%';
-        }
-
-        window.addEventListener('scroll', updateScrollProgress, { passive: true });
-        window.addEventListener('resize', updateScrollProgress);
-        updateScrollProgress();
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach(function (element) {
-            observer.observe(element);
-        });
-
-        document.querySelectorAll('.faq-question').forEach(function (question) {
-            question.setAttribute('role', 'button');
-            question.setAttribute('tabindex', '0');
-            question.setAttribute('aria-expanded', 'false');
-
-            function toggleFaq() {
-                const item = question.parentElement;
-                const isOpen = item.classList.toggle('open');
-                question.setAttribute('aria-expanded', String(isOpen));
-            }
-
-            question.addEventListener('click', toggleFaq);
-            question.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    toggleFaq();
-                }
-            });
-        });
-
-        const rowsContainer = document.getElementById('calcRows');
-        const addBtn = document.getElementById('addRow');
-        const calcBtn = document.getElementById('calculateBtn');
-        const result = document.getElementById('calcResult');
-        const resultValue = document.getElementById('resultValue');
-        const resultTier = document.getElementById('resultTier');
-        const resultExtra = document.getElementById('resultExtra');
-        const copyBtn = document.getElementById('copyBtn');
-        const resetBtn = document.getElementById('resetBtn');
-
-        addBtn.setAttribute('type', 'button');
-        calcBtn.setAttribute('type', 'button');
-        copyBtn.setAttribute('type', 'button');
-        resetBtn.setAttribute('type', 'button');
-
-        const gradeSelectHTML = '<option value="4.0">A</option><option value="3.7">A-</option><option value="3.3">B+</option><option value="3.0">B</option><option value="2.7">B-</option><option value="2.3">C+</option><option value="2.0">C</option><option value="1.7">C-</option><option value="1.3">D+</option><option value="1.0">D</option><option value="0.0">F</option>';
-
-        function decorateRemoveButton(button) {
-            button.setAttribute('type', 'button');
-            button.setAttribute('aria-label', 'Remove course');
-            button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"></path></svg>';
-        }
-
-        function clearCreditError(input) {
-            input.removeAttribute('aria-invalid');
-            const existing = input.parentElement.querySelector('.field-error-message');
-            if (existing) {
-                existing.remove();
-            }
-        }
-
-        function showCreditError(input, message) {
-            input.setAttribute('aria-invalid', 'true');
-            let error = input.parentElement.querySelector('.field-error-message');
-
-            if (!error) {
-                error = document.createElement('span');
-                error.className = 'field-error-message';
-                input.parentElement.appendChild(error);
-            }
-
-            error.textContent = message;
-        }
-
-        function bindRow(row) {
-            const removeButton = row.querySelector('.calc-remove');
-            const creditInput = row.querySelector('input[type="number"]');
-
-            decorateRemoveButton(removeButton);
-
-            removeButton.addEventListener('click', function () {
-                if (rowsContainer.children.length > 1) {
-                    row.remove();
-                    result.classList.remove('visible');
-                }
-            });
-
-            creditInput.addEventListener('input', function () {
-                clearCreditError(creditInput);
-                result.classList.remove('visible');
-            });
-
-            row.querySelectorAll('input, select').forEach(function (field) {
-                field.addEventListener('change', function () {
-                    result.classList.remove('visible');
-                });
-            });
-        }
-
-        document.querySelectorAll('.calc-row').forEach(bindRow);
-
-        addBtn.addEventListener('click', function () {
-            const row = document.createElement('div');
-            row.className = 'calc-row';
-            row.innerHTML = '<input type="text" class="calc-input" placeholder="Course name" aria-label="Course name"><select class="calc-select" aria-label="Grade">' + gradeSelectHTML + '</select><input type="number" class="calc-input" placeholder="3" min="1" max="6" step="0.5" value="3" aria-label="Credits"><button type="button" class="calc-remove" aria-label="Remove course"></button>';
-            rowsContainer.appendChild(row);
-            bindRow(row);
-            row.querySelector('input[type="text"]').focus();
-        });
-
-        function launchConfetti() {
-            const colors = ['#2563eb', '#06b6d4', '#3b82f6', '#22d3ee', '#1d4ed8'];
-
-            for (let index = 0; index < 40; index += 1) {
-                const piece = document.createElement('div');
-                piece.className = 'confetti';
-                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-                piece.style.left = (50 + (Math.random() - 0.5) * 20) + '%';
-                piece.style.top = '50%';
-                piece.style.setProperty('--x', (Math.random() - 0.5) * 600 + 'px');
-                piece.style.setProperty('--y', (Math.random() * 400 + 100) + 'px');
-                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-                piece.style.animationDelay = Math.random() * 0.3 + 's';
-                document.body.appendChild(piece);
-                window.setTimeout(function () {
-                    piece.remove();
-                }, 2000);
-            }
-        }
-
-        function getTierLabel(gpa) {
-            if (gpa >= 3.7) return { label: 'Excellent', className: 'tier-excellent' };
-            if (gpa >= 3.0) return { label: 'Good Standing', className: 'tier-good' };
-            if (gpa >= 2.0) return { label: 'Average', className: 'tier-average' };
-            return { label: 'Needs Improvement', className: 'tier-low' };
-        }
-
-        calcBtn.addEventListener('click', function () {
-            const rows = rowsContainer.querySelectorAll('.calc-row');
-            let totalPoints = 0;
-            let totalCredits = 0;
-            let valid = true;
-            let firstInvalid = null;
-
-            rows.forEach(function (row) {
-                const grade = Number.parseFloat(row.querySelector('.calc-select').value);
-                const creditInput = row.querySelector('input[type="number"]');
-                const credits = Number.parseFloat(creditInput.value);
-
-                clearCreditError(creditInput);
-
-                if (!Number.isFinite(credits) || credits <= 0 || credits > 6) {
-                    showCreditError(creditInput, 'Enter credits above 0 and up to 6.');
-                    valid = false;
-                    firstInvalid = firstInvalid || creditInput;
-                    return;
-                }
-
-                totalPoints += grade * credits;
-                totalCredits += credits;
-            });
-
-            if (!valid) {
-                firstInvalid.focus();
-                return;
-            }
-
-            if (totalCredits === 0) {
-                return;
-            }
-
-            const gpa = totalPoints / totalCredits;
-            const finalGpa = gpa.toFixed(2);
-            resultValue.textContent = finalGpa;
-
-            const tier = getTierLabel(gpa);
-            resultTier.textContent = tier.label;
-            resultTier.className = 'calc-result-tier ' + tier.className;
-            resultExtra.textContent = 'Total Credits: ' + totalCredits + ' | Quality Points: ' + totalPoints.toFixed(2);
-
-            result.classList.add('visible');
-            result.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-            if (gpa >= 3.5 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                launchConfetti();
-            }
-
-            if (typeof gtag === 'function') {
-                gtag('event', 'calculator_used', {
-                    tool: 'gpa_calculator'
-                });
-            }
-        });
-
-        copyBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Copy Result</span>';
-        resetBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v6h6"></path><path d="M5.5 16a8 8 0 1 0 .4-8.5L4 10"></path></svg><span>Reset</span>';
-
-        copyBtn.addEventListener('click', async function () {
-            const text = 'My GPA: ' + resultValue.textContent + ' (' + resultTier.textContent + ') - ' + resultExtra.textContent;
-
-            try {
-                await navigator.clipboard.writeText(text);
-            } catch (error) {
-                const temporary = document.createElement('textarea');
-                temporary.value = text;
-                temporary.style.position = 'fixed';
-                temporary.style.opacity = '0';
-                document.body.appendChild(temporary);
-                temporary.select();
-                document.execCommand('copy');
-                temporary.remove();
-            }
-
-            const label = copyBtn.querySelector('span');
-            const original = label.textContent;
-            label.textContent = 'Copied';
-            window.setTimeout(function () {
-                label.textContent = original;
-            }, 1500);
-        });
-
-        resetBtn.addEventListener('click', function () {
-            result.classList.remove('visible');
-
-            document.querySelectorAll('.calc-row').forEach(function (row, index) {
-                if (index > 0) {
-                    row.remove();
-                }
-            });
-
-            const firstRow = document.querySelector('.calc-row');
-            firstRow.querySelectorAll('.calc-input').forEach(function (input) {
-                input.value = '';
-                clearCreditError(input);
-            });
-
-            firstRow.querySelector('.calc-select').selectedIndex = 0;
-            firstRow.querySelector('input[type="text"]').focus();
-        });
-
-        document.getElementById('currentYear').textContent = String(new Date().getFullYear());
-    }());
-</script>
+    {% include footer.html %}
+    
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/gpa-calculator.js"></script>
 </body>
 </html>

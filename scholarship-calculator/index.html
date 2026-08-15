@@ -1,16 +1,24 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
     <meta name="theme-color" content="#2563eb">
     <link rel="canonical" href="https://studentcalctools.com/scholarship-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Scholarship Calculator | Estimate College Cost After Aid</title>
-    <meta name="description" content="Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.">
+
+    <meta
+        name="description"
+        content="Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
@@ -18,910 +26,2306 @@
     <meta property="og:title" content="Scholarship Calculator | Estimate College Cost After Aid">
     <meta property="og:description" content="Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.">
     <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+    <meta property="og:image:alt" content="StudentCalcTools Scholarship Calculator">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scholarship Calculator | Estimate College Cost After Aid">
     <meta name="twitter:description" content="Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.">
     <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+    <meta name="twitter:image:alt" content="StudentCalcTools Scholarship Calculator">
+
     <meta name="author" content="StudentCalcTools">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="color-scheme" content="light dark">
-    <meta property="og:image:alt" content="StudentCalcTools Scholarship Calculator">
-    <meta name="twitter:image:alt" content="StudentCalcTools Scholarship Calculator">
 
-
-<script>
-    document.documentElement.classList.add('js');
-    try {
-        const savedTheme = localStorage.getItem('theme');
-        const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
-    } catch (error) {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-</script>
+    <script src="/assets/js/theme-init.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QFNEKR7QE0');</script>
+    <script src="/assets/js/analytics.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
-        :root{--blue:#2563eb;--blue-dark:#1d4ed8;--blue-light:#eff6ff;--accent:#06b6d4;--text:#0f172a;--text-secondary:#334155;--muted:#64748b;--bg:#f8faff;--card-bg:#ffffff;--border:rgba(37,99,235,0.1);--border-strong:rgba(37,99,235,0.2);--gradient-brand:linear-gradient(135deg, #2563eb, #0891b2);--gradient-hero:linear-gradient(135deg, rgba(37,99,235,0.05), rgba(6,182,212,0.05));--shadow-sm:0 1px 2px 0 rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 20px 25px -5px rgba(0,0,0,0.1)}
-        [data-theme="dark"]{--blue:#3b82f6;--blue-dark:#60a5fa;--blue-light:rgba(59,130,246,0.15);--accent:#22d3ee;--text:#f1f5f9;--text-secondary:#cbd5e1;--muted:#94a3b8;--bg:#020617;--card-bg:#0f172a;--border:rgba(59,130,246,0.1);--border-strong:rgba(59,130,246,0.2)}
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-        body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;transition:background 0.3s ease,color 0.3s ease}
-        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--gradient-brand);z-index:9999;width:0%;transition:width 0.1s ease-out;box-shadow:0 0 10px rgba(37,99,235,0.5)}
-        .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:white;padding:10px 18px;text-decoration:none;z-index:9999;font-weight:700;border-radius:0 0 8px 0}
-        .skip-link:focus{left:0}
-        nav{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
-        [data-theme="dark"] nav{background:rgba(2,6,23,0.85)}
-        .nav-logo{font-size:22px;font-weight:800;color:var(--blue);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
-        .nav-logo-icon{width:32px;height:32px;background:var(--gradient-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:800}
-        .nav-logo span{color:var(--accent)}
-        .nav-links{display:flex;align-items:center;gap:16px}
-        .nav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--muted);transition:color 0.2s ease}
-        .nav-links a:hover{color:var(--blue)}
-        .nav-tag{background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;cursor:default;user-select:none}
-        .theme-toggle{background:var(--blue-light);border:1px solid var(--border-strong);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s ease}
-        .theme-toggle:hover{transform:rotate(15deg) scale(1.1)}
-        .page-hero{position:relative;background:var(--gradient-hero);padding:60px 20px 80px;text-align:center;border-bottom:1px solid var(--border);overflow:hidden}
-        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,0.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,0.12),transparent 40%)}
-        .breadcrumb{position:relative;z-index:1;font-size:13px;color:var(--muted);margin-bottom:18px;font-weight:600}
-        .breadcrumb a{color:var(--blue);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
-        .breadcrumb-sep{margin:0 8px;color:var(--muted)}
-        .page-hero-content{position:relative;z-index:1;max-width:720px;margin:0 auto}
-        .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text)}
-        .page-hero h1 .gradient-text{background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .page-hero p{font-size:17px;color:var(--text-secondary);max-width:560px;margin:0 auto;line-height:1.7;font-weight:500}
-        .calc-section{padding:60px 20px;max-width:800px;margin:0 auto}
-        .calc-card{background:var(--card-bg);border-radius:24px;padding:36px;box-shadow:var(--shadow-md);border:1px solid var(--border)}
-        .calc-card-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:6px}
-        .calc-card-subtitle{font-size:14px;color:var(--muted);margin-bottom:24px}
-        .field-group{margin-bottom:18px}
-        .field-label{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px}
-        .calc-input{background:var(--bg);border:1px solid var(--border-strong);border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;color:var(--text);font-weight:500;transition:border-color 0.2s ease, box-shadow 0.2s ease}
-        .calc-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-light)}
-        .total-cost-input{margin-bottom:24px;padding:18px;background:var(--bg);border-radius:12px;border:1px solid var(--border-strong)}
-        .calc-row-header{display:grid;grid-template-columns:2fr 1.2fr 44px;gap:10px;margin-bottom:8px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:0 4px}
-        .calc-row{display:grid;grid-template-columns:2fr 1.2fr 44px;gap:10px;margin-bottom:10px;align-items:center}
-        .calc-remove{background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--muted);font-size:18px;transition:all 0.2s ease}
-        .calc-remove:hover{background:#fee2e2;border-color:#ef4444;color:#ef4444}
-        [data-theme="dark"] .calc-remove:hover{background:rgba(239,68,68,0.2)}
-        .calc-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-        .calc-add{background:var(--blue-light);color:var(--blue);border:1px dashed var(--border-strong);border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
-        .calc-add:hover{background:var(--blue);color:white;border-style:solid}
-        .calc-calculate{background:var(--gradient-brand);color:white;border:none;border-radius:10px;padding:12px 32px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(37,99,235,0.3);transition:all 0.2s ease}
-        .calc-calculate:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(37,99,235,0.4)}
-        .calc-result{margin-top:28px;padding:32px;background:var(--gradient-hero);border-radius:16px;text-align:center;border:1px solid var(--border-strong);opacity:0;transform:translateY(10px);transition:opacity 0.4s ease, transform 0.4s ease;display:none}
-        .calc-result.visible{opacity:1;transform:translateY(0);display:block}
-        .calc-result-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-        .calc-result-value{font-size:64px;font-weight:800;line-height:1;background:var(--gradient-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
-        .calc-result-tier{display:inline-block;font-size:14px;font-weight:700;padding:6px 16px;border-radius:20px;background:white;margin-bottom:16px}
-        [data-theme="dark"] .calc-result-tier{background:rgba(255,255,255,0.1)}
-        .tier-excellent{color:#059669}.tier-good{color:#2563eb}.tier-average{color:#d97706}.tier-low{color:#dc2626}
-        .breakdown{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-        .breakdown-item{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
-        .breakdown-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px}
-        .breakdown-value{font-size:20px;font-weight:800;color:var(--blue)}
-        .calc-result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-        .result-btn{background:var(--card-bg);border:1px solid var(--border-strong);color:var(--blue);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.2s ease}
-        .result-btn:hover{background:var(--blue-light)}
-        .content-section{padding:60px 20px;max-width:800px;margin:0 auto}
-        .content-section.alt-bg{background:var(--card-bg);max-width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-        .content-section.alt-bg .content-wrap{max-width:800px;margin:0 auto}
-        .eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:inline-block}
-        .section-title{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--text);margin-bottom:20px;letter-spacing:-0.5px;line-height:1.2}
-        .content-section p{font-size:15px;color:var(--text-secondary);line-height:1.8;margin-bottom:14px}
-        .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
-        .step-card{background:var(--card-bg);padding:28px 24px;border-radius:18px;border:1px solid var(--border);text-align:center;transition:all 0.3s ease}
-        .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-        .step-num{width:44px;height:44px;background:var(--gradient-brand);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin:0 auto 12px}
-        .step-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
-        .step-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
-        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
-        .related-card{background:var(--card-bg);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all 0.3s ease;text-decoration:none;display:block;color:inherit}
-        .related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue)}
-        .related-icon{width:44px;height:44px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
-        .related-card h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px}
-        .related-card p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
-        .faq-item{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:all 0.3s ease}
-        .faq-item:hover{border-color:var(--border-strong)}
-        .faq-question{padding:18px 22px;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:color 0.2s ease}
-        .faq-question:hover{color:var(--blue)}
-        .faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform 0.3s ease}
-        .faq-item.open .faq-toggle{transform:rotate(45deg)}
-        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
-        .faq-answer-inner{padding:0 22px 18px;font-size:14px;color:var(--text-secondary);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
-        .faq-item.open .faq-answer{max-height:300px}
-        .cta-section{background:var(--gradient-brand);padding:70px 20px;text-align:center;color:white;position:relative;overflow:hidden}
-        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.15),transparent 50%),radial-gradient(circle at 80% 50%,rgba(255,255,255,0.08),transparent 50%)}
-        .cta-wrap{max-width:600px;margin:0 auto;position:relative;z-index:1}
-        .cta-section h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px;line-height:1.2}
-        .cta-section p{font-size:16px;opacity:0.95;margin-bottom:26px;line-height:1.7}
-        .btn-cta{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue);text-decoration:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:all 0.2s ease}
-        .btn-cta:hover{transform:translateY(-2px)}
-        footer{background:#0f172a;color:rgba(255,255,255,0.5);text-align:center;padding:50px 20px 26px;font-size:13px;font-weight:500}
-        [data-theme="dark"] footer{background:#020617}
-        .footer-logo{font-size:22px;font-weight:800;color:white;margin-bottom:8px}.footer-logo span{color:var(--accent)}
-        .footer-tagline{margin-bottom:30px;font-size:14px}
-        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:900px;margin:0 auto 36px;text-align:left}
-        .footer-col p.col-title{color:white;font-weight:700;font-size:13px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
-        .footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;font-size:13px;transition:color 0.2s ease}
-        .footer-col a:hover{color:white}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px}.footer-bottom span{color:var(--accent)}
-        .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1)}
-        .reveal.visible{opacity:1;transform:translateY(0)}
-        @media (max-width:768px){nav{padding:12px 16px}.nav-links{gap:12px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.page-hero{padding:50px 16px 60px}.calc-card{padding:24px}.calc-row-header,.calc-row{grid-template-columns:1.8fr 1fr 36px;gap:8px}.calc-section{padding:40px 16px}.content-section{padding:50px 16px}.steps-grid{grid-template-columns:1fr}.related-grid{grid-template-columns:1fr}.breakdown{gap:10px}.cta-section{padding:50px 16px}.footer-grid{grid-template-columns:1fr 1fr}}
-        @media (max-width:480px){.footer-grid{grid-template-columns:1fr}.breakdown{grid-template-columns:1fr}}
-        @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+        :root {
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+            --blue-light: #eff6ff;
+            --accent: #06b6d4;
+            --text: #0f172a;
+            --text-secondary: #334155;
+            --muted: #64748b;
+            --bg: #f8faff;
+            --card-bg: #ffffff;
+            --border: rgba(37, 99, 235, 0.1);
+            --border-strong: rgba(37, 99, 235, 0.2);
+            --gradient-brand: linear-gradient(135deg, #2563eb, #0891b2);
+            --gradient-hero: linear-gradient(
+                135deg,
+                rgba(37, 99, 235, 0.05),
+                rgba(6, 182, 212, 0.05)
+            );
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --blue: #3b82f6;
+            --blue-dark: #60a5fa;
+            --blue-light: rgba(59, 130, 246, 0.15);
+            --accent: #22d3ee;
+            --text: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --muted: #94a3b8;
+            --bg: #020617;
+            --card-bg: #0f172a;
+            --border: rgba(59, 130, 246, 0.1);
+            --border-strong: rgba(59, 130, 246, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 72px 20px 92px;
+            background: var(--gradient-hero);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(37, 99, 235, 0.12),
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(6, 182, 212, 0.12),
+                    transparent 40%
+                );
+            pointer-events: none;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 790px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-bottom: 18px;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .breadcrumb a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-sep {
+            margin: 0 8px;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            margin-bottom: 16px;
+            padding: 7px 13px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+        }
+
+        .page-hero h1 {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -2px;
+        }
+
+        .gradient-text {
+            background: var(--gradient-brand);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .page-hero p {
+            max-width: 790px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .hero-badge {
+            padding: 7px 13px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .calc-section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 72px 20px;
+        }
+
+        .calc-card {
+            padding: 36px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .scholarship-tool {
+            padding: 32px;
+        }
+
+        .tool-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calc-card-title {
+            margin-bottom: 6px;
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .calc-card-subtitle {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .privacy-badge {
+            padding: 8px 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .planner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .field-group {
+            margin-bottom: 18px;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .field-help {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        .calc-input {
+            width: 100%;
+            min-height: 44px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 500;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .calc-input:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px var(--blue-light);
+        }
+
+        .calc-input[aria-invalid="true"] {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .calc-error {
+            margin-top: 16px;
+            padding: 12px 14px;
+            background: rgba(220, 38, 38, 0.08);
+            border: 1px solid rgba(220, 38, 38, 0.28);
+            border-radius: 10px;
+            color: #dc2626;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 1.5;
+        }
+
+        [data-theme="dark"] .calc-error {
+            color: #fca5a5;
+        }
+
+        .calc-error[hidden] {
+            display: none;
+        }
+
+        .calculator-block {
+            margin-top: 24px;
+            padding: 20px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+        }
+
+        .block-heading {
+            margin-bottom: 16px;
+        }
+
+        .block-heading h3 {
+            margin-bottom: 4px;
+            font-size: 17px;
+        }
+
+        .block-heading p {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .cost-grid,
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .aid-table {
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .aid-header,
+        .aid-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 0.8fr 44px;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .aid-header {
+            padding: 11px 13px 8px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .aid-row {
+            margin: 0 11px 10px;
+            padding: 12px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .calc-remove {
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .calc-remove:hover {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        [data-theme="dark"] .calc-remove:hover {
+            background: rgba(239, 68, 68, 0.2);
+        }
+
+        .full-width {
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .calc-add {
+            padding: 12px 20px;
+            background: var(--blue-light);
+            border: 1px dashed var(--border-strong);
+            border-radius: 10px;
+            color: var(--blue);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .calc-add:hover {
+            background: var(--blue);
+            border-style: solid;
+            color: #fff;
+        }
+
+        .calculator-note {
+            margin-top: 14px;
+            padding: 13px 15px;
+            background: var(--blue-light);
+            border: 1px solid var(--border-strong);
+            border-radius: 11px;
+            color: var(--text-secondary);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .calc-calculate {
+            padding: 12px 32px;
+            background: var(--gradient-brand);
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .calc-calculate:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 28px;
+            overflow: hidden;
+            border: 1px solid var(--border-strong);
+            border-radius: 18px;
+        }
+
+        .result-box.visible {
+            display: block;
+        }
+
+        .result-summary {
+            padding: 24px 25px;
+            background: var(--gradient-hero);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-summary h3 {
+            font-size: 21px;
+        }
+
+        .result-summary p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .result-cards {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .result-card {
+            padding: 13px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 11px;
+        }
+
+        .result-card span {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .result-card strong {
+            color: var(--blue);
+            font-size: 18px;
+        }
+
+        .result-content {
+            padding: 22px 24px 24px;
+        }
+
+        .result-content h4 {
+            margin-bottom: 12px;
+        }
+
+        .year-table-wrap,
+        .comparison-table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+        }
+
+        .year-table,
+        .comparison-table {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+            background: var(--card-bg);
+        }
+
+        .year-table th,
+        .comparison-table th {
+            padding: 11px 12px;
+            background: var(--blue-light);
+            color: var(--blue);
+            font-size: 9px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .year-table td,
+        .comparison-table td {
+            padding: 11px 12px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 10px;
+        }
+
+        .result-alert {
+            margin-top: 14px;
+            padding: 12px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .result-btn {
+            padding: 10px 18px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            color: var(--blue);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .result-btn:hover {
+            background: var(--blue-light);
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content-section.alt-bg {
+            max-width: 100%;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .content-section.alt-bg .content-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            color: var(--text);
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .content-section p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .formula-box {
+            margin: 20px 0;
+            padding: 18px;
+            background: var(--gradient-hero);
+            border: 1px solid var(--border-strong);
+            border-radius: 14px;
+        }
+
+        .formula-box strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--blue);
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .formula-box code {
+            display: block;
+            padding: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            color: var(--text);
+            font-family: inherit;
+            font-weight: 700;
+            white-space: normal;
+        }
+
+        .methodology-box {
+            margin-top: 22px;
+            padding: 18px;
+            background: var(--bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 14px;
+        }
+
+        .methodology-box h3 {
+            margin-bottom: 7px;
+            font-size: 16px;
+        }
+
+        .methodology-box p {
+            font-size: 12px;
+        }
+
+        .methodology-box a,
+        .source-links a {
+            min-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            margin: 4px 5px 4px 0;
+            padding: 8px 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-strong);
+            border-radius: 9px;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .four-steps {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .step-card {
+            padding: 28px 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            background: var(--gradient-brand);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .step-card h3 {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .step-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .content-card {
+            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .content-card h3 {
+            margin-bottom: 7px;
+            font-size: 16px;
+        }
+
+        .content-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .section-list {
+            margin: 18px 0 0 20px;
+            color: var(--text-secondary);
+        }
+
+        .section-list li {
+            margin-bottom: 8px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .related-card {
+            display: block;
+            padding: 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--blue);
+            box-shadow: var(--shadow-md);
+        }
+
+        .related-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            background: var(--blue-light);
+            border-radius: 12px;
+            color: var(--blue);
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .related-card h3 {
+            margin-bottom: 6px;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .related-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 18px 22px;
+            background: transparent;
+            border: 0;
+            color: var(--text);
+            cursor: pointer;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .faq-question:hover {
+            color: var(--blue);
+        }
+
+        .faq-toggle {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            background: var(--blue-light);
+            border-radius: 50%;
+            color: var(--blue);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-inner {
+            padding: 14px 22px 18px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            position: relative;
+            overflow: hidden;
+            padding: 70px 20px;
+            background: var(--gradient-brand);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at 20% 50%,
+                    rgba(255, 255, 255, 0.15),
+                    transparent 50%
+                ),
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(255, 255, 255, 0.08),
+                    transparent 50%
+                );
+        }
+
+        .cta-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 14px;
+            font-size: clamp(24px, 3.5vw, 36px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-section p {
+            margin-bottom: 26px;
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 28px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: var(--blue);
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (max-width: 980px) {
+            .cost-grid,
+            .resources-grid,
+            .result-cards,
+            .four-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .tool-heading {
+                flex-direction: column;
+            }
+
+            .aid-header {
+                display: none;
+            }
+
+            .aid-row {
+                grid-template-columns: 1fr 1fr 44px;
+            }
+
+            .aid-name {
+                grid-column: 1 / -1;
+            }
+
+            .aid-years {
+                grid-column: 1 / 3;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-hero {
+                padding: 54px 16px 72px;
+            }
+
+            .calc-section {
+                padding: 52px 14px;
+            }
+
+            .scholarship-tool {
+                padding: 20px 16px;
+            }
+
+            .planner-grid,
+            .cost-grid,
+            .resources-grid,
+            .content-grid,
+            .four-steps,
+            .related-grid,
+            .result-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .aid-row {
+                grid-template-columns: 1fr 44px;
+            }
+
+            .aid-name,
+            .aid-type,
+            .aid-amount,
+            .aid-years {
+                grid-column: 1 / -1;
+            }
+
+            .content-section {
+                padding: 50px 16px;
+            }
+
+            .cta-section {
+                padding: 50px 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
+
     <script type="application/ld+json">
 {
-        "@context": "https://schema.org",
-        "@graph": [
-                {
-                        "@type": "Organization",
-                        "@id": "https://studentcalctools.com/#organization",
-                        "name": "StudentCalcTools",
-                        "url": "https://studentcalctools.com/",
-                        "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://studentcalctools.com/assets/images/og-image.webp",
-                                "width": 1200,
-                                "height": 630
-                        }
-                },
-                {
-                        "@type": "WebSite",
-                        "@id": "https://studentcalctools.com/#website",
-                        "url": "https://studentcalctools.com/",
-                        "name": "StudentCalcTools",
-                        "publisher": {
-                                "@id": "https://studentcalctools.com/#organization"
-                        },
-                        "inLanguage": "en-US"
-                },
-                {
-                        "@type": "WebPage",
-                        "@id": "https://studentcalctools.com/scholarship-calculator/#webpage",
-                        "url": "https://studentcalctools.com/scholarship-calculator/",
-                        "name": "Scholarship Calculator | Estimate College Cost After Aid",
-                        "description": "Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.",
-                        "isPartOf": {
-                                "@id": "https://studentcalctools.com/#website"
-                        },
-                        "publisher": {
-                                "@id": "https://studentcalctools.com/#organization"
-                        },
-                        "breadcrumb": {
-                                "@id": "https://studentcalctools.com/scholarship-calculator/#breadcrumb"
-                        },
-                        "mainEntity": {
-                                "@id": "https://studentcalctools.com/scholarship-calculator/#application"
-                        },
-                        "dateModified": "2026-08-02",
-                        "inLanguage": "en-US"
-                },
-                {
-                        "@type": "WebApplication",
-                        "@id": "https://studentcalctools.com/scholarship-calculator/#application",
-                        "name": "Scholarship Calculator",
-                        "alternateName": [
-                                "College Scholarship Calculator",
-                                "College Cost After Aid Calculator"
-                        ],
-                        "url": "https://studentcalctools.com/scholarship-calculator/",
-                        "description": "Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.",
-                        "applicationCategory": "EducationalApplication",
-                        "operatingSystem": "Any",
-                        "browserRequirements": "Requires JavaScript",
-                        "isAccessibleForFree": true,
-                        "offers": {
-                                "@type": "Offer",
-                                "price": "0",
-                                "priceCurrency": "USD"
-                        },
-                        "featureList": [
-                                "Cost of attendance breakdown",
-                                "Scholarship and grant tracking",
-                                "Renewable award planning",
-                                "Estimated net price",
-                                "Funding gap calculation",
-                                "Multi-year projection"
-                        ]
-                },
-                {
-                        "@type": "BreadcrumbList",
-                        "@id": "https://studentcalctools.com/scholarship-calculator/#breadcrumb",
-                        "itemListElement": [
-                                {
-                                        "@type": "ListItem",
-                                        "position": 1,
-                                        "name": "Home",
-                                        "item": "https://studentcalctools.com/"
-                                },
-                                {
-                                        "@type": "ListItem",
-                                        "position": 2,
-                                        "name": "Calculators",
-                                        "item": "https://studentcalctools.com/calculators/"
-                                },
-                                {
-                                        "@type": "ListItem",
-                                        "position": 3,
-                                        "name": "Scholarship Calculator",
-                                        "item": "https://studentcalctools.com/scholarship-calculator/"
-                                }
-                        ]
-                },
-                {
-                        "@type": "FAQPage",
-                        "@id": "https://studentcalctools.com/scholarship-calculator/#faq",
-                        "mainEntity": [
-                                {
-                                        "@type": "Question",
-                                        "name": "What does the Scholarship Calculator calculate?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "It estimates annual cost of attendance, scholarships and grants, net price, other planned resources, remaining funding gap, and a one-to-four-year projection."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "What is estimated net price?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Estimated net price is cost of attendance minus scholarships and grants. Loans and work-study are kept separate because loans must be repaid and work-study is earned through employment."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "What should I include in cost of attendance?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Include tuition and required fees, housing and food, books and supplies, transportation, personal expenses, and other education-related costs for the same academic period."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "Should I include student loans as scholarships?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "No. Add loans under Other Planned Resources so the calculator can show borrowing separately from gift aid."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "Should work-study reduce net price?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "No. Work-study is normally earned over time and is not an upfront discount. The calculator uses it only as a planned resource."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "What does renewable years mean?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "It is the number of academic years you expect an award to continue. Use the award terms and check GPA, enrollment, credit-completion, and other renewal requirements."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "What happens if gift aid exceeds college cost?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "The calculator does not show a negative net price. It reports potential excess aid, but the school may reduce, redirect, refund, or restrict it."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "Can I compare college aid offers with this tool?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Yes. Run the same inputs for each school and compare net price, renewable gift aid, projected borrowing, and the remaining funding gap."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "Are scholarships always tax-free?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Not always. Tax treatment can depend on the expense paid, degree status, and award conditions. Review current IRS guidance or consult a qualified tax professional."
-                                        }
-                                },
-                                {
-                                        "@type": "Question",
-                                        "name": "Is my information saved?",
-                                        "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "No. Calculations run in your browser, and entered financial amounts are not included in the analytics event."
-                                        }
-                                }
-                        ]
-                }
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://studentcalctools.com/#organization",
+      "name": "StudentCalcTools",
+      "url": "https://studentcalctools.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://studentcalctools.com/assets/images/og-image.webp",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://studentcalctools.com/#website",
+      "url": "https://studentcalctools.com/",
+      "name": "StudentCalcTools",
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://studentcalctools.com/scholarship-calculator/#webpage",
+      "url": "https://studentcalctools.com/scholarship-calculator/",
+      "name": "Scholarship Calculator | Estimate College Cost After Aid",
+      "description": "Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.",
+      "isPartOf": {
+        "@id": "https://studentcalctools.com/#website"
+      },
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://studentcalctools.com/scholarship-calculator/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://studentcalctools.com/scholarship-calculator/#application"
+      },
+      "dateModified": "2026-08-14",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://studentcalctools.com/scholarship-calculator/#application",
+      "name": "Scholarship Calculator",
+      "alternateName": [
+        "College Scholarship Calculator",
+        "College Cost After Aid Calculator"
+      ],
+      "url": "https://studentcalctools.com/scholarship-calculator/",
+      "description": "Use this free Scholarship Calculator to estimate college cost after scholarships and grants, compare aid, and calculate your remaining funding gap.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Cost of attendance breakdown",
+        "Scholarship and grant tracking",
+        "Renewable award planning",
+        "Estimated net price",
+        "Funding gap calculation",
+        "Multi-year projection"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://studentcalctools.com/scholarship-calculator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://studentcalctools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://studentcalctools.com/calculators/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Scholarship Calculator",
+          "item": "https://studentcalctools.com/scholarship-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://studentcalctools.com/scholarship-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the Scholarship Calculator calculate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It estimates annual cost of attendance, scholarships and grants, net price, other planned resources, remaining funding gap, and a one-to-four-year projection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is estimated net price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estimated net price is cost of attendance minus scholarships and grants. Loans and work-study are kept separate because loans must be repaid and work-study is earned through employment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I include in cost of attendance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Include tuition and required fees, housing and food, books and supplies, transportation, personal expenses, and other education-related costs for the same academic period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include student loans as scholarships?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Add loans under Other Planned Resources so the calculator can show borrowing separately from gift aid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should work-study reduce net price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Work-study is normally earned over time and is not an upfront discount. The calculator uses it only as a planned resource."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does renewable years mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the number of academic years you expect an award to continue. Use the award terms and check GPA, enrollment, credit-completion, and other renewal requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if gift aid exceeds college cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator does not show a negative net price. It reports potential excess aid, but the school may reduce, redirect, refund, or restrict it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compare college aid offers with this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Run the same inputs for each school and compare net price, renewable gift aid, projected borrowing, and the remaining funding gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are scholarships always tax-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. Tax treatment can depend on the expense paid, degree status, and award conditions. Review current IRS guidance or consult a qualified tax professional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my information saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Calculations run in your browser, and entered financial amounts are not included in the analytics event."
+          }
+        }
+      ]
+    }
+  ]
 }
     </script>
-<style>
-    html { scroll-padding-top: 92px; }
-    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-    .skip-link { position: fixed; left: 12px; top: -80px; z-index: 10000; }
-    .skip-link:focus { top: 0; left: 12px; }
-    .site-nav { min-height: 72px; }
-    .brand-name { color: var(--blue); }
-    .brand-accent { color: var(--accent); }
-    .nav-right { display: flex; align-items: center; gap: 12px; }
-    .menu-toggle { display: none; min-height: 44px; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--blue-light); color: var(--blue); font-weight: 800; cursor: pointer; }
-    .theme-toggle { width: 44px; height: 44px; }
-    .theme-icon, .theme-icon svg { width: 20px; height: 20px; }
-    .theme-icon { display: inline-grid; place-items: center; }
-    .theme-icon svg { fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-    .theme-icon-sun { display: none; color: #fbbf24; }
-    [data-theme="dark"] .theme-icon-sun { display: inline-grid; }
-    [data-theme="dark"] .theme-icon-moon { display: none; }
-    .page-hero { padding: 72px 20px 92px; }
-    .page-hero h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -2px; }
-    .page-hero p { max-width: 790px; font-size: 18px; }
-    .hero-kicker { display: inline-flex; margin-bottom: 16px; padding: 7px 13px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--card-bg); color: var(--blue); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.1px; }
-    .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .hero-badge { padding: 7px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--card-bg); color: var(--text-secondary); font-size: 12px; font-weight: 700; }
-    .calc-section { max-width: 1180px; padding: 72px 20px; }
-    .scholarship-tool { padding: 32px; }
-    .tool-heading { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
-    .privacy-badge { padding: 8px 12px; border: 1px solid var(--border-strong); border-radius: 999px; background: var(--card-bg); color: var(--blue); font-size: 11px; font-weight: 800; white-space: nowrap; }
-    .planner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
-    .field-help { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; }
-    .calculator-block { margin-top: 24px; padding: 20px; border: 1px solid var(--border); border-radius: 17px; background: var(--bg); }
-    .block-heading { margin-bottom: 16px; }
-    .block-heading h3 { margin-bottom: 4px; font-size: 17px; }
-    .block-heading p { color: var(--muted); font-size: 11px; }
-    .cost-grid, .resources-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .aid-table { overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: var(--card-bg); }
-    .aid-header, .aid-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr .8fr 44px; gap: 10px; align-items: center; }
-    .aid-header { padding: 11px 13px 8px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; }
-    .aid-row { margin: 0 11px 10px; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
-    .full-width { width: 100%; margin-top: 16px; }
-    .calculator-note { margin-top: 14px; padding: 13px 15px; border: 1px solid var(--border-strong); border-radius: 11px; background: var(--blue-light); color: var(--text-secondary); font-size: 11px; }
-    .result-box { display: none; margin-top: 28px; overflow: hidden; border: 1px solid var(--border-strong); border-radius: 18px; }
-    .result-box.visible { display: block; }
-    .result-summary { padding: 24px 25px; background: var(--gradient-hero); border-bottom: 1px solid var(--border); }
-    .result-summary h3 { font-size: 21px; }
-    .result-summary p { color: var(--muted); font-size: 12px; }
-    .result-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
-    .result-card { padding: 13px; border: 1px solid var(--border-strong); border-radius: 11px; background: var(--card-bg); }
-    .result-card span { display: block; margin-bottom: 4px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
-    .result-card strong { color: var(--blue); font-size: 18px; }
-    .result-content { padding: 22px 24px 24px; }
-    .result-content h4 { margin-bottom: 12px; }
-    .year-table-wrap, .comparison-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 13px; }
-    .year-table, .comparison-table { width: 100%; min-width: 760px; border-collapse: collapse; background: var(--card-bg); }
-    .year-table th, .comparison-table th { padding: 11px 12px; background: var(--blue-light); color: var(--blue); font-size: 9px; text-align: left; text-transform: uppercase; }
-    .year-table td, .comparison-table td { padding: 11px 12px; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 10px; }
-    .result-alert { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); color: var(--text-secondary); font-size: 11px; }
-    .result-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    .formula-box { margin: 20px 0; padding: 18px; border: 1px solid var(--border-strong); border-radius: 14px; background: var(--gradient-hero); }
-    .formula-box strong { display: block; margin-bottom: 7px; color: var(--blue); font-size: 11px; text-transform: uppercase; }
-    .formula-box code { display: block; padding: 12px; border: 1px solid var(--border); border-radius: 9px; background: var(--card-bg); color: var(--text); font-family: inherit; font-weight: 700; white-space: normal; }
-    .methodology-box { margin-top: 22px; padding: 18px; border: 1px solid var(--border-strong); border-radius: 14px; background: var(--bg); }
-    .methodology-box h3 { margin: 0 0 7px; font-size: 16px; }
-    .methodology-box p { font-size: 12px; }
-    .methodology-box a, .source-links a { display: inline-flex; min-height: 40px; align-items: center; margin: 4px 5px 4px 0; padding: 8px 12px; border: 1px solid var(--border-strong); border-radius: 9px; background: var(--card-bg); color: var(--blue); font-size: 11px; font-weight: 800; text-decoration: none; }
-    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
-    .content-card { padding: 20px; border: 1px solid var(--border); border-radius: 14px; background: var(--card-bg); }
-    .content-card h3 { margin: 0 0 7px; font-size: 16px; }
-    .content-card p { margin: 0; color: var(--muted); font-size: 12px; }
-    .section-list { margin: 18px 0 0 20px; color: var(--text-secondary); }
-    .section-list li { margin-bottom: 8px; }
-    .four-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .footer-col a[aria-current="page"] { color: white; }
-    @media (max-width: 980px) { .cost-grid, .resources-grid { grid-template-columns: 1fr 1fr; } .result-cards { grid-template-columns: 1fr 1fr; } .four-steps { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 860px) { .site-nav { padding: 10px 16px; } .nav-links { position: absolute; top: calc(100% + 8px); left: 14px; right: 14px; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px; border: 1px solid var(--border-strong); border-radius: 15px; background: var(--card-bg); box-shadow: var(--shadow-md); } .nav-links.open { display: flex; } .nav-links a { padding: 12px 13px; border-radius: 9px; color: var(--text); } .menu-toggle { display: inline-flex; } .nav-tag { display: none; } .tool-heading { flex-direction: column; } .aid-header { display: none; } .aid-row { grid-template-columns: 1fr 1fr 44px; } .aid-name { grid-column: 1 / -1; } .aid-years { grid-column: 1 / 3; } }
-    @media (max-width: 640px) { .page-hero { padding: 54px 16px 72px; } .calc-section { padding: 52px 14px; } .scholarship-tool { padding: 20px 16px; } .planner-grid, .cost-grid, .resources-grid, .content-grid, .four-steps { grid-template-columns: 1fr; } .aid-row { grid-template-columns: 1fr 44px; } .aid-name, .aid-type, .aid-amount, .aid-years { grid-column: 1 / -1; } .result-cards { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; text-align: center; } }
-    @media (max-width: 430px) { .footer-grid { grid-template-columns: 1fr; } }
-</style>
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-    <a href="/" class="nav-logo" aria-label="StudentCalcTools home">
-        <span class="nav-logo-icon" aria-hidden="true">S</span>
-        <span class="brand-name">StudentCalc<span class="brand-accent">Tools</span></span>
-    </a>
-    <div class="nav-right">
-        <div class="nav-links" id="navLinks">
-            <a href="/">Home</a>
-            <a href="/calculators/" aria-current="page">Calculators</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about-us/">About</a>
-            <a href="/contact-us/">Contact</a>
-        </div>
-        <span class="nav-tag">Free to use</span>
-        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
-            <span class="theme-icon theme-icon-moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path></svg></span>
-            <span class="theme-icon theme-icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg></span>
-        </button>
-    </div>
-</nav>
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+    {% include header.html %}
 
     <main id="main-content">
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Home</a><span class="breadcrumb-sep">›</span><a href="/calculators/">Calculators</a><span class="breadcrumb-sep">›</span><span>Scholarship Calculator</span>
-            </nav>
-            <span class="hero-kicker">College cost after scholarships and grants</span>
-            <h1>Free <span class="gradient-text">Scholarship Calculator</span></h1>
-            <p>Use this Scholarship Calculator to estimate college cost after scholarships and grants, keep loans and work-study separate, and project your funding gap for one to four academic years.</p>
-            <div class="hero-badges">
-                <span class="hero-badge">Net price estimate</span>
-                <span class="hero-badge">Renewable award planning</span>
-                <span class="hero-badge">Multi-year projection</span>
-                <span class="hero-badge">Browser-based calculation</span>
+
+        <section class="page-hero">
+            <div class="page-hero-content">
+
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <a href="/calculators/">Calculators</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <span>Scholarship Calculator</span>
+                </nav>
+
+                <span class="hero-kicker">
+                    College cost after scholarships and grants
+                </span>
+
+                <h1>
+                    Free
+                    <span class="gradient-text">
+                        Scholarship Calculator
+                    </span>
+                </h1>
+
+                <p>
+                    Use this Scholarship Calculator to estimate college cost after scholarships and grants, keep loans and work-study separate, and project your funding gap for one to four academic years.
+                </p>
+
+                <div class="hero-badges">
+                    <span class="hero-badge">Net price estimate</span>
+                    <span class="hero-badge">Renewable award planning</span>
+                    <span class="hero-badge">Multi-year projection</span>
+                    <span class="hero-badge">Browser-based calculation</span>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="calc-section" aria-labelledby="calculator-title">
-        <div class="calc-card scholarship-tool">
-            <div class="tool-heading">
-                <div>
-                    <h2 class="calc-card-title" id="calculator-title">Calculate College Cost After Scholarships</h2>
-                    <p class="calc-card-subtitle">Enter annual college costs, scholarships and grants, renewal periods, and other resources. The calculator separates gift aid from money that must be earned or repaid.</p>
-                </div>
-                <span class="privacy-badge">Values stay in your browser</span>
-            </div>
+        <section class="calc-section" aria-labelledby="calculator-title">
+            <div class="calc-card scholarship-tool">
 
-            <div class="planner-grid">
-                <div class="field-group">
-                    <label class="field-label" for="estimateYears">Estimate Period</label>
-                    <select class="calc-input" id="estimateYears">
-                        <option value="1">1 academic year</option><option value="2">2 academic years</option><option value="3">3 academic years</option><option value="4" selected>4 academic years</option>
-                    </select>
-                </div>
-                <div class="field-group">
-                    <label class="field-label" for="costIncrease">Annual Cost Increase</label>
-                    <input class="calc-input" id="costIncrease" type="number" min="0" max="20" step="0.1" value="3">
-                    <span class="field-help">Used for future-year projections</span>
-                </div>
-            </div>
+                <div class="tool-heading">
+                    <div>
+                        <h2 class="calc-card-title" id="calculator-title">
+                            Calculate College Cost After Scholarships
+                        </h2>
 
-            <section class="calculator-block" aria-labelledby="cost-heading">
-                <div class="block-heading"><h3 id="cost-heading">Annual Cost of Attendance</h3><p>Use costs for the same academic year, including direct school charges and reasonable education-related living expenses.</p></div>
-                <div class="cost-grid">
-                    <div class="field-group"><label class="field-label" for="tuitionFees">Tuition and Required Fees</label><input class="calc-input cost-input" id="tuitionFees" type="number" min="0" step="100" value="20000"></div>
-                    <div class="field-group"><label class="field-label" for="housingFood">Housing and Food</label><input class="calc-input cost-input" id="housingFood" type="number" min="0" step="100" value="10000"></div>
-                    <div class="field-group"><label class="field-label" for="booksSupplies">Books and Supplies</label><input class="calc-input cost-input" id="booksSupplies" type="number" min="0" step="50" value="1200"></div>
-                    <div class="field-group"><label class="field-label" for="transportation">Transportation</label><input class="calc-input cost-input" id="transportation" type="number" min="0" step="50" value="1200"></div>
-                    <div class="field-group"><label class="field-label" for="personalExpenses">Personal Expenses</label><input class="calc-input cost-input" id="personalExpenses" type="number" min="0" step="50" value="1600"></div>
-                    <div class="field-group"><label class="field-label" for="otherCosts">Other Education Costs</label><input class="calc-input cost-input" id="otherCosts" type="number" min="0" step="50" value="1000"></div>
-                </div>
-            </section>
+                        <p class="calc-card-subtitle">
+                            Enter annual college costs, scholarships and grants, renewal periods, and other resources. The calculator separates gift aid from money that must be earned or repaid.
+                        </p>
+                    </div>
 
-            <section class="calculator-block" aria-labelledby="aid-heading">
-                <div class="block-heading"><h3 id="aid-heading">Scholarships and Grants</h3><p>Add gift aid that normally does not need to be repaid. Keep loans and work-study out of this section.</p></div>
-                <div class="aid-table">
-                    <div class="aid-header" aria-hidden="true"><div>Award Name</div><div>Type</div><div>Annual Amount</div><div>Renewable Years</div><div></div></div>
-                    <div id="aidRows">
-                        <div class="aid-row">
-                            <input class="calc-input aid-name" type="text" value="Merit Scholarship" placeholder="Award name" aria-label="Award name">
-                            <select class="calc-input aid-type" aria-label="Award type"><option selected>Scholarship</option><option>Grant</option><option>Tuition waiver</option><option>Employer benefit</option><option>Other gift aid</option></select>
-                            <input class="calc-input aid-amount" type="number" min="0" step="100" value="8000" aria-label="Annual award amount">
-                            <select class="calc-input aid-years" aria-label="Renewable years"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4" selected>4 years</option></select>
-                            <button class="calc-remove" type="button" aria-label="Remove award">×</button>
+                    <span class="privacy-badge">
+                        Values stay in your browser
+                    </span>
+                </div>
+
+                <form id="scholarshipForm" novalidate>
+
+                    <div class="planner-grid">
+
+                        <div class="field-group">
+                            <label class="field-label" for="estimateYears">
+                                Estimate Period
+                            </label>
+
+                            <select class="calc-input" id="estimateYears">
+                                <option value="1">1 academic year</option>
+                                <option value="2">2 academic years</option>
+                                <option value="3">3 academic years</option>
+                                <option value="4" selected>4 academic years</option>
+                            </select>
                         </div>
-                        <div class="aid-row">
-                            <input class="calc-input aid-name" type="text" value="Pell Grant" placeholder="Award name" aria-label="Award name">
-                            <select class="calc-input aid-type" aria-label="Award type"><option>Scholarship</option><option selected>Grant</option><option>Tuition waiver</option><option>Employer benefit</option><option>Other gift aid</option></select>
-                            <input class="calc-input aid-amount" type="number" min="0" step="100" value="6500" aria-label="Annual award amount">
-                            <select class="calc-input aid-years" aria-label="Renewable years"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4" selected>4 years</option></select>
-                            <button class="calc-remove" type="button" aria-label="Remove award">×</button>
+
+                        <div class="field-group">
+                            <label class="field-label" for="costIncrease">
+                                Annual Cost Increase
+                            </label>
+
+                            <input
+                                class="calc-input"
+                                id="costIncrease"
+                                type="number"
+                                min="0"
+                                max="20"
+                                step="0.1"
+                                value="3">
+
+                            <span class="field-help">
+                                Used for future-year projections
+                            </span>
                         </div>
-                        <div class="aid-row">
-                            <input class="calc-input aid-name" type="text" value="Department Award" placeholder="Award name" aria-label="Award name">
-                            <select class="calc-input aid-type" aria-label="Award type"><option selected>Scholarship</option><option>Grant</option><option>Tuition waiver</option><option>Employer benefit</option><option>Other gift aid</option></select>
-                            <input class="calc-input aid-amount" type="number" min="0" step="100" value="2500" aria-label="Annual award amount">
-                            <select class="calc-input aid-years" aria-label="Renewable years"><option value="1" selected>1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option></select>
-                            <button class="calc-remove" type="button" aria-label="Remove award">×</button>
+
+                    </div>
+
+                    <section class="calculator-block" aria-labelledby="cost-heading">
+
+                        <div class="block-heading">
+                            <h3 id="cost-heading">
+                                Annual Cost of Attendance
+                            </h3>
+
+                            <p>
+                                Use costs for the same academic year, including direct school charges and reasonable education-related living expenses.
+                            </p>
+                        </div>
+
+                        <div class="cost-grid">
+
+                            <div class="field-group">
+                                <label class="field-label" for="tuitionFees">
+                                    Tuition and Required Fees
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="tuitionFees"
+                                    type="number"
+                                    min="0"
+                                    step="100"
+                                    value="20000">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="housingFood">
+                                    Housing and Food
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="housingFood"
+                                    type="number"
+                                    min="0"
+                                    step="100"
+                                    value="10000">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="booksSupplies">
+                                    Books and Supplies
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="booksSupplies"
+                                    type="number"
+                                    min="0"
+                                    step="50"
+                                    value="1200">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="transportation">
+                                    Transportation
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="transportation"
+                                    type="number"
+                                    min="0"
+                                    step="50"
+                                    value="1200">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="personalExpenses">
+                                    Personal Expenses
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="personalExpenses"
+                                    type="number"
+                                    min="0"
+                                    step="50"
+                                    value="1600">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="otherCosts">
+                                    Other Education Costs
+                                </label>
+
+                                <input
+                                    class="calc-input cost-input"
+                                    id="otherCosts"
+                                    type="number"
+                                    min="0"
+                                    step="50"
+                                    value="1000">
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section class="calculator-block" aria-labelledby="aid-heading">
+
+                        <div class="block-heading">
+                            <h3 id="aid-heading">
+                                Scholarships and Grants
+                            </h3>
+
+                            <p>
+                                Add gift aid that normally does not need to be repaid. Keep loans and work-study out of this section.
+                            </p>
+                        </div>
+
+                        <div class="aid-table">
+
+                            <div class="aid-header" aria-hidden="true">
+                                <div>Award Name</div>
+                                <div>Type</div>
+                                <div>Annual Amount</div>
+                                <div>Renewable Years</div>
+                                <div></div>
+                            </div>
+
+                            <div id="aidRows">
+
+                                <div class="aid-row">
+                                    <input
+                                        class="calc-input aid-name"
+                                        type="text"
+                                        value="Merit Scholarship"
+                                        placeholder="Award name"
+                                        aria-label="Award name">
+
+                                    <select
+                                        class="calc-input aid-type"
+                                        aria-label="Award type">
+
+                                        <option selected>Scholarship</option>
+                                        <option>Grant</option>
+                                        <option>Tuition waiver</option>
+                                        <option>Employer benefit</option>
+                                        <option>Other gift aid</option>
+                                    </select>
+
+                                    <input
+                                        class="calc-input aid-amount"
+                                        type="number"
+                                        min="0"
+                                        step="100"
+                                        value="8000"
+                                        aria-label="Annual award amount">
+
+                                    <select
+                                        class="calc-input aid-years"
+                                        aria-label="Renewable years">
+
+                                        <option value="1">1 year</option>
+                                        <option value="2">2 years</option>
+                                        <option value="3">3 years</option>
+                                        <option value="4" selected>4 years</option>
+                                    </select>
+
+                                    <button
+                                        class="calc-remove"
+                                        type="button"
+                                        aria-label="Remove award">
+                                        ×
+                                    </button>
+                                </div>
+
+                                <div class="aid-row">
+                                    <input
+                                        class="calc-input aid-name"
+                                        type="text"
+                                        value="Pell Grant"
+                                        placeholder="Award name"
+                                        aria-label="Award name">
+
+                                    <select
+                                        class="calc-input aid-type"
+                                        aria-label="Award type">
+
+                                        <option>Scholarship</option>
+                                        <option selected>Grant</option>
+                                        <option>Tuition waiver</option>
+                                        <option>Employer benefit</option>
+                                        <option>Other gift aid</option>
+                                    </select>
+
+                                    <input
+                                        class="calc-input aid-amount"
+                                        type="number"
+                                        min="0"
+                                        step="100"
+                                        value="6500"
+                                        aria-label="Annual award amount">
+
+                                    <select
+                                        class="calc-input aid-years"
+                                        aria-label="Renewable years">
+
+                                        <option value="1">1 year</option>
+                                        <option value="2">2 years</option>
+                                        <option value="3">3 years</option>
+                                        <option value="4" selected>4 years</option>
+                                    </select>
+
+                                    <button
+                                        class="calc-remove"
+                                        type="button"
+                                        aria-label="Remove award">
+                                        ×
+                                    </button>
+                                </div>
+
+                                <div class="aid-row">
+                                    <input
+                                        class="calc-input aid-name"
+                                        type="text"
+                                        value="Department Award"
+                                        placeholder="Award name"
+                                        aria-label="Award name">
+
+                                    <select
+                                        class="calc-input aid-type"
+                                        aria-label="Award type">
+
+                                        <option selected>Scholarship</option>
+                                        <option>Grant</option>
+                                        <option>Tuition waiver</option>
+                                        <option>Employer benefit</option>
+                                        <option>Other gift aid</option>
+                                    </select>
+
+                                    <input
+                                        class="calc-input aid-amount"
+                                        type="number"
+                                        min="0"
+                                        step="100"
+                                        value="2500"
+                                        aria-label="Annual award amount">
+
+                                    <select
+                                        class="calc-input aid-years"
+                                        aria-label="Renewable years">
+
+                                        <option value="1" selected>1 year</option>
+                                        <option value="2">2 years</option>
+                                        <option value="3">3 years</option>
+                                        <option value="4">4 years</option>
+                                    </select>
+
+                                    <button
+                                        class="calc-remove"
+                                        type="button"
+                                        aria-label="Remove award">
+                                        ×
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button
+                            class="calc-add full-width"
+                            id="addAid"
+                            type="button">
+                            + Add Scholarship or Grant
+                        </button>
+
+                    </section>
+
+                    <section class="calculator-block" aria-labelledby="resources-heading">
+
+                        <div class="block-heading">
+                            <h3 id="resources-heading">
+                                Other Planned Resources
+                            </h3>
+
+                            <p>
+                                These resources may help cover net price, but they are not subtracted when calculating net price itself.
+                            </p>
+                        </div>
+
+                        <div class="resources-grid">
+
+                            <div class="field-group">
+                                <label class="field-label" for="familyContribution">
+                                    Family, Savings, or 529 Funds
+                                </label>
+
+                                <input
+                                    class="calc-input resource-input"
+                                    id="familyContribution"
+                                    type="number"
+                                    min="0"
+                                    step="100"
+                                    value="5000">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="workStudy">
+                                    Expected Work-Study Earnings
+                                </label>
+
+                                <input
+                                    class="calc-input resource-input"
+                                    id="workStudy"
+                                    type="number"
+                                    min="0"
+                                    step="100"
+                                    value="2000">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="acceptedLoans">
+                                    Student or Parent Loans Accepted
+                                </label>
+
+                                <input
+                                    class="calc-input resource-input"
+                                    id="acceptedLoans"
+                                    type="number"
+                                    min="0"
+                                    step="100"
+                                    value="5500">
+                            </div>
+
+                        </div>
+
+                        <div class="calculator-note">
+                            <strong>Important:</strong>
+                            Net price subtracts scholarships and grants from cost of attendance. Work-study is earned through employment, and loans must be repaid.
+                        </div>
+
+                    </section>
+
+                    <p
+                        class="calc-error"
+                        id="calcError"
+                        role="alert"
+                        hidden>
+                    </p>
+
+                    <button
+                        class="calc-calculate full-width"
+                        id="calculateButton"
+                        type="submit">
+                        Calculate College Cost
+                    </button>
+
+                </form>
+
+                <div
+                    class="result-box"
+                    id="resultBox"
+                    role="status"
+                    aria-live="polite">
+
+                    <div class="result-summary">
+
+                        <h3>
+                            Your Scholarship Calculator Results
+                        </h3>
+
+                        <p id="resultDescription">
+                            Estimated annual and multi-year costs will appear here.
+                        </p>
+
+                        <div class="result-cards">
+
+                            <div class="result-card">
+                                <span>Year 1 Cost</span>
+                                <strong id="yearOneCost">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Year 1 Gift Aid</span>
+                                <strong id="yearOneAid">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Year 1 Net Price</span>
+                                <strong id="yearOneNet">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Year 1 Funding Gap</span>
+                                <strong id="yearOneGap">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Gift Aid Coverage</span>
+                                <strong id="coveragePercent">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Projected Net Price</span>
+                                <strong id="projectedNet">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Projected Loans</span>
+                                <strong id="projectedLoans">--</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Projected Funding Gap</span>
+                                <strong id="projectedGap">--</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="result-content">
+
+                        <h4>
+                            Year-by-Year Projection
+                        </h4>
+
+                        <div class="year-table-wrap">
+                            <table class="year-table">
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Cost</th>
+                                        <th>Gift Aid</th>
+                                        <th>Net Price</th>
+                                        <th>Family / Savings</th>
+                                        <th>Work-Study</th>
+                                        <th>Loans</th>
+                                        <th>Gap</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="yearTableBody"></tbody>
+                            </table>
+                        </div>
+
+                        <div
+                            class="result-alert"
+                            id="resultAlert">
+                        </div>
+
+                        <div class="result-actions">
+
+                            <button
+                                class="result-btn"
+                                id="copyResults"
+                                type="button">
+                                Copy Results
+                            </button>
+
+                            <button
+                                class="result-btn"
+                                id="printResults"
+                                type="button">
+                                Print
+                            </button>
+
+                            <button
+                                class="result-btn"
+                                id="resetCalculator"
+                                type="button">
+                                Reset
+                            </button>
+
                         </div>
                     </div>
                 </div>
-                <button class="calc-add full-width" id="addAid" type="button">+ Add Scholarship or Grant</button>
-            </section>
 
-            <section class="calculator-block" aria-labelledby="resources-heading">
-                <div class="block-heading"><h3 id="resources-heading">Other Planned Resources</h3><p>These resources may help cover net price, but they are not subtracted when calculating net price itself.</p></div>
-                <div class="resources-grid">
-                    <div class="field-group"><label class="field-label" for="familyContribution">Family, Savings, or 529 Funds</label><input class="calc-input resource-input" id="familyContribution" type="number" min="0" step="100" value="5000"></div>
-                    <div class="field-group"><label class="field-label" for="workStudy">Expected Work-Study Earnings</label><input class="calc-input resource-input" id="workStudy" type="number" min="0" step="100" value="2000"></div>
-                    <div class="field-group"><label class="field-label" for="acceptedLoans">Student or Parent Loans Accepted</label><input class="calc-input resource-input" id="acceptedLoans" type="number" min="0" step="100" value="5500"></div>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+
+            <span class="eyebrow">
+                ABOUT THE TOOL
+            </span>
+
+            <h2 class="section-title">
+                What Is a Scholarship Calculator?
+            </h2>
+
+            <p>
+                A <strong>Scholarship Calculator</strong> estimates how much college may cost after scholarships and grants are applied. It starts with cost of attendance, subtracts gift aid, and keeps loans and work-study separate so borrowed or earned money is not presented as a discount.
+            </p>
+
+            <p>
+                Use estimates while researching colleges, then replace them with the figures in each school's official financial aid offer.
+            </p>
+
+            <div class="formula-box">
+                <strong>Estimated net price</strong>
+                <code>Cost of attendance − scholarships − grants = estimated net price</code>
+            </div>
+
+            <div class="formula-box">
+                <strong>Remaining funding gap</strong>
+                <code>Estimated net price − family resources − expected work-study − accepted loans = funding gap</code>
+            </div>
+
+            <div class="methodology-box">
+                <h3>Calculator methodology</h3>
+
+                <p>
+                    Review formulas, assumptions, projections, input handling, rounding, testing, and privacy.
+                </p>
+
+                <a href="/calculator-methodology/">
+                    Read Calculator Methodology
+                </a>
+            </div>
+
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+
+                <span class="eyebrow">
+                    HOW TO USE IT
+                </span>
+
+                <h2 class="section-title">
+                    How to Use the Scholarship Calculator
+                </h2>
+
+                <div class="steps-grid four-steps">
+
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h3>Enter annual costs</h3>
+                        <p>Add tuition, fees, housing, food, books, transportation, and other costs.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h3>Add gift aid</h3>
+                        <p>Enter scholarships, grants, tuition waivers, and other awards that normally do not require repayment.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h3>Check renewal</h3>
+                        <p>Use the number of years shown in each award's terms.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">4</div>
+                        <h3>Review the gap</h3>
+                        <p>Compare net price with savings, work-study, and loans you are considering.</p>
+                    </div>
+
                 </div>
-                <div class="calculator-note"><strong>Important:</strong> Net price subtracts scholarships and grants from cost of attendance. Work-study is earned through employment, and loans must be repaid.</div>
-            </section>
+            </div>
+        </section>
 
-            <button class="calc-calculate full-width" id="calculateButton" type="button">Calculate College Cost</button>
+        <section class="content-section reveal">
 
-            <div class="result-box" id="resultBox" role="status" aria-live="polite">
-                <div class="result-summary">
-                    <h3>Your Scholarship Calculator Results</h3>
-                    <p id="resultDescription">Estimated annual and multi-year costs will appear here.</p>
-                    <div class="result-cards">
-                        <div class="result-card"><span>Year 1 Cost</span><strong id="yearOneCost">$0</strong></div>
-                        <div class="result-card"><span>Year 1 Gift Aid</span><strong id="yearOneAid">$0</strong></div>
-                        <div class="result-card"><span>Year 1 Net Price</span><strong id="yearOneNet">$0</strong></div>
-                        <div class="result-card"><span>Year 1 Funding Gap</span><strong id="yearOneGap">$0</strong></div>
-                        <div class="result-card"><span>Gift Aid Coverage</span><strong id="coveragePercent">0%</strong></div>
-                        <div class="result-card"><span>Projected Net Price</span><strong id="projectedNet">$0</strong></div>
-                        <div class="result-card"><span>Projected Loans</span><strong id="projectedLoans">$0</strong></div>
-                        <div class="result-card"><span>Projected Funding Gap</span><strong id="projectedGap">$0</strong></div>
+            <span class="eyebrow">
+                COLLEGE COSTS
+            </span>
+
+            <h2 class="section-title">
+                What to Include in Cost of Attendance
+            </h2>
+
+            <p>
+                Cost of attendance is broader than tuition. Use the same academic period for every input and include direct school charges plus realistic indirect expenses.
+            </p>
+
+            <div class="content-grid">
+
+                <div class="content-card">
+                    <h3>Tuition and required fees</h3>
+                    <p>Include published tuition, mandatory fees, program fees, and required enrollment charges.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Housing and food</h3>
+                    <p>Use the school's estimate or a realistic off-campus budget for rent, utilities, groceries, and meals.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Books and supplies</h3>
+                    <p>Include required books, course materials, lab supplies, equipment, and technology.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Transportation and personal costs</h3>
+                    <p>Estimate commuting, trips home, insurance, phone service, and other attendance-related expenses.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+
+                <span class="eyebrow">
+                    AID CATEGORIES
+                </span>
+
+                <h2 class="section-title">
+                    Scholarships, Grants, Work-Study, and Loans Are Different
+                </h2>
+
+                <div class="comparison-table-wrap">
+                    <table class="comparison-table">
+
+                        <thead>
+                            <tr>
+                                <th>Funding Type</th>
+                                <th>How It Works</th>
+                                <th>Included in Net Price?</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Scholarship</td>
+                                <td>Gift aid based on merit, need, activity, employer support, or other criteria</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Grant</td>
+                                <td>Gift aid that normally does not require repayment</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Federal Work-Study</td>
+                                <td>Eligibility to earn wages through an approved job</td>
+                                <td>No</td>
+                            </tr>
+
+                            <tr>
+                                <td>Student or Parent Loan</td>
+                                <td>Borrowed money that must be repaid, usually with interest</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <p>
+                    Financial aid offers may group all four together. Separate gift aid from money that must be earned or repaid when comparing affordability.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+
+            <span class="eyebrow">
+                RENEWAL PLANNING
+            </span>
+
+            <h2 class="section-title">
+                Check Whether a Scholarship Is Renewable
+            </h2>
+
+            <p>
+                A large first-year award can make a college look affordable even when part of the package does not continue. Check the maximum renewal period, annual amount, enrollment requirements, GPA rules, and credit-completion conditions.
+            </p>
+
+            <ul class="section-list">
+                <li>Enter one year for a one-time scholarship.</li>
+                <li>Do not assume an award automatically rises with tuition.</li>
+                <li>Check whether outside scholarships change institutional grants or other aid.</li>
+                <li>Use the projection table to identify the year an award ends.</li>
+            </ul>
+
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+
+                <span class="eyebrow">
+                    COMPARE OFFERS
+                </span>
+
+                <h2 class="section-title">
+                    How to Compare College Financial Aid Offers
+                </h2>
+
+                <p>
+                    A larger scholarship does not automatically mean a lower college cost. Compare schools using the same cost categories and planning assumptions.
+                </p>
+
+                <ul class="section-list">
+                    <li>Start with full cost of attendance, not tuition alone.</li>
+                    <li>Separate scholarships and grants from loans and work-study.</li>
+                    <li>Check whether every award is renewable.</li>
+                    <li>Estimate total borrowing across all years.</li>
+                    <li>Use each college's official net price calculator before applying and its aid offer after admission.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+
+            <span class="eyebrow">
+                TAX NOTE
+            </span>
+
+            <h2 class="section-title">
+                Scholarships May Have Tax Considerations
+            </h2>
+
+            <p>
+                Scholarship tax treatment can depend on the award, degree status, and how funds are used. Amounts used for qualified tuition, required fees, and required course materials may be treated differently from money used for housing, food, travel, optional equipment, or services.
+            </p>
+
+            <p>
+                This Scholarship Calculator does not estimate taxes. Review current IRS guidance and obtain professional advice when needed.
+            </p>
+
+            <div class="methodology-box">
+
+                <h3>
+                    Official references
+                </h3>
+
+                <div class="source-links">
+
+                    <a
+                        href="https://collegecost.ed.gov/net-price"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        U.S. Department of Education Net Price Center
+                    </a>
+
+                    <a
+                        href="https://studentaid.gov/articles/financial-aid-dictionary/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Federal Student Aid Dictionary
+                    </a>
+
+                    <a
+                        href="https://studentaid.gov/articles/evaluating-financial-aid-offers/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Evaluate Financial Aid Offers
+                    </a>
+
+                    <a
+                        href="https://www.irs.gov/taxtopics/tc421"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        IRS Scholarship Guidance
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+
+            <span class="eyebrow">
+                RELATED TOOLS
+            </span>
+
+            <h2 class="section-title">
+                Continue Planning Your College Costs
+            </h2>
+
+            <div class="related-grid">
+
+                <a href="/student-loan-calculator/" class="related-card">
+                    <div class="related-icon">$</div>
+                    <h3>Student Loan Calculator</h3>
+                    <p>Estimate loan payments, interest, and total repayment.</p>
+                </a>
+
+                <a href="/gpa-calculator/" class="related-card">
+                    <div class="related-icon">G</div>
+                    <h3>GPA Calculator</h3>
+                    <p>Calculate semester GPA from grades and credit hours.</p>
+                </a>
+
+                <a href="/study-time-planner/" class="related-card">
+                    <div class="related-icon">T</div>
+                    <h3>Study Schedule Planner</h3>
+                    <p>Create a daily or weekly plan using priorities and deadlines.</p>
+                </a>
+
+                <a href="/essay-word-counter/" class="related-card">
+                    <div class="related-icon">W</div>
+                    <h3>Essay Word Counter</h3>
+                    <p>Check words, characters, reading time, and keywords.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="content-section alt-bg reveal">
+            <div class="content-wrap">
+
+                <span class="eyebrow">
+                    FAQ
+                </span>
+
+                <h2 class="section-title">
+                    Scholarship Calculator FAQs
+                </h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What does the Scholarship Calculator calculate?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It estimates annual cost of attendance, scholarships and grants, net price, other planned resources, remaining funding gap, and a one-to-four-year projection.
+                        </div>
                     </div>
                 </div>
-                <div class="result-content">
-                    <h4>Year-by-Year Projection</h4>
-                    <div class="year-table-wrap"><table class="year-table"><thead><tr><th>Year</th><th>Cost</th><th>Gift Aid</th><th>Net Price</th><th>Family / Savings</th><th>Work-Study</th><th>Loans</th><th>Gap</th></tr></thead><tbody id="yearTableBody"></tbody></table></div>
-                    <div class="result-alert" id="resultAlert"></div>
-                    <div class="result-actions"><button class="result-btn" id="copyResults" type="button">Copy Results</button><button class="result-btn" id="printResults" type="button">Print</button><button class="result-btn" id="resetCalculator" type="button">Reset</button></div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What is estimated net price?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Estimated net price is cost of attendance minus scholarships and grants. Loans and work-study are kept separate because loans must be repaid and work-study is earned through employment.
+                        </div>
+                    </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What should I include in cost of attendance?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Include tuition and required fees, housing and food, books and supplies, transportation, personal expenses, and other education-related costs for the same academic period.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Should I include student loans as scholarships?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. Add loans under Other Planned Resources so the calculator can show borrowing separately from gift aid.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Should work-study reduce net price?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. Work-study is normally earned over time and is not an upfront discount. The calculator uses it only as a planned resource.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What does renewable years mean?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It is the number of academic years you expect an award to continue. Use the award terms and check GPA, enrollment, credit-completion, and other renewal requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>What happens if gift aid exceeds college cost?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            The calculator does not show a negative net price. It reports potential excess aid, but the school may reduce, redirect, refund, or restrict it.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Can I compare college aid offers with this tool?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Run the same inputs for each school and compare net price, renewable gift aid, projected borrowing, and the remaining funding gap.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Are scholarships always tax-free?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Not always. Tax treatment can depend on the expense paid, degree status, and award conditions. Review current IRS guidance or consult a qualified tax professional.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span>Is my information saved?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. Calculations run in your browser, and entered financial amounts are not included in the analytics event.
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content-section reveal">
-        <span class="eyebrow">ABOUT THE TOOL</span><h2 class="section-title">What Is a Scholarship Calculator?</h2>
-        <p>A <strong>Scholarship Calculator</strong> estimates how much college may cost after scholarships and grants are applied. It starts with cost of attendance, subtracts gift aid, and keeps loans and work-study separate so borrowed or earned money is not presented as a discount.</p>
-        <p>Use estimates while researching colleges, then replace them with the figures in each school's official financial aid offer.</p>
-        <div class="formula-box"><strong>Estimated net price</strong><code>Cost of attendance − scholarships − grants = estimated net price</code></div>
-        <div class="formula-box"><strong>Remaining funding gap</strong><code>Estimated net price − family resources − expected work-study − accepted loans = funding gap</code></div>
-        <div class="methodology-box"><h3>Calculator methodology</h3><p>Review formulas, assumptions, projections, input handling, rounding, testing, and privacy.</p><a href="/calculator-methodology/">Read Calculator Methodology</a></div>
-    </section>
+        <section class="cta-section">
+            <div class="cta-wrap">
 
-    <section class="content-section alt-bg reveal"><div class="content-wrap">
-        <span class="eyebrow">HOW TO USE IT</span><h2 class="section-title">How to Use the Scholarship Calculator</h2>
-        <div class="steps-grid four-steps">
-            <div class="step-card"><div class="step-num">1</div><h3>Enter annual costs</h3><p>Add tuition, fees, housing, food, books, transportation, and other costs.</p></div>
-            <div class="step-card"><div class="step-num">2</div><h3>Add gift aid</h3><p>Enter scholarships, grants, tuition waivers, and other awards that normally do not require repayment.</p></div>
-            <div class="step-card"><div class="step-num">3</div><h3>Check renewal</h3><p>Use the number of years shown in each award's terms.</p></div>
-            <div class="step-card"><div class="step-num">4</div><h3>Review the gap</h3><p>Compare net price with savings, work-study, and loans you are considering.</p></div>
-        </div>
-    </div></section>
+                <h2>
+                    Compare the Full Cost, Not Just the Scholarship
+                </h2>
 
-    <section class="content-section reveal">
-        <span class="eyebrow">COLLEGE COSTS</span><h2 class="section-title">What to Include in Cost of Attendance</h2>
-        <p>Cost of attendance is broader than tuition. Use the same academic period for every input and include direct school charges plus realistic indirect expenses.</p>
-        <div class="content-grid">
-            <div class="content-card"><h3>Tuition and required fees</h3><p>Include published tuition, mandatory fees, program fees, and required enrollment charges.</p></div>
-            <div class="content-card"><h3>Housing and food</h3><p>Use the school's estimate or a realistic off-campus budget for rent, utilities, groceries, and meals.</p></div>
-            <div class="content-card"><h3>Books and supplies</h3><p>Include required books, course materials, lab supplies, equipment, and technology.</p></div>
-            <div class="content-card"><h3>Transportation and personal costs</h3><p>Estimate commuting, trips home, insurance, phone service, and other attendance-related expenses.</p></div>
-        </div>
-    </section>
+                <p>
+                    Use the result to identify estimated net price, expected borrowing, and the remaining funding gap before accepting an aid offer.
+                </p>
 
-    <section class="content-section alt-bg reveal"><div class="content-wrap">
-        <span class="eyebrow">AID CATEGORIES</span><h2 class="section-title">Scholarships, Grants, Work-Study, and Loans Are Different</h2>
-        <div class="comparison-table-wrap"><table class="comparison-table"><thead><tr><th>Funding Type</th><th>How It Works</th><th>Included in Net Price?</th></tr></thead><tbody>
-            <tr><td>Scholarship</td><td>Gift aid based on merit, need, activity, employer support, or other criteria</td><td>Yes</td></tr>
-            <tr><td>Grant</td><td>Gift aid that normally does not require repayment</td><td>Yes</td></tr>
-            <tr><td>Federal Work-Study</td><td>Eligibility to earn wages through an approved job</td><td>No</td></tr>
-            <tr><td>Student or Parent Loan</td><td>Borrowed money that must be repaid, usually with interest</td><td>No</td></tr>
-        </tbody></table></div>
-        <p>Financial aid offers may group all four together. Separate gift aid from money that must be earned or repaid when comparing affordability.</p>
-    </div></section>
+                <a href="/calculators/" class="btn-cta">
+                    Browse All Student Calculators
+                </a>
 
-    <section class="content-section reveal">
-        <span class="eyebrow">RENEWAL PLANNING</span><h2 class="section-title">Check Whether a Scholarship Is Renewable</h2>
-        <p>A large first-year award can make a college look affordable even when part of the package does not continue. Check the maximum renewal period, annual amount, enrollment requirements, GPA rules, and credit-completion conditions.</p>
-        <ul class="section-list"><li>Enter one year for a one-time scholarship.</li><li>Do not assume an award automatically rises with tuition.</li><li>Check whether outside scholarships change institutional grants or other aid.</li><li>Use the projection table to identify the year an award ends.</li></ul>
-    </section>
-
-    <section class="content-section alt-bg reveal"><div class="content-wrap">
-        <span class="eyebrow">COMPARE OFFERS</span><h2 class="section-title">How to Compare College Financial Aid Offers</h2>
-        <p>A larger scholarship does not automatically mean a lower college cost. Compare schools using the same cost categories and planning assumptions.</p>
-        <ul class="section-list"><li>Start with full cost of attendance, not tuition alone.</li><li>Separate scholarships and grants from loans and work-study.</li><li>Check whether every award is renewable.</li><li>Estimate total borrowing across all years.</li><li>Use each college's official net price calculator before applying and its aid offer after admission.</li></ul>
-    </div></section>
-
-    <section class="content-section reveal">
-        <span class="eyebrow">TAX NOTE</span><h2 class="section-title">Scholarships May Have Tax Considerations</h2>
-        <p>Scholarship tax treatment can depend on the award, degree status, and how funds are used. Amounts used for qualified tuition, required fees, and required course materials may be treated differently from money used for housing, food, travel, optional equipment, or services.</p>
-        <p>This Scholarship Calculator does not estimate taxes. Review current IRS guidance and obtain professional advice when needed.</p>
-        <div class="methodology-box"><h3>Official references</h3><div class="source-links"><a href="https://collegecost.ed.gov/net-price" target="_blank" rel="noopener noreferrer">U.S. Department of Education Net Price Center</a><a href="https://studentaid.gov/articles/financial-aid-dictionary/" target="_blank" rel="noopener noreferrer">Federal Student Aid Dictionary</a><a href="https://studentaid.gov/articles/evaluating-financial-aid-offers/" target="_blank" rel="noopener noreferrer">Evaluate Financial Aid Offers</a><a href="https://www.irs.gov/taxtopics/tc421" target="_blank" rel="noopener noreferrer">IRS Scholarship Guidance</a></div></div>
-    </section>
-
-    <section class="content-section reveal">
-        <span class="eyebrow">RELATED TOOLS</span><h2 class="section-title">Continue Planning Your College Costs</h2>
-        <div class="related-grid">
-            <a href="/student-loan-calculator/" class="related-card"><div class="related-icon">$</div><h3>Student Loan Calculator</h3><p>Estimate loan payments, interest, and total repayment.</p></a>
-            <a href="/gpa-calculator/" class="related-card"><div class="related-icon">G</div><h3>GPA Calculator</h3><p>Calculate semester GPA from grades and credit hours.</p></a>
-            <a href="/study-time-planner/" class="related-card"><div class="related-icon">T</div><h3>Study Schedule Planner</h3><p>Create a daily or weekly plan using priorities and deadlines.</p></a>
-            <a href="/essay-word-counter/" class="related-card"><div class="related-icon">W</div><h3>Essay Word Counter</h3><p>Check words, characters, reading time, and keywords.</p></a>
-        </div>
-    </section>
-
-    <section class="content-section alt-bg reveal"><div class="content-wrap">
-        <span class="eyebrow">FAQ</span><h2 class="section-title">Scholarship Calculator FAQs</h2>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What does the Scholarship Calculator calculate?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">It estimates annual cost of attendance, scholarships and grants, net price, other planned resources, remaining funding gap, and a one-to-four-year projection.</div></div>
             </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What is estimated net price?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">Estimated net price is cost of attendance minus scholarships and grants. Loans and work-study are kept separate because loans must be repaid and work-study is earned through employment.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What should I include in cost of attendance?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">Include tuition and required fees, housing and food, books and supplies, transportation, personal expenses, and other education-related costs for the same academic period.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Should I include student loans as scholarships?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">No. Add loans under Other Planned Resources so the calculator can show borrowing separately from gift aid.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Should work-study reduce net price?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">No. Work-study is normally earned over time and is not an upfront discount. The calculator uses it only as a planned resource.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What does renewable years mean?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">It is the number of academic years you expect an award to continue. Use the award terms and check GPA, enrollment, credit-completion, and other renewal requirements.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>What happens if gift aid exceeds college cost?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">The calculator does not show a negative net price. It reports potential excess aid, but the school may reduce, redirect, refund, or restrict it.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Can I compare college aid offers with this tool?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">Yes. Run the same inputs for each school and compare net price, renewable gift aid, projected borrowing, and the remaining funding gap.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Are scholarships always tax-free?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">Not always. Tax treatment can depend on the expense paid, degree status, and award conditions. Review current IRS guidance or consult a qualified tax professional.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false"><span>Is my information saved?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                <div class="faq-answer"><div class="faq-answer-inner">No. Calculations run in your browser, and entered financial amounts are not included in the analytics event.</div></div>
-            </div>
-    </div></section>
+        </section>
 
-    <section class="cta-section"><div class="cta-wrap"><h2>Compare the Full Cost, Not Just the Scholarship</h2><p>Use the result to identify estimated net price, expected borrowing, and the remaining funding gap before accepting an aid offer.</p><a href="/calculators/" class="btn-cta">Browse All Student Calculators</a></div></section>
-</main>
+    </main>
 
-    <footer>
-    <p class="footer-logo">StudentCalc<span>Tools</span></p>
-    <p class="footer-tagline">Academic calculators for grades, attendance, planning and college costs</p>
-    <div class="footer-grid">
-        <div class="footer-col"><p class="col-title">Grade Tools</p><a href="/gpa-calculator/">GPA Calculator</a><a href="/grade-calculator/">Grade Calculator</a><a href="/final-grade-calculator/">Final Grade Calculator</a><a href="/cgpa-calculator/">CGPA Calculator</a><a href="/class-rank-calculator/">Class Rank Calculator</a></div>
-        <div class="footer-col"><p class="col-title">More Tools</p><a href="/attendance-calculator/">Attendance Calculator</a><a href="/study-time-planner/">Study Schedule Planner</a><a href="/essay-word-counter/">Essay Word Counter</a><a href="/student-loan-calculator/">Student Loan Calculator</a><a href="/scholarship-calculator/" aria-current="page">Scholarship Calculator</a></div>
-        <div class="footer-col"><p class="col-title">Explore</p><a href="/">Home</a><a href="/calculators/">All Calculators</a><a href="/blog/">Student Guides</a><a href="/calculator-methodology/">Calculator Methodology</a></div>
-        <div class="footer-col"><p class="col-title">Company</p><a href="/about-us/">About Us</a><a href="/contact-us/">Contact Us</a><a href="/privacy-policy/">Privacy Policy</a><a href="/disclaimer/">Disclaimer</a></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; <span id="currentYear">2026</span> <span>StudentCalcTools</span>. Free tools for students.</p></div>
-</footer>
-<script>
-        (function () {
-            const root = document.documentElement;
-            const themeToggle = document.getElementById('themeToggle');
-            const themeMeta = document.querySelector('meta[name="theme-color"]');
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            const progress = document.getElementById('scrollProgress');
+    {% include footer.html %}
 
-            function updateThemeLabel() {
-                const current = root.getAttribute('data-theme') || 'light';
-                const target = current === 'dark' ? 'light' : 'dark';
-                themeToggle.setAttribute('aria-label', 'Switch to ' + target + ' mode');
-                themeMeta.setAttribute('content', current === 'dark' ? '#020617' : '#2563eb');
-            }
-
-            updateThemeLabel();
-            themeToggle.addEventListener('click', function () {
-                const next = (root.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark';
-                root.setAttribute('data-theme', next);
-                try { localStorage.setItem('theme', next); } catch (error) {}
-                updateThemeLabel();
-            });
-
-            menuToggle.addEventListener('click', function () {
-                const open = navLinks.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', String(open));
-                menuToggle.textContent = open ? 'Close' : 'Menu';
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.site-nav') && navLinks.classList.contains('open')) {
-                    navLinks.classList.remove('open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.textContent = 'Menu';
-                }
-            });
-
-            function updateProgress() {
-                const scrollable = document.documentElement.scrollHeight - innerHeight;
-                progress.style.width = (scrollable > 0 ? Math.min(100, scrollY / scrollable * 100) : 0) + '%';
-            }
-            addEventListener('scroll', updateProgress, { passive: true });
-            addEventListener('resize', updateProgress);
-            updateProgress();
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.08 });
-            document.querySelectorAll('.reveal').forEach(function (section) { observer.observe(section); });
-
-            document.querySelectorAll('.faq-question').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    const item = button.closest('.faq-item');
-                    const open = item.classList.toggle('open');
-                    button.setAttribute('aria-expanded', String(open));
-                });
-            });
-
-            document.getElementById('currentYear').textContent = String(new Date().getFullYear());
-        }());
-
-        (function () {
-            const yearsInput = document.getElementById('estimateYears');
-            const increaseInput = document.getElementById('costIncrease');
-            const costInputs = Array.from(document.querySelectorAll('.cost-input'));
-            const resourceInputs = Array.from(document.querySelectorAll('.resource-input'));
-            const rows = document.getElementById('aidRows');
-            const resultBox = document.getElementById('resultBox');
-            const tableBody = document.getElementById('yearTableBody');
-            let copyText = '';
-
-            const outputs = {
-                yearOneCost: document.getElementById('yearOneCost'),
-                yearOneAid: document.getElementById('yearOneAid'),
-                yearOneNet: document.getElementById('yearOneNet'),
-                yearOneGap: document.getElementById('yearOneGap'),
-                coveragePercent: document.getElementById('coveragePercent'),
-                projectedNet: document.getElementById('projectedNet'),
-                projectedLoans: document.getElementById('projectedLoans'),
-                projectedGap: document.getElementById('projectedGap')
-            };
-
-            function money(value) {
-                return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Math.round(value));
-            }
-            function value(input) {
-                const n = Number.parseFloat(input.value);
-                return Number.isFinite(n) ? n : 0;
-            }
-            function clearError(input) {
-                input.removeAttribute('aria-invalid');
-                const e = input.parentElement.querySelector('.field-error');
-                if (e) e.remove();
-            }
-            function error(input, message) {
-                input.setAttribute('aria-invalid', 'true');
-                let e = input.parentElement.querySelector('.field-error');
-                if (!e) { e = document.createElement('span'); e.className = 'field-error'; input.parentElement.appendChild(e); }
-                e.textContent = message;
-            }
-            function bindRow(row) {
-                row.querySelector('.calc-remove').addEventListener('click', function () {
-                    if (rows.children.length > 1) row.remove();
-                    resultBox.classList.remove('visible');
-                });
-                row.querySelectorAll('input,select').forEach(function (input) {
-                    input.addEventListener('input', function () { clearError(input); resultBox.classList.remove('visible'); });
-                    input.addEventListener('change', function () { clearError(input); resultBox.classList.remove('visible'); });
-                });
-            }
-            rows.querySelectorAll('.aid-row').forEach(bindRow);
-
-            document.getElementById('addAid').addEventListener('click', function () {
-                const row = document.createElement('div');
-                row.className = 'aid-row';
-                row.innerHTML = '<input class="calc-input aid-name" type="text" placeholder="Award name" aria-label="Award name"><select class="calc-input aid-type" aria-label="Award type"><option>Scholarship</option><option>Grant</option><option>Tuition waiver</option><option>Employer benefit</option><option>Other gift aid</option></select><input class="calc-input aid-amount" type="number" min="0" step="100" value="0" aria-label="Annual award amount"><select class="calc-input aid-years" aria-label="Renewable years"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option></select><button class="calc-remove" type="button" aria-label="Remove award">×</button>';
-                rows.appendChild(row);
-                bindRow(row);
-                row.querySelector('.aid-name').focus();
-            });
-
-            [...costInputs, ...resourceInputs, increaseInput, yearsInput].forEach(function (input) {
-                input.addEventListener('input', function () { clearError(input); resultBox.classList.remove('visible'); });
-                input.addEventListener('change', function () { clearError(input); resultBox.classList.remove('visible'); });
-            });
-
-            document.getElementById('calculateButton').addEventListener('click', function () {
-                let valid = true;
-                let firstInvalid = null;
-                const years = Number.parseInt(yearsInput.value, 10);
-                const increase = value(increaseInput);
-
-                if (increase < 0 || increase > 20) { error(increaseInput, 'Enter an annual increase from 0% to 20%.'); valid = false; firstInvalid = increaseInput; }
-                costInputs.forEach(function (input) { clearError(input); if (value(input) < 0) { error(input, 'Enter 0 or more.'); valid = false; firstInvalid = firstInvalid || input; } });
-                resourceInputs.forEach(function (input) { clearError(input); if (value(input) < 0) { error(input, 'Enter 0 or more.'); valid = false; firstInvalid = firstInvalid || input; } });
-
-                const awards = [];
-                rows.querySelectorAll('.aid-row').forEach(function (row) {
-                    const nameInput = row.querySelector('.aid-name');
-                    const amountInput = row.querySelector('.aid-amount');
-                    clearError(nameInput); clearError(amountInput);
-                    const amount = value(amountInput);
-                    const name = nameInput.value.trim();
-                    if (amount < 0) { error(amountInput, 'Enter 0 or more.'); valid = false; firstInvalid = firstInvalid || amountInput; }
-                    if (amount > 0 && !name) { error(nameInput, 'Enter an award name.'); valid = false; firstInvalid = firstInvalid || nameInput; }
-                    if (amount > 0) awards.push({ name: name, amount: amount, years: Number.parseInt(row.querySelector('.aid-years').value, 10) });
-                });
-
-                const annualCost = costInputs.reduce(function (sum, input) { return sum + value(input); }, 0);
-                if (annualCost <= 0) { error(costInputs[0], 'Enter at least one college cost.'); valid = false; firstInvalid = firstInvalid || costInputs[0]; }
-                if (!valid) { firstInvalid.focus(); return; }
-
-                const family = value(document.getElementById('familyContribution'));
-                const work = value(document.getElementById('workStudy'));
-                const loans = value(document.getElementById('acceptedLoans'));
-                const projections = [];
-                let totalNet = 0, totalLoans = 0, totalGap = 0, excess = 0;
-
-                for (let year = 1; year <= years; year += 1) {
-                    const cost = annualCost * Math.pow(1 + increase / 100, year - 1);
-                    const aid = awards.reduce(function (sum, award) { return sum + (year <= award.years ? award.amount : 0); }, 0);
-                    const net = Math.max(0, cost - aid);
-                    const actualLoans = Math.min(loans, Math.max(0, net - family - work));
-                    const gap = Math.max(0, net - family - work - loans);
-                    projections.push({ year: year, cost: cost, aid: aid, net: net, family: family, work: work, loans: loans, gap: gap });
-                    totalNet += net; totalLoans += actualLoans; totalGap += gap; excess += Math.max(0, aid - cost);
-                }
-
-                const first = projections[0];
-                outputs.yearOneCost.textContent = money(first.cost);
-                outputs.yearOneAid.textContent = money(first.aid);
-                outputs.yearOneNet.textContent = money(first.net);
-                outputs.yearOneGap.textContent = money(first.gap);
-                outputs.coveragePercent.textContent = Math.min(100, first.aid / first.cost * 100).toFixed(1) + '%';
-                outputs.projectedNet.textContent = money(totalNet);
-                outputs.projectedLoans.textContent = money(totalLoans);
-                outputs.projectedGap.textContent = money(totalGap);
-                document.getElementById('resultDescription').textContent = years + '-year projection using a ' + increase.toFixed(1) + '% annual cost increase.';
-
-                tableBody.innerHTML = '';
-                projections.forEach(function (p) {
-                    const tr = document.createElement('tr');
-                    ['Year ' + p.year, money(p.cost), money(p.aid), money(p.net), money(p.family), money(p.work), money(p.loans), money(p.gap)].forEach(function (v) { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
-                    tableBody.appendChild(tr);
-                });
-
-                const alerts = [];
-                const ending = awards.filter(function (a) { return a.years < years; });
-                if (ending.length) alerts.push('Some awards end early: ' + ending.map(function (a) { return a.name + ' after year ' + a.years; }).join(', ') + '.');
-                if (excess > 0) alerts.push('Gift aid exceeds estimated cost in at least one year; actual treatment depends on school and award rules.');
-                if (loans > 0) alerts.push('Loans reduce the immediate gap but do not reduce net price and must be repaid.');
-                if (work > 0) alerts.push('Work-study is earned through employment and may not be available before charges are due.');
-                document.getElementById('resultAlert').textContent = alerts.join(' ') || 'Review the result against the school’s official aid offer and net price calculator.';
-                copyText = [
-                    'SCHOLARSHIP CALCULATOR RESULTS',
-                    'Year 1 cost: ' + money(first.cost),
-                    'Year 1 gift aid: ' + money(first.aid),
-                    'Year 1 net price: ' + money(first.net),
-                    'Year 1 funding gap: ' + money(first.gap),
-                    'Projected net price: ' + money(totalNet),
-                    'Projected loans: ' + money(totalLoans),
-                    'Projected gap: ' + money(totalGap)
-                ].join(String.fromCharCode(10));
-                resultBox.classList.add('visible');
-                resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                if (typeof gtag === 'function') gtag('event', 'calculator_used', { tool: 'scholarship_calculator' });
-            });
-
-            document.getElementById('copyResults').addEventListener('click', async function () {
-                try { await navigator.clipboard.writeText(copyText || 'Calculate results first.'); }
-                catch (error) { const temp = document.createElement('textarea'); temp.value = copyText; document.body.appendChild(temp); temp.select(); document.execCommand('copy'); temp.remove(); }
-            });
-            document.getElementById('printResults').addEventListener('click', function () { window.print(); });
-            document.getElementById('resetCalculator').addEventListener('click', function () { window.location.reload(); });
-        }());
-    </script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/scholarship-calculator.js"></script>
 </body>
 </html>
