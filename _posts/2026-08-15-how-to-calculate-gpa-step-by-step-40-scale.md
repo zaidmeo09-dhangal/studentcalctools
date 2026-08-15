@@ -3,22 +3,32 @@ layout: post
 title: "How to Calculate GPA: Step-by-Step (4.0 Scale)"
 slug: how-to-calculate-gpa
 date: 2026-08-15
-status: Draft
+status: Published
 author: StudentCalcTools
 category: GPA Guide
+tags:
+  - calculate gpa
+  - gpa formula
 primary_keyword: how to calculate gpa
+secondary_keywords:
+  - calculate gpa
+  - gpa formula
+  - how to figure out gpa
 meta_title: "How to Calculate GPA: Step-by-Step (4.0 Scale)"
 meta_description: Learn how to calculate GPA with the exact formula, the 4.0
   grade scale, and a fully worked five-course example, including weighted and
   cumulative GPA.
 excerpt: Learn how to calculate GPA with the exact formula, the 4.0 grade scale,
   and a fully worked five-course example, including weighted and cumulative GPA.
+featured_image: /assets/images/how-to-calculate-gpa-step-by-step-40-scale.webp
 image_alt: GPA grade point scale and worked calculation example on the 4.0 scale.
 read_time: 5 min read
 ---
 **GPA is calculated by converting each course grade into grade points, multiplying those points by the course's credit hours to get quality points, adding up the quality points across all your courses, then dividing by your total credit hours.** The formula is GPA = Total Quality Points ÷ Total Credits. If every course carries the same number of credits, this simplifies to a plain average of your grade points, but as soon as credit hours differ between courses, the credit-weighting is what makes the number accurate.
 
-To skip the manual math once you know the method, the [++GPA calculator++](https://claude.ai/gpa-calculator/) handles a single semester instantly, and the [++CGPA calculator++](https://claude.ai/cgpa-calculator/) combines multiple semesters into one cumulative figure.
+To skip the manual math once you know the method, the [GPA calculator](https://studentcalctools.com/gpa-calculator/) handles a single semester instantly, and the [CGPA calculator](https://studentcalctools.com/cgpa-calculator/) combines multiple semesters into one cumulative figure.
+
+
 
 ## **What GPA Actually Measures**
 
@@ -31,9 +41,8 @@ Your Grade Point Average condenses every grade on your transcript into one numbe
 Each letter grade converts to a grade point value on the standard 4.0 scale:
 
 
-|  |  |  |  |
-| ---------------- | ---------------- | -------------------- | ------------- |
-| **Letter Grade** | **Grade Points** | **Percentage Range** | **Standing** |
+| Letter Grade | Grade Points | Percentage Range | Standing |
+| ------------ | ------------ | ---------------- | ------------- |
 | A | 4.0 | 93% to 100% | Excellent |
 | A- | 3.7 | 90% to 92% | Excellent |
 | B+ | 3.3 | 87% to 89% | Good |
@@ -59,7 +68,7 @@ Where a quality point is calculated per course as:
 
 **Quality Points = Grade Points × Credit Hours**
 
-This two-step formula, credit-weighting each grade before averaging, is the standard method used by university registrars nationwide, not just an informal shortcut. Portland State University's Office of the Registrar describes the exact same process: multiply the point value of the letter grade by the number of credit hours to get quality points, total the credit hours and quality points separately, then divide total quality points by total credit hours to get the GPA (Portland State University, [++Calculating Grade Point Average++](https://www.pdx.edu/registration/calculating-grade-point-average)).
+This two-step formula, credit-weighting each grade before averaging, is the standard method used by university registrars nationwide, not just an informal shortcut. Portland State University's Office of the Registrar describes the exact same process: multiply the point value of the letter grade by the number of credit hours to get quality points, total the credit hours and quality points separately, then divide total quality points by total credit hours to get the GPA (Portland State University, [Calculating Grade Point Average](https://www.pdx.edu/registration/calculating-grade-point-average)).
 
 
 
@@ -71,16 +80,13 @@ This two-step formula, credit-weighting each grade before averaging, is the stan
 4. **Add up the credit hours across every course** in the term.
 5. **Divide total quality points by total credit hours.** The result is your GPA.
 
-
-
 ## **A Fully Worked Example: Five Courses**
 
 Most guides walk through three courses. Here's a fuller example with five, since a real semester schedule rarely has just three classes.
 
 
-|  |  |  |  |  |
-| ------------- | --------- | ---------------- | ----------- | ------------------ |
-| **Course** | **Grade** | **Grade Points** | **Credits** | **Quality Points** |
+| Course | Grade | Grade Points | Credits | Quality Points |
+| ------------- | ----- | ------------ | ------- | -------------- |
 | English | A | 4.0 | 3 | 12.0 |
 | Biology | B+ | 3.3 | 4 | 13.2 |
 | Algebra II | A- | 3.7 | 3 | 11.1 |
@@ -106,11 +112,9 @@ A course's credit hours represent how much instructional weight it carries, and 
 
 ## **What Doesn't Count Toward GPA**
 
-Not every course on a transcript factors into the calculation. Many schools exclude Pass/Fail, Audit, Withdraw, Withdraw-Passing, Withdraw-Failing, Incomplete, and Satisfactory/Unsatisfactory grades from the GPA formula entirely, meaning those courses may still count toward credits earned or degree progress without ever touching the quality-points calculation. Georgia Tech's registrar policy is a clear public example: a course taken pass/fail contributes zero quality points and isn't part of the GPA math at all, even though the student still earns the credit (Georgia Institute of Technology, [++Office of the Registrar: Grading System++](https://registrar.gatech.edu/node/138)).
+Not every course on a transcript factors into the calculation. Many schools exclude Pass/Fail, Audit, Withdraw, Withdraw-Passing, Withdraw-Failing, Incomplete, and Satisfactory/Unsatisfactory grades from the GPA formula entirely, meaning those courses may still count toward credits earned or degree progress without ever touching the quality-points calculation. Georgia Tech's registrar policy is a clear public example: a course taken pass/fail contributes zero quality points and isn't part of the GPA math at all, even though the student still earns the credit (Georgia Institute of Technology, [Office of the Registrar: Grading System](https://registrar.gatech.edu/node/138)).
 
-
-
-Two more cases worth knowing:
+**Two more cases worth knowing:**
 
 - **Repeated courses.** Retaking a class doesn't always replace the old grade in your GPA math. Georgia Tech's policy, again a useful public example, states that if a student repeats a course, the later grade does not replace the earlier one; both attempts are included in the GPA calculation unless a specific grade-substitution policy applies (Georgia Institute of Technology, Office of the Registrar). Some schools do offer grade replacement or grade forgiveness policies, but it's never automatic, always confirm with your registrar rather than assuming a retake simply overwrites the old grade.
 - **Transfer credits.** Credits transferred in from another school typically count toward your degree requirements and total credits earned, but the grades attached to them usually do not factor into your GPA at your new school. Your GPA effectively starts fresh with your first term at the new institution, even though the transfer credits still move you toward graduation.
@@ -139,7 +143,7 @@ Using the five-course example above (49.9 quality points across 15 credits) adde
 
 New Cumulative GPA = ((3.50 × 30) + 49.9) ÷ (30 + 15) = (105 + 49.9) ÷ 45 = 154.9 ÷ 45 = **3.44**.
 
-Our [++cumulative GPA calculator++](https://claude.ai/cgpa-calculator/) runs this same roll-forward calculation automatically once you enter your prior GPA and credits alongside your new semester's courses.
+Our [cumulative GPA calculator](https://studentcalctools.com/cgpa-calculator/) runs this same roll-forward calculation automatically once you enter your prior GPA and credits alongside your new semester's courses.
 
 
 
@@ -166,7 +170,7 @@ If you'd rather not track quality points and credit hours by hand every term, th
 
 ## **Frequently Asked Questions**
 
-### **How is GPA calculated?** 
+### **How is GPA calculated?**
 
 GPA is calculated by converting each grade to a grade point value, multiplying by that course's credit hours to get quality points, adding the quality points across all courses, then dividing by total credit hours. Formula: GPA = Total Quality Points ÷ Total Credits.
 
@@ -174,22 +178,22 @@ GPA is calculated by converting each grade to a grade point value, multiplying b
 
 The 4.0 scale converts letter grades into numeric grade points, with A equal to 4.0 and F equal to 0.0, with intermediate values for grades like B+ (3.3) and C- (1.7). Schools can vary slightly on the exact scale used.
 
-### **How do credits affect GPA?** 
+### **How do credits affect GPA?**
 
 Credits determine how much weight each course carries in the calculation. A course with more credit hours has a larger effect on your GPA than a course with fewer credit hours, since the formula multiplies grade points by credits before averaging.
 
-### **Is GPA the same as cumulative GPA?** 
+### **Is GPA the same as cumulative GPA?**
 
 No. GPA usually refers to a single term, while cumulative GPA (CGPA) combines every term using pooled quality points and credit hours, not an average of the term GPAs themselves.
 
-### **Do Pass/Fail classes affect my GPA?** 
+### **Do Pass/Fail classes affect my GPA?**
 
 Usually not. Most schools exclude Pass/Fail, Audit, Withdrawn, and Incomplete grades from the GPA formula entirely, though those courses may still count toward total credits earned.
 
-### **What's the difference between weighted and unweighted GPA?** 
+### **What's the difference between weighted and unweighted GPA?**
 
 Unweighted GPA uses the standard 4.0 scale for every course. Weighted GPA adds extra points for more rigorous courses like AP or IB, crediting the added difficulty, using the same formula with different grade-point values.
 
-### **Can I calculate my GPA without knowing my credit hours?** 
+### **Can I calculate my GPA without knowing my credit hours?**
 
-Not accurately. If you don't know a course's credit hours, check your school's course catalog or registrar rather than guessing, since credit-weighting is central to the formula and an incorrect credit value will skew the result. For a faster way to check your work once you have the right numbers, [++StudentCalcTools++](https://studentcalctools.com/) offers both a GPA calculator and a CGPA calculator built around this exact formula.
+Not accurately. If you don't know a course's credit hours, check your school's course catalog or registrar rather than guessing, since credit-weighting is central to the formula and an incorrect credit value will skew the result. For a faster way to check your work once you have the right numbers, [StudentCalcTools](https://studentcalctools.com/) offers both a GPA calculator and a CGPA calculator built around this exact formula.
