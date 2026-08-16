@@ -3,7 +3,7 @@ layout: post
 title: "GPA Calculator From Percentage: Convert Percentage Grades to GPA"
 slug: gpa-calculator-from-percentage
 date: 2026-08-16
-status: Draft
+status: Published
 author: StudentCalcTools
 category: GPA Guide
 tags:
@@ -37,9 +37,8 @@ A lot of US schools, and most schools outside the US, report grades as percentag
 This is the standard scale, the same one used on our GPA calculator:
 
 
-|  |  |  |
-| -------------- | ---------------- | ---------------- |
-| **Percentage** | **Letter Grade** | **Grade Points** |
+| Percentage | Letter Grade | Grade Points |
+| ----------- | ------------ | ------------ |
 | 93% to 100% | A | 4.0 |
 | 90% to 92% | A- | 3.7 |
 | 87% to 89% | B+ | 3.3 |
@@ -68,9 +67,8 @@ Here's why the two methods diverge: the divide-by-25 formula assumes GPA scales 
 ## **A Fully Worked Example: Three Courses**
 
 
-|  |  |  |  |  |  |
-| ---------- | -------------- | ---------------- | ---------------- | ----------- | ------------------ |
-| **Course** | **Percentage** | **Letter Grade** | **Grade Points** | **Credits** | **Quality Points** |
+| Course | Percentage | Letter Grade | Grade Points | Credits | Quality Points |
+| ---------- | ---------- | ------------ | ------------ | ------- | -------------- |
 | Biology | 91% | A- | 3.7 | 4 | 14.8 |
 | English | 78% | C+ | 2.3 | 3 | 6.9 |
 | Algebra II | 95% | A | 4.0 | 3 | 12.0 |
@@ -116,15 +114,15 @@ Not every percentage-to-GPA question is about the standard US 4.0 scale. Several
 
 Convert your percentage to a letter grade first using your school's grading bands, then use that letter grade's fixed GPA value on the 4.0 scale. Avoid dividing percentage by 25 directly, since that skips the letter-grade step US schools actually use.
 
-### **What if my school's scale is different?** 
+### **What if my school's scale is different?**
 
 Use your school's own published percentage bands instead of the standard table. The method is the same either way: find your letter grade first, then convert that letter to its GPA value.
 
-### **Is 90% always an A-?** 
+### **Is 90% always an A-?**
 
 Not always. On the most common US scale, yes, 90% to 92% is A- (3.7). But some schools use different cutoffs or a simplified scale without plus/minus grades, where 90% might fall into a flat A band instead. Always check your own school's scale before treating a conversion as official.
 
-### **Is the divide-by-25 shortcut ever accurate?** 
+### **Is the divide-by-25 shortcut ever accurate?**
 
 It can land close to the correct answer for grades right in the middle of a band, but it consistently diverges near band edges and whenever credit hours differ between courses, since it doesn't account for credit-weighting at all. For an exact result, convert through letter grades first.
 
@@ -132,14 +130,14 @@ It can land close to the correct answer for grades right in the middle of a band
 
 Yes. Convert each course's percentage to a letter grade and grade point individually, then combine them using the credit-weighted GPA formula covered in [how to calculate your GPA](https://studentcalctools.com/blog/how-to-calculate-gpa/), rather than averaging the raw percentages first.
 
-### **Can I convert my GPA back to an exact percentage?** 
+### **Can I convert my GPA back to an exact percentage?**
 
 Not precisely. Since the letter-band method groups a range of percentages into one grade point, a GPA of 3.0 could represent anywhere from 83% to 86%. Your original transcript or gradebook is the only fully accurate source for the exact percentage.
 
-### **What if my percentage is from a 10-point or international scale?** 
+### **What if my percentage is from a 10-point or international scale?**
 
 Systems like India's 10-point CGPA scale use different conversion formulas entirely, not the US letter-grade-band method this guide covers. If you're converting for a US college application, check with that school's admissions office, since many recalculate incoming grades using their own formula.
 
-### **Can I skip the table and just use a calculator?** 
+### **Can I skip the table and just use a calculator?**
 
 Yes, once you understand which method is accurate. StudentCalcTools's GPA calculator applies the letter-band method automatically, so you can enter percentages directly without doing the lookup by hand.
