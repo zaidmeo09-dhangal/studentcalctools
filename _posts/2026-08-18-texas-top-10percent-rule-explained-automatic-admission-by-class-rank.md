@@ -45,9 +45,8 @@ In response, the legislature passed Senate Bill 175 in 2009, giving UT Austin, a
 That cutoff has tightened over time as demand for UT Austin has grown:
 
 
-|  |  |
+| Period | UT Austin Automatic Admission Cutoff |
 | ------------------------------------ | ------------------------------------------ |
-| **Period** | **UT Austin Automatic Admission Cutoff** |
 | 1997 to 2009 | Top 10% (uncapped, same as statewide rule) |
 | Multiple years through Spring 2026 | Top 6% |
 | Summer/Fall 2026 through Spring 2028 | **Top 5%** |
