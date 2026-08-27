@@ -61,6 +61,8 @@ This means entering 1 credit for every course, entering 3 credits for every cour
 3. **Enter the same credit value for every course.** The specific number doesn't matter, 1 is simplest, since it cancels out of the calculation either way.
 4. **Calculate.** The result is your equally-weighted GPA, mathematically identical to a plain average of your grade points.
 
+
+
 ## **A Fully Worked Example: Five Courses, No Credits Given**
 
 
