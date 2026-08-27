@@ -2,7 +2,7 @@
 layout: post
 title: "GPA Calculator Without Credits: How to Get an Equal-Weighted GPA"
 slug: gpa-calculator-without-credits
-date: 2026-08-28
+date: 2026-08-27
 status: Published
 author: StudentCalcTools
 category: GPA Guide
