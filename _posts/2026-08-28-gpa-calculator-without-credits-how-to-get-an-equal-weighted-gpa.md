@@ -61,14 +61,11 @@ This means entering 1 credit for every course, entering 3 credits for every cour
 3. **Enter the same credit value for every course.** The specific number doesn't matter, 1 is simplest, since it cancels out of the calculation either way.
 4. **Calculate.** The result is your equally-weighted GPA, mathematically identical to a plain average of your grade points.
 
-
-
 ## **A Fully Worked Example: Five Courses, No Credits Given**
 
 
-|  |  |  |
-| ------------- | --------- | ---------------- |
-| **Course** | **Grade** | **Grade Points** |
+| Course | Grade | Grade Points |
+| ------------- | ----- | ------------ |
 | English | A | 4.0 |
 | Biology | B+ | 3.3 |
 | Algebra II | A- | 3.7 |
@@ -112,15 +109,15 @@ Everything above covers one term or one group of courses. If you want to combine
 
 ## **Frequently Asked Questions**
 
-### **Can I calculate GPA without credit hours?** 
+### **Can I calculate GPA without credit hours?**
 
 Yes. Enter the same credit value, such as 1, for every course in a standard GPA calculator. This produces an equally-weighted average using the same underlying formula, without needing a separate tool.
 
-### **What number do I enter if my school has no credits?** 
+### **What number do I enter if my school has no credits?**
 
 Any consistent number works, since it cancels out of the calculation, but 1 is the simplest choice and the one most calculators, including ours, recommend by default.
 
-### **Is this the same as a simple average?** 
+### **Is this the same as a simple average?**
 
 Yes. Assigning every course the same credit value and running it through the standard credit-weighted formula produces a result that's mathematically identical to a plain average of your grade points.
 
@@ -128,18 +125,18 @@ Yes. Assigning every course the same credit value and running it through the sta
 
 Only if your school genuinely assigns equal credit to every course. If your school's actual records use different credit values per course, or exclude certain grades from GPA entirely, your calculated number may not match exactly.
 
-### **Do electives and PE count in a no-credits GPA?** 
+### **Do electives and PE count in a no-credits GPA?**
 
 Generally yes, if they appear as graded courses on your transcript alongside your other classes, unless your school's specific policy excludes them.
 
-### **Do zero-credit courses count toward my GPA?** 
+### **Do zero-credit courses count toward my GPA?**
 
 No, not in a standard credit-weighted calculation. A course assigned 0 credit hours contributes nothing to the formula, since any grade multiplied by zero equals zero, even though the course still shows a letter grade on the transcript.
 
-### **Is "without credits" the same as "unweighted"?** 
+### **Is "without credits" the same as "unweighted"?**
 
 No, they answer different questions. Without credits means every course counts as one equal unit regardless of workload. Unweighted means no bonus points are added for AP or IB course difficulty. A calculation can be both at once, but they aren't interchangeable terms.
 
-### **Why not just use a dedicated "simple average" GPA calculator instead?** 
+### **Why not just use a dedicated "simple average" GPA calculator instead?**
 
 You can, and the result will be the same, but you don't need a separate tool. The standard credit-weighted formula already produces an equal-weighted average once every course shares the same credit value, so one calculator handles both cases.
