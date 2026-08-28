@@ -30,6 +30,8 @@
     {% assign seo_title = page.meta_title | default: page.title %}
     {% assign seo_description = page.meta_description | default: page.excerpt | strip_html | strip_newlines %}
     {% assign modified_date = page.last_modified_at | default: page.last_modified | default: page.date %}
+        {% capture newline %}
+{% endcapture %}
 
     <title>{{ seo_title }}</title>
 
@@ -269,7 +271,7 @@
         {% for block in faq_blocks %}
           {% assign block = block | strip %}
           {% if block != "" %}
-            {% assign lines = block | split: "\n" %}
+            {% assign lines = block | split: newline %}
             {% assign question = lines[0] | strip %}
             {% assign answer_lines = lines | slice: 1, 999 %}
             {% assign answer = answer_lines | join: "\n" | strip %}
@@ -445,7 +447,7 @@
                     {% for block in faq_blocks %}
                       {% assign block = block | strip %}
                       {% if block != "" %}
-                        {% assign lines = block | split: "\n" %}
+                        {% assign lines = block | split: newline %}
                         {% assign question = lines[0] | strip %}
                         {% assign answer_lines = lines | slice: 1, 999 %}
                         {% assign answer = answer_lines | join: "\n" | strip %}
