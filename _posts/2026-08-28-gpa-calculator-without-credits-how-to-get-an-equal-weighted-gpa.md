@@ -30,7 +30,6 @@ faqs_raw: >-
   GPA calculator. This produces an equally-weighted average using the same
   underlying formula, without needing a separate tool.
 
-  ---
 
   What number do I enter if my school has no credits?
 
