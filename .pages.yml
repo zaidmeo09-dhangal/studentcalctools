@@ -98,22 +98,10 @@ content:
         label: Read Time
         type: string
         default: 5 min read
-      - name: faqs
-        label: FAQs
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{question}"
-        fields:
-          - name: question
-            label: Question
-            type: string
-            required: true
-          - name: answer
-            label: Answer
-            type: text
-            required: true
+      - name: faqs_raw
+        label: "FAQs (paste all at once)"
+        type: text
+        description: "Question on its own line, then the answer, then a line with just --- before the next question. See example below the field."
       - name: body
         label: Blog Content
         type: rich-text
