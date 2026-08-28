@@ -259,21 +259,29 @@
     }
     </script>
 
-    {% if page.faqs and page.faqs.size > 0 %}
+        {% if page.faqs_raw and page.faqs_raw != "" %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {% for faq in page.faqs %}
-        {
-          "@type": "Question",
-          "name": {{ faq.question | jsonify }},
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ faq.answer | strip_html | jsonify }}
-          }
-        }{% unless forloop.last %},{% endunless %}
+        {% assign faq_blocks = page.faqs_raw | split: "---" %}
+        {% for block in faq_blocks %}
+          {% assign block = block | strip %}
+          {% if block != "" %}
+            {% assign lines = block | split: "\n" %}
+            {% assign question = lines[0] | strip %}
+            {% assign answer_lines = lines | slice: 1, 999 %}
+            {% assign answer = answer_lines | join: "\n" | strip %}
+            {
+              "@type": "Question",
+              "name": {{ question | jsonify }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ answer | jsonify }}
+              }
+            }{% unless forloop.last %},{% endunless %}
+          {% endif %}
         {% endfor %}
       ]
     }
@@ -423,7 +431,7 @@
                     {{ content }}
                 </div>
 
-                {% if page.faqs and page.faqs.size > 0 %}
+                                {% if page.faqs_raw and page.faqs_raw != "" %}
 
                 <section
                     class="post-faq"
@@ -433,26 +441,33 @@
                         Frequently Asked Questions
                     </h2>
 
-                    {% for faq in page.faqs %}
+                    {% assign faq_blocks = page.faqs_raw | split: "---" %}
+                    {% for block in faq_blocks %}
+                      {% assign block = block | strip %}
+                      {% if block != "" %}
+                        {% assign lines = block | split: "\n" %}
+                        {% assign question = lines[0] | strip %}
+                        {% assign answer_lines = lines | slice: 1, 999 %}
+                        {% assign answer = answer_lines | join: "\n" | strip %}
 
                     <article class="post-faq-item">
 
                         <h3>
-                            {{ faq.question }}
+                            {{ question }}
                         </h3>
 
                         <p>
-                            {{ faq.answer }}
+                            {{ answer | newline_to_br }}
                         </p>
 
                     </article>
 
+                      {% endif %}
                     {% endfor %}
 
                 </section>
 
                 {% endif %}
-
             </article>
 
         </section>
