@@ -26,6 +26,7 @@ read_time: 5 min read
 faqs_raw: >-
   Can I calculate GPA without credit hours?
 
+
   Yes. Enter the same credit value, such as 1, for every course in a standard
   GPA calculator. This produces an equally-weighted average using the same
   underlying formula, without needing a separate tool.
@@ -33,6 +34,7 @@ faqs_raw: >-
   ---
 
   What number do I enter if my school has no credits?
+
 
   Any consistent number works, since it cancels out of the calculation, but 1 is
   the simplest choice and the one most calculators, including ours, recommend by
@@ -42,6 +44,7 @@ faqs_raw: >-
 
   Is this the same as a simple average?
 
+
   Yes. Assigning every course the same credit value and running it through the
   standard credit-weighted formula produces a result that's mathematically
   identical to a plain average of your grade points.
@@ -49,6 +52,7 @@ faqs_raw: >-
   ---
 
   Will my no-credits GPA match my official transcript GPA?
+
 
   Only if your school genuinely assigns equal credit to every course. If your
   school's official records use different credit values per course, or include
@@ -59,12 +63,14 @@ faqs_raw: >-
 
   Do electives and PE count toward my GPA?
 
+
   Generally yes, if they appear as graded courses on your transcript alongside
   your other classes, unless your school's specific policy excludes them.
 
   ---
 
   Do zero-credit courses count toward my GPA?
+
 
   No, not in a standard credit-weighted calculation. A zero-credit course
   contributes nothing to the formula, since any grade multiplied by zero credits
@@ -74,6 +80,7 @@ faqs_raw: >-
 
   Is "without credits" the same as "unweighted"?
 
+
   No, they answer different questions. Without credits means every course counts
   as one equal unit regardless of workload. Unweighted means no bonus points are
   added for AP or IB course difficulty. A calculation can be both at once, but
@@ -82,6 +89,7 @@ faqs_raw: >-
   ---
 
   Why not just use a dedicated "simple average" GPA calculator instead?
+
 
   You can, and the result will be the same, but you don't need a separate tool.
   The standard credit-weighted formula already produces an equal-weighted
