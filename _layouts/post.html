@@ -30,8 +30,7 @@
     {% assign seo_title = page.meta_title | default: page.title %}
     {% assign seo_description = page.meta_description | default: page.excerpt | strip_html | strip_newlines %}
     {% assign modified_date = page.last_modified_at | default: page.last_modified | default: page.date %}
-        {% capture newline %}
-{% endcapture %}
+        
 
     <title>{{ seo_title }}</title>
 
@@ -267,15 +266,13 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {% assign faq_blocks = page.faqs_raw | split: "---" %}
-                {% for block in faq_blocks %}
+                {% assign faq_blocks = page.faqs_raw | split: "---" %}
+        {% for block in faq_blocks %}
           {% assign block = block | strip %}
-          {% assign block = block | replace: "\n", newline %}
           {% if block != "" %}
-            {% assign lines = block | split: newline %}
-            {% assign question = lines[0] | strip %}
-            {% assign answer_lines = lines | slice: 1, 999 %}
-            {% assign answer = answer_lines | join: "\n" | strip %}
+            {% assign parts = block | split: "|||" %}
+            {% assign question = parts[0] | strip %}
+            {% assign answer = parts | slice: 1, 999 | join: "|||" | strip %}
             {
               "@type": "Question",
               "name": {{ question | jsonify }},
@@ -444,15 +441,13 @@
                         Frequently Asked Questions
                     </h2>
 
-                    {% assign faq_blocks = page.faqs_raw | split: "---" %}
-                     {% for block in faq_blocks %}
+                                        {% assign faq_blocks = page.faqs_raw | split: "---" %}
+                    {% for block in faq_blocks %}
                       {% assign block = block | strip %}
-                      {% assign block = block | replace: "\n", newline %}
                       {% if block != "" %}
-                        {% assign lines = block | split: newline %}
-                        {% assign question = lines[0] | strip %}
-                        {% assign answer_lines = lines | slice: 1, 999 %}
-                        {% assign answer = answer_lines | join: "\n" | strip %}
+                        {% assign parts = block | split: "|||" %}
+                        {% assign question = parts[0] | strip %}
+                        {% assign answer = parts | slice: 1, 999 | join: "|||" | strip %}
 
                     <article class="post-faq-item">
 
