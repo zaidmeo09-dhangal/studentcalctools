@@ -268,8 +268,9 @@
       "@type": "FAQPage",
       "mainEntity": [
         {% assign faq_blocks = page.faqs_raw | split: "---" %}
-        {% for block in faq_blocks %}
+                {% for block in faq_blocks %}
           {% assign block = block | strip %}
+          {% assign block = block | replace: "\n", newline %}
           {% if block != "" %}
             {% assign lines = block | split: newline %}
             {% assign question = lines[0] | strip %}
@@ -444,8 +445,9 @@
                     </h2>
 
                     {% assign faq_blocks = page.faqs_raw | split: "---" %}
-                    {% for block in faq_blocks %}
+                     {% for block in faq_blocks %}
                       {% assign block = block | strip %}
+                      {% assign block = block | replace: "\n", newline %}
                       {% if block != "" %}
                         {% assign lines = block | split: newline %}
                         {% assign question = lines[0] | strip %}
