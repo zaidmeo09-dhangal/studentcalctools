@@ -12,10 +12,9 @@ secondary_keywords:
   - high school gpa calculator
   - cumulative gpa calculator high school
   - high school gpa calculator without credits
-meta_title: "High School GPA: How to Calculate Weighted and Unweighted GPA"
-meta_description: Learn how high school GPA is calculated, including weighted
-  and unweighted GPA, credits, percentage grades, semester GPA, cumulative GPA,
-  and examples.
+meta_title: "High School GPA Calculator: Weighted vs Unweighted"
+meta_description: Calculate your high school GPA on the 4.0 scale, see how
+  weighted and unweighted differ, and what AP or honors classes add.
 excerpt: Learn how weighted and unweighted GPA works, calculate accurately, and
   improve your academic planning with easy examples.
 featured_image: /assets/images/high-school-gpa-calculator-how-high-school-gpa-works.webp
