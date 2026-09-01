@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What Is a Good Class Rank? Percentile Benchmarks by Class Size
+title: What Is a Good Class Rank? Top 10%, 25% & 50%
 slug: what-is-a-good-class-rank
 date: 2026-08-11
 status: Published
@@ -11,10 +11,9 @@ secondary_keywords:
   - good class rank percentile
   - is my class rank good
   - good class rank for college
-meta_title: What Is a Good Class Rank? Percentile Benchmarks by Class Size
-meta_description: A good class rank depends on your goal and your class size.
-  See size-adjusted benchmarks for selective colleges, scholarships, and honor
-  programs.
+meta_title: What Is a Good Class Rank? Top 10%, 25% & 50%
+meta_description: See what class rank counts as good at your class size, and
+  what selective colleges and scholarship programs usually expect.
 excerpt: A good class rank depends on your goal and your class size. See
   size-adjusted benchmarks for selective colleges, scholarships, and honor
   programs.
