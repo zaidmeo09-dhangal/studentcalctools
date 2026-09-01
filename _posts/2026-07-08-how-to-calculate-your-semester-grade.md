@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Calculate Your Semester Grade
+title: "Semester Grade Calculator: Formula, Steps & Examples"
 slug: semester-grade-calculator
 date: 2026-07-08
 status: Published
@@ -16,10 +16,9 @@ secondary_keywords:
   - semester grade calculator college
   - semester grade calculator with final
   - semester grade calculator without final exam
-meta_title: "How to Calculate Your Semester Grade: Formula and Examples"
-meta_description: Learn how to calculate your semester grade with formulas,
-  examples, weights, finals, and tips to estimate your grade before the term
-  ends.
+meta_title: "Semester Grade Calculator: Formula, Steps & Examples"
+meta_description: Work out your semester grade from quarter grades and exam
+  weight, then find the score you need to hit your target.
 excerpt: Learn how to calculate your semester grade with formulas, examples,
   weights, finals, and tips to estimate your grade before the term ends.
 featured_image: /assets/images/how-to-calculate-your-semester-grade.webp
