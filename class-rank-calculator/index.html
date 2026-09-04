@@ -1334,6 +1334,7 @@
             rankCalcBtn.style.display = 'none';
             rankResultBox.style.display = 'none';
             rankInlineNote.style.display = 'none';
+            gpaResultBox.classList.remove('visible');
             gpaTab.classList.add('crc-tab-active');
             gpaTab.setAttribute('aria-selected', 'true');
             rankTab.classList.remove('crc-tab-active');
@@ -1376,7 +1377,7 @@
                 gpaResultValue.textContent = '--';
                 gpaResultTier.textContent = 'Enter valid numbers';
                 gpaResultExtra.textContent = 'Enter your GPA and your class average GPA to see an estimate.';
-                gpaResultBox.style.display = '';
+                gpaResultBox.classList.add('visible');
                 return;
             }
 
@@ -1398,14 +1399,14 @@
             gpaResultValue.textContent = percentile.toFixed(1) + 'th percentile (est.)';
             gpaResultTier.textContent = tier;
             gpaResultExtra.textContent = 'Estimated top ' + topPercent.toFixed(1) + '% based on a normal-distribution model. This is not your official rank.';
-            gpaResultBox.style.display = '';
+            gpaResultBox.classList.add('visible');
         });
 
         document.getElementById('gpaResetBtn').addEventListener('click', function () {
             document.getElementById('gpaModeYourGpa').value = '';
             document.getElementById('gpaModeAvgGpa').value = '';
             document.getElementById('gpaModeVariation').value = 'typical';
-            gpaResultBox.style.display = 'none';
+            gpaResultBox.classList.remove('visible');
         });
 
         document.getElementById('gpaCopyBtn').addEventListener('click', function () {
