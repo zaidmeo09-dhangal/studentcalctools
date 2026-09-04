@@ -57,6 +57,56 @@
     <link rel="stylesheet" href="/assets/css/class-rank-calculator.css">
     <link rel="stylesheet" href="/assets/css/site.css">
 
+    <style>
+        .crc-quick-answer {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 0 0 22px 0;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #1e3a8a;
+        }
+        .crc-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .crc-tab {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: #fff;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+        .crc-tab-active {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: #fff;
+        }
+        .crc-gpa-note {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 0 0 16px 0;
+            line-height: 1.5;
+        }
+        .crc-inline-note {
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+        .crc-select {
+            width: 100%;
+        }
+    </style>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -211,6 +261,14 @@
                     },
                     {
                         "@type": "Question",
+                        "name": "How are tied ranks handled?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "When two or more students share the exact same GPA, schools usually handle the tie in one of two ways: giving both students the same rank and skipping the next number, or using unrounded GPA decimals to separate them. This calculator does not detect or adjust for ties. Enter the exact rank your school has assigned you, and ask your counselor if you are unsure how ties are handled."
+                        }
+                    },
+                    {
+                        "@type": "Question",
                         "name": "Does class rank still matter for college admissions?",
                         "acceptedAnswer": {
                             "@type": "Answer",
@@ -285,92 +343,231 @@
                     top 25 percent, or another range.
                 </p>
 
-                <div class="field-row">
-
-                    <div class="field-group">
-                        <label class="field-label" for="totalStudents">
-                            Total Students in Class
-                        </label>
-
-                        <input
-                            type="number"
-                            class="calc-input"
-                            id="totalStudents"
-                            placeholder="300"
-                            value="300"
-                            min="1"
-                            step="1">
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label" for="yourRank">
-                            Your Rank
-                        </label>
-
-                        <input
-                            type="number"
-                            class="calc-input"
-                            id="yourRank"
-                            placeholder="25"
-                            value="25"
-                            min="1"
-                            step="1">
-                    </div>
-
+                <div class="crc-quick-answer">
+                    <strong>Quick answer:</strong> enter your rank out of your total class size below.
+                    Example: rank 25 out of 300 = 92nd percentile, which is the top 8.3% of the class.
                 </div>
 
-                <button
-                    type="button"
-                    class="calc-calculate"
-                    id="calculateBtn">
-                    Calculate Percentile
-                </button>
+                <div class="crc-tabs" role="tablist" aria-label="Class rank calculation mode">
+                    <button type="button" class="crc-tab crc-tab-active" id="rankTabBtn" role="tab" aria-selected="true">
+                        I Know My Rank
+                    </button>
+                    <button type="button" class="crc-tab" id="gpaTabBtn" role="tab" aria-selected="false">
+                        Estimate From GPA
+                    </button>
+                </div>
 
-                <div
-                    class="calc-result"
-                    id="calcResult"
-                    role="status"
-                    aria-live="polite">
+                <div class="field-row" id="rankFieldRow">
 
-                    <div class="calc-result-label">
-                        YOUR CLASS RANK PERCENTILE
+                        <div class="field-group">
+                            <label class="field-label" for="totalStudents">
+                                Total Students in Class
+                            </label>
+
+                            <input
+                                type="number"
+                                class="calc-input"
+                                id="totalStudents"
+                                placeholder="300"
+                                value="300"
+                                min="1"
+                                step="1">
+                        </div>
+
+                        <div class="field-group">
+                            <label class="field-label" for="yourRank">
+                                Your Rank
+                            </label>
+
+                            <input
+                                type="number"
+                                class="calc-input"
+                                id="yourRank"
+                                placeholder="25"
+                                value="25"
+                                min="1"
+                                step="1">
+                        </div>
+
                     </div>
+
+                    <button
+                        type="button"
+                        class="calc-calculate"
+                        id="calculateBtn">
+                        Calculate Percentile
+                    </button>
 
                     <div
-                        class="calc-result-value"
-                        id="resultValue">
-                        --
+                        class="calc-result"
+                        id="calcResult"
+                        role="status"
+                        aria-live="polite">
+
+                        <div class="calc-result-label">
+                            YOUR CLASS RANK PERCENTILE
+                        </div>
+
+                        <div
+                            class="calc-result-value"
+                            id="resultValue">
+                            --
+                        </div>
+
+                        <div
+                            class="calc-result-tier"
+                            id="resultTier">
+                            Result
+                        </div>
+
+                        <div
+                            class="calc-result-extra"
+                            id="resultExtra">
+                            Your result shows your class rank percentile and top percentage.
+                        </div>
+
+                        <div class="calc-result-actions">
+
+                            <button
+                                type="button"
+                                class="result-btn"
+                                id="copyBtn">
+                                📋 Copy Result
+                            </button>
+
+                            <button
+                                type="button"
+                                class="result-btn"
+                                id="resetBtn">
+                                🔄 Reset
+                            </button>
+
+                        </div>
+
                     </div>
+
+                    <p class="crc-inline-note" id="rankInlineNote">
+                        This percentile is inclusive of your own position. Some schools use a different
+                        official formula, so confirm anything official with your counselor.
+                    </p>
+
+                <div id="gpaModeFields" style="display:none;">
+
+                    <p class="crc-gpa-note">
+                        Do not know your exact rank yet? Estimate your standing from your GPA compared to
+                        your class average. This uses a statistical estimate, not an official school
+                        calculation, so treat it as a starting point.
+                    </p>
+
+                    <div class="field-row">
+
+                        <div class="field-group">
+                            <label class="field-label" for="gpaModeYourGpa">
+                                Your GPA
+                            </label>
+
+                            <input
+                                type="number"
+                                class="calc-input"
+                                id="gpaModeYourGpa"
+                                placeholder="3.8"
+                                min="0"
+                                step="0.01">
+                        </div>
+
+                        <div class="field-group">
+                            <label class="field-label" for="gpaModeAvgGpa">
+                                Class Average GPA
+                            </label>
+
+                            <input
+                                type="number"
+                                class="calc-input"
+                                id="gpaModeAvgGpa"
+                                placeholder="3.2"
+                                min="0"
+                                step="0.01">
+                        </div>
+
+                    </div>
+
+                    <div class="field-row">
+
+                        <div class="field-group">
+                            <label class="field-label" for="gpaModeVariation">
+                                Class GPA Spread
+                            </label>
+
+                            <select class="calc-input crc-select" id="gpaModeVariation">
+                                <option value="low">Low (most students score similarly)</option>
+                                <option value="typical" selected>Typical</option>
+                                <option value="high">High (wide range of GPAs)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="calc-calculate"
+                        id="gpaEstimateBtn">
+                        Estimate My Percentile
+                    </button>
 
                     <div
-                        class="calc-result-tier"
-                        id="resultTier">
-                        Result
+                        class="calc-result"
+                        id="gpaCalcResult"
+                        role="status"
+                        aria-live="polite"
+                        style="display:none;">
+
+                        <div class="calc-result-label">
+                            ESTIMATED CLASS RANK PERCENTILE
+                        </div>
+
+                        <div
+                            class="calc-result-value"
+                            id="gpaResultValue">
+                            --
+                        </div>
+
+                        <div
+                            class="calc-result-tier"
+                            id="gpaResultTier">
+                            Result
+                        </div>
+
+                        <div
+                            class="calc-result-extra"
+                            id="gpaResultExtra">
+                            Your estimated percentile and top percentage based on your GPA.
+                        </div>
+
+                        <div class="calc-result-actions">
+
+                            <button
+                                type="button"
+                                class="result-btn"
+                                id="gpaCopyBtn">
+                                📋 Copy Result
+                            </button>
+
+                            <button
+                                type="button"
+                                class="result-btn"
+                                id="gpaResetBtn">
+                                🔄 Reset
+                            </button>
+
+                        </div>
+
                     </div>
 
-                    <div
-                        class="calc-result-extra"
-                        id="resultExtra">
-                        Your result shows your class rank percentile and top percentage.
-                    </div>
-
-                    <div class="calc-result-actions">
-
-                        <button
-                            type="button"
-                            class="result-btn"
-                            id="copyBtn">
-                            📋 Copy Result
-                        </button>
-
-                        <button
-                            type="button"
-                            class="result-btn"
-                            id="resetBtn">
-                            🔄 Reset
-                        </button>
-
-                    </div>
+                    <p class="crc-inline-note">
+                        This is a statistical estimate that assumes GPAs are roughly normally distributed.
+                        It is not your official rank. Switch to "I Know My Rank" once your school reports
+                        your exact rank.
+                    </p>
 
                 </div>
 
@@ -1006,6 +1203,26 @@
                 <div class="faq-item">
 
                     <div class="faq-question">
+                        How are tied ranks handled?
+                        <span class="faq-toggle">+</span>
+                    </div>
+
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            When two or more students share the exact same GPA, schools usually handle
+                            the tie in one of two ways: giving both students the same rank and skipping
+                            the next number, or using unrounded GPA decimals to separate them. This
+                            calculator does not detect or adjust for ties. Enter the exact rank your
+                            school has assigned you, and ask your counselor if you are unsure how ties
+                            are handled.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
                         Does class rank still matter for college admissions?
                         <span class="faq-toggle">+</span>
                     </div>
@@ -1088,6 +1305,117 @@
 
     <script src="/assets/js/site.js"></script>
     <script src="/assets/js/class-rank-calculator.js"></script>
+
+    <script>
+    (function () {
+        var rankTab = document.getElementById('rankTabBtn');
+        var gpaTab = document.getElementById('gpaTabBtn');
+        var rankFieldRow = document.getElementById('rankFieldRow');
+        var rankCalcBtn = document.getElementById('calculateBtn');
+        var rankResultBox = document.getElementById('calcResult');
+        var rankInlineNote = document.getElementById('rankInlineNote');
+        var gpaFields = document.getElementById('gpaModeFields');
+
+        function showRankMode() {
+            rankFieldRow.style.display = '';
+            rankCalcBtn.style.display = '';
+            rankResultBox.style.display = '';
+            rankInlineNote.style.display = '';
+            gpaFields.style.display = 'none';
+            rankTab.classList.add('crc-tab-active');
+            rankTab.setAttribute('aria-selected', 'true');
+            gpaTab.classList.remove('crc-tab-active');
+            gpaTab.setAttribute('aria-selected', 'false');
+        }
+
+        function showGpaMode() {
+            gpaFields.style.display = '';
+            rankFieldRow.style.display = 'none';
+            rankCalcBtn.style.display = 'none';
+            rankResultBox.style.display = 'none';
+            rankInlineNote.style.display = 'none';
+            gpaTab.classList.add('crc-tab-active');
+            gpaTab.setAttribute('aria-selected', 'true');
+            rankTab.classList.remove('crc-tab-active');
+            rankTab.setAttribute('aria-selected', 'false');
+        }
+
+        rankTab.addEventListener('click', showRankMode);
+        gpaTab.addEventListener('click', showGpaMode);
+
+        // Abramowitz and Stegun erf approximation (max error ~1.5e-7)
+        function erf(x) {
+            var sign = x >= 0 ? 1 : -1;
+            x = Math.abs(x);
+            var a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741,
+                a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+            var t = 1 / (1 + p * x);
+            var y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+            return sign * y;
+        }
+
+        function normalCDF(z) {
+            return 0.5 * (1 + erf(z / Math.sqrt(2)));
+        }
+
+        var spreadMap = { low: 0.35, typical: 0.55, high: 0.75 };
+
+        var gpaBtn = document.getElementById('gpaEstimateBtn');
+        var gpaResultBox = document.getElementById('gpaCalcResult');
+        var gpaResultValue = document.getElementById('gpaResultValue');
+        var gpaResultTier = document.getElementById('gpaResultTier');
+        var gpaResultExtra = document.getElementById('gpaResultExtra');
+
+        gpaBtn.addEventListener('click', function () {
+            var yourGpa = parseFloat(document.getElementById('gpaModeYourGpa').value);
+            var avgGpa = parseFloat(document.getElementById('gpaModeAvgGpa').value);
+            var spreadKey = document.getElementById('gpaModeVariation').value;
+            var stdDev = spreadMap[spreadKey] || 0.55;
+
+            if (isNaN(yourGpa) || isNaN(avgGpa) || yourGpa < 0 || avgGpa < 0) {
+                gpaResultValue.textContent = '--';
+                gpaResultTier.textContent = 'Enter valid numbers';
+                gpaResultExtra.textContent = 'Enter your GPA and your class average GPA to see an estimate.';
+                gpaResultBox.style.display = '';
+                return;
+            }
+
+            var z = (yourGpa - avgGpa) / stdDev;
+            var percentile = normalCDF(z) * 100;
+            var topPercent = 100 - percentile;
+
+            var tier = 'Estimated standing';
+            if (topPercent <= 10) {
+                tier = 'Estimated top 10%';
+            } else if (topPercent <= 25) {
+                tier = 'Estimated top 25%';
+            } else if (topPercent <= 50) {
+                tier = 'Estimated top 50%';
+            } else {
+                tier = 'Below estimated top 50%';
+            }
+
+            gpaResultValue.textContent = percentile.toFixed(1) + 'th percentile (est.)';
+            gpaResultTier.textContent = tier;
+            gpaResultExtra.textContent = 'Estimated top ' + topPercent.toFixed(1) + '% based on a normal-distribution model. This is not your official rank.';
+            gpaResultBox.style.display = '';
+        });
+
+        document.getElementById('gpaResetBtn').addEventListener('click', function () {
+            document.getElementById('gpaModeYourGpa').value = '';
+            document.getElementById('gpaModeAvgGpa').value = '';
+            document.getElementById('gpaModeVariation').value = 'typical';
+            gpaResultBox.style.display = 'none';
+        });
+
+        document.getElementById('gpaCopyBtn').addEventListener('click', function () {
+            var text = gpaResultValue.textContent + ' - ' + gpaResultTier.textContent;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text);
+            }
+        });
+    })();
+    </script>
 
 </body>
 </html>
