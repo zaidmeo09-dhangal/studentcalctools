@@ -170,3 +170,47 @@ faqQuestions.forEach(function (question) {
         currentYear.textContent = String(new Date().getFullYear());
     }
 }());
+
+// Dynamic Table of Contents Generator & Smooth Scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const tocList = document.getElementById("dynamic-toc");
+  const articleContent = document.querySelector(".post-content");
+
+  if (tocList && articleContent) {
+    const headings = articleContent.querySelectorAll("h2, h3");
+
+    headings.forEach((heading, index) => {
+      // Heading ID check karo ya new assign karo
+      if (!heading.id) {
+        heading.id = "toc-heading-" + index;
+      }
+
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+
+      a.href = "#" + heading.id;
+      a.innerHTML = `<span class="toc-bullet"></span>${heading.textContent}`;
+
+      // Level based styling (H3 ko slightly indent karne ke liye)
+      if (heading.tagName.toLowerCase() === "h3") {
+        li.classList.add("toc-subitem");
+      }
+
+      // Smooth Scroll click handler
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetElement = document.getElementById(heading.id);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+          history.pushState(null, null, "#" + heading.id);
+        }
+      });
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+  }
+});
