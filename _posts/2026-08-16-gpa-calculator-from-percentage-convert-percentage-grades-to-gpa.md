@@ -23,6 +23,73 @@ excerpt: "Convert percentage grades to GPA the way US schools actually do it:
 featured_image: /assets/images/gpa-calculator-from-percentage-convert-percentage-grades-to-gpa.webp
 image_alt: Percentage to GPA conversion table and letter grade bands
 read_time: 5 min read
+faqs_raw: >-
+  How do I convert percentage to GPA?
+
+  Convert your percentage to a letter grade first using your school’s grading
+  bands, then use that letter grade’s fixed GPA value on the 4.0 scale. Avoid
+  dividing percentage by 25 directly, since that skips the letter-grade step US
+  schools actually use.
+
+  ---
+
+  What if my school’s scale is different?
+
+  Use your school’s own published percentage bands instead of the standard
+  table. The method is the same either way: find your letter grade first, then
+  convert that letter to its GPA value.
+
+  ---
+
+  Is 90% always an A-?
+
+  Not always. On the most common US scale, yes, 90% to 92% is A- (3.7). But some
+  schools use different cutoffs or a simplified scale without plus/minus grades,
+  where 90% might fall into a flat A band instead. Always check your own
+  school’s scale before treating a conversion as official.
+
+  ---
+
+  Is the divide-by-25 shortcut ever accurate?
+
+  It can land close to the correct answer for grades right in the middle of a
+  band, but it consistently diverges near band edges and whenever credit hours
+  differ between courses, since it doesn’t account for credit-weighting at all.
+  For an exact result, convert through letter grades first.
+
+  ---
+
+  Do I need to convert every course separately?
+
+  Yes. Convert each course’s percentage to a letter grade and grade point
+  individually, then combine them using the credit-weighted GPA formula covered
+  in how to calculate your GPA, rather than averaging the raw percentages first.
+
+  ---
+
+  Can I convert my GPA back to an exact percentage?
+
+  Not precisely. Since the letter-band method groups a range of percentages into
+  one grade point, a GPA of 3.0 could represent anywhere from 83% to 86%. Your
+  original transcript or gradebook is the only fully accurate source for the
+  exact percentage.
+
+  ---
+
+  What if my percentage is from a 10-point or international scale?
+
+  Systems like India’s 10-point CGPA scale use different conversion formulas
+  entirely, not the US letter-grade-band method this guide covers. If you’re
+  converting for a US college application, check with that school’s admissions
+  office, since many recalculate incoming grades using their own formula.
+
+  ---
+
+  Can I skip the table and just use a calculator?
+
+  Yes, once you understand which method is accurate. StudentCalcTools’s GPA
+  calculator applies the letter-band method automatically, so you can enter
+  percentages directly without doing the lookup by hand.
 ---
 **To convert a percentage grade to GPA, convert the percentage to a letter grade first using your school's grading bands, then use the letter grade's fixed GPA value, not a straight percentage-to-GPA formula.** Most percentage-to-GPA calculators skip that first step and just divide your percentage by 25, which can quietly hand you the wrong number. Once you have each course converted to a letter grade and GPA value, run it through the [GPA calculator](https://studentcalctools.com/gpa-calculator/) to get your full credit-weighted result.
 
@@ -105,39 +172,3 @@ Sometimes the conversion needs to run the other direction, for instance if a for
 ## **If You're Converting From an International or 10-Point Scale**
 
 Not every percentage-to-GPA question is about the standard US 4.0 scale. Several countries, India in particular, report academic performance as a CGPA on a 10-point scale rather than a percentage or a 4.0 GPA, and the conversion formulas involved are genuinely different from what this guide covers. A common approach for that scale divides the percentage by 9.5 rather than converting through US-style letter-grade bands, since the underlying grading systems aren't built the same way. If you're converting a percentage or 10-point CGPA specifically for a US college application, check with that school's admissions office on which conversion they expect, some recalculate incoming grades using their own formula rather than accepting a student's self-converted number. This guide focuses specifically on the standard US letter-grade-band method described above, since that's what [StudentCalcTools](https://studentcalctools.com/)' own GPA calculator is built around.
-
-
-
-## **Frequently Asked Questions**
-
-### How do I convert percentage to GPA?
-
-Convert your percentage to a letter grade first using your school's grading bands, then use that letter grade's fixed GPA value on the 4.0 scale. Avoid dividing percentage by 25 directly, since that skips the letter-grade step US schools actually use.
-
-### **What if my school's scale is different?**
-
-Use your school's own published percentage bands instead of the standard table. The method is the same either way: find your letter grade first, then convert that letter to its GPA value.
-
-### **Is 90% always an A-?**
-
-Not always. On the most common US scale, yes, 90% to 92% is A- (3.7). But some schools use different cutoffs or a simplified scale without plus/minus grades, where 90% might fall into a flat A band instead. Always check your own school's scale before treating a conversion as official.
-
-### **Is the divide-by-25 shortcut ever accurate?**
-
-It can land close to the correct answer for grades right in the middle of a band, but it consistently diverges near band edges and whenever credit hours differ between courses, since it doesn't account for credit-weighting at all. For an exact result, convert through letter grades first.
-
-### Do I need to convert every course separately?
-
-Yes. Convert each course's percentage to a letter grade and grade point individually, then combine them using the credit-weighted GPA formula covered in [how to calculate your GPA](https://studentcalctools.com/blog/how-to-calculate-gpa/), rather than averaging the raw percentages first.
-
-### **Can I convert my GPA back to an exact percentage?**
-
-Not precisely. Since the letter-band method groups a range of percentages into one grade point, a GPA of 3.0 could represent anywhere from 83% to 86%. Your original transcript or gradebook is the only fully accurate source for the exact percentage.
-
-### **What if my percentage is from a 10-point or international scale?**
-
-Systems like India's 10-point CGPA scale use different conversion formulas entirely, not the US letter-grade-band method this guide covers. If you're converting for a US college application, check with that school's admissions office, since many recalculate incoming grades using their own formula.
-
-### **Can I skip the table and just use a calculator?**
-
-Yes, once you understand which method is accurate. StudentCalcTools's GPA calculator applies the letter-band method automatically, so you can enter percentages directly without doing the lookup by hand.
