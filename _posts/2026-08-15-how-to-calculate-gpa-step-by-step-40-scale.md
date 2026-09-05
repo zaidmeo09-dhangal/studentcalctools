@@ -23,6 +23,65 @@ excerpt: Learn how to calculate GPA with the exact formula, the 4.0 grade scale,
 featured_image: /assets/images/how-to-calculate-gpa-step-by-step-40-scale.webp
 image_alt: GPA grade point scale and worked calculation example on the 4.0 scale.
 read_time: 5 min read
+faqs_raw: >-
+  How is GPA calculated?
+
+  GPA is calculated by converting each grade to a grade point value, multiplying
+  by that course’s credit hours to get quality points, adding the quality points
+  across all courses, then dividing by total credit hours. Formula: GPA = Total
+  Quality Points ÷ Total Credits.
+
+  ---
+
+  What’s the 4.0 scale?
+
+  The 4.0 scale converts letter grades into numeric grade points, with A equal
+  to 4.0 and F equal to 0.0, with intermediate values for grades like B+ (3.3)
+  and C- (1.7). Schools can vary slightly on the exact scale used.
+
+  ---
+
+  How do credits affect GPA?
+
+  Credits determine how much weight each course carries in the calculation. A
+  course with more credit hours has a larger effect on your GPA than a course
+  with fewer credit hours, since the formula multiplies grade points by credits
+  before averaging.
+
+  ---
+
+  Is GPA the same as cumulative GPA?
+
+  No. GPA usually refers to a single term, while cumulative GPA (CGPA) combines
+  every term using pooled quality points and credit hours, not an average of the
+  term GPAs themselves.
+
+  ---
+
+  Do Pass/Fail classes affect my GPA?
+
+  Usually not. Most schools exclude Pass/Fail, Audit, Withdrawn, and Incomplete
+  grades from the GPA formula entirely, though those courses may still count
+  toward total credits earned.
+
+  ---
+
+  What’s the difference between weighted and unweighted GPA?
+
+  Unweighted GPA uses the standard 4.0 scale for every course. Weighted GPA adds
+  extra points for more rigorous courses like AP or IB, crediting the added
+  difficulty, using the same formula with different grade-point values.
+
+  ---
+
+  Can I calculate my GPA without knowing my credit hours?
+
+  Not accurately. If you don’t know a course’s credit hours, check your school’s
+  course catalog or registrar rather than guessing, since credit-weighting is
+  central to the formula and an incorrect credit value will skew the result. For
+  a faster way to check your work once you have the right numbers,
+  StudentCalcTools offers both a GPA calculator and a CGPA calculator built
+  around this exact formula.
 ---
 **GPA is calculated by converting each course grade into grade points, multiplying those points by the course's credit hours to get quality points, adding up the quality points across all your courses, then dividing by your total credit hours.** The formula is GPA = Total Quality Points ÷ Total Credits. If every course carries the same number of credits, this simplifies to a plain average of your grade points, but as soon as credit hours differ between courses, the credit-weighting is what makes the number accurate.
 
@@ -165,35 +224,3 @@ Every version of GPA, semester or cumulative, weighted or unweighted, high schoo
 The version of your GPA that matters most depends on what you're using it for. A single term's GPA tells you how this semester went. A cumulative GPA tells the fuller story colleges, scholarship committees, and your own future self will actually look at. Knowing how to move between the two, and knowing which one a specific form or application is asking for, is often more useful day to day than the arithmetic itself.
 
 If you'd rather not track quality points and credit hours by hand every term, the GPA calculator and CGPA calculator above run this exact formula for you, and are worth bookmarking for whenever your grades update.
-
-
-
-## **Frequently Asked Questions**
-
-### **How is GPA calculated?**
-
-GPA is calculated by converting each grade to a grade point value, multiplying by that course's credit hours to get quality points, adding the quality points across all courses, then dividing by total credit hours. Formula: GPA = Total Quality Points ÷ Total Credits.
-
-### What's the 4.0 scale?
-
-The 4.0 scale converts letter grades into numeric grade points, with A equal to 4.0 and F equal to 0.0, with intermediate values for grades like B+ (3.3) and C- (1.7). Schools can vary slightly on the exact scale used.
-
-### **How do credits affect GPA?**
-
-Credits determine how much weight each course carries in the calculation. A course with more credit hours has a larger effect on your GPA than a course with fewer credit hours, since the formula multiplies grade points by credits before averaging.
-
-### **Is GPA the same as cumulative GPA?**
-
-No. GPA usually refers to a single term, while cumulative GPA (CGPA) combines every term using pooled quality points and credit hours, not an average of the term GPAs themselves.
-
-### **Do Pass/Fail classes affect my GPA?**
-
-Usually not. Most schools exclude Pass/Fail, Audit, Withdrawn, and Incomplete grades from the GPA formula entirely, though those courses may still count toward total credits earned.
-
-### **What's the difference between weighted and unweighted GPA?**
-
-Unweighted GPA uses the standard 4.0 scale for every course. Weighted GPA adds extra points for more rigorous courses like AP or IB, crediting the added difficulty, using the same formula with different grade-point values.
-
-### **Can I calculate my GPA without knowing my credit hours?**
-
-Not accurately. If you don't know a course's credit hours, check your school's course catalog or registrar rather than guessing, since credit-weighting is central to the formula and an incorrect credit value will skew the result. For a faster way to check your work once you have the right numbers, [StudentCalcTools](https://studentcalctools.com/) offers both a GPA calculator and a CGPA calculator built around this exact formula.
