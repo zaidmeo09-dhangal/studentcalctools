@@ -237,20 +237,31 @@
                     {% if page.faqs_raw and page.faqs_raw != "" %}
                     <section class="post-faq" aria-labelledby="post-faq-heading">
                         <h2 id="post-faq-heading">Frequently Asked Questions</h2>
+                        
                         {% assign faq_blocks = page.faqs_raw | split: "---" %}
                         {% for block in faq_blocks %}
-                          {% assign block = block | strip %}
-                          {% assign block = block | replace: "\n", newline %}
-                          {% if block != "" %}
-                            {% assign lines = block | split: newline %}
-                            {% assign question = lines[0] | strip %}
-                            {% assign answer_lines = lines | slice: 1, 999 %}
-                            {% assign answer = answer_lines | join: newline | strip %}
+                          {% assign raw_lines = block | newline_to_br | split: "<br />" %}
+                          {% assign question = "" %}
+                          {% assign question_found = false %}
+                          {% capture answer %}{% endcapture %}
+                          
+                          {% for l in raw_lines %}
+                            {% assign clean_l = l | strip %}
+                            {% if clean_l != "" %}
+                              {% if question_found == false %}
+                                {% assign question = clean_l %}
+                                {% assign question_found = true %}
+                              {% else %}
+                                {% capture answer %}{{ answer }}{% unless answer == "" %} {% endunless %}{{ clean_l }}{% endcapture %}
+                              {% endif %}
+                            {% endif %}
+                          {% endfor %}
 
-                            <article class="post-faq-item">
-                                <h3>{{ question }}</h3>
-                                <p>{{ answer | newline_to_br }}</p>
-                            </article>
+                          {% if question != "" %}
+                          <article class="post-faq-item">
+                              <h3>{{ question }}</h3>
+                              <p>{{ answer }}</p>
+                          </article>
                           {% endif %}
                         {% endfor %}
                     </section>
