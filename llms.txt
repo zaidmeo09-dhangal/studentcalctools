@@ -13,6 +13,7 @@
 - Student Loan Calculator: https://studentcalctools.com/student-loan-calculator/
 - Scholarship Calculator: https://studentcalctools.com/scholarship-calculator/
 - Class Rank Calculator: https://studentcalctools.com/class-rank-calculator/
+- LSAC GPA Calculator: https://studentcalctools.com/lsac-gpa-calculator/
 
 ## About
 StudentCalcTools provides free, instant academic calculators for college and high school students worldwide. No sign up required.
