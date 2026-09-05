@@ -19,6 +19,83 @@ excerpt: Learn how a weighted grade calculator works. See the formula, examples,
 featured_image: /assets/images/weighted-grade-calculator-how-to-calculate-grades-with-weights.webp
 image_alt: Weighted Grade Calculator How to Calculate Grades With Weights
 read_time: 5 min read
+faqs_raw: >-
+  What is a weighted grade calculator?
+
+  A weighted grade calculator is a tool that calculates your course grade when
+  different assignments or categories count for different percentages of the
+  final grade.
+
+  ---
+
+  How do I calculate a weighted grade?
+
+  Multiply each score by its weight, then add the results together. For example,
+  if homework is 90% and worth 20%, it contributes 18 points to your final
+  grade.
+
+  ---
+
+  What is the weighted grade formula?
+
+  The formula is: Weighted Grade = (Score 1 × Weight 1) + (Score 2 × Weight 2) +
+  (Score 3 × Weight 3) + more categories as needed.
+
+  ---
+
+  What is the difference between weighted and unweighted grades?
+
+  An unweighted grade treats all scores equally. A weighted grade gives
+  different importance to different categories, such as homework, quizzes,
+  tests, projects, and final exams.
+
+  ---
+
+  Should grade weights add up to 100%?
+
+  In most classes, yes. The total category weights should usually equal 100%. If
+  they do not, check whether some categories are missing, ungraded, or not
+  active yet.
+
+  ---
+
+  What is a grade calculator with weights?
+
+  A grade calculator with weights helps calculate your course grade when each
+  category has a percentage value, such as homework worth 20%, tests worth 40%,
+  and finals worth 30%.
+
+  ---
+
+  Can I calculate weighted grades with points?
+
+  Yes. First calculate the percentage for each category using points earned
+  divided by points possible. Then multiply each category percentage by its
+  weight.
+
+  ---
+
+  What if my final exam has a weight?
+
+  Include the final exam as one of the weighted categories if you already know
+  your final exam score. If you are trying to find the score you need on the
+  final, use a final grade calculator instead.
+
+  ---
+
+  Why is my weighted grade lower than my average?
+
+  Your weighted grade may be lower if you scored poorly in a high-weight
+  category. For example, a low exam score can pull your grade down even if your
+  homework scores are high.
+
+  ---
+
+  Can a weighted grade affect my GPA?
+
+  Yes. Your final course grade can affect your GPA, especially if the course has
+  multiple credit hours. After estimating your course grade, use a GPA
+  calculator to estimate GPA impact.
 ---
 A [weighted grade calculator](https://studentcalctools.com/grade-calculator/) helps you calculate your course grade when assignments, quizzes, exams, projects, and finals do not all count the same.
 
@@ -491,47 +568,3 @@ If your weights add up to 100%, each category contributes its share to your fina
 So if homework is worth 10%, it can only do 10% worth of damage or help. If exams are worth 50%, they are the heavy hitters. No mystery there.
 
 Use the formula when you want to understand the math. Use the grade calculator when you want a faster answer with fewer mistakes.
-
-
-
-## **FAQs**
-
-### **What is a weighted grade calculator?**
-
-A weighted grade calculator is a tool that calculates your course grade when different assignments or categories count for different percentages of the final grade.
-
-### **How do I calculate a weighted grade?**
-
-Multiply each score by its weight, then add the results together. For example, if homework is 90% and worth 20%, it contributes 18 points to your final grade.
-
-### **What is the weighted grade formula?**
-
-The formula is: Weighted Grade = (Score 1 × Weight 1) + (Score 2 × Weight 2) + (Score 3 × Weight 3) + more categories as needed.
-
-### **What is the difference between weighted and unweighted grades?**
-
-An unweighted grade treats all scores equally. A weighted grade gives different importance to different categories, such as homework, quizzes, tests, projects, and final exams.
-
-### **Should grade weights add up to 100%?**
-
-In most classes, yes. The total category weights should usually equal 100%. If they do not, check whether some categories are missing, ungraded, or not active yet.
-
-### **What is a grade calculator with weights?**
-
-A grade calculator with weights helps calculate your course grade when each category has a percentage value, such as homework worth 20%, tests worth 40%, and finals worth 30%.
-
-### **Can I calculate weighted grades with points?**
-
-Yes. First calculate the percentage for each category using points earned divided by points possible. Then multiply each category percentage by its weight.
-
-### **What if my final exam has a weight?**
-
-Include the final exam as one of the weighted categories if you already know your final exam score. If you are trying to find the score you need on the final, use a final grade calculator instead.
-
-### **Why is my weighted grade lower than my average?**
-
-Your weighted grade may be lower if you scored poorly in a high-weight category. For example, a low exam score can pull your grade down even if your homework scores are high.
-
-### **Can a weighted grade affect my GPA?**
-
-Yes. Your final course grade can affect your GPA, especially if the course has multiple credit hours. After estimating your course grade, use a GPA calculator to estimate GPA impact.
