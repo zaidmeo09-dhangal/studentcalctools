@@ -1109,3 +1109,73 @@ a {
     position: static;
   }
 }
+
+/* Smooth Scrolling Page Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Header ke niche gap ke liye */
+}
+
+/* Dark TOC Panel (Clue Style) */
+.toc-card {
+  background: #0b192c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.toc-card .sidebar-title {
+  color: #ffffff;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 420px;
+  overflow-y: auto; /* Lambe blogs ke liye vertical scrollbar */
+}
+
+.toc-list li {
+  margin-bottom: 8px;
+}
+
+.toc-list li.toc-subitem {
+  padding-left: 14px; /* H3 headings ke liye indentation */
+}
+
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toc-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.toc-list a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toc-list a:hover .toc-bullet {
+  background-color: #ffffff;
+  transform: scale(1.3);
+}
