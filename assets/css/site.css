@@ -389,7 +389,12 @@ footer {
 
 .author-box h2 {
   margin-top: 0;
-  color: #0f172a;
+  color: #0f172a !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
 }
 
 .author-box p {
