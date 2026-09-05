@@ -1259,3 +1259,36 @@ ul#dynamic-toc li {
   background-color: #ffffff !important;
   transform: scale(1.3) !important;
 }
+
+/* BRAND COLORED AUTHOR BOX */
+.author-card {
+  background: var(--gradient-brand) !important; /* Site ka original blue/cyan gradient */
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Text colors inside author box */
+.author-card .sidebar-title,
+.author-card .author-name {
+  color: #ffffff !important;
+}
+
+.author-card .author-bio {
+  color: rgba(255, 255, 255, 0.95) !important; /* Thoda soft white taakay padhne mein aasan ho */
+}
+
+/* Image aur Name ko side-by-side (saath saath) karna */
+.author-info {
+  display: flex !important;
+  flex-direction: row !important; 
+  align-items: center !important;
+  gap: 15px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Author image ke gird white border */
+.author-img {
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
