@@ -398,7 +398,7 @@ footer {
 }
 
 .author-box p {
-  color: #475569;
+  color: #475569 !important;
   line-height: 1.7;
 }
 
