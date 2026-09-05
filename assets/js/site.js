@@ -171,46 +171,35 @@ faqQuestions.forEach(function (question) {
     }
 }());
 
-// Dynamic Table of Contents Generator & Smooth Scroll
+// Dynamic Table of Contents Generator
 document.addEventListener("DOMContentLoaded", function () {
-  const tocList = document.getElementById("dynamic-toc");
+  const tocContainer = document.getElementById("dynamic-toc");
   const articleContent = document.querySelector(".post-content");
 
-  if (tocList && articleContent) {
+  if (tocContainer && articleContent) {
     const headings = articleContent.querySelectorAll("h2, h3");
+    tocContainer.innerHTML = ""; // Clear existing
 
     headings.forEach((heading, index) => {
-      // Heading ID check karo ya new assign karo
       if (!heading.id) {
         heading.id = "toc-heading-" + index;
       }
 
-      const li = document.createElement("li");
-      const a = document.createElement("a");
+      const link = document.createElement("a");
+      link.href = "#" + heading.id;
+      link.className = "toc-item" + (heading.tagName.toLowerCase() === "h3" ? " toc-subitem" : "");
+      link.innerHTML = `<span class="toc-bullet"></span><span class="toc-text">${heading.textContent}</span>`;
 
-      a.href = "#" + heading.id;
-      a.innerHTML = `<span class="toc-bullet"></span>${heading.textContent}`;
-
-      // Level based styling (H3 ko slightly indent karne ke liye)
-      if (heading.tagName.toLowerCase() === "h3") {
-        li.classList.add("toc-subitem");
-      }
-
-      // Smooth Scroll click handler
-      a.addEventListener("click", function (e) {
+      link.addEventListener("click", function (e) {
         e.preventDefault();
         const targetElement = document.getElementById(heading.id);
         if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
+          targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
           history.pushState(null, null, "#" + heading.id);
         }
       });
 
-      li.appendChild(a);
-      tocList.appendChild(li);
+      tocContainer.appendChild(link);
     });
   }
 });
