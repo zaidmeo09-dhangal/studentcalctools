@@ -23,6 +23,53 @@ excerpt: How Texas's Top 10% Rule works, why UT Austin's real cutoff is now top
 featured_image: /assets/images/texas-top-10percent-rule-explained-automatic-admission-by-class-rank.webp
 image_alt: "Texas Top 10% Rule Explained: Automatic Admission by Class Rank"
 read_time: 5 min read
+faqs_raw: >-
+  What is the Texas Top 10% Rule?
+
+  It’s House Bill 588, a 1997 Texas law that guarantees automatic admission to
+  Texas public universities for students who graduate in the top 10 percent of
+  their high school class.
+
+  ---
+
+  Does UT Austin still use the Top 10% Rule?
+
+  Not in its original form. UT Austin has a special legal exception, capped at
+  75 percent of its Texas resident freshman class, which has resulted in a much
+  tighter cutoff than 10 percent for years.
+
+  ---
+
+  What’s the current UT Austin cutoff?
+
+  Top 5 percent for Summer/Fall 2026 through Spring 2028 applicants, according
+  to UT Austin’s own admissions page. This is down from the top 6 percent used
+  in prior cycles, so don’t rely on older sources citing 6 percent.
+
+  ---
+
+  Do other Texas schools use the same cutoff as UT Austin?
+
+  No. Most other Texas public universities, including Texas A&M, still use the
+  original top 10 percent threshold. UT Austin’s tighter cutoff is unique to
+  that university.
+
+  ---
+
+  Does automatic admission guarantee my choice of major?
+
+  No. Automatic admission guarantees a spot at the university itself, not
+  admission into a specific, more selective major or program.
+
+  ---
+
+  What if I’m homeschooled and don’t have a class rank?
+
+  UT Austin has a separate pathway for non-traditional secondary education
+  applicants, currently an SAT Composite of 1570 or higher, or an ACT Composite
+  of 36, for Spring 2027 admission onward. For more on how StudentCalcTools can
+  help you check your standing under the standard rank-based pathway, see the
+  class rank calculator linked above.
 ---
 **Texas's Top 10% Rule, officially House Bill 588, guarantees automatic admission to Texas public universities for students who graduate in the top 10 percent of their high school class.** The University of Texas at Austin is a legal exception to that number: its actual current cutoff is the top 5 percent, not 10, and not the top 6 percent still cited on many older pages. Most other Texas public universities, including Texas A&M, still use something close to the original top 10 percent. This guide to the Texas top 10 percent rule covers exactly how it works, why UT Austin's number is different, and how to check whether your own rank qualifies, starting with the [class rank calculator](https://studentcalctools.com/class-rank-calculator/) if you want to check your percentile before reading further.
 
@@ -99,30 +146,3 @@ For context on how your percentile compares more broadly, not just for Texas aut
 - **The rule doesn't guarantee financial aid or any other benefit**, it's strictly an admission guarantee.
 - **UT Austin's threshold isn't fixed.** Unlike the flat top 10 percent used elsewhere, UT Austin recalculates its cutoff based on demand, meaning the exact percentage can shift from year to year. Always check the current published number rather than assuming it matches a prior year.
 
-
-
-## **Frequently Asked Questions**
-
-### What is the Texas Top 10% Rule?
-
-It's House Bill 588, a 1997 Texas law that guarantees automatic admission to Texas public universities for students who graduate in the top 10 percent of their high school class.
-
-### Does UT Austin still use the Top 10% Rule?
-
-Not in its original form. UT Austin has a special legal exception, capped at 75 percent of its Texas resident freshman class, which has resulted in a much tighter cutoff than 10 percent for years.
-
-### What's the current UT Austin cutoff?
-
-Top 5 percent for Summer/Fall 2026 through Spring 2028 applicants, according to UT Austin's own admissions page. This is down from the top 6 percent used in prior cycles, so don't rely on older sources citing 6 percent.
-
-### Do other Texas schools use the same cutoff as UT Austin?
-
- No. Most other Texas public universities, including Texas A&M, still use the original top 10 percent threshold. UT Austin's tighter cutoff is unique to that university.
-
-### Does automatic admission guarantee my choice of major?
-
-No. Automatic admission guarantees a spot at the university itself, not admission into a specific, more selective major or program.
-
-### What if I'm homeschooled and don't have a class rank?
-
-UT Austin has a separate pathway for non-traditional secondary education applicants, currently an SAT Composite of 1570 or higher, or an ACT Composite of 36, for Spring 2027 admission onward. For more on how [StudentCalcTools](https://studentcalctools.com/) can help you check your standing under the standard rank-based pathway, see the class rank calculator linked above.
