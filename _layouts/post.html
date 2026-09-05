@@ -147,6 +147,46 @@
             }
           ]
         }
+        {% if page.faqs_raw and page.faqs_raw != "" %}
+        ,
+        {
+          "@type": "FAQPage",
+          "@id": "{{ page.url | absolute_url }}#faq",
+          "mainEntity": [
+            {% assign faq_blocks = page.faqs_raw | split: "---" %}
+            {% assign first_faq = true %}
+            {% for block in faq_blocks %}
+              {% assign raw_lines = block | newline_to_br | split: "<br />" %}
+              {% assign q = "" %}
+              {% assign q_found = false %}
+              {% capture a %}{% endcapture %}
+              {% for l in raw_lines %}
+                {% assign clean_l = l | strip %}
+                {% if clean_l != "" %}
+                  {% if q_found == false %}
+                    {% assign q = clean_l %}
+                    {% assign q_found = true %}
+                  {% else %}
+                    {% capture a %}{{ a }}{% unless a == "" %} {% endunless %}{{ clean_l }}{% endcapture %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if q != "" %}
+                {% unless first_faq %},{% endunless %}
+                {
+                  "@type": "Question",
+                  "name": {{ q | jsonify }},
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": {{ a | jsonify }}
+                  }
+                }
+                {% assign first_faq = false %}
+              {% endif %}
+            {% endfor %}
+          ]
+        }
+        {% endif %}
       ]
     }
     </script>
