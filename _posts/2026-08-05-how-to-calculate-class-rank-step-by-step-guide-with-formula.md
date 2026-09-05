@@ -23,6 +23,68 @@ excerpt: Learn how class rank works, calculate your percentile, understand tied
 featured_image: /assets/images/class-rank-to-percentile-and-decile-conversion-chart-by-class-size.webp
 image_alt: Class rank to percentile and decile conversion chart by class size.
 read_time: 5 min read
+faqs_raw: >-
+  How is class rank calculated?
+
+  Schools typically calculate class rank by comparing cumulative GPAs, sorting
+  student records from highest to lowest, applying tie rules, and assigning
+  numbered positions. Schools may use weighted GPA, unweighted GPA, or another
+  academic formula.
+
+  ---
+
+  Can I calculate my own class rank?
+
+  You can convert a known class rank into a percentile if you know your rank and
+  total class size. You cannot calculate an exact rank from GPA and class size
+  alone unless you also have enough information about the academic records of
+  the rest of the class.
+
+  ---
+
+  What percentile is top 10%?
+
+  A student in the top 10% is generally near or above the 90th percentile. Exact
+  results depend on the percentile formula and rounding method used.
+
+  ---
+
+  Is class rank based on weighted or unweighted GPA?
+
+  It depends on the school. Some schools use weighted GPA, some use unweighted
+  GPA, and others use district-specific ranking formulas. Check your transcript
+  or school ranking policy.
+
+  ---
+
+  How are tied GPAs ranked?
+
+  Schools may use competition ranking, dense ranking, fractional ranking,
+  additional decimal places, or academic tiebreakers. There is no single method
+  used by every school.
+
+  ---
+
+  What if my school does not provide class rank?
+
+  Check your school profile for GPA distributions, quartiles, deciles, or other
+  academic context. You may use that information to estimate a broad range for
+  personal planning, but you should not report the estimate as an official rank.
+
+  ---
+
+  Does class rank change during high school?
+
+  It can. Some schools update class rank after each semester, while others
+  calculate it annually or only at specific points. Your school counselor or
+  registrar can confirm the schedule.
+
+  ---
+
+  Is a high GPA always equal to a high class rank?
+
+  No. Rank depends on how your GPA compares with the rest of your graduating
+  class. The same GPA can produce different ranks at different schools.
 ---
 Class rank shows where a student stands academically compared with other students in the same graduating class. A rank of 12 out of 240 means that 11 students are ranked ahead of that student.
 
@@ -442,42 +504,6 @@ Ranking policies vary by school, district, state, and graduating cohort.
 ### **Confusing Percentile With Top Percentage**
 
 A high percentile corresponds to a low top percentage. For example, a student near the 95th percentile is generally close to the top 5%.
-
-
-
-## **Frequently Asked Questions**
-
-### **How is class rank calculated?**
-
-Schools typically calculate class rank by comparing cumulative GPAs, sorting student records from highest to lowest, applying tie rules, and assigning numbered positions. Schools may use weighted GPA, unweighted GPA, or another academic formula.
-
-### **Can I calculate my own class rank?**
-
-You can convert a known class rank into a percentile if you know your rank and total class size. You cannot calculate an exact rank from GPA and class size alone unless you also have enough information about the academic records of the rest of the class.
-
-### **What percentile is top 10%?**
-
-A student in the top 10% is generally near or above the 90th percentile. Exact results depend on the percentile formula and rounding method used.
-
-### **Is class rank based on weighted or unweighted GPA?**
-
-It depends on the school. Some schools use weighted GPA, some use unweighted GPA, and others use district-specific ranking formulas. Check your transcript or school ranking policy.
-
-### **How are tied GPAs ranked?**
-
-Schools may use competition ranking, dense ranking, fractional ranking, additional decimal places, or academic tiebreakers. There is no single method used by every school.
-
-### **What if my school does not provide class rank?**
-
-Check your school profile for GPA distributions, quartiles, deciles, or other academic context. You may use that information to estimate a broad range for personal planning, but you should not report the estimate as an official rank.
-
-### **Does class rank change during high school?**
-
-It can. Some schools update class rank after each semester, while others calculate it annually or only at specific points. Your school counselor or registrar can confirm the schedule.
-
-### **Is a high GPA always equal to a high class rank?**
-
-No. Rank depends on how your GPA compares with the rest of your graduating class. The same GPA can produce different ranks at different schools.
 
 
 
