@@ -1070,15 +1070,17 @@ a {
 }
 
 .toc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none !important; /* Default HTML white dots ko remove karne ke liye */
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-height: 420px;
+  overflow-y: auto;
 }
 
 .toc-list li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 12px;
+  list-style: none !important;
+  margin-bottom: 8px;
 }
 
 .toc-list li::before {
