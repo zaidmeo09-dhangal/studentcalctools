@@ -20,6 +20,54 @@ excerpt: A good class rank depends on your goal and your class size. See
 featured_image: /assets/images/good-class-rank-benchmarks-by-class-size-top-10-25-and-50-percent.webp
 image_alt: Good class rank benchmarks by class size, top 10, 25, and 50 percent.
 read_time: 5 min read
+faqs_raw: >-
+  What’s a good class rank for college?
+
+  Top 10 percent is generally considered strong for selective colleges, top 25
+  percent is solidly competitive, and top 50 percent is average or above. The
+  exact bar depends on which colleges or programs you’re targeting.
+
+  ---
+
+  Is top 10% a good class rank?
+
+  Yes. Top 10 percent is typically viewed as strong across selective college
+  admissions, many merit scholarships, and most honor programs.
+
+  ---
+
+  Does class size matter for what counts as a good rank?
+
+  Yes, significantly. The same percentile standing translates into very
+  different raw rank numbers depending on class size, so always compare
+  percentile rather than raw rank across schools.
+
+  ---
+
+  Is top 25% competitive for scholarships?
+
+  Often, yes. Many merit scholarship programs set their cutoff around top 25
+  percent, though the most competitive national awards may expect top 10
+  percent, and some broader programs accept top 50 percent.
+
+  ---
+
+  What if my class is very small, like 50 students?
+
+  In a small class, each rank position is worth a larger percentage swing (2
+  percentage points per rank in a class of 50), so a specific numeric rank moves
+  the percentile faster than it would in a large class. Convert to percentile
+  before comparing against a benchmark meant for a larger school.
+
+  ---
+
+  Does a lower class rank hurt my chances at every college?
+
+  No. Many colleges no longer report or weigh exact class rank heavily, and use
+  holistic review that considers course rigor, GPA trend, and other factors
+  alongside or instead of rank. For the full picture of how much rank still
+  matters today, StudentCalcTools covers this in more detail in a dedicated
+  pillar guide on the topic.
 ---
 A good class rank depends on your goal and your class size, but as a general shorthand, top 10 percent is considered strong for most selective colleges and scholarships, top 25 percent is solidly competitive, and top 50 percent is average or above. What those numbers mean in raw terms changes a lot depending on how big your graduating class is. Ranked 25th sounds identical whether your class has 100 students or 600, but one is the very top of the class and the other is closer to the middle, which is why a size-adjusted answer matters more than a flat rule.
 
@@ -109,31 +157,3 @@ To see where your own numbers actually land:
 3. Compare that percentile against the goal that matters most to you, selective admissions, an auto-admission cutoff, a specific scholarship, or an honor program, using the benchmarks above.
 
 If you're not sure how your rank was calculated in the first place, [how class rank is calculated](https://studentcalctools.com/blog/how-to-calculate-class-rank/) walks through the full method, including how tied GPAs are handled.
-
-
-
-## **Frequently Asked Questions**
-
-### **What's a good class rank for college?**
-
-Top 10 percent is generally considered strong for selective colleges, top 25 percent is solidly competitive, and top 50 percent is average or above. The exact bar depends on which colleges or programs you're targeting.
-
-### **Is top 10% a good class rank?**
-
-Yes. Top 10 percent is typically viewed as strong across selective college admissions, many merit scholarships, and most honor programs.
-
-### **Does class size matter for what counts as a good rank?**
-
-Yes, significantly. The same percentile standing translates into very different raw rank numbers depending on class size, so always compare percentile rather than raw rank across schools.
-
-### **Is top 25% competitive for scholarships?**
-
-Often, yes. Many merit scholarship programs set their cutoff around top 25 percent, though the most competitive national awards may expect top 10 percent, and some broader programs accept top 50 percent.
-
-### **What if my class is very small, like 50 students?**
-
-In a small class, each rank position is worth a larger percentage swing (2 percentage points per rank in a class of 50), so a specific numeric rank moves the percentile faster than it would in a large class. Convert to percentile before comparing against a benchmark meant for a larger school.
-
-### **Does a lower class rank hurt my chances at every college?**
-
-No. Many colleges no longer report or weigh exact class rank heavily, and use holistic review that considers course rigor, GPA trend, and other factors alongside or instead of rank. For the full picture of how much rank still matters today, [StudentCalcTools](https://studentcalctools.com/) covers this in more detail in a dedicated pillar guide on the topic.
