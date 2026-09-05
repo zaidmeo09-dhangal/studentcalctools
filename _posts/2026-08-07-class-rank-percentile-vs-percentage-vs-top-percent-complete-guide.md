@@ -24,6 +24,52 @@ excerpt: Percentile, percentage, and top percent describe class rank
 featured_image: /assets/images/comparison-of-class-rank-percentile-percentage-and-top-percent-definitions.webp
 image_alt: Comparison of class rank percentile, percentage, and top percent definitions
 read_time: 5 min read
+faqs_raw: >-
+  Is a higher percentile always better?
+
+  Yes. Percentile measures the share of your class you scored higher than, so a
+  higher percentile always reflects a stronger standing.
+
+  ---
+
+  Is top percent the same as percentile?
+
+  They’re close but not always identical. In a class with no tied ranks, a 90th
+  percentile and a top 10 percent standing describe close to the same position.
+  Ties, rounding at small class sizes, and whether a formula counts your own
+  rank as part of the total can cause the two figures to diverge slightly.
+
+  ---
+
+  How do I convert my rank into a percentile?
+
+  Use ((Total Students − Your Rank + 1) ÷ Total Students) × 100. Ranked 25th in
+  a class of 300 gives a 92nd percentile.
+
+  ---
+
+  How do I convert my rank into a top percentage?
+
+  Use (Your Rank ÷ Total Students) × 100. Ranked 30th in a class of 300 gives a
+  top 10 percent standing.
+
+  ---
+
+  Why might my calculated percentile not match what my school reports?
+
+  Small differences usually come from how tied ranks are counted, whether the
+  formula counts your own rank as part of the total, and whether the class size
+  used matches your school’s current, official enrollment count.
+
+  ---
+
+  Which number should I put on a college application?
+
+  Report whatever format your school’s official transcript or counselor
+  provides. Only convert it yourself if the application specifically asks for a
+  different format than what your school reports. For a full walkthrough of how
+  StudentCalcTools approaches class rank, GPA, and related planning estimates,
+  browse the full calculator collection.
 ---
 **Percentile tells you what percentage of your class you scored higher than, so a higher number is better. Percentage and top percent both describe which group you fall within, counted from the top, so a lower number is better.** Ranked 30th in a class of 300 puts a student in the top 10 percent, which is roughly the 90th percentile. These describe the same standing from two directions, and while they're close, they aren't always mathematically identical, for reasons this guide explains in full.
 
@@ -150,31 +196,3 @@ The National Association of Secondary School Principals notes a related limitati
 Use whatever your school's official record provides. If your school reports an exact numbered rank, report that. If it reports a decile, quintile, or quartile instead, that's effectively the top-percent format grouped into bands. If it reports only a percentile, use that number as given. Colleges are used to seeing all of these formats and generally understand how to interpret each one. The important part is reporting exactly what your school's official record shows rather than converting it yourself into a different format, unless a specific form asks for a different one.
 
 For the full mechanics of how a school arrives at that number in the first place, including how ties are broken and how weighted versus unweighted GPA changes the result, see [how to calculate class rank](https://studentcalctools.com/blog/how-to-calculate-class-rank/).
-
-
-
-## **Frequently Asked Questions**
-
-### **Is a higher percentile always better?**
-
-Yes. Percentile measures the share of your class you scored higher than, so a higher percentile always reflects a stronger standing.
-
-### **Is top percent the same as percentile?**
-
-They're close but not always identical. In a class with no tied ranks, a 90th percentile and a top 10 percent standing describe close to the same position. Ties, rounding at small class sizes, and whether a formula counts your own rank as part of the total can cause the two figures to diverge slightly.
-
-### **How do I convert my rank into a percentile?**
-
-Use ((Total Students − Your Rank + 1) ÷ Total Students) × 100. Ranked 25th in a class of 300 gives a 92nd percentile.
-
-### **How do I convert my rank into a top percentage?**
-
-Use (Your Rank ÷ Total Students) × 100. Ranked 30th in a class of 300 gives a top 10 percent standing.
-
-### **Why might my calculated percentile not match what my school reports?**
-
-Small differences usually come from how tied ranks are counted, whether the formula counts your own rank as part of the total, and whether the class size used matches your school's current, official enrollment count.
-
-### **Which number should I put on a college application?**
-
-Report whatever format your school's official transcript or counselor provides. Only convert it yourself if the application specifically asks for a different format than what your school reports. For a full walkthrough of how [StudentCalcTools](https://studentcalctools.com/) approaches class rank, GPA, and related planning estimates, browse the full calculator collection.
