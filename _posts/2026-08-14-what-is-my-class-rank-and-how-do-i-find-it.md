@@ -22,6 +22,114 @@ excerpt: Find your class rank on your transcript, student portal, or through
 featured_image: /assets/images/what-is-my-class-rank-and-how-do-i-find-it-1.webp
 image_alt: What Is My Class Rank & How Do I Find It
 read_time: 5 min read
+faqs_raw: >-
+  How do I find my class rank?
+
+  Check your most recent high school transcript first. If it is not there, look
+  in your student portal, report card, or academic summary. If you still cannot
+  find it, ask your counselor or registrar.
+
+  ---
+
+  What does class rank look like on a transcript?
+
+  It may appear as Class Rank: 18 of 300, Rank: 18/300, Top 10%, First Decile,
+  or another form of class standing.
+
+  ---
+
+  How do I find my class rank online?
+
+  Log in to your school’s student portal and check the transcript, academic
+  summary, GPA, grades, graduation, or student information sections. The exact
+  location depends on the system and your school’s settings.
+
+  ---
+
+  Can I find my class rank on PowerSchool?
+
+  Possibly. Your school decides whether class rank appears in PowerSchool. Check
+  your transcript, grades, GPA, and academic information. If it is missing, ask
+  your counselor.
+
+  ---
+
+  Can I find my class rank on Infinite Campus?
+
+  It depends on your school’s configuration. Look in your academic records or
+  transcript. If class rank is not shown, contact your counselor.
+
+  ---
+
+  Is class rank on my report card?
+
+  Some schools include rank on report cards, while others show it only on
+  transcripts, in student portals, or through the counseling office.
+
+  ---
+
+  My school doesn’t rank. What should I do?
+
+  Confirm the policy with your counselor. Your school may report a quartile,
+  decile, or percentage instead. If it truly does not calculate rank, do not
+  create an unofficial number and present it as official.
+
+  ---
+
+  Can I calculate class rank from my GPA?
+
+  Not exactly from GPA alone. You would also need information about the academic
+  results of the other students and your school’s ranking rules.
+
+  ---
+
+  Why is my class rank not on my transcript?
+
+  Your school may not publish exact rank, may report it elsewhere, may use
+  ranking groups instead, or may not calculate class rank at all.
+
+  ---
+
+  How often does class rank change?
+
+  It depends on your school. Some update rank after every semester or grading
+  period, while others recalculate it only at specific points during the school
+  year.
+
+  ---
+
+  Why did my class rank change?
+
+  Your rank can change when your GPA changes, when your classmates’ academic
+  results change, or when the size of the ranked class changes.
+
+  ---
+
+  Why is my portal rank different from my transcript?
+
+  The two numbers may have been calculated at different times. Check the dates
+  and ask your counselor which rank is currently official.
+
+  ---
+
+  Can two students have the same class rank?
+
+  Yes. Ties are possible, although schools use different policies for handling
+  them.
+
+  ---
+
+  Is class rank weighted or unweighted?
+
+  That depends entirely on your school’s ranking policy. Some schools use
+  weighted GPA, some use unweighted GPA, and others use a different method.
+
+  ---
+
+  What if I cannot find my rank anywhere?
+
+  Ask your counselor directly whether your school calculates class rank. If it
+  does not, ask how the school officially reports academic standing.
 ---
 **Your class rank is usually listed on your high school transcript, student portal, or academic record. If you cannot find it there, ask your school counselor or registrar. Some schools report only a percentile or ranking group, while others do not calculate class rank at all.**
 
@@ -55,8 +163,6 @@ Here is the quickest way to know what to look for.
 | Counselor | Exact rank, ranking band, or ranking policy | Ask whether the school ranks at all |
 | Registrar | Official academic record | Request your latest record |
 | School profile | School-wide ranking policy | Ask your counselor for a copy |
-
-
 
 
 ## **1. Check Your High School Transcript**
@@ -675,72 +781,6 @@ If you see:
 Rank 15 sounds impressive, but its meaning changes dramatically depending on whether the class contains 50 students or 700.
 
 Always consider the total class size.
-
-
-
-## **Frequently Asked Questions**
-
-### **Where do I find my class rank?**
-
-Check your most recent high school transcript first. If it is not there, look in your student portal, report card, or academic summary. If you still cannot find it, ask your counselor or registrar.
-
-### **What does class rank look like on a transcript?**
-
-It may appear as **Class Rank: 18 of 300**, **Rank: 18/300**, **Top 10%**, **First Decile**, or another form of class standing.
-
-### **How do I find my class rank online?**
-
-Log in to your school's student portal and check the transcript, academic summary, GPA, grades, graduation, or student information sections. The exact location depends on the system and your school's settings.
-
-### **Can I find my class rank on PowerSchool?**
-
-Possibly. Your school decides whether class rank appears in PowerSchool. Check your transcript, grades, GPA, and academic information. If it is missing, ask your counselor.
-
-### **Can I find my class rank on Infinite Campus?**
-
-It depends on your school's configuration. Look in your academic records or transcript. If class rank is not shown, contact your counselor.
-
-### **Is class rank on my report card?**
-
-Some schools include rank on report cards, while others show it only on transcripts, in student portals, or through the counseling office.
-
-### **My school doesn't rank. What should I do?**
-
-Confirm the policy with your counselor. Your school may report a quartile, decile, or percentage instead. If it truly does not calculate rank, do not create an unofficial number and present it as official.
-
-### **Can I calculate class rank from my GPA?**
-
-Not exactly from GPA alone. You would also need information about the academic results of the other students and your school's ranking rules.
-
-### **Why is my class rank not on my transcript?**
-
-Your school may not publish exact rank, may report it elsewhere, may use ranking groups instead, or may not calculate class rank at all.
-
-### **How often does class rank change?**
-
-It depends on your school. Some update rank after every semester or grading period, while others recalculate it only at specific points during the school year.
-
-### **Why did my class rank change?**
-
-Your rank can change when your GPA changes, when your classmates' academic results change, or when the size of the ranked class changes.
-
-### **Why is my portal rank different from my transcript?**
-
-The two numbers may have been calculated at different times. Check the dates and ask your counselor which rank is currently official.
-
-### **Can two students have the same class rank?**
-
-Yes. Ties are possible, although schools use different policies for handling them.
-
-### **Is class rank weighted or unweighted?**
-
-That depends entirely on your school's ranking policy. Some schools use weighted GPA, some use unweighted GPA, and others use a different method.
-
-### **What if I cannot find my rank anywhere?**
-
-Ask your counselor directly whether your school calculates class rank. If it does not, ask how the school officially reports academic standing.
-
-
 
 ## **Final Answer**
 
