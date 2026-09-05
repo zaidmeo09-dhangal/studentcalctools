@@ -23,6 +23,26 @@ excerpt: Calculate GPA without credit hours by entering the same credit value
 featured_image: /assets/images/gpa-calculation-without-credit-hours-using-equal-weighting.webp
 image_alt: GPA calculation without credit hours using equal weighting.
 read_time: 5 min read
+faqs_raw: >-
+  What is a GPA calculator without credits?
+
+  To calculate GPA without credit hours, enter the same credit value, such as 1,
+  for every course. This produces a simple, equally-weighted average
+  automatically.
+
+  ---
+
+  Do I need a special tool to calculate GPA without credits?
+
+  No, you do not need a separate tool. You can use any standard GPA calculator
+  by entering an identical credit value for all your courses.
+
+  ---
+
+  Are unweighted GPAs the same as calculation without credits?
+
+  No, "without credits" means every course counts equally, while "unweighted"
+  means no extra GPA points are added for honors or AP difficulty.
 ---
 **To calculate GPA without credit hours, enter the same credit value, such as 1, for every course in the [GPA calculator](https://studentcalctools.com/gpa-calculator/). This produces a simple, equally-weighted average automatically, using the exact same formula the calculator already runs, just with every course carrying identical weight.** You don't need a separate GPA calculator no credits tool or a different method, only a different input.
 
