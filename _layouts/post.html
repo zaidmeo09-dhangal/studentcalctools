@@ -2,179 +2,69 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="robots"
-        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-    <meta
-        name="referrer"
-        content="strict-origin-when-cross-origin">
-
-    <meta
-        name="theme-color"
-        content="#2563eb">
-
-    <meta
-        name="color-scheme"
-        content="light dark">
-
-    <meta
-        name="application-name"
-        content="StudentCalcTools">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="color-scheme" content="light dark">
+    <meta name="application-name" content="StudentCalcTools">
 
     {% assign image_path = page.featured_image | default: page.image | default: "/assets/images/og-image.webp" %}
     {% assign seo_title = page.meta_title | default: page.title %}
     {% assign seo_description = page.meta_description | default: page.excerpt | strip_html | strip_newlines %}
     {% assign modified_date = page.last_modified_at | default: page.last_modified | default: page.date %}
-        {% capture newline %}
+    {% capture newline %}
 {% endcapture %}
 
     <title>{{ seo_title }}</title>
 
-    <meta
-        name="description"
-        content="{{ seo_description | escape }}">
+    <meta name="description" content="{{ seo_description | escape }}">
+    <meta name="author" content="{{ page.author | default: 'StudentCalcTools' | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <meta
-        name="author"
-        content="{{ page.author | default: 'StudentCalcTools' | escape }}">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="StudentCalcTools">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ seo_title | escape }}">
+    <meta property="og:description" content="{{ seo_description | escape }}">
+    <meta property="og:image" content="{{ image_path | absolute_url }}">
+    <meta property="og:image:secure_url" content="{{ image_path | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
 
-    <link
-        rel="canonical"
-        href="{{ page.url | absolute_url }}">
-
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png">
-
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png">
-
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png">
-
-    <link
-        rel="manifest"
-        href="/site.webmanifest">
-
-    <meta
-        property="og:type"
-        content="article">
-
-    <meta
-        property="og:locale"
-        content="en_US">
-
-    <meta
-        property="og:site_name"
-        content="StudentCalcTools">
-
-    <meta
-        property="og:url"
-        content="{{ page.url | absolute_url }}">
-
-    <meta
-        property="og:title"
-        content="{{ seo_title | escape }}">
-
-    <meta
-        property="og:description"
-        content="{{ seo_description | escape }}">
-
-    <meta
-        property="og:image"
-        content="{{ image_path | absolute_url }}">
-
-    <meta
-        property="og:image:secure_url"
-        content="{{ image_path | absolute_url }}">
-
-    <meta
-        property="og:image:alt"
-        content="{{ page.image_alt | default: page.title | escape }}">
-
-    <meta
-        property="article:published_time"
-        content="{{ page.date | date_to_xmlschema }}">
-
-    <meta
-        property="article:modified_time"
-        content="{{ modified_date | date_to_xmlschema }}">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ modified_date | date_to_xmlschema }}">
 
     {% if page.category %}
-    <meta
-        property="article:section"
-        content="{{ page.category | escape }}">
+    <meta property="article:section" content="{{ page.category | escape }}">
     {% endif %}
 
     {% if page.tags %}
         {% for tag in page.tags %}
-    <meta
-        property="article:tag"
-        content="{{ tag | escape }}">
+    <meta property="article:tag" content="{{ tag | escape }}">
         {% endfor %}
     {% endif %}
 
-    <meta
-        name="twitter:card"
-        content="summary_large_image">
-
-    <meta
-        name="twitter:title"
-        content="{{ seo_title | escape }}">
-
-    <meta
-        name="twitter:description"
-        content="{{ seo_description | escape }}">
-
-    <meta
-        name="twitter:image"
-        content="{{ image_path | absolute_url }}">
-
-    <meta
-        name="twitter:image:alt"
-        content="{{ page.image_alt | default: page.title | escape }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ seo_title | escape }}">
+    <meta name="twitter:description" content="{{ seo_description | escape }}">
+    <meta name="twitter:image" content="{{ image_path | absolute_url }}">
+    <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
 
     <script src="/assets/js/theme-init.js"></script>
-
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0">
-    </script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
     <script src="/assets/js/analytics.js"></script>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link
-        rel="stylesheet"
-        href="/assets/css/site.css">
-
-    <link
-        rel="stylesheet"
-        href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
 
     <script type="application/ld+json">
     {
@@ -260,54 +150,6 @@
       ]
     }
     </script>
-
-                        {% if page.faqs_raw and page.faqs_raw != "" %}
-
-                <section
-                    class="post-faq"
-                    aria-labelledby="post-faq-heading">
-
-                    <h2 id="post-faq-heading">
-                        Frequently Asked Questions
-                    </h2>
-
-                    {% assign faq_blocks = page.faqs_raw | split: "---" %}
-                    {% for block in faq_blocks %}
-                      {% assign raw_lines = block | newline_to_br | split: "<br />" %}
-                      {% assign question = "" %}
-                      {% assign question_found = false %}
-                      {% capture answer %}{% endcapture %}
-                      {% for l in raw_lines %}
-                        {% assign l = l | strip_html | strip %}
-                        {% if l != "" %}
-                          {% if question_found %}
-                            {% capture answer %}{{ answer }}{% unless answer == "" %} {% endunless %}{{ l }}{% endcapture %}
-                          {% else %}
-                            {% assign question = l %}
-                            {% assign question_found = true %}
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
-                      {% if question != "" %}
-
-                    <article class="post-faq-item">
-
-                        <h3>
-                            {{ question }}
-                        </h3>
-
-                        <p>
-                            {{ answer }}
-                        </p>
-
-                    </article>
-
-                      {% endif %}
-                    {% endfor %}
-
-                </section>
-
-                {% endif %}
 </head>
 
 <body>
@@ -315,45 +157,16 @@
 
     <main id="main-content">
 
-        <section
-            class="post-hero"
-            aria-labelledby="post-heading">
-
-            <div
-                class="post-hero-mesh"
-                aria-hidden="true">
-            </div>
-
+        <!-- Hero Section -->
+        <section class="post-hero" aria-labelledby="post-heading">
+            <div class="post-hero-mesh" aria-hidden="true"></div>
             <div class="post-hero-content">
-
-                <nav
-                    class="breadcrumb"
-                    aria-label="Breadcrumb">
-
-                    <a href="/">
-                        Home
-                    </a>
-
-                    <span
-                        class="breadcrumb-sep"
-                        aria-hidden="true">
-                        /
-                    </span>
-
-                    <a href="/blog/">
-                        Blog
-                    </a>
-
-                    <span
-                        class="breadcrumb-sep"
-                        aria-hidden="true">
-                        /
-                    </span>
-
-                    <span aria-current="page">
-                        {{ page.short_title | default: page.title }}
-                    </span>
-
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+                    <a href="/blog/">Blog</a>
+                    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+                    <span aria-current="page">{{ page.short_title | default: page.title }}</span>
                 </nav>
 
                 {% if page.category %}
@@ -373,160 +186,90 @@
                 {% endif %}
 
                 <div class="post-meta">
-
                     <span class="post-meta-item">
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <rect
-                                x="3"
-                                y="5"
-                                width="18"
-                                height="16"
-                                rx="2">
-                            </rect>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
                             <path d="M16 3v4M8 3v4M3 10h18"></path>
                         </svg>
-
-                        <time
-                            datetime="{{ page.date | date_to_xmlschema }}">
+                        <time datetime="{{ page.date | date_to_xmlschema }}">
                             {{ page.date | date: "%b %d, %Y" }}
                         </time>
                     </span>
 
                     <span class="post-meta-item">
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <circle
-                                cx="12"
-                                cy="12"
-                                r="9">
-                            </circle>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
                             <path d="M12 7v5l3 2"></path>
                         </svg>
-
                         {{ page.read_time | default: "5 min read" }}
                     </span>
 
                     <span class="post-meta-item">
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true">
-                            <circle
-                                cx="12"
-                                cy="8"
-                                r="3">
-                            </circle>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="8" r="3"></circle>
                             <path d="M6 20c.7-4 3-6 6-6s5.3 2 6 6"></path>
                         </svg>
-
                         {{ page.author | default: "StudentCalcTools" }}
                     </span>
-
                 </div>
-
             </div>
-
         </section>
 
-        <section class="post-wrapper">
+        <!-- 2-COLUMN CONTAINER (Sidebar + Content) -->
+        <div class="blog-container">
+            
+            <!-- LEFT SIDEBAR -->
+            {% include sidebar.html %}
 
-            <article class="post-card">
+            <!-- RIGHT MAIN ARTICLE -->
+            <main class="blog-content">
+                <article class="post-card">
+                    {% if page.featured_image or page.image %}
+                    <figure class="post-featured-figure">
+                        <img class="post-featured-image" src="{{ image_path | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" decoding="async">
+                    </figure>
+                    {% endif %}
 
-                {% if page.featured_image or page.image %}
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
 
-                <figure class="post-featured-figure">
+                    {% if page.faqs_raw and page.faqs_raw != "" %}
+                    <section class="post-faq" aria-labelledby="post-faq-heading">
+                        <h2 id="post-faq-heading">Frequently Asked Questions</h2>
+                        {% assign faq_blocks = page.faqs_raw | split: "---" %}
+                        {% for block in faq_blocks %}
+                          {% assign block = block | strip %}
+                          {% assign block = block | replace: "\n", newline %}
+                          {% if block != "" %}
+                            {% assign lines = block | split: newline %}
+                            {% assign question = lines[0] | strip %}
+                            {% assign answer_lines = lines | slice: 1, 999 %}
+                            {% assign answer = answer_lines | join: newline | strip %}
 
-                    <img
-                        class="post-featured-image"
-                        src="{{ image_path | relative_url }}"
-                        alt="{{ page.image_alt | default: page.title | escape }}"
-                        decoding="async">
+                            <article class="post-faq-item">
+                                <h3>{{ question }}</h3>
+                                <p>{{ answer | newline_to_br }}</p>
+                            </article>
+                          {% endif %}
+                        {% endfor %}
+                    </section>
+                    {% endif %}
+                </article>
+            </main>
 
-                </figure>
+        </div>
 
-                {% endif %}
-
-                <div class="post-content">
-                    {% include author-box.html %}
-                    {{ content }}
-                </div>
-
-                                {% if page.faqs_raw and page.faqs_raw != "" %}
-
-                <section
-                    class="post-faq"
-                    aria-labelledby="post-faq-heading">
-
-                    <h2 id="post-faq-heading">
-                        Frequently Asked Questions
-                    </h2>
-
-                   {% assign faq_blocks = page.faqs_raw | split: "---" %}
-                    {% for block in faq_blocks %}
-                      {% assign block = block | strip %}
-                      {% assign block = block | replace: "\n", newline %}
-                      {% if block != "" %}
-                        {% assign lines = block | split: newline %}
-                        {% assign question = lines[0] | strip %}
-                        {% assign answer_lines = lines | slice: 1, 999 %}
-                        {% assign answer = answer_lines | join: newline | strip %}
-
-                    <article class="post-faq-item">
-
-                        <h3>
-                            {{ question }}
-                        </h3>
-
-                        <p>
-                            {{ answer | newline_to_br }}
-                        </p>
-
-                    </article>
-
-                      {% endif %}
-                    {% endfor %}
-
-                </section>
-
-                {% endif %}
-            </article>
-
-        </section>
-
-        <section
-            class="post-cta"
-            aria-labelledby="post-cta-heading">
-
+        <!-- CTA Section -->
+        <section class="post-cta" aria-labelledby="post-cta-heading">
             <div class="post-cta-wrap">
-
-                <h2 id="post-cta-heading">
-                    Put the guide into practice
-                </h2>
-
-                <p>
-                    Use StudentCalcTools calculators for GPA, grades, attendance, class rank, study planning and college-cost estimates.
-                </p>
-
+                <h2 id="post-cta-heading">Put the guide into practice</h2>
+                <p>Use StudentCalcTools calculators for GPA, grades, attendance, class rank, study planning and college-cost estimates.</p>
                 <div class="post-cta-actions">
-
-                    <a
-                        href="/calculators/"
-                        class="post-cta-primary">
-                        Browse All Calculators
-                    </a>
-
-                    <a
-                        href="/blog/"
-                        class="post-cta-secondary">
-                        Read More Guides
-                    </a>
-
+                    <a href="/calculators/" class="post-cta-primary">Browse All Calculators</a>
+                    <a href="/blog/" class="post-cta-secondary">Read More Guides</a>
                 </div>
-
             </div>
-
         </section>
 
     </main>
