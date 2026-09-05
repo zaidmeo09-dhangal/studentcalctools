@@ -1215,3 +1215,47 @@ ul#dynamic-toc li {
   background-color: #3b82f6 !important;
   flex-shrink: 0 !important;
 }
+
+/* TOC Clean Container Layout */
+.toc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.toc-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  padding: 6px 10px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.toc-item.toc-subitem {
+  padding-left: 24px !important; /* H3 heading indentation */
+}
+
+.toc-item:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.toc-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background-color: #3b82f6 !important;
+  flex-shrink: 0 !important;
+}
+
+.toc-item:hover .toc-bullet {
+  background-color: #ffffff !important;
+  transform: scale(1.3) !important;
+}
