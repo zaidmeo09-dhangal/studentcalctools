@@ -24,6 +24,64 @@ excerpt: Use a test grade calculator to convert points into percentages and
 featured_image: /assets/images/how-to-calculate-your-score-with-a-test-grade-calculator.webp
 image_alt: How to Calculate Your Score With a Test Grade Calculator
 read_time: 5 min read
+faqs_raw: >-
+  How do I calculate my test grade from points?
+
+  Divide the points you earned by the total possible points and multiply by 100.
+  For example, 42 out of 50 equals 42 ÷ 50 × 100, or 84%.
+
+  ---
+
+  What grade is 18 out of 20?
+
+  Eighteen divided by 20 equals 0.90. Multiply by 100 to get 90%.
+
+  ---
+
+  How do I calculate a test grade from wrong answers?
+
+  Subtract the number of incorrect answers from the total number of questions.
+  Divide the correct answers by total questions and multiply by 100. This only
+  works when all questions have equal value.
+
+  ---
+
+  How do I calculate the average of several tests?
+
+  Add the percentages and divide by the number of tests when all tests count
+  equally. When tests have different point totals, add all earned points and
+  divide by all possible points.
+
+  ---
+
+  Can teachers use the calculator?
+
+  Yes. Teachers can calculate individual percentages from points, convert
+  percentages into letter grades, and calculate class averages. Official grading
+  policies and rounding rules should still be applied separately.
+
+  ---
+
+  What is the difference between a test grade and a semester grade?
+
+  A test grade measures performance on one assessment. A semester grade combines
+  tests with other coursework, such as quizzes, homework, projects,
+  participation, and final exams.
+
+  ---
+
+  Can a test grade be higher than 100%?
+
+  Yes, extra credit can produce a result higher than 100%. Whether the
+  additional percentage counts toward the course grade depends on the teacher’s
+  policy.
+
+  ---
+
+  Can this predict my AP World History Exam score?
+
+  No. It can calculate a classroom percentage from points, but official AP Exams
+  use weighted section scores and report results on a 1-to-5 scale.
 ---
 Use our [test grade calculator](https://studentcalctools.com/grade-calculator/) to convert the points you earned into a percentage, estimate your letter grade, and see how the test may affect your overall course grade.
 
@@ -456,8 +514,6 @@ Use the rounding policy written in the syllabus rather than assuming the result 
 | Predicting an AP score from a classroom percentage | Official AP scores use a separate 1-to-5 process |
 
 
-
-
 ## **How to Use Your Test Grade Result**
 
 Once you calculate your test score, decide what the number means for the course.
@@ -489,39 +545,3 @@ A score of 42 out of 50 equals 84%. From there, compare the percentage with your
 The arithmetic is straightforward, but the grading policy still matters. Curves, extra credit, dropped questions, category weights, and rounding rules can all change the official result.
 
 Enter your score and test weight into the calculator linked at the beginning of this guide to calculate your result quickly and see how it contributes to your overall class grade.
-
-
-
-## **Frequently Asked Questions**
-
-### **How do I calculate my test grade from points?**
-
-Divide the points you earned by the total possible points and multiply by 100. For example, 42 out of 50 equals 42 ÷ 50 × 100, or 84%.
-
-### **What grade is 18 out of 20?**
-
-Eighteen divided by 20 equals 0.90. Multiply by 100 to get 90%.
-
-### **How do I calculate a test grade from wrong answers?**
-
-Subtract the number of incorrect answers from the total number of questions. Divide the correct answers by total questions and multiply by 100. This only works when all questions have equal value.
-
-### **How do I calculate the average of several tests?**
-
-Add the percentages and divide by the number of tests when all tests count equally. When tests have different point totals, add all earned points and divide by all possible points.
-
-### **Can teachers use the calculator?**
-
-Yes. Teachers can calculate individual percentages from points, convert percentages into letter grades, and calculate class averages. Official grading policies and rounding rules should still be applied separately.
-
-### **What is the difference between a test grade and a semester grade?**
-
-A test grade measures performance on one assessment. A semester grade combines tests with other coursework, such as quizzes, homework, projects, participation, and final exams.
-
-### **Can a test grade be higher than 100%?**
-
-Yes, extra credit can produce a result higher than 100%. Whether the additional percentage counts toward the course grade depends on the teacher’s policy.
-
-### **Can this predict my AP World History Exam score?**
-
-No. It can calculate a classroom percentage from points, but official AP Exams use weighted section scores and report results on a 1-to-5 scale.
