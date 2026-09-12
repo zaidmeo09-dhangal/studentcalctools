@@ -3,7 +3,7 @@ layout: post
 title: State-by-State Class Rank Admission Rules (TX, CA, FL & More)
 slug: class-rank-admission-rules-by-state
 date: 2026-09-12
-status: Draft
+status: Published
 author: Ethan Cole
 category: Class Rank Calculator
 tags:
@@ -113,8 +113,6 @@ The following table consolidates current state policies. Please note that state 
 | Florida | Talented Twenty Program | Top 20% of graduating class |
 | Mississippi | Mississippi Scholars/Tech Master | 3.0 GPA + specific core curriculum |
 | Georgia | HOPE Scholarship/Admission Context | 3.0 GPA (Holistic review includes rank) |
-
-
 
 
 ## **Deep Dive: Understanding Key State Policies**
