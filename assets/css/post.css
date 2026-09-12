@@ -1292,3 +1292,34 @@ ul#dynamic-toc li {
   border: 3px solid #ffffff !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
 }
+
+/* Mobile blog overflow fix */
+.blog-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.blog-container {
+  width: 100%;
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+@media (max-width: 850px) {
+  .blog-container {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    margin: 32px auto;
+    padding: 0 16px;
+  }
+
+  .blog-sidebar,
+  .blog-content,
+  .post-card,
+  .post-content {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
