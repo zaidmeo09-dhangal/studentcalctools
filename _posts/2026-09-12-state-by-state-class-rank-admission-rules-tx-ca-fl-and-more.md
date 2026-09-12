@@ -97,8 +97,6 @@ As competition for spots at top-tier public universities continues to increase, 
 
 Resources like the [College Board](https://www.collegeboard.org) and official state university websites are your primary sources for verification. Always cross-reference the information provided here with the specific admissions portal of your target university, as residency requirements, credit hours completed, and course prerequisites often accompany the rank-based eligibility criteria.
 
-![Student advisor pointing to college application deadlines on a laptop chart..webp](/assets/images/student-advisor-pointing-to-college-application-deadlines-on-a-laptop-chart.webp)
-
 
 
 ## **Conclusion**
