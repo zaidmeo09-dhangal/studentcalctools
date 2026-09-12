@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State-by-State Class Rank Admission Rules (TX, CA, FL & More)
+title: "State-by-State Class Rank Admission Rules (TX, CA, FL & More) "
 slug: class-rank-admission-rules-by-state
 date: 2026-09-12
 status: Published
