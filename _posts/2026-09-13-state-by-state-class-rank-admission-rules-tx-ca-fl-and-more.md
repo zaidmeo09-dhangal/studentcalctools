@@ -113,6 +113,8 @@ The following table consolidates current state policies. Please note that state 
 | Georgia | HOPE Scholarship/Admission Context | 3.0 GPA (Holistic review includes rank) |
 
 
+
+
 ## **Deep Dive: Understanding Key State Policies**
 
 ### **Texas: The Gold Standard of Rank-Based Admission**
@@ -127,7 +129,7 @@ The University of California system uses the ELC program to ensure that the top 
 
 Florida’s approach is unique because it focuses on a broader swath of students. The Talented Twenty program guarantees that students in the top 20 percent of their high school graduating class receive priority admission to one of the State University System of Florida institutions. This is not an absolute "golden ticket" to the school of one's choice, but it is a massive advantage in the admissions pipeline, ensuring that these students are given primary consideration over those who fall outside that top bracket.
 
-![Student reviewing a rising class rank chart over four years of high school..webp](blob:https:/app.pagescms.org/b0e287dd-f36c-49c3-b309-6d6b9d609a80)
+![Student reviewing a rising class rank chart over four years of high school.](/assets/images/student-reviewing-a-rising-class-rank-chart-over-four-years-of-high-school.webp)
 
 
 
@@ -159,7 +161,7 @@ As competition for spots at top-tier public universities continues to increase, 
 
 Resources like the [College Board](https://www.collegeboard.org) and official state university websites are your primary sources for verification. Always cross-reference the information provided here with the specific admissions portal of your target university, as residency requirements, credit hours completed, and course prerequisites often accompany the rank-based eligibility criteria.
 
-![Student advisor pointing to college application deadlines on a laptop chart..webp](blob:https:/app.pagescms.org/c4f5a93a-493e-486c-8753-871c4fc185ef)
+![Student advisor pointing to college application deadlines on a laptop chart.](/assets/images/student-advisor-pointing-to-college-application-deadlines-on-a-laptop-chart.webp)
 
 
 
