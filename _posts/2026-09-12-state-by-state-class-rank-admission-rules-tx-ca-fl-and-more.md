@@ -31,9 +31,7 @@ faqs_raw: >-
   efforts on finding the right "fit" rather than worrying solely about whether
   they will be denied from all of their target schools.
 
-
-  --- 
-
+  ---
 
   Do I need to maintain a certain GPA to keep my automatic admission?
 
@@ -43,9 +41,7 @@ faqs_raw: >-
   some programs have "guaranteed" status, they usually still require you to meet
   minimum university standards for graduation and conduct.
 
-
-  --- 
-
+  ---
 
   Is class rank calculated the same way in every state?
 
@@ -56,9 +52,7 @@ faqs_raw: >-
   percent" programs. Always ask your guidance counselor how your specific high
   school calculates rank before relying on it for college planning.
 
-
   --- 
-
 
   Does the size of my high school matter for rank-based admission?
 
@@ -70,9 +64,7 @@ faqs_raw: >-
   encourages students to excel in their local environment regardless of school
   size.
 
-
   --- 
-
 
   What if I have an upward trend but my current rank is low?
 
@@ -82,8 +74,6 @@ faqs_raw: >-
   and providing letters of recommendation that speak to your work ethic can
   often mitigate a lower class rank when applying to schools that do not have a
   hard-line automatic policy.
-
-  ---
 ---
 Navigating the college admissions landscape often feels like deciphering a secret code. For high-achieving students, one of the most powerful tools in their arsenal is the concept of automatic admission. Many state university systems recognize that class rank is a strong indicator of academic resilience and potential, leading them to implement policies that guarantee a spot at public institutions for top-performing students. Understanding these **class rank admission rules by state** is essential for students, parents, and guidance counselors planning their academic future.
 
