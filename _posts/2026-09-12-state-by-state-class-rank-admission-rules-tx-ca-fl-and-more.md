@@ -44,8 +44,6 @@ The following table consolidates current state policies. Please note that state 
 | Georgia | HOPE Scholarship/Admission Context | 3.0 GPA (Holistic review includes rank) |
 
 
-
-
 ## **Deep Dive: Understanding Key State Policies**
 
 ### **Texas: The Gold Standard of Rank-Based Admission**
@@ -88,7 +86,7 @@ However, private colleges are often highly aware of state-level benchmarks. If y
 
 As competition for spots at top-tier public universities continues to increase, the value of knowing where you stand becomes higher than ever. Tracking your rank is not just about the final number on your transcript; it is about knowing your options and managing your strategy effectively. By using a ++[class rank calculator](http://docs.google.com/class-rank-calculator/)++, you can simulate how different semester performances will shift your standing, allowing you to prioritize your efforts during critical final terms.
 
-Resources like the ++[College Board](https://www.collegeboard.org)++ and official state university websites are your primary sources for verification. Always cross-reference the information provided here with the specific admissions portal of your target university, as residency requirements, credit hours completed, and course prerequisites often accompany the rank-based eligibility criteria.
+Resources like the College Board and official state university websites are your primary sources for verification. Always cross-reference the information provided here with the specific admissions portal of your target university, as residency requirements, credit hours completed, and course prerequisites often accompany the rank-based eligibility criteria.
 
 
 
