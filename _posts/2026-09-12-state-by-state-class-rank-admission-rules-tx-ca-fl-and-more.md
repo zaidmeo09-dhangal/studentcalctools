@@ -21,7 +21,7 @@ excerpt: State-by-state class rank admission rules explained, including Texas,
   college admissions.
 featured_image: /assets/images/state-by-state-class-rank-admission-rules-tx-ca-fl-and-more.webp
 image_alt: State-by-State Class Rank Admission Rules
-read_time: 5 min read
+read_time: "5 min read "
 ---
 Navigating the college admissions landscape often feels like deciphering a secret code. For high-achieving students, one of the most powerful tools in their arsenal is the concept of automatic admission. Many state university systems recognize that class rank is a strong indicator of academic resilience and potential, leading them to implement policies that guarantee a spot at public institutions for top-performing students. Understanding these **class rank admission rules by state** is essential for students, parents, and guidance counselors planning their academic future.
 
