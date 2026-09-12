@@ -67,8 +67,6 @@ The University of California system uses the ELC program to ensure that the top 
 
 Florida’s approach is unique because it focuses on a broader swath of students. The Talented Twenty program guarantees that students in the top 20 percent of their high school graduating class receive priority admission to one of the State University System of Florida institutions. This is not an absolute "golden ticket" to the school of one's choice, but it is a massive advantage in the admissions pipeline, ensuring that these students are given primary consideration over those who fall outside that top bracket.
 
-![Student reviewing a rising class rank chart over four years of high school..webp](/assets/images/student-reviewing-a-rising-class-rank-chart-over-four-years-of-high-school.webp)
-
 
 
 ## **What If Your State Is Not Listed?**
