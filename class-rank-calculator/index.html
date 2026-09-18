@@ -3,1419 +3,1951 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://studentcalctools.com/class-rank-calculator/">
+<title>Class Rank Calculator: Percentile & Top Percentage</title>
+<meta name="description" content="Calculate your class rank percentile, top percentage, decile, quintile and quartile. Check the rank needed for a top 10% or 25% target. Free to use.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light dark">
 
-    <meta name="theme-color" content="#2563eb">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudentCalcTools">
+<meta property="og:url" content="https://studentcalctools.com/class-rank-calculator/">
+<meta property="og:title" content="Class Rank Calculator: Percentile & Top Percentage">
+<meta property="og:image:alt" content="StudentCalcTools class rank calculator">
+<meta property="og:description" content="Calculate your class rank percentile, top percentage, decile, quintile and quartile. Check the rank needed for a top 10% or 25% target. Free to use.">
+<meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
 
-    <link rel="canonical" href="https://studentcalctools.com/class-rank-calculator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="StudentCalcTools class rank calculator">
+<meta name="twitter:title" content="Class Rank Calculator: Percentile &amp; Top Percentage">
+<meta name="twitter:description" content="Calculate your class rank percentile, top percentage, decile, quintile and quartile. Check the rank needed for a top 10% or 25% target. Free to use.">
+<meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+<meta name="author" content="StudentCalcTools">
 
-    <title>Class Rank Calculator: Percentile & Top Percentage</title>
-    <meta
-        name="description"
-        content="Use your class rank and class size to calculate percentile, top percentage, decile, and academic standing. Free high school and college tool.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="color-scheme" content="light dark">
+<script src="/assets/js/theme-init.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
+<script src="/assets/js/analytics.js"></script>
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="StudentCalcTools">
-    <meta property="og:url" content="https://studentcalctools.com/class-rank-calculator/">
-    <meta property="og:title" content="Class Rank Calculator: Percentile & Top Percentage">
-    <meta property="og:image:alt" content="StudentCalcTools class rank calculator">
-    <meta
-        property="og:description"
-        content="Use your class rank and class size to calculate percentile, top percentage, decile, and academic standing. Free high school and college tool.">
-    <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/class-rank-calculator.css">
+<link rel="stylesheet" href="/assets/css/site.css">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:alt" content="StudentCalcTools class rank calculator">
-    <meta name="twitter:title" content="Class Rank Calculator: Percentile, Percentage and Top %">
-    <meta
-        name="twitter:description"
-        content="Free class rank calculator for high school and college students. Find your percentile, top percentage, and academic standing instantly.">
-    <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+<style>
+.crc-quick-answer {
+  background: var(--blue-light);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 0 0 22px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.crc-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.crc-tab {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.crc-tab-active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+.crc-gpa-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+.crc-inline-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.crc-select {
+  width: 100%;
+}
+[hidden] {
+  display: none !important;
+}
+.crc-error {
+  color: var(--danger);
+  margin: 12px 0;
+  font-weight: 600;
+}
+.crc-groups {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 14px;
+  margin: 18px 0;
+  text-align: left;
+  font-size: 14px;
+}
+.crc-groups dt {
+  font-weight: 800;
+  color: var(--text);
+}
+.crc-groups dd {
+  margin: 0;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+.crc-target {
+  margin-top: 24px;
+  border-top: 1px solid var(--border-strong);
+  padding-top: 20px;
+}
+.crc-target summary {
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 700;
+  padding: 8px 0;
+}
+.crc-target .field-row {
+  margin-top: 16px;
+}
+.crc-target-result {
+  margin-top: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.calc-input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+#gpaResultValue {
+  font-size: clamp(40px, 8vw, 64px);
+}
+html:not(.js) .reveal {
+  opacity: 1;
+  transform: none;
+}
+html:not(.js) .faq-answer {
+  max-height: none;
+}
+@media (max-width: 460px) {
+  .crc-groups {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .crc-groups dd {
+    margin-bottom: 10px;
+  }
+  .crc-tabs {
+    flex-wrap: wrap;
+  }
+  .crc-tab {
+    min-width: 120px;
+  }
+}
+</style>
 
-    <meta name="author" content="StudentCalcTools">
-
-    <script src="/assets/js/theme-init.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNEKR7QE0"></script>
-    <script src="/assets/js/analytics.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="/assets/css/class-rank-calculator.css">
-    <link rel="stylesheet" href="/assets/css/site.css">
-
-    <style>
-        .crc-quick-answer {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin: 0 0 22px 0;
-            font-size: 15px;
-            line-height: 1.5;
-            color: #1e3a8a;
-        }
-        .crc-tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        .crc-tab {
-            flex: 1;
-            padding: 10px 14px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            background: #fff;
-            color: #374151;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-        }
-        .crc-tab-active {
-            background: #2563eb;
-            border-color: #2563eb;
-            color: #fff;
-        }
-        .crc-gpa-note {
-            font-size: 14px;
-            color: #6b7280;
-            margin: 0 0 16px 0;
-            line-height: 1.5;
-        }
-        .crc-inline-note {
-            font-size: 13px;
-            color: #6b7280;
-            margin-top: 14px;
-            line-height: 1.5;
-        }
-        .crc-select {
-            width: 100%;
-        }
-    </style>
-
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "@id": "https://studentcalctools.com/#organization",
-                "name": "StudentCalcTools",
-                "url": "https://studentcalctools.com/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://studentcalctools.com/apple-touch-icon.png",
-                    "width": 180,
-                    "height": 180
-                }
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://studentcalctools.com/#website",
-                "url": "https://studentcalctools.com/",
-                "name": "StudentCalcTools",
-                "publisher": {
-                    "@id": "https://studentcalctools.com/#organization"
-                },
-                "inLanguage": "en-US"
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://studentcalctools.com/class-rank-calculator/#webpage",
-                "url": "https://studentcalctools.com/class-rank-calculator/",
-                "name": "Class Rank Calculator: Percentile and Top Percent",
-                "description": "Free class rank calculator for high school and college. Enter your rank and class size to find your percentile, top percentage, and standing.",
-                "isPartOf": {
-                    "@id": "https://studentcalctools.com/#website"
-                },
-                "publisher": {
-                    "@id": "https://studentcalctools.com/#organization"
-                },
-                "breadcrumb": {
-                    "@id": "https://studentcalctools.com/class-rank-calculator/#breadcrumb"
-                },
-                "mainEntity": {
-                    "@id": "https://studentcalctools.com/class-rank-calculator/#application"
-                },
-                "dateModified": "2026-08-15",
-                "inLanguage": "en-US"
-            },
-            {
-                "@type": "WebApplication",
-                "@id": "https://studentcalctools.com/class-rank-calculator/#application",
-                "name": "Class Rank Calculator",
-                "url": "https://studentcalctools.com/class-rank-calculator/",
-                "description": "Find class rank percentile, top percentage, and academic standing from rank and class size.",
-                "applicationCategory": "EducationalApplication",
-                "operatingSystem": "All",
-                "browserRequirements": "Requires JavaScript",
-                "isAccessibleForFree": true,
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                },
-                "featureList": [
-                    "Class rank percentile",
-                    "Top percentage",
-                    "Academic standing range"
-                ]
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://studentcalctools.com/class-rank-calculator/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://studentcalctools.com/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Calculators",
-                        "item": "https://studentcalctools.com/calculators/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "Class Rank Calculator",
-                        "item": "https://studentcalctools.com/class-rank-calculator/"
-                    }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://studentcalctools.com/class-rank-calculator/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is a class rank calculator?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A class rank calculator converts your rank and class size into a percentile estimate and a top percentage. This calculator uses an inclusive percentile formula that counts your own position plus lower-ranked positions in your class."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How do you calculate class rank percentile?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "This calculator subtracts your rank from the total number of students, adds 1, divides by the total number of students, and multiplies by 100. The formula is: Class Rank Percentile = ((Total Students minus Rank plus 1) divided by Total Students) times 100. This produces an inclusive percentile estimate, and official school formulas may use a different convention."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is a good class rank percentile?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A higher percentile estimate generally indicates a stronger class standing. For exact top-group labels, use the top percentage shown by the calculator: 10 percent or lower means top 10 percent, and 25 percent or lower means top 25 percent. What counts as good depends on your school, college, scholarship, and academic goals."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What does top 10 percent mean in class rank?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Top 10 percent means your rank falls within the highest 10 percent of students in your class. In a class of 400 students, the top 10 percent is roughly the top 40 ranked students."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the difference between class rank percentage and percentile?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Top percentage is the share of the class at or above your rank, so lower is better, such as top 5 percent. This calculator's percentile is an inclusive estimate based on your position plus lower-ranked positions, so higher is better. The calculator shows both values from the same inputs."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is this a high school class rank calculator?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. It works for high school and college students who already know their rank and class size, and it reports your percentile, top percentage, and standing for uses like applications, scholarships, and honor society requirements."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Does weighted or unweighted GPA affect class rank?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "It can. Some schools rank students using weighted GPA, which gives extra points for honors, AP, and IB courses, while others use unweighted GPA. Check your school policy, because the same grades can produce a different rank under each method."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How are tied ranks handled?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "When two or more students share the exact same GPA, schools usually handle the tie in one of two ways: giving both students the same rank and skipping the next number, or using unrounded GPA decimals to separate them. This calculator does not detect or adjust for ties. Enter the exact rank your school has assigned you, and ask your counselor if you are unsure how ties are handled."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Does class rank still matter for college admissions?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "It matters less than it once did. According to NACAC, grades and strength of curriculum are the most important admission factors, while most four-year colleges give class rank limited or no importance. Rank still counts in specific cases, such as Texas automatic admission, honor societies, and some merit scholarships."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What if my school does not report class rank?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "If your school does not report rank, admissions officers rely on your GPA, course rigor, the school profile, essays, and recommendations instead. A growing number of high schools no longer report exact rank, so students without one are generally not at a disadvantage."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is my data saved?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "No. The calculation runs in your browser. Your class size and rank are not stored or shared."
-                        }
-                    }
-                ]
-            }
-        ]
+      "@type": "Organization",
+      "@id": "https://studentcalctools.com/#organization",
+      "name": "StudentCalcTools",
+      "url": "https://studentcalctools.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://studentcalctools.com/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://studentcalctools.com/#website",
+      "url": "https://studentcalctools.com/",
+      "name": "StudentCalcTools",
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://studentcalctools.com/class-rank-calculator/#webpage",
+      "url": "https://studentcalctools.com/class-rank-calculator/",
+      "name": "Class Rank Calculator: Percentile & Top Percentage",
+      "description": "Calculate percentile, top percentage and reporting groups from rank and class size, or find a target rank.",
+      "isPartOf": {
+        "@id": "https://studentcalctools.com/#website"
+      },
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://studentcalctools.com/class-rank-calculator/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://studentcalctools.com/class-rank-calculator/#application"
+      },
+      "dateModified": "2026-09-18",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://studentcalctools.com/class-rank-calculator/#application",
+      "name": "Class Rank Calculator",
+      "url": "https://studentcalctools.com/class-rank-calculator/",
+      "description": "Find class rank percentile, top percentage, and academic standing from rank and class size.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Inclusive class rank percentile",
+        "Top percentage",
+        "Decile, quintile and quartile groups",
+        "Target rank cutoff",
+        "GPA-based statistical estimate"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://studentcalctools.com/class-rank-calculator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://studentcalctools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://studentcalctools.com/calculators/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Class Rank Calculator",
+          "item": "https://studentcalctools.com/class-rank-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://studentcalctools.com/class-rank-calculator/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a class rank calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A class rank calculator converts your rank and class size into a percentile estimate and a top percentage. This calculator uses an inclusive percentile formula that counts your own position plus lower-ranked positions in your class."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate class rank percentile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator subtracts your rank from the total number of students, adds 1, divides by the total number of students, and multiplies by 100. The formula is: Class Rank Percentile = ((Total Students minus Rank plus 1) divided by Total Students) times 100. This produces an inclusive percentile estimate, and official school formulas may use a different convention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good class rank percentile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A higher percentile estimate generally indicates a stronger class standing. For exact top-group labels, use the top percentage shown by the calculator: 10 percent or lower means top 10 percent, and 25 percent or lower means top 25 percent. What counts as good depends on your school, college, scholarship, and academic goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does top 10 percent mean in class rank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top 10 percent means your rank falls within the highest 10 percent of students in your class. In a class of 400 students, the top 10 percent is roughly the top 40 ranked students."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between class rank percentage and percentile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top percentage is the share of the class at or above your rank, so lower is better, such as top 5 percent. This calculator's percentile is an inclusive estimate based on your position plus lower-ranked positions, so higher is better. The calculator shows both values from the same inputs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a high school class rank calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It works for high school and college students who already know their rank and class size, and it reports your percentile, top percentage, and standing for uses like applications, scholarships, and honor society requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does weighted or unweighted GPA affect class rank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can. Some schools rank students using weighted GPA, which gives extra points for honors, AP, and IB courses, while others use unweighted GPA. Check your school policy, because the same grades can produce a different rank under each method."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are tied ranks handled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When two or more students share the exact same GPA, schools usually handle the tie in one of two ways: giving both students the same rank and skipping the next number, or using unrounded GPA decimals to separate them. This calculator does not detect or adjust for ties. Enter the exact rank your school has assigned you, and ask your counselor if you are unsure how ties are handled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does class rank still matter for college admissions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It matters less than it once did. According to NACAC, grades and strength of curriculum are the most important admission factors, while most four-year colleges give class rank limited or no importance. Rank still counts in specific cases, such as Texas automatic admission, honor societies, and some merit scholarships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my school does not report class rank?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your school does not report rank, admissions officers rely on your GPA, course rigor, the school profile, essays, and recommendations instead. A growing number of high schools no longer report exact rank, so students without one are generally not at a disadvantage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The calculation runs in your browser. Your class size and rank are not stored or shared."
+          }
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 
 <body>
-
-    {% include header.html %}
-
-    <main id="main-content">
-
-        <section class="page-hero">
-            <div class="page-hero-content">
-
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="/">Home</a>
-                    <span class="breadcrumb-sep" aria-hidden="true">›</span>
-                    <a href="/calculators/">Calculators</a>
-                    <span class="breadcrumb-sep" aria-hidden="true">›</span>
-                    <span>Class Rank Calculator</span>
-                </nav>
-
-
-                <h1>
-                    Class Rank
-                    <span class="gradient-text">Calculator</span>
-                </h1>
-
-                <p>
-                    Estimate your class rank percentile and see where you stand in your graduating class.
-                    Enter your class size and your rank to calculate your percentile estimate,
-                    your top percentage, and your academic standing in seconds.
-                </p>
-
-            </div>
-        </section>
-
-        <section class="calc-section">
-            <div class="calc-card">
-
-                <h2 class="calc-card-title">
-                    Calculate Your Class Rank Percentile
-                </h2>
-
-                <p class="calc-card-subtitle">
-                    Enter your total class size and your rank to see an inclusive class rank percentile
-                    estimate, your top percentage, and whether you fall in the top 10 percent,
-                    top 25 percent, or another range.
-                </p>
-
-                <div class="crc-quick-answer">
-                    <strong>Quick answer:</strong> enter your rank out of your total class size below.
-                    Example: rank 25 out of 300 = 92nd percentile, which is the top 8.3% of the class.
-                </div>
-
-                <div class="crc-tabs" role="tablist" aria-label="Class rank calculation mode">
-                    <button type="button" class="crc-tab crc-tab-active" id="rankTabBtn" role="tab" aria-selected="true">
-                        I Know My Rank
-                    </button>
-                    <button type="button" class="crc-tab" id="gpaTabBtn" role="tab" aria-selected="false">
-                        Estimate From GPA
-                    </button>
-                </div>
-
-                <div class="field-row" id="rankFieldRow">
-
-                        <div class="field-group">
-                            <label class="field-label" for="totalStudents">
-                                Total Students in Class
-                            </label>
-
-                            <input
-                                type="number"
-                                class="calc-input"
-                                id="totalStudents"
-                                placeholder="300"
-                                value="300"
-                                min="1"
-                                step="1">
-                        </div>
-
-                        <div class="field-group">
-                            <label class="field-label" for="yourRank">
-                                Your Rank
-                            </label>
-
-                            <input
-                                type="number"
-                                class="calc-input"
-                                id="yourRank"
-                                placeholder="25"
-                                value="25"
-                                min="1"
-                                step="1">
-                        </div>
-
-                    </div>
-
-                    <button
-                        type="button"
-                        class="calc-calculate"
-                        id="calculateBtn">
-                        Calculate Percentile
-                    </button>
-
-                    <div
-                        class="calc-result"
-                        id="calcResult"
-                        role="status"
-                        aria-live="polite">
-
-                        <div class="calc-result-label">
-                            YOUR CLASS RANK PERCENTILE
-                        </div>
-
-                        <div
-                            class="calc-result-value"
-                            id="resultValue">
-                            --
-                        </div>
-
-                        <div
-                            class="calc-result-tier"
-                            id="resultTier">
-                            Result
-                        </div>
-
-                        <div
-                            class="calc-result-extra"
-                            id="resultExtra">
-                            Your result shows your class rank percentile and top percentage.
-                        </div>
-
-                        <div class="calc-result-actions">
-
-                            <button
-                                type="button"
-                                class="result-btn"
-                                id="copyBtn">
-                                📋 Copy Result
-                            </button>
-
-                            <button
-                                type="button"
-                                class="result-btn"
-                                id="resetBtn">
-                                🔄 Reset
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <p class="crc-inline-note" id="rankInlineNote">
-                        This percentile is inclusive of your own position. Some schools use a different
-                        official formula, so confirm anything official with your counselor.
-                    </p>
-
-                <div id="gpaModeFields" style="display:none;">
-
-                    <p class="crc-gpa-note">
-                        Do not know your exact rank yet? Estimate your standing from your GPA compared to
-                        your class average. This uses a statistical estimate, not an official school
-                        calculation, so treat it as a starting point.
-                    </p>
-
-                    <div class="field-row">
-
-                        <div class="field-group">
-                            <label class="field-label" for="gpaModeYourGpa">
-                                Your GPA
-                            </label>
-
-                            <input
-                                type="number"
-                                class="calc-input"
-                                id="gpaModeYourGpa"
-                                placeholder="3.8"
-                                min="0"
-                                step="0.01">
-                        </div>
-
-                        <div class="field-group">
-                            <label class="field-label" for="gpaModeAvgGpa">
-                                Class Average GPA
-                            </label>
-
-                            <input
-                                type="number"
-                                class="calc-input"
-                                id="gpaModeAvgGpa"
-                                placeholder="3.2"
-                                min="0"
-                                step="0.01">
-                        </div>
-
-                    </div>
-
-                    <div class="field-row">
-
-                        <div class="field-group">
-                            <label class="field-label" for="gpaModeVariation">
-                                Class GPA Spread
-                            </label>
-
-                            <select class="calc-input crc-select" id="gpaModeVariation">
-                                <option value="low">Low (most students score similarly)</option>
-                                <option value="typical" selected>Typical</option>
-                                <option value="high">High (wide range of GPAs)</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <button
-                        type="button"
-                        class="calc-calculate"
-                        id="gpaEstimateBtn">
-                        Estimate My Percentile
-                    </button>
-
-                    <div
-                        class="calc-result"
-                        id="gpaCalcResult"
-                        role="status"
-                        aria-live="polite">
-
-                        <div class="calc-result-label">
-                            ESTIMATED CLASS RANK PERCENTILE
-                        </div>
-
-                        <div
-                            class="calc-result-value"
-                            id="gpaResultValue">
-                            --
-                        </div>
-
-                        <div
-                            class="calc-result-tier"
-                            id="gpaResultTier">
-                            Result
-                        </div>
-
-                        <div
-                            class="calc-result-extra"
-                            id="gpaResultExtra">
-                            Your estimated percentile and top percentage based on your GPA.
-                        </div>
-
-                        <div class="calc-result-actions">
-
-                            <button
-                                type="button"
-                                class="result-btn"
-                                id="gpaCopyBtn">
-                                📋 Copy Result
-                            </button>
-
-                            <button
-                                type="button"
-                                class="result-btn"
-                                id="gpaResetBtn">
-                                🔄 Reset
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <p class="crc-inline-note">
-                        This is a statistical estimate that assumes GPAs are roughly normally distributed.
-                        It is not your official rank. Switch to "I Know My Rank" once your school reports
-                        your exact rank.
-                    </p>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="content-section reveal">
-
-            <span class="eyebrow">THE BASICS</span>
-
-            <h2 class="section-title">
-                What Is Class Rank?
-            </h2>
-
-            <p>
-                Class rank is your academic position within your graduating class, based on your
-                grade point average. If your school ranks students, everyone is ordered from the
-                highest GPA to the lowest, and your rank is where you land in that list. A rank of
-                12 out of 240, for example, means 11 students have a higher GPA than you and everyone
-                else ranks below you.
-            </p>
-
-            <p>
-                Schools set class rank in one of two ways. Unweighted rank scores every course on
-                the same scale, while weighted rank gives extra points to honors, Advanced Placement,
-                and International Baccalaureate courses, so a student carrying harder classes can
-                rank higher. Your official rank is calculated and updated by your school, usually
-                the counselor or registrar, and it can shift each grading period as new grades come in.
-            </p>
-
-            <p>
-                This calculator is built for the moment you already know two numbers: your rank and
-                your class size. From those, it works out your percentile and your top percentage so
-                you can see your standing at a glance.
-            </p>
-
-        </section>
-
-        <section class="content-section alt-bg reveal">
-
-            <div class="content-wrap">
-
-                <span class="eyebrow">FORMULA</span>
-
-                <h2 class="section-title">
-                    How to Calculate Class Rank Percentile
-                </h2>
-
-                <p>
-                    This calculator uses an inclusive class rank percentile estimate that counts
-                    your own position plus the lower-ranked positions in your class. A higher
-                    percentile indicates a stronger class standing. Your top percentage measures
-                    the share of the class at or above your rank, where a lower number is better.
-                    Schools may use a different percentile convention for official reporting.
-                </p>
-
-                <div class="formula-box">
-
-                    <strong>Formula:</strong>
-
-                    <div class="formula-text">
-                        Class Rank Percentile = ((Total Students − Your Rank + 1) ÷ Total Students) × 100
-                    </div>
-
-                </div>
-
-                <div class="example-box">
-
-                    <p>
-                        <strong>Example 1:</strong>
-                        A class of 500 students, and your rank is 50.
-                    </p>
-
-                    <p>
-                        <strong>
-                            ((500 − 50 + 1) ÷ 500) × 100 = 90.2%
-                        </strong>
-                    </p>
-
-                    <p>
-                        You are around the 90th percentile, which puts you in the top 10 percent
-                        of your class.
-                    </p>
-
-                </div>
-
-                <div class="example-box">
-
-                    <p>
-                        <strong>Example 2:</strong>
-                        A class of 300 students, and your rank is 25.
-                    </p>
-
-                    <p>
-                        <strong>
-                            ((300 − 25 + 1) ÷ 300) × 100 = 92%
-                        </strong>
-                    </p>
-
-                    <p>
-                        That is about the 92nd percentile, or the top 8.3 percent of the class.
-                        Enter these same numbers in the calculator above to see it in action.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="content-section reveal">
-
-            <span class="eyebrow">RANK BASICS</span>
-
-            <h2 class="section-title">
-                Class Rank Percentage vs Percentile
-            </h2>
-
-            <p>
-                People often use these terms as if they mean the same thing, but they measure
-                standing from opposite directions. Getting them straight makes your result much
-                easier to read.
-            </p>
-
-            <div class="responsive-table">
-
-                <table class="info-table">
-
-                    <thead>
-                        <tr>
-                            <th>Term</th>
-                            <th>What It Means</th>
-                            <th>Better Result</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Class rank</td>
-                            <td>Your position in class, such as 25 out of 300</td>
-                            <td>Lower is better</td>
-                        </tr>
-
-                        <tr>
-                            <td>Class rank percentile</td>
-                            <td>
-                                An inclusive estimate based on your position plus lower-ranked positions
-                            </td>
-                            <td>Higher is better</td>
-                        </tr>
-
-                        <tr>
-                            <td>Top percentage</td>
-                            <td>The percentage of the class at or above your rank</td>
-                            <td>Lower is better</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-            <p>
-                For example, if you rank 30th in a class of 300, your top percentage is
-                10 percent, which means you are in the top 10 percent of your class and near
-                the 90th percentile.
-            </p>
-
-        </section>
-
-        <section class="content-section alt-bg reveal">
-
-            <div class="content-wrap">
-
-                <span class="eyebrow">RESULT GUIDE</span>
-
-                <h2 class="section-title">
-                    Class Rank Percentile Guide
-                </h2>
-
-                <p>
-                    Use this guide to read your result at a glance. These ranges are general.
-                    Every school, college, scholarship program, and admissions office can
-                    interpret class rank differently.
-                </p>
-
-                <div class="responsive-table">
-
-                    <table class="info-table">
-
-                        <thead>
-                            <tr>
-                                <th>Result</th>
-                                <th>What It Usually Means</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>Top 10%</td>
-                                <td>Excellent academic standing</td>
-                            </tr>
-
-                            <tr>
-                                <td>Top 25%</td>
-                                <td>Strong academic standing</td>
-                            </tr>
-
-                            <tr>
-                                <td>Top 50%</td>
-                                <td>Around the upper half of the class</td>
-                            </tr>
-
-                            <tr>
-                                <td>Below top 50%</td>
-                                <td>
-                                    Most useful when read alongside GPA, course rigor, essays,
-                                    and test scores
-                                </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="content-section reveal">
-
-            <span class="eyebrow">HIGH SCHOOL RANK</span>
-
-            <h2 class="section-title">
-                High School Class Rank Calculator
-            </h2>
-
-            <p>
-                If you are a high school student who already knows your rank and class size,
-                this tool turns those two numbers into the figures schools and applications
-                actually ask for. It is handy when you are checking:
-            </p>
-
-            <ul class="content-list">
-                <li>College application forms that ask for rank or decile</li>
-                <li>Scholarship and grant eligibility</li>
-                <li>Honor society requirements, such as top 10 or top 15 percent</li>
-                <li>Valedictorian, salutatorian, or honor roll standing</li>
-                <li>Automatic admission thresholds at public universities</li>
-                <li>General academic planning through the year</li>
-            </ul>
-
-            <p>
-                Some schools report an exact rank, such as 15 out of 250. Others report
-                standing by groups, such as decile, quintile, or quartile, which the next
-                section breaks down.
-            </p>
-
-        </section>
-
-        <section class="content-section alt-bg reveal">
-
-            <div class="content-wrap">
-
-                <span class="eyebrow">REPORTING TYPES</span>
-
-                <h2 class="section-title">
-                    How Schools Report Class Rank
-                </h2>
-
-                <p>
-                    High schools do not all report rank the same way. If you cannot find yours,
-                    check your transcript, student portal, counselor report, or the school
-                    profile that counselors send to colleges.
-                </p>
-
-                <div class="responsive-table">
-
-                    <table class="info-table">
-
-                        <thead>
-                            <tr>
-                                <th>Reporting Type</th>
-                                <th>Meaning</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>Exact rank</td>
-                                <td>Your precise position, such as 12 out of 240</td>
-                            </tr>
-
-                            <tr>
-                                <td>Top percentage</td>
-                                <td>Your standing as a percentage, such as top 5 percent</td>
-                            </tr>
-
-                            <tr>
-                                <td>Decile</td>
-                                <td>Class split into tenths, such as the top 10 or top 20 percent</td>
-                            </tr>
-
-                            <tr>
-                                <td>Quintile</td>
-                                <td>Class split into fifths, or groups of 20 percent</td>
-                            </tr>
-
-                            <tr>
-                                <td>Quartile</td>
-                                <td>Class split into quarters, or groups of 25 percent</td>
-                            </tr>
-
-                            <tr>
-                                <td>None</td>
-                                <td>The school does not rank students at all</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-                <p>
-                    If your school reports only a group rather than an exact rank, this calculator
-                    cannot determine your precise position within that group. Use the reported
-                    decile, quintile, or quartile as your official standing, or ask your counselor
-                    whether an exact rank is available.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section class="content-section reveal">
-
-            <span class="eyebrow">WEIGHTED VS UNWEIGHTED</span>
-
-            <h2 class="section-title">
-                Weighted and Unweighted Class Rank
-            </h2>
-
-            <p>
-                The method your school uses to rank students can change your position even when
-                your grades stay the same, so it is worth knowing which one applies to you.
-            </p>
-
-            <ul class="content-list">
-
-                <li>
-                    <strong>Unweighted rank</strong>
-                    is built from an unweighted GPA, usually on a 4.0 scale, where an A is worth
-                    the same in every class. It rewards consistently high grades across all courses.
-                </li>
-
-                <li>
-                    <strong>Weighted rank</strong>
-                    is built from a weighted GPA that adds points for honors, AP, and IB courses,
-                    often on a 5.0 scale. It rewards students who take a heavier, more advanced
-                    course load.
-                </li>
-
-            </ul>
-
-            <p>
-                Two students with identical report cards can end up with different ranks at
-                different schools purely because one school weights advanced courses and the
-                other does not. Before you read too much into a single number, confirm your
-                school's ranking policy with your counselor so you are comparing like with like.
-            </p>
-
-        </section>
-
-        <section class="content-section alt-bg reveal">
-
-            <div class="content-wrap">
-
-                <span class="eyebrow">WHY IT MATTERS</span>
-
-                <h2 class="section-title">
-                    Does Class Rank Still Matter for College?
-                </h2>
-
-                <p>
-                    Class rank once sat near the center of college admissions, but its role has
-                    narrowed. In its most recent review of admission factors, the National
-                    Association for College Admission Counseling reported that grades in high
-                    school courses and the strength of your curriculum are what colleges weigh
-                    most heavily, while most four-year colleges now give class rank only limited
-                    or no importance
-                    (<a
-                        href="https://www.nacacnet.org/factors-in-the-admission-decision/"
-                        target="_blank"
-                        rel="nofollow noopener">NACAC, Factors in the Admission Decision</a>).
-                </p>
-
-                <p>
-                    The National Association of Secondary School Principals points to the same
-                    shift, noting that a GPA-based rank only compares you with students at your
-                    own school, which limits how useful it is when colleges look across very
-                    different high schools
-                    (<a
-                        href="https://www.nassp.org/advocacy-new/policy-issue-briefs/class-rank/"
-                        target="_blank"
-                        rel="nofollow noopener">NASSP, Class Rank</a>).
-                    Partly for that reason, a growing number of high schools no longer report
-                    an exact rank, and students without one are generally not at a disadvantage.
-                </p>
-
-                <p>
-                    Rank has not gone away, though. It still carries real weight in specific
-                    situations, especially automatic admission programs. Under Texas
-                    automatic-admission rules, eligible top-ranked students can qualify for
-                    automatic admission to public universities. UT Austin sets a separate
-                    class-rank cutoff each year; for Summer/Fall 2026 and Spring 2027 applicants,
-                    the automatic-admission threshold is the top 5 percent of the graduating class
-                    (<a
-                        href="https://admissions.utexas.edu/apply/review-decision-process/"
-                        target="_blank"
-                        rel="nofollow noopener">UT Austin Admissions</a>).
-                    Honor societies, valedictorian and salutatorian recognition, and some merit
-                    scholarships also use rank directly.
-                </p>
-
-                <p>
-                    The practical takeaway for most students is simple. Know your rank, read it
-                    as one piece of context alongside your GPA and course rigor, and do not treat
-                    a single number as the whole story.
-                </p>
-
-                <div class="note-box">
-                    <strong>Accuracy note:</strong>
-                    This calculator gives an estimate based on the total students and rank you
-                    enter. Your official class rank can depend on weighted or unweighted GPA rules,
-                    transfer credits, repeated courses, honors, AP, and IB classes, and how often
-                    your school updates rankings. For anything official, confirm your rank with
-                    your school counselor, transcript, or student portal.
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="content-section reveal">
-
-            <span class="eyebrow">RELATED TOOLS</span>
-
-            <h2 class="section-title">
-                Other Useful Calculators
-            </h2>
-
-            <div class="related-grid">
-
-                <a href="/gpa-calculator/" class="related-card">
-                    <div class="related-icon">🎓</div>
-                    <h3>GPA Calculator</h3>
-                    <p>Calculate your GPA on the 4.0 scale.</p>
-                </a>
-
-                <a href="/cgpa-calculator/" class="related-card">
-                    <div class="related-icon">📈</div>
-                    <h3>CGPA Calculator</h3>
-                    <p>Calculate your cumulative GPA across semesters.</p>
-                </a>
-
-                <a href="/grade-calculator/" class="related-card">
-                    <div class="related-icon">📊</div>
-                    <h3>Grade Calculator</h3>
-                    <p>Calculate your weighted course grade.</p>
-                </a>
-
-                <a href="/final-grade-calculator/" class="related-card">
-                    <div class="related-icon">🏆</div>
-                    <h3>Final Grade Calculator</h3>
-                    <p>Find the score you need on your final exam.</p>
-                </a>
-
-                <a href="/scholarship-calculator/" class="related-card">
-                    <div class="related-icon">💰</div>
-                    <h3>Scholarship Calculator</h3>
-                    <p>Estimate remaining cost after scholarships and aid.</p>
-                </a>
-
-            </div>
-
-        </section>
-
-        <section class="content-section alt-bg reveal">
-
-            <div class="content-wrap">
-
-                <span class="eyebrow">FAQ</span>
-
-                <h2 class="section-title">
-                    Frequently Asked Questions
-                </h2>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        What is a class rank calculator?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            A class rank calculator converts your rank and class size into a
-                            percentile estimate and a top percentage. This calculator uses an
-                            inclusive percentile formula that counts your own position plus
-                            lower-ranked positions in your class.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        How do you calculate class rank percentile?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            This calculator subtracts your rank from the total number of students,
-                            adds 1, divides by the total number of students, and multiplies by 100.
-                            The formula is: Class Rank Percentile = ((Total Students − Rank + 1)
-                            ÷ Total Students) × 100. This produces an inclusive percentile estimate,
-                            and official school formulas may use a different convention.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        What is a good class rank percentile?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            A higher percentile estimate generally indicates a stronger class
-                            standing. For exact top-group labels, use the top percentage shown
-                            by the calculator: 10 percent or lower means top 10 percent, and
-                            25 percent or lower means top 25 percent. What counts as good depends
-                            on your school, college, scholarship, and academic goals.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        What does top 10 percent mean in class rank?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            Top 10 percent means your rank falls within the highest 10 percent
-                            of students in your class. In a class of 400 students, the top
-                            10 percent is roughly the top 40 ranked students.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        What is the difference between class rank percentage and percentile?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            Top percentage is the share of the class at or above your rank,
-                            so lower is better, such as top 5 percent. This calculator's percentile
-                            is an inclusive estimate based on your position plus lower-ranked
-                            positions, so higher is better. The calculator shows both values from
-                            the same inputs.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        Is this a high school class rank calculator?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            Yes. It works for high school and college students who already know
-                            their rank and class size, and it reports your percentile, top percentage,
-                            and standing for uses like applications, scholarships, and honor society
-                            requirements.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        Does weighted or unweighted GPA affect class rank?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            It can. Some schools rank students using weighted GPA, which gives
-                            extra points for honors, AP, and IB courses, while others use
-                            unweighted GPA. Check your school policy, because the same grades
-                            can produce a different rank under each method.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        How are tied ranks handled?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            When two or more students share the exact same GPA, schools usually handle
-                            the tie in one of two ways: giving both students the same rank and skipping
-                            the next number, or using unrounded GPA decimals to separate them. This
-                            calculator does not detect or adjust for ties. Enter the exact rank your
-                            school has assigned you, and ask your counselor if you are unsure how ties
-                            are handled.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        Does class rank still matter for college admissions?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            It matters less than it once did. According to NACAC, grades and
-                            strength of curriculum are the most important admission factors,
-                            while most four-year colleges give class rank limited or no importance.
-                            Rank still counts in specific cases, such as Texas automatic admission,
-                            honor societies, and some merit scholarships.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        What if my school does not report class rank?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            If your school does not report rank, admissions officers rely on your
-                            GPA, course rigor, the school profile, essays, and recommendations
-                            instead. A growing number of high schools no longer report exact rank,
-                            so students without one are generally not at a disadvantage.
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="faq-item">
-
-                    <div class="faq-question">
-                        Is my data saved?
-                        <span class="faq-toggle">+</span>
-                    </div>
-
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">
-                            No. The calculation runs in your browser. Your class size and rank
-                            are not stored or shared.
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="cta-section">
-
-            <div class="cta-wrap">
-
-                <h2>
-                    Explore More Free Tools
-                </h2>
-
-                <p>
-                    Use Student Calc’s free academic calculators to plan your grades, GPA,
-                    attendance, scholarships, and college costs. No sign up required.
-                </p>
-
-                <a href="/calculators/" class="btn-cta">
-                    Browse All Tools
-                    <span aria-hidden="true">→</span>
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    {% include footer.html %}
-
-    <script src="/assets/js/site.js"></script>
-    <script src="/assets/js/class-rank-calculator.js"></script>
-
-    <script>
-    (function () {
-        var rankTab = document.getElementById('rankTabBtn');
-        var gpaTab = document.getElementById('gpaTabBtn');
-        var rankFieldRow = document.getElementById('rankFieldRow');
-        var rankCalcBtn = document.getElementById('calculateBtn');
-        var rankResultBox = document.getElementById('calcResult');
-        var rankInlineNote = document.getElementById('rankInlineNote');
-        var gpaFields = document.getElementById('gpaModeFields');
-
-        function showRankMode() {
-            rankFieldRow.style.display = '';
-            rankCalcBtn.style.display = '';
-            rankResultBox.style.display = '';
-            rankInlineNote.style.display = '';
-            gpaFields.style.display = 'none';
-            rankTab.classList.add('crc-tab-active');
-            rankTab.setAttribute('aria-selected', 'true');
-            gpaTab.classList.remove('crc-tab-active');
-            gpaTab.setAttribute('aria-selected', 'false');
+{% include header.html %}
+
+<main id="main-content">
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href="/calculators/">Calculators</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Class Rank Calculator</span>
+    </nav>
+
+    <h1>Class Rank <span class="gradient-text">Calculator</span></h1>
+
+    <p>
+      Estimate your class rank percentile and see where you stand in your
+      graduating class. Enter your class size and your rank to calculate
+      your percentile estimate, your top percentage, decile, quintile,
+      and quartile. You can also check the rank needed for a target top
+      percentage.
+    </p>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="calc-card">
+    <h2 class="calc-card-title">Calculate Your Class Rank Percentile</h2>
+
+    <p class="calc-card-subtitle">
+      Enter your total class size and your rank to see an inclusive class
+      rank percentile estimate, your reporting groups, and whether you
+      fall in the top 10 percent, top 25 percent, or another range.
+    </p>
+
+    <div class="crc-quick-answer">
+      <strong>Quick answer:</strong> enter your rank out of your total
+      class size below. Example: rank 25 out of 300 = 92nd percentile,
+      which is the top 8.3% of the class.
+    </div>
+
+    <div class="crc-tabs" role="tablist" aria-label="Class rank calculation mode">
+      <button
+        type="button"
+        class="crc-tab crc-tab-active"
+        id="rankTabBtn"
+        role="tab"
+        aria-controls="rankModeFields"
+        aria-selected="true"
+        tabindex="0"
+      >I Know My Rank</button>
+
+      <button
+        type="button"
+        class="crc-tab"
+        id="gpaTabBtn"
+        role="tab"
+        aria-controls="gpaModeFields"
+        aria-selected="false"
+        tabindex="-1"
+      >Estimate From GPA</button>
+    </div>
+
+    <div id="rankModeFields" role="tabpanel" aria-labelledby="rankTabBtn">
+      <div class="field-row" id="rankFieldRow">
+        <div class="field-group">
+          <label class="field-label" for="totalStudents">
+            Total Students in Class
+          </label>
+          <input
+            type="number"
+            class="calc-input"
+            id="totalStudents"
+            aria-describedby="rankError rankInlineNote"
+            placeholder="300"
+            value="300"
+            min="1"
+            step="1"
+          >
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="yourRank">Your Rank</label>
+          <input
+            type="number"
+            class="calc-input"
+            id="yourRank"
+            aria-describedby="rankError rankInlineNote"
+            placeholder="25"
+            value="25"
+            min="1"
+            step="1"
+          >
+        </div>
+      </div>
+
+      <button type="button" class="calc-calculate" id="calculateBtn">
+        Calculate Percentile
+      </button>
+
+      <p id="rankError" class="crc-error" role="alert" hidden></p>
+
+      <div class="calc-result" id="calcResult" role="status" aria-live="polite">
+        <div class="calc-result-label">YOUR CLASS RANK PERCENTILE</div>
+        <div class="calc-result-value" aria-hidden="true" id="resultValue">--</div>
+        <div class="calc-result-tier" id="resultTier">Result</div>
+        <div class="calc-result-extra" id="resultExtra">
+          Your result shows your class rank percentile and top percentage.
+        </div>
+
+        <dl
+          id="rankGroups"
+          class="crc-groups"
+          aria-label="Calculated class rank groups"
+        ></dl>
+
+        <p class="crc-inline-note">
+          Groups are counted from the top and use your entered rank.
+          They do not determine your school's official reporting type
+          or adjust for ties.
+        </p>
+
+        <div class="calc-result-actions">
+          <button type="button" class="result-btn" id="copyBtn">
+            📋 Copy Result
+          </button>
+          <button type="button" class="result-btn" id="resetBtn">
+            🔄 Reset
+          </button>
+        </div>
+      </div>
+
+      <p class="crc-inline-note" id="rankInlineNote">
+        This percentile is inclusive of your own position. Some schools
+        use a different official formula, so confirm anything official
+        with your counselor.
+      </p>
+    </div>
+
+    <div
+      id="gpaModeFields"
+      role="tabpanel"
+      aria-labelledby="gpaTabBtn"
+      hidden
+      style="display:none;"
+    >
+      <p class="crc-gpa-note">
+        Do not know your exact rank yet? Estimate your standing from
+        your GPA compared to your class average. This uses a statistical
+        estimate, not an official school calculation, so treat it as a
+        starting point.
+      </p>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="gpaModeYourGpa">Your GPA</label>
+          <input
+            type="number"
+            class="calc-input"
+            id="gpaModeYourGpa"
+            placeholder="3.8"
+            min="0"
+            step="0.01"
+          >
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="gpaModeAvgGpa">
+            Class Average GPA
+          </label>
+          <input
+            type="number"
+            class="calc-input"
+            id="gpaModeAvgGpa"
+            placeholder="3.2"
+            min="0"
+            step="0.01"
+          >
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="gpaModeVariation">
+            Assumed Class GPA Spread
+          </label>
+          <select class="calc-input crc-select" id="gpaModeVariation">
+            <option value="low">Low (standard deviation 0.35)</option>
+            <option value="typical" selected>
+              Medium (standard deviation 0.55)
+            </option>
+            <option value="high">High (standard deviation 0.75)</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="button" class="calc-calculate" id="gpaEstimateBtn">
+        Estimate My Percentile
+      </button>
+
+      <div
+        class="calc-result"
+        id="gpaCalcResult"
+        role="status"
+        aria-live="polite"
+      >
+        <div class="calc-result-label">ESTIMATED CLASS RANK PERCENTILE</div>
+        <div class="calc-result-value" id="gpaResultValue">--</div>
+        <div class="calc-result-tier" id="gpaResultTier">Result</div>
+        <div class="calc-result-extra" id="gpaResultExtra">
+          Your estimated percentile and top percentage based on your GPA.
+        </div>
+
+        <div class="calc-result-actions">
+          <button type="button" class="result-btn" id="gpaCopyBtn">
+            📋 Copy Result
+          </button>
+          <button type="button" class="result-btn" id="gpaResetBtn">
+            🔄 Reset
+          </button>
+        </div>
+      </div>
+
+      <p class="crc-inline-note">
+        This is a statistical estimate that assumes GPAs are roughly
+        normally distributed. Both GPAs must use the same scale.
+        The spread choices are illustrative assumptions, not measured
+        school data; results can vary substantially with the assumed
+        spread. It is not your official rank. Switch to "I Know My Rank"
+        once your school reports your exact rank.
+      </p>
+    </div>
+
+    <details class="crc-target">
+      <summary>What rank do I need for the top 10% or 25%?</summary>
+
+      <p class="crc-inline-note">
+        Choose a target to find the highest rank number within that
+        percentage. This is an arithmetic cutoff, not an admissions
+        eligibility decision.
+      </p>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="targetClassSize">
+            Total Students in Class
+          </label>
+          <input
+            class="calc-input"
+            id="targetClassSize"
+            type="number"
+            min="1"
+            step="1"
+            placeholder="244"
+          >
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="targetPercentage">
+            Target Top Percentage
+          </label>
+          <input
+            class="calc-input"
+            id="targetPercentage"
+            type="number"
+            min="0.01"
+            max="100"
+            step="0.01"
+            value="10"
+          >
+        </div>
+      </div>
+
+      <button class="calc-calculate" type="button" id="targetCalculateBtn">
+        Calculate Target Rank
+      </button>
+
+      <p
+        id="targetResult"
+        class="crc-target-result"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <p class="crc-inline-note">
+        The cutoff is rounded down to a whole rank. For 244 students,
+        top 10% means rank 24 or better; rank 25 is top 10.25%.
+        Confirm your school's rounding and tie rules.
+      </p>
+    </details>
+
+    <noscript>
+      <p class="crc-inline-note">
+        Enable JavaScript to use the calculators. The formulas and
+        worked examples below remain available.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <span class="eyebrow">THE BASICS</span>
+  <h2 class="section-title">What Is Class Rank?</h2>
+
+  <p>
+    Class rank is your academic position within your graduating class,
+    based on your grade point average. If your school ranks students,
+    everyone is ordered from the highest GPA to the lowest, and your
+    rank is where you land in that list. A rank of 12 out of 240, for
+    example, means 11 students rank ahead of you if there are no ties.
+    Ties and school policies can change how positions are assigned.
+  </p>
+
+  <p>
+    Schools set class rank in one of two ways. Unweighted rank scores
+    every course on the same scale, while weighted rank gives extra
+    points to honors, Advanced Placement, and International
+    Baccalaureate courses, so a student carrying harder classes can
+    rank higher. Your official rank is calculated and updated by your
+    school, usually the counselor or registrar, and it can shift each
+    grading period as new grades come in.
+  </p>
+
+  <p>
+    If you know your official rank and class size, this tool converts
+    them into a percentile, top percentage and reporting groups. If
+    you do not know your rank,
+    <a href="/blog/what-is-my-class-rank/">find your official class rank</a>
+    through your transcript, student portal or counselor. The GPA mode
+    provides a separate model-based estimate.
+  </p>
+</section>
+
+<section class="content-section alt-bg reveal">
+  <div class="content-wrap">
+    <span class="eyebrow">FORMULA</span>
+    <h2 class="section-title">How to Calculate Class Rank Percentile</h2>
+
+    <p>
+      This calculator uses an inclusive class rank percentile estimate
+      that counts your own position plus the lower-ranked positions in
+      your class. A higher percentile indicates a stronger class
+      standing. Your top percentage measures the share of the class
+      at or above your rank, where a lower number is better. Schools
+      may use a different percentile convention for official reporting.
+    </p>
+
+    <div class="formula-box">
+      <strong>Formula:</strong>
+      <div class="formula-text">
+        Class Rank Percentile = ((Total Students − Your Rank + 1) ÷ Total Students) × 100
+      </div>
+    </div>
+
+    <div class="example-box">
+      <p>
+        <strong>Example 1:</strong> A class of 500 students, and your rank is 50.
+      </p>
+      <p><strong>((500 − 50 + 1) ÷ 500) × 100 = 90.2%</strong></p>
+      <p>
+        You are around the 90th percentile, which puts you in the top
+        10 percent of your class.
+      </p>
+    </div>
+
+    <div class="example-box">
+      <p>
+        <strong>Example 2:</strong> A class of 300 students, and your rank is 25.
+      </p>
+      <p><strong>((300 − 25 + 1) ÷ 300) × 100 = 92%</strong></p>
+      <p>
+        That is about the 92nd percentile, or the top 8.3 percent of the
+        class. Enter these same numbers in the calculator above to see
+        it in action.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <span class="eyebrow">RANK BASICS</span>
+  <h2 class="section-title">Class Rank Percentage vs Percentile</h2>
+
+  <p>
+    People often use these terms as if they mean the same thing, but
+    they measure standing from opposite directions. Getting them
+    straight makes your result much easier to read.
+  </p>
+
+  <div class="responsive-table">
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>What It Means</th>
+          <th>Better Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Class rank</td>
+          <td>Your position in class, such as 25 out of 300</td>
+          <td>Lower is better</td>
+        </tr>
+        <tr>
+          <td>Class rank percentile</td>
+          <td>
+            An inclusive estimate based on your position plus lower-ranked positions
+          </td>
+          <td>Higher is better</td>
+        </tr>
+        <tr>
+          <td>Top percentage</td>
+          <td>The percentage of the class at or above your rank</td>
+          <td>Lower is better</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    For example, if you rank 30th in a class of 300, your top percentage
+    is 10 percent, which means you are in the top 10 percent of your
+    class and near the 90th percentile. For more examples, see
+    <a href="/blog/class-rank-percentile-vs-percentage/">class rank percentile versus top percentage</a>.
+  </p>
+</section>
+
+<section class="content-section alt-bg reveal">
+  <div class="content-wrap">
+    <span class="eyebrow">RESULT GUIDE</span>
+    <h2 class="section-title">Class Rank Percentile Guide</h2>
+
+    <p>
+      Use this guide to read your result at a glance. These ranges are
+      general. Every school, college, scholarship program, and
+      admissions office can interpret class rank differently.
+    </p>
+
+    <div class="responsive-table">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Result</th>
+            <th>What It Usually Means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Top 10%</td>
+            <td>Excellent academic standing</td>
+          </tr>
+          <tr>
+            <td>Top 25%</td>
+            <td>Strong academic standing</td>
+          </tr>
+          <tr>
+            <td>Top 50%</td>
+            <td>Around the upper half of the class</td>
+          </tr>
+          <tr>
+            <td>Below top 50%</td>
+            <td>
+              Most useful when read alongside GPA, course rigor,
+              essays, and test scores
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <span class="eyebrow">HIGH SCHOOL RANK</span>
+  <h2 class="section-title">High School Class Rank Calculator</h2>
+
+  <p>
+    If you are a high school student who already knows your rank and
+    class size, this tool turns those two numbers into the figures
+    schools and applications actually ask for. It is handy when you
+    are checking:
+  </p>
+
+  <ul class="content-list">
+    <li>College application forms that ask for rank or decile</li>
+    <li>Scholarship and grant eligibility</li>
+    <li>Honor society requirements, such as top 10 or top 15 percent</li>
+    <li>Valedictorian, salutatorian, or honor roll standing</li>
+    <li>Automatic admission thresholds at public universities</li>
+    <li>General academic planning through the year</li>
+  </ul>
+
+  <p>
+    Some schools report an exact rank, such as 15 out of 250. Others
+    report standing by groups, such as decile, quintile, or quartile,
+    which the next section breaks down.
+  </p>
+</section>
+
+<section class="content-section alt-bg reveal">
+  <div class="content-wrap">
+    <span class="eyebrow">REPORTING TYPES</span>
+    <h2 class="section-title">
+      Class Rank Reporting: Exact, Decile, Quintile, Quartile or None
+    </h2>
+
+    <p>
+      High schools do not all report rank the same way. If you cannot
+      find yours, check your transcript, student portal, counselor
+      report, or the school profile that counselors send to colleges.
+    </p>
+
+    <p>
+      Example: rank 25 out of 300 is top 8.33%. Counting from the top,
+      this is the first decile (top 10%), first quintile (top 20%) and
+      first quartile (top 25%). Groups use the unrounded top percentage.
+    </p>
+
+    <div class="responsive-table">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Reporting Type</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Exact rank</td>
+            <td>Your precise position, such as 12 out of 240</td>
+          </tr>
+          <tr>
+            <td>Top percentage</td>
+            <td>Your standing as a percentage, such as top 5 percent</td>
+          </tr>
+          <tr>
+            <td>Decile</td>
+            <td>
+              Class split into tenths, such as the top 10 or top 20 percent
+            </td>
+          </tr>
+          <tr>
+            <td>Quintile</td>
+            <td>Class split into fifths, or groups of 20 percent</td>
+          </tr>
+          <tr>
+            <td>Quartile</td>
+            <td>Class split into quarters, or groups of 25 percent</td>
+          </tr>
+          <tr>
+            <td>None</td>
+            <td>The school does not rank students at all</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      If your school reports only a group rather than an exact rank,
+      this calculator cannot determine your precise position within
+      that group. Use the reported decile, quintile, or quartile as
+      your official standing, or ask your counselor whether an exact
+      rank is available. For applications, use the reporting type your
+      school supplies; do not substitute a calculated group if your
+      school reports no rank.
+    </p>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <span class="eyebrow">WEIGHTED VS UNWEIGHTED</span>
+  <h2 class="section-title">Weighted and Unweighted Class Rank</h2>
+
+  <p>
+    The method your school uses to rank students can change your
+    position even when your grades stay the same, so it is worth
+    knowing which one applies to you.
+  </p>
+
+  <ul class="content-list">
+    <li>
+      <strong>Unweighted rank</strong> is built from an unweighted GPA,
+      usually on a 4.0 scale, where an A is worth the same in every
+      class. It rewards consistently high grades across all courses.
+    </li>
+    <li>
+      <strong>Weighted rank</strong> is built from a weighted GPA that
+      adds points for honors, AP, and IB courses, often on a 5.0 scale.
+      It rewards students who take a heavier, more advanced course load.
+    </li>
+  </ul>
+
+  <p>
+    Two students with identical report cards can end up with different
+    ranks at different schools purely because one school weights
+    advanced courses and the other does not. Before you read too much
+    into a single number, confirm your school's ranking policy with
+    your counselor so you are comparing like with like.
+  </p>
+</section>
+
+<section class="content-section alt-bg reveal">
+  <div class="content-wrap">
+    <span class="eyebrow">WHY IT MATTERS</span>
+    <h2 class="section-title">Does Class Rank Still Matter for College?</h2>
+
+    <p>
+      Class rank once sat near the center of college admissions, but
+      its role has narrowed. In its most recent review of admission
+      factors, the National Association for College Admission
+      Counseling reported that grades in high school courses and the
+      strength of your curriculum are what colleges weigh most
+      heavily, while most four-year colleges now give class rank only
+      limited or no importance
+      (<a href="https://www.nacacnet.org/factors-in-the-admission-decision/"
+          target="_blank"
+          rel="nofollow noopener">NACAC, Factors in the Admission Decision</a>).
+    </p>
+
+    <p>
+      The National Association of Secondary School Principals points
+      to the same shift, noting that a GPA-based rank only compares
+      you with students at your own school, which limits how useful
+      it is when colleges look across very different high schools
+      (<a href="https://www.nassp.org/advocacy-new/policy-issue-briefs/class-rank/"
+          target="_blank"
+          rel="nofollow noopener">NASSP, Class Rank</a>).
+      Partly for that reason, a growing number of high schools no
+      longer report an exact rank, and students without one are
+      generally not at a disadvantage.
+    </p>
+
+    <p>
+      Rank has not gone away, though. It still carries real weight in
+      specific situations, especially automatic admission programs.
+      Under Texas automatic-admission rules, eligible top-ranked
+      students can qualify for automatic admission to public
+      universities. UT Austin sets a separate class-rank cutoff each
+      year; for Summer/Fall 2026 and Spring 2027 applicants, the
+      automatic-admission threshold is the top 5 percent of the
+      graduating class
+      (<a href="https://admissions.utexas.edu/apply/review-decision-process/"
+          target="_blank"
+          rel="nofollow noopener">UT Austin Admissions</a>).
+      Honor societies, valedictorian and salutatorian recognition,
+      and some merit scholarships also use rank directly.
+    </p>
+
+    <p>
+      The practical takeaway for most students is simple. Know your
+      rank, read it as one piece of context alongside your GPA and
+      course rigor, and do not treat a single number as the whole story.
+    </p>
+
+    <div class="note-box">
+      <strong>Accuracy note:</strong> This calculator gives an estimate
+      based on the total students and rank you enter. Your official
+      class rank can depend on weighted or unweighted GPA rules,
+      transfer credits, repeated courses, honors, AP, and IB classes,
+      and how often your school updates rankings. For anything official,
+      confirm your rank with your school counselor, transcript, or
+      student portal.
+    </div>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <span class="eyebrow">RELATED TOOLS</span>
+  <h2 class="section-title">Other Useful Calculators</h2>
+
+  <div class="related-grid">
+    <a href="/gpa-calculator/" class="related-card">
+      <div class="related-icon">🎓</div>
+      <h3>GPA Calculator</h3>
+      <p>Calculate your GPA on the 4.0 scale.</p>
+    </a>
+
+    <a href="/cgpa-calculator/" class="related-card">
+      <div class="related-icon">📈</div>
+      <h3>CGPA Calculator</h3>
+      <p>Calculate your cumulative GPA across semesters.</p>
+    </a>
+
+    <a href="/grade-calculator/" class="related-card">
+      <div class="related-icon">📊</div>
+      <h3>Grade Calculator</h3>
+      <p>Calculate your weighted course grade.</p>
+    </a>
+
+    <a href="/final-grade-calculator/" class="related-card">
+      <div class="related-icon">🏆</div>
+      <h3>Final Grade Calculator</h3>
+      <p>Find the score you need on your final exam.</p>
+    </a>
+
+    <a href="/scholarship-calculator/" class="related-card">
+      <div class="related-icon">💰</div>
+      <h3>Scholarship Calculator</h3>
+      <p>Estimate remaining cost after scholarships and aid.</p>
+    </a>
+  </div>
+</section>
+
+<section class="content-section alt-bg reveal">
+  <div class="content-wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is a class rank calculator?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          A class rank calculator converts your rank and class size
+          into a percentile estimate and a top percentage. This
+          calculator uses an inclusive percentile formula that counts
+          your own position plus lower-ranked positions in your class.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do you calculate class rank percentile?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          This calculator subtracts your rank from the total number of
+          students, adds 1, divides by the total number of students,
+          and multiplies by 100. The formula is: Class Rank Percentile
+          = ((Total Students − Rank + 1) ÷ Total Students) × 100.
+          This produces an inclusive percentile estimate, and official
+          school formulas may use a different convention.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is a good class rank percentile?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          A higher percentile estimate generally indicates a stronger
+          class standing. For exact top-group labels, use the top
+          percentage shown by the calculator: 10 percent or lower
+          means top 10 percent, and 25 percent or lower means top
+          25 percent. What counts as good depends on your school,
+          college, scholarship, and academic goals.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What does top 10 percent mean in class rank?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Top 10 percent means your rank falls within the highest
+          10 percent of students in your class. In a class of 400
+          students, the top 10 percent is roughly the top 40 ranked
+          students.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is the difference between class rank percentage and percentile?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Top percentage is the share of the class at or above your
+          rank, so lower is better, such as top 5 percent. This
+          calculator's percentile is an inclusive estimate based on
+          your position plus lower-ranked positions, so higher is
+          better. The calculator shows both values from the same inputs.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is this a high school class rank calculator?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes. It works for high school and college students who
+          already know their rank and class size, and it reports your
+          percentile, top percentage, and standing for uses like
+          applications, scholarships, and honor society requirements.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Does weighted or unweighted GPA affect class rank?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          It can. Some schools rank students using weighted GPA,
+          which gives extra points for honors, AP, and IB courses,
+          while others use unweighted GPA. Check your school policy,
+          because the same grades can produce a different rank under
+          each method.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How are tied ranks handled?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          When two or more students share the exact same GPA, schools
+          usually handle the tie in one of two ways: giving both
+          students the same rank and skipping the next number, or
+          using unrounded GPA decimals to separate them. This
+          calculator does not detect or adjust for ties. Enter the
+          exact rank your school has assigned you, and ask your
+          counselor if you are unsure how ties are handled.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Does class rank still matter for college admissions?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          It matters less than it once did. According to NACAC,
+          grades and strength of curriculum are the most important
+          admission factors, while most four-year colleges give class
+          rank limited or no importance. Rank still counts in
+          specific cases, such as Texas automatic admission, honor
+          societies, and some merit scholarships.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What if my school does not report class rank?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          If your school does not report rank, admissions officers
+          rely on your GPA, course rigor, the school profile, essays,
+          and recommendations instead. A growing number of high
+          schools no longer report exact rank, so students without
+          one are generally not at a disadvantage.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is my data saved?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          No. The calculation runs in your browser. Your class size
+          and rank are not stored or shared.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-wrap">
+    <h2>Explore More Free Tools</h2>
+    <p>
+      Use Student Calc’s free academic calculators to plan your
+      grades, GPA, attendance, scholarships, and college costs.
+      No sign up required.
+    </p>
+    <a href="/calculators/" class="btn-cta">
+      Browse All Tools <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+{% include footer.html %}
+
+<script src="/assets/js/site.js"></script>
+
+<script>
+(() => {
+  'use strict';
+
+  const calcBtn = document.getElementById('calculateBtn');
+  const totalInput = document.getElementById('totalStudents');
+  const rankInput = document.getElementById('yourRank');
+  const result = document.getElementById('calcResult');
+  const resultValue = document.getElementById('resultValue');
+  const resultTier = document.getElementById('resultTier');
+  const resultExtra = document.getElementById('resultExtra');
+  const copyBtn = document.getElementById('copyBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const groups = document.getElementById('rankGroups');
+  const errorBox = document.getElementById('rankError');
+
+  let resultText = '';
+  let animationFrame = null;
+
+  function invalidateResult() {
+    if (animationFrame !== null) {
+      cancelAnimationFrame(animationFrame);
+    }
+
+    animationFrame = null;
+    resultText = '';
+    result.classList.remove('visible');
+
+    if (groups) {
+      groups.replaceChildren();
+    }
+
+    [totalInput, rankInput].forEach(input => {
+      input.removeAttribute('aria-invalid');
+    });
+
+    if (errorBox) {
+      errorBox.hidden = true;
+      errorBox.textContent = '';
+    }
+  }
+
+  function formatPercent(value) {
+    if (value > 0 && value < 0.01) {
+      return '<0.01';
+    }
+
+    return value.toFixed(2).replace(/\.?0+$/, '');
+  }
+
+  function showGroups(rank, total) {
+    if (!groups) {
+      return '';
+    }
+
+    groups.replaceChildren();
+    const descriptions = [];
+
+    [
+      ['Decile', 10],
+      ['Quintile', 5],
+      ['Quartile', 4]
+    ].forEach(([name, count]) => {
+      // Integer-based boundaries avoid rounding into a better group.
+      const group = Math.ceil(rank * count / total);
+      const lower = (group - 1) * 100 / count;
+      const upper = group * 100 / count;
+
+      const label = group === 1
+        ? 'Top ' + upper + '%'
+        : 'Above ' + lower + '% through ' + upper + '% from the top';
+
+      const term = document.createElement('dt');
+      const detail = document.createElement('dd');
+
+      term.textContent = name;
+      detail.textContent =
+        'Group ' + group + ' of ' + count + ': ' + label;
+
+      groups.append(term, detail);
+      descriptions.push(name + ': ' + detail.textContent);
+    });
+
+    return descriptions.join('. ');
+  }
+
+  if (
+    !calcBtn ||
+    !totalInput ||
+    !rankInput ||
+    !result ||
+    !resultValue ||
+    !resultTier ||
+    !resultExtra ||
+    !copyBtn ||
+    !resetBtn
+  ) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  );
+
+  function launchConfetti() {
+    if (prefersReducedMotion.matches) {
+      return;
+    }
+
+    const colors = [
+      '#2563eb',
+      '#06b6d4',
+      '#3b82f6',
+      '#22d3ee',
+      '#1d4ed8'
+    ];
+
+    for (let i = 0; i < 40; i += 1) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+
+      confetti.style.background =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      confetti.style.left =
+        (50 + (Math.random() - 0.5) * 20) + '%';
+
+      confetti.style.top = '50%';
+
+      confetti.style.setProperty(
+        '--x',
+        ((Math.random() - 0.5) * 600) + 'px'
+      );
+
+      confetti.style.setProperty(
+        '--y',
+        (Math.random() * 400 + 100) + 'px'
+      );
+
+      confetti.style.borderRadius =
+        Math.random() > 0.5 ? '50%' : '2px';
+
+      confetti.style.animationDelay =
+        (Math.random() * 0.3) + 's';
+
+      document.body.appendChild(confetti);
+
+      window.setTimeout(() => {
+        confetti.remove();
+      }, 2000);
+    }
+  }
+
+  function readPositiveInteger(input) {
+    const raw = input.value.trim();
+
+    if (raw === '') {
+      return null;
+    }
+
+    const value = Number(raw);
+
+    if (
+      !Number.isFinite(value) ||
+      !Number.isSafeInteger(value) ||
+      value > 1000000000 ||
+      value <= 0
+    ) {
+      return null;
+    }
+
+    return value;
+  }
+
+  function showValidationMessage(message, input) {
+    invalidateResult();
+    input.setAttribute('aria-invalid', 'true');
+
+    if (errorBox) {
+      errorBox.textContent = message;
+      errorBox.hidden = false;
+    } else {
+      window.alert(message);
+    }
+
+    input.focus();
+  }
+
+  function animatePercentile(percentile) {
+    if (prefersReducedMotion.matches) {
+      resultValue.textContent = percentile.toFixed(1) + '%';
+      return;
+    }
+
+    const duration = 800;
+    const start = performance.now();
+
+    const animate = time => {
+      const progress = Math.min((time - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const displayed = (eased * percentile).toFixed(1);
+
+      resultValue.textContent = displayed + '%';
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  function setTier(topPercent) {
+    let tier = 'Top Half';
+    let tierClass = 'tier-good';
+
+    if (topPercent <= 10) {
+      tier = 'Top 10%';
+      tierClass = 'tier-excellent';
+    } else if (topPercent <= 25) {
+      tier = 'Top 25%';
+      tierClass = 'tier-excellent';
+    } else if (topPercent <= 50) {
+      tier = 'Top Half';
+      tierClass = 'tier-good';
+    } else if (topPercent <= 75) {
+      tier = 'Bottom Half';
+      tierClass = 'tier-average';
+    } else {
+      tier = 'Bottom 25%';
+      tierClass = 'tier-low';
+    }
+
+    resultTier.textContent = tier;
+    resultTier.className = 'calc-result-tier ' + tierClass;
+  }
+
+  function calculate() {
+    invalidateResult();
+
+    const total = readPositiveInteger(totalInput);
+    const rank = readPositiveInteger(rankInput);
+
+    if (total === null) {
+      showValidationMessage(
+        'Please enter total students as a whole number from 1 to 1,000,000,000.',
+        totalInput
+      );
+      return;
+    }
+
+    if (rank === null) {
+      showValidationMessage(
+        'Please enter your rank as a whole number from 1 to 1,000,000,000.',
+        rankInput
+      );
+      return;
+    }
+
+    if (rank > total) {
+      showValidationMessage(
+        'Your rank cannot be higher than total students.',
+        rankInput
+      );
+      return;
+    }
+
+    const percentile = ((total - rank + 1) / total) * 100;
+    const topPercent = (rank / total) * 100;
+
+    animatePercentile(percentile);
+    setTier(topPercent);
+
+    resultExtra.innerHTML =
+      'You rank <strong>#' + rank +
+      ' out of ' + total +
+      '</strong>, which is the <strong>top ' +
+      formatPercent(topPercent) +
+      '%</strong> of your class. Inclusive percentile: ' +
+      percentile.toFixed(1) + '%.';
+
+    const groupSummary = showGroups(rank, total);
+
+    resultText =
+      'Class rank ' + rank + ' of ' + total +
+      '. Inclusive percentile: ' + percentile.toFixed(1) +
+      '%. Top percentage: ' + formatPercent(topPercent) +
+      '%. ' + groupSummary +
+      '. Groups are calculated, not official school reporting.';
+
+    result.classList.add('visible');
+
+    result.scrollIntoView({
+      behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
+      block: 'center'
+    });
+
+    if (topPercent <= 10) {
+      launchConfetti();
+    }
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'calculator_used', {
+        tool: 'class_rank_calculator'
+      });
+    }
+  }
+
+  async function copyToClipboard(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const temporary = document.createElement('textarea');
+    temporary.value = text;
+    temporary.setAttribute('readonly', '');
+    temporary.style.position = 'fixed';
+    temporary.style.opacity = '0';
+    temporary.style.pointerEvents = 'none';
+
+    document.body.appendChild(temporary);
+    temporary.select();
+
+    const copied = document.execCommand('copy');
+    temporary.remove();
+
+    if (!copied) {
+      throw new Error('Copy failed');
+    }
+  }
+
+  calcBtn.addEventListener('click', calculate);
+
+  [totalInput, rankInput].forEach(input => {
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        calculate();
+      }
+    });
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    if (!resultText) {
+      return;
+    }
+
+    const text = resultText;
+    const originalText = copyBtn.textContent;
+
+    try {
+      await copyToClipboard(text);
+      copyBtn.textContent = '✓ Copied!';
+    } catch (error) {
+      copyBtn.textContent = 'Copy failed';
+    }
+
+    window.setTimeout(() => {
+      copyBtn.textContent = originalText;
+    }, 1500);
+  });
+
+  resetBtn.addEventListener('click', () => {
+    invalidateResult();
+    resultValue.textContent = '--';
+    totalInput.value = '';
+    rankInput.value = '';
+    totalInput.focus();
+  });
+
+  [totalInput, rankInput].forEach(input => {
+    input.addEventListener('input', invalidateResult);
+  });
+
+  const targetTotal = document.getElementById('targetClassSize');
+  const targetPercent = document.getElementById('targetPercentage');
+  const targetOutput = document.getElementById('targetResult');
+  const targetButton = document.getElementById('targetCalculateBtn');
+
+  if (targetTotal && targetPercent && targetOutput && targetButton) {
+    targetButton.addEventListener('click', () => {
+      [targetTotal, targetPercent].forEach(input => {
+        input.removeAttribute('aria-invalid');
+      });
+
+      const total = readPositiveInteger(targetTotal);
+      const raw = targetPercent.value.trim();
+
+      // Exact hundredths of a percent avoid floating-point cutoff errors.
+      const match = /^(\d+)(?:\.(\d{1,2}))?$/.exec(raw);
+
+      const hundredths = match
+        ? Number(match[1]) * 100 +
+          Number((match[2] || '').padEnd(2, '0'))
+        : NaN;
+
+      let invalid = null;
+
+      if (total === null) {
+        targetOutput.textContent =
+          'Enter a whole class size from 1 to 1,000,000,000.';
+        invalid = targetTotal;
+      } else if (
+        !Number.isFinite(hundredths) ||
+        hundredths < 1 ||
+        hundredths > 10000
+      ) {
+        targetOutput.textContent =
+          'Enter a target from 0.01% to 100%, with at most two decimal places.';
+        invalid = targetPercent;
+      } else {
+        const rank = Math.floor(total * hundredths / 10000);
+
+        targetOutput.textContent = rank < 1
+          ? 'No whole-number rank meets this cutoff. Even rank 1 is top ' +
+            formatPercent(100 / total) + '% in this class.'
+          : 'Rank ' + rank + ' or better out of ' + total +
+            ' meets the top ' + (hundredths / 100) +
+            '% arithmetic cutoff.';
+      }
+
+      if (invalid) {
+        invalid.setAttribute('aria-invalid', 'true');
+        invalid.focus();
+      }
+    });
+
+    [targetTotal, targetPercent].forEach(input => {
+      input.addEventListener('input', () => {
+        targetOutput.textContent = '';
+        input.removeAttribute('aria-invalid');
+      });
+
+      input.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          targetButton.click();
         }
+      });
+    });
+  }
+})();
+</script>
 
-        function showGpaMode() {
-            gpaFields.style.display = '';
-            rankFieldRow.style.display = 'none';
-            rankCalcBtn.style.display = 'none';
-            rankResultBox.style.display = 'none';
-            rankInlineNote.style.display = 'none';
-            gpaResultBox.classList.remove('visible');
-            gpaTab.classList.add('crc-tab-active');
-            gpaTab.setAttribute('aria-selected', 'true');
-            rankTab.classList.remove('crc-tab-active');
-            rankTab.setAttribute('aria-selected', 'false');
+<script>
+(function () {
+  var rankTab = document.getElementById('rankTabBtn');
+  var gpaTab = document.getElementById('gpaTabBtn');
+  var rankFieldRow = document.getElementById('rankFieldRow');
+  var rankCalcBtn = document.getElementById('calculateBtn');
+  var rankResultBox = document.getElementById('calcResult');
+  var rankInlineNote = document.getElementById('rankInlineNote');
+  var gpaFields = document.getElementById('gpaModeFields');
+
+  function showRankMode() {
+    document.getElementById('rankModeFields').hidden = false;
+    gpaFields.hidden = true;
+
+    rankTab.tabIndex = 0;
+    gpaTab.tabIndex = -1;
+
+    rankFieldRow.style.display = '';
+    rankCalcBtn.style.display = '';
+    rankResultBox.style.display = '';
+    rankInlineNote.style.display = '';
+    gpaFields.style.display = 'none';
+
+    rankTab.classList.add('crc-tab-active');
+    rankTab.setAttribute('aria-selected', 'true');
+    gpaTab.classList.remove('crc-tab-active');
+    gpaTab.setAttribute('aria-selected', 'false');
+  }
+
+  function showGpaMode() {
+    document.getElementById('rankModeFields').hidden = true;
+    gpaFields.hidden = false;
+
+    rankTab.tabIndex = -1;
+    gpaTab.tabIndex = 0;
+
+    gpaFields.style.display = '';
+    rankFieldRow.style.display = 'none';
+    rankCalcBtn.style.display = 'none';
+    rankResultBox.style.display = 'none';
+    rankInlineNote.style.display = 'none';
+
+    gpaResultBox.classList.remove('visible');
+
+    gpaTab.classList.add('crc-tab-active');
+    gpaTab.setAttribute('aria-selected', 'true');
+    rankTab.classList.remove('crc-tab-active');
+    rankTab.setAttribute('aria-selected', 'false');
+  }
+
+  rankTab.addEventListener('click', showRankMode);
+  gpaTab.addEventListener('click', showGpaMode);
+
+  [rankTab, gpaTab].forEach(function (tab) {
+    tab.addEventListener('keydown', function (event) {
+      if (
+        !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+
+      var next = event.key === 'Home'
+        ? rankTab
+        : event.key === 'End'
+          ? gpaTab
+          : tab === rankTab
+            ? gpaTab
+            : rankTab;
+
+      next.click();
+      next.focus();
+    });
+  });
+
+  // Abramowitz and Stegun erf approximation (max error ~1.5e-7).
+  function erf(x) {
+    var sign = x >= 0 ? 1 : -1;
+    x = Math.abs(x);
+
+    var a1 = 0.254829592;
+    var a2 = -0.284496736;
+    var a3 = 1.421413741;
+    var a4 = -1.453152027;
+    var a5 = 1.061405429;
+    var p = 0.3275911;
+
+    var t = 1 / (1 + p * x);
+
+    var y = 1 -
+      (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) *
+      t * Math.exp(-x * x);
+
+    return sign * y;
+  }
+
+  function normalCDF(z) {
+    return 0.5 * (1 + erf(z / Math.sqrt(2)));
+  }
+
+  var spreadMap = {
+    low: 0.35,
+    typical: 0.55,
+    high: 0.75
+  };
+
+  var gpaBtn = document.getElementById('gpaEstimateBtn');
+  var gpaResultBox = document.getElementById('gpaCalcResult');
+  var gpaResultValue = document.getElementById('gpaResultValue');
+  var gpaResultTier = document.getElementById('gpaResultTier');
+  var gpaResultExtra = document.getElementById('gpaResultExtra');
+
+  gpaBtn.addEventListener('click', function () {
+    var yourGpa = parseFloat(
+      document.getElementById('gpaModeYourGpa').value
+    );
+
+    var avgGpa = parseFloat(
+      document.getElementById('gpaModeAvgGpa').value
+    );
+
+    var spreadKey =
+      document.getElementById('gpaModeVariation').value;
+
+    var stdDev = spreadMap[spreadKey] || 0.55;
+
+    if (
+      !Number.isFinite(yourGpa) ||
+      !Number.isFinite(avgGpa) ||
+      yourGpa < 0 ||
+      avgGpa < 0
+    ) {
+      gpaResultValue.textContent = '--';
+      gpaResultTier.textContent = 'Enter valid numbers';
+      gpaResultExtra.textContent =
+        'Enter your GPA and your class average GPA to see an estimate.';
+      gpaResultBox.classList.add('visible');
+      return;
+    }
+
+    var z = (yourGpa - avgGpa) / stdDev;
+    var percentile = normalCDF(z) * 100;
+    var topPercent = 100 - percentile;
+    var tier = 'Estimated standing';
+
+    if (topPercent <= 10) {
+      tier = 'Estimated top 10%';
+    } else if (topPercent <= 25) {
+      tier = 'Estimated top 25%';
+    } else if (topPercent <= 50) {
+      tier = 'Estimated top 50%';
+    } else {
+      tier = 'Below estimated top 50%';
+    }
+
+    gpaResultValue.textContent = percentile.toFixed(1) + '%';
+    gpaResultTier.textContent = tier;
+
+    gpaResultExtra.textContent =
+      'Estimated top ' +
+      (topPercent < 0.1 ? '<0.1' : topPercent.toFixed(1)) +
+      '% with an assumed standard deviation of ' + stdDev +
+      '. This normal-distribution estimate is not your official rank.';
+
+    gpaResultBox.classList.add('visible');
+  });
+
+  document.getElementById('gpaResetBtn').addEventListener(
+    'click',
+    function () {
+      document.getElementById('gpaModeYourGpa').value = '';
+      document.getElementById('gpaModeAvgGpa').value = '';
+      document.getElementById('gpaModeVariation').value = 'typical';
+      gpaResultBox.classList.remove('visible');
+    }
+  );
+
+  document.getElementById('gpaCopyBtn').addEventListener(
+    'click',
+    async function () {
+      if (
+        !gpaResultBox.classList.contains('visible') ||
+        gpaResultValue.textContent === '--'
+      ) {
+        return;
+      }
+
+      var button = this;
+
+      try {
+        await navigator.clipboard.writeText(
+          'Estimated percentile: ' + gpaResultValue.textContent +
+          '. ' + gpaResultExtra.textContent
+        );
+        button.textContent = 'Copied!';
+      } catch (error) {
+        button.textContent = 'Copy unavailable. Select the result text.';
+      }
+
+      window.setTimeout(function () {
+        button.textContent = '📋 Copy Result';
+      }, 2000);
+    }
+  );
+
+  [
+    'gpaModeYourGpa',
+    'gpaModeAvgGpa',
+    'gpaModeVariation'
+  ].forEach(function (id) {
+    document.getElementById(id).addEventListener(
+      'input',
+      function () {
+        gpaResultBox.classList.remove('visible');
+      }
+    );
+
+    document.getElementById(id).addEventListener(
+      'keydown',
+      function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          gpaBtn.click();
         }
+      }
+    );
+  });
+})();
+</script>
 
-        rankTab.addEventListener('click', showRankMode);
-        gpaTab.addEventListener('click', showGpaMode);
-
-        // Abramowitz and Stegun erf approximation (max error ~1.5e-7)
-        function erf(x) {
-            var sign = x >= 0 ? 1 : -1;
-            x = Math.abs(x);
-            var a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741,
-                a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
-            var t = 1 / (1 + p * x);
-            var y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
-            return sign * y;
-        }
-
-        function normalCDF(z) {
-            return 0.5 * (1 + erf(z / Math.sqrt(2)));
-        }
-
-        var spreadMap = { low: 0.35, typical: 0.55, high: 0.75 };
-
-        var gpaBtn = document.getElementById('gpaEstimateBtn');
-        var gpaResultBox = document.getElementById('gpaCalcResult');
-        var gpaResultValue = document.getElementById('gpaResultValue');
-        var gpaResultTier = document.getElementById('gpaResultTier');
-        var gpaResultExtra = document.getElementById('gpaResultExtra');
-
-        gpaBtn.addEventListener('click', function () {
-            var yourGpa = parseFloat(document.getElementById('gpaModeYourGpa').value);
-            var avgGpa = parseFloat(document.getElementById('gpaModeAvgGpa').value);
-            var spreadKey = document.getElementById('gpaModeVariation').value;
-            var stdDev = spreadMap[spreadKey] || 0.55;
-
-            if (isNaN(yourGpa) || isNaN(avgGpa) || yourGpa < 0 || avgGpa < 0) {
-                gpaResultValue.textContent = '--';
-                gpaResultTier.textContent = 'Enter valid numbers';
-                gpaResultExtra.textContent = 'Enter your GPA and your class average GPA to see an estimate.';
-                gpaResultBox.classList.add('visible');
-                return;
-            }
-
-            var z = (yourGpa - avgGpa) / stdDev;
-            var percentile = normalCDF(z) * 100;
-            var topPercent = 100 - percentile;
-
-            var tier = 'Estimated standing';
-            if (topPercent <= 10) {
-                tier = 'Estimated top 10%';
-            } else if (topPercent <= 25) {
-                tier = 'Estimated top 25%';
-            } else if (topPercent <= 50) {
-                tier = 'Estimated top 50%';
-            } else {
-                tier = 'Below estimated top 50%';
-            }
-
-            gpaResultValue.textContent = percentile.toFixed(1) + 'th percentile (est.)';
-            gpaResultTier.textContent = tier;
-            gpaResultExtra.textContent = 'Estimated top ' + topPercent.toFixed(1) + '% based on a normal-distribution model. This is not your official rank.';
-            gpaResultBox.classList.add('visible');
-        });
-
-        document.getElementById('gpaResetBtn').addEventListener('click', function () {
-            document.getElementById('gpaModeYourGpa').value = '';
-            document.getElementById('gpaModeAvgGpa').value = '';
-            document.getElementById('gpaModeVariation').value = 'typical';
-            gpaResultBox.classList.remove('visible');
-        });
-
-        document.getElementById('gpaCopyBtn').addEventListener('click', function () {
-            var text = gpaResultValue.textContent + ' - ' + gpaResultTier.textContent;
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(text);
-            }
-        });
-    })();
-    </script>
+<script
+  async="async"
+  data-cfasync="false"
+  src="https://pl31366526.profitableratecpmnetwork.com/f2ea5121c10f594fd687709504ffba0a/invoke.js"
+></script>
+<div id="container-f2ea5121c10f594fd687709504ffba0a"></div>
 
 </body>
 </html>
