@@ -187,6 +187,14 @@
       ]
     }
     </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6847465261437650" crossorigin="anonymous"></script>
+<style>
+.post-tool-box{margin:0 0 28px;padding:18px 20px;border:1px solid var(--border-strong);border-left:4px solid var(--blue);border-radius:14px;background:var(--soft-bg)}
+.post-tool-label{margin:0 0 4px;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.post-tool-text{margin:0 0 12px;color:var(--text-secondary);font-size:15px;line-height:1.6}
+.post-tool-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:10px;background:var(--blue);color:#fff;font-weight:700;text-decoration:none}
+.post-tool-link:hover{opacity:.9}
+</style>
 </head>
 
 <body>
@@ -261,6 +269,30 @@
             <!-- RIGHT MAIN ARTICLE -->
             <main class="blog-content">
                 <article class="post-card">
+                    {% assign tool_name = "" %}
+                    {% assign tool_url = "" %}
+                    {% assign tool_text = "" %}
+                    {% case page.slug %}
+                    {% when "grade-needed-on-final-calculator" %}
+                        {% assign tool_name = "Final Grade Calculator" %}
+                        {% assign tool_url = "/final-grade-calculator/" %}
+                        {% assign tool_text = "Enter your current grade, target grade and final-exam weight to see the score you need on the final." %}
+                    {% when "weighted-grade-calculator", "semester-grade-calculator", "how-to-use-test-grade-calculator", "grade-curve-calculator" %}
+                        {% assign tool_name = "Grade Calculator" %}
+                        {% assign tool_url = "/grade-calculator/" %}
+                        {% assign tool_text = "Enter your scores and category weights to find your current class grade and percentage." %}
+                    {% when "high-school-gpa-calculator", "guide-to-college-gpa-calculator", "gpa-calculator-from-percentage", "gpa-calculator-without-credits" %}
+                        {% assign tool_name = "GPA Calculator" %}
+                        {% assign tool_url = "/gpa-calculator/" %}
+                        {% assign tool_text = "Enter your letter grades and credits to calculate a weighted or unweighted GPA on a 4.0 scale." %}
+                    {% endcase %}
+                    {% if tool_url != "" %}
+                    <aside class="post-tool-box" aria-label="Related calculator">
+                        <p class="post-tool-label">Free calculator</p>
+                        <p class="post-tool-text">{{ tool_text }}</p>
+                        <a class="post-tool-link" href="{{ tool_url }}">Open the {{ tool_name }} &rarr;</a>
+                    </aside>
+                    {% endif %}
                     {% if page.featured_image or page.image %}
                     <figure class="post-featured-figure">
                         <img class="post-featured-image" src="{{ image_path | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" decoding="async">
