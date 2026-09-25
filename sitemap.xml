@@ -23,6 +23,7 @@
   <url><loc>{{ '/contact-us/' | absolute_url }}</loc></url>
   <url><loc>{{ '/privacy-policy/' | absolute_url }}</loc></url>
   <url><loc>{{ '/disclaimer/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/terms-of-use/' | absolute_url }}</loc></url>
 
   <!-- BLOG POSTS — AUTOMATIC. Every new post in _posts/ appears here with no edits. -->
   {% for post in site.posts %}
