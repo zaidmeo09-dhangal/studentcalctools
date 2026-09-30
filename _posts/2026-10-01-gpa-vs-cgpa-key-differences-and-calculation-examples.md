@@ -86,7 +86,7 @@ faqs_raw: >-
 
 That last detail matters. When comparing GPA vs CGPA, the main difference is the period and coursework included, not automatically the grading scale. A cumulative GPA and a CGPA can describe the same number on your transcript.
 
-If you have grades for individual courses, use the ++[GPA Calculator](https://studentcalctools.com/gpa-calculator/)++. If you already have semester GPAs and their corresponding credits, use the ++[CGPA Calculator](https://studentcalctools.com/cgpa-calculator/)++. Both tools support planning with a 4.0-scale record; they are not official international grade-conversion services.
+If you have grades for individual courses, use the [GPA Calculator](https://studentcalctools.com/gpa-calculator/). If you already have semester GPAs and their corresponding credits, use the [CGPA Calculator](https://studentcalctools.com/cgpa-calculator/). Both tools support planning with a 4.0-scale record; they are not official international grade-conversion services.
 
 This guide explains the terminology, shows both calculations using one student’s record, and helps you identify the number a college application actually requests.
 
@@ -98,7 +98,7 @@ GPA stands for **Grade Point Average**. It summarizes grades by converting them 
 
 When the label says **term GPA** or **semester GPA**, the calculation covers that specific academic period. If it says **cumulative GPA**, it covers the broader record defined by the institution.
 
-For example, the ++[University of Illinois explains four GPA labels on its transcript](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/)++: term, total institution, total transfer, and overall. The word “GPA” therefore does not, by itself, tell you which courses are included.
+For example, the [University of Illinois explains four GPA labels on its transcript](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/): term, total institution, total transfer, and overall. The word “GPA” therefore does not, by itself, tell you which courses are included.
 
 ### What Does a Semester GPA Tell You?
 
@@ -114,11 +114,11 @@ A term GPA is useful for tracking recent performance. It lets you examine one pe
 
 CGPA stands for **Cumulative Grade Point Average**. It combines the eligible coursework in your cumulative academic record up to the point of calculation.
 
-In a standard credit-based system, CGPA is calculated from total quality points divided by total GPA credits. Quality points are the grade-point value of a course multiplied by its credits. ++[Kansas State’s semester and cumulative GPA guide](https://cba.k-state.edu/success/advising/resources/KSU-GPA-Calculation.pdf)++ demonstrates this distinction between the current term and the accumulated record.
+In a standard credit-based system, CGPA is calculated from total quality points divided by total GPA credits. Quality points are the grade-point value of a course multiplied by its credits. [Kansas State’s semester and cumulative GPA guide](https://cba.k-state.edu/success/advising/resources/KSU-GPA-Calculation.pdf) demonstrates this distinction between the current term and the accumulated record.
 
 You do not have to finish your degree to have a CGPA. It can describe your cumulative result after two terms, five terms, or the final term, depending on when the record is calculated.
 
-“Cumulative” also does not mean every course you have ever taken. The relevant record may be limited to one institution, one degree level, or another defined scope. ++[MIT, for example, maintains separate undergraduate and graduate GPAs for students enrolled in both degree levels](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa)++.
+“Cumulative” also does not mean every course you have ever taken. The relevant record may be limited to one institution, one degree level, or another defined scope. [MIT, for example, maintains separate undergraduate and graduate GPAs for students enrolled in both degree levels](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa).
 
 ### Is CGPA the Same as Cumulative GPA?
 
@@ -134,7 +134,7 @@ The GPA column below specifically means **term or semester GPA**. Without that q
 
 
 | **Feature** | **Term GPA** | **CGPA or cumulative GPA** |
-| ----------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| ----------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------- |
 | Full meaning | Grade Point Average for one term | Cumulative Grade Point Average |
 | Period covered | One semester, quarter, or defined term | The eligible cumulative record through the reporting date |
 | Main question answered | How did I perform this term? | How have I performed across the included terms? |
@@ -143,7 +143,7 @@ The GPA column below specifically means **term or semester GPA**. Without that q
 | Must it use a different scale from the other measure? | No | No |
 | Effect of one new grade | Depends on its credit share within the term | Depends on its credit share within the larger cumulative record |
 | Application use | Report it when the form requests that term | Report it when the form requests the cumulative record |
-| Matching StudentCalcTools tool | ++[GPA calculator](https://studentcalctools.com/gpa-calculator/)++ | ++[CGPA calculator](https://studentcalctools.com/cgpa-calculator/)++ |
+| Matching StudentCalcTools tool | GPA calculator | CGPA calculator |
 
 
 The key difference between GPA and CGPA is **scope**. The same credit-based averaging method can calculate either measure when the institution applies the same inclusion rules.
@@ -160,9 +160,9 @@ Keep these three questions separate:
 2. **Scale:** Is it out of 4.0, 5.0, 10.0, or another maximum?
 3. **Course rules:** Which grades and credits count, and how are they weighted?
 
-SGPA stands for **Semester Grade Point Average**. It is a label that explicitly identifies the semester measure. For example, ++[IIT Delhi’s published Courses of Study defines SGPA for a semester and CGPA across completed semesters](https://home.iitd.ac.in/uploads/CouStudy_201819.pdf)++.
+SGPA stands for **Semester Grade Point Average**. It is a label that explicitly identifies the semester measure. For example, [IIT Delhi’s published Courses of Study defines SGPA for a semester and CGPA across completed semesters](https://home.iitd.ac.in/uploads/CouStudy_201819.pdf).
 
-Do not assume “GPA means out of 4” and “CGPA means out of 10.” ++[MIT uses a 5.0 scale for both its term and cumulative GPA](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa)++. That alone shows why the abbreviation cannot establish the scale.
+Do not assume “GPA means out of 4” and “CGPA means out of 10.” [MIT uses a 5.0 scale for both its term and cumulative GPA](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa). That alone shows why the abbreviation cannot establish the scale.
 
 Likewise, **credit weighting** is different from **course-difficulty weighting**. Multiplying a grade by its credit hours makes a larger-credit course contribute more. Adding bonus points for an eligible advanced course is a separate grading rule. Neither distinction tells you whether the calculation is for one term or multiple terms.
 
@@ -176,7 +176,7 @@ Your transcript and the instructions for a particular application determine whic
 
 ### Transcripts and Student Records
 
-The record may show both term and cumulative values, or display them in different places. ++[MIT’s registrar states that cumulative GPA appears on its transcript, while term GPA appears on the internal grade report](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa)++.
+The record may show both term and cumulative values, or display them in different places. [MIT’s registrar states that cumulative GPA appears on its transcript, while term GPA appears on the internal grade report](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa).
 
 If you cannot find a semester average on a transcript, that does not establish that the school never calculates one. Check the student portal, transcript legend, or registrar’s explanation.
 
@@ -202,11 +202,11 @@ There is no single reporting rule for every college and degree level. The follow
 
 
 | **Application or institution** | **What its published guidance says** | **What you should do** |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ++[Common App high-school details guidance](https://www.commonapp.org/static/551c899179247debfb36c77eecb36179/Resource_FY_HighSchoolDetails_ENG_2025.06.24_0.pdf)++ | Addresses cumulative numerical GPA and the reporting scale; says to use the weighted value when the school calculates both weighted and unweighted GPA. | Confirm your cumulative figure and its weighting designation with your school. Follow the form’s options if your school does not calculate a numerical GPA. |
-| ++[STARS guidance for international applicants](https://starsrecord.zendesk.com/hc/en-us/articles/37318196120347-International-Applicant-How-To-Enter-Cumulative-GPA-And-Class-Rank)++ | Requests cumulative GPA as shown on the secondary-school transcript, using the same scale. Allows both weighted and unweighted cumulative values when available. | Copy the appropriate transcript values and scale. Do not substitute your latest semester average. |
-| ++[Stanford Graduate Admissions](https://gradadmissions.stanford.edu/apply/faq)++ | Asks for GPA and GPA scale for each listed institution. Says to enter the transcript value without converting a different scale to 4.0. | Preserve the institution-specific record and original grading scale. |
-| ++[UC Berkeley Graduate Division](https://grad.berkeley.edu/admissions/application-process/faq/)++ | Directs GPA calculation questions to the applicant’s department because requirements can be program-specific. | Check the intended department’s instructions rather than applying a general internet formula. |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Common App high-school details guidance](https://www.commonapp.org/static/551c899179247debfb36c77eecb36179/Resource_FY_HighSchoolDetails_ENG_2025.06.24_0.pdf) | Addresses cumulative numerical GPA and the reporting scale; says to use the weighted value when the school calculates both weighted and unweighted GPA. | Confirm your cumulative figure and its weighting designation with your school. Follow the form’s options if your school does not calculate a numerical GPA. |
+| [STARS guidance for international applicants](https://starsrecord.zendesk.com/hc/en-us/articles/37318196120347-International-Applicant-How-To-Enter-Cumulative-GPA-And-Class-Rank) | Requests cumulative GPA as shown on the secondary-school transcript, using the same scale. Allows both weighted and unweighted cumulative values when available. | Copy the appropriate transcript values and scale. Do not substitute your latest semester average. |
+| [Stanford Graduate Admissions](https://gradadmissions.stanford.edu/apply/faq) | Asks for GPA and GPA scale for each listed institution. Says to enter the transcript value without converting a different scale to 4.0. | Preserve the institution-specific record and original grading scale. |
+| [UC Berkeley Graduate Division](https://grad.berkeley.edu/admissions/application-process/faq/) | Directs GPA calculation questions to the applicant’s department because requirements can be program-specific. | Check the intended department’s instructions rather than applying a general internet formula. |
 
 
 These examples describe reporting instructions, not guaranteed admissions outcomes or universal GPA cutoffs.
@@ -217,7 +217,7 @@ Read the help text and the institution’s application guide. Check whether the 
 
 If it remains unclear, ask: “My transcript reports a semester GPA and a cumulative CGPA. Which value should I enter, and should I keep the original scale?”
 
-If your school does not calculate GPA, do not invent an official value. For instance, ++[STARS provides explicit options for schools that do not report cumulative GPA](https://starsrecord.zendesk.com/hc/en-us/articles/37318196120347-International-Applicant-How-To-Enter-Cumulative-GPA-And-Class-Rank)++. Use the relevant application’s instructions.
+If your school does not calculate GPA, do not invent an official value. For instance, [STARS provides explicit options for schools that do not report cumulative GPA](https://starsrecord.zendesk.com/hc/en-us/articles/37318196120347-International-Applicant-How-To-Enter-Cumulative-GPA-And-Class-Rank). Use the relevant application’s instructions.
 
 
 
@@ -231,7 +231,7 @@ For each included course:
 
 **Quality points = Grade-point value × course credits**
 
-The ++[University of Illinois registrar explains this quality-points method](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/)++. Your institution determines the grade-point values and which courses enter the calculation.
+The [University of Illinois registrar explains this quality-points method](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/). Your institution determines the grade-point values and which courses enter the calculation.
 
 ### Worked GPA Example
 
@@ -253,7 +253,7 @@ Add the quality points, then divide by the included credits:
 
 The A in four-credit Mathematics contributes more than the C in two-credit History. Simply averaging the four grade-point values would give 3.00, which would not reflect the unequal course credits.
 
-For a fuller course-by-course walkthrough, read ++[how to calculate GPA](https://studentcalctools.com/blog/how-to-calculate-gpa/)++. To reproduce this example in the GPA calculator, enter the four letter grades and their respective credits.
+For a fuller course-by-course walkthrough, read [how to calculate GPA](https://studentcalctools.com/blog/how-to-calculate-gpa/). To reproduce this example in the GPA calculator, enter the four letter grades and their respective credits.
 
 
 
@@ -359,9 +359,9 @@ Changing scales is a different task from combining terms. The labels GPA and CGP
 
 For example, multiplying 8.0 out of 10 by 0.4 produces 3.2 arithmetically. That does not establish that a receiving university considers those academic records equivalent.
 
-Follow the receiving institution’s instructions. ++[Stanford Graduate Admissions explicitly tells applicants to keep the transcript’s original GPA scale](https://gradadmissions.stanford.edu/apply/faq)++. Where conversion is required, use the institution’s specified method or requested credential evaluation.
+Follow the receiving institution’s instructions. [Stanford Graduate Admissions explicitly tells applicants to keep the transcript’s original GPA scale](https://gradadmissions.stanford.edu/apply/faq). Where conversion is required, use the institution’s specified method or requested credential evaluation.
 
-A concrete illustration is ++[MIT’s published 4.0 conversion method](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa)++: it changes the values assigned to course grades and recalculates. It does not instruct students to multiply the final 5.0-scale GPA by 4/5.
+A concrete illustration is [MIT’s published 4.0 conversion method](https://registrar.mit.edu/classes-grades-evaluations/grades/calculating-gpa): it changes the values assigned to course grades and recalculates. It does not instruct students to multiply the final 5.0-scale GPA by 4/5.
 
 The same caution applies to percentages. “CGPA × 9.5” or “CGPA × 10” is not an automatic rule for every institution. Use a formula only when the relevant institution prescribes it.
 
@@ -375,13 +375,13 @@ A calculator can correctly average the inputs and still differ from your officia
 
 Use credits that actually belong in the GPA denominator. Do not automatically use all earned credits or remove every failed course.
 
-For example, the ++[Illinois registrar’s calculation includes an F-grade course with zero quality points and five GPA hours](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/)++. Separately, ++[Illinois excludes credit/no-credit courses from GPA](https://registrar.illinois.edu/registration/registration-process/credit-no-credit/)++, even though those courses can count toward total credit hours.
+For example, the [Illinois registrar’s calculation includes an F-grade course with zero quality points and five GPA hours](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/). Separately, [Illinois excludes credit/no-credit courses from GPA](https://registrar.illinois.edu/registration/registration-process/credit-no-credit/), even though those courses can count toward total credit hours.
 
 Those are institutional examples. Check your own rules for failed, withdrawn, incomplete, audited, and pass/fail coursework.
 
 ### Retakes Can Change the Cumulative Course Set
 
-Do not assume a repeated course erases the first attempt. ++[MIT counts both attempts in term and cumulative GPA](https://registrar.mit.edu/classes-grades-evaluations/grades/grading-policies/repeating-subject)++.
+Do not assume a repeated course erases the first attempt. [MIT counts both attempts in term and cumulative GPA](https://registrar.mit.edu/classes-grades-evaluations/grades/grading-policies/repeating-subject).
 
 If your institution instead replaces or excludes an earlier attempt, recompute the affected cumulative record using that rule. Adding old semester averages without adjustments may preserve a grade that no longer belongs in the official CGPA.
 
@@ -389,7 +389,7 @@ If your institution instead replaces or excludes an earlier attempt, recompute t
 
 In the worked example, the first semester’s exact GPA is 38 ÷ 12. If you enter its rounded value, 3.17, multiplying by 12 gives 38.04 rather than the original 38 quality points.
 
-That difference is small, but it explains why term-level estimates may not reproduce an official cumulative figure exactly. Keep available precision during calculations and follow your institution’s display rule at the end. ++[Illinois, for example, truncates its transcript GPA to two decimal places rather than rounding](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/)++.
+That difference is small, but it explains why term-level estimates may not reproduce an official cumulative figure exactly. Keep available precision during calculations and follow your institution’s display rule at the end. [Illinois, for example, truncates its transcript GPA to two decimal places rather than rounding](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/).
 
 ### Different Scales and Credit Systems Cannot Be Mixed Directly
 
@@ -403,6 +403,6 @@ Also check whether the credits use a consistent unit. A transfer evaluation or i
 
 Start with the period you want to measure and the information you have.
 
-Use the ++[GPA calculator](https://studentcalctools.com/gpa-calculator/)++ when you have individual course grades and credits on its supported 4.0 scale. Use the ++[CGPA calculator](https://studentcalctools.com/cgpa-calculator/)++ when you have compatible semester GPAs and matching GPA credits to combine.
+Use the GPA calculator when you have individual course grades and credits on its supported 4.0 scale. Use the CGPA calculator when you have compatible semester GPAs and matching GPA credits to combine.
 
 For official reporting, return to your transcript and the application instructions. The right number has the right period, scale, and coursework behind it.
