@@ -14,7 +14,7 @@ secondary_keywords:
   - how to find my class rank
   - find class rank
   - where to find class rank
-meta_title: What Is My Class Rank & How Do I Find It?
+meta_title: What Is My Class Rank? How to Find It (PowerSchool, Skyward)
 meta_description: Find your class rank on your transcript, student portal, or
   through your counselor, plus what to do if your school does not report one.
 excerpt: Find your class rank on your transcript, student portal, or through
