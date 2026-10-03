@@ -106,20 +106,18 @@ The following table consolidates current state policies. Please note that state 
 
 | State | Program Name / Rule | Threshold / Requirement |
 | ----------- | -------------------------------------- | -------------------------------------------------- |
-| Texas | Top Ten Percent Rule | Top 10% of graduating class (Top 6% for UT Austin) |
+| Texas | Top Ten Percent Rule | Top 10% of graduating class (Top 5% for UT Austin) |
 | California | Eligibility in the Local Context (ELC) | Top 9% of graduating class |
 | Florida | Talented Twenty Program | Top 20% of graduating class |
 | Mississippi | Mississippi Scholars/Tech Master | 3.0 GPA + specific core curriculum |
 | Georgia | HOPE Scholarship/Admission Context | 3.0 GPA (Holistic review includes rank) |
 
 
-
-
 ## **Deep Dive: Understanding Key State Policies**
 
 ### **Texas: The Gold Standard of Rank-Based Admission**
 
-Texas remains the most cited example of automatic admission. Established in 1997, the policy guarantees that any student graduating in the top 10 percent of their class is automatically admitted to any public university in the state. The policy was designed to improve diversity and access for students from rural and urban schools alike. It is crucial to note that the University of Texas at Austin, due to high demand, has a modified threshold that often adjusts to the top 6 percent. This nuance proves that **state university rank rules** are not static and can evolve as enrollment pressures grow.
+Texas remains the most cited example of automatic admission. Established in 1997, the policy guarantees that any student graduating in the top 10 percent of their class is automatically admitted to any public university in the state. The policy was designed to improve diversity and access for students from rural and urban schools alike. It is crucial to note that the University of Texas at Austin, due to high demand, uses a lower cutoff: the top 5 percent for students applying for Summer/Fall 2026 through Spring 2028. This nuance proves that **state university rank rules** are not static and can evolve as enrollment pressures grow.
 
 ### **California: Eligibility in the Local Context (ELC)**
 
