@@ -81,7 +81,7 @@ Before looking at any table, it helps to know what you're actually measuring you
 
 - **Any four-year college:** most schools don't require a specific rank at all, and a large share no longer report it as an admissions factor.
 - **Selective or Ivy-tier colleges:** rank becomes one data point among many, and top 5 to 10 percent is typically viewed as strong, though it's far from the only thing that matters.
-- **State auto-admission programs:** some states guarantee admission to in-state public universities at a specific rank cutoff, most commonly somewhere in the top 6 to 10 percent, depending on the state and the specific university.
+- **State auto-admission programs:** some states guarantee admission to in-state public universities at a specific rank cutoff, most commonly somewhere in the top 5 to 10 percent, depending on the state and the specific university.
 - **Merit scholarships:** many scholarship programs use rank as a screening criterion, and thresholds here vary widely, from top 10 percent for the most competitive awards to top 25 or even top 50 percent for broader programs.
 - **Honor societies and honor programs:** these often set their own rank cutoff, frequently somewhere in the top 10 to 20 percent range, separate from college admissions entirely.
 
@@ -130,7 +130,7 @@ Top 5 to 10 percent is generally viewed as strong at highly selective colleges, 
 
 ### **State Auto-Admission Programs**
 
-Several states guarantee admission to at least one in-state public university based on class rank, and the specific cutoff varies by state and by university. These programs are usually set somewhere in the top 6 to 10 percent range for the most selective flagship campuses, with broader eligibility at other in-state schools. Because these rules are state-specific and change over time, check your own state's current policy and your target university's exact cutoff rather than relying on a general number.
+Several states guarantee admission to at least one in-state public university based on class rank, and the specific cutoff varies by state and by university. These programs are usually set somewhere in the top 5 to 10 percent range for the most selective flagship campuses, with broader eligibility at other in-state schools. Because these rules are state-specific and change over time, check your own state's current policy and your target university's exact cutoff rather than relying on a general number.
 
 ### **Merit Scholarships**
 
