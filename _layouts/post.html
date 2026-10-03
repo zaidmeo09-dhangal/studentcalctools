@@ -62,6 +62,9 @@
 
     <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="stylesheet" href="/assets/css/post.css">
+    {% if page.slug == "semester-grade-calculator" %}
+    <link rel="stylesheet" href="/assets/css/semester-calculator.css">
+    {% endif %}
 
     <script type="application/ld+json">
     {
@@ -277,7 +280,7 @@
                         {% assign tool_name = "Final Grade Calculator" %}
                         {% assign tool_url = "/final-grade-calculator/" %}
                         {% assign tool_text = "Enter your current grade, target grade and final-exam weight to see the score you need on the final." %}
-                    {% when "weighted-grade-calculator", "semester-grade-calculator", "how-to-use-test-grade-calculator", "grade-curve-calculator" %}
+                    {% when "weighted-grade-calculator", "how-to-use-test-grade-calculator", "grade-curve-calculator" %}
                         {% assign tool_name = "Grade Calculator" %}
                         {% assign tool_url = "/grade-calculator/" %}
                         {% assign tool_text = "Enter your scores and category weights to find your current class grade and percentage." %}
@@ -292,6 +295,9 @@
                         <p class="post-tool-text">{{ tool_text }}</p>
                         <a class="post-tool-link" href="{{ tool_url }}">Open the {{ tool_name }} &rarr;</a>
                     </aside>
+                    {% endif %}
+                    {% if page.slug == "semester-grade-calculator" %}
+                    {% include semester-calculator.html %}
                     {% endif %}
                     {% if page.featured_image or page.image %}
                     <figure class="post-featured-figure">
@@ -357,5 +363,8 @@
     {% include footer.html %}
 
     <script src="/assets/js/site.js"></script>
+    {% if page.slug == "semester-grade-calculator" %}
+    <script src="/assets/js/semester-calculator.js" defer></script>
+    {% endif %}
 </body>
 </html>

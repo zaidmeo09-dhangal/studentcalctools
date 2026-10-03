@@ -1,0 +1,139 @@
+<section class="sgc" id="semester-calculator" aria-labelledby="sgc-title">
+
+    <div class="sgc-head">
+        <p class="sgc-eyebrow">Free calculator</p>
+        <h2 class="sgc-title" id="sgc-title">Semester Grade Calculator</h2>
+        <p class="sgc-sub">
+            Enter your six weeks, nine weeks or quarter grades and your semester exam.
+            Pick the format your school uses, or set your own weights.
+        </p>
+    </div>
+
+    <div class="sgc-tabs" role="tablist" aria-label="Calculator mode">
+        <button type="button" class="sgc-tab sgc-tab-active" id="sgcTabAverage" role="tab" aria-selected="true" aria-controls="sgcPanel">
+            My Semester Average
+        </button>
+        <button type="button" class="sgc-tab" id="sgcTabNeed" role="tab" aria-selected="false" aria-controls="sgcPanel">
+            What I Need on the Exam
+        </button>
+    </div>
+
+    <div class="sgc-panel" id="sgcPanel" role="tabpanel" aria-labelledby="sgcTabAverage">
+
+        <div class="sgc-grid">
+            <div class="sgc-field">
+                <label class="sgc-label" for="sgcFormat">Grading format</label>
+                <select class="sgc-input" id="sgcFormat">
+                    <option value="six-7" selected>3 six weeks + exam (&times;2 each, &divide; 7)</option>
+                    <option value="six-30">3 six weeks + exam (30/30/30/10)</option>
+                    <option value="six-80">3 six weeks + exam (80% / 20%)</option>
+                    <option value="nine-7">2 nine weeks + exam (&times;3 each, &divide; 7)</option>
+                    <option value="nine-45">2 nine weeks + exam (45/45/10)</option>
+                    <option value="quarter-40">2 quarters + final (40/40/20)</option>
+                    <option value="custom">Custom weights</option>
+                </select>
+                <span class="sgc-help" id="sgcFormatHelp"></span>
+            </div>
+
+            <div class="sgc-field">
+                <label class="sgc-label" for="sgcSemester">Semester</label>
+                <select class="sgc-input" id="sgcSemester">
+                    <option value="1" selected>1st semester (fall)</option>
+                    <option value="2">2nd semester (spring)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="sgc-row-header" aria-hidden="true">
+            <span>Grading period</span>
+            <span>Grade (%)</span>
+            <span>Weight (%)</span>
+            <span></span>
+        </div>
+
+        <div id="sgcRows"></div>
+
+        <button type="button" class="sgc-add" id="sgcAddRow" hidden>+ Add grading period</button>
+
+        <div class="sgc-row sgc-exam-row" id="sgcExamRow">
+            <span class="sgc-row-name">Semester exam</span>
+            <div class="sgc-cell">
+                <label class="sgc-mobile-label" for="sgcExam">Grade (%)</label>
+                <input type="number" class="sgc-input" id="sgcExam" inputmode="decimal" min="0" max="120" step="0.01" value="86" placeholder="86">
+            </div>
+            <div class="sgc-cell">
+                <label class="sgc-mobile-label" for="sgcExamWeight">Weight (%)</label>
+                <input type="number" class="sgc-input" id="sgcExamWeight" inputmode="decimal" min="0" max="100" step="0.01" readonly>
+            </div>
+            <span class="sgc-spacer" aria-hidden="true"></span>
+        </div>
+
+        <label class="sgc-check" id="sgcExemptWrap">
+            <input type="checkbox" id="sgcExempt">
+            <span>I am exempt from the semester exam</span>
+        </label>
+
+        <div class="sgc-field sgc-target" id="sgcTargetWrap" hidden>
+            <label class="sgc-label" for="sgcTarget">Target semester grade (%)</label>
+            <input type="number" class="sgc-input" id="sgcTarget" inputmode="decimal" min="0" max="120" step="0.01" value="90" placeholder="90">
+        </div>
+
+        <p class="sgc-weight-total" id="sgcWeightTotal"></p>
+
+        <p class="sgc-error" id="sgcError" role="alert" hidden></p>
+
+        <button type="button" class="sgc-calc" id="sgcCalculate">Calculate Semester Average</button>
+
+        <div class="sgc-result" id="sgcResult" role="status" aria-live="polite">
+            <div class="sgc-result-label" id="sgcResultLabel">Your semester average</div>
+            <div class="sgc-result-value" id="sgcResultValue">--</div>
+            <div class="sgc-result-tier" id="sgcResultTier">Result</div>
+            <div class="sgc-result-extra" id="sgcResultExtra"></div>
+
+            <div class="sgc-breakdown">
+                <p class="sgc-breakdown-title">How it was calculated</p>
+                <p class="sgc-formula" id="sgcFormula"></p>
+            </div>
+
+            <div class="sgc-actions">
+                <button type="button" class="sgc-btn" id="sgcCopy">Copy Result</button>
+                <button type="button" class="sgc-btn" id="sgcReset">Reset</button>
+            </div>
+        </div>
+
+        <p class="sgc-note">
+            Results are estimates. Schools use different weights, exam exemption rules and rounding,
+            so check your school's grading policy for your official semester grade.
+        </p>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": "https://studentcalctools.com/blog/semester-grade-calculator/#semester-calculator",
+      "name": "Semester Grade Calculator",
+      "url": "https://studentcalctools.com/blog/semester-grade-calculator/",
+      "description": "Calculate a semester average from six weeks, nine weeks or quarter grades and a semester exam, or find the exam score needed to reach a target semester grade.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Six weeks, nine weeks and quarter grading formats",
+        "Custom grading period and exam weights",
+        "Semester exam exemption option",
+        "Exam score needed for a target semester grade",
+        "Step-by-step formula breakdown"
+      ],
+      "publisher": {
+        "@id": "https://studentcalctools.com/#organization"
+      }
+    }
+    </script>
+</section>
