@@ -1368,10 +1368,10 @@
             var spreadKey = document.getElementById('gpaModeVariation').value;
             var stdDev = spreadMap[spreadKey] || 0.55;
 
-            if (isNaN(yourGpa) || isNaN(avgGpa) || yourGpa < 0 || avgGpa < 0) {
+            if (isNaN(yourGpa) || isNaN(avgGpa) || yourGpa < 0 || avgGpa < 0 || yourGpa > 5 || avgGpa > 5) {
                 gpaResultValue.textContent = '--';
                 gpaResultTier.textContent = 'Enter valid numbers';
-                gpaResultExtra.textContent = 'Enter your GPA and your class average GPA to see an estimate.';
+                gpaResultExtra.textContent = 'Enter a GPA between 0 and 5.0 in both fields to see an estimate.';
                 gpaResultBox.classList.add('visible');
                 return;
             }
@@ -1391,9 +1391,9 @@
                 tier = 'Below estimated top 50%';
             }
 
-            gpaResultValue.textContent = percentile.toFixed(1) + 'th percentile (est.)';
+            var p = Math.min(99, Math.max(1, Math.round(percentile))); var sfx = (p % 100 >= 11 && p % 100 <= 13) ? 'th' : ({1: 'st', 2: 'nd', 3: 'rd'}[p % 10] || 'th'); gpaResultValue.textContent = p + sfx + ' percentile (est.)';
             gpaResultTier.textContent = tier;
-            gpaResultExtra.textContent = 'Estimated top ' + topPercent.toFixed(1) + '% based on a normal-distribution model. This is not your official rank.';
+            gpaResultExtra.textContent = 'Estimated top ' + Math.max(1, topPercent).toFixed(1) + '% based on a normal-distribution model. This is not your official rank.';
             gpaResultBox.classList.add('visible');
         });
 

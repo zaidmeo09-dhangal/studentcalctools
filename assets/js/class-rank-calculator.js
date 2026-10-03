@@ -146,6 +146,17 @@
         input.focus();
     }
 
+    function toOrdinal(value) {
+        const n = Math.max(1, Math.round(value));
+        const lastTwo = n % 100;
+        if (lastTwo >= 11 && lastTwo <= 13) return n + 'th';
+        const last = n % 10;
+        if (last === 1) return n + 'st';
+        if (last === 2) return n + 'nd';
+        if (last === 3) return n + 'rd';
+        return n + 'th';
+    }
+
     function animatePercentile(
         percentile
     ) {
@@ -153,8 +164,7 @@
             prefersReducedMotion.matches
         ) {
             resultValue.textContent =
-                percentile.toFixed(1) +
-                '%';
+                toOrdinal(percentile);
 
             return;
         }
@@ -185,15 +195,8 @@
                         3
                     );
 
-                const displayed =
-                    (
-                        eased *
-                        percentile
-                    ).toFixed(1);
-
                 resultValue.textContent =
-                    displayed +
-                    '%';
+                    toOrdinal(eased * percentile);
 
                 if (
                     progress <
