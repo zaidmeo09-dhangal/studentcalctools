@@ -1323,3 +1323,14 @@ ul#dynamic-toc li {
     max-width: 100%;
   }
 }
+
+.author-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
