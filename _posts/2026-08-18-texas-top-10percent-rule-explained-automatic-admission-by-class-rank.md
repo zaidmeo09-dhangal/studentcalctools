@@ -14,7 +14,7 @@ secondary_keywords:
   - texas automatic admission
   - UT Austin top 6 percent
   - top 10 percent rule
-meta_title: "Texas Top 10% Rule Explained: Automatic Admission"
+meta_title: "Texas Top 10% Rule: Automatic Admission (UT Austin Is Top 5%)"
 meta_description: How Texas's Top 10% Rule works, why UT Austin's real cutoff is
   now top 5%, and how to check if your class rank qualifies you for automatic
   admission.
