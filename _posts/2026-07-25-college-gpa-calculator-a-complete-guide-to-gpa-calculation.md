@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "College GPA Calculator: A Complete Guide to GPA Calculation"
 slug: guide-to-college-gpa-calculator
 date: 2026-07-25
