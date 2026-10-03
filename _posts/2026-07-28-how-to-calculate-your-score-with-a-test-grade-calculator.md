@@ -323,7 +323,7 @@ Your weighted test average is **77%**.
 
 The simple average would have been 80%, but that would be misleading because the lowest test had the greatest weight.
 
-For a deeper explanation of category and assignment weighting, read our [weighted grade calculator](https://studentcalctools.com/blog/weighted-grade-calculator/) guide.
+For category and assignment weighting, use our [weighted grade calculator](https://studentcalctools.com/grade-calculator/).
 
 
 

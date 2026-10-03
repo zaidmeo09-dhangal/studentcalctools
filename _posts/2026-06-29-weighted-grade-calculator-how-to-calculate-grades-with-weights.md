@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Weighted Grade Calculator: How to Calculate Grades With Weights"
 slug: weighted-grade-calculator
 date: 2026-06-29
