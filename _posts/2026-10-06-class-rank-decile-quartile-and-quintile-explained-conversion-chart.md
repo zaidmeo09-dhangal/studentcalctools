@@ -105,9 +105,8 @@ Check your transcript, school profile, or counselor’s explanation before inter
 This guide numbers groups from the highest academic standing downward: group 1 is the highest group. Confirm that your school uses the same convention.
 
 
-|  |  |  |  |
-| -------------------- | -------------------- | ----------------------------------- | ------------------- |
-| **Reporting system** | **Number of groups** | **Approximate share in each group** | **Highest group** |
+| Reporting system | Number of groups | Approximate share in each group | Highest group |
+| ---------------- | ---------------- | ------------------------------- | ------------------- |
 | Decile | 10 | 10% | Decile 1: top 10% |
 | Quintile | 5 | 20% | Quintile 1: top 20% |
 | Quartile | 4 | 25% | Quartile 1: top 25% |
@@ -135,9 +134,8 @@ A quintile divides the class into five groups of approximately 20%.
 In a class of 300 students with distinct ranks:
 
 
-|  |  |
-| ------------ | -------------- |
-| **Quintile** | **Rank range** |
+| Quintile | Rank range |
+| -------- | ---------- |
 | 1 | 1–60 |
 | 2 | 61–120 |
 | 3 | 121–180 |
@@ -154,9 +152,8 @@ A quartile divides the class into four groups of approximately 25%.
 In a class of 200 students with distinct ranks:
 
 
-|  |  |
-| ------------ | -------------- |
-| **Quartile** | **Rank range** |
+| Quartile | Rank range |
+| -------- | ---------- |
 | 1 | 1–50 |
 | 2 | 51–100 |
 | 3 | 101–150 |
@@ -176,9 +173,8 @@ The chart below uses a class of **100 students with no tied ranks**. This makes 
 The percentile column uses the inclusive formula used by the [StudentCalcTools](https://studentcalctools.com/) Class Rank Calculator. It counts your own position along with the positions below yours.
 
 
-|  |  |  |  |  |
-| ------------------- | --------------------------------- | ---------- | ------------ | ------------ |
-| **Rank out of 100** | **Inclusive percentile estimate** | **Decile** | **Quintile** | **Quartile** |
+| Rank out of 100 | Inclusive percentile estimate | Decile | Quintile | Quartile |
+| --------------- | ----------------------------- | ------ | -------- | -------- |
 | 1–10 | 91st–100th | 1 | 1 | 1 |
 | 11–20 | 81st–90th | 2 | 1 | 1 |
 | 21–25 | 76th–80th | 3 | 2 | 1 |
@@ -215,9 +211,8 @@ Here:
 For a simple top-down bracket estimate, use:
 
 
-|  |  |
-| ----------- | ------------------------------------------------ |
-| **Bracket** | **Calculation** |
+| Bracket | Calculation |
+| -------- | ------------------------------------------------ |
 | Decile | (Your rank ÷ Class size) × 10, then round upward |
 | Quintile | (Your rank ÷ Class size) × 5, then round upward |
 | Quartile | (Your rank ÷ Class size) × 4, then round upward |
@@ -246,9 +241,8 @@ Under this method, the student is in decile 1 because their rank falls within th
 Using the same class of 244:
 
 
-|  |  |  |
-| -------- | --------------------------------------- | -------------------- |
-| **Rank** | **Top percentage, rounded for display** | **Estimated decile** |
+| Rank | Top percentage, rounded for display | Estimated decile |
+| ---- | ----------------------------------- | ---------------- |
 | 24 | 9.84% | 1 |
 | 25 | 10.25% | 2 |
 
