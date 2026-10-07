@@ -119,9 +119,8 @@ The scope matters. An institutional GPA may include only coursework taken at one
 Semester GPA covers one term. CGPA covers the coursework included across your cumulative record.
 
 
-|  |  |
+| Term | What it describes |
 | ---------------------- | ----------------------------------------------------------------------------- |
-| **Term** | **What it describes** |
 | Semester GPA | Your GPA for one semester |
 | Term GPA | Your GPA for one academic term, such as a semester or quarter |
 | CGPA or cumulative GPA | Your GPA across the included cumulative record |
@@ -208,9 +207,8 @@ Suppose a student has completed four terms on the same 4.0 scale.
 For this example, assume the semester GPAs are exact, every listed credit counts toward GPA, and there are no repeat-course or grade-replacement adjustments.
 
 
-|  |  |  |  |
-| ------------ | ---------------- | --------------- | --------------------------------- |
-| **Semester** | **Semester GPA** | **GPA credits** | **Quality points: GPA × credits** |
+| Semester | Semester GPA | GPA credits | Quality points: GPA × credits |
+| ----------- | ------------ | ----------- | ----------------------------- |
 | Fall 2024 | 3.00 | 15 | 45.00 |
 | Spring 2025 | 3.50 | 12 | 42.00 |
 | Summer 2025 | 4.00 | 6 | 24.00 |
@@ -251,9 +249,8 @@ Your school may use a different display rule, so retain the full result until th
 Using the same record:
 
 
-|  |  |  |  |
-| ------------------- | ----------------------------- | -------------------------- | --------------------------------- |
-| **After this term** | **Cumulative quality points** | **Cumulative GPA credits** | **CGPA, rounded to two decimals** |
+| After this term | Cumulative quality points | Cumulative GPA credits | CGPA, rounded to two decimals |
+| --------------- | ------------------------- | ---------------------- | ----------------------------- |
 | Fall 2024 | 45 | 15 | 3.00 |
 | Spring 2025 | 87 | 27 | 3.22 |
 | Summer 2025 | 111 | 33 | 3.36 |
@@ -281,9 +278,8 @@ Rounded to two decimal places, that gives 3.43.
 But the correct credit-weighted result is 3.31.
 
 
-|  |  |  |
-| ------------------------------- | ----------------------------------- | ------------------------------------ |
-| **Method** | **Result, rounded to two decimals** | **What it does** |
+| Method | Result, rounded to two decimals | What it does |
+| ------------------------------- | ------------------------------- | ------------------------------------ |
 | Simple average of semester GPAs | 3.43 | Treats every term equally |
 | Credit-weighted cumulative GPA | 3.31 | Weights each term by its GPA credits |
 
@@ -409,9 +405,8 @@ Use:
 Return to the student with 159 quality points across 48 GPA credits. Suppose the next semester contains 15 GPA credits.
 
 
-|  |  |  |
-| --------------------- | ------------------------------- | ------------------------------------- |
-| **Next semester GPA** | **New semester quality points** | **New CGPA, rounded to two decimals** |
+| Next semester GPA | New semester quality points | New CGPA, rounded to two decimals |
+| ----------------- | --------------------------- | --------------------------------- |
 | 2.50 | 37.50 | 3.12 |
 | 3.00 | 45.00 | 3.24 |
 | 3.50 | 52.50 | 3.36 |
