@@ -103,9 +103,8 @@ Your school might report an exact position, such as 23rd out of 244 students. It
 The Common App’s five options accommodate those different practices.
 
 
-|  |  |
-| ------------------------------------------- | --------------------- |
 | **Your school officially reports** | **Common App option** |
+| ------------------------------------------- | --------------------- |
 | A numerical position, such as 23 out of 244 | Exact |
 | A ranking band in groups of 10% | Decile |
 | A ranking band in groups of 20% | Quintile |
@@ -222,9 +221,8 @@ Top percentage = approximately **9.43%**
 That position falls within the highest 10%, and therefore also within the highest 20% and highest 25%.
 
 
-|  |  |
-| -------------------- | ------------------------------------------------------------------------------------------ |
 | **Reporting format** | **How this position can be described** |
+| -------------------- | ------------------------------------------------------------------------------------------ |
 | Exact | 23rd out of 244 |
 | Decile | First decile: within the highest 10% |
 | Quintile | First quintile: within the highest 20% |
@@ -243,9 +241,8 @@ If another school officially reports only a quartile, its student should report 
 If the example school reports the rank as exact and confirms that it is weighted:
 
 
-|  |  |
-| ------------------------- | -------------------- |
 | **Information requested** | **Example response** |
+| ------------------------- | -------------------- |
 | Class rank reporting | Exact |
 | Numerical rank | 23 |
 | Graduating class size | 244 |
@@ -321,9 +318,8 @@ Choosing None for rank does not mean your graduating class size is zero. Your sc
 Rank weighting identifies whether the reported rank is based on a weighted or unweighted academic calculation.
 
 
-|  |  |
-| ------------------ | ----------------------------------------------------------------------------------------------------- |
 | **Rank weighting** | **Meaning** |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
 | Weighted | The ranking calculation incorporates the school’s approved weighting for eligible advanced coursework |
 | Unweighted | The ranking calculation does not include course-difficulty bonuses |
 
