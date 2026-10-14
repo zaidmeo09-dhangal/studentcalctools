@@ -53,13 +53,25 @@
     {"@type":"Question","name":"What is the most accurate SAT score calculator?","acceptedAnswer":{"@type":"Answer","text":"The most accurate calculators use raw-to-scaled conversion tables modeled on official College Board Bluebook practice test curves, account for adaptive Module 2 routing, and let you select the curve difficulty."}}
     ]}
     </script>
+
+    <style>
+    /* Fix input field layout - ensure proper block layout */
+    .field-row { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+    .field-row .field-group { flex: 1; min-width: 200px; }
+    .field-group { margin-bottom: 16px; }
+    .field-label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
+    .field-label small { display: block; font-weight: 400; color: var(--muted, #64748b); font-size: 0.82rem; margin-top: 2px; }
+    .calc-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border, rgba(37,99,235,0.10)); border-radius: 12px; font-size: 1rem; box-sizing: border-box; }
+    .calc-input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+    @media (max-width: 600px) { .field-row { flex-direction: column; } .field-row .field-group { min-width: 100%; } }
+    </style>
 </head>
 <body>
     {% include header.html %}
     <section class="page-hero">
         <div class="page-hero-content">
             <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">&rsaquo;</span><a href="/calculators/">Calculators</a><span class="breadcrumb-sep" aria-hidden="true">&rsaquo;</span><span>SAT Score Calculator</span>
+                <a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">›</span><a href="/calculators/">Calculators</a><span class="breadcrumb-sep" aria-hidden="true">›</span><span>SAT Score Calculator</span>
             </nav>
             <h1>SAT Score <span class="gradient-text">Calculator</span></h1>
             <p class="hero-sub">Predict your Digital SAT score from practice test answers. Get your national percentile, ACT equivalent, a reverse goal planner, and a superscore calculator, all in one place.</p>
@@ -157,7 +169,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="calc-calculate">Plan My Target</button>
+                    <button type="submit" class="btn btn-primary" style="width:100%;padding:15px 32px;font-size:1.1rem;">Plan My Target</button>
                     <button type="button" class="btn btn-secondary" id="goalReset" style="margin-top:10px;width:100%;">Reset</button>
                     <p class="error-box" id="goalError" hidden role="alert"></p>
                 </form>
@@ -201,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="calc-calculate">Calculate Superscore</button>
+                    <button type="submit" class="btn btn-primary" style="width:100%;padding:15px 32px;font-size:1.1rem;">Calculate Superscore</button>
                     <div class="btn-row" style="margin-top:10px;">
                         <button type="button" class="btn btn-secondary" id="superAddDate" style="flex:1;">Add Date</button>
                         <button type="button" class="btn btn-secondary" id="superReset" style="flex:1;">Reset</button>
@@ -238,7 +250,7 @@
                         <label class="field-label" for="convInput">Enter your score</label>
                         <input class="calc-input" type="number" id="convInput" placeholder="e.g. 1350" inputmode="numeric">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;padding:15px 32px;font-size:1.1rem;">Calculate My Score</button>
+                    <button type="submit" class="calc-calculate">Convert</button>
                     <button type="button" class="btn btn-secondary" id="convReset" style="margin-top:10px;width:100%;">Reset</button>
                     <p class="error-box" id="convError" hidden role="alert"></p>
                 </form>
