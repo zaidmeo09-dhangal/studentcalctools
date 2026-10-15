@@ -17,6 +17,7 @@
   <url><loc>{{ '/study-time-planner/' | absolute_url }}</loc></url>
   <url><loc>{{ '/essay-word-counter/' | absolute_url }}</loc></url>
   <url><loc>{{ '/lsac-gpa-calculator/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/sat-score-calculator/' | absolute_url }}</loc></url>
   <url><loc>{{ '/calculator-methodology/' | absolute_url }}</loc></url>
   <url><loc>{{ '/blog/' | absolute_url }}</loc></url>
   <url><loc>{{ '/about-us/' | absolute_url }}</loc></url>
