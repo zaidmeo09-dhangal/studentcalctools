@@ -55,15 +55,41 @@
     </script>
 
     <style>
-    /* Fix input field layout - ensure proper block layout */
+    /* === SAT Calculator UX Improvements === */
+    /* Input field layout */
     .field-row { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
     .field-row .field-group { flex: 1; min-width: 200px; }
     .field-group { margin-bottom: 16px; }
-    .field-label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
+    .field-label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; line-height: 1.4; }
     .field-label small { display: block; font-weight: 400; color: var(--muted, #64748b); font-size: 0.82rem; margin-top: 2px; }
-    .calc-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border, rgba(37,99,235,0.10)); border-radius: 12px; font-size: 1rem; box-sizing: border-box; }
+    .calc-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border, rgba(37,99,235,0.10)); border-radius: 12px; font-size: 1rem; box-sizing: border-box; background: var(--card, #fff); color: inherit; transition: border-color 0.2s, box-shadow 0.2s; }
     .calc-input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
-    @media (max-width: 600px) { .field-row { flex-direction: column; } .field-row .field-group { min-width: 100%; } }
+    .calc-input::placeholder { color: var(--muted, #94a3b8); opacity: 0.7; }
+    /* Primary CTA buttons - gradient, full-width, prominent */
+    .sat-cta { width: 100%; padding: 16px 32px !important; font-size: 1.1rem !important; font-weight: 800 !important; border: none !important; border-radius: 14px !important; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important; color: #fff !important; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 14px rgba(37,99,235,0.25); margin-bottom: 4px; }
+    .sat-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,99,235,0.35); }
+    .sat-cta:active { transform: translateY(0); }
+    /* Fallback for any remaining calc-calculate class */
+    .calc-calculate { width: 100%; padding: 16px 32px; font-size: 1.1rem; font-weight: 800; border: none; border-radius: 14px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #fff; cursor: pointer; box-shadow: 0 4px 14px rgba(37,99,235,0.25); margin-bottom: 4px; }
+    /* Reset buttons - subtle secondary */
+    .btn-secondary { opacity: 0.85; }
+    /* Radio pills - better touch targets */
+    .radio-pill { cursor: pointer; user-select: none; }
+    .radio-pill span { padding: 10px 18px; display: inline-block; }
+    /* Result cards - better visual hierarchy */
+    .calc-result { margin-top: 24px; padding: 24px; border-radius: 16px; background: var(--card, #f8fafc); border: 1px solid var(--border, rgba(37,99,235,0.08)); }
+    .calc-result-value { font-size: clamp(2.8rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(135deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
+    /* Error box styling */
+    .error-box { padding: 12px 16px; border-radius: 10px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.9rem; margin-top: 12px; }
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+        .field-row { flex-direction: column; gap: 0; }
+        .field-row .field-group { min-width: 100%; }
+        .sat-cta { padding: 14px 24px !important; font-size: 1rem !important; }
+    }
+    /* Dark mode adjustments */
+    [data-theme="dark"] .calc-input { background: var(--card, #1e293b); border-color: rgba(255,255,255,0.1); }
+    [data-theme="dark"] .calc-result { background: rgba(255,255,255,0.03); }
     </style>
 </head>
 <body>
@@ -127,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="calc-calculate">Calculate My Score</button>
+                    <button type="submit" class="btn btn-primary sat-cta">Calculate My Score</button>
                     <button type="button" class="btn btn-secondary" id="satReset" style="margin-top:10px;width:100%;">Reset</button>
                     <p class="error-box" id="satError" hidden role="alert"></p>
                 </form>
@@ -169,7 +195,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;padding:15px 32px;font-size:1.1rem;">Plan My Target</button>
+                    <button type="submit" class="btn btn-primary sat-cta">Plan My Target</button>
                     <button type="button" class="btn btn-secondary" id="goalReset" style="margin-top:10px;width:100%;">Reset</button>
                     <p class="error-box" id="goalError" hidden role="alert"></p>
                 </form>
@@ -213,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;padding:15px 32px;font-size:1.1rem;">Calculate Superscore</button>
+                    <button type="submit" class="btn btn-primary sat-cta">Calculate Superscore</button>
                     <div class="btn-row" style="margin-top:10px;">
                         <button type="button" class="btn btn-secondary" id="superAddDate" style="flex:1;">Add Date</button>
                         <button type="button" class="btn btn-secondary" id="superReset" style="flex:1;">Reset</button>
@@ -250,7 +276,7 @@
                         <label class="field-label" for="convInput">Enter your score</label>
                         <input class="calc-input" type="number" id="convInput" placeholder="e.g. 1350" inputmode="numeric">
                     </div>
-                    <button type="submit" class="calc-calculate">Convert</button>
+                    <button type="submit" class="btn btn-primary sat-cta">Convert</button>
                     <button type="button" class="btn btn-secondary" id="convReset" style="margin-top:10px;width:100%;">Reset</button>
                     <p class="error-box" id="convError" hidden role="alert"></p>
                 </form>
