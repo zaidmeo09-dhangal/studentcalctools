@@ -427,15 +427,6 @@
             </div>
         </section>
     </div>
-    <section class="cta-section">
-    <div class="cta-wrap">
-        <h2>Explore More Free Tools</h2>
-        <p>Use Student Calc's free academic calculators to plan your grades, GPA, attendance, scholarships, and college costs. No sign up required.</p>
-        <a href="/calculators/" class="btn-cta">
-            Browse All Tools <span aria-hidden="true">→</span>
-        </a>
-    </div>
-</section>
     {% include footer.html %}
     <script>
     (function(){function buildTables(){var curves={average:{rw:[[54,800],[50,760],[45,710],[40,660],[35,610],[30,560],[25,510],[20,460],[15,410],[10,360],[5,310],[0,260]],math:[[44,800],[40,760],[35,710],[30,660],[25,610],[20,560],[15,510],[10,460],[5,410],[0,360]]},easier:{rw:[[54,800],[50,760],[45,710],[40,660],[35,610],[30,570],[25,520],[20,470],[15,420],[10,370],[5,320],[0,270]],math:[[44,800],[40,760],[35,710],[30,660],[25,610],[20,560],[15,510],[10,460],[5,410],[0,360]]},harder:{rw:[[54,800],[50,750],[45,700],[40,650],[35,600],[30,550],[25,500],[20,450],[15,400],[10,350],[5,300],[0,250]],math:[[44,800],[40,750],[35,700],[30,650],[25,600],[20,550],[15,500],[10,450],[5,400],[0,350]]}};Object.keys(curves).forEach(function(key){var tbody=document.getElementById('tbody-'+key);if(!tbody)return;var rw=curves[key].rw,math=curves[key].math;var maxLen=Math.max(rw.length,math.length);var html='';for(var i=0;i<maxLen;i++){html+='<tr><td>'+(rw[i]?rw[i][0]:'-')+'</td><td>'+(rw[i]?rw[i][1]:'-')+'</td><td>'+(math[i]?math[i][0]:'-')+'</td><td>'+(math[i]?math[i][1]:'-')+'</td></tr>';}tbody.innerHTML=html;});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',buildTables);}else{buildTables();}})();
