@@ -90,6 +90,12 @@
     /* Dark mode adjustments */
     [data-theme="dark"] .calc-input { background: var(--card, #1e293b); border-color: rgba(255,255,255,0.1); }
     [data-theme="dark"] .calc-result { background: rgba(255,255,255,0.03); }
+        /* Breadcrumb styling (matches other pages) */
+.breadcrumb { position: relative; z-index: 1; margin-bottom: 18px; color: var(--muted); font-size: 13px; }
+.breadcrumb a { color: var(--blue); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb-sep { margin: 0 8px; color: var(--muted); }
+
     /* === Fix large empty gaps === */
     /* Collapse AdSense units when no ad loads */
     /* Hide result boxes until user calculates */
@@ -223,7 +229,7 @@
                 <p class="calc-card-subtitle">Many colleges combine your best section scores across test dates. Enter each sitting to see your superscore.</p>
                 <form id="superForm" novalidate>
                     <div id="superDates">
-                        <div class="field-row">
+                     <div class="field-row super-date">
                             <div class="field-group">
                                 <label class="field-label">Test date 1: Reading/Writing <small>(200-800)</small></label>
                                 <input class="calc-input super-rw" type="number" min="200" max="800" step="10" placeholder="e.g. 700" aria-label="Reading Writing score date 1">
@@ -234,7 +240,7 @@
                             </div>
                         </div>
                         <div class="field-row">
-                            <div class="field-group">
+                            <div class="field-row super-date">
                                 <label class="field-label">Test date 2: Reading/Writing <small>(200-800)</small></label>
                                 <input class="calc-input super-rw" type="number" min="200" max="800" step="10" placeholder="e.g. 680" aria-label="Reading Writing score date 2">
                             </div>
