@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://studentcalctools.com/sat-score-calculator/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Digital SAT Score Calculator 2026: Predict Your Score</title>
-    <meta name="description" content="Free Digital SAT score calculator 2026. Enter module scores to predict your 400-1600 score, national percentile, ACT equivalent, goal plan & superscore.">
+    <meta name="description" content="Free Digital SAT score calculator 2026. Enter module scores to predict your 400-1600 score, national percentile, ACT equivalent, goal plan & superscore. Try it now, no sign-up.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="StudentCalcTools">
     <meta property="og:url" content="https://studentcalctools.com/sat-score-calculator/">
@@ -81,6 +81,11 @@
     .calc-result-value { font-size: clamp(2.8rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(135deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
     /* Error box styling */
     .error-box { padding: 12px 16px; border-radius: 10px; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.9rem; margin-top: 12px; }
+    /* Breadcrumb styling (matches other pages) */
+    .breadcrumb { position: relative; z-index: 1; margin-bottom: 18px; color: var(--muted); font-size: 13px; font-weight: 700; }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { margin: 0 8px; color: var(--muted); }
     /* Mobile responsiveness */
     @media (max-width: 600px) {
         .field-row { flex-direction: column; gap: 0; }
@@ -90,14 +95,7 @@
     /* Dark mode adjustments */
     [data-theme="dark"] .calc-input { background: var(--card, #1e293b); border-color: rgba(255,255,255,0.1); }
     [data-theme="dark"] .calc-result { background: rgba(255,255,255,0.03); }
-        /* Breadcrumb styling (matches other pages) */
-.breadcrumb { position: relative; z-index: 1; margin-bottom: 18px; color: var(--muted); font-size: 13px; font-weight: 700; }
-.breadcrumb a { color: var(--blue); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
-.breadcrumb-sep { margin: 0 8px; color: var(--muted); }
-
     /* === Fix large empty gaps === */
-    /* Collapse AdSense units when no ad loads */
     /* Hide result boxes until user calculates */
     .calc-result:not(.visible) { display: none; }
     .calc-result.visible { display: block; }
@@ -110,11 +108,11 @@
             <nav class="breadcrumb" aria-label="Breadcrumb">
                 <a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">›</span><a href="/calculators/">Calculators</a><span class="breadcrumb-sep" aria-hidden="true">›</span><span>SAT Score Calculator</span>
             </nav>
-            <h1>SAT Score <span class="gradient-text">Calculator</span></h1>
-            <p class="hero-sub">Predict your Digital SAT score from practice test answers. Get your national percentile, ACT equivalent, a reverse goal planner, and a superscore calculator, all in one place.</p>
+            <h1>Free Digital SAT Score <span class="gradient-text">Calculator 2026</span></h1>
+            <p class="hero-sub">Predict your Digital SAT score from practice test answers. Get your SAT percentile, national ranking, ACT equivalent, a reverse goal planner, and a superscore calculator, all in one place.</p>
             <div class="hero-badges">
                 <span class="hero-badge">Digital SAT format</span>
-                <span class="hero-badge">National percentile</span>
+                <span class="hero-badge">SAT percentile chart</span>
                 <span class="hero-badge">Goal planner</span>
                 <span class="hero-badge">Superscore tool</span>
                 <span class="hero-badge">SAT to ACT converter</span>
@@ -229,7 +227,7 @@
                 <p class="calc-card-subtitle">Many colleges combine your best section scores across test dates. Enter each sitting to see your superscore.</p>
                 <form id="superForm" novalidate>
                     <div id="superDates">
-                     <div class="field-row super-date">
+                        <div class="field-row super-date">
                             <div class="field-group">
                                 <label class="field-label">Test date 1: Reading/Writing <small>(200-800)</small></label>
                                 <input class="calc-input super-rw" type="number" min="200" max="800" step="10" placeholder="e.g. 700" aria-label="Reading Writing score date 1">
@@ -239,8 +237,8 @@
                                 <input class="calc-input super-math" type="number" min="200" max="800" step="10" placeholder="e.g. 650" aria-label="Math score date 1">
                             </div>
                         </div>
-                        <div class="field-row">
-                            <div class="field-row super-date">
+                        <div class="field-row super-date">
+                            <div class="field-group">
                                 <label class="field-label">Test date 2: Reading/Writing <small>(200-800)</small></label>
                                 <input class="calc-input super-rw" type="number" min="200" max="800" step="10" placeholder="e.g. 680" aria-label="Reading Writing score date 2">
                             </div>
@@ -274,7 +272,7 @@
         <section class="calc-section">
             <div class="calc-card" id="converter">
                 <h2 class="calc-card-title">SAT to ACT Score Converter</h2>
-                <p class="calc-card-subtitle">Convert between SAT and ACT using the official 2018 concordance tables.</p>
+                <p class="calc-card-subtitle">Convert between SAT and ACT using the official 2018 SAT to ACT conversion chart and concordance tables.</p>
                 <form id="convForm" novalidate>
                     <div class="field-group" style="margin-bottom:20px;">
                         <label class="field-label">Conversion direction</label>
@@ -318,8 +316,8 @@
         </section>
         <section class="calc-section">
             <div class="calc-card" id="conversion-tables">
-                <h2 class="calc-card-title">Raw to Scaled Conversion Tables</h2>
-                <p class="calc-card-subtitle">Full per-section conversion tables for each curve used by this calculator, modeled on official Bluebook practice tests.</p>
+                <h2 class="calc-card-title">SAT Score Chart: Raw to Scaled Conversion Tables</h2>
+                <p class="calc-card-subtitle">Full SAT score chart with per-section conversion tables for each curve used by this calculator, modeled on official Bluebook practice tests.</p>
                 <div class="curve-tabs" role="tablist" aria-label="Curve selection">
                     <button class="curve-tab active" data-target="table-average" role="tab" aria-selected="true">Average Curve</button>
                     <button class="curve-tab" data-target="table-easier" role="tab" aria-selected="false">Generous Curve</button>
@@ -334,13 +332,26 @@
                 <div class="curve-table-wrap" id="table-harder" role="tabpanel" hidden>
                     <table class="conv-table"><thead><tr><th>Correct (RW)</th><th>RW Score</th><th>Correct (Math)</th><th>Math Score</th></tr></thead><tbody id="tbody-harder"></tbody></table>
                 </div>
-                <p class="table-note">Tables are estimates modeled on official College Board practice test curves. Actual test-day curves vary by administration.</p>
+                <p class="table-note">This SAT score chart shows estimates modeled on official College Board practice test curves. Actual test-day curves vary by administration.</p>
+                <h3 style="margin-top:24px;">SAT Percentile Chart</h3>
+                <p>Wondering where your score lands nationally? Here is a quick SAT percentile chart based on College Board data:</p>
+                <table class="conv-table"><thead><tr><th>SAT Score</th><th>SAT Percentile</th><th>SAT Score</th><th>SAT Percentile</th></tr></thead><tbody>
+                    <tr><td>1600</td><td>99th+</td><td>1200</td><td>74th</td></tr>
+                    <tr><td>1550</td><td>99th</td><td>1150</td><td>61st</td></tr>
+                    <tr><td>1500</td><td>98th</td><td>1100</td><td>54th</td></tr>
+                    <tr><td>1450</td><td>95th</td><td>1050</td><td>44th</td></tr>
+                    <tr><td>1400</td><td>93rd</td><td>1000</td><td>37th</td></tr>
+                    <tr><td>1350</td><td>88th</td><td>950</td><td>28th</td></tr>
+                    <tr><td>1300</td><td>82nd</td><td>900</td><td>20th</td></tr>
+                    <tr><td>1250</td><td>77th</td><td>850</td><td>15th</td></tr>
+                </tbody></table>
+                <p class="table-note">Your SAT percentile tells you what percentage of test takers you outscored. The calculator above shows your exact percentile automatically.</p>
             </div>
         </section>
     </main>
     <div class="content-container" style="padding-bottom:0;">
         <div class="info-box" style="border-left-color:var(--success);">
-            <p><strong>Quick answer:</strong> The Digital SAT is scored from 400 to 1600, combining two sections (Reading/Writing and Math) scored 200-800 each. Your raw correct answers convert to scaled scores via a test-specific curve, with no penalty for wrong answers. Module 1 performance routes you to an easier or harder Module 2, which sets your score ceiling. Use the calculator above for your exact estimate.</p>
+            <p><strong>Quick answer:</strong> The Digital SAT is scored from 400 to 1600, combining two sections (Reading/Writing and Math) scored 200-800 each. Your raw correct answers convert to scaled scores via a test-specific SAT score chart, with no penalty for wrong answers. Module 1 performance routes you to an easier or harder Module 2, which sets your score ceiling. Use the calculator above for your exact estimate.</p>
         </div>
     </div>
     <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6847465261437650" data-ad-slot="4030217604"></ins>
@@ -372,13 +383,13 @@
                 <li><strong>Enter the four numbers</strong> into the calculator above.</li>
                 <li><strong>Choose your curve.</strong> Start with the average curve. If your practice test felt easy, try the strict curve; if it felt hard, try the generous one.</li>
                 <li><strong>Set Module 2 difficulty</strong> to match the version you received (harder or easier).</li>
-                <li><strong>Read your results:</strong> estimated total, section scores, national percentile, ACT equivalent, and what your score means for admissions.</li>
+                <li><strong>Read your results:</strong> estimated total, section scores, SAT percentile, ACT equivalent, and what your score means for admissions.</li>
             </ol>
         </section>
         <section class="content-section">
-            <h2>Understanding Your Percentile</h2>
-            <p>Your percentile tells you what percentage of test takers you scored above. A 90th percentile means you outscored 90% of students. This calculator shows your <strong>national percentile</strong> based on College Board data, not a sample from a single prep company, so it reflects where you truly stand.</p>
-            <p>Percentiles matter because colleges evaluate your score in context. A 1400 might be the 94th percentile nationally, which tells an admissions officer far more than the raw number alone.</p>
+            <h2>Understanding Your SAT Percentile</h2>
+            <p>Your SAT percentile tells you what percentage of test takers you scored above. A 90th percentile means you outscored 90% of students. This calculator shows your <strong>national SAT percentile</strong> based on College Board data, not a sample from a single prep company, so it reflects where you truly stand.</p>
+            <p>SAT percentiles matter because colleges evaluate your score in context. A 1400 might be the 93rd SAT percentile nationally, which tells an admissions officer far more than the raw number alone. Check the SAT percentile chart above for a quick reference.</p>
         </section>
         <section class="content-section">
             <h2>SAT Score Benchmarks</h2>
@@ -404,7 +415,7 @@
             <details class="faq-item"><summary>What is SAT superscoring?</summary><div class="faq-answer"><p>Superscoring means colleges combine your best section scores across multiple test dates. If you scored 700 RW + 650 Math in March and 680 RW + 720 Math in May, your superscore is 700 + 720 = 1420. Many colleges superscore the SAT.</p></div></details>
             <details class="faq-item"><summary>How accurate is this SAT score calculator?</summary><div class="faq-answer"><p>This calculator uses raw-to-scaled conversion tables modeled on official College Board Bluebook practice test curves. Real test curves vary slightly per administration, so treat results as estimates within about 20-40 points.</p></div></details>
             <details class="faq-item"><summary>Is 1200 out of 1600 a good SAT score?</summary><div class="faq-answer"><p>Yes, 1200 is a good SAT score. It is above the national average of about 1024 and lands around the 74th percentile, meaning you outscored roughly three-quarters of test takers. It's competitive for many state universities, though highly selective schools typically expect 1400+.</p></div></details>
-            <details class="faq-item"><summary>Is a 1480 SAT or 34 ACT better?</summary><div class="faq-answer"><p>They are roughly equivalent. According to the official 2018 SAT-ACT concordance, a 1480 SAT concords to about a 33-34 ACT. Neither is objectively better; colleges treat concordant scores equally. Use the converter above for exact concordance.</p></div></details>
+            <details class="faq-item"><summary>Is a 1480 SAT or 34 ACT better?</summary><div class="faq-answer"><p>They are roughly equivalent. According to the official 2018 SAT-ACT concordance, a 1480 SAT concords to about a 33-34 ACT. Neither is objectively better; colleges treat concordant scores equally. Use the SAT to ACT converter above for exact concordance.</p></div></details>
             <details class="faq-item"><summary>Is 1400 SAT enough for Harvard?</summary><div class="faq-answer"><p>A 1400 is below Harvard's middle-50% range of roughly 1490-1580, so it would be a weak score for Harvard specifically. However, Harvard looks at your whole application, and a 1400 is an excellent score nationally (around the 93rd percentile) that is competitive at many top-50 universities.</p></div></details>
             <details class="faq-item"><summary>What is the most accurate SAT score calculator?</summary><div class="faq-answer"><p>The most accurate calculators use raw-to-scaled conversion tables modeled on official College Board Bluebook practice test curves, account for adaptive Module 2 routing, and let you select the curve difficulty. This calculator does all three, with three curve options and explicit Module 2 difficulty input.</p></div></details>
         </section>
@@ -427,6 +438,15 @@
             </div>
         </section>
     </div>
+    <section class="cta-section">
+        <div class="cta-wrap">
+            <h2>Explore More Free Tools</h2>
+            <p>Use Student Calc's free academic calculators to plan your grades, GPA, attendance, scholarships, and college costs. No sign up required.</p>
+            <a href="/calculators/" class="btn-cta">
+                Browse All Tools <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </section>
     {% include footer.html %}
     <script>
     (function(){function buildTables(){var curves={average:{rw:[[54,800],[50,760],[45,710],[40,660],[35,610],[30,560],[25,510],[20,460],[15,410],[10,360],[5,310],[0,260]],math:[[44,800],[40,760],[35,710],[30,660],[25,610],[20,560],[15,510],[10,460],[5,410],[0,360]]},easier:{rw:[[54,800],[50,760],[45,710],[40,660],[35,610],[30,570],[25,520],[20,470],[15,420],[10,370],[5,320],[0,270]],math:[[44,800],[40,760],[35,710],[30,660],[25,610],[20,560],[15,510],[10,460],[5,410],[0,360]]},harder:{rw:[[54,800],[50,750],[45,700],[40,650],[35,600],[30,550],[25,500],[20,450],[15,400],[10,350],[5,300],[0,250]],math:[[44,800],[40,750],[35,700],[30,650],[25,600],[20,550],[15,500],[10,450],[5,400],[0,350]]}};Object.keys(curves).forEach(function(key){var tbody=document.getElementById('tbody-'+key);if(!tbody)return;var rw=curves[key].rw,math=curves[key].math;var maxLen=Math.max(rw.length,math.length);var html='';for(var i=0;i<maxLen;i++){html+='<tr><td>'+(rw[i]?rw[i][0]:'-')+'</td><td>'+(rw[i]?rw[i][1]:'-')+'</td><td>'+(math[i]?math[i][0]:'-')+'</td><td>'+(math[i]?math[i][1]:'-')+'</td></tr>';}tbody.innerHTML=html;});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',buildTables);}else{buildTables();}})();
