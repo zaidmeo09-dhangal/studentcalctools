@@ -106,10 +106,18 @@
 
     function getActToSat(actScore) {
         for (const [sat, act] of SAT_TO_ACT) {
-            if (act >= actScore) return sat;
+            if (act <= actScore) return sat;
         }
         return 890;
     }
+
+    function ordinalSuffix(n) {
+  const j = n % 10, k = n % 100;
+  if (j === 1 && k !== 11) return 'st';
+  if (j === 2 && k !== 12) return 'nd';
+  if (j === 3 && k !== 13) return 'rd';
+  return 'th';
+}
 
     function sectionScore(raw, section, curveKey) {
         const table = CURVES[curveKey][section];
@@ -211,7 +219,7 @@
             document.getElementById('resTotal').textContent = total;
             document.getElementById('resRW').textContent = rwScore;
             document.getElementById('resMath').textContent = mathScore;
-            document.getElementById('resPercentile').textContent = percentile + (percentile === 99 ? '+' : 'th');
+            document.getElementById('resPercentile').textContent = percentile + (percentile === 99 ? '+' : ordinalSuffix(percentile));
             document.getElementById('resACT').textContent = actEq;
             document.getElementById('resBand').textContent = band.label;
             document.getElementById('resBandDesc').textContent = band.desc;
@@ -352,7 +360,7 @@
             document.getElementById('superBestMath').textContent = bestMath;
             document.getElementById('superTotal').textContent = superscore;
             document.getElementById('superGain').textContent = '+' + gain + ' points vs your best single sitting';
-            document.getElementById('superPercentile').textContent = getPercentile(superscore) + 'th percentile';
+            document.getElementById('superPercentile').textContent = getPercentile(superscore) + ordinalSuffix(getPercentile(superscore)) + ' percentile';
 
             superResult.classList.add('visible');
             superResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
