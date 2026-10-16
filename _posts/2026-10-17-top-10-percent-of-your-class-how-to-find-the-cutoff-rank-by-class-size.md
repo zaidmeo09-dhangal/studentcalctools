@@ -163,9 +163,8 @@ Each number below means **that rank or better**.
 The table rounds down whenever the calculation produces a decimal. It assumes distinct numerical ranks and checks the percentage limit only.
 
 
-|  |  |  |  |
-| -------------- | ----------------- | ------------------ | ------------------ |
-| **Class size** | **Top 5% cutoff** | **Top 10% cutoff** | **Top 25% cutoff** |
+| Class size | Top 5% cutoff | Top 10% cutoff | Top 25% cutoff |
+| ---------- | ------------- | -------------- | -------------- |
 | 50 | 2 | 5 | 12 |
 | 75 | 3 | 7 | 18 |
 | 100 | 5 | 10 | 25 |
@@ -231,9 +230,8 @@ Because 9.43% is below 10%, the result checks out.
 ### **What About Ranks 24 and 25?**
 
 
-|  |  |  |
-| ------------------- | --------------------------------------- | ------------------------------ |
-| **Rank out of 244** | **Top percentage, rounded for display** | **Inside the strict top 10%?** |
+| Rank out of 244 | Top percentage, rounded for display | Inside the strict top 10%? |
+| --------------- | ----------------------------------- | -------------------------- |
 | 23 | 9.43% | Yes |
 | 24 | 9.84% | Yes |
 | 25 | 10.25% | No |
@@ -311,9 +309,8 @@ Do not assume that being in the top 10% meets UT Austin’s automatic-admission 
 The following thresholds have been officially published:
 
 
-|  |  |
-| -------------------------------- | -------------------------------------- |
-| **UT Austin entry terms** | **Automatic-admission rank threshold** |
+| UT Austin entry terms | Automatic-admission rank threshold |
+| -------------------------------- | ---------------------------------- |
 | Summer/Fall 2026 and Spring 2027 | Top 5% |
 | Summer/Fall 2027 and Spring 2028 | Top 5% |
 | Summer/Fall 2028 and Spring 2029 | Top 5% |
@@ -332,9 +329,8 @@ For a class of 244, the strict mathematical top-5% cutoff is rank 12. Your schoo
 Texas’s [official automatic-admission explanation](https://tea.texas.gov/educators/graduation-information/explanation-of-automatic-college-admission-fig-61-1201a1.pdf) identifies three reporting points:
 
 
-|  |  |
+| Reporting point | What it represents |
 | ---------------------- | ------------------------------------ |
-| **Reporting point** | **What it represents** |
 | End of 11th grade | Standing after junior year |
 | Middle of 12th grade | Standing at the senior-year midpoint |
 | High school graduation | Standing at graduation |
