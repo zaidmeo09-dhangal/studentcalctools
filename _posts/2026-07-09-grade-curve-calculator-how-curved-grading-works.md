@@ -139,7 +139,7 @@ The confusing part is this: “grading on a curve” does not always mean the sa
 
 Sometimes it means adding the same number of points to everyone’s score. Sometimes it means adjusting scores based on the class average. Sometimes it means using a bell curve with mean and standard deviation. Some teachers even use a square-root curve to give lower scores a bigger boost without adding the same number of points to every student.
 
-This guide explains the most common curved grading methods, the formulas behind them, examples, edge cases, and when to use a curve grade calculator instead of doing the math by hand.
+This guide explains the most common curved grading methods, the formulas behind them, examples, edge cases, and when to use a [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) instead of doing the math by hand.
 
 
 
