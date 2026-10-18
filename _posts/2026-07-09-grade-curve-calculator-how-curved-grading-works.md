@@ -131,7 +131,7 @@ faqs_raw: >-
   always depends on the teacher, syllabus, school policy, rounding rules, and
   gradebook settings.
 ---
-A [grade curve calculator](https://studentcalctools.com/grade-calculator/) helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
+A [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) helps you estimate how your raw test score may change when a teacher adjusts grades using a curve.
 
 That matters because your original score is not always the final score recorded in the gradebook. If a test was harder than expected, the class average was unusually low, or the instructor wants grades to match a target distribution, curved grading may raise scores. In some systems, it may also change how letter grades are assigned compared with a normal percentage scale.
 
@@ -139,7 +139,7 @@ The confusing part is this: “grading on a curve” does not always mean the sa
 
 Sometimes it means adding the same number of points to everyone’s score. Sometimes it means adjusting scores based on the class average. Sometimes it means using a bell curve with mean and standard deviation. Some teachers even use a square-root curve to give lower scores a bigger boost without adding the same number of points to every student.
 
-This guide explains the most common curved grading methods, the formulas behind them, examples, edge cases, and when to use a [grade curve calculator](https://studentcalctools.com/grade-curve-calculator/) instead of doing the math by hand.
+This guide explains the most common curved grading methods, the formulas behind them, examples, edge cases, and when to use a grade curve calculator instead of doing the math by hand.
 
 
 
