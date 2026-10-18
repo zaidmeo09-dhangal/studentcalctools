@@ -2611,7 +2611,8 @@
             var best = -1, bestKey = null;
             var results = {};
             order.forEach(function (key) {
-                var r = round1(METHODS[key].apply(score, params));
+    var kp = methodParams(key);
+    var r = round1(METHODS[key].apply(score, kp));
                 results[key] = r;
                 if (r > best) { best = r; bestKey = key; }
             });
