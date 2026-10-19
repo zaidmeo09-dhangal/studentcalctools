@@ -75,7 +75,7 @@ This guide shows how the math works in real Texas districts, with links to the o
 
 ## What is a six weeks grading period?
 
-A six weeks grading period is a block of about six weeks of school that ends with a report card grade for each class. Schools on this system usually run six periods a year, so each semester has three. Most districts also send a progress report partway through. Era ISD, for example, ++[sends a progress report after the third week and issues report cards at the end of each six-week period++.](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline)
+A six weeks grading period is a block of about six weeks of school that ends with a report card grade for each class. Schools on this system usually run six periods a year, so each semester has three. Most districts also send a progress report partway through. Era ISD, for example, ++[sends a progress report after the third week and issues report cards at the end of each six-week period++.]([https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline))
 
 The periods are not always exactly six weeks. In Fort Worth ISD's 2024-25 calendar, the first period ran from August 13 to September 20, while the third ran from November 4 to December 19. Start dates and holidays stretch or shrink each block.
 
@@ -235,8 +235,6 @@ When an exam is skipped, your district's policy decides how the semester average
 3. Check your parent or student portal. It often shows each six weeks average.
 4. Ask your teacher or counselor three things: how much each six weeks counts, how much the exam counts, and how averages are rounded.
 
-
-
 ## **Common mistakes to avoid**
 
 - Averaging the three six weeks equally when your district also counts an exam.
@@ -252,3 +250,4 @@ A six weeks grading period is one piece of a bigger formula. Once you know your 
 
 
 
+&nbsp;
