@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Six Weeks Grading Explained: How Texas Schools Calculate Semester Averages"
+title: "Six Weeks Grading Explained : How Texas Schools Calculate Semester Averages"
 slug: six-weeks-grading-system
 date: 2026-10-19
 status: Published
