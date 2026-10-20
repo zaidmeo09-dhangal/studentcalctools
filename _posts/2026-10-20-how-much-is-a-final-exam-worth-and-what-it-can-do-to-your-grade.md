@@ -98,7 +98,7 @@ faqs_raw: >-
 ---
 **New course grade = current grade × (1 − final exam weight) + final exam score × final exam weight.** Use the weight as a decimal, so 20% becomes 0.20. In plain words, your grade moves toward your exam score by the weight of the exam.
 
-There is no single answer to how much a final exam is worth. Your state, district, school or teacher sets the weight, and the real number is in your syllabus or grading policy. In the sourced examples below it runs from about 10% to 30% for school courses, and one university's rule allows anything from 30% to 60%. If you already know your weight and want a target score, the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++ does the work for you. The rest of this guide shows the math, so you can see what a final can really do to your grade.
+There is no single answer to how much a final exam is worth. Your state, district, school or teacher sets the weight, and the real number is in your syllabus or grading policy. In the sourced examples below it runs from about 10% to 30% for school courses, and one university's rule allows anything from 30% to 60%. If you already know your weight and want a target score, the [final grade calculator](https://studentcalctools.com/final-grade-calculator/) does the work for you. The rest of this guide shows the math, so you can see what a final can really do to your grade.
 
 
 
@@ -119,21 +119,21 @@ It depends on where you study. Some states set the weight of certain finals by l
 
 
 | **Where** | **Final exam weight** | **Source** |
-| ---------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fort Worth ISD, Texas | 1/7 of the semester grade (about 14.3%) | ++[2024-25 secondary guide](https://resources.finalsite.net/images/v1743630242/fwisdorg/b6fql6x3q1tg00nquaqq/SecondaryGuidetoGradeReporting20242025830242.pdf)++ |
-| Garland ISD, Texas | 1/7 of the semester average when an exam is given | ++[District regulation](https://garlandisd.net/media/16309/download)++ |
-| Era ISD, Texas | 10% of the semester grade | ++[Grading guidelines](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline)++ |
-| Plano ISD, Texas | 20% of the semester grade in grades 9 to 12, and 10% in grades 7 and 8 | ++[Board policy EIAA (LOCAL)](https://pisd.diligent.community/document/9b2105f5-1b2e-4de3-96fd-b43b30d5d9cb/)++ |
-| Florida (state law) | 30% for the state end-of-course test in Algebra 1, Geometry, Biology, Civics and U.S. History | ++[Florida Statutes 1008.22](https://www.flsenate.gov/Laws/statutes/2020/1008.22)++ and a ++[Miami-Dade guide](https://pdfs.dadeschools.net/ESE/fsaa/EOCFSAAFlyerWithoutDate.pdf)++ |
-| Georgia (state board rule) | 20% for end-of-course tests, and since 2023 districts may lower it to 10% | ++[Dade County Schools](https://www.dadecountyschools.org/departments-programs/testing/ga-milestones-assessment)++ and an ++[Augusta Press report](https://theaugustapress.com/state-department-of-education-to-lower-weight-of-georgia-milestones-tests)++ |
-| University of Ottawa, Canada | Between 30% and 60% of the course grade unless the Faculty authorizes otherwise | ++[Academic Regulation A-8](https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/a-8-evaluation-student-learning)++ |
+| ---------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fort Worth ISD, Texas | 1/7 of the semester grade (about 14.3%) | [2024-25 secondary guide](https://resources.finalsite.net/images/v1743630242/fwisdorg/b6fql6x3q1tg00nquaqq/SecondaryGuidetoGradeReporting20242025830242.pdf) |
+| Garland ISD, Texas | 1/7 of the semester average when an exam is given | [District regulation](https://garlandisd.net/media/16309/download) |
+| Era ISD, Texas | 10% of the semester grade | [Grading guidelines](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline) |
+| Plano ISD, Texas | 20% of the semester grade in grades 9 to 12, and 10% in grades 7 and 8 | [Board policy EIAA (LOCAL)](https://pisd.diligent.community/document/9b2105f5-1b2e-4de3-96fd-b43b30d5d9cb/) |
+| Florida (state law) | 30% for the state end-of-course test in Algebra 1, Geometry, Biology, Civics and U.S. History | [Florida Statutes 1008.22](https://www.flsenate.gov/Laws/statutes/2020/1008.22) and a [Miami-Dade guide](https://pdfs.dadeschools.net/ESE/fsaa/EOCFSAAFlyerWithoutDate.pdf) |
+| Georgia (state board rule) | 20% for end-of-course tests, and since 2023 districts may lower it to 10% | [Dade County Schools](https://www.dadecountyschools.org/departments-programs/testing/ga-milestones-assessment) and an [Augusta Press report](https://theaugustapress.com/state-department-of-education-to-lower-weight-of-georgia-milestones-tests) |
+| University of Ottawa, Canada | Between 30% and 60% of the course grade unless the Faculty authorizes otherwise | [Academic Regulation A-8](https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/a-8-evaluation-student-learning) |
 
 
-Two notes on that table. Florida's end-of-course test is a state exam, and ++[Pasco County Schools says it does not replace the course's own semester or final exam](https://eschool.pasco.k12.fl.us/?p=15536)++. Georgia's rule has changed before, so check the current weight with your school.
+Two notes on that table. Florida's end-of-course test is a state exam, and [Pasco County Schools says it does not replace the course's own semester or final exam](https://eschool.pasco.k12.fl.us/?p=15536). Georgia's rule has changed before, so check the current weight with your school.
 
 College is different again. Most colleges let each instructor choose the weight, and some set limits, like the University of Ottawa rule above. That is why two courses in the same department can weight their finals very differently, and why the syllabus is the only number you can trust.
 
-Is there a "best" weight? One paper on course design looked at the math and found that the grade you need on the exam to reach the next letter stops getting easier as the weight climbs past about 30%. The author concluded that a final worth 10% to 30% leaves the most room for student work to show up in the grade       (++[Franke, 2018, Teaching & Learning Inquiry](https://files.eric.ed.gov/fulltext/EJ1174864.pdf)++). That is one author's analysis, not a rule your school has to follow.
+Is there a "best" weight? One paper on course design looked at the math and found that the grade you need on the exam to reach the next letter stops getting easier as the weight climbs past about 30%. The author concluded that a final worth 10% to 30% leaves the most room for student work to show up in the grade       ([Franke, 2018, Teaching & Learning Inquiry](https://files.eric.ed.gov/fulltext/EJ1174864.pdf)). That is one author's analysis, not a rule your school has to follow.
 
 
 
@@ -147,7 +147,7 @@ Here is the formula again, with each part explained:
 - **Final weight** is the share of the course the final is worth, as a decimal. A 25% final is 0.25.
 - **Final exam score** is the percentage you get on the exam.
 
-If you do not know your current grade yet, work it out first with the ++[grade calculator](https://studentcalctools.com/grade-calculator/)++, then use that number here.
+If you do not know your current grade yet, work it out first with the [grade calculator](https://studentcalctools.com/grade-calculator/), then use that number here.
 
 There is also a shortcut that makes the math easier to picture:
 
@@ -247,7 +247,7 @@ Since the best case depends so much on where you start, a final only lifts you a
 
 ## **Check your own numbers**
 
-You can do this by hand, but the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++ is faster when you want to try several targets. Enter your current grade, your target grade and the final exam weight, and it returns the score you need. If the result is above 100, the target is not possible with regular grading. If the result is below 0, you have already reached it.
+You can do this by hand, but the [final grade calculator](https://studentcalctools.com/final-grade-calculator/) is faster when you want to try several targets. Enter your current grade, your target grade and the final exam weight, and it returns the score you need. If the result is above 100, the target is not possible with regular grading. If the result is below 0, you have already reached it.
 
 
 
@@ -279,4 +279,4 @@ For example, a 200-point final in a 1,000-point course is worth 200 ÷ 1,000 = 2
 
 ## **Final thoughts**
 
-A final exam is rarely the whole story, but it is rarely small either. Find the weight in your syllabus, work out your best and worst case, and then you know how much studying time it deserves. When you want a quick answer, try the ++[final grade calculator](https://studentcalctools.com/final-grade-calculator/)++, and find more free student tools at ++[StudentCalcTools](https://studentcalctools.com/)++.  
+A final exam is rarely the whole story, but it is rarely small either. Find the weight in your syllabus, work out your best and worst case, and then you know how much studying time it deserves. When you want a quick answer, try the [final grade calculator](https://studentcalctools.com/final-grade-calculator/), and find more free student tools at [StudentCalcTools](https://studentcalctools.com/).  
