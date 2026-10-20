@@ -133,7 +133,7 @@ Two notes on that table. Florida's end-of-course test is a state exam, and ++[Pa
 
 College is different again. Most colleges let each instructor choose the weight, and some set limits, like the University of Ottawa rule above. That is why two courses in the same department can weight their finals very differently, and why the syllabus is the only number you can trust.
 
-Is there a "best" weight? One paper on course design looked at the math and found that the grade you need on the exam to reach the next letter stops getting easier as the weight climbs past about 30%. The author concluded that a final worth 10% to 30% leaves the most room for student work to show up in the grade [(++Franke, 2018, Teaching & Learning Inquiry++)](https://files.eric.ed.gov/fulltext/EJ1174864.pdf). That is one author's analysis, not a rule your school has to follow.
+Is there a "best" weight? One paper on course design looked at the math and found that the grade you need on the exam to reach the next letter stops getting easier as the weight climbs past about 30%. The author concluded that a final worth 10% to 30% leaves the most room for student work to show up in the grade       (++[Franke, 2018, Teaching & Learning Inquiry](https://files.eric.ed.gov/fulltext/EJ1174864.pdf)++). That is one author's analysis, not a rule your school has to follow.
 
 
 
