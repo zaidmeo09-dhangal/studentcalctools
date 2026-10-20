@@ -73,7 +73,7 @@
         {% if matched %}
     <article class="rg-card">
       <a class="rg-card-link" href="{{ post.url | relative_url }}">
-        {% if post.image %}<img class="rg-card-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
+        {% assign card_img = post.featured_image | default: post.image %}{% if card_img %}<img class="rg-card-img" src="{% if card_img contains 'http' %}{{ card_img }}{% else %}{{ card_img | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
         <span class="rg-card-body">
           <span class="rg-card-title">{{ post.title }}</span>
           <span class="rg-card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 90 }}</span>
@@ -97,7 +97,7 @@
         {% unless matched %}
     <article class="rg-card">
       <a class="rg-card-link" href="{{ post.url | relative_url }}">
-        {% if post.image %}<img class="rg-card-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
+        {% assign card_img = post.featured_image | default: post.image %}{% if card_img %}<img class="rg-card-img" src="{% if card_img contains 'http' %}{{ card_img }}{% else %}{{ card_img | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
         <span class="rg-card-body">
           <span class="rg-card-title">{{ post.title }}</span>
           <span class="rg-card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 90 }}</span>
