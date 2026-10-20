@@ -279,4 +279,4 @@ For example, a 200-point final in a 1,000-point course is worth 200 ÷ 1,000 = 2
 
 ## **Final thoughts**
 
-A final exam is rarely the whole story, but it is rarely small either. Find the weight in your syllabus, work out your best and worst case, and then you know how much studying time it deserves. When you want a quick answer, try the [final grade calculator](https://studentcalctools.com/final-grade-calculator/), and find more free student tools at [StudentCalcTools](https://studentcalctools.com/).  
+A final exam is rarely the whole story, but it is rarely small either. Find the weight in your syllabus, work out your best and worst case, and then you know how much studying time it deserves. When you want a quick answer, try the final grade calculator, and find more free student tools at [StudentCalcTools](https://studentcalctools.com/).  
