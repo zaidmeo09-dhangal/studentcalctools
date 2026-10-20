@@ -1,0 +1,129 @@
+{% comment %}
+  Related Guides strip for calculator pages.
+  Server-rendered (full SEO value). Auto-picks published blog posts whose
+  URL matches the calculator topic keywords. If fewer than 4 posts match,
+  the strip fills up with the latest posts so it never looks empty.
+  A new blog post with a matching slug appears here automatically.
+  Shows only on the calculator pages listed in calc_slugs.
+{% endcomment %}
+{% assign slug = page.url | remove: "/" %}
+{% assign calc_slugs = "gpa-calculator,cgpa-calculator,grade-calculator,final-grade-calculator,class-rank-calculator,attendance-calculator,sat-score-calculator,study-time-planner,essay-word-counter,scholarship-calculator,student-loan-calculator,lsac-gpa-calculator,grade-curve-calculator" | split: "," %}
+{% if calc_slugs contains slug %}
+  {% assign label = "student success" %}
+  {% case slug %}
+    {% when "gpa-calculator" %}
+      {% assign label = "GPA" %}
+      {% assign keywords = "calculate-gpa,gpa-vs-cgpa,from-percentage,without-credits,high-school-gpa,good-gpa" | split: "," %}
+    {% when "cgpa-calculator" %}
+      {% assign label = "CGPA" %}
+      {% assign keywords = "calculate-cgpa,gpa-vs-cgpa,calculate-gpa" | split: "," %}
+    {% when "lsac-gpa-calculator" %}
+      {% assign label = "law school GPA" %}
+      {% assign keywords = "calculate-gpa,gpa-vs-cgpa,good-gpa,high-school-gpa" | split: "," %}
+    {% when "grade-calculator" %}
+      {% assign label = "grades" %}
+      {% assign keywords = "test-grade,semester-grade,six-weeks" | split: "," %}
+    {% when "final-grade-calculator" %}
+      {% assign label = "final grades" %}
+      {% assign keywords = "semester-grade,six-weeks,test-grade" | split: "," %}
+    {% when "grade-curve-calculator" %}
+      {% assign label = "grade curves" %}
+      {% assign keywords = "grade-curve,semester-grade,six-weeks,test-grade" | split: "," %}
+    {% when "class-rank-calculator" %}
+      {% assign label = "class rank" %}
+      {% assign keywords = "class-rank,top-10-percent" | split: "," %}
+    {% when "attendance-calculator" %}
+      {% assign label = "attendance" %}
+    {% when "sat-score-calculator" %}
+      {% assign label = "SAT prep" %}
+    {% when "study-time-planner" %}
+      {% assign label = "study planning" %}
+    {% when "essay-word-counter" %}
+      {% assign label = "essay writing" %}
+    {% when "scholarship-calculator" %}
+      {% assign label = "scholarships" %}
+    {% when "student-loan-calculator" %}
+      {% assign label = "student loans" %}
+  {% endcase %}
+
+  {% assign match_count = 0 %}
+  {% if keywords %}
+    {% for post in site.posts %}
+      {% assign matched = false %}
+      {% for kw in keywords %}
+        {% if post.url contains kw %}{% assign matched = true %}{% break %}{% endif %}
+      {% endfor %}
+      {% if matched %}{% assign match_count = match_count | plus: 1 %}{% endif %}
+    {% endfor %}
+  {% endif %}
+  {% assign total = match_count %}
+  {% if total < 4 %}{% assign total = site.posts.size %}{% endif %}
+  {% if total > 6 %}{% assign total = 6 %}{% endif %}
+
+  {% if total > 0 %}
+  {% capture cards %}
+    {% assign shown = 0 %}
+    {% if keywords %}
+      {% for post in site.posts %}
+        {% if shown >= total %}{% break %}{% endif %}
+        {% assign matched = false %}
+        {% for kw in keywords %}
+          {% if post.url contains kw %}{% assign matched = true %}{% break %}{% endif %}
+        {% endfor %}
+        {% if matched %}
+    <article class="rg-card">
+      <a class="rg-card-link" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img class="rg-card-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
+        <span class="rg-card-body">
+          <span class="rg-card-title">{{ post.title }}</span>
+          <span class="rg-card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 90 }}</span>
+          <span class="rg-card-cta">Read guide &#8594;</span>
+        </span>
+      </a>
+    </article>
+          {% assign shown = shown | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if shown < total %}
+      {% for post in site.posts %}
+        {% if shown >= total %}{% break %}{% endif %}
+        {% assign matched = false %}
+        {% if keywords %}
+          {% for kw in keywords %}
+            {% if post.url contains kw %}{% assign matched = true %}{% break %}{% endif %}
+          {% endfor %}
+        {% endif %}
+        {% unless matched %}
+    <article class="rg-card">
+      <a class="rg-card-link" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img class="rg-card-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span class="rg-card-img" aria-hidden="true"></span>{% endif %}
+        <span class="rg-card-body">
+          <span class="rg-card-title">{{ post.title }}</span>
+          <span class="rg-card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 90 }}</span>
+          <span class="rg-card-cta">Read guide &#8594;</span>
+        </span>
+      </a>
+    </article>
+          {% assign shown = shown | plus: 1 %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endcapture %}
+  <section class="related-guides" aria-label="Related guides">
+    <div class="rg-head">
+      <div>
+        <h2 class="rg-title">Related Guides</h2>
+        <p class="rg-sub">Keep learning about {{ label }}</p>
+      </div>
+      <a class="rg-all" href="{{ '/blog/' | relative_url }}">See All Guides</a>
+    </div>
+    <div class="rg-viewport">
+      <div class="rg-track">
+        <div class="rg-set">{{ cards }}</div>
+        <div class="rg-set" aria-hidden="true">{{ cards }}</div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endif %}
