@@ -118,9 +118,8 @@ There is no single answer to how much a final exam is worth. Your state, distric
 It depends on where you study. Some states set the weight of certain finals by law, some districts set it for every high school course, and in college the instructor sets it in the syllabus. Here are real examples with the original sources:
 
 
-|  |  |  |
-| ---------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Where** | **Final exam weight** | **Source** |
+| ---------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fort Worth ISD, Texas | 1/7 of the semester grade (about 14.3%) | ++[2024-25 secondary guide](https://resources.finalsite.net/images/v1743630242/fwisdorg/b6fql6x3q1tg00nquaqq/SecondaryGuidetoGradeReporting20242025830242.pdf)++ |
 | Garland ISD, Texas | 1/7 of the semester average when an exam is given | ++[District regulation](https://garlandisd.net/media/16309/download)++ |
 | Era ISD, Texas | 10% of the semester grade | ++[Grading guidelines](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline)++ |
@@ -165,9 +164,8 @@ The same idea works for the Texas semester exam. In Fort Worth ISD the three six
 The table shows the lowest and highest course grade you could finish with. The low number is what happens if you score 0 on the final. The high number is what happens if you score 100.
 
 
-|  |  |  |  |  |
-| ----------------- | ------------- | ------------- | ------------- | ------------- |
 | **Current grade** | **10% final** | **20% final** | **25% final** | **30% final** |
+| ----------------- | ------------- | ------------- | ------------- | ------------- |
 | 70 | 63.0 to 73.0 | 56.0 to 76.0 | 52.5 to 77.5 | 49.0 to 79.0 |
 | 80 | 72.0 to 82.0 | 64.0 to 84.0 | 60.0 to 85.0 | 56.0 to 86.0 |
 | 90 | 81.0 to 91.0 | 72.0 to 92.0 | 67.5 to 92.5 | 63.0 to 93.0 |
@@ -192,9 +190,8 @@ This is one of the most common questions students ask, so here it is step by ste
 Here is what different exam scores do:
 
 
-|  |  |
-| ---------------------- | --------------------- |
 | **Score on the final** | **Your course grade** |
+| ---------------------- | --------------------- |
 | 100 | 92.0 |
 | 95 | 91.0 |
 | 90 | 90.0 |
@@ -216,9 +213,8 @@ Rearrange the formula to find the score you need:
 With a 90 and a 20% final:
 
 
-|  |  |
-| ----------------------- | ---------------------------------------------- |
 | **Target course grade** | **Score needed on the final** |
+| ----------------------- | ---------------------------------------------- |
 | 92 | 100 |
 | 90 | 90 |
 | 88 | 80 |
