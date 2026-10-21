@@ -139,8 +139,6 @@ None of PowerSchool's student and parent help pages for Grades and Attendance, G
 6. **Read the label before you trust the number.** A "current GPA" and a "cumulative GPA" are different things (see the next section).
 7. **Still nothing? Use View Counselors.** On the Grades History page, the View Counselors button shows who your counselor is. That is the person to ask.
 
-
-
 ## **How to find your GPA and class rank in the PowerSchool mobile app**
 
 1. **Set up the app.** PowerSchool Mobile only works if your district uses PowerSchool's student information system. You sign in with your portal username and password and enter your school's district code. Your school can give you the code, and in some portals it shows on the web page after you sign in ([example guide](https://cdnsm5-ss19.sharpschool.com/UserFiles/Servers/Server_26883569/File/Parents/Parent%20Portal/Guide%20to%20PowerSchool%20Parent%20Portal%20-%20Updated%202025.pdf)).
@@ -195,7 +193,7 @@ There is usually a plain reason. These are the most common ones, based on PowerS
 
 For a deeper look at how the number is reported once you have it, see [where to find your class rank](https://studentcalctools.com/blog/what-is-my-class-rank/) and our guide on [weighted vs unweighted rank](https://studentcalctools.com/blog/weighted-vs-unweighted-class-rank/).
 
-
+![Flowchart showing what to do when PowerSchool does not show class rank](/assets/images/class-rank-help-flowchart.webp)
 
 ## **What to do if PowerSchool does not show your rank**
 
@@ -218,4 +216,3 @@ The date matters because PowerSchool has a field for the date a rank was last up
 
 PowerSchool can show your GPA, and sometimes your class rank, but your school makes the final call on what you see. Check Grades and Attendance and Grades History on the web, check the GPA widget in the app, and read the label on any number you find. If rank is missing, a short message to your counselor gets you the real answer. For more free tools and guides, visit [StudentCalcTools](https://studentcalctools.com/).
 
-  
