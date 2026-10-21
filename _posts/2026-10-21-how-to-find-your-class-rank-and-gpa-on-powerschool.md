@@ -115,9 +115,8 @@ Sometimes. PowerSchool's admin help says administrators can [control the data th
 Here is what the official help and PowerSchool's own app listing say about each screen:
 
 
-|  |  |  |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Screen** | **What PowerSchool says it shows** | **GPA or class rank?** |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Grades and Attendance](https://ps.powerschool-docs.com/pssis-student-parent/latest/grades-and-attendance) (web) | Current term grades, attendance and assignment scores | A current GPA can appear at the bottom of this page if your school turns it on, according to a [PowerSchool users group guide](https://www.psugcal.org/images/5/59/ParentandStudentPortalAvailabilitySettingsv1.pdf) |
 | [Grades History](https://ps.powerschool-docs.com/pssis-student-parent/latest/grades-history) (web) | Term grades with the course, letter grade, percentage, citizenship grade and credit hours | Not listed on the help page |
 | [Graduation Progress](https://ps.powerschool-docs.com/pssis-student-parent/latest/graduation-progress) (web) | Credits earned and still needed for your graduation plan | Credits, not rank |
@@ -156,9 +155,8 @@ Menu names change between app versions. PowerSchool's current product page lists
 Your school chooses which GPA PowerSchool displays, so the label matters. According to PowerSchool's [GPA Student Screens help](https://ps.powerschool-docs.com/pssis-admin/latest/gpa-student-screens), a school can show these types:
 
 
-|  |  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | **Label** | **Plain meaning** |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Weighted | Includes the credit hours each course earns in the GPA calculation |
 | Simple | Uses only your grades. Credit hours are not part of the calculation |
 | Weighted percent or simple percent | An average percentage instead of a 4.0 grade point number |
@@ -180,9 +178,8 @@ If you want to double-check the number, read our guide on [how to calculate GPA]
 There is usually a plain reason. These are the most common ones, based on PowerSchool's own documentation:
 
 
-|  |  |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Reason** | **What it means for you** |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Your school has not turned the display on | Administrators control what students and parents see, so GPA and other items can be switched off school by school |
 | Your school shows rank only on a transcript or report card | Some districts keep cumulative GPA on transcripts only. [Levittown Public Schools](https://www.levittownschools.com/parentportalnewsletter/) says this in its parent portal FAQ |
 | Rank is calculated on a schedule | [PowerSchool says class rank is calculated](https://ps.powerschool-docs.com/pssis-admin/latest/class-rank) manually or automatically at set intervals, such as every week or only after grades are stored. It is not live |
