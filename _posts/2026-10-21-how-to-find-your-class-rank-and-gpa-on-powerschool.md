@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Find Your Class Rank and GPA on PowerSchool
-slug: clasnk-gpa-powerschool
+slug: class-rank-gpa-powerschool
 date: 2026-10-21
 status: Published
 author: Ethan Cole
