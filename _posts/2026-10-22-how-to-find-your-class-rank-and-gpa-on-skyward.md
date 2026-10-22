@@ -155,8 +155,6 @@ If you can't tell, try both sets of steps below. Your school's Skyward help page
 3. **Click Gradebook.** Skyward's own guide says this is where you see your classes and grades by term, and you can change the term under Display Options.
 4. **Click the GPA/Class Rank tab.** A pop-up window shows the GPA and class rank. An older district guide for Student Access also lists this tab as [GPA/Class Rank (high school only)](https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/3405/AHS/2977338/Skyward_Student_Access_Instructions.pdf), with a View Details option that shows the GPA type.
 
-
-
 ## **How to check GPA and rank in the Skyward mobile app**
 
 1. **Download Skyward Mobile Access.** It is free in the App Store and Google Play. According to [Skyward's App Store listing](https://apps.apple.com/app/id502635374), your district must activate Mobile Access Automatic Setup for the app to find your school.
@@ -229,3 +227,4 @@ Skyward can show your GPA and class rank, but your school controls what you see 
 
 
 
+&nbsp;
