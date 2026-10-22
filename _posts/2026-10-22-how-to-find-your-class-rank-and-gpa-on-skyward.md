@@ -108,9 +108,8 @@ Skyward has built-in places for both GPA and class rank, and Skyward's own [Fami
 Often, yes. Here is what Skyward and district help pages say about each area of Family Access and Student Access:
 
 
-|  |  |  |
-| ---------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Skyward area** | **What it shows** | **GPA or class rank?** |
+| ---------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Gradebook (older screens) | Grades by term, with Display Options | A GPA/Class Rank tab, according to [Garland ISD's Skyward guide](https://www.garlandisdschools.net/uploaded/high_schools/sghs/documents/Skyward_Help_-_Gradebook_Information.pdf) |
 | Grading tile (newer screens) | Grades, GPA and Rank tabs | Yes, per [Pasadena ISD](https://sites.google.com/pasadenaisd.org/skywardfamilyaccess/home/features-tiles/grading) and [La Porte ISD](https://lpisd.org/236198_2) guides |
 | Academic History | Courses and grades from previous years | Not described as a rank screen |
@@ -173,9 +172,8 @@ Not seeing GPA or rank in the app is normal. Lewisville ISD even recommends a co
 Skyward shows GPA as a set of records, and the names can look technical. In plain English:
 
 
-|  |  |
-| ----------------------------- | --------------------------------------------------------------------------------------- |
 | **Label** | **What it usually means** |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
 | GPA Bucket | One named GPA your school tracks, such as a cumulative GPA or a GPA for one school year |
 | GPA Method | The calculation your school uses for that GPA |
 | Earned Credits and GPA Points | The credits and grade points that feed the GPA |
@@ -194,9 +192,8 @@ If you want to double-check a number, you can [calculate your GPA](https://stude
 There is usually a plain reason:
 
 
-|  |  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Reason** | **What it means for you** |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Rank has not been run | Rank records have a Date Run, and Skyward staff run the ranking process as part of grading. No run means no rank yet. [This tutorial for staff](https://www.iorad.com/player/166495/Skyward---Calculate-GPA) shows the Run Grad Req Rank GPA step |
 | Your school does not publish it | Rank is set up by the school, and some districts only show it on a transcript or report |
 | A senior opted out | In Lewisville ISD, rank appears on the transcript unless the student is a senior who [opted out](https://khub.lisd.net/gpa-history-transcripts/student-rank-display-on-transcript-opt-out-process) of displaying it |
