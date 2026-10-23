@@ -2836,19 +2836,19 @@
 
         /* ---------- FAQ accordion ---------- */
 
-        var faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(function (item) {
-            var q = item.querySelector('.faq-question');
-            q.addEventListener('click', function () {
-                var isOpen = item.classList.contains('open');
-                faqItems.forEach(function (other) {
-                    other.classList.remove('open');
-                });
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-            });
+var faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(function (item) {
+    var q = item.querySelector('.faq-question');
+    q.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        faqItems.forEach(function (other) {
+            other.classList.remove('open');
         });
+        if (!isOpen) {
+            item.classList.add('open');
+        }
+    });
+});
 
         /* ---------- Reveal on scroll ---------- */
 
