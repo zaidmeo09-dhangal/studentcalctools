@@ -33,30 +33,18 @@
     <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/act-score-calculator.css?v=20261024">
     <style>
-        .calc-result{display:none;margin-top:20px;padding:20px;border:1px solid var(--border, #e5e7eb);border-radius:14px;background:var(--card, #fff)}
-        .calc-result.visible{display:block}
-        .calc-result-label{font-size:14px;font-weight:600;color:#64748b}
-        .calc-result-value{font-size:44px;font-weight:800;line-height:1.1;margin:4px 0}
-        .calc-result-tier{font-size:16px;font-weight:700}
-        .calc-result-extra{margin-top:12px;line-height:1.6}
-        .calc-result-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-        .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-        .field-group label{display:block;font-weight:600;margin-bottom:6px}
-        .field-group input,.field-group select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px;background:#fff;color:#0f172a}
-        [data-theme="dark"] .field-group input,[data-theme="dark"] .field-group select{background:#1e293b;color:#f8fafc;border-color:#334155}
         .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-        .mode-tabs button{padding:9px 14px;border:1px solid #cbd5e1;border-radius:999px;background:#fff;color:#0f172a;cursor:pointer;font-weight:600}
+        .mode-tabs button{padding:9px 14px;border:1px solid var(--border-strong);border-radius:999px;background:var(--card-bg);color:var(--text);cursor:pointer;font-weight:600}
         .mode-tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
-        [data-theme="dark"] .mode-tabs button{background:#1e293b;color:#f8fafc;border-color:#334155}
-        [data-theme="dark"] .mode-tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
         .calc-table{width:100%;border-collapse:collapse;margin:12px 0}
-        .calc-table th,.calc-table td{border:1px solid #e5e7eb;padding:8px 10px;text-align:left}
-        .note{font-size:14px;color:#475569;line-height:1.6}
+        .calc-table th,.calc-table td{border:1px solid var(--border-strong);padding:8px 10px;text-align:left}
+        .note{font-size:14px;color:var(--muted);line-height:1.6}
         .btn-primary,.btn-secondary{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:0;cursor:pointer}
         .btn-primary{background:#2563eb;color:#fff}
-        .btn-secondary{background:#e2e8f0;color:#0f172a}
-        @media(max-width:640px){.field-row{grid-template-columns:1fr}.calc-result-value{font-size:36px}}
+        .btn-secondary{background:var(--surface-strong);color:var(--text)}
+        @media(max-width:640px){.calc-result-value{font-size:36px}}
     </style>
     <script type="application/ld+json">
 {
@@ -141,8 +129,8 @@
                 <p><strong>I have my scores:</strong> you already have section scores from 1 to 36 and just want the Composite, percentile and superscore math done for you.</p>
                 <form id="actForm" novalidate>
                     <div class="field-group">
-                        <label for="formatSel">Format</label>
-                        <select id="formatSel">
+                        <label class="field-label" for="formatSel">Format</label>
+                        <select class="calc-input" id="formatSel">
                             <option value="enhanced" selected>Enhanced ACT (default, Composite from English, Math, Reading)</option>
                             <option value="legacy">Legacy ACT (before September 2025, Composite from all four sections)</option>
                         </select>
@@ -153,12 +141,12 @@
                         <button type="button" data-mode="C" class="active">I have my scores</button>
                     </div>
                     <div class="field-row">
-                        <div class="field-group"><label for="inE">English</label><input type="number" id="inE" min="0" max="50" step="1" placeholder="e.g. 27" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inM">Math</label><input type="number" id="inM" min="0" max="45" step="1" placeholder="e.g. 31" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inR">Reading</label><input type="number" id="inR" min="0" max="36" step="1" placeholder="e.g. 26" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inS">Science (optional in Enhanced, required in Legacy)</label><input type="number" id="inS" min="0" max="40" step="1" placeholder="Leave blank if not taken" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inW">Writing score 2 to 12 (optional, never in Composite)</label><input type="number" id="inW" min="2" max="12" step="1" placeholder="e.g. 8" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inWScale">Writing scale 1 to 36 for ELA only (Mode C, optional)</label><input type="number" id="inWScale" min="1" max="36" step="1" placeholder="Only if you have a 1 to 36 writing scale score" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inE">English</label><input class="calc-input" type="number" id="inE" min="0" max="50" step="1" placeholder="e.g. 27" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inM">Math</label><input class="calc-input" type="number" id="inM" min="0" max="45" step="1" placeholder="e.g. 31" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inR">Reading</label><input class="calc-input" type="number" id="inR" min="0" max="36" step="1" placeholder="e.g. 26" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inS">Science (optional in Enhanced, required in Legacy)</label><input class="calc-input" type="number" id="inS" min="0" max="40" step="1" placeholder="Leave blank if not taken" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inW">Writing score 2 to 12 (optional, never in Composite)</label><input class="calc-input" type="number" id="inW" min="2" max="12" step="1" placeholder="e.g. 8" inputmode="numeric"></div>
+                        <div class="field-group"><label class="field-label" for="inWScale">Writing scale 1 to 36 for ELA only (Mode C, optional)</label><input class="calc-input" type="number" id="inWScale" min="1" max="36" step="1" placeholder="Only if you have a 1 to 36 writing scale score" inputmode="numeric"></div>
                     </div>
                     <p class="note" id="modeNote">Mode C: enter section scores from 1 to 36 directly. This math is exact.</p>
                     <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
@@ -198,7 +186,7 @@
                 <h2 class="calc-card-title">ACT Goal Planner</h2>
                 <p class="calc-card-subtitle">Set a target Composite and see how many section points you still need, and three combinations that reach it.</p>
                 <div class="field-row">
-                    <div class="field-group"><label for="targetComp">Target Composite (1 to 36)</label><input type="number" id="targetComp" min="1" max="36" step="1" placeholder="e.g. 28" inputmode="numeric"></div>
+                    <div class="field-group"><label class="field-label" for="targetComp">Target Composite (1 to 36)</label><input class="calc-input" type="number" id="targetComp" min="1" max="36" step="1" placeholder="e.g. 28" inputmode="numeric"></div>
                 </div>
                 <div style="margin-top:14px"><button type="button" class="btn-primary" id="goalBtn">Plan My Goal</button></div>
                 <div class="calc-result" id="goalResult"><div class="calc-result-extra" id="goalExtra"></div></div>
@@ -323,7 +311,7 @@
     var q="format="+format+"&mode="+currentMode+"&e="+(scales[0]||"")+"&m="+(scales[1]||"")+"&r="+(scales[2]||"")+"&s="+(scales[3]||"")+"&comp="+comp;
     try{history.replaceState(null,"","/act-score-calculator/?"+q)}catch(err){}
     return {scales:scales,comp:comp,format:format}}
-    function buildSuper(){var wrap=document.getElementById("superRows");if(!wrap)return;var html="";for(var i=1;i<=4;i++){html+="<div class=\"field-row\" style=\"margin-top:10px\"><div class=\"field-group\"><label>Sitting "+i+" English</label><input type=\"number\" id=\"supE"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Math</label><input type=\"number\" id=\"supM"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Reading</label><input type=\"number\" id=\"supR"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Science</label><input type=\"number\" id=\"supS"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div></div>"}wrap.innerHTML=html}
+    function buildSuper(){var wrap=document.getElementById("superRows");if(!wrap)return;var html="";for(var i=1;i<=4;i++){html+="<div class=\"field-row\" style=\"margin-top:10px\"><div class=\"field-group\"><label class="field-label">Sitting "+i+" English</label><input class="calc-input" type=\"number\" id=\"supE"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label class="field-label">Sitting "+i+" Math</label><input class="calc-input" type=\"number\" id=\"supM"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label class="field-label">Sitting "+i+" Reading</label><input class="calc-input" type=\"number\" id=\"supR"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label class="field-label">Sitting "+i+" Science</label><input class="calc-input" type=\"number\" id=\"supS"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div></div>"}wrap.innerHTML=html}
     function calcSuper(){var format=document.getElementById("formatSel").value;var best=[null,null,null,null];var sittings=[];for(var i=1;i<=4;i++){var row=[clampInt(getVal("supE"+i),1,36),clampInt(getVal("supM"+i),1,36),clampInt(getVal("supR"+i),1,36),clampInt(getVal("supS"+i),1,36)];if(row[0]!==null||row[1]!==null||row[2]!==null){sittings.push(row);row.forEach(function(v,j){if(v!==null&&(best[j]===null||v>best[j]))best[j]=v})}}
     var el=document.getElementById("superResult");if(!sittings.length){el.classList.remove("visible");document.getElementById("superExtra").innerHTML="Enter at least one sitting with English, Math and Reading.";return}
     var comp=composite(best,format);var parts=sittings.map(function(row,i){var c=row[0]!==null&&row[1]!==null&&row[2]!==null?composite(row,format):null;return "Sitting "+(i+1)+": "+(c!==null?"Composite "+c:"incomplete")}).join("<br>");
