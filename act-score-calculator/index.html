@@ -156,7 +156,7 @@
                         <div class="field-group"><label for="inE">English</label><input type="number" id="inE" min="0" max="50" step="1" placeholder="e.g. 27" inputmode="numeric"></div>
                         <div class="field-group"><label for="inM">Math</label><input type="number" id="inM" min="0" max="45" step="1" placeholder="e.g. 31" inputmode="numeric"></div>
                         <div class="field-group"><label for="inR">Reading</label><input type="number" id="inR" min="0" max="36" step="1" placeholder="e.g. 26" inputmode="numeric"></div>
-                        <div class="field-group"><label for="inS">Science (optional)</label><input type="number" id="inS" min="0" max="40" step="1" placeholder="Leave blank if not taken" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inS">Science (optional in Enhanced, required in Legacy)</label><input type="number" id="inS" min="0" max="40" step="1" placeholder="Leave blank if not taken" inputmode="numeric"></div>
                         <div class="field-group"><label for="inW">Writing score 2 to 12 (optional, never in Composite)</label><input type="number" id="inW" min="2" max="12" step="1" placeholder="e.g. 8" inputmode="numeric"></div>
                         <div class="field-group"><label for="inWScale">Writing scale 1 to 36 for ELA only (Mode C, optional)</label><input type="number" id="inWScale" min="1" max="36" step="1" placeholder="Only if you have a 1 to 36 writing scale score" inputmode="numeric"></div>
                     </div>
@@ -165,6 +165,7 @@
                         <button type="submit" class="btn-primary">Calculate ACT Score</button>
                         <button type="button" class="btn-secondary" id="resetBtn">Reset</button>
                     </div>
+                    <p class="note" id="formMsg" aria-live="polite"></p>
                 </form>
                 <div class="calc-result" id="calcResult">
                     <div class="calc-result-label">Your ACT Composite</div>
@@ -304,8 +305,9 @@
     else if(currentMode==="B"){var tables2=[EN,MA,RE,SC],raws2=[e,m,r,s];raws2.forEach(function(raw,i){if(raw!==null)scales[i]=convertRaw(tables2[i],raw)});est=true}
     else{scales=[clampInt(e,1,36),clampInt(m,1,36),clampInt(r,1,36),clampInt(s,1,36)]}
     var res=document.getElementById("calcResult");
-    if(scales[0]===null||scales[1]===null||scales[2]===null){res.classList.remove("visible");document.getElementById("resultValue").textContent="";document.getElementById("resultExtra").innerHTML="Enter English, Math and Reading to see your Composite. Empty inputs never produce a result.";return null}
-    if(format==="legacy"&&scales[3]===null){res.classList.remove("visible");document.getElementById("resultExtra").innerHTML="Legacy mode needs a Science score, because the Legacy Composite averages all four sections.";return null}
+    if(scales[0]===null||scales[1]===null||scales[2]===null){res.classList.remove("visible");document.getElementById("resultValue").textContent="";var fm=document.getElementById("formMsg");if(fm)fm.textContent="Enter English, Math and Reading to see your Composite.";return null}
+    var fm2=document.getElementById("formMsg");if(fm2)fm2.textContent="";
+    if(format==="legacy"&&scales[3]===null){res.classList.remove("visible");var fmL=document.getElementById("formMsg");if(fmL)fmL.textContent="Legacy mode needs a Science score, because the Legacy Composite averages all four sections.";return null}
     var comp=composite(scales,format);var pct=percentile(comp);var stem=(scales[1]!==null&&scales[3]!==null)?roundHalfUp((scales[1]+scales[3])/2):null;var ela=(scales[0]!==null&&scales[2]!==null&&ws!==null)?roundHalfUp((scales[0]+scales[2]+clampInt(ws,1,36))/3):null;
     document.getElementById("resultValue").textContent="Composite "+comp;
     document.getElementById("resultTier").textContent=verdict(comp);
@@ -334,7 +336,7 @@
     if(typeof document!=="undefined"&&document.getElementById("actForm")){
     document.querySelectorAll(".mode-tabs button").forEach(function(b){b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"))})});
     document.getElementById("actForm").addEventListener("submit",function(ev){ev.preventDefault();calcMain()});
-    document.getElementById("resetBtn").addEventListener("click",function(){document.getElementById("actForm").reset();setMode("C");document.getElementById("calcResult").classList.remove("visible")});
+    document.getElementById("resetBtn").addEventListener("click",function(){document.getElementById("actForm").reset();setMode("C");document.getElementById("calcResult").classList.remove("visible");var fm=document.getElementById("formMsg");if(fm)fm.textContent="";try{history.replaceState(null,"","/act-score-calculator/")}catch(err){}});
     document.getElementById("copyBtn").addEventListener("click",function(){var t=document.getElementById("resultValue").textContent+" | "+document.getElementById("resultExtra").innerText;if(navigator.clipboard)navigator.clipboard.writeText(t)});
     document.getElementById("shareBtn").addEventListener("click",function(){calcMain();if(navigator.clipboard)navigator.clipboard.writeText(window.location.href)});
     buildSuper();document.getElementById("superBtn").addEventListener("click",calcSuper);document.getElementById("goalBtn").addEventListener("click",calcGoal);
