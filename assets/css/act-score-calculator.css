@@ -1308,3 +1308,11 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
 .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
 .mode-tabs button{padding:9px 14px;border:1px solid var(--border-strong);border-radius:999px;background:var(--card-bg);color:var(--text);cursor:pointer;font-weight:600}
 .mode-tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+
+/* ACT table format to match Grade Curve site table (screenshot reference) */
+.table-wrap{overflow-x:auto;margin:24px 0;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;box-shadow:0 2px 16px rgba(37,99,235,0.06)}
+.info-table th{padding:14px 16px;background:var(--blue-light);color:var(--blue);font-size:13px;font-weight:800;text-align:left;text-transform:none;letter-spacing:normal;border-bottom:0}
+.info-table td{padding:14px 16px;border-top:1px solid var(--border);border-bottom:0;color:var(--text-secondary);font-size:14px}
+.info-table td:first-child{color:var(--text);font-weight:700}
+.note-card{margin:26px 0;padding:24px;background:var(--gradient-hero);border:1px solid var(--border-strong);border-radius:18px;box-shadow:0 2px 16px rgba(37,99,235,0.06)}
+.note-card p{margin:0;color:var(--text-secondary)}
