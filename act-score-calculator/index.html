@@ -1,0 +1,342 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="color-scheme" content="light dark">
+    <meta name="author" content="StudentCalcTools">
+    <link rel="canonical" href="https://studentcalctools.com/act-score-calculator/">
+    <title>ACT Score Calculator 2026 (Enhanced + Legacy) | StudentCalcTools</title>
+    <meta name="description" content="Calculate your ACT composite score from practice test results. Updated for the Enhanced ACT: 3-section composite, STEM score, superscore, and goal planner.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="StudentCalcTools">
+    <meta property="og:url" content="https://studentcalctools.com/act-score-calculator/">
+    <meta property="og:title" content="ACT Score Calculator 2026 (Enhanced + Legacy) | StudentCalcTools">
+    <meta property="og:description" content="Calculate your ACT composite score from practice test results. Updated for the Enhanced ACT: 3-section composite, STEM score, superscore, and goal planner.">
+    <meta property="og:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ACT Score Calculator 2026 (Enhanced + Legacy) | StudentCalcTools">
+    <meta name="twitter:description" content="Calculate your ACT composite score from practice test results. Updated for the Enhanced ACT: 3-section composite, STEM score, superscore, and goal planner.">
+    <meta name="twitter:image" content="https://studentcalctools.com/assets/images/og-image.webp">
+    <script src="/assets/js/theme-init.js"></script>
+    <script src="/assets/js/analytics.js" defer></script>
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <style>
+        .calc-result{display:none;margin-top:20px;padding:20px;border:1px solid var(--border, #e5e7eb);border-radius:14px;background:var(--card, #fff)}
+        .calc-result.visible{display:block}
+        .calc-result-label{font-size:14px;font-weight:600;color:#64748b}
+        .calc-result-value{font-size:44px;font-weight:800;line-height:1.1;margin:4px 0}
+        .calc-result-tier{font-size:16px;font-weight:700}
+        .calc-result-extra{margin-top:12px;line-height:1.6}
+        .calc-result-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+        .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+        .field-group label{display:block;font-weight:600;margin-bottom:6px}
+        .field-group input,.field-group select{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px}
+        .mode-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+        .mode-tabs button{padding:9px 14px;border:1px solid #cbd5e1;border-radius:999px;background:#fff;cursor:pointer;font-weight:600}
+        .mode-tabs button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+        .calc-table{width:100%;border-collapse:collapse;margin:12px 0}
+        .calc-table th,.calc-table td{border:1px solid #e5e7eb;padding:8px 10px;text-align:left}
+        .note{font-size:14px;color:#475569;line-height:1.6}
+        .btn-primary,.btn-secondary{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+        .btn-primary{background:#2563eb;color:#fff}
+        .btn-secondary{background:#e2e8f0;color:#0f172a}
+        @media(max-width:640px){.field-row{grid-template-columns:1fr}.calc-result-value{font-size:36px}}
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://studentcalctools.com/#organization",
+      "name": "StudentCalcTools",
+      "url": "https://studentcalctools.com/",
+      "logo": {"@type": "ImageObject", "url": "https://studentcalctools.com/apple-touch-icon.png", "width": 180, "height": 180}
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://studentcalctools.com/act-score-calculator/#webpage",
+      "url": "https://studentcalctools.com/act-score-calculator/",
+      "name": "ACT Score Calculator 2026 (Enhanced + Legacy) | StudentCalcTools",
+      "description": "Calculate your ACT composite score from practice test results. Updated for the Enhanced ACT: 3-section composite, STEM score, superscore, and goal planner.",
+      "isPartOf": {"@id": "https://studentcalctools.com/#website"},
+      "publisher": {"@id": "https://studentcalctools.com/#organization"},
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://studentcalctools.com/act-score-calculator/#application",
+      "name": "ACT Score Calculator",
+      "url": "https://studentcalctools.com/act-score-calculator/",
+      "description": "Calculate your ACT Composite score, percentile, STEM score, superscore and goal plan. Updated for the Enhanced ACT, with Legacy mode for older scores.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://studentcalctools.com/act-score-calculator/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "How is the ACT Composite score calculated?", "acceptedAnswer": {"@type": "Answer", "text": "On the Enhanced ACT, add your English, Math and Reading scale scores and divide by 3, rounding to the nearest whole number (one-half rounds up). Science and Writing never enter the Composite. On tests before September 2025, the Legacy formula averaged all four sections including Science."}},
+        {"@type": "Question", "name": "What is a good ACT score in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your colleges, but the current national picture is: 28 or above puts you in the top 10% of recent graduates, 24 to 27 is competitive for state flagships and many merit scholarships, and 20 to 23 sits around the national average of 19.1. The most selective colleges usually admit students in the 32 to 36 range."}},
+        {"@type": "Question", "name": "How many questions are on the Enhanced ACT?", "acceptedAnswer": {"@type": "Answer", "text": "The core test has 131 questions: 50 English, 45 Math and 36 Reading, plus 40 more if you take the optional Science section, 171 in total. Not all of them count: 40 English, 41 Math, 27 Reading and 34 Science questions are scored, and the rest are field test questions ACT is trialling."}},
+        {"@type": "Question", "name": "Why does the calculator ask for fewer questions than the test has?", "acceptedAnswer": {"@type": "Answer", "text": "Because only some questions are scored. The rest are field test items that do not count toward your score, and their position changes between test forms. If your practice test answer key marks the scored questions, use the Scored questions only mode for the closest estimate. If you counted every correct answer, use Practice test mode and treat the result as an estimate."}},
+        {"@type": "Question", "name": "Do I need to take the ACT Science section?", "acceptedAnswer": {"@type": "Answer", "text": "For the test itself, no: Science is optional on the Enhanced ACT and does not affect your Composite. Take it if you want a STEM score, if a college or program you like asks for it, or if your school or state testing program includes it. When in doubt, check the requirements of the colleges on your list."}},
+        {"@type": "Question", "name": "Is there a penalty for wrong answers on the ACT?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your raw score is simply the number of correct answers, so a wrong answer and a blank answer score the same. Never leave a question empty: a guess can only help."}},
+        {"@type": "Question", "name": "How accurate is this calculator?", "acceptedAnswer": {"@type": "Answer", "text": "If you enter official section scores, the Composite, percentile and superscore math is exact. From raw answers it is an estimate of about one point, because ACT converts raw scores separately for every test form and only publishes sample conversion tables. This calculator uses the conversion table from ACT's own official practice test scoring key."}},
+        {"@type": "Question", "name": "What is the ACT STEM score?", "acceptedAnswer": {"@type": "Answer", "text": "STEM is the average of your Math and Science scale scores, rounded, reported from 1 to 36. It only exists if you take Science. The College Readiness Benchmark for STEM is 26. It never changes your Composite."}},
+        {"@type": "Question", "name": "What is the ELA score, and does Writing affect my Composite?", "acceptedAnswer": {"@type": "Answer", "text": "ELA is the rounded average of your English, Reading and Writing scores, and it only exists if you take Writing. Your Writing score itself runs from 2 to 12 and is reported separately. Neither ELA nor Writing ever changes your Composite."}},
+        {"@type": "Question", "name": "What is an ACT superscore, and do colleges accept it?", "acceptedAnswer": {"@type": "Answer", "text": "A superscore combines your best section scores across multiple test dates into one Composite. Many colleges superscore the ACT, but policies vary and some require a single sitting, so check each college's testing policy. The superscore block on this page works yours out from up to four sittings."}},
+        {"@type": "Question", "name": "Can I still use an ACT score from before September 2025?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Legacy scores were calculated with Science inside the Composite, and ACT still reports them. Colleges accept them the same way; use the Legacy mode on this page to recheck the math on an older report."}},
+        {"@type": "Question", "name": "What ACT score do I need for a scholarship?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single national cutoff. Many colleges publish automatic merit scholarships with ACT bands on their own scholarship pages, and the bands often start in the mid-20s. Find the published band for each college on your list, set it as your target in the goal planner on this page, and estimate the money side with our scholarship calculator."}},
+        {"@type": "Question", "name": "How does the ACT compare to the SAT?", "acceptedAnswer": {"@type": "Answer", "text": "On the official concordance published by ACT and the College Board, an ACT Composite of 36 matches about SAT 1590, 30 matches about 1370, 25 matches about 1210 and 20 matches about 1040. Colleges treat the two tests equally, so choose the format that suits you and compare scores with the concordance, not by feel."}}
+      ]
+    }
+  ]
+}
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6847465261437650" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include header.html %}
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+                    <a href="/calculators/">Calculators</a>
+                    <span class="breadcrumb-sep" aria-hidden="true">›</span>
+                    <span aria-current="page">ACT Score Calculator</span>
+                </nav>
+                <h1>ACT Score Calculator</h1>
+                <p class="hero-sub">Work out your ACT Composite score in seconds. Enter practice test results or the section scores from an official report, and this calculator gives you your Composite, your percentile, and whether you hit the ACT College Readiness Benchmarks. It is updated for the Enhanced ACT, where the Composite comes from English, Math and Reading only, and it still handles the older Legacy format.</p>
+            </div>
+        </section>
+        <section class="calc-section calc-first">
+            <div class="calc-card" id="calculator">
+                <h2 class="calc-card-title">ACT Score Calculator</h2>
+                <p class="calc-card-subtitle">Three ways in, depending on what you have. Choose a format, choose an input mode, enter your scores, then Calculate.</p>
+                <p><strong>Practice test (all questions):</strong> you counted every correct answer on a full practice test, out of 50 English, 45 Math, 36 Reading.</p>
+                <p><strong>Scored questions only:</strong> your practice test answer key separates scored questions from field test questions (40 English, 41 Math, 27 Reading are scored).</p>
+                <p><strong>I have my scores:</strong> you already have section scores from 1 to 36 and just want the Composite, percentile and superscore math done for you.</p>
+                <form id="actForm" novalidate>
+                    <div class="field-group">
+                        <label for="formatSel">Format</label>
+                        <select id="formatSel">
+                            <option value="enhanced" selected>Enhanced ACT (default, Composite from English, Math, Reading)</option>
+                            <option value="legacy">Legacy ACT (before September 2025, Composite from all four sections)</option>
+                        </select>
+                    </div>
+                    <div class="mode-tabs" role="tablist" aria-label="Input mode">
+                        <button type="button" data-mode="A">Practice test (all questions)</button>
+                        <button type="button" data-mode="B">Scored questions only</button>
+                        <button type="button" data-mode="C" class="active">I have my scores</button>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group"><label for="inE">English</label><input type="number" id="inE" min="0" max="50" step="1" placeholder="e.g. 27" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inM">Math</label><input type="number" id="inM" min="0" max="45" step="1" placeholder="e.g. 31" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inR">Reading</label><input type="number" id="inR" min="0" max="36" step="1" placeholder="e.g. 26" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inS">Science (optional)</label><input type="number" id="inS" min="0" max="40" step="1" placeholder="Leave blank if not taken" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inW">Writing score 2 to 12 (optional, never in Composite)</label><input type="number" id="inW" min="2" max="12" step="1" placeholder="e.g. 8" inputmode="numeric"></div>
+                        <div class="field-group"><label for="inWScale">Writing scale 1 to 36 for ELA only (Mode C, optional)</label><input type="number" id="inWScale" min="1" max="36" step="1" placeholder="Only if you have a 1 to 36 writing scale score" inputmode="numeric"></div>
+                    </div>
+                    <p class="note" id="modeNote">Mode C: enter section scores from 1 to 36 directly. This math is exact.</p>
+                    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                        <button type="submit" class="btn-primary">Calculate ACT Score</button>
+                        <button type="button" class="btn-secondary" id="resetBtn">Reset</button>
+                    </div>
+                </form>
+                <div class="calc-result" id="calcResult">
+                    <div class="calc-result-label">Your ACT Composite</div>
+                    <div class="calc-result-value" id="resultValue"></div>
+                    <div class="calc-result-tier" id="resultTier"></div>
+                    <div class="calc-result-extra" id="resultExtra"></div>
+                    <div class="calc-result-actions">
+                        <button type="button" class="btn-secondary" id="copyBtn">Copy result</button>
+                        <button type="button" class="btn-secondary" id="shareBtn">Share result link</button>
+                    </div>
+                </div>
+                <div style="min-height:280px; margin:24px 0;">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6847465261437650" data-ad-slot="7659105888" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </div>
+        </section>
+        <section class="calc-section" id="superscore">
+            <div class="calc-card">
+                <h2 class="calc-card-title">ACT Superscore Calculator</h2>
+                <p class="calc-card-subtitle">Enter up to four sittings as section scores from 1 to 36. The best score in each section becomes your superscore.</p>
+                <div id="superRows"></div>
+                <div style="margin-top:14px"><button type="button" class="btn-primary" id="superBtn">Calculate Superscore</button></div>
+                <div class="calc-result" id="superResult"><div class="calc-result-extra" id="superExtra"></div></div>
+                <p class="note">Many colleges superscore the ACT. Check each college testing policy, because not all do.</p>
+            </div>
+        </section>
+        <section class="calc-section" id="goal-planner">
+            <div class="calc-card">
+                <h2 class="calc-card-title">ACT Goal Planner</h2>
+                <p class="calc-card-subtitle">Set a target Composite and see how many section points you still need, and three combinations that reach it.</p>
+                <div class="field-row">
+                    <div class="field-group"><label for="targetComp">Target Composite (1 to 36)</label><input type="number" id="targetComp" min="1" max="36" step="1" placeholder="e.g. 28" inputmode="numeric"></div>
+                </div>
+                <div style="margin-top:14px"><button type="button" class="btn-primary" id="goalBtn">Plan My Goal</button></div>
+                <div class="calc-result" id="goalResult"><div class="calc-result-extra" id="goalExtra"></div></div>
+                <p class="note">Planning to fund it? Estimate your costs with the <a href="/scholarship-calculator/">scholarship calculator</a>, and build the study schedule with the <a href="/study-time-planner/">study time planner</a>. A section needs plus 3 to move a 3-section Composite by 1.</p>
+            </div>
+        </section>
+        <section class="content-section reveal">
+            <h2>How ACT scoring works</h2>
+            <p>Your ACT score starts as a raw score: the number of questions you answered correctly. There is no penalty for wrong answers, so a blank answer and a wrong answer cost the same, and guessing is never worse than leaving a question empty.</p>
+            <p>ACT then converts each raw score to a scale score from 1 to 36. The conversion is not one fixed chart. ACT equates every test form separately, so the same raw score can convert slightly differently from one test date to another. That is why every calculator, including this one, gives you an estimate of about one point when you start from raw answers.</p>
+            <p>On the Enhanced ACT, your Composite is the average of three scale scores: English, Math and Reading, rounded to the nearest whole number. Science no longer counts toward the Composite. If you take Science, it still gets its own 1 to 36 score, and it combines with Math into a separate STEM score. Writing stays separate too, reported from 2 to 12, and never changes your Composite.</p>
+            <p>Students who tested before September 2025 were scored the Legacy way: the Composite averaged all four sections, Science included. Those scores are still valid and still reported by ACT, so the Legacy mode above exists for checking an older score report.</p>
+        </section>
+        <section class="content-section alt-bg reveal">
+            <h2>The Enhanced ACT at a glance</h2>
+            <table class="calc-table"><thead><tr><th>Section</th><th>Questions</th><th>Time</th><th>Counted in your score</th><th>In the Composite</th></tr></thead><tbody>
+            <tr><td>English</td><td>50 (40 scored)</td><td>35 min</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Math</td><td>45 (41 scored)</td><td>50 min</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Reading</td><td>36 (27 scored)</td><td>40 min</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Science</td><td>40 (34 scored)</td><td>40 min</td><td>Yes, if you take it</td><td>No</td></tr>
+            <tr><td>Writing</td><td>1 essay</td><td>40 min</td><td>Yes, if you take it</td><td>No</td></tr>
+            </tbody></table>
+            <p class="note">The extra questions are field test questions ACT is trialling for future tests. They do not count. Because their position changes from form to form, a practice test scored with an official answer key is the only way to know your exact scored count, which is why this calculator offers both counting modes.</p>
+        </section>
+        <section class="content-section reveal">
+            <h2>What is a good ACT score?</h2>
+            <p>Good depends on where you are applying, but percentiles give you a fair yardstick. These are ACT current national ranks, based on students who graduated in 2024 to 2026: your percentile is the share of recent graduates who scored at or below you. The average Composite in that group is 19.1.</p>
+            <table class="calc-table"><thead><tr><th>Band</th><th>Composite</th><th>Percentile range</th><th>What it means</th></tr></thead><tbody>
+            <tr><td>Top scores</td><td>32 to 36</td><td>97th to 100th</td><td>Competitive at the most selective colleges</td></tr>
+            <tr><td>Strong</td><td>28 to 31</td><td>91st to 96th</td><td>Above the middle range at most selective universities</td></tr>
+            <tr><td>Competitive</td><td>24 to 27</td><td>80th to 89th</td><td>Solid for state flagships and many merit scholarships</td></tr>
+            <tr><td>Around average</td><td>20 to 23</td><td>63rd to 77th</td><td>Meets or beats the national average of 19.1</td></tr>
+            <tr><td>Below average</td><td>Under 20</td><td>Below 63rd</td><td>Worth a retake if your target colleges sit higher</td></tr>
+            </tbody></table>
+            <p>Full percentile table (same dataset as the calculator result): 36 = 100, 35 = 99, 34 = 99, 33 = 98, 32 = 97, 31 = 96, 30 = 94, 29 = 93, 28 = 91, 27 = 89, 26 = 86, 25 = 83, 24 = 80, 23 = 77, 22 = 72, 21 = 68, 20 = 63, 19 = 58, 18 = 52, 17 = 47, 16 = 41.</p>
+        </section>
+        <section class="content-section alt-bg reveal">
+            <h2>College Readiness Benchmarks</h2>
+            <table class="calc-table"><thead><tr><th>Score</th><th>Benchmark</th><th>Stands for</th></tr></thead><tbody>
+            <tr><td>English</td><td>18</td><td>English Composition I</td></tr>
+            <tr><td>Math</td><td>22</td><td>College Algebra</td></tr>
+            <tr><td>Reading</td><td>22</td><td>First-year social science courses</td></tr>
+            <tr><td>Science</td><td>23</td><td>Biology</td></tr>
+            <tr><td>STEM</td><td>26</td><td>Calculus, Chemistry, Biology, Physics, Engineering</td></tr>
+            <tr><td>ELA</td><td>20</td><td>English Composition and social science courses</td></tr>
+            </tbody></table>
+            <p>A benchmark is the score at which a student has a 50% chance of earning a B or higher, and about a 75 to 80% chance of earning a C or higher, in the matching first-year college course. Falling short does not close doors, but it tells you exactly where a retake gains you the most.</p>
+        </section>
+        <section class="content-section reveal">
+            <h2>Superscore, ACT vs SAT, and next test dates</h2>
+            <p>If you have taken the ACT more than once, many colleges will superscore you: they take your best section scores across all your sittings and build a new Composite from those. A 24 in English from March and a 29 in Math from June count together. Use the superscore block above to see yours. Policies differ by college, so always confirm on the college own testing page, and remember that some colleges ask for one full sitting instead.</p>
+            <p>Colleges weigh ACT and SAT scores equally, so the better test is the one that fits how you work: the ACT moves faster and includes a Science section, the SAT gives you more time per question. On the official concordance the two tests publish together, an ACT 30 lines up with about SAT 1370, an ACT 25 with about SAT 1210, and an ACT 20 with about SAT 1040. If you have an SAT score instead, run it through our <a href="/sat-score-calculator/">SAT score calculator</a> to compare properly.</p>
+            <table class="calc-table"><thead><tr><th>Test date</th><th>Register by</th><th>Late deadline</th></tr></thead><tbody>
+            <tr><td>December 12, 2026</td><td>November 6, 2026</td><td>November 29, 2026</td></tr>
+            <tr><td>February 27, 2027</td><td>January 22, 2027</td><td>February 9, 2027</td></tr>
+            <tr><td>April 10, 2027</td><td>March 5, 2027</td><td>March 23, 2027</td></tr>
+            <tr><td>June 12, 2027</td><td>May 7, 2027</td><td>May 25, 2027</td></tr>
+            <tr><td>July 10, 2027</td><td>June 4, 2027</td><td>June 22, 2027</td></tr>
+            </tbody></table>
+            <p class="note">Scoring rules, benchmarks, national ranks and test dates: ACT (act.org). ACT to SAT concordance: ACT and College Board joint tables. Raw score conversion: ACT National Online Practice Test 2 Scoring Key.</p>
+        </section>
+        <section class="content-section alt-bg reveal">
+            <h2>Frequently asked questions</h2>
+            <details class="faq-item"><summary class="faq-question">How is the ACT Composite score calculated?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">On the Enhanced ACT, add your English, Math and Reading scale scores and divide by 3, rounding to the nearest whole number (one-half rounds up). Science and Writing never enter the Composite. On tests before September 2025, the Legacy formula averaged all four sections including Science.</div></details>
+            <details class="faq-item"><summary class="faq-question">What is a good ACT score in 2026?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">It depends on your colleges, but the current national picture is: 28 or above puts you in the top 10% of recent graduates, 24 to 27 is competitive for state flagships and many merit scholarships, and 20 to 23 sits around the national average of 19.1. The most selective colleges usually admit students in the 32 to 36 range.</div></details>
+            <details class="faq-item"><summary class="faq-question">How many questions are on the Enhanced ACT?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">The core test has 131 questions: 50 English, 45 Math and 36 Reading, plus 40 more if you take the optional Science section, 171 in total. Not all of them count: 40 English, 41 Math, 27 Reading and 34 Science questions are scored, and the rest are field test questions ACT is trialling.</div></details>
+            <details class="faq-item"><summary class="faq-question">Why does the calculator ask for fewer questions than the test has?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">Because only some questions are scored. The rest are field test items that do not count toward your score, and their position changes between test forms. If your practice test answer key marks the scored questions, use the Scored questions only mode for the closest estimate. If you counted every correct answer, use Practice test mode and treat the result as an estimate.</div></details>
+            <details class="faq-item"><summary class="faq-question">Do I need to take the ACT Science section?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">For the test itself, no: Science is optional on the Enhanced ACT and does not affect your Composite. Take it if you want a STEM score, if a college or program you like asks for it, or if your school or state testing program includes it. When in doubt, check the requirements of the colleges on your list.</div></details>
+            <details class="faq-item"><summary class="faq-question">Is there a penalty for wrong answers on the ACT?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">No. Your raw score is simply the number of correct answers, so a wrong answer and a blank answer score the same. Never leave a question empty: a guess can only help.</div></details>
+            <details class="faq-item"><summary class="faq-question">How accurate is this calculator?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">If you enter official section scores, the Composite, percentile and superscore math is exact. From raw answers it is an estimate of about one point, because ACT converts raw scores separately for every test form and only publishes sample conversion tables. This calculator uses the conversion table from ACT own official practice test scoring key.</div></details>
+            <details class="faq-item"><summary class="faq-question">What is the ACT STEM score?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">STEM is the average of your Math and Science scale scores, rounded, reported from 1 to 36. It only exists if you take Science. The College Readiness Benchmark for STEM is 26. It never changes your Composite.</div></details>
+            <details class="faq-item"><summary class="faq-question">What is the ELA score, and does Writing affect my Composite?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">ELA is the rounded average of your English, Reading and Writing scores, and it only exists if you take Writing. Your Writing score itself runs from 2 to 12 and is reported separately. Neither ELA nor Writing ever changes your Composite.</div></details>
+            <details class="faq-item"><summary class="faq-question">What is an ACT superscore, and do colleges accept it?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">A superscore combines your best section scores across multiple test dates into one Composite. Many colleges superscore the ACT, but policies vary and some require a single sitting, so check each college testing policy. The superscore block on this page works yours out from up to four sittings.</div></details>
+            <details class="faq-item"><summary class="faq-question">Can I still use an ACT score from before September 2025?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">Yes. Legacy scores were calculated with Science inside the Composite, and ACT still reports them. Colleges accept them the same way; use the Legacy mode on this page to recheck the math on an older report.</div></details>
+            <details class="faq-item"><summary class="faq-question">What ACT score do I need for a scholarship?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">There is no single national cutoff. Many colleges publish automatic merit scholarships with ACT bands on their own scholarship pages, and the bands often start in the mid-20s. Find the published band for each college on your list, set it as your target in the goal planner on this page, and estimate the money side with our <a href="/scholarship-calculator/">scholarship calculator</a>.</div></details>
+            <details class="faq-item"><summary class="faq-question">How does the ACT compare to the SAT?<span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-answer-inner">On the official concordance published by ACT and the College Board, an ACT Composite of 36 matches about SAT 1590, 30 matches about 1370, 25 matches about 1210 and 20 matches about 1040. Colleges treat the two tests equally, so choose the format that suits you and compare scores with the concordance, not by feel.</div></details>
+        </section>
+        <div style="min-height:280px; margin:24px 0;">
+        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6847465261437650" data-ad-slot="6740775889"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </main>
+    {% include footer.html %}
+    <script src="/assets/js/site.js" defer></script>
+    <script>
+    var EN=[1,2,4,5,6,7,8,9,10,10,11,11,11,12,13,14,14,15,15,16,17,18,19,20,20,21,21,22,23,23,24,25,26,27,28,30,32,34,35,35,36];
+    var MA=[1,4,7,9,10,11,12,13,14,14,14,14,15,15,16,16,16,17,17,17,18,18,19,20,21,22,23,24,25,25,26,27,27,28,29,30,31,33,34,35,36,36];
+    var RE=[1,3,5,7,9,10,11,11,12,13,14,15,16,17,18,20,21,22,23,24,25,27,28,30,32,34,35,36];
+    var SC=[1,3,5,7,9,10,11,11,12,13,14,15,16,17,18,18,19,20,21,21,22,23,23,24,24,25,26,26,27,28,30,32,34,35,36];
+    var PCT={36:100,35:99,34:99,33:98,32:97,31:96,30:94,29:93,28:91,27:89,26:86,25:83,24:80,23:77,22:72,21:68,20:63,19:58,18:52,17:47,16:41,15:36,14:31,13:26,12:22,11:18,10:14,9:11,8:8,7:6,6:4,5:3,4:2,3:1,2:1,1:1};
+    function roundHalfUp(x){return Math.floor(x+0.5)}
+    function clampInt(v,lo,hi){if(v===null||v===undefined||v===""||isNaN(v))return null;v=Math.round(Number(v));if(v<lo)v=lo;if(v>hi)v=hi;return v}
+    function convertRaw(table,raw){if(raw===null)return null;raw=clampInt(raw,0,table.length-1);return table[raw]}
+    function composite(scores,format){var s=scores.filter(function(x){return x!==null});if(format==="legacy"){if(scores[3]===null)return null;return roundHalfUp((scores[0]+scores[1]+scores[2]+scores[3])/4)}return roundHalfUp((scores[0]+scores[1]+scores[2])/3)}
+    function percentile(comp){return PCT[comp]!==undefined?PCT[comp]:null}
+    function satEq(comp){var anchors=[[36,1590],[30,1370],[25,1210],[20,1040],[15,850]];var best=anchors[0];anchors.forEach(function(a){if(Math.abs(comp-a[0])<Math.abs(comp-best[0]))best=a});return best[1]}
+    function verdict(comp){if(comp>=32)return "Top scores: competitive at the most selective colleges.";if(comp>=28)return "Strong: above the middle range at most selective universities.";if(comp>=24)return "Competitive: solid for state flagships and many merit scholarships.";if(comp>=20)return "Around average: meets or beats the national average of 19.1.";return "Below average: worth a retake if your target colleges sit higher."}
+    function bench(name,val,mark){if(val===null)return "";return "<br>"+name+": "+val+" ("+(val>=mark?"Met benchmark "+mark:"Not yet, benchmark "+mark)+")"}
+    function getVal(id){var el=document.getElementById(id);if(!el)return null;if(el.value===""||el.value===null)return null;return Number(el.value)}
+    var currentMode="C";
+    function setMode(m){currentMode=m;var btns=document.querySelectorAll(".mode-tabs button");btns.forEach(function(b){b.classList.toggle("active",b.getAttribute("data-mode")===m)});var note=document.getElementById("modeNote");var labels={A:"Mode A: enter correct answers out of administered totals: English /50, Math /45, Reading /36, Science /40. Conversion is an estimate from one official sample form.",B:"Mode B: enter correct answers out of scored totals: English /40, Math /41, Reading /27, Science /34. Conversion is from the official sample form.",C:"Mode C: enter section scores from 1 to 36 directly. This math is exact."};if(note)note.textContent=labels[m];var max={A:[50,45,36,40],B:[40,41,27,34],C:[36,36,36,36]};["inE","inM","inR","inS"].forEach(function(id,i){var el=document.getElementById(id);if(el)el.setAttribute("max",max[m][i])})}
+    function calcMain(){var format=document.getElementById("formatSel").value;var e=getVal("inE"),m=getVal("inM"),r=getVal("inR"),s=getVal("inS"),w=getVal("inW"),ws=getVal("inWScale");var scales=[null,null,null,null];var est=false;
+    if(currentMode==="A"){var admin=[50,45,36,40],scored=[40,41,27,34],tables=[EN,MA,RE,SC],raws=[e,m,r,s];raws.forEach(function(raw,i){if(raw!==null){var sr=roundHalfUp(raw*scored[i]/admin[i]);scales[i]=convertRaw(tables[i],sr)}});est=true}
+    else if(currentMode==="B"){var tables2=[EN,MA,RE,SC],raws2=[e,m,r,s];raws2.forEach(function(raw,i){if(raw!==null)scales[i]=convertRaw(tables2[i],raw)});est=true}
+    else{scales=[clampInt(e,1,36),clampInt(m,1,36),clampInt(r,1,36),clampInt(s,1,36)]}
+    var res=document.getElementById("calcResult");
+    if(scales[0]===null||scales[1]===null||scales[2]===null){res.classList.remove("visible");document.getElementById("resultValue").textContent="";document.getElementById("resultExtra").innerHTML="Enter English, Math and Reading to see your Composite. Empty inputs never produce a result.";return null}
+    if(format==="legacy"&&scales[3]===null){res.classList.remove("visible");document.getElementById("resultExtra").innerHTML="Legacy mode needs a Science score, because the Legacy Composite averages all four sections.";return null}
+    var comp=composite(scales,format);var pct=percentile(comp);var stem=(scales[1]!==null&&scales[3]!==null)?roundHalfUp((scales[1]+scales[3])/2):null;var ela=(scales[0]!==null&&scales[2]!==null&&ws!==null)?roundHalfUp((scales[0]+scales[2]+clampInt(ws,1,36))/3):null;
+    document.getElementById("resultValue").textContent="Composite "+comp;
+    document.getElementById("resultTier").textContent=verdict(comp);
+    var html="English "+scales[0]+", Math "+scales[1]+", Reading "+scales[2]+(scales[3]!==null?", Science "+scales[3]:"")+"<br>Percentile: higher than about "+pct+"% of recent ACT graduates";
+    html+=bench("English benchmark",scales[0],18)+bench("Math benchmark",scales[1],22)+bench("Reading benchmark",scales[2],22);
+    if(scales[3]!==null)html+=bench("Science benchmark",scales[3],23);
+    if(stem!==null)html+="<br>STEM score: "+stem+bench("STEM benchmark",stem,26);
+    if(w!==null)html+="<br>Writing score: "+w+" (2 to 12, never in Composite)";
+    if(ela!==null)html+="<br>ELA score: "+ela+bench("ELA benchmark",ela,20);
+    html+="<br>About SAT "+satEq(comp)+" (official concordance anchor). See the <a href=\"/sat-score-calculator/\">SAT score calculator</a>.";
+    if(est)html+="<br><span class=\"note\">Estimated from one official sample form. Real forms convert slightly differently (about 1 point), because ACT equates each form separately.</span>";
+    document.getElementById("resultExtra").innerHTML=html;res.classList.add("visible");
+    var q="format="+format+"&mode="+currentMode+"&e="+(scales[0]||"")+"&m="+(scales[1]||"")+"&r="+(scales[2]||"")+"&s="+(scales[3]||"")+"&comp="+comp;
+    try{history.replaceState(null,"","/act-score-calculator/?"+q)}catch(err){}
+    return {scales:scales,comp:comp,format:format}}
+    function buildSuper(){var wrap=document.getElementById("superRows");if(!wrap)return;var html="";for(var i=1;i<=4;i++){html+="<div class=\"field-row\" style=\"margin-top:10px\"><div class=\"field-group\"><label>Sitting "+i+" English</label><input type=\"number\" id=\"supE"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Math</label><input type=\"number\" id=\"supM"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Reading</label><input type=\"number\" id=\"supR"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div><div class=\"field-group\"><label>Sitting "+i+" Science</label><input type=\"number\" id=\"supS"+i+"\" min=\"1\" max=\"36\" inputmode=\"numeric\"></div></div>"}wrap.innerHTML=html}
+    function calcSuper(){var format=document.getElementById("formatSel").value;var best=[null,null,null,null];var sittings=[];for(var i=1;i<=4;i++){var row=[clampInt(getVal("supE"+i),1,36),clampInt(getVal("supM"+i),1,36),clampInt(getVal("supR"+i),1,36),clampInt(getVal("supS"+i),1,36)];if(row[0]!==null||row[1]!==null||row[2]!==null){sittings.push(row);row.forEach(function(v,j){if(v!==null&&(best[j]===null||v>best[j]))best[j]=v})}}
+    var el=document.getElementById("superResult");if(!sittings.length){el.classList.remove("visible");document.getElementById("superExtra").innerHTML="Enter at least one sitting with English, Math and Reading.";return}
+    var comp=composite(best,format);var parts=sittings.map(function(row,i){var c=row[0]!==null&&row[1]!==null&&row[2]!==null?composite(row,format):null;return "Sitting "+(i+1)+": "+(c!==null?"Composite "+c:"incomplete")}).join("<br>");
+    document.getElementById("superExtra").innerHTML="Best English "+(best[0]||"")+", Math "+(best[1]||"")+", Reading "+(best[2]||"")+(best[3]!==null?", Science "+best[3]:"")+"<br>Superscore Composite: "+comp+"<br>"+parts;el.classList.add("visible")}
+    function calcGoal(){var target=clampInt(getVal("targetComp"),1,36);var el=document.getElementById("goalResult");if(target===null){el.classList.remove("visible");return}
+    var main=calcMain();var curSum=0,curCount=0;if(main){[0,1,2].forEach(function(i){if(main.scales[i]!==null){curSum+=main.scales[i];curCount++}})}
+    var format=document.getElementById("formatSel").value;var n=format==="legacy"?4:3;var needed=target*n;var points=Math.max(0,needed-curSum);
+    function combo(kind){var base=Math.floor(needed/n);var rem=needed-base*n;var arr=[];for(var i=0;i<n;i++)arr.push(base+(i<rem?1:0));if(kind==="math"&&n>=2){arr[1]+=2;arr[0]-=1;arr[2]-=1}if(kind==="english"&&n>=1){arr[0]+=2;arr[1]-=1;arr[2]-=1}arr=arr.map(function(v){return Math.max(1,Math.min(36,v))});return arr.join(", ")}
+    document.getElementById("goalExtra").innerHTML="Target "+target+" needs a section sum of "+needed+". Current core sum: "+curSum+". Points still needed: "+points+".<br>Balanced: "+combo("balanced")+"<br>Math-led: "+combo("math")+"<br>English-led: "+combo("english");el.classList.add("visible")}
+    if(typeof document!=="undefined"&&document.getElementById("actForm")){
+    document.querySelectorAll(".mode-tabs button").forEach(function(b){b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"))})});
+    document.getElementById("actForm").addEventListener("submit",function(ev){ev.preventDefault();calcMain()});
+    document.getElementById("resetBtn").addEventListener("click",function(){document.getElementById("actForm").reset();setMode("C");document.getElementById("calcResult").classList.remove("visible")});
+    document.getElementById("copyBtn").addEventListener("click",function(){var t=document.getElementById("resultValue").textContent+" | "+document.getElementById("resultExtra").innerText;if(navigator.clipboard)navigator.clipboard.writeText(t)});
+    document.getElementById("shareBtn").addEventListener("click",function(){calcMain();if(navigator.clipboard)navigator.clipboard.writeText(window.location.href)});
+    buildSuper();document.getElementById("superBtn").addEventListener("click",calcSuper);document.getElementById("goalBtn").addEventListener("click",calcGoal);
+    try{var params=new URLSearchParams(window.location.search);if(params.get("e")){document.getElementById("inE").value=params.get("e");document.getElementById("inM").value=params.get("m");document.getElementById("inR").value=params.get("r");if(params.get("s"))document.getElementById("inS").value=params.get("s");if(params.get("mode"))setMode(params.get("mode"));if(params.get("format"))document.getElementById("formatSel").value=params.get("format");calcMain()}}catch(err){}
+    }
+    </script>
+</body>
+</html>
