@@ -7,7 +7,7 @@
   Shows only on the calculator pages listed in calc_slugs.
 {% endcomment %}
 {% assign slug = page.url | remove: "/" %}
-{% assign calc_slugs = "gpa-calculator,cgpa-calculator,grade-calculator,final-grade-calculator,class-rank-calculator,attendance-calculator,sat-score-calculator,study-time-planner,essay-word-counter,scholarship-calculator,student-loan-calculator,lsac-gpa-calculator,grade-curve-calculator" | split: "," %}
+{% assign calc_slugs = "gpa-calculator,cgpa-calculator,grade-calculator,final-grade-calculator,class-rank-calculator,attendance-calculator,sat-score-calculator,study-time-planner,essay-word-counter,scholarship-calculator,student-loan-calculator,lsac-gpa-calculator,grade-curve-calculator,act-score-calculator" | split: "," %}
 {% if calc_slugs contains slug %}
   {% assign label = "student success" %}
   {% case slug %}
@@ -36,6 +36,9 @@
       {% assign label = "attendance" %}
     {% when "sat-score-calculator" %}
       {% assign label = "SAT prep" %}
+    {% when "act-score-calculator" %}
+      {% assign label = "ACT prep" %}
+      {% assign keywords = "sat-score,act-score" | split: "," %}
     {% when "study-time-planner" %}
       {% assign label = "study planning" %}
     {% when "essay-word-counter" %}
