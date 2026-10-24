@@ -18,13 +18,8 @@ meta_title: How to Find Class Rank and GPA on PowerSchool (2026 Guide)
 meta_description: >
   Learn how to find your class rank and GPA on PowerSchool on the web and in the
   app, why rank is often hidden, and what to do if you can't see it.
-
-  Primary keyword: how to find class rank on powerschool
-excerpt: >
-  Learn how to find your class rank and GPA on PowerSchool on the web and in the
-  app, why rank is often hidden, and what to do if you can't see it.
-
-  Primary keyword: how to find class rank on powerschool
+excerpt: Learn how to find your class rank and GPA on PowerSchool on the web and
+  in the app, why rank is often hidden, and what to do if you can't see it.
 featured_image: /assets/images/focused-student-checking-grades.webp
 image_alt: Student checking grades and GPA in a school portal on a laptop and phone
 read_time: 5 min read
