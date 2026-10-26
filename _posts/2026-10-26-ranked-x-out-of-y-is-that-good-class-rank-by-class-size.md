@@ -122,9 +122,8 @@ If you want to understand why the first two numbers differ, see our guide on [pe
 Here is why class size matters so much. Take a student ranked 25th:
 
 
-|  |  |  |  |
-| -------------- | --------------- | -------------- | ------------------------- |
 | **Class size** | **Top percent** | **Percentile** | **How to read it** |
+| -------------- | --------------- | -------------- | ------------------------- |
 | 100 | 25.0% | 76.0 | Top quarter |
 | 250 | 10.0% | 90.4 | Right at the top 10% line |
 | 500 | 5.0% | 95.2 | Right at the top 5% line |
@@ -140,9 +139,8 @@ Same position, four very different standings. That is why "I'm ranked 25th" is n
 In a class of 100, every rank is also its own top percent, and one place is worth a full percentage point.
 
 
-|  |  |  |  |
-| --------- | --------------- | -------------- | ------------------------- |
 | **Rank** | **Top percent** | **Percentile** | **How to read it** |
+| --------- | --------------- | -------------- | ------------------------- |
 | 1 of 100 | 1.0% | 100.0 | Top of the class |
 | 5 of 100 | 5.0% | 96.0 | Right at the top 5% line |
 | 10 of 100 | 10.0% | 91.0 | Right at the top 10% line |
@@ -160,9 +158,8 @@ Under the inclusive formula, rank 1 comes out as the 100th percentile. Some scho
 A class of 250 is where rounding starts to matter, because 5% and 25% of 250 are not whole numbers. Cutoffs round down, so rank 12 is the last spot in the top 5%.
 
 
-|  |  |  |  |
-| ---------- | --------------- | -------------- | ---------------------------- |
 | **Rank** | **Top percent** | **Percentile** | **How to read it** |
+| ---------- | --------------- | -------------- | ---------------------------- |
 | 5 of 250 | 2.0% | 98.4 | Top 2% |
 | 12 of 250 | 4.8% | 95.6 | Last spot inside the top 5% |
 | 25 of 250 | 10.0% | 90.4 | Right at the top 10% line |
@@ -180,9 +177,8 @@ Run your own numbers and [see exactly where you rank](https://studentcalctools.c
 This is the size behind the popular question "what is a good class rank out of 500?" In a class of 500, one place is worth 0.2 percentage points.
 
 
-|  |  |  |  |
-| ---------- | --------------- | -------------- | ------------------------- |
 | **Rank** | **Top percent** | **Percentile** | **How to read it** |
+| ---------- | --------------- | -------------- | ------------------------- |
 | 5 of 500 | 1.0% | 99.2 | Top 1% |
 | 25 of 500 | 5.0% | 95.2 | Right at the top 5% line |
 | 50 of 500 | 10.0% | 90.2 | Right at the top 10% line |
@@ -200,9 +196,8 @@ So the short answer is that rank 50 or better is the top 10% of a class of 500, 
 In a large class, a single rank spot is a tiny slice. One place in 800 is worth 0.125 percentage points, so being a few places off barely moves your standing.
 
 
-|  |  |  |  |
-| ---------- | --------------- | -------------- | ------------------------- |
 | **Rank** | **Top percent** | **Percentile** | **How to read it** |
+| ---------- | --------------- | -------------- | ------------------------- |
 | 8 of 800 | 1.0% | 99.1 | Top 1% |
 | 40 of 800 | 5.0% | 95.1 | Right at the top 5% line |
 | 80 of 800 | 10.0% | 90.1 | Right at the top 10% line |
@@ -220,9 +215,8 @@ The top 10% line in a class of 800 is rank 80, and that is a spot many students 
 Not every school has 100, 250, 500 or 800 seniors. Use this table to find the last rank that fits inside each line:
 
 
-|  |  |  |  |  |
-| -------------- | ---------- | ----------- | ----------- | ----------- |
 | **Class size** | **Top 5%** | **Top 10%** | **Top 25%** | **Top 50%** |
+| -------------- | ---------- | ----------- | ----------- | ----------- |
 | 150 | 7 | 15 | 37 | 75 |
 | 200 | 10 | 20 | 50 | 100 |
 | 300 | 15 | 30 | 75 | 150 |
@@ -246,9 +240,8 @@ Three quick readings from the table:
 There is no official definition, but some lines come up again and again because programs use them:
 
 
-|  |  |  |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Line** | **Where you see it** | **Source** |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Top 5% | The University of Texas at Austin has used a top 5% line for Texas automatic admission for summer or fall 2026 entry, and it is listed again for 2028 entry | [Katy ISD](https://www.katyisd.org/academic-advising/explanation-of-automatic-college-admission) and [TEA](https://tea.texas.gov/educators/graduation-information/eligibility-notification-automatic-college-admission-2028.pdf) |
 | Top 10% | Texas automatic admission to other public universities, if the student also meets the application and curriculum requirements | [TEA](https://tea.texas.gov/educators/graduation-information/eligibility-notification-automatic-college-admission-2028.pdf) |
 | Other lines | Scholarships and honors programs often set their own cutoff, such as top 10% or top 25% | Check each program's rules |
@@ -257,9 +250,8 @@ There is no official definition, but some lines come up again and again because 
 For a rough sense of where you stand when no program line applies, here is a general reading guide. It is our own summary, not an official scale:
 
 
-|  |  |
-| --------------- | -------------------------------------------------------------------------- |
 | **Top percent** | **General reading** |
+| --------------- | -------------------------------------------------------------------------- |
 | 10% or better | Strong. Many programs set their cutoffs here |
 | 11% to 25% | Above average and competitive for many programs |
 | 26% to 50% | Upper half of the class |
