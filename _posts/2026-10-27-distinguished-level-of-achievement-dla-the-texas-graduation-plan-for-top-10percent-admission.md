@@ -121,9 +121,8 @@ A few useful facts:
 TEA's toolkit lists the 22-credit Foundation program and the extra credits that turn it into an endorsement plan and a DLA. Here is the comparison:
 
 
-|  |  |  |  |
-| ---------------------------- | --------------------------- | ----------------------------------------- | ----------------------- |
-| **Subject** | **Foundation (22 credits)** | **Foundation + endorsement (26 credits)** | **DLA (26 credits)** |
+| Subject | Foundation (22 credits) | Foundation + endorsement (26 credits) | DLA (26 credits) |
+| ---------------------------- | ----------------------- | ------------------------------------- | ----------------------- |
 | English | 4 | 4 | 4 |
 | Math | 3 | 4 | 4, including Algebra II |
 | Science | 3 | 4 | 4 |
@@ -151,9 +150,8 @@ A few details that matter in practice:
 These terms get mixed up, so here is how they fit together:
 
 
-|  |  |  |
-| ---------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- |
-| **Piece** | **What it is** | **Needed for top 10% automatic admission?** |
+| Piece | What it is | Needed for top 10% automatic admission? |
+| ---------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------- |
 | Foundation High School Program | The 22-credit base diploma plan | No, not by itself |
 | Endorsement | A focus area such as STEM or Business and Industry, which brings the total to 26 credits | No, not by itself |
 | Distinguished Level of Achievement | The designation earned with 26 credits, Algebra II and an endorsement | Yes, or the test route below |
