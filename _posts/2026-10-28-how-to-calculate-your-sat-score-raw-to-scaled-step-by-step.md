@@ -117,9 +117,8 @@ The SAT has two sections, Reading and Writing and Math, and each section has two
 Here is how the questions break down:
 
 
-|  |  |  |  |  |
-| ------------------- | ---------------------- | ---------- | -------------------- | ----------------- |
-| **Section** | **Questions** | **Scored** | **Unscored pretest** | **Section score** |
+| Section | Questions | Scored | Unscored pretest | Section score |
+| ------------------- | ---------------------- | ------ | ---------------- | ------------- |
 | Reading and Writing | 54 (two modules of 27) | 50 | 4 | 200 to 800 |
 | Math | 44 (two modules of 22) | 40 | 4 | 200 to 800 |
 | Total | 98 | 90 | 8 | 400 to 1600 |
@@ -150,9 +149,8 @@ Section scores run from 200 to 800 in steps of 10. The total score runs from 400
 Section scores add up in simple ways. A 1400 total can come from any pair that sums to 1400:
 
 
-|  |  |  |
-| ----------------------- | -------- | --------- |
-| **Reading and Writing** | **Math** | **Total** |
+| Reading and Writing | Math | Total |
+| ------------------- | ---- | ----- |
 | 700 | 700 | 1400 |
 | 650 | 750 | 1400 |
 | 750 | 650 | 1400 |
@@ -174,9 +172,8 @@ Two things move the conversion around.
 College Board's own practice test guides show the second effect clearly. These guides are for the paper versions of its digital practice tests. They use a simplified method and report a range. Here are the same raw scores on two of them:
 
 
-|  |  |  |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| **Raw score** | **[Practice Test #4](https://satsuite.collegeboard.org/media/pdf/scoring-sat-practice-test-4-digital.pdf)** | **[Practice Test #7](https://satsuite.collegeboard.org/media/pdf/scoring-sat-practice-test-7-digital.pdf)** |
+| Raw Score | Practice Test #4 | Practice Test #7 |
+| ----------------------------- | ---------------- | ---------------- |
 | Reading and Writing, 40 of 66 | 530 to 550 | 480 to 540 |
 | Reading and Writing, 51 of 66 | 620 to 640 | 600 to 660 |
 | Math, 40 of 54 | 590 to 620 | 580 to 640 |
@@ -192,9 +189,8 @@ Same number of correct answers, different ranges. Each practice test has its own
 On College Board's paper practice tests, Reading and Writing has 66 questions, split into two modules of 33. You add the correct answers from both modules and look up the total. Here are sample rows from the [Practice Test #4 guide](https://satsuite.collegeboard.org/media/pdf/scoring-sat-practice-test-4-digital.pdf):
 
 
-|  |  |
-| --------------------------------- | ----------------------- |
-| **Reading and Writing raw score** | **Section score range** |
+| Reading and Writing raw score | Section score range |
+| ----------------------------- | ------------------- |
 | 20 | 370 to 390 |
 | 30 | 450 to 470 |
 | 40 | 530 to 550 |
@@ -212,9 +208,8 @@ The real digital test is shorter, with 54 Reading and Writing questions, so do n
 The paper practice Math section has 54 questions, split into two modules of 27. Here are sample rows from the same guide:
 
 
-|  |  |
-| ------------------ | ----------------------- |
-| **Math raw score** | **Section score range** |
+| Math raw score | Section score range |
+| -------------- | ------------------- |
 | 20 | 360 to 390 |
 | 30 | 470 to 500 |
 | 40 | 590 to 620 |
@@ -232,9 +227,8 @@ A perfect Math raw score of 54 reaches 790 to 800, while 54 out of 66 in Reading
 Here is a full walkthrough using the Practice Test #4 tables. The student's correct answers are made up for the example.
 
 
-|  |  |  |
-| ----------------------------------------- | ----------------------- | ---------- |
-| **Step** | **Reading and Writing** | **Math** |
+| Stop | Reading and Writing | Math |
+| ----------------------------------------- | ------------------- | ---------- |
 | 1. Correct in module 1 | 27 of 33 | 22 of 27 |
 | 2. Correct in module 2 | 24 of 33 | 20 of 27 |
 | 3. Add the modules for the raw score | 51 of 66 | 42 of 54 |
@@ -267,8 +261,6 @@ Expect small differences between practice tests and the real thing for the same 
 3. **Use calculators for planning only.** No calculator can reproduce College Board's method exactly, since even College Board's practice guides call their own method simplified.
 4. **Check the official score report.** After the real test, the report shows the section scores and the total.
 
-
-
 ## **Common mistakes to avoid**
 
 - **Treating a paper practice table as the real conversion.** The real digital test has fewer questions and an adaptive second module.
@@ -282,6 +274,3 @@ Expect small differences between practice tests and the real thing for the same 
 ## **Final thoughts**
 
 SAT scoring comes down to a simple idea: correct answers become section scores, and section scores add up to the total. The details, such as question difficulty and the adaptive module, are why a single chart can only estimate. Use official practice tests for the closest read, and find more free student tools at [StudentCalcTools](https://studentcalctools.com/).
-
-
-
