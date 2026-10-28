@@ -5,7 +5,7 @@ slug: how-to-calculate-sat-score
 date: 2026-10-28
 status: Published
 author: Ethan Cole
-category: Grade Guide
+category: SAT guide
 tags:
   - SAT scoring
   - SAT score
