@@ -105,9 +105,8 @@ A good SAT score is one that fits the colleges and scholarships you are aiming f
 College Board's 2026 SAT Suite annual report says [the mean total score for the class of 2026 was 1045](https://newsroom.collegeboard.org/sat-turns-100-nearly-2-million-students-class-2026-take-test), a 16-point increase over the class of 2025. It was the second year in a row of gains.
 
 
-|  |  |
-| ------------------- | -------------- |
 | **Class of 2026** | **Mean score** |
+| ------------------- | -------------- |
 | Total | 1045 |
 | Reading and Writing | 528 |
 | Math | 517 |
@@ -129,9 +128,8 @@ A percentile tells you how your score compares with other test takers. College B
 The user percentile is the more useful number for college planning, because it compares you with actual SAT takers. Here are the key benchmarks:
 
 
-|  |  |  |
-| --------------- | ------------------- | ---------------------------------------- |
 | **Total score** | **User percentile** | **Nationally representative percentile** |
+| --------------- | ------------------- | ---------------------------------------- |
 | 1000 | 47th | 48th |
 | 1100 | 62nd | 67th |
 | 1200 | 75th | 81st |
@@ -145,9 +143,8 @@ The user percentile is the more useful number for college planning, because it c
 And here is how the common score bands compare:
 
 
-|  |  |  |
-| -------------- | ------------------------- | ------------------------------------ |
 | **Score band** | **User percentile range** | **How to read it** |
+| -------------- | ------------------------- | ------------------------------------ |
 | Below 1000 | Below 47th | Below the middle of recent SAT users |
 | 1000 to 1190 | 47th to 74th | Around the middle to above average |
 | 1200 to 1349 | 75th to 88th | Top quarter of SAT users |
@@ -162,9 +159,8 @@ And here is how the common score bands compare:
 There is no official admissions cutoff for "good," so the best benchmark is what colleges report about their own students. Many colleges publish the 25th and 75th percentile scores of enrolled first-year students in their Common Data Set, in section C9. Here are examples from colleges that publish a range, plus the test policy each one stated in that data:
 
 
-|  |  |  |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Goal** | **Reference point** | **How it compares nationally** |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | College readiness | College Board benchmarks of 480 in Reading and Writing and 530 in Math, or 1010 combined | A baseline for success in college courses, not an admissions target. 1010 is the 48th user percentile |
 | Broad-access public university | Texas State University: middle 50% of 990 to 1200 for enrolled students who sent SAT scores (Common Data Set 2024-25). Test scores are optional for most applicants | 990 is the 45th user percentile and 1200 is the 75th |
 | Flagship public university | Texas A&M University: middle 50% of 1160 to 1390, with a median of 1280, for fall 2025 enrolled students who sent SAT scores. Test optional | 1160 is the 70th user percentile, 1280 the 83rd and 1390 the 92nd |
@@ -186,9 +182,8 @@ If a college you like does not appear in its Common Data Set with a score range,
 Colleges also look at section scores, and percentiles for them differ from total score percentiles. College Board's tables give these user percentiles:
 
 
-|  |  |  |
-| ----------------- | ----------------------- | -------- |
 | **Section score** | **Reading and Writing** | **Math** |
+| ----------------- | ----------------------- | -------- |
 | 600 | 72nd | 75th |
 | 650 | 84th | 84th |
 | 700 | 92nd | 91st |
@@ -228,4 +223,4 @@ A good SAT score is one that fits your goals. Start with the national picture: 1
 
 
 
-  
+&nbsp;
