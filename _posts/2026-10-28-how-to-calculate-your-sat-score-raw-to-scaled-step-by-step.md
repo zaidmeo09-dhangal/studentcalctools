@@ -5,7 +5,7 @@ slug: how-to-calculate-sat-score
 date: 2026-10-28
 status: Published
 author: Ethan Cole
-category: SAT guide
+category: SAT Guide
 tags:
   - SAT scoring
   - SAT score
@@ -155,8 +155,6 @@ Section scores add up in simple ways. A 1400 total can come from any pair that s
 | 650 | 750 | 1400 |
 | 750 | 650 | 1400 |
 | 600 | 800 | 1400 |
-
-
 
 
 ## **Why the same raw score can scale differently**
