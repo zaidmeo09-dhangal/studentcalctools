@@ -112,9 +112,8 @@ Take a 1200. In College Board's user group table, a 1200 is the 75th percentile.
 College Board's [guide to PDF score reports](https://satsuite.collegeboard.org/media/pdf/guide-pdf-score-reports.pdf) describes four types:
 
 
-|  |  |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
 | **Percentile type** | **Who you are compared with** |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
 | SAT user (all tester) percentile | Students from the past three graduating classes who took the SAT during high school |
 | Nationally representative percentile | A weighted sample of all U.S. 11th and 12th graders, whether or not they usually take the SAT |
 | State percentile | Students in your state from the past three graduating classes who took the SAT. Digital SAT only |
@@ -130,9 +129,8 @@ College Board's research page calls the first type the user group percentile, an
 This chart comes from College Board's SAT percentile tables, checked in October 2026. College Board shows the very top as 99+ and the very bottom as 1-.
 
 
-|  |  |  |
-| --------------- | ------------------- | ---------------------------------------- |
 | **Total score** | **User percentile** | **Nationally representative percentile** |
+| --------------- | ------------------- | ---------------------------------------- |
 | 1600 | 99+ | 99+ |
 | 1550 | 99th | 99+ |
 | 1500 | 97th | 99th |
@@ -173,9 +171,8 @@ A few patterns to notice:
 This is the range where most college-bound students land. Scores move in steps of 10.
 
 
-|  |  |  |
-| --------------- | ------------------- | ---------------------------------------- |
 | **Total score** | **User percentile** | **Nationally representative percentile** |
+| --------------- | ------------------- | ---------------------------------------- |
 | 1500 | 97th | 99th |
 | 1490 | 97th | 99th |
 | 1480 | 97th | 99th |
@@ -234,9 +231,8 @@ This is the range where most college-bound students land. Scores move in steps o
 Reading and Writing and Math scores have their own percentiles, and the same section score can land at a different percentile in each section.
 
 
-|  |  |  |  |  |
-| ----------------- | ----------------------------- | -------------------------------------------------- | -------------- | ----------------------------------- |
 | **Section score** | **Reading and Writing, user** | **Reading and Writing, nationally representative** | **Math, user** | **Math, nationally representative** |
+| ----------------- | ----------------------------- | -------------------------------------------------- | -------------- | ----------------------------------- |
 | 800 | 99+ | 99+ | 99+ | 99+ |
 | 750 | 98th | 99th | 95th | 98th |
 | 700 | 92nd | 97th | 91st | 95th |
@@ -285,14 +281,11 @@ Both tell you something different, and colleges mostly deal in scores.
 Here is a simple way to choose:
 
 
-|  |  |
-| ------------------------------------- | ---------------------------------------------- |
 | **Your question** | **Use this** |
+| ------------------------------------- | ---------------------------------------------- |
 | Where do I stand nationally? | Percentile |
 | Am I in range for a specific college? | Your score, compared with that college's range |
 | Is my practice score improving? | Your score, since percentiles move unevenly |
-
-
 
 
 ## **Common mistakes to avoid**
@@ -311,3 +304,4 @@ An SAT percentile is a useful snapshot, as long as you know which type you are r
 
 
 
+&nbsp;
