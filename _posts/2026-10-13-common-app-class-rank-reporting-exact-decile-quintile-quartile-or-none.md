@@ -120,7 +120,7 @@ A missing rank on one document does not automatically mean you should choose Non
 
 Look in the **Education section**, alongside your grades and academic information.
 
-The [official Common App high-school details](https://commonapp.org/files/fy-toolkit/High-School-Details-Sheet.pdf) sheet identifies these related items:
+The [official Common App high-school details](https://www.commonapp.org/files/fy-toolkit/High-School-Details-Sheet.pdf) sheet identifies these related items:
 
 - Graduating class size (approx.).
 - Class rank reporting.
@@ -359,7 +359,7 @@ Select **None** for class rank reporting, and complete the other academic inform
 
 You can still report the GPA and class-size information your school provides. A school can calculate GPA without assigning individual class ranks.
 
-Your counselor’s materials can help explain the academic environment. [Common App’s school-profile guidance](https://commonapp.org/files/recommender-resources/Resource_REC_School_Profile_ENG_2025.07.08.pdf) describes how profiles provide context about grading systems, curriculum and school policies.
+Your counselor’s materials can help explain the academic environment. [Common App’s school-profile guidance](https://www.commonapp.org/files/recommender-resources/Resource_REC_School_Profile_ENG_2025.07.08.pdf) describes how profiles provide context about grading systems, curriculum and school policies.
 
 If the school calculates rank internally but does not normally release it, ask your counselor what it officially reports for applications. Do not substitute an unofficial estimate.
 
