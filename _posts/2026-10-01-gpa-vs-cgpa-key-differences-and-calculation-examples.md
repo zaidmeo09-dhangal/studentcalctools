@@ -98,7 +98,7 @@ GPA stands for **Grade Point Average**. It summarizes grades by converting them 
 
 When the label says **term GPA** or **semester GPA**, the calculation covers that specific academic period. If it says **cumulative GPA**, it covers the broader record defined by the institution.
 
-For example, the [University of Illinois explains four GPA labels on its transcript](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/): term, total institution, total transfer, and overall. The word “GPA” therefore does not, by itself, tell you which courses are included.
+For example, the [University of Illinois explains four GPA labels on its transcript](https://www.registrar.illinois.edu/courses-grades/calculate-your-gpa/): term, total institution, total transfer, and overall. The word “GPA” therefore does not, by itself, tell you which courses are included.
 
 ### What Does a Semester GPA Tell You?
 
@@ -231,7 +231,7 @@ For each included course:
 
 **Quality points = Grade-point value × course credits**
 
-The [University of Illinois registrar explains this quality-points method](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/). Your institution determines the grade-point values and which courses enter the calculation.
+The [University of Illinois registrar explains this quality-points method](https://www.registrar.illinois.edu/courses-grades/calculate-your-gpa/). Your institution determines the grade-point values and which courses enter the calculation.
 
 ### Worked GPA Example
 
@@ -375,7 +375,7 @@ A calculator can correctly average the inputs and still differ from your officia
 
 Use credits that actually belong in the GPA denominator. Do not automatically use all earned credits or remove every failed course.
 
-For example, the [Illinois registrar’s calculation includes an F-grade course with zero quality points and five GPA hours](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/). Separately, [Illinois excludes credit/no-credit courses from GPA](https://registrar.illinois.edu/registration/registration-process/credit-no-credit/), even though those courses can count toward total credit hours.
+For example, the [Illinois registrar’s calculation includes an F-grade course with zero quality points and five GPA hours](https://www.registrar.illinois.edu/courses-grades/calculate-your-gpa/). Separately, [Illinois excludes credit/no-credit courses from GPA](https://www.registrar.illinois.edu/registration/registration-process/credit-no-credit/), even though those courses can count toward total credit hours.
 
 Those are institutional examples. Check your own rules for failed, withdrawn, incomplete, audited, and pass/fail coursework.
 
@@ -389,7 +389,7 @@ If your institution instead replaces or excludes an earlier attempt, recompute t
 
 In the worked example, the first semester’s exact GPA is 38 ÷ 12. If you enter its rounded value, 3.17, multiplying by 12 gives 38.04 rather than the original 38 quality points.
 
-That difference is small, but it explains why term-level estimates may not reproduce an official cumulative figure exactly. Keep available precision during calculations and follow your institution’s display rule at the end. [Illinois, for example, truncates its transcript GPA to two decimal places rather than rounding](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/).
+That difference is small, but it explains why term-level estimates may not reproduce an official cumulative figure exactly. Keep available precision during calculations and follow your institution’s display rule at the end. [Illinois, for example, truncates its transcript GPA to two decimal places rather than rounding](https://www.registrar.illinois.edu/courses-grades/calculate-your-gpa/).
 
 ### Different Scales and Credit Systems Cannot Be Mixed Directly
 
