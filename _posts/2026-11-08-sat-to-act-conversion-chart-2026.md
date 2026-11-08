@@ -148,8 +148,6 @@ The official table lists each SAT total score in 10-point steps. Here it is grou
 | 590 to 610 | 9 |
 
 
-
-
 ## **ACT to SAT conversion chart (official 2018 concordance)**
 
 Going the other way, each ACT composite maps to a range of SAT scores. When you need a single number, College Board gives the most appropriate score point inside each range:
@@ -186,8 +184,6 @@ Going the other way, each ACT composite maps to a range of SAT scores. When you 
 | 11 | 670 | 650 to 680 |
 | 10 | 630 | 620 to 640 |
 | 9 | 590 | 590 to 610 |
-
-
 
 
 ## **Quick lookup for common scores**
@@ -258,8 +254,6 @@ The tables help you compare, but the decision comes down to a few checks:
 5. **Do not combine tests.** College Board and ACT strongly discourage superscoring across the SAT and the ACT, because it is an imprecise way to judge whether a student meets a threshold.
 6. **Use Score Choice for the SAT.** College Board says you can choose which SAT scores to send [by test date](https://satsuite.collegeboard.org/scores/sending-sat-scores/additional/score-choice), but some colleges and scholarship programs require all scores.
 
-
-
 ## **When to take the other test**
 
 The SAT and ACT cover similar but not identical skills, so some students do better on one. Taking both is worth considering in these situations:
@@ -288,3 +282,4 @@ The official 2018 concordance is the best tool for comparing SAT and ACT scores,
 
 
 
+&nbsp;
