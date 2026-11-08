@@ -109,9 +109,8 @@ The SAT is now taken on a computer in College Board's Bluebook app, and it looks
 College Board's [Digital SAT Specifications Overview](https://satsuite.collegeboard.org/media/pdf/digital-sat-test-spec-overview.pdf) describes the main differences. The paper SAT has been retired for almost everyone. According to College Board's Assessment Framework, since spring 2024 all students except those who need a paper test form, for example as an accommodation, take the SAT digitally.
 
 
-|  |  |  |
-| ------------------- | ----------------------------------------------- | ----------------------------------------------- |
 | **Feature** | **Paper SAT (retired)** | **Digital SAT** |
+| ------------------- | ----------------------------------------------- | ----------------------------------------------- |
 | Testing time | About 3 hours | 2 hours 14 minutes |
 | Number of questions | 154 | 98 |
 | Reading and Writing | Separate Reading and Writing and Language tests | One combined Reading and Writing section |
@@ -136,9 +135,8 @@ Every question uses a short passage or a pair of short passages and has four ans
 Questions fall into four content domains:
 
 
-|  |  |  |
-| ---------------------------- | ----------------------------------------------------------------------- | ------------------------------ |
 | **Content domain** | **What it tests** | **Share of scored questions** |
+| ---------------------------- | ----------------------------------------------------------------------- | ------------------------------ |
 | Craft and Structure | Words in context, text structure and purpose, connections between texts | About 28% (13 to 15 questions) |
 | Information and Ideas | Central ideas and details, command of evidence, inferences | About 26% (12 to 14 questions) |
 | Standard English Conventions | Sentence boundaries, punctuation, form, structure and sense | About 26% (11 to 15 questions) |
@@ -158,9 +156,8 @@ About 75% of the questions are four-option multiple choice, and about 25% are st
 There are four content domains:
 
 
-|  |  |  |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | **Content domain** | **What it tests** | **Share of scored questions** |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | Algebra | Linear equations and inequalities, linear functions, systems of linear equations | About 35% (13 to 15 questions) |
 | Advanced Math | Equivalent expressions, nonlinear equations and functions, including quadratic, exponential and polynomial | About 35% (13 to 15 questions) |
 | Problem-Solving and Data Analysis | Ratios, rates, percentages, data, probability and statistics | About 15% (5 to 7 questions) |
@@ -178,9 +175,8 @@ Questions from all four domains appear in every module, arranged from easiest to
 Here is the whole test in order. Each module has its own clock, and when time runs out on a module, Bluebook moves you to the next one. Within a module, you can move backward and forward between questions until time runs out.
 
 
-|  |  |  |  |
-| ----------------------------- | ------------- | ------------------ | ----------------------------- |
 | **Part** | **Questions** | **Time** | **Average time per question** |
+| ----------------------------- | ------------- | ------------------ | ----------------------------- |
 | Reading and Writing, module 1 | 27 | 32 minutes | About 71 seconds |
 | Reading and Writing, module 2 | 27 | 32 minutes | About 71 seconds |
 | Break | None | 10 minutes | None |
