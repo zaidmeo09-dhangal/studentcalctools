@@ -703,6 +703,10 @@ textarea.form-control {
     transition: max-height 0.32s ease;
 }
 
+.faq-item.open .faq-answer {
+    max-height: 600px;
+}
+
 .faq-answer-inner {
     padding: 0 21px 19px;
     color: var(--text-secondary);
