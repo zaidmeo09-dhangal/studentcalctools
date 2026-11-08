@@ -156,7 +156,7 @@ If you can't tell, try both sets of steps below. Your school's Skyward help page
 
 ## **How to check GPA and rank in the Skyward mobile app**
 
-1. **Download Skyward Mobile Access.** It is free in the App Store and Google Play. According to [Skyward's App Store listing](https://apps.apple.com/app/id502635374), your district must activate Mobile Access Automatic Setup for the app to find your school.
+1. **Download Skyward Mobile Access.** It is free in the App Store and Google Play. According to [Skyward's App Store listing](https://apps.apple.com/us/app/skyward-mobile-access/id502635374), your district must activate Mobile Access Automatic Setup for the app to find your school.
 2. **Find your district.** Skyward's setup video, quoted in [Lewisville ISD's app guide](https://khub.lisd.net/sis-navigation/skyward-mobile-app), says you can use your current location, search by zip code or type the district name.
 3. **Choose the right product.** Select Student Management if you are a parent or student using Family Access.
 4. **Sign in and set a passcode.** Enter your Skyward credentials and create the four-digit passcode.
