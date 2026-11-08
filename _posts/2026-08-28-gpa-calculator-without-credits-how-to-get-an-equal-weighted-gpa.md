@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GPA Calculator Without Credits: How to Get an Equal-Weighted GPA"
+title: "GPA Calculator Without Credits: Equal-Weighted GPA Guide"
 slug: gpa-calculator-without-credits
 date: 2026-08-27
 status: Published
@@ -14,7 +14,7 @@ secondary_keywords:
   - simple gpa average
   - unweighted course average
   - gpa calculator no credits
-meta_title: "GPA Calculator Without Credits: How to Get an Equal-Weighted GPA"
+meta_title: "GPA Calculator Without Credits: Equal-Weighted GPA Guide"
 meta_description: Calculate GPA without credit hours by entering the same credit
   value for every course. Includes the math proof and a worked five-course
   example.
