@@ -290,7 +290,7 @@ A school may use its own conventions for approximate ranking bands or honors. Th
 
 Texas’s rule makes the size limit explicit.
 
-The [TEA automatic-admission notification for students entering college in 2027](https://tea.texas.gov/academics/graduation-information/2027-eligibility-notification-automatic-college-admission-0.pdf) says the top-10% group cannot exceed one-tenth of the total class.
+The [TEA automatic-admission notification for students entering college in 2027](https://tea.texas.gov/educators/graduation-information/2027-eligibility-notification-automatic-college-admission-0.pdf) says the top-10% group cannot exceed one-tenth of the total class.
 
 For a 244-student class with distinct ranks, including 25 students would exceed that limit. The mathematical maximum is therefore 24.
 
