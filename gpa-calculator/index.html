@@ -916,6 +916,41 @@
             display: grid;
             grid-template-columns: 1fr;
         }
+
+        .grade-table {
+            table-layout: fixed;
+        }
+
+        .grade-table th:nth-child(1),
+        .grade-table td:nth-child(1) {
+            width: 18%;
+        }
+
+        .grade-table th:nth-child(2),
+        .grade-table td:nth-child(2) {
+            width: 18%;
+        }
+
+        .grade-table th:nth-child(3),
+        .grade-table td:nth-child(3) {
+            width: 32%;
+        }
+
+        .grade-table th:nth-child(4),
+        .grade-table td:nth-child(4) {
+            width: 32%;
+        }
+
+        .grade-table th,
+        .grade-table td {
+            padding: 10px 8px;
+            font-size: 13px;
+        }
+
+        .grade-table th {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
     }
 
     @media (prefers-reduced-motion: reduce) {
