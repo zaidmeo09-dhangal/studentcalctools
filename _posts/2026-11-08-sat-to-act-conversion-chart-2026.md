@@ -115,9 +115,8 @@ The 2018 concordance comes from a joint study by College Board and ACT, done wit
 The official table lists each SAT total score in 10-point steps. Here it is grouped into the ranges that map to each ACT composite score:
 
 
-|  |  |
-| ------------------- | ----------------- |
 | **SAT total score** | **ACT composite** |
+| ------------------- | ----------------- |
 | 1570 to 1600 | 36 |
 | 1530 to 1560 | 35 |
 | 1490 to 1520 | 34 |
@@ -153,9 +152,8 @@ The official table lists each SAT total score in 10-point steps. Here it is grou
 Going the other way, each ACT composite maps to a range of SAT scores. When you need a single number, College Board gives the most appropriate score point inside each range:
 
 
-|  |  |  |
-| ----------------- | ---------------------------- | ------------- |
 | **ACT composite** | **SAT total (single score)** | **SAT range** |
+| ----------------- | ---------------------------- | ------------- |
 | 36 | 1590 | 1570 to 1600 |
 | 35 | 1540 | 1530 to 1560 |
 | 34 | 1500 | 1490 to 1520 |
@@ -189,9 +187,8 @@ Going the other way, each ACT composite maps to a range of SAT scores. When you 
 ## **Quick lookup for common scores**
 
 
-|  |  |
-| ------------- | ----------------- |
 | **SAT total** | **ACT composite** |
+| ------------- | ----------------- |
 | 900 | 16 |
 | 1000 | 19 |
 | 1050 | 20 |
@@ -226,9 +223,8 @@ As of October 2026, we did not find a newer official ACT/SAT concordance from ei
 Not exact. College Board's guide says a concorded score is not a perfect prediction of how you would perform on the other test, and it gives these error sizes:
 
 
-|  |  |
-| --------------------------------------------------- | ----------------------------------- |
 | **Direction** | **Standard error** |
+| --------------------------------------------------- | ----------------------------------- |
 | SAT total to ACT composite | About 2 ACT points |
 | ACT composite to SAT total | About 80 SAT points |
 | SAT Math to ACT Math | About 3 ACT points |
