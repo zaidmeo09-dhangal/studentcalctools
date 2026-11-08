@@ -158,7 +158,7 @@ For example:
 - A passing grade in a course excluded from GPA may earn degree credit without contributing GPA credits.
 - Transfer credits may count toward your degree while being excluded from your institutional GPA.
 
-The [University of Illinois GPA guide](https://registrar.illinois.edu/courses-grades/calculate-your-gpa/) illustrates this distinction: its example includes GPA hours for an F but excludes S and CR entries from the GPA calculation.
+The [University of Illinois GPA guide](https://www.registrar.illinois.edu/courses-grades/calculate-your-gpa/) illustrates this distinction: its example includes GPA hours for an F but excludes S and CR entries from the GPA calculation.
 
 Using all earned credits as the denominator can therefore produce the wrong result.
 
