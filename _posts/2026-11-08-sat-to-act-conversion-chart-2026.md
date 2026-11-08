@@ -4,7 +4,7 @@ title: SAT to ACT Conversion Chart (2026)
 slug: sat-to-act-conversion
 date: 2026-11-08
 status: Published
-author: StudentCalcTools
+author: Ethan Cole
 category: SAT Guide
 tags:
   - SAT to ACT
