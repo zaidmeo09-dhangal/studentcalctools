@@ -125,11 +125,11 @@ It depends on where you study. Some states set the weight of certain finals by l
 | Era ISD, Texas | 10% of the semester grade | [Grading guidelines](https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5992/Eisd/f69b67e8-053d-412a-b288-650bb8dbd88c/26-27-Era-ISD-Grading-Guidelines.docx-%281%29-%281%29.pdf?disposition=inline) |
 | Plano ISD, Texas | 20% of the semester grade in grades 9 to 12, and 10% in grades 7 and 8 | [Board policy EIAA (LOCAL)](https://pisd.diligent.community/document/9b2105f5-1b2e-4de3-96fd-b43b30d5d9cb/) |
 | Florida (state law) | 30% for the state end-of-course test in Algebra 1, Geometry, Biology, Civics and U.S. History | [Florida Statutes 1008.22](https://www.flsenate.gov/Laws/statutes/2020/1008.22) and a [Miami-Dade guide](https://pdfs.dadeschools.net/ESE/fsaa/EOCFSAAFlyerWithoutDate.pdf) |
-| Georgia (state board rule) | 20% for end-of-course tests, and since 2023 districts may lower it to 10% | [Dade County Schools](https://www.dadecountyschools.org/departments-programs/testing/ga-milestones-assessment) and an [Augusta Press report](https://theaugustapress.com/state-department-of-education-to-lower-weight-of-georgia-milestones-tests) |
+| Georgia (state board rule) | 20% for end-of-course tests, and since 2023 districts may lower it to 10% | [Dade County Schools](https://www.dadecountyschools.org/departments-programs/testing/ga-milestones-assessment) and an [Augusta Press report](https://theaugustapress.com/state-department-of-education-to-lower-weight-of-georgia-milestones-tests/) |
 | University of Ottawa, Canada | Between 30% and 60% of the course grade unless the Faculty authorizes otherwise | [Academic Regulation A-8](https://www.uottawa.ca/about-us/leadership-governance/policies-regulations/a-8-evaluation-student-learning) |
 
 
-Two notes on that table. Florida's end-of-course test is a state exam, and [Pasco County Schools says it does not replace the course's own semester or final exam](https://eschool.pasco.k12.fl.us/?p=15536). Georgia's rule has changed before, so check the current weight with your school.
+Two notes on that table. Florida's end-of-course test is a state exam, and [Pasco County Schools says it does not replace the course's own semester or final exam](https://eschool.pasco.k12.fl.us/testing-information/). Georgia's rule has changed before, so check the current weight with your school.
 
 College is different again. Most colleges let each instructor choose the weight, and some set limits, like the University of Ottawa rule above. That is why two courses in the same department can weight their finals very differently, and why the syllabus is the only number you can trust.
 
