@@ -171,7 +171,7 @@ A course's credit hours represent how much instructional weight it carries, and 
 
 ## **What Doesn't Count Toward GPA**
 
-Not every course on a transcript factors into the calculation. Many schools exclude Pass/Fail, Audit, Withdraw, Withdraw-Passing, Withdraw-Failing, Incomplete, and Satisfactory/Unsatisfactory grades from the GPA formula entirely, meaning those courses may still count toward credits earned or degree progress without ever touching the quality-points calculation. Georgia Tech's registrar policy is a clear public example: a course taken pass/fail contributes zero quality points and isn't part of the GPA math at all, even though the student still earns the credit (Georgia Institute of Technology, [Office of the Registrar: Grading System](https://registrar.gatech.edu/node/138)).
+Not every course on a transcript factors into the calculation. Many schools exclude Pass/Fail, Audit, Withdraw, Withdraw-Passing, Withdraw-Failing, Incomplete, and Satisfactory/Unsatisfactory grades from the GPA formula entirely, meaning those courses may still count toward credits earned or degree progress without ever touching the quality-points calculation. Georgia Tech's registrar policy is a clear public example: a course taken pass/fail contributes zero quality points and isn't part of the GPA math at all, even though the student still earns the credit (Georgia Institute of Technology, [Office of the Registrar: Grading System](https://registrar.gatech.edu/info/grade-point-average-calculation)).
 
 **Two more cases worth knowing:**
 
